@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.2.7" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\DotEnv.Core.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ContentWithTargetPath Include="Loader\env_files\.env.multi6.absolute" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.multi6.absolute" />
+    <ContentWithTargetPath Include="Loader\env_files\.env.local" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.local" />
+    <ContentWithTargetPath Include="Loader\env_files\.env.absolute" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.absolute" />
+    <ContentWithTargetPath Include="Loader\env_files\.env.relative" CopyToOutputDirectory="PreserveNewest" TargetPath="dotenv\files\.env.relative" />
+  </ItemGroup>
+  
+</Project>
