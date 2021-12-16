@@ -9,12 +9,12 @@ namespace DotEnv.Core
     /// </summary>
     public class EnvVariableNotFoundException : Exception
     {
-        private readonly string variableName;
+        private readonly string _variableName;
 
         /// <summary>
         /// Allows access to the name of the variable that causes the exception.
         /// </summary>
-        public string VariableName => variableName;
+        public string VariableName => _variableName;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvVariableNotFoundException" /> class with the a specified error message, the name and value of the variable.
@@ -25,9 +25,9 @@ namespace DotEnv.Core
             string message, 
             string variableName) : base(message)
         {
-            this.variableName = variableName;
+            _variableName = variableName;
         }
 
-        public override string Message => $"{base.Message} (Variable Name: {variableName})";
+        public override string Message => $"{base.Message} (Variable Name: {_variableName})";
     }
 }

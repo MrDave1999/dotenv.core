@@ -9,18 +9,18 @@ namespace DotEnv.Core
     /// </summary>
     public class ParserException : Exception
     {
-        private readonly object actualValue;
-        private readonly int? currentLine;
+        private readonly object _actualValue;
+        private readonly int? _currentLine;
 
         /// <summary>
         /// Allows access to the actual value that causes the exception.
         /// </summary>
-        public object ActualValue => actualValue;
+        public object ActualValue => _actualValue;
 
         /// <summary>
         /// Allows access to the current line that causes the exception.
         /// </summary>
-        public int? CurrentLine => currentLine;
+        public int? CurrentLine => _currentLine;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ParserException" /> class with the a specified error message, the actual value and the current line number.
@@ -33,22 +33,22 @@ namespace DotEnv.Core
             object actualValue = null, 
             int? currentLine = null) : base(message)
         {
-            this.actualValue = actualValue;
-            this.currentLine = currentLine;
+            _actualValue = actualValue;
+            _currentLine = currentLine;
         }
 
         public override string Message
         {
             get
             {
-                if (actualValue != null && currentLine != null)
-                    return $"{base.Message} (Actual Value: {actualValue}, Line: {currentLine})";
+                if (_actualValue != null && _currentLine != null)
+                    return $"{base.Message} (Actual Value: {_actualValue}, Line: {_currentLine})";
 
-                if (actualValue != null)
-                    return $"{base.Message} (Actual Value: {actualValue})";
+                if (_actualValue != null)
+                    return $"{base.Message} (Actual Value: {_actualValue})";
 
-                if (currentLine != null)
-                    return $"{base.Message} (Line: {currentLine})";
+                if (_currentLine != null)
+                    return $"{base.Message} (Line: {_currentLine})";
 
                 return base.Message;
             }
