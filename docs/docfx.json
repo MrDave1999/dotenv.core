@@ -59,7 +59,7 @@
       "_enableSearch": true,
       "_gitContribute": {
         "repo": "https://github.com/MrDave1999/dotenv.core",
-        "branch": "main"
+        "branch": "master"
       }
     },
     "dest": "_site",
