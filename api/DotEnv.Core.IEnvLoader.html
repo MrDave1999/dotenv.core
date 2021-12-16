@@ -1,0 +1,709 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IEnvLoader
+   | DotEnv.Core </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IEnvLoader
+   | DotEnv.Core ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/dotenv-icon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="DotEnv.Core.IEnvLoader">
+  
+  
+  <h1 id="DotEnv_Core_IEnvLoader" data-uid="DotEnv.Core.IEnvLoader" class="text-break">Interface IEnvLoader
+  </h1>
+  <div class="markdown level0 summary"><p>Represents the .env file loader.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="DotEnv.Core.html">DotEnv.Core</a></h6>
+  <h6><strong>Assembly</strong>: DotEnv.Core.dll</h6>
+  <h5 id="DotEnv_Core_IEnvLoader_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IEnvLoader</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_AddEnvFile_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.AddEnvFile(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L46">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_AddEnvFile_" data-uid="DotEnv.Core.IEnvLoader.AddEnvFile*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_AddEnvFile_System_String_" data-uid="DotEnv.Core.IEnvLoader.AddEnvFile(System.String)">AddEnvFile(String)</h4>
+  <div class="markdown level1 summary"><p>Adds an .env file in a collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader AddEnvFile(string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The .env file path to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Text_Encoding_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.AddEnvFile(System.String%2CSystem.Text.Encoding)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L54">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_AddEnvFile_" data-uid="DotEnv.Core.IEnvLoader.AddEnvFile*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Text_Encoding_" data-uid="DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Text.Encoding)">AddEnvFile(String, Encoding)</h4>
+  <div class="markdown level1 summary"><p>Adds an .env file with its encoding in a collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader AddEnvFile(string path, Encoding encoding)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The .env file path to add.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>The encoding of the .env file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_AddEnvFiles_System_String___.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.AddEnvFiles(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L39">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_AddEnvFiles_" data-uid="DotEnv.Core.IEnvLoader.AddEnvFiles*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_AddEnvFiles_System_String___" data-uid="DotEnv.Core.IEnvLoader.AddEnvFiles(System.String[])">AddEnvFiles(String[])</h4>
+  <div class="markdown level1 summary"><p>Adds the .env files in a collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader AddEnvFiles(params string[] paths)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">paths</span></td>
+        <td><p>The .env files paths to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_AllowOverwriteExistingVars.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L85">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_AllowOverwriteExistingVars_" data-uid="DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_AllowOverwriteExistingVars" data-uid="DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars">AllowOverwriteExistingVars()</h4>
+  <div class="markdown level1 summary"><p>Allows overwriting of existing environment variables.
+This method will tell the parser that it can overwrite the value of an existing variable, i.e. if the variable <code>KEY1</code> exists, its value can be overwritten.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader AllowOverwriteExistingVars()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_DisableTrimEndKeys.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.DisableTrimEndKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L79">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_DisableTrimEndKeys_" data-uid="DotEnv.Core.IEnvLoader.DisableTrimEndKeys*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_DisableTrimEndKeys" data-uid="DotEnv.Core.IEnvLoader.DisableTrimEndKeys">DisableTrimEndKeys()</h4>
+  <div class="markdown level1 summary"><p>Disables the trim at the end of the keys.
+This method will tell the parser not to remove trailing white-spaces from the keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader DisableTrimEndKeys()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_DisableTrimEndValues.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.DisableTrimEndValues%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L73">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_DisableTrimEndValues_" data-uid="DotEnv.Core.IEnvLoader.DisableTrimEndValues*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_DisableTrimEndValues" data-uid="DotEnv.Core.IEnvLoader.DisableTrimEndValues">DisableTrimEndValues()</h4>
+  <div class="markdown level1 summary"><p>Disables the trim at the end of the values.
+This method will tell the parser not to remove trailing white-spaces from the values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader DisableTrimEndValues()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_DisableTrimStartComments.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.DisableTrimStartComments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L82">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_DisableTrimStartComments_" data-uid="DotEnv.Core.IEnvLoader.DisableTrimStartComments*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_DisableTrimStartComments" data-uid="DotEnv.Core.IEnvLoader.DisableTrimStartComments">DisableTrimStartComments()</h4>
+  <div class="markdown level1 summary"><p>Disables the trim at the starts of the comments.
+This method will tell the parser not to remove leading white-spaces from the comments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader DisableTrimStartComments()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_DisableTrimStartKeys.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.DisableTrimStartKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L76">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_DisableTrimStartKeys_" data-uid="DotEnv.Core.IEnvLoader.DisableTrimStartKeys*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_DisableTrimStartKeys" data-uid="DotEnv.Core.IEnvLoader.DisableTrimStartKeys">DisableTrimStartKeys()</h4>
+  <div class="markdown level1 summary"><p>Disables the trim at the starts of the keys.
+This method will tell the parser not to remove leading white-spaces from the keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader DisableTrimStartKeys()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_DisableTrimStartValues.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.DisableTrimStartValues%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L70">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_DisableTrimStartValues_" data-uid="DotEnv.Core.IEnvLoader.DisableTrimStartValues*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_DisableTrimStartValues" data-uid="DotEnv.Core.IEnvLoader.DisableTrimStartValues">DisableTrimStartValues()</h4>
+  <div class="markdown level1 summary"><p>Disables the trim at the starts of the values.
+This method will tell the parser not to remove leading white-spaces from the values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader DisableTrimStartValues()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_EnableFileNotFoundException.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.EnableFileNotFoundException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L67">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_EnableFileNotFoundException_" data-uid="DotEnv.Core.IEnvLoader.EnableFileNotFoundException*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_EnableFileNotFoundException" data-uid="DotEnv.Core.IEnvLoader.EnableFileNotFoundException">EnableFileNotFoundException()</h4>
+  <div class="markdown level1 summary"><p>Enables <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.filenotfoundexception">FileNotFoundException</a> when the .env file is not found.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader EnableFileNotFoundException()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_Load.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.Load%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L18">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_Load_" data-uid="DotEnv.Core.IEnvLoader.Load*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_Load" data-uid="DotEnv.Core.IEnvLoader.Load">Load()</h4>
+  <div class="markdown level1 summary"><p>Loads more than one .env file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Load()</code></pre>
+  </div>
+  <h5 id="DotEnv_Core_IEnvLoader_Load_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method starts find the .env file in the current directory and if it does not found it, it starts find in the parent directories of the current directory.</p>
+</div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.ParserException.html">ParserException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_SetBasePath_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.SetBasePath(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L32">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_SetBasePath_" data-uid="DotEnv.Core.IEnvLoader.SetBasePath*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_SetBasePath_System_String_" data-uid="DotEnv.Core.IEnvLoader.SetBasePath(System.String)">SetBasePath(String)</h4>
+  <div class="markdown level1 summary"><p>Sets the base path for the .env files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader SetBasePath(string basePath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">basePath</span></td>
+        <td><p>The base path to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_SetDefaultEnvFileName_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.SetDefaultEnvFileName(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L25">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_SetDefaultEnvFileName_" data-uid="DotEnv.Core.IEnvLoader.SetDefaultEnvFileName*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_SetDefaultEnvFileName_System_String_" data-uid="DotEnv.Core.IEnvLoader.SetDefaultEnvFileName(System.String)">SetDefaultEnvFileName(String)</h4>
+  <div class="markdown level1 summary"><p>Sets the default name of an .env file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader SetDefaultEnvFileName(string envFileName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">envFileName</span></td>
+        <td><p>The default name to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader_SetEncoding_System_Text_Encoding_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader.SetEncoding(System.Text.Encoding)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L61">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvLoader_SetEncoding_" data-uid="DotEnv.Core.IEnvLoader.SetEncoding*"></a>
+  <h4 id="DotEnv_Core_IEnvLoader_SetEncoding_System_Text_Encoding_" data-uid="DotEnv.Core.IEnvLoader.SetEncoding(System.Text.Encoding)">SetEncoding(Encoding)</h4>
+  <div class="markdown level1 summary"><p>Sets the encoding of the .env files.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvLoader SetEncoding(Encoding encoding)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.encoding">Encoding</a></td>
+        <td><span class="parametername">encoding</span></td>
+        <td><p>The type of encoding to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvLoader.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvLoader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvLoader.cs/#L11" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2021-2022 <b>DotEnv.Core</b>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

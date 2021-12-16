@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Getting Started with dotenv.core | DotEnv.Core </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Getting Started with dotenv.core | DotEnv.Core ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../images/dotenv-icon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="getting-started-with-dotenvcore">Getting Started with <code>dotenv.core</code></h1>
+
+<h2 id="installation">Installation</h2>
+<p>If you're an hardcore and want to do it manually, you must add the following to the <code>csproj</code> file:</p>
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;DotEnv.Core&quot; Version=&quot;1.0.0&quot; /&gt;
+</code></pre>
+<p>If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the <strong>Tools</strong> &gt; <strong>NuGet Package Manager</strong> &gt; <strong>Package Manager Console</strong> command and run the install command:</p>
+<pre><code>Install-Package DotEnv.Core
+</code></pre>
+<p>If you are making use of the dotnet CLI, then run the following in your terminal:</p>
+<pre><code>dotnet add package DotEnv.Core
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="loading-env-file">Loading .env file</h3>
+<p>You must import the namespace types at the beginning of your class file:</p>
+<pre><code class="lang-cs">using DotEnv.Core;
+</code></pre>
+<p>Then you can load the .env file with the <code>Load</code> method of the <code>EnvLoader</code> class:</p>
+<pre><code class="lang-cs">new EnvLoader().Load();
+</code></pre>
+<p>By default, the <code>Load</code> method will look for a file called <code>.env</code> in the current directory and if it does not find it, it will look for it in the parent directories of the current directory.</p>
+<p>The current directory is where the executable with its dependencies is located.</p>
+<p>Remember that if no encoding is specified to the <code>Load</code> method, the default will be <code>UTF-8</code>.</p>
+<h3 id="accessing-the-variables">Accessing the variables</h3>
+<p>After you have loaded the .env file with the <code>Load</code> method, you can access the environment variables using the indexer of the <code>EnvReader</code> class:</p>
+<pre><code class="lang-cs">var reader = new EnvReader();
+string key1 = reader[&quot;KEY1&quot;];
+string key2 = reader[&quot;KEY2&quot;];
+</code></pre>
+<p>Or you can also access the environment variables using the static property <code>Instance</code>:</p>
+<pre><code class="lang-cs">string key1 = EnvReader.Instance[&quot;KEY1&quot;];
+string key2 = EnvReader.Instance[&quot;KEY2&quot;];
+</code></pre>
+<h3 id="changing-the-default-name">Changing the default name</h3>
+<p>You can also change the default name of the .env file using the <code>SetDefaultEnvFileName</code> method:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .SetDefaultEnvFileName(&quot;.env.dev&quot;)
+    .Load();
+</code></pre>
+<p>Now the <code>Load</code> method will look for the <strong>.env.dev</strong> file in the current directory and in the parent directories if it is not found in the current directory.</p>
+<p>Another case would be:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .SetDefaultEnvFileName(&quot;.env.dev&quot;)
+    .AddEnvFiles(&quot;/foo/foo2&quot;, &quot;/bar/bar2&quot;)
+    .Load();
+</code></pre>
+<p>The <code>Load</code> method will look for two <code>.env.dev</code> files in the paths <code>/foo/foo2</code> and <code>/bar/bar2</code>.</p>
+<h3 id="specifying-the-path-absolute">Specifying the path absolute</h3>
+<p>You can also specify the absolute path to the .env file:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AddEnvFile(&quot;/home/App/.env.dev&quot;)
+    .Load();
+</code></pre>
+<p>In this case the <code>Load</code> method will search for the file <code>.env.dev</code> in the path <code>/home/App</code>, if it does not find it, the method will not search in the current directory or parent directories.</p>
+<p>It is recommended not to use absolute paths, instead use relative paths. Remember that an absolute path can be different in each operating system, so your application could lose portability.</p>
+<h3 id="loading-multiple-env-files">Loading multiple .env files</h3>
+<p>You can also load multiple .env files in a single call:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AddEnvFiles(&quot;env.example&quot;, &quot;env.example2&quot;)
+    .Load();
+</code></pre>
+<p>Or you can use the <code>AddEnvFile</code> method:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AddEnvFile(&quot;env.example&quot;)
+    .AddEnvFile(&quot;env.example2&quot;)
+    .Load();
+</code></pre>
+<p>If you need to specify an encoding type for all .env files, you can do it like this:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AddEnvFiles(&quot;env.example&quot;, &quot;env.example2&quot;)
+    .SetEncoding(Encoding.Unicode)
+    .Load();
+</code></pre>
+<p>You can also specify an encoding type for each .env file using the <code>AddEnvFile</code> method:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AddEnvFile(&quot;env.example&quot;, Encoding.Unicode)
+    .AddEnvFile(&quot;env.example2&quot;, Encoding.ASCII)
+    .Load();
+</code></pre>
+<h3 id="specifying-the-path-relative">Specifying the path relative</h3>
+<p>You can also specify a relative path using the <code>AddEnvFile</code> method:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AddEnvFile(&quot;./dotenv/files&quot;)
+    .Load();
+</code></pre>
+<p>In this case, the <code>.env</code> file is inside a directory, i.e. in <code>files</code>. The <code>Load</code> method will look for the file <code>dotenv/files/.env</code> in the current directory, if it does not find it, it will look for it in parent directories.</p>
+<p>This is useful when the .env file is located in a different directory than the current one.</p>
+<h3 id="specifying-base-path">Specifying base path</h3>
+<p>You can specify one base path for all .env files:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .SetBasePath(&quot;./dotenv/files&quot;)
+    .AddEnvFiles(&quot;.env.example&quot;, &quot;.env.example2&quot;)
+    .Load();
+</code></pre>
+<p>In this case, the <strong>Base Path</strong> is a relative path, so the <code>.env.example</code> and <code>.env.example2</code> files are inside <code>dotenv/files</code>.</p>
+<h3 id="throw-filenotfoundexception">Throw FileNotFoundException</h3>
+<p>By default, the <code>Load</code> method does not throw any exception if it does not found the .env file but you can change this behavior if you use the <code>EnableFileNotFoundException</code> method:</p>
+<pre><code class="lang-cs">try 
+{
+    new EnvLoader()
+        .EnableFileNotFoundException()
+        .Load();
+}
+catch(FileNotFoundException ex)
+{
+    System.Console.WriteLine(ex.Message);
+}
+</code></pre>
+<p><strong>Note:</strong> If you don't know what each class does, don't forget to check the <a class="xref" href="../api/DotEnv.Core.html">API documentation</a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/docs/articles/getting_started.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2021-2022 <b>DotEnv.Core</b>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

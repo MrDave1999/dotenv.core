@@ -1,0 +1,380 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/syslan/Documents/Visual Studio 2022/dotenv.core/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.html",
+          "hash": "3LIVVSubwGgzwlJFRWtWV978ffiqbQEhGtZgPnmmQms="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.html",
+          "hash": "KeHqTcmEiCFVpAAPZFBWLVaYwFOkTeZHkuezH98CCjo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParserOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParserOptions.html",
+          "hash": "ZxGd3VOvLhrCFNp8TIqscqqg/1JY2bQbpr7Ndyul3zA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.html",
+          "hash": "y5nj7nEeO96K+nkyifFE6qdm/0l4t8PUNSexngeJNVs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvVariableNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvVariableNotFoundException.html",
+          "hash": "1OncN/gTzMn3BKLnTYfxC0Bts3VFMWUdNFjhHwANiJU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.html",
+          "hash": "f1OE9GQcB2GB1jZEOJlj4GlonOB5mcoBRATeOSSXKbg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.html",
+          "hash": "Bmo0aQUxFOKHKSWFnvc5ISHfn84Ids4XBDgTq7Tu4yM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.html",
+          "hash": "X3p+br4MXYMaK9uu/HryzRWOxgHS4TiqxVKcZl9niuA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.ParserException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.ParserException.html",
+          "hash": "823UBU58VQtgRAfWGjff9NlrgZJfGj5BGD1Bs+awM14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.html",
+          "hash": "iMg0Wxx9Q6Udp8kcT5mJf9BeAlfxcBKIRUe47TcAX4E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "/DbRLT4sEhBjXSBxZSvtVqQGq8JSJ51PGvxnw0a3SeQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dependency_injection.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dependency_injection.html",
+          "hash": "LIhdU03kHVTKWOyDiIkvAkIV8psB5/dFS1++4bLNWzA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting_started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting_started.html",
+          "hash": "3QB/mmntrL0blg5qLleSoaey2TvGF0mVu92xqs7Ey/Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/more_options_for_loader.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/more_options_for_loader.html",
+          "hash": "mzNW1rB/odRJFW8TaEjzkf3Xn/VJDKQdZsO8BAoK898="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "l/It/C6C2Hf8FNTbzhDXs9b8JBbGJLFc0Z6FYOPWQtM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/using_dotenv_aspnetcore.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/using_dotenv_aspnetcore.html",
+          "hash": "f7fFdneQm7fLJWK/syj4W6O0EiszVqkcgH+FnAxm1/8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/using_helpers.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/using_helpers.html",
+          "hash": "8QjIUmeeRWzNkveGm1fXqJtLYw457r6UfhZAI0HyhrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/using_parser.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/using_parser.html",
+          "hash": "lzSdjB8waVD7WNrJ/EB9WWXOPsSh/6WlWHk0ur5VCgE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "diagrams/class_diagram.md",
+      "output": {
+        ".html": {
+          "relative_path": "diagrams/class_diagram.html",
+          "hash": "Y1xBzBCa2EuzWum0zau7pMlv/1mT1nk0EoAiNtgkJf8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "diagrams/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "diagrams/toc.html",
+          "hash": "A6+yD4R4JcjBpjCD/raYrzn0dO+o8wVD6RorFPyW0h8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dotenv-core-class-diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/dotenv-core-class-diagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dotenv-icon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/dotenv-icon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dotenv-logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/dotenv-logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dotenv-logo2.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/dotenv-logo2.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "kqQNCNiYOhj7UapMvnC+0fye6LF2BDWS7urUd/aA7cw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "3L9RQgLusp5KMDrhSpPq6Yn8VqhxkVqlxg0DmmJ0Nuw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 8,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
