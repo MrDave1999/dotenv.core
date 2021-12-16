@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to find out the possible attributes.
+    // Hold the pointer to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/example/bin/Debug/netcoreapp3.1/DotEnv.Core.Example.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/example",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}
