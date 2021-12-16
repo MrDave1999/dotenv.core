@@ -3,14 +3,14 @@
 namespace DotEnv.Core.Example
 {
 	class CustomEnvParser : EnvParser
-    {
-        protected override string ExtractKey(string line)
-        {
+	{
+		protected override string ExtractKey(string line)
+		{
 			string key = base.ExtractKey(line);
 			Console.WriteLine($"CustomEnvParser.ExtractKey(string line) -> {key}");
-            return key;
-        }
-    }
+			return key;
+		}
+	}
 
 	class Program
 	{
