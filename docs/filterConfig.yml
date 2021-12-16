@@ -1,0 +1,10 @@
+apiRules:
+- exclude:
+    uidRegex: ^DotEnv\.Core\.ExceptionMessages
+    type: class
+- exclude:
+    uidRegex: ^DotEnv\.Core\.EnvReader\.System#Collections#IEnumerable#GetEnumerator
+    type: method
+- exclude:
+    uidRegex: ^DotEnv\.Core\.EnvReader\.GetEnumerator
+    type: method
