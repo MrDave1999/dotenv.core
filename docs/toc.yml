@@ -1,0 +1,8 @@
+- name: Articles
+  href: articles/
+- name: API Documentation
+  href: api/
+- name: Diagrams
+  href: diagrams/
+- name: GitHub
+  href: https://github.com/MrDave1999/dotenv.core
