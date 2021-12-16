@@ -20,7 +20,7 @@
   <ItemGroup>
     <None Include="..\dotenv-icon-nuget.png" Pack="True" PackagePath="" />
     <None Include="..\README.md" Pack="True" PackagePath="" />
-	<None Include="..\LICENSE" Pack="True" PackagePath="" />
+    <None Include="..\LICENSE" Pack="True" PackagePath="" />
   </ItemGroup>
 
 </Project>
