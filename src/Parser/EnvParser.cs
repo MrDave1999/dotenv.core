@@ -7,6 +7,9 @@ namespace DotEnv.Core
     /// <inheritdoc cref="IEnvParser" />
     public class EnvParser : IEnvParser
     {
+        /// <summary>
+        /// Allows access to the configuration options for the parser.
+        /// </summary>
         protected readonly EnvParserOptions _configuration = new EnvParserOptions();
 
         /// <summary>

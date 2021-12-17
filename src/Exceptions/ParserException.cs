@@ -37,6 +37,9 @@ namespace DotEnv.Core
             _currentLine = currentLine;
         }
 
+        /// <summary>
+        /// Gets a message that describes the current exception.
+        /// </summary>
         public override string Message
         {
             get

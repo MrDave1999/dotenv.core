@@ -28,6 +28,9 @@ namespace DotEnv.Core
             _variableName = variableName;
         }
 
+        /// <summary>
+        /// Gets a message that describes the current exception.
+        /// </summary>
         public override string Message => $"{base.Message} (Variable Name: {_variableName})";
     }
 }

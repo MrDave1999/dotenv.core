@@ -18,12 +18,17 @@ namespace DotEnv.Core
         /// <remarks>This method is thread-safe.</remarks>
         public static EnvReader Instance => s_instance;
 
+        /// <summary>
+        /// Returns an enumerator that iterates through the environment variables.
+        /// </summary>
+        /// <returns>An enumerator that can be used to iterate through the environment variables.</returns>
         public IEnumerator<KeyValuePair<string, string>> GetEnumerator()
         {
             foreach (DictionaryEntry de in GetEnvironmentVariables())
                 yield return new KeyValuePair<string, string>((string)de.Key, (string)de.Value);
         }
 
+        /// <inheritdoc cref="GetEnumerator" />
         IEnumerator IEnumerable.GetEnumerator()
             => this.GetEnumerator();
 
