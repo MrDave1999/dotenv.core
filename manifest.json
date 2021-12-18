@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/syslan/Documents/Visual Studio 2022/dotenv.core/docs",
+  "source_base_path": "C:/Users/syslan/Documents/Visual Studio 2022/DotEnv.Core/docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.EnvParser.html",
-          "hash": "KeHqTcmEiCFVpAAPZFBWLVaYwFOkTeZHkuezH98CCjo="
+          "hash": "Ic3haZ8qRlQ7fbKXEOA0eh/EhR7RpN7vfrp3UnzboTY="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.EnvReader.html",
-          "hash": "y5nj7nEeO96K+nkyifFE6qdm/0l4t8PUNSexngeJNVs="
+          "hash": "kDI6iXB2zKndeFU1CVY6NzS91mupW0mMsRgnk0az9nM="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.EnvVariableNotFoundException.html",
-          "hash": "1OncN/gTzMn3BKLnTYfxC0Bts3VFMWUdNFjhHwANiJU="
+          "hash": "pnkRUTTAmYcKvcJ84FwsCpCMO7dquZGsIW60QBzW2Mw="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.ParserException.html",
-          "hash": "823UBU58VQtgRAfWGjff9NlrgZJfGj5BGD1Bs+awM14="
+          "hash": "CXcHILl6+CbX2zNvS+679y0dVmbBIMTybIUHRugJV+4="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting_started.html",
-          "hash": "3QB/mmntrL0blg5qLleSoaey2TvGF0mVu92xqs7Ey/Q="
+          "hash": "FWVMGnsOAI3dQ+70NCmmkgZOPlT+lsJSTszaMaeqgMY="
         }
       },
       "is_incremental": false,
@@ -302,7 +302,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "kqQNCNiYOhj7UapMvnC+0fye6LF2BDWS7urUd/aA7cw="
+          "hash": "V4wU4qNuVqPx9bCnq8aYj+F+gIxDhPPuaEFDyQK7Y90="
         }
       },
       "is_incremental": false,
@@ -324,25 +324,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 8,
-          "skipped_file_count": 0
+          "skipped_file_count": 7
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 10,
-          "skipped_file_count": 0
+          "skipped_file_count": 10
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
