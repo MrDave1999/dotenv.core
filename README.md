@@ -8,7 +8,7 @@
 [![Nuget-Badges](https://buildstats.info/nuget/dotenv.core)](https://www.nuget.org/packages/dotenv.core/)
 
 
-**dotenv.core** is a class library for read .env files and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.
+**dotenv.core** is a class library for read and parsing .env files in .NET Core and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.
 
 ## Features
 
