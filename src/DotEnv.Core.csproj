@@ -13,7 +13,7 @@
     <PackageTags>dotenv, env, variables, environment, envfile</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
-    <Description>dotenv.core is a class library for read .env files in .NET Core</Description>
+    <Description>dotenv.core is a class library for read and parsing .env files in .NET Core</Description>
     <Version>1.0.1</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
