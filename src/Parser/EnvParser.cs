@@ -7,6 +7,9 @@ namespace DotEnv.Core
     /// <inheritdoc cref="IEnvParser" />
     public class EnvParser : IEnvParser
     {
+        private const int MaxCount = 2;
+        private const char DelimiterKeyValuePair = '=';
+
         /// <summary>
         /// Allows access to the configuration options for the parser.
         /// </summary>
@@ -30,7 +33,7 @@ namespace DotEnv.Core
         /// <returns>The key extracted.</returns>
         protected virtual string ExtractKey(string line)
         {
-            string key = line.Split('=')[0];
+            string key = line.Split(DelimiterKeyValuePair, MaxCount)[0];
             key = _configuration.TrimStartKeys ? key.TrimStart() : key;
             key = _configuration.TrimEndKeys ? key.TrimEnd() : key;
             return key;
@@ -43,7 +46,7 @@ namespace DotEnv.Core
         /// <returns>The value extracted.</returns>
         protected virtual string ExtractValue(string line)
         {
-            string value = line.Split('=')[1];
+            string value = line.Split(DelimiterKeyValuePair, MaxCount)[1];
             value = _configuration.TrimStartValues ? value.TrimStart() : value;
             value = _configuration.TrimEndValues ? value.TrimEnd() : value;
             return string.IsNullOrEmpty(value) ? " " : value;
@@ -55,7 +58,7 @@ namespace DotEnv.Core
         /// <param name="line">The line to test.</param>
         /// <returns><c>true</c> if the line has no the key-value format, otherwise <c>false</c>.</returns>
         protected virtual bool HasNoKeyValuePair(string line)
-            => line.Split('=').Length != 2;
+            => line.Split(DelimiterKeyValuePair, MaxCount).Length != 2;
 
         /// <summary>
         /// Create or update an environment variable.
