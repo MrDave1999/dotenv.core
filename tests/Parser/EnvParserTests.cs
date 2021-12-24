@@ -46,7 +46,7 @@ namespace DotEnv.Core.Tests.Parser
             LINE_HAS_NO_KEY_4=VAL2
         ")]
         [DataRow(@"
-            KEY1=VAL1=KEY1=VAL1
+            This is a line.
             LINE_HAS_NO_KEY_5=VAL2
         ")]
         public void Parse_WhenLineHasNoKeyValuePair_ShouldThrowParserException(string input)
@@ -102,6 +102,7 @@ namespace DotEnv.Core.Tests.Parser
                 READLINE_WITH_VALUE_1=VAL1
                 READLINE_WITH_VALUE_2=VAL2
                 READLINE_WITH_VALUE_3=VAL3
+                READLINE_WITH_VALUE_4=server=localhost;user=root;password=1234;
             ";
             var parser = new EnvParser();
 
@@ -110,6 +111,7 @@ namespace DotEnv.Core.Tests.Parser
             Assert.AreEqual("VAL1", GetEnvironmentVariable("READLINE_WITH_VALUE_1"));
             Assert.AreEqual("VAL2", GetEnvironmentVariable("READLINE_WITH_VALUE_2"));
             Assert.AreEqual("VAL3", GetEnvironmentVariable("READLINE_WITH_VALUE_3"));
+            Assert.AreEqual("server=localhost;user=root;password=1234;", GetEnvironmentVariable("READLINE_WITH_VALUE_4"));
         }
 
         [TestMethod]
