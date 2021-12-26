@@ -31,6 +31,12 @@ namespace DotEnv.Core
         IEnvParser DisableTrimEndValues();
 
         /// <summary>
+        /// Disables the trim at the start and end of the values.
+        /// </summary>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvParser DisableTrimValues();
+
+        /// <summary>
         /// Disables the trim at the starts of the keys.
         /// This method will tell the parser not to remove leading white-spaces from the keys.
         /// </summary>
