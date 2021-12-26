@@ -104,5 +104,21 @@ namespace DotEnv.Core.Tests.Parser
             Assert.IsNull(GetEnvironmentVariable(";KEY1"));
             Assert.IsNull(GetEnvironmentVariable(";KEY2"));
         }
+
+        [TestMethod]
+        public void Parse_WhenSetsDelimiterKeyValuePair_ShouldReadVariables()
+        {
+            string env = @"
+                DELIMITER_KEYVALUE_1 : VAL1
+                DELIMITER_KEYVALUE_2:VAL2
+            ";
+
+            new EnvParser()
+                .SetDelimiterKeyValuePair(':')
+                .Parse(env);
+
+            Assert.AreEqual("VAL1", GetEnvironmentVariable("DELIMITER_KEYVALUE_1"));
+            Assert.AreEqual("VAL2", GetEnvironmentVariable("DELIMITER_KEYVALUE_2"));
+        }
     }
 }
