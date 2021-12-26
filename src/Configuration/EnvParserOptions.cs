@@ -38,5 +38,10 @@ namespace DotEnv.Core
         /// A value indicating whether to overwrite the value of an existing environment variable. Its default value is <c>false</c>.
         /// </summary>
         public bool OverwriteExistingVars { get; set; }
+
+        /// <summary>
+        /// A character indicating the beginning of a comment. Its default value is <c>#</c>.
+        /// </summary>
+        public char CommentChar { get; set; } = '#';
     }
 }

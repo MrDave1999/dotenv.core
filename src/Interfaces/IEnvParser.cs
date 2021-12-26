@@ -57,5 +57,12 @@ namespace DotEnv.Core
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvParser AllowOverwriteExistingVars();
+
+        /// <summary>
+        /// Sets the character that will define the beginning of a comment.
+        /// </summary>
+        /// <param name="commentChar">The character that defines the beginning of a comment.</param>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvParser SetCommentChar(char commentChar);
     }
 }

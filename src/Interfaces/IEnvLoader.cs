@@ -83,5 +83,8 @@ namespace DotEnv.Core
 
         /// <inheritdoc cref="IEnvParser.AllowOverwriteExistingVars" />
         IEnvLoader AllowOverwriteExistingVars();
+
+        /// <inheritdoc cref="IEnvParser.SetCommentChar" />
+        IEnvLoader SetCommentChar(char commentChar);
     }
 }

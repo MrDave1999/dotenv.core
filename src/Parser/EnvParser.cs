@@ -23,7 +23,7 @@ namespace DotEnv.Core
         protected virtual bool IsComment(string line)
         {
             line = _configuration.TrimStartComments ? line.TrimStart() : line;
-            return line[0] == '#';
+            return line[0] == _configuration.CommentChar;
         }
 
         /// <summary>
@@ -143,6 +143,13 @@ namespace DotEnv.Core
         public IEnvParser AllowOverwriteExistingVars()
         {
             _configuration.OverwriteExistingVars = true;
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IEnvParser SetCommentChar(char commentChar)
+        {
+            _configuration.CommentChar = commentChar;
             return this;
         }
     }

@@ -179,5 +179,12 @@ namespace DotEnv.Core
             _parser.AllowOverwriteExistingVars();
             return this;
         }
+
+        /// <inheritdoc />
+        public IEnvLoader SetCommentChar(char commentChar)
+        {
+            _parser.SetCommentChar(commentChar);
+            return this;
+        }
     }
 }
