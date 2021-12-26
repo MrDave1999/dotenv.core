@@ -43,5 +43,10 @@ namespace DotEnv.Core
         /// A character indicating the beginning of a comment. Its default value is <c>#</c>.
         /// </summary>
         public char CommentChar { get; set; } = '#';
+
+        /// <summary>
+        /// A character that separates a key-value pair. Its default value is <c>=</c>.
+        /// </summary>
+        public char DelimiterKeyValuePair { get; set; } = '=';
     }
 }

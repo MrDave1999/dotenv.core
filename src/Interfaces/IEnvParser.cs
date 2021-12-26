@@ -64,5 +64,12 @@ namespace DotEnv.Core
         /// <param name="commentChar">The character that defines the beginning of a comment.</param>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvParser SetCommentChar(char commentChar);
+
+        /// <summary>
+        /// Sets the delimiter that separates an assigment of a value to a key.
+        /// </summary>
+        /// <param name="separator">The character that separates the key-value pair.</param>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvParser SetDelimiterKeyValuePair(char separator);
     }
 }

@@ -186,5 +186,12 @@ namespace DotEnv.Core
             _parser.SetCommentChar(commentChar);
             return this;
         }
+
+        /// <inheritdoc />
+        public IEnvLoader SetDelimiterKeyValuePair(char separator)
+        {
+            _parser.SetDelimiterKeyValuePair(separator);
+            return this;
+        }
     }
 }

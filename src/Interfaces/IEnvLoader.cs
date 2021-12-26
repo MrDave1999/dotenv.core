@@ -86,5 +86,8 @@ namespace DotEnv.Core
 
         /// <inheritdoc cref="IEnvParser.SetCommentChar" />
         IEnvLoader SetCommentChar(char commentChar);
+
+        /// <inheritdoc cref="IEnvParser.SetDelimiterKeyValuePair" />
+        IEnvLoader SetDelimiterKeyValuePair(char separator);
     }
 }
