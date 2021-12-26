@@ -51,6 +51,12 @@ namespace DotEnv.Core
         IEnvParser DisableTrimEndKeys();
 
         /// <summary>
+        /// Disables the trim at the start and end of the keys.
+        /// </summary>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvParser DisableTrimKeys();
+
+        /// <summary>
         /// Disables the trim at the starts of the comments.
         /// This method will tell the parser not to remove leading white-spaces from the comments.
         /// </summary>

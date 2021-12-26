@@ -81,6 +81,9 @@ namespace DotEnv.Core
         /// <inheritdoc cref="IEnvParser.DisableTrimEndKeys" />
         IEnvLoader DisableTrimEndKeys();
 
+        /// <inheritdoc cref="IEnvParser.DisableTrimKeys" />
+        IEnvLoader DisableTrimKeys();
+
         /// <inheritdoc cref="IEnvParser.DisableTrimStartComments" />
         IEnvLoader DisableTrimStartComments();
 

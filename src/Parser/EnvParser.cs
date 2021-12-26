@@ -140,6 +140,14 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
+        public IEnvParser DisableTrimKeys()
+        {
+            DisableTrimStartKeys();
+            DisableTrimEndKeys();
+            return this;
+        }
+
+        /// <inheritdoc />
         public IEnvParser DisableTrimStartComments()
         {
             _configuration.TrimStartComments = false;
