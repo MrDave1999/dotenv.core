@@ -88,5 +88,21 @@ namespace DotEnv.Core.Tests.Parser
             Assert.AreEqual("VAL1", GetEnvironmentVariable("ALLOW_OVERWRITE_1"));
             Assert.AreEqual("VAL2", GetEnvironmentVariable("ALLOW_OVERWRITE_2"));
         }
+
+        [TestMethod]
+        public void Parse_WhenSetsCommentChar_ShouldIgnoreComment()
+        {
+            string env = @"
+                ;KEY1 = VAL1
+                ;KEY2 = VAL2
+            ";
+
+            new EnvParser()
+                .SetCommentChar(';')
+                .Parse(env);
+
+            Assert.IsNull(GetEnvironmentVariable(";KEY1"));
+            Assert.IsNull(GetEnvironmentVariable(";KEY2"));
+        }
     }
 }
