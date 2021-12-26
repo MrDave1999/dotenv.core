@@ -32,6 +32,18 @@ namespace DotEnv.Core.Tests.Parser
         }
 
         [TestMethod]
+        public void Parse_WhenDisabledTrimValues_ShouldNotIgnoreWhitepaces()
+        {
+            string env = "TRIM_VALUES=   1   ";
+
+            new EnvParser()
+                .DisableTrimValues()
+                .Parse(env);
+
+            Assert.AreEqual("   1   ", GetEnvironmentVariable("TRIM_VALUES"));
+        }
+
+        [TestMethod]
         public void Parse_WhenDisabledTrimStartKeys_ShouldNotIgnoreLeadingWhitepaces()
         {
             string env = "   TRIM_START_KEYS=1";
