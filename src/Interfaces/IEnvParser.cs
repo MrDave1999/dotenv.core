@@ -83,5 +83,11 @@ namespace DotEnv.Core
         /// <param name="separator">The character that separates the key-value pair.</param>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvParser SetDelimiterKeyValuePair(char separator);
+
+        /// <summary>
+        /// Ignores parser exceptions. By calling this method the parser will not throw any exceptions when it encounters an error.
+        /// </summary>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvParser IgnoreParserExceptions();
     }
 }

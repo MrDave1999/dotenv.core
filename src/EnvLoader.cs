@@ -207,5 +207,12 @@ namespace DotEnv.Core
             _parser.SetDelimiterKeyValuePair(separator);
             return this;
         }
+
+        /// <inheritdoc />
+        public IEnvLoader IgnoreParserExceptions()
+        {
+            _parser.IgnoreParserExceptions();
+            return this;
+        }
     }
 }

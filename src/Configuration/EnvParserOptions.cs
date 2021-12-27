@@ -48,5 +48,10 @@ namespace DotEnv.Core
         /// A character that separates a key-value pair. Its default value is <c>=</c>.
         /// </summary>
         public char DelimiterKeyValuePair { get; set; } = '=';
+
+        /// <summary>
+        /// A value indicating whether the parser should throw an exception when it encounters an error. Its default value is <c>true</c>.
+        /// </summary>
+        public bool ThrowException { get; set; } = true;
     }
 }

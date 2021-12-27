@@ -77,7 +77,12 @@ namespace DotEnv.Core
         public void Parse(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
-                throw new ParserException(ExceptionMessages.InputIsEmptyOrWhitespaceMessage);
+            {
+                if(_configuration.ThrowException)
+                    throw new ParserException(ExceptionMessages.InputIsEmptyOrWhitespaceMessage);
+
+                return;
+            }
 
             var lines = input.Split(Environment.NewLine.ToCharArray());
             for(int i = 0, len = lines.Length; i != len; ++i)
@@ -91,11 +96,21 @@ namespace DotEnv.Core
                     continue;
 
                 if (HasNoKeyValuePair(line))
-                    throw new ParserException(ExceptionMessages.LineHasNoKeyValuePairMessage, line, i + 1);
+                {
+                    if(_configuration.ThrowException)
+                        throw new ParserException(ExceptionMessages.LineHasNoKeyValuePairMessage, line, i + 1);
+
+                    continue;
+                }
 
                 string key = ExtractKey(line);
                 if (string.IsNullOrEmpty(key))
-                    throw new ParserException(ExceptionMessages.KeyIsAnEmptyStringMessage, currentLine: i + 1);
+                {
+                    if(_configuration.ThrowException)
+                        throw new ParserException(ExceptionMessages.KeyIsAnEmptyStringMessage, currentLine: i + 1);
+
+                    continue;
+                }
 
                 string value = ExtractValue(line);
 
@@ -172,6 +187,13 @@ namespace DotEnv.Core
         public IEnvParser SetDelimiterKeyValuePair(char separator)
         {
             _configuration.DelimiterKeyValuePair = separator;
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IEnvParser IgnoreParserExceptions()
+        {
+            _configuration.ThrowException = false;
             return this;
         }
     }
