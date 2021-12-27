@@ -201,5 +201,16 @@ namespace DotEnv.Core.Tests.Parser
 
             Assert.AreEqual("HelloWorld!!", GetEnvironmentVariable("CONCAT_START1"));
         }
+
+        [TestMethod]
+        [DataRow(-1)]
+        [DataRow(3)]
+        [DataRow(4)]
+        public void AllowConcatDuplicateKeys_WhenOptionIsInvalid_ShouldThrowArgumentException(int option)
+        {
+            Action action = () => new EnvParser().AllowConcatDuplicateKeys((ConcatKeysOptions)option);
+
+            Assert.ThrowsException<ArgumentException>(action);
+        }
     }
 }
