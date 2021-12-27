@@ -67,11 +67,23 @@ namespace DotEnv.Core
         /// <param name="value">The value to set.</param>
         protected virtual void SetEnvironmentVariable(string key, string value)
         {
-            if (Environment.GetEnvironmentVariable(key) == null)
+            var retrievedValue = Environment.GetEnvironmentVariable(key);
+            if (retrievedValue == null)
                 Environment.SetEnvironmentVariable(key, value);
+            else if(_configuration.ConcatDuplicateKeys != ConcatKeysOptions.None)
+                Environment.SetEnvironmentVariable(key, ConcatValues(retrievedValue, value));
             else if(_configuration.OverwriteExistingVars)
                 Environment.SetEnvironmentVariable(key, value);
         }
+
+        /// <summary>
+        /// Concatenates a value with the current value of a variable.
+        /// </summary>
+        /// <param name="currentValue">The current value of the variable.</param>
+        /// <param name="value">The value to be concatenated with the current value.</param>
+        /// <returns>The string with the concatenated values.</returns>
+        protected virtual string ConcatValues(string currentValue, string value)
+            => _configuration.ConcatDuplicateKeys == ConcatKeysOptions.End ? $"{currentValue}{value}" : $"{value}{currentValue}";
 
         /// <inheritdoc />
         public void Parse(string input)
@@ -187,6 +199,13 @@ namespace DotEnv.Core
         public IEnvParser SetDelimiterKeyValuePair(char separator)
         {
             _configuration.DelimiterKeyValuePair = separator;
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IEnvParser AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End)
+        {
+            _configuration.ConcatDuplicateKeys = option;
             return this;
         }
 

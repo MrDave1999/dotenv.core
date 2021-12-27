@@ -96,6 +96,9 @@ namespace DotEnv.Core
         /// <inheritdoc cref="IEnvParser.SetDelimiterKeyValuePair" />
         IEnvLoader SetDelimiterKeyValuePair(char separator);
 
+        /// <inheritdoc cref="IEnvParser.AllowConcatDuplicateKeys" />
+        IEnvLoader AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End);
+
         /// <inheritdoc cref="IEnvParser.IgnoreParserExceptions" />
         IEnvLoader IgnoreParserExceptions();
     }

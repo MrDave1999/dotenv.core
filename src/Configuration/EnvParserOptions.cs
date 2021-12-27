@@ -50,6 +50,11 @@ namespace DotEnv.Core
         public char DelimiterKeyValuePair { get; set; } = '=';
 
         /// <summary>
+        /// A value that indicates whether duplicate keys can be concatenated. Its default value is <see cref="ConcatKeysOptions.None" />.
+        /// </summary>
+        public ConcatKeysOptions ConcatDuplicateKeys { get; set; } = ConcatKeysOptions.None;
+
+        /// <summary>
         /// A value indicating whether the parser should throw an exception when it encounters an error. Its default value is <c>true</c>.
         /// </summary>
         public bool ThrowException { get; set; } = true;

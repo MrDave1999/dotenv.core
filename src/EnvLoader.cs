@@ -209,6 +209,13 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
+        public IEnvLoader AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End)
+        {
+            _parser.AllowConcatDuplicateKeys(option);
+            return this;
+        }
+
+        /// <inheritdoc />
         public IEnvLoader IgnoreParserExceptions()
         {
             _parser.IgnoreParserExceptions();

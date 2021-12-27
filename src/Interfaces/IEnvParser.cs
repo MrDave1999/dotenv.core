@@ -85,6 +85,13 @@ namespace DotEnv.Core
         IEnvParser SetDelimiterKeyValuePair(char separator);
 
         /// <summary>
+        /// Allows to concatenate the values of the duplicate keys.
+        /// </summary>
+        /// <param name="option">The option that indicates whether the concatenation is at the start or at the end of the value.</param>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvParser AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End);
+
+        /// <summary>
         /// Ignores parser exceptions. By calling this method the parser will not throw any exceptions when it encounters an error.
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
