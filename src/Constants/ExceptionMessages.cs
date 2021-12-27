@@ -15,5 +15,6 @@ namespace DotEnv.Core
         public const string KeyIsAnEmptyStringMessage = "The parser found an empty key (\"\").";
         public const string LineHasNoKeyValuePairMessage = "The parser found a line that has no key-value pair format.";
         public const string FileNotFoundMessage = "The .env file could not be found.";
+        public const string OptionInvalidMessage = "The option is invalid.";
     }
 }

@@ -88,6 +88,7 @@ namespace DotEnv.Core
         /// Allows to concatenate the values of the duplicate keys.
         /// </summary>
         /// <param name="option">The option that indicates whether the concatenation is at the start or at the end of the value.</param>
+        /// <exception cref="ArgumentException"><c>option</c> is not one of the <see cref="ConcatKeysOptions" /> values.</exception>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvParser AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End);
 

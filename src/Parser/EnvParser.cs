@@ -205,6 +205,9 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvParser AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End)
         {
+            if (option < ConcatKeysOptions.None || option > ConcatKeysOptions.End)
+                throw new ArgumentException(ExceptionMessages.OptionInvalidMessage, nameof(option));
+
             _configuration.ConcatDuplicateKeys = option;
             return this;
         }
