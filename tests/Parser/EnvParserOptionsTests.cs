@@ -164,5 +164,42 @@ namespace DotEnv.Core.Tests.Parser
             Assert.IsNotNull(GetEnvironmentVariable("IGNORE_EXCEPTION_1"));
             Assert.IsNotNull(GetEnvironmentVariable("IGNORE_EXCEPTION_2"));
         }
+
+        [TestMethod]
+        public void Parse_WhenConcatDuplicateKeysAtEnd_ShouldReadDuplicateVariable()
+        {
+            string env = @"
+                CONCAT_END2 = 1
+                CONCAT_END1 = Hello
+                CONCAT_END1 = World
+                CONCAT_END1 = !
+                CONCAT_END1 = !
+            ";
+
+            new EnvParser()
+                .AllowConcatDuplicateKeys()
+                .Parse(env);
+
+            Assert.AreEqual("HelloWorld!!", GetEnvironmentVariable("CONCAT_END1"));
+        }
+
+
+        [TestMethod]
+        public void Parse_WhenConcatDuplicateKeysAtStart_ShouldReadDuplicateVariable()
+        {
+            string env = @"
+                CONCAT_START2 = 1
+                CONCAT_START1 = !
+                CONCAT_START1 = !
+                CONCAT_START1 = World
+                CONCAT_START1 = Hello
+            ";
+
+            new EnvParser()
+                .AllowConcatDuplicateKeys(ConcatKeysOptions.Start)
+                .Parse(env);
+
+            Assert.AreEqual("HelloWorld!!", GetEnvironmentVariable("CONCAT_START1"));
+        }
     }
 }
