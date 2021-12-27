@@ -65,7 +65,7 @@ namespace DotEnv.Core
                 }
 
                 if (_configuration.ThrowFileNotFoundException)
-                    throw new FileNotFoundException("The .env file could not be found.", envFile.Path);
+                    throw new FileNotFoundException(ExceptionMessages.FileNotFoundMessage, envFile.Path);
             }
         }
 

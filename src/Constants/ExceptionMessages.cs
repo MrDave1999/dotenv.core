@@ -14,5 +14,6 @@ namespace DotEnv.Core
         public const string InputIsEmptyOrWhitespaceMessage = "The data source (probably the env file) is empty or consists only in whitespace.";
         public const string KeyIsAnEmptyStringMessage = "The parser found an empty key (\"\").";
         public const string LineHasNoKeyValuePairMessage = "The parser found a line that has no key-value pair format.";
+        public const string FileNotFoundMessage = "The .env file could not be found.";
     }
 }
