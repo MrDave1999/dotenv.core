@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace DotEnv.Core
 {
@@ -85,6 +86,42 @@ namespace DotEnv.Core
         protected virtual string ConcatValues(string currentValue, string value)
             => _configuration.ConcatDuplicateKeys == ConcatKeysOptions.End ? $"{currentValue}{value}" : $"{value}{currentValue}";
 
+        /// <summary>
+        /// Replaces the name of each environment variable embedded in the specified string with the string equivalent of the value of the variable, then returns the resulting string.
+        /// </summary>
+        /// <param name="value">A string containing the names of zero or more environment variables. Each environment variable must have the following format: <c>${VAR}</c>.</param>
+        /// <param name="lineNumber">The line number where the value was found.</param>
+        /// <exception cref="ParserException"><c>variable</c> is an empty string or if it does not exist in the current process.</exception>
+        /// <returns>A string with each environment variable replaced by its value.</returns>
+        protected virtual string ExpandEnvironmentVariables(string value, int lineNumber)
+        {
+            var pattern = @"\$\{([^}]*)\}";
+            var matches = Regex.Matches(value, pattern);
+            foreach (Match match in matches)
+            {
+                var variable = match.Groups[1].Value;
+                if (string.IsNullOrWhiteSpace(variable))
+                {
+                    if(_configuration.ThrowException)
+                        throw new ParserException(ExceptionMessages.VariableIsAnEmptyStringMessage, "${ }", lineNumber);
+
+                    continue;
+                }
+
+                var retrievedValue = Environment.GetEnvironmentVariable(variable);
+                if (retrievedValue == null)
+                {
+                    if(_configuration.ThrowException)
+                        throw new ParserException(ExceptionMessages.VariableNotFoundMessage, variable, lineNumber);
+
+                    continue;
+                }
+
+                value = value.Replace("${" + variable + "}", retrievedValue);
+            }
+            return value;
+        }
+
         /// <inheritdoc />
         public void Parse(string input)
         {
@@ -125,6 +162,7 @@ namespace DotEnv.Core
                 }
 
                 string value = ExtractValue(line);
+                value = ExpandEnvironmentVariables(value, lineNumber: i + 1);
 
                 SetEnvironmentVariable(key, value);
             }

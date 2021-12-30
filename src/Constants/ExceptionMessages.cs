@@ -13,7 +13,7 @@ namespace DotEnv.Core
         public const string VariableNotFoundMessage = "The environment variable was not found in the current process.";
         public const string InputIsEmptyOrWhitespaceMessage = "The data source (probably the env file) is empty or consists only in whitespace.";
         public const string KeyIsAnEmptyStringMessage = "The key name cannot be an empty string or consists only of white-space characters.";
-        public const string VariableIsAnEmptyStringMessage = "The environment variable name cannot be an empty string or consists only of white-space characters.";
+        public const string VariableIsAnEmptyStringMessage = "The variable embedded in the value cannot be an empty string or consists only of white-space characters.";
         public const string LineHasNoKeyValuePairMessage = "The parser found a line that has no key-value pair format.";
         public const string FileNotFoundMessage = "The .env file could not be found.";
         public const string OptionInvalidMessage = "The option is invalid.";
