@@ -177,5 +177,54 @@ namespace DotEnv.Core.Tests.Parser
             Assert.AreEqual("1", GetEnvironmentVariable("KEY_EXISTS_1"));
             Assert.AreEqual("2", GetEnvironmentVariable("KEY_EXISTS_2"));
         }
+
+        [TestMethod]
+        public void Parse_WhenVariablesAreEmbeddedInTheValue_ShouldExpandVariables()
+        {
+            string env = @"
+                MYSQL_USER_EXPAND = root
+                EXPAND_1 = 1
+                MYSQL_HOST_EXPAND = localhost
+                MYSQL_PASSWORD_EXPAND = 1234
+                CS_MYSQL_EXPAND = server=${MYSQL_HOST_EXPAND};user=${MYSQL_USER_EXPAND};password=${MYSQL_PASSWORD_EXPAND};
+                CS_SQL_EXPAND = ${CS_MYSQL_EXPAND}
+                EXPAND_2 = ${TEST asdasd
+                EXPAND_3 = {TEST}$ $TEST {}
+            ";
+            var parser = new EnvParser();
+
+            parser.Parse(env);
+
+            Assert.AreEqual("server=localhost;user=root;password=1234;", GetEnvironmentVariable("CS_MYSQL_EXPAND"));
+            Assert.AreEqual("server=localhost;user=root;password=1234;", GetEnvironmentVariable("CS_SQL_EXPAND"));
+            Assert.AreEqual("${TEST asdasd", GetEnvironmentVariable("EXPAND_2"));
+            Assert.AreEqual("{TEST}$ $TEST {}", GetEnvironmentVariable("EXPAND_3"));
+        }
+
+        [TestMethod]
+        [DataRow("EMBEDDED_VAR_1 = asdasd ${EMBEDDED_VAR_1}")]
+        [DataRow("EMBEDDED_VAR_2 = ${VARIABLE_NOT_FOUND} asdasd ")]
+        public void Parse_WhenEmbeddedVariableDoesNotExist_ShouldThrowParserException(string env)
+        {
+            var parser = new EnvParser();
+
+            Action action = () => parser.Parse(env);
+
+            var ex = Assert.ThrowsException<ParserException>(action);
+            StringAssert.Contains(ex.Message, VariableNotFoundMessage);
+        }
+
+        [TestMethod]
+        [DataRow("EMBEDDED_VAR_3 = asdasd ${}")]
+        [DataRow("EMBEDDED_VAR_4 = ${    } asdasd ")]
+        public void Parse_WhenEmbeddedVariableIsEmptyString_ShouldThrowParserException(string env)
+        {
+            var parser = new EnvParser();
+
+            Action action = () => parser.Parse(env);
+
+            var ex = Assert.ThrowsException<ParserException>(action);
+            StringAssert.Contains(ex.Message, VariableIsAnEmptyStringMessage);
+        }
     }
 }
