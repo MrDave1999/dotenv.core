@@ -63,7 +63,9 @@ namespace DotEnv.Core
         /// <summary>
         /// Create or update an environment variable.
         /// </summary>
-        /// <remarks>The environment variable will only be updated if property <see cref="EnvParserOptions.OverwriteExistingVars" /> is set to <c>true</c>.</remarks>
+        /// <remarks>The environment variable will only be updated if the <see cref="EnvParserOptions.OverwriteExistingVars" /> property is set to <c>true</c> 
+        /// or if the <see cref="EnvParserOptions.ConcatDuplicateKeys" /> property is set to <see cref="ConcatKeysOptions.Start" /> or <see cref="ConcatKeysOptions.End" />.
+        /// </remarks>
         /// <param name="key">The key of the value to set.</param>
         /// <param name="value">The value to set.</param>
         protected virtual void SetEnvironmentVariable(string key, string value)
