@@ -15,6 +15,7 @@
 - You can customize the parser algorithm through inheritance.
 - You can set the base path for a set of .env files.
 - You can change the default .env file name, so it does not necessarily have to be `.env`.
+- Support for the variables interpolation.
 
 ## Basic Concepts
 ### What is a .env file?
