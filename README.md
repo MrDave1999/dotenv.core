@@ -18,6 +18,7 @@
 - You can customize the parser algorithm through inheritance.
 - You can set the base path for a set of .env files.
 - You can change the default .env file name, so it does not necessarily have to be `.env`.
+- Support for the variables interpolation.
 
 Don't forget to visit the official library [website](https://mrdave1999.github.io/dotenv.core) where you can find [API documentation](https://mrdave1999.github.io/dotenv.core/api/DotEnv.Core.html), [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html) and [diagrams](https://mrdave1999.github.io/dotenv.core/diagrams/class_diagram.html).
 
@@ -41,7 +42,7 @@ An environment variable is a dynamic variable that can affect the behavior of ru
 
 If you're an hardcore and want to do it manually, you must add the following to the `csproj` file:
 ```xml
-<PackageReference Include="DotEnv.Core" Version="1.0.2" />
+<PackageReference Include="DotEnv.Core" Version="1.1.2" />
 ```
 If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the **Tools** > **NuGet Package Manager** > **Package Manager Console** command and run the install command:
 ```
