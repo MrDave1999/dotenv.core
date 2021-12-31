@@ -91,36 +91,36 @@ namespace DotEnv.Core
         /// <summary>
         /// Replaces the name of each environment variable embedded in the specified string with the string equivalent of the value of the variable, then returns the resulting string.
         /// </summary>
-        /// <param name="value">A string containing the names of zero or more environment variables. Each environment variable must have the following format: <c>${VAR}</c>.</param>
+        /// <param name="value">A string containing the names of zero or more environment variables.</param>
         /// <param name="lineNumber">The line number where the value was found.</param>
         /// <exception cref="ParserException"><c>variable</c> is an empty string or if it does not exist in the current process.</exception>
         /// <returns>A string with each environment variable replaced by its value.</returns>
         protected virtual string ExpandEnvironmentVariables(string value, int lineNumber)
         {
             var pattern = @"\$\{([^}]*)\}";
-            var matches = Regex.Matches(value, pattern);
-            foreach (Match match in matches)
+            value = Regex.Replace(value, pattern, match => 
             {
                 var variable = match.Groups[1].Value;
+
                 if (string.IsNullOrWhiteSpace(variable))
                 {
-                    if(_configuration.ThrowException)
-                        throw new ParserException(ExceptionMessages.VariableIsAnEmptyStringMessage, "${ }", lineNumber);
+                    if (_configuration.ThrowException)
+                        throw new ParserException(ExceptionMessages.VariableIsAnEmptyStringMessage, currentLine: lineNumber);
 
-                    continue;
+                    return match.Value;
                 }
 
                 var retrievedValue = Environment.GetEnvironmentVariable(variable);
                 if (retrievedValue == null)
                 {
-                    if(_configuration.ThrowException)
+                    if (_configuration.ThrowException)
                         throw new ParserException(ExceptionMessages.VariableNotFoundMessage, variable, lineNumber);
 
-                    continue;
+                    return match.Value;
                 }
 
-                value = value.Replace("${" + variable + "}", retrievedValue);
-            }
+                return retrievedValue;
+            });
             return value;
         }
 
