@@ -94,6 +94,13 @@
     .Load();
 </code></pre>
 <p>This method will tell the parser not to remove trailing white-spaces from the keys.</p>
+<h2 id="disabletrimkeys">DisableTrimKeys</h2>
+<p>Disables the trim at the start and end of the keys:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .DisableTrimKeys()
+    .Load();
+</code></pre>
+<p>This method will tell the parser not to remove leading and trailing white-spaces from the keys.</p>
 <h2 id="disabletrimstartvalues">DisableTrimStartValues</h2>
 <p>Disable the trim at the beginning of the values:</p>
 <pre><code class="lang-cs">new EnvLoader()
@@ -108,6 +115,13 @@
     .Load();
 </code></pre>
 <p>This method will tell the parser not to remove trailing white-spaces from the values.</p>
+<h2 id="disabletrimvalues">DisableTrimValues</h2>
+<p>Disables the trim at the start and end of the values:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .DisableTrimValues()
+    .Load();
+</code></pre>
+<p>This method will tell the parser not to remove leading and trailing white-spaces from the values.</p>
 <h2 id="disabletrimstartcomments">DisableTrimStartComments</h2>
 <p>Disable the trim at the beginning of the comments:</p>
 <pre><code class="lang-cs">new EnvLoader()
@@ -122,6 +136,55 @@
     .Load();
 </code></pre>
 <p>Imagine that if there is an environment variable called <code>KEY1</code> whose value is <code>1</code>, then in an .env file there can be a key named <code>KEY1</code> whose value is <code>2</code>, if this option is enabled, then, when the parser reads <code>KEY1</code> from the .env file, it will overwrite the value of <code>KEY1</code> by <code>2</code>.</p>
+<h2 id="allowconcatduplicatekeys">AllowConcatDuplicateKeys</h2>
+<p>Allows to concatenate the values of the duplicate keys:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AllowConcatDuplicateKeys()
+    .Load();
+</code></pre>
+<p>This method will by default concatenate to the end of the value, for example, imagine you have the following .env file:</p>
+<pre><code>KEY1 = Hello
+KEY1 = World
+KEY1 = !
+</code></pre>
+<p>The parser will concatenate the duplicate keys in this way:</p>
+<pre><code>KEY1 = HelloWorld!
+</code></pre>
+<p>But we can also tell the parser to concatenate at the beginning of the value using <code>ConcatKeysOptions</code> enum:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AllowConcatDuplicateKeys(ConcatKeysOptions.Start)
+    .Load();
+</code></pre>
+<p>So if we follow the above example, the parser will concatenate the duplicate keys in this way:</p>
+<pre><code>KEY1 = !WorldHello
+</code></pre>
+<h2 id="ignoreparserexceptions">IgnoreParserExceptions</h2>
+<p>Ignores parser exceptions. By calling this method the parser will not throw any exceptions when it encounters an error:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .IgnoreParserExceptions()
+    .Load();
+</code></pre>
+<h2 id="setcommentchar">SetCommentChar</h2>
+<p>Sets the character that will define the beginning of a comment:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .SetCommentChar(';')
+    .Load();
+</code></pre>
+<p>So the .env file could look like this:</p>
+<pre><code>; comment (1)
+KEY1=VAL1
+; comment (2)
+</code></pre>
+<h2 id="setdelimiterkeyvaluepair">SetDelimiterKeyValuePair</h2>
+<p>Sets the delimiter that separates an assigment of a value to a key:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .SetDelimiterKeyValuePair(':')
+    .Load();
+</code></pre>
+<p>So the .env file could look like this:</p>
+<pre><code>KEY1: VAL1
+KEY2: VAL2
+</code></pre>
 <p><strong>As a side note</strong>, the <code>EnvLoader</code> class has a parameterized constructor in which you can specify a custom parser. You can inherit from <code>EnvParser</code> and inject the instance into the constructor.</p>
 </article>
           </div>

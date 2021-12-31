@@ -81,7 +81,7 @@
 
 <h2 id="installation">Installation</h2>
 <p>If you're an hardcore and want to do it manually, you must add the following to the <code>csproj</code> file:</p>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;DotEnv.Core&quot; Version=&quot;1.0.1&quot; /&gt;
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;DotEnv.Core&quot; Version=&quot;1.1.2&quot; /&gt;
 </code></pre>
 <p>If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the <strong>Tools</strong> &gt; <strong>NuGet Package Manager</strong> &gt; <strong>Package Manager Console</strong> command and run the install command:</p>
 <pre><code>Install-Package DotEnv.Core
@@ -185,6 +185,18 @@ catch(FileNotFoundException ex)
     System.Console.WriteLine(ex.Message);
 }
 </code></pre>
+<h3 id="interpolating-variables">Interpolating variables</h3>
+<p>Sometimes you will need to interpolate variables within a value, for example:</p>
+<pre><code>MYSQL_USER=root
+MYSQL_ROOT_PASSWORD=1234
+CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+</code></pre>
+<p>If the variable embedded in the value does not exist in the current process, the parser will throw an exception, for example:</p>
+<pre><code>CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+MYSQL_USER=root
+MYSQL_ROOT_PASSWORD=1234
+</code></pre>
+<p>In the above example, the parser should throw an exception because the <code>MYSQL_USER</code> variable does not exist yet.</p>
 <p><strong>Note:</strong> If you don't know what each class does, don't forget to check the <a class="xref" href="../api/DotEnv.Core.html">API documentation</a>.</p>
 </article>
           </div>

@@ -14,11 +14,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.ConcatKeysOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.ConcatKeysOptions.html",
+          "hash": "vItmeuiX3xnDOrGhJwsfzxHdwlP1ftt+kFxuH+KSF7E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.EnvLoader.html",
-          "hash": "3LIVVSubwGgzwlJFRWtWV978ffiqbQEhGtZgPnmmQms="
+          "hash": "Z76JwPY2vvmwtHPG0KV28Jg6FV/MIfMBvnpvGDtrKkc="
         }
       },
       "is_incremental": false,
@@ -30,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.EnvParser.html",
-          "hash": "Ic3haZ8qRlQ7fbKXEOA0eh/EhR7RpN7vfrp3UnzboTY="
+          "hash": "3FhEYdCjc/qhYoQFCtADvWj5QrNlv+KmJDiV/33EIh0="
         }
       },
       "is_incremental": false,
@@ -42,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.EnvParserOptions.html",
-          "hash": "ZxGd3VOvLhrCFNp8TIqscqqg/1JY2bQbpr7Ndyul3zA="
+          "hash": "gsEgxJGJau/h0pOVMWYF6SJryD8vEo50YBPkcD9CgXQ="
         }
       },
       "is_incremental": false,
@@ -78,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.IEnvLoader.html",
-          "hash": "f1OE9GQcB2GB1jZEOJlj4GlonOB5mcoBRATeOSSXKbg="
+          "hash": "UVEQAciORqISyaSpLhsk7YRJ8IY6b92NRg/uGLikpTY="
         }
       },
       "is_incremental": false,
@@ -90,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.IEnvParser.html",
-          "hash": "Bmo0aQUxFOKHKSWFnvc5ISHfn84Ids4XBDgTq7Tu4yM="
+          "hash": "QmvQQvST+w1obnpIbPhS6RGUddzq2dizYrNR2tEXJbY="
         }
       },
       "is_incremental": false,
@@ -126,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.html",
-          "hash": "iMg0Wxx9Q6Udp8kcT5mJf9BeAlfxcBKIRUe47TcAX4E="
+          "hash": "TGl7ACk/gv4TrTVLhXL4h20ETYT5epbLBqsh3OnR0t0="
         }
       },
       "is_incremental": false,
@@ -138,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "/DbRLT4sEhBjXSBxZSvtVqQGq8JSJ51PGvxnw0a3SeQ="
+          "hash": "hOXeI6tMJhx20RFcj1KsFtm7RblmUpg/E0WJveSPi2s="
         }
       },
       "is_incremental": false,
@@ -162,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting_started.html",
-          "hash": "FWVMGnsOAI3dQ+70NCmmkgZOPlT+lsJSTszaMaeqgMY="
+          "hash": "N1J7APP3SfDOBhg1LyTvARUphxeghdZvwSrdJbeys7c="
         }
       },
       "is_incremental": false,
@@ -174,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/more_options_for_loader.html",
-          "hash": "mzNW1rB/odRJFW8TaEjzkf3Xn/VJDKQdZsO8BAoK898="
+          "hash": "AZ2ooTXY7Yp7BmD56AiMWIK2aEVm1mVSDHwufTtyceE="
         }
       },
       "is_incremental": false,
@@ -222,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/using_parser.html",
-          "hash": "lzSdjB8waVD7WNrJ/EB9WWXOPsSh/6WlWHk0ur5VCgE="
+          "hash": "DH//Wwpny6qnqZfNfH7aSAEIarlr3OUMwcNRh0A7AXE="
         }
       },
       "is_incremental": false,
@@ -302,7 +314,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "V4wU4qNuVqPx9bCnq8aYj+F+gIxDhPPuaEFDyQK7Y90="
+          "hash": "5UTMpzSeNxV+JCpQQkv+l7uvyEbYuecAhype0HofP04="
         }
       },
       "is_incremental": false,
@@ -334,12 +346,12 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 8,
-          "skipped_file_count": 7
+          "skipped_file_count": 8
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 10,
+          "total_file_count": 11,
           "skipped_file_count": 10
         },
         "ResourceDocumentProcessor": {

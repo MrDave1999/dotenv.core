@@ -96,10 +96,76 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L93">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvParser_AllowConcatDuplicateKeys_" data-uid="DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys*"></a>
+  <h4 id="DotEnv_Core_IEnvParser_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_" data-uid="DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)">AllowConcatDuplicateKeys(ConcatKeysOptions)</h4>
+  <div class="markdown level1 summary"><p>Allows to concatenate the values of the duplicate keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvParser AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.ConcatKeysOptions.html">ConcatKeysOptions</a></td>
+        <td><span class="parametername">option</span></td>
+        <td><p>The option that indicates whether the concatenation is at the start or at the end of the value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvParser.html">IEnvParser</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code>option</code> is not one of the <a class="xref" href="DotEnv.Core.ConcatKeysOptions.html">ConcatKeysOptions</a> values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_AllowOverwriteExistingVars.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.AllowOverwriteExistingVars%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L59">View Source</a>
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L71">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvParser_AllowOverwriteExistingVars_" data-uid="DotEnv.Core.IEnvParser.AllowOverwriteExistingVars*"></a>
   <h4 id="DotEnv_Core_IEnvParser_AllowOverwriteExistingVars" data-uid="DotEnv.Core.IEnvParser.AllowOverwriteExistingVars">AllowOverwriteExistingVars()</h4>
@@ -132,7 +198,7 @@ This method will tell the parser that it can overwrite the value of an existing 
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_DisableTrimEndKeys.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.DisableTrimEndKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L45">View Source</a>
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L51">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvParser_DisableTrimEndKeys_" data-uid="DotEnv.Core.IEnvParser.DisableTrimEndKeys*"></a>
   <h4 id="DotEnv_Core_IEnvParser_DisableTrimEndKeys" data-uid="DotEnv.Core.IEnvParser.DisableTrimEndKeys">DisableTrimEndKeys()</h4>
@@ -195,10 +261,42 @@ This method will tell the parser not to remove trailing white-spaces from the va
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_DisableTrimKeys.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.DisableTrimKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L57">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvParser_DisableTrimKeys_" data-uid="DotEnv.Core.IEnvParser.DisableTrimKeys*"></a>
+  <h4 id="DotEnv_Core_IEnvParser_DisableTrimKeys" data-uid="DotEnv.Core.IEnvParser.DisableTrimKeys">DisableTrimKeys()</h4>
+  <div class="markdown level1 summary"><p>Disables the trim at the start and end of the keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvParser DisableTrimKeys()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvParser.html">IEnvParser</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_DisableTrimStartComments.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.DisableTrimStartComments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L52">View Source</a>
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L64">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvParser_DisableTrimStartComments_" data-uid="DotEnv.Core.IEnvParser.DisableTrimStartComments*"></a>
   <h4 id="DotEnv_Core_IEnvParser_DisableTrimStartComments" data-uid="DotEnv.Core.IEnvParser.DisableTrimStartComments">DisableTrimStartComments()</h4>
@@ -231,7 +329,7 @@ This method will tell the parser not to remove leading white-spaces from the com
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_DisableTrimStartKeys.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.DisableTrimStartKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L38">View Source</a>
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L44">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvParser_DisableTrimStartKeys_" data-uid="DotEnv.Core.IEnvParser.DisableTrimStartKeys*"></a>
   <h4 id="DotEnv_Core_IEnvParser_DisableTrimStartKeys" data-uid="DotEnv.Core.IEnvParser.DisableTrimStartKeys">DisableTrimStartKeys()</h4>
@@ -275,6 +373,70 @@ This method will tell the parser not to remove leading white-spaces from the val
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IEnvParser DisableTrimStartValues()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvParser.html">IEnvParser</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_DisableTrimValues.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.DisableTrimValues%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L37">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvParser_DisableTrimValues_" data-uid="DotEnv.Core.IEnvParser.DisableTrimValues*"></a>
+  <h4 id="DotEnv_Core_IEnvParser_DisableTrimValues" data-uid="DotEnv.Core.IEnvParser.DisableTrimValues">DisableTrimValues()</h4>
+  <div class="markdown level1 summary"><p>Disables the trim at the start and end of the values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvParser DisableTrimValues()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvParser.html">IEnvParser</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_IgnoreParserExceptions.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.IgnoreParserExceptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L99">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvParser_IgnoreParserExceptions_" data-uid="DotEnv.Core.IEnvParser.IgnoreParserExceptions*"></a>
+  <h4 id="DotEnv_Core_IEnvParser_IgnoreParserExceptions" data-uid="DotEnv.Core.IEnvParser.IgnoreParserExceptions">IgnoreParserExceptions()</h4>
+  <div class="markdown level1 summary"><p>Ignores parser exceptions. By calling this method the parser will not throw any exceptions when it encounters an error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvParser IgnoreParserExceptions()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,6 +500,106 @@ This method will tell the parser not to remove leading white-spaces from the val
       <tr>
         <td><a class="xref" href="DotEnv.Core.ParserException.html">ParserException</a></td>
         <td><p>If the parser find an error during the parsing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_SetCommentChar_System_Char_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.SetCommentChar(System.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L78">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvParser_SetCommentChar_" data-uid="DotEnv.Core.IEnvParser.SetCommentChar*"></a>
+  <h4 id="DotEnv_Core_IEnvParser_SetCommentChar_System_Char_" data-uid="DotEnv.Core.IEnvParser.SetCommentChar(System.Char)">SetCommentChar(Char)</h4>
+  <div class="markdown level1 summary"><p>Sets the character that will define the beginning of a comment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvParser SetCommentChar(char commentChar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
+        <td><span class="parametername">commentChar</span></td>
+        <td><p>The character that defines the beginning of a comment.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvParser.html">IEnvParser</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvParser_SetDelimiterKeyValuePair_System_Char_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair(System.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvParser.cs/#L85">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvParser_SetDelimiterKeyValuePair_" data-uid="DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair*"></a>
+  <h4 id="DotEnv_Core_IEnvParser_SetDelimiterKeyValuePair_System_Char_" data-uid="DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair(System.Char)">SetDelimiterKeyValuePair(Char)</h4>
+  <div class="markdown level1 summary"><p>Sets the delimiter that separates an assigment of a value to a key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnvParser SetDelimiterKeyValuePair(char separator)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
+        <td><span class="parametername">separator</span></td>
+        <td><p>The character that separates the key-value pair.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.IEnvParser.html">IEnvParser</a></td>
+        <td><p>An instance implementing the fluent interface.</p>
 </td>
       </tr>
     </tbody>

@@ -113,7 +113,7 @@ new EnvParser()
 <p>In the above case, the parser is instructed not to remove leading spaces from keys and values.</p>
 <p>Don't forget to look up in the <a class="xref" href="../api/DotEnv.Core.EnvParserOptions.html">API documentation</a> what each configuration option means.</p>
 <h2 id="customizing-the-parser-algorithm">Customizing the parser algorithm</h2>
-<p>You can also create a class that inherits from <code>EnvParser</code> and then you can override its methods:</p>
+<p>You can also create a class that inherits from <code>EnvParser</code> and then you can override its methods (each of these methods are used by the <a class="xref" href="../api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_Parse_System_String_">parser algorithm</a>):</p>
 <pre><code class="lang-cs">class CustomEnvParser : EnvParser
 {
     protected override bool IsComment(string line)
@@ -137,6 +137,16 @@ new EnvParser()
     }
 
     protected override void SetEnvironmentVariable(string key, string value)
+    {
+        // Here you can add your own implementation.
+    }
+
+    protected override string ConcatValues(string currentValue, string value)
+    {
+        // Here you can add your own implementation.
+    }
+
+    protected override string ExpandEnvironmentVariables(string value, int lineNumber)
     {
         // Here you can add your own implementation.
     }

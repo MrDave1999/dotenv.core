@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace DotEnv.Core
+    <title>Enum ConcatKeysOptions
    | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace DotEnv.Core
+    <meta name="title" content="Enum ConcatKeysOptions
    | DotEnv.Core ">
     <meta name="generator" content="docfx 2.58.9.0">
     
@@ -78,49 +78,47 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="DotEnv.Core">
+            <article class="content wrap" id="_content" data-uid="DotEnv.Core.ConcatKeysOptions">
   
-  <h1 id="DotEnv_Core" data-uid="DotEnv.Core" class="text-break">Namespace DotEnv.Core
+  
+  <h1 id="DotEnv_Core_ConcatKeysOptions" data-uid="DotEnv.Core.ConcatKeysOptions" class="text-break">Enum ConcatKeysOptions
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Specifies the options for concatenation of duplicate keys such as whether to concatenate at the start or end of the value.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
+  <h6><strong>Namespace</strong>: <a class="xref" href="DotEnv.Core.html">DotEnv.Core</a></h6>
+  <h6><strong>Assembly</strong>: DotEnv.Core.dll</h6>
+  <h5 id="DotEnv_Core_ConcatKeysOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public enum ConcatKeysOptions</code></pre>
+  </div>
+  <h3 id="fields">Fields
   </h3>
-      <h4><a class="xref" href="DotEnv.Core.EnvLoader.html">EnvLoader</a></h4>
-      <section><p>Represents the .env file loader.</p>
-</section>
-      <h4><a class="xref" href="DotEnv.Core.EnvParser.html">EnvParser</a></h4>
-      <section><p>Defines the methods that control the parser behavior.</p>
-</section>
-      <h4><a class="xref" href="DotEnv.Core.EnvParserOptions.html">EnvParserOptions</a></h4>
-      <section><p>Represents the options for configuring various behaviors of the parser.</p>
-</section>
-      <h4><a class="xref" href="DotEnv.Core.EnvReader.html">EnvReader</a></h4>
-      <section><p>Defines the methods used to read the value of an environment variable from the current process.</p>
-</section>
-      <h4><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></h4>
-      <section><p>The exception that is thrown when the environment variable is not found in the current process.</p>
-</section>
-      <h4><a class="xref" href="DotEnv.Core.ParserException.html">ParserException</a></h4>
-      <section><p>The exception that is thrown when the parser finds an error during the parsing of the .env file.</p>
-</section>
-    <h3 id="interfaces">Interfaces
-  </h3>
-      <h4><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></h4>
-      <section><p>Represents the .env file loader.</p>
-</section>
-      <h4><a class="xref" href="DotEnv.Core.IEnvParser.html">IEnvParser</a></h4>
-      <section><p>Defines the methods that control the parser behavior.</p>
-</section>
-      <h4><a class="xref" href="DotEnv.Core.IEnvReader.html">IEnvReader</a></h4>
-      <section><p>Defines the methods used to read the value of an environment variable from the current process.</p>
-</section>
-    <h3 id="enums">Enums
-  </h3>
-      <h4><a class="xref" href="DotEnv.Core.ConcatKeysOptions.html">ConcatKeysOptions</a></h4>
-      <section><p>Specifies the options for concatenation of duplicate keys such as whether to concatenate at the start or end of the value.</p>
-</section>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td id="DotEnv_Core_ConcatKeysOptions_End">End</td>
+        <td><p>This option will tell the parser to concatenate at the end of the value of a duplicate key.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="DotEnv_Core_ConcatKeysOptions_None">None</td>
+        <td><p>This option is only used as the default value of the <a class="xref" href="DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_ConcatDuplicateKeys">ConcatDuplicateKeys</a> property.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="DotEnv_Core_ConcatKeysOptions_Start">Start</td>
+        <td><p>This option will tell the parser to concatenate at the beginning of the value of a duplicate key.</p>
+</td>
+      </tr>
+    </tbody>
+  </thead></thead></table>
 </article>
           </div>
           
@@ -128,6 +126,12 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_ConcatKeysOptions.md&amp;value=---%0Auid%3A%20DotEnv.Core.ConcatKeysOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Constants/ConcatKeysOptions.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
