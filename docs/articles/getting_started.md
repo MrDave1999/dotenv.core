@@ -150,4 +150,20 @@ catch(FileNotFoundException ex)
 }
 ```
 
+### Interpolating variables
+
+Sometimes you will need to interpolate variables within a value, for example:
+```
+MYSQL_USER=root
+MYSQL_ROOT_PASSWORD=1234
+CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+```
+If the variable embedded in the value does not exist in the current process, the parser will throw an exception, for example:
+```
+CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+MYSQL_USER=root
+MYSQL_ROOT_PASSWORD=1234
+```
+In the above example, the parser should throw an exception because the `MYSQL_USER` variable does not exist yet.
+
 **Note:** If you don't know what each class does, don't forget to check the [API documentation](xref:DotEnv.Core).

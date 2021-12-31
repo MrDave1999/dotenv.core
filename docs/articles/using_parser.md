@@ -45,7 +45,7 @@ Don't forget to look up in the [API documentation](xref:DotEnv.Core.EnvParserOpt
 
 ## Customizing the parser algorithm
 
-You can also create a class that inherits from `EnvParser` and then you can override its methods:
+You can also create a class that inherits from `EnvParser` and then you can override its methods (each of these methods are used by the [parser algorithm](xref:DotEnv.Core.EnvParser.Parse(System.String))):
 ```cs
 class CustomEnvParser : EnvParser
 {
@@ -70,6 +70,16 @@ class CustomEnvParser : EnvParser
     }
 
     protected override void SetEnvironmentVariable(string key, string value)
+    {
+        // Here you can add your own implementation.
+    }
+
+    protected override string ConcatValues(string currentValue, string value)
+    {
+        // Here you can add your own implementation.
+    }
+
+    protected override string ExpandEnvironmentVariables(string value, int lineNumber)
     {
         // Here you can add your own implementation.
     }
