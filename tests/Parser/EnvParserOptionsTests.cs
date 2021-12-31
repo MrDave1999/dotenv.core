@@ -155,14 +155,18 @@ namespace DotEnv.Core.Tests.Parser
                 This isn't a comment.
                 IGNORE_EXCEPTION_2=VAL2 ${IGNORE_EXCEPTION_2} ...
                 =VAL1
+                IGNORE_EXCEPTION_3= ASDASD ${} ${   }
+                IGNORE_EXCEPTION_4= ASDASD ${   } ASDASD ${}
             ";
 
             new EnvParser()
                 .IgnoreParserExceptions()
                 .Parse(env);
 
-            Assert.IsNotNull(GetEnvironmentVariable("IGNORE_EXCEPTION_1"));
-            Assert.IsNotNull(GetEnvironmentVariable("IGNORE_EXCEPTION_2"));
+            Assert.AreEqual("VAL1 ${IGNORE_EXCEPTION_2} ...", GetEnvironmentVariable("IGNORE_EXCEPTION_1"));
+            Assert.AreEqual("VAL2 ${IGNORE_EXCEPTION_2} ...", GetEnvironmentVariable("IGNORE_EXCEPTION_2"));
+            Assert.AreEqual("ASDASD ${} ${   }", GetEnvironmentVariable("IGNORE_EXCEPTION_3"));
+            Assert.AreEqual("ASDASD ${   } ASDASD ${}", GetEnvironmentVariable("IGNORE_EXCEPTION_4"));
         }
 
         [TestMethod]
