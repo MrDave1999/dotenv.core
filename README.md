@@ -42,7 +42,7 @@ An environment variable is a dynamic variable that can affect the behavior of ru
 
 If you're an hardcore and want to do it manually, you must add the following to the `csproj` file:
 ```xml
-<PackageReference Include="DotEnv.Core" Version="1.1.2" />
+<PackageReference Include="DotEnv.Core" Version="1.1.3" />
 ```
 If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the **Tools** > **NuGet Package Manager** > **Package Manager Console** command and run the install command:
 ```
