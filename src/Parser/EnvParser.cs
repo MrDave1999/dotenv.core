@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -134,39 +135,40 @@ namespace DotEnv.Core
 
                 return;
             }
-
-            var lines = input.Split(Environment.NewLine.ToCharArray());
-            for(int i = 0, len = lines.Length; i != len; ++i)
+            
+            using(var lines = new StringReader(input))
             {
-                string line = lines[i];
-
-                if (string.IsNullOrWhiteSpace(line))
-                    continue;
-
-                if (IsComment(line))
-                    continue;
-
-                if (HasNoKeyValuePair(line))
+                int i = 1;
+                for(var line = lines.ReadLine(); line != null; line = lines.ReadLine(), ++i)
                 {
-                    if(_configuration.ThrowException)
-                        throw new ParserException(ExceptionMessages.LineHasNoKeyValuePairMessage, line, i + 1);
+                    if (string.IsNullOrWhiteSpace(line))
+                        continue;
 
-                    continue;
+                    if (IsComment(line))
+                        continue;
+
+                    if (HasNoKeyValuePair(line))
+                    {
+                        if(_configuration.ThrowException)
+                            throw new ParserException(ExceptionMessages.LineHasNoKeyValuePairMessage, line, i);
+
+                        continue;
+                    }
+
+                    string key = ExtractKey(line);
+                    if (string.IsNullOrEmpty(key))
+                    {
+                        if(_configuration.ThrowException)
+                            throw new ParserException(ExceptionMessages.KeyIsAnEmptyStringMessage, currentLine: i);
+
+                        continue;
+                    }
+
+                    string value = ExtractValue(line);
+                    value = ExpandEnvironmentVariables(value, lineNumber: i);
+
+                    SetEnvironmentVariable(key, value);
                 }
-
-                string key = ExtractKey(line);
-                if (string.IsNullOrEmpty(key))
-                {
-                    if(_configuration.ThrowException)
-                        throw new ParserException(ExceptionMessages.KeyIsAnEmptyStringMessage, currentLine: i + 1);
-
-                    continue;
-                }
-
-                string value = ExtractValue(line);
-                value = ExpandEnvironmentVariables(value, lineNumber: i + 1);
-
-                SetEnvironmentVariable(key, value);
             }
         }
 
