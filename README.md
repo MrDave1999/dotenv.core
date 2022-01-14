@@ -64,7 +64,7 @@ Then you can load the .env file with the `Load` method of the `EnvLoader` class:
 ```cs
 new EnvLoader().Load();
 ```
-By default, the `Load` method will look for a file called `.env` in the current directory and if it does not find it, it will look for it in the parent directories of the current directory.
+By default, the `Load` method will search for a file called `.env` in the current directory and if it does not find it, it will search for it in the parent directories of the current directory.
 
 The current directory is where the executable with its dependencies is located.
 
