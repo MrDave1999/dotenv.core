@@ -28,7 +28,7 @@ Then you can load the .env file with the `Load` method of the `EnvLoader` class:
 ```cs
 new EnvLoader().Load();
 ```
-By default, the `Load` method will look for a file called `.env` in the current directory and if it does not find it, it will look for it in the parent directories of the current directory.
+By default, the `Load` method will search for a file called `.env` in the current directory and if it does not find it, it will search for it in the parent directories of the current directory.
 
 The current directory is where the executable with its dependencies is located.
 
@@ -56,7 +56,7 @@ new EnvLoader()
     .SetDefaultEnvFileName(".env.dev")
     .Load();
 ```
-Now the `Load` method will look for the **.env.dev** file in the current directory and in the parent directories if it is not found in the current directory.
+Now the `Load` method will search for the **.env.dev** file in the current directory and in the parent directories if it is not found in the current directory.
 
 Another case would be:
 ```cs
@@ -65,7 +65,7 @@ new EnvLoader()
     .AddEnvFiles("/foo/foo2", "/bar/bar2")
     .Load();
 ```
-The `Load` method will look for two `.env.dev` files in the paths `/foo/foo2` and `/bar/bar2`.
+The `Load` method will search for two `.env.dev` files in the paths `/foo/foo2` and `/bar/bar2`.
 
 ### Specifying the path absolute
 
@@ -119,7 +119,7 @@ new EnvLoader()
     .AddEnvFile("./dotenv/files")
     .Load();
 ```
-In this case, the `.env` file is inside a directory, i.e. in `files`. The `Load` method will look for the file `dotenv/files/.env` in the current directory, if it does not find it, it will look for it in parent directories.
+In this case, the `.env` file is inside a directory, i.e. in `files`. The `Load` method will search for the file `dotenv/files/.env` in the current directory, if it does not find it, it will search for it in parent directories.
 
 This is useful when the .env file is located in a different directory than the current one.
 
