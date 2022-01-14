@@ -11,7 +11,7 @@ namespace DotEnv.Core
     public interface IEnvLoader
     {
         /// <summary>
-        /// Loads more than one .env file.
+        /// Loads more than one .env file. By default, it will search for a file called <c>.env</c>.
         /// </summary>
         /// <remarks>This method starts find the .env file in the current directory and if it does not found it, it starts find in the parent directories of the current directory.</remarks>
         /// <exception cref="ParserException" />
