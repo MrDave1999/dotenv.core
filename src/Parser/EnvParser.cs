@@ -7,8 +7,6 @@ namespace DotEnv.Core
     /// <inheritdoc cref="IEnvParser" />
     public partial class EnvParser : IEnvParser
     {
-        private const int MaxCount = 2;
-
         /// <summary>
         /// Allows access to the configuration options for the parser.
         /// </summary>

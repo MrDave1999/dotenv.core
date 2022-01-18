@@ -9,6 +9,8 @@ namespace DotEnv.Core
     // See https://en.wikipedia.org/wiki/Template_method_pattern
     public partial class EnvParser
     {
+        private const int MaxCount = 2;
+
         /// <summary>
         /// Checks if the line is a comment.
         /// </summary>
