@@ -9,6 +9,9 @@ namespace DotEnv.Core
     // See https://en.wikipedia.org/wiki/Template_method_pattern
     public partial class EnvParser
     {
+        /// <summary>
+        /// The maximum number of substrings to be returned by the Split method.
+        /// </summary>
         private const int MaxCount = 2;
 
         /// <summary>
