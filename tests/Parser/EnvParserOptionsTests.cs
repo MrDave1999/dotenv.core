@@ -179,12 +179,14 @@ namespace DotEnv.Core.Tests.Parser
                 CONCAT_END1 = !
                 CONCAT_END1 = !
             ";
+            Environment.SetEnvironmentVariable("CONCAT_END2", "2");
 
             new EnvParser()
                 .AllowConcatDuplicateKeys()
                 .Parse(env);
 
             Assert.AreEqual("HelloWorld!!", GetEnvironmentVariable("CONCAT_END1"));
+            Assert.AreEqual("21", GetEnvironmentVariable("CONCAT_END2"));
         }
 
 
