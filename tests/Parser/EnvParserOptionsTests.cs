@@ -200,12 +200,14 @@ namespace DotEnv.Core.Tests.Parser
                 CONCAT_START1 = World
                 CONCAT_START1 = Hello
             ";
+            Environment.SetEnvironmentVariable("CONCAT_START2", "2");
 
             new EnvParser()
                 .AllowConcatDuplicateKeys(ConcatKeysOptions.Start)
                 .Parse(env);
 
             Assert.AreEqual("HelloWorld!!", GetEnvironmentVariable("CONCAT_START1"));
+            Assert.AreEqual("12", GetEnvironmentVariable("CONCAT_START2"));
         }
 
         [TestMethod]
