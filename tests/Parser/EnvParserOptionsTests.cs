@@ -179,7 +179,7 @@ namespace DotEnv.Core.Tests.Parser
                 CONCAT_END1 = !
                 CONCAT_END1 = !
             ";
-            Environment.SetEnvironmentVariable("CONCAT_END2", "2");
+            SetEnvironmentVariable("CONCAT_END2", "2");
 
             new EnvParser()
                 .AllowConcatDuplicateKeys()
@@ -200,7 +200,7 @@ namespace DotEnv.Core.Tests.Parser
                 CONCAT_START1 = World
                 CONCAT_START1 = Hello
             ";
-            Environment.SetEnvironmentVariable("CONCAT_START2", "2");
+            SetEnvironmentVariable("CONCAT_START2", "2");
 
             new EnvParser()
                 .AllowConcatDuplicateKeys(ConcatKeysOptions.Start)
