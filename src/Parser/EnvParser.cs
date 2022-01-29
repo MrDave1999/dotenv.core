@@ -14,7 +14,14 @@ namespace DotEnv.Core
         /// </summary>
         protected readonly EnvParserOptions _configuration = new EnvParserOptions();
 
+        /// <summary>
+        /// Allows access to the errors container of the parser.
+        /// </summary>
         internal EnvValidationResult ValidationResult { get; } = new EnvValidationResult();
+
+        /// <summary>
+        /// This property is for the loader to pass data to the parser.
+        /// </summary>
         internal string FileName { get; set; }
 
         /// <inheritdoc />
@@ -71,6 +78,10 @@ namespace DotEnv.Core
             CreateParserException();
         }
 
+        /// <summary>
+        /// Creates and throws an exception of type <see cref="ParserException" />.
+        /// </summary>
+        /// <exception cref="ParserException"></exception>
         internal void CreateParserException()
         {
             if (ValidationResult.HasError() && _configuration.ThrowException)
