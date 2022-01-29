@@ -18,7 +18,10 @@ namespace DotEnv.Core
         /// Start the parsing to extract the key-value pair from the .env file.
         /// </summary>
         /// <param name="input">The input to parsing.</param>
-        /// <exception cref="ParserException">If the parser find an error during the parsing.</exception>
+        /// <exception cref="ParserException">
+        /// If the parser find an error during the parsing.
+        /// This exception is only thrown if <see cref="EnvParserOptions.ThrowException" /> property is set to <c>true</c>.
+        /// </exception>
         void Parse(string input);
 
         /// <summary>
