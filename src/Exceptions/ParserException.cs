@@ -40,21 +40,37 @@ namespace DotEnv.Core
         /// <summary>
         /// Gets a message that describes the current exception.
         /// </summary>
-        public override string Message
+        public override string Message => FormatErrorMessage(base.Message, _actualValue, _currentLine);
+
+        /// <summary>
+        /// Formats an error message.
+        /// </summary>
+        /// <param name="message">The message that describes the error.</param>
+        /// <param name="actualValue">The actual value that caused the error.</param>
+        /// <param name="lineNumber">The line number that caused the error.</param>
+        /// <param name="envFileName">The name of the .env file that caused the error.</param>
+        /// <returns>A formatted error message.</returns>
+        internal static string FormatErrorMessage(string message, object actualValue = null, int? lineNumber = null, string envFileName = null)
         {
-            get
-            {
-                if (_actualValue != null && _currentLine != null)
-                    return $"{base.Message} (Actual Value: {_actualValue}, Line: {_currentLine})";
+            if(actualValue != null && lineNumber != null && envFileName != null)
+                return $"{message} (Actual Value: {actualValue}, Line: {lineNumber}, FileName: {envFileName})";
 
-                if (_actualValue != null)
-                    return $"{base.Message} (Actual Value: {_actualValue})";
+            if (actualValue != null && lineNumber != null)
+                return $"{message} (Actual Value: {actualValue}, Line: {lineNumber})";
 
-                if (_currentLine != null)
-                    return $"{base.Message} (Line: {_currentLine})";
+            if (envFileName != null && lineNumber != null)
+                return $"{message} (Line: {lineNumber}, FileName: {envFileName})";
 
-                return base.Message;
-            }
+            if (lineNumber != null)
+                return $"{message} (Line: {lineNumber})";
+
+            if (actualValue != null)
+                return $"{message} (Actual Value: {actualValue})";
+
+            if (envFileName != null)
+                return $"{message} (FileName: {envFileName})";
+
+            return message;
         }
     }
 }

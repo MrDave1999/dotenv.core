@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.ParserException;
 
 namespace DotEnv.Core
 {
@@ -103,18 +105,14 @@ namespace DotEnv.Core
 
                 if (string.IsNullOrWhiteSpace(variable))
                 {
-                    if (_configuration.ThrowException)
-                        throw new ParserException(ExceptionMessages.VariableIsAnEmptyStringMessage, currentLine: lineNumber);
-
+                    ValidationResult.Add(errorMsg: FormatErrorMessage(VariableIsAnEmptyStringMessage, lineNumber: lineNumber, envFileName: FileName));
                     return match.Value;
                 }
 
                 var retrievedValue = Environment.GetEnvironmentVariable(variable);
                 if (retrievedValue == null)
                 {
-                    if (_configuration.ThrowException)
-                        throw new ParserException(ExceptionMessages.VariableNotFoundMessage, variable, lineNumber);
-
+                    ValidationResult.Add(errorMsg: FormatErrorMessage(VariableNotFoundMessage, actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
                     return match.Value;
                 }
 

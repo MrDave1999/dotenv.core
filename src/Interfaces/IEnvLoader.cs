@@ -10,6 +10,10 @@ namespace DotEnv.Core
     /// </summary>
     public interface IEnvLoader
     {
+        /// <param name="result">The result that contains the errors found by the loader.</param>
+        /// <inheritdoc cref="Load()" />
+        void Load(out EnvValidationResult result);
+
         /// <summary>
         /// Loads more than one .env file. By default, it will search for a file called <c>.env</c>.
         /// </summary>

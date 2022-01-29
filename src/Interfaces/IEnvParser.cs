@@ -9,6 +9,11 @@ namespace DotEnv.Core
     /// </summary>
     public interface IEnvParser
     {
+        /// <param name="input">The input to parsing.</param>
+        /// <param name="result">The result that contains the errors found by the parser.</param>
+        /// <inheritdoc cref="Parse(string)" />
+        void Parse(string input, out EnvValidationResult result);
+
         /// <summary>
         /// Start the parsing to extract the key-value pair from the .env file.
         /// </summary>
