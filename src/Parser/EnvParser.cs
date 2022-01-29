@@ -12,7 +12,7 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the parser.
         /// </summary>
-        protected readonly EnvParserOptions _configuration = new EnvParserOptions();
+        protected readonly EnvParserOptions configuration = new EnvParserOptions();
 
         /// <summary>
         /// Allows access to the errors container of the parser.
@@ -84,7 +84,7 @@ namespace DotEnv.Core
         /// <exception cref="ParserException"></exception>
         internal void CreateParserException()
         {
-            if (ValidationResult.HasError() && _configuration.ThrowException)
+            if (ValidationResult.HasError() && configuration.ThrowException)
                 throw new ParserException(message: ValidationResult.ErrorMessages);
         }
     }
