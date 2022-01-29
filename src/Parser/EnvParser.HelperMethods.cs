@@ -94,7 +94,6 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="value">A string containing the names of zero or more environment variables.</param>
         /// <param name="lineNumber">The line number where the value was found.</param>
-        /// <exception cref="ParserException"><c>variable</c> is an empty string or if it does not exist in the current process.</exception>
         /// <returns>A string with each environment variable replaced by its value.</returns>
         protected virtual string ExpandEnvironmentVariables(string value, int lineNumber)
         {
