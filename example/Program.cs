@@ -51,10 +51,12 @@ namespace DotEnv.Core.Example
 			Console.WriteLine($"PGSQL_DB={reader["PGSQL_DB"]}");
 
 			new EnvLoader(new CustomEnvParser())
+				.IgnoreParserExceptions()
 				.SetDefaultEnvFileName("./files/.env.local")
-				.Load();
+				.Load(out var result);
 
-			Console.WriteLine($"API_KEY LENGTH={reader["API_KEY"].Length}");
+			Console.WriteLine($"API_KEY LENGTH={reader["API_KEY"]}");
+			Console.WriteLine(result.ErrorMessages);
 		}
 	}
 }
