@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.ParserException;
 
 namespace DotEnv.Core
 {
@@ -9,7 +11,7 @@ namespace DotEnv.Core
     public partial class EnvLoader : IEnvLoader
     {
         private readonly EnvLoaderOptions _configuration;
-        private readonly IEnvParser _parser;
+        private readonly EnvParser _parser;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvLoader" /> class.
@@ -24,7 +26,7 @@ namespace DotEnv.Core
         /// Initializes a new instance of the <see cref="EnvLoader" /> class with a parser.
         /// </summary>
         /// <param name="parser">The parser instance.</param>
-        public EnvLoader(IEnvParser parser) : this()
+        public EnvLoader(EnvParser parser) : this()
         {
             _parser = parser;
         }
@@ -32,6 +34,15 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public void Load()
         {
+            Load(out _);
+        }
+
+        /// <inheritdoc />
+        public void Load(out EnvValidationResult result)
+        {
+            var validationResult = new EnvValidationResult();
+            result = _parser.ValidationResult;
+
             if(_configuration.EnvFiles.Count == 0)
                 _configuration.EnvFiles.Add(new EnvFile { Path = _configuration.DefaultEnvFileName, Encoding = _configuration.Encoding });
 
@@ -43,40 +54,46 @@ namespace DotEnv.Core
                 if (envFile.Encoding == null)
                     envFile.Encoding = _configuration.Encoding;
 
-                // In case if the path is absolute.
-                if (Path.IsPathRooted(envFile.Path))
-                {
-                    if (File.Exists(envFile.Path))
-                    {
-                        string source = File.ReadAllText(envFile.Path, envFile.Encoding);
-                        _parser.Parse(source);
-                        continue;
-                    }
-                }
-                else
-                {
-                    string path = GetEnvFilePath(Path.Combine(_configuration.BasePath, envFile.Path));
-                    if (path != null)
-                    {
-                        string source = File.ReadAllText(path, envFile.Encoding);
-                        _parser.Parse(source);
-                        continue;
-                    }
-                }
+                envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
 
+                string path = GetEnvFilePath(envFile.Path);
+                if (path != null)
+                {
+                    string source = File.ReadAllText(path, envFile.Encoding);
+                    _parser.FileName = envFile.Path;
+                    try
+                    {
+                        _parser.Parse(source);
+                    }
+                    catch(ParserException) { }
+                    continue;
+                }
+                
+                validationResult.Add(errorMsg: $"{FileNotFoundMessage} (FileName: {envFile.Path})");
+            }
+
+            _parser.CreateParserException();
+
+            if (validationResult.HasError())
+            {
                 if (_configuration.ThrowFileNotFoundException)
-                    throw new FileNotFoundException(ExceptionMessages.FileNotFoundMessage, envFile.Path);
+                    throw new FileNotFoundException(message: validationResult.ErrorMessages);
+
+                _parser.ValidationResult.Add(errorMsg: validationResult.ErrorMessages);
             }
         }
 
         /// <summary>
         /// Gets the full path of the .env file.
         /// </summary>
-        /// <param name="envFileName">The name of the .env file to search for </param>
+        /// <param name="envFileName">The name of the .env file to search for.</param>
         /// <returns>The path of the .env file, otherwise <c>null</c> if not found.</returns>
-        /// <inheritdoc cref="Load" path="/remarks" />
+        /// <inheritdoc cref="Load()" path="/remarks" />
         private string GetEnvFilePath(string envFileName)
         {
+            if(Path.IsPathRooted(envFileName))
+                return File.Exists(envFileName) ? envFileName : null;
+
             for (var directoryInfo = new DirectoryInfo(Directory.GetCurrentDirectory());
                 directoryInfo != null;
                 directoryInfo = directoryInfo.Parent)
