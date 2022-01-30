@@ -10,6 +10,21 @@ namespace DotEnv.Core.Tests.Loader
     public class EnvLoaderTests
     {
         [TestMethod]
+        public void Load_WhenErrorsAreFound_ShouldThrowParserException()
+        {
+            var loader = new EnvLoader()
+                .SetBasePath($"Loader{Path.DirectorySeparatorChar}env_files")
+                .AddEnvFile(".env.validation.result1")
+                .AddEnvFile(".env.validation.result2")
+                .AddEnvFile(".env.validation.result3")
+                .AddEnvFile(".env.validation.result4");
+
+            Action action = () => loader.Load();
+
+            Assert.ThrowsException<ParserException>(action);
+        }
+
+        [TestMethod]
         public void Load_WhenLoadEnvFileWithDefaultConfig_ShouldBeAbleToReadEnvironmentVariables()
         {
             var loader = new EnvLoader();
@@ -115,7 +130,13 @@ namespace DotEnv.Core.Tests.Loader
             Action action = () =>
             {
                 new EnvLoader()
-                 .AddEnvFile(".env.not.found")
+                 .AddEnvFiles(
+                        ".env.not.found",
+                        ".env.not.found3", 
+                        ".env.not.found4", 
+                        ".env.not.found5", 
+                        ".env.not.found6"
+                    )
                  .EnableFileNotFoundException()
                  .Load();
             };

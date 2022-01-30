@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.ParserException;
 
 namespace DotEnv.Core
 {
@@ -10,18 +12,35 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the parser.
         /// </summary>
-        protected readonly EnvParserOptions _configuration = new EnvParserOptions();
+        protected readonly EnvParserOptions configuration = new EnvParserOptions();
+
+        /// <summary>
+        /// Allows access to the errors container of the parser.
+        /// </summary>
+        internal EnvValidationResult ValidationResult { get; } = new EnvValidationResult();
+
+        /// <summary>
+        /// This property is for the loader to pass data to the parser.
+        /// </summary>
+        internal string FileName { get; set; }
+
+        /// <inheritdoc />
+        public void Parse(string input)
+        {
+            Parse(input, out _);
+        }
 
         /// <inheritdoc />
         // This is the template method and defines the skeleton of the algorithm.
         // See https://en.wikipedia.org/wiki/Template_method_pattern
-        public void Parse(string input)
+        public void Parse(string input, out EnvValidationResult result)
         {
+            result = ValidationResult;
+
             if (string.IsNullOrWhiteSpace(input))
             {
-                if(_configuration.ThrowException)
-                    throw new ParserException(ExceptionMessages.InputIsEmptyOrWhitespaceMessage);
-
+                ValidationResult.Add(errorMsg: FormatErrorMessage(InputIsEmptyOrWhitespaceMessage, envFileName: FileName));
+                CreateParserException();
                 return;
             }
             
@@ -38,18 +57,14 @@ namespace DotEnv.Core
 
                     if (HasNoKeyValuePair(line))
                     {
-                        if(_configuration.ThrowException)
-                            throw new ParserException(ExceptionMessages.LineHasNoKeyValuePairMessage, line, i);
-
+                        ValidationResult.Add(errorMsg: FormatErrorMessage(LineHasNoKeyValuePairMessage, actualValue: line, lineNumber: i, envFileName: FileName));
                         continue;
                     }
 
                     string key = ExtractKey(line);
                     if (string.IsNullOrEmpty(key))
                     {
-                        if(_configuration.ThrowException)
-                            throw new ParserException(ExceptionMessages.KeyIsAnEmptyStringMessage, currentLine: i);
-
+                        ValidationResult.Add(errorMsg: FormatErrorMessage(KeyIsAnEmptyStringMessage, lineNumber: i, envFileName: FileName));
                         continue;
                     }
 
@@ -59,6 +74,18 @@ namespace DotEnv.Core
                     SetEnvironmentVariable(key, value);
                 }
             }
+
+            CreateParserException();
+        }
+
+        /// <summary>
+        /// Creates and throws an exception of type <see cref="ParserException" />.
+        /// </summary>
+        /// <exception cref="ParserException"></exception>
+        internal void CreateParserException()
+        {
+            if (ValidationResult.HasError() && configuration.ThrowException)
+                throw new ParserException(message: ValidationResult.ErrorMessages);
         }
     }
 }

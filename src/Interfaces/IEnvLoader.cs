@@ -6,15 +6,26 @@ using System.IO;
 namespace DotEnv.Core
 {
     /// <summary>
-    /// Represents the .env file loader.
+    /// Represents the .env files loader.
     /// </summary>
     public interface IEnvLoader
     {
+        /// <param name="result">The result that contains the errors found by the loader.</param>
+        /// <inheritdoc cref="Load()" />
+        void Load(out EnvValidationResult result);
+
         /// <summary>
         /// Loads more than one .env file. By default, it will search for a file called <c>.env</c>.
         /// </summary>
         /// <remarks>This method starts find the .env file in the current directory and if it does not found it, it starts find in the parent directories of the current directory.</remarks>
-        /// <exception cref="ParserException" />
+        /// <exception cref="ParserException">
+        /// If the parser find an error during the parsing.
+        /// This exception is only thrown if the <see cref="IgnoreParserExceptions" /> method is invoked.
+        /// </exception>
+        /// <exception cref="FileNotFoundException">
+        /// If the .env file is not found.
+        /// This exception is only thrown if the <see cref="EnableFileNotFoundException" /> method is invoked.
+        /// </exception>
         void Load();
 
         /// <summary>

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.ParserException;
 
 namespace DotEnv.Core
 {
@@ -21,8 +23,8 @@ namespace DotEnv.Core
         /// <returns><c>true</c> if the line is a comment, otherwise <c>false</c>.</returns>
         protected virtual bool IsComment(string line)
         {
-            line = _configuration.TrimStartComments ? line.TrimStart() : line;
-            return line[0] == _configuration.CommentChar;
+            line = configuration.TrimStartComments ? line.TrimStart() : line;
+            return line[0] == configuration.CommentChar;
         }
 
         /// <summary>
@@ -32,9 +34,9 @@ namespace DotEnv.Core
         /// <returns>The key extracted.</returns>
         protected virtual string ExtractKey(string line)
         {
-            string key = line.Split(_configuration.DelimiterKeyValuePair, MaxCount)[0];
-            key = _configuration.TrimStartKeys ? key.TrimStart() : key;
-            key = _configuration.TrimEndKeys ? key.TrimEnd() : key;
+            string key = line.Split(configuration.DelimiterKeyValuePair, MaxCount)[0];
+            key = configuration.TrimStartKeys ? key.TrimStart() : key;
+            key = configuration.TrimEndKeys ? key.TrimEnd() : key;
             return key;
         }
 
@@ -45,9 +47,9 @@ namespace DotEnv.Core
         /// <returns>The value extracted.</returns>
         protected virtual string ExtractValue(string line)
         {
-            string value = line.Split(_configuration.DelimiterKeyValuePair, MaxCount)[1];
-            value = _configuration.TrimStartValues ? value.TrimStart() : value;
-            value = _configuration.TrimEndValues ? value.TrimEnd() : value;
+            string value = line.Split(configuration.DelimiterKeyValuePair, MaxCount)[1];
+            value = configuration.TrimStartValues ? value.TrimStart() : value;
+            value = configuration.TrimEndValues ? value.TrimEnd() : value;
             return string.IsNullOrEmpty(value) ? " " : value;
         }
 
@@ -57,7 +59,7 @@ namespace DotEnv.Core
         /// <param name="line">The line to test.</param>
         /// <returns><c>true</c> if the line has no the key-value format, otherwise <c>false</c>.</returns>
         protected virtual bool HasNoKeyValuePair(string line)
-            => line.Split(_configuration.DelimiterKeyValuePair, MaxCount).Length != 2;
+            => line.Split(configuration.DelimiterKeyValuePair, MaxCount).Length != 2;
 
         /// <summary>
         /// Create or update an environment variable.
@@ -72,9 +74,9 @@ namespace DotEnv.Core
             var retrievedValue = Environment.GetEnvironmentVariable(key);
             if (retrievedValue == null)
                 Environment.SetEnvironmentVariable(key, value);
-            else if (_configuration.ConcatDuplicateKeys != ConcatKeysOptions.None)
+            else if (configuration.ConcatDuplicateKeys != ConcatKeysOptions.None)
                 Environment.SetEnvironmentVariable(key, ConcatValues(retrievedValue, value));
-            else if (_configuration.OverwriteExistingVars)
+            else if (configuration.OverwriteExistingVars)
                 Environment.SetEnvironmentVariable(key, value);
         }
 
@@ -85,14 +87,13 @@ namespace DotEnv.Core
         /// <param name="value">The value to be concatenated with the current value.</param>
         /// <returns>The string with the concatenated values.</returns>
         protected virtual string ConcatValues(string currentValue, string value)
-            => _configuration.ConcatDuplicateKeys == ConcatKeysOptions.End ? $"{currentValue}{value}" : $"{value}{currentValue}";
+            => configuration.ConcatDuplicateKeys == ConcatKeysOptions.End ? $"{currentValue}{value}" : $"{value}{currentValue}";
 
         /// <summary>
         /// Replaces the name of each environment variable embedded in the specified string with the string equivalent of the value of the variable, then returns the resulting string.
         /// </summary>
         /// <param name="value">A string containing the names of zero or more environment variables.</param>
         /// <param name="lineNumber">The line number where the value was found.</param>
-        /// <exception cref="ParserException"><c>variable</c> is an empty string or if it does not exist in the current process.</exception>
         /// <returns>A string with each environment variable replaced by its value.</returns>
         protected virtual string ExpandEnvironmentVariables(string value, int lineNumber)
         {
@@ -103,18 +104,14 @@ namespace DotEnv.Core
 
                 if (string.IsNullOrWhiteSpace(variable))
                 {
-                    if (_configuration.ThrowException)
-                        throw new ParserException(ExceptionMessages.VariableIsAnEmptyStringMessage, currentLine: lineNumber);
-
+                    ValidationResult.Add(errorMsg: FormatErrorMessage(VariableIsAnEmptyStringMessage, lineNumber: lineNumber, envFileName: FileName));
                     return match.Value;
                 }
 
                 var retrievedValue = Environment.GetEnvironmentVariable(variable);
                 if (retrievedValue == null)
                 {
-                    if (_configuration.ThrowException)
-                        throw new ParserException(ExceptionMessages.VariableNotFoundMessage, variable, lineNumber);
-
+                    ValidationResult.Add(errorMsg: FormatErrorMessage(VariableNotFoundMessage, actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
                     return match.Value;
                 }
 

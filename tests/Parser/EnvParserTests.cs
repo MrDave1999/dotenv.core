@@ -9,6 +9,22 @@ namespace DotEnv.Core.Tests.Parser
     public class EnvParserTests
     {
         [TestMethod]
+        public void Parse_WhenErrorsAreFound_ShouldThrowParserException()
+        {
+            var parser = new EnvParser();
+            string env = @"This is an error
+                =VAL1
+                ERRORS_ARE_FOUND_1 = ${VARIABLE_NOT_FOUND} World! ${VARIABLE_NOT_FOUND_2}
+                ERRORS_ARE_FOUND_3 = VAL
+                ERRORS_ARE_FOUND_2 = ${} World! Hello ${   }
+            ";
+
+            Action action = () => parser.Parse(env);
+
+            Assert.ThrowsException<ParserException>(action);
+        }
+
+        [TestMethod]
         [DataRow("")]
         [DataRow("       ")]
         public void Parse_WhenInputIsEmptyOrWhitespace_ShouldThrowParserException(string input)
