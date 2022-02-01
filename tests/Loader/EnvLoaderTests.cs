@@ -25,6 +25,19 @@ namespace DotEnv.Core.Tests.Loader
         }
 
         [TestMethod]
+        public void LoadEnv_WhenErrorsAreFound_ShouldThrowParserException()
+        {
+            char sep = Path.DirectorySeparatorChar;
+            var loader = new EnvLoader().SetBasePath($"Loader{sep}env_files{sep}environment{sep}production");
+            SetEnvironmentVariable("DOTNET_ENV", "production");
+
+            Action action = () => loader.LoadEnv();
+
+            Assert.ThrowsException<ParserException>(action);
+            SetEnvironmentVariable("DOTNET_ENV", null);
+        }
+
+        [TestMethod]
         public void Load_WhenLoadEnvFileWithDefaultConfig_ShouldBeAbleToReadEnvironmentVariables()
         {
             var loader = new EnvLoader();
@@ -142,6 +155,43 @@ namespace DotEnv.Core.Tests.Loader
             };
 
             Assert.ThrowsException<FileNotFoundException>(action);
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenEnvironmentIsNotDefined_ShouldBeAbleToReadEnvironmentVariables()
+        {
+            new EnvLoader()
+                .SetBasePath("Loader/env_files/environment/dev")
+                .LoadEnv();
+
+            new EnvLoader()
+                .SetBasePath("Loader/env_files/environment/development")
+                .LoadEnv();
+
+            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_DEV"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_DEV_LOCAL"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_LOCAL"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV_DEV"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV_DEV_LOCAL"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV_LOCAL"));
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenEnvironmentIsDefined_ShouldBeAbleToReadEnvironmentVariables()
+        {
+            SetEnvironmentVariable("DOTNET_ENV", "test");
+
+            new EnvLoader()
+                .SetBasePath("Loader/env_files/environment/test")
+                .LoadEnv();
+
+            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV"));
+            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST"));
+            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST_LOCAL"));
+            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_LOCAL"));
+            SetEnvironmentVariable("DOTNET_ENV", null);
         }
     }
 }
