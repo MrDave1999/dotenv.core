@@ -11,6 +11,18 @@ namespace DotEnv.Core
     public interface IEnvLoader
     {
         /// <param name="result">The result that contains the errors found by the loader.</param>
+        /// <inheritdoc cref="LoadEnv()" />
+        void LoadEnv(out EnvValidationResult result);
+
+        /// <summary>
+        /// Loads an .env file based on the environment (development, test, staging or production).
+        /// This method will load these .env files in the following order:
+        /// .env.[environment].local, .env.local, .env.[environment], .env
+        /// </summary>
+        /// <inheritdoc cref="Load()" />
+        void LoadEnv();
+
+        /// <param name="result">The result that contains the errors found by the loader.</param>
         /// <inheritdoc cref="Load()" />
         void Load(out EnvValidationResult result);
 
