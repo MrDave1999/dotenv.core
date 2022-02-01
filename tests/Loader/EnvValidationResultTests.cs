@@ -15,7 +15,8 @@ namespace DotEnv.Core.Tests.Loader
         {
             string msg;
             EnvValidationResult result;
-            string basePath = $"Loader{DirectorySeparatorChar}env_files{DirectorySeparatorChar}";
+            char sep = DirectorySeparatorChar;
+            string basePath = $"Loader{sep}env_files{sep}validation{sep}";
             new EnvLoader()
                 .SetBasePath(basePath)
                 .IgnoreParserExceptions()
