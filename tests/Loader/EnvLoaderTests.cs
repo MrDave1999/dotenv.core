@@ -13,7 +13,7 @@ namespace DotEnv.Core.Tests.Loader
         public void Load_WhenErrorsAreFound_ShouldThrowParserException()
         {
             var loader = new EnvLoader()
-                .SetBasePath($"Loader{Path.DirectorySeparatorChar}env_files")
+                .SetBasePath("Loader/env_files/validation")
                 .AddEnvFile(".env.validation.result1")
                 .AddEnvFile(".env.validation.result2")
                 .AddEnvFile(".env.validation.result3")
@@ -22,19 +22,6 @@ namespace DotEnv.Core.Tests.Loader
             Action action = () => loader.Load();
 
             Assert.ThrowsException<ParserException>(action);
-        }
-
-        [TestMethod]
-        public void LoadEnv_WhenErrorsAreFound_ShouldThrowParserException()
-        {
-            char sep = Path.DirectorySeparatorChar;
-            var loader = new EnvLoader().SetBasePath($"Loader{sep}env_files{sep}environment{sep}production");
-            SetEnvironmentVariable("DOTNET_ENV", "production");
-
-            Action action = () => loader.LoadEnv();
-
-            Assert.ThrowsException<ParserException>(action);
-            SetEnvironmentVariable("DOTNET_ENV", null);
         }
 
         [TestMethod]
@@ -71,7 +58,7 @@ namespace DotEnv.Core.Tests.Loader
         {
             string absolutePath = Directory.GetCurrentDirectory();
             new EnvLoader(new CustomEnvParser())
-                .SetBasePath("Loader/env_files")
+                .SetBasePath("Loader/env_files/multi")
                 .AddEnvFiles(".env.multi1", "./", ".env.multi2")
                 .AddEnvFile(".env.multi3")
                 .AddEnvFile(".env.multi4")
@@ -191,6 +178,18 @@ namespace DotEnv.Core.Tests.Loader
             Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST"));
             Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST_LOCAL"));
             Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_LOCAL"));
+            SetEnvironmentVariable("DOTNET_ENV", null);
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenErrorsAreFound_ShouldThrowParserException()
+        {
+            var loader = new EnvLoader().SetBasePath("Loader/env_files/environment/production");
+            SetEnvironmentVariable("DOTNET_ENV", "production");
+
+            Action action = () => loader.LoadEnv();
+
+            Assert.ThrowsException<ParserException>(action);
             SetEnvironmentVariable("DOTNET_ENV", null);
         }
     }
