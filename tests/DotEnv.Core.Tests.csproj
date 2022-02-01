@@ -15,7 +15,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ContentWithTargetPath Include="Loader\env_files\.env.multi6.absolute" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.multi6.absolute" />
+    <ContentWithTargetPath Include="Loader\env_files\multi\.env.multi6.absolute" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.multi6.absolute" />
     <ContentWithTargetPath Include="Loader\env_files\.env.local" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.local" />
     <ContentWithTargetPath Include="Loader\env_files\.env.absolute" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.absolute" />
     <ContentWithTargetPath Include="Loader\env_files\.env.relative" CopyToOutputDirectory="PreserveNewest" TargetPath="dotenv\files\.env.relative" />
