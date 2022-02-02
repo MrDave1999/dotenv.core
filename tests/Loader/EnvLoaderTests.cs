@@ -13,7 +13,7 @@ namespace DotEnv.Core.Tests.Loader
         public void Load_WhenErrorsAreFound_ShouldThrowParserException()
         {
             var loader = new EnvLoader()
-                .SetBasePath($"Loader{Path.DirectorySeparatorChar}env_files")
+                .SetBasePath("Loader/env_files/validation")
                 .AddEnvFile(".env.validation.result1")
                 .AddEnvFile(".env.validation.result2")
                 .AddEnvFile(".env.validation.result3")
@@ -58,7 +58,7 @@ namespace DotEnv.Core.Tests.Loader
         {
             string absolutePath = Directory.GetCurrentDirectory();
             new EnvLoader(new CustomEnvParser())
-                .SetBasePath("Loader/env_files")
+                .SetBasePath("Loader/env_files/multi")
                 .AddEnvFiles(".env.multi1", "./", ".env.multi2")
                 .AddEnvFile(".env.multi3")
                 .AddEnvFile(".env.multi4")
@@ -142,6 +142,71 @@ namespace DotEnv.Core.Tests.Loader
             };
 
             Assert.ThrowsException<FileNotFoundException>(action);
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenEnvFileNotFound_ShouldThrowFileNotFoundException()
+        {
+            Action action = () =>
+            {
+                new EnvLoader()
+                 .SetBasePath("environment/files")
+                 .SetDefaultEnvFileName(".env.example")
+                 .AddEnvFiles(".env.example1", "foo/")
+                 .EnableFileNotFoundException()
+                 .LoadEnv();
+            };
+
+            Assert.ThrowsException<FileNotFoundException>(action);
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenEnvironmentIsNotDefined_ShouldBeAbleToReadEnvironmentVariables()
+        {
+            new EnvLoader()
+                .SetBasePath("Loader/env_files/environment/dev")
+                .LoadEnv();
+
+            new EnvLoader()
+                .SetBasePath("Loader/env_files/environment/development")
+                .LoadEnv();
+
+            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_DEV"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_DEV_LOCAL"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_LOCAL"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV_DEV"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV_DEV_LOCAL"));
+            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV_LOCAL"));
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenEnvironmentIsDefined_ShouldBeAbleToReadEnvironmentVariables()
+        {
+            SetEnvironmentVariable("DOTNET_ENV", "test");
+
+            new EnvLoader()
+                .SetBasePath("Loader/env_files/environment/test")
+                .LoadEnv();
+
+            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV"));
+            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST"));
+            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST_LOCAL"));
+            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_LOCAL"));
+            SetEnvironmentVariable("DOTNET_ENV", null);
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenErrorsAreFound_ShouldThrowParserException()
+        {
+            var loader = new EnvLoader().SetBasePath("Loader/env_files/environment/production");
+            SetEnvironmentVariable("DOTNET_ENV", "production");
+
+            Action action = () => loader.LoadEnv();
+
+            Assert.ThrowsException<ParserException>(action);
+            SetEnvironmentVariable("DOTNET_ENV", null);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static DotEnv.Core.ExceptionMessages;
 using static System.IO.Path;
+using static System.Environment;
 
 namespace DotEnv.Core.Tests.Loader
 {
@@ -14,7 +15,8 @@ namespace DotEnv.Core.Tests.Loader
         {
             string msg;
             EnvValidationResult result;
-            string basePath = $"Loader{DirectorySeparatorChar}env_files{DirectorySeparatorChar}";
+            char sep = DirectorySeparatorChar;
+            string basePath = $"Loader{sep}env_files{sep}validation{sep}";
             new EnvLoader()
                 .SetBasePath(basePath)
                 .IgnoreParserExceptions()
@@ -26,7 +28,7 @@ namespace DotEnv.Core.Tests.Loader
                 .Load(out result);
 
             msg = result.ErrorMessages;
-            Assert.AreEqual(result.HasError(), true);
+            Assert.AreEqual(true, result.HasError());
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is an error, Line: 1, FileName: {basePath}.env.validation.result1)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.validation.result1)");
@@ -48,6 +50,64 @@ namespace DotEnv.Core.Tests.Loader
             StringAssert.Contains(msg, $"{FileNotFoundMessage} (FileName: {basePath}.env.not.found4)");
             StringAssert.Contains(msg, $"{FileNotFoundMessage} (FileName: {basePath}.env.not.found5)");
             StringAssert.Contains(msg, $"{FileNotFoundMessage} (FileName: {basePath}.env.not.found6)");
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenErrorsAreFound_ShouldReadTheErrors()
+        {
+            string msg;
+            EnvValidationResult result;
+            char sep = DirectorySeparatorChar;
+            string basePath = $"Loader{sep}env_files{sep}environment{sep}production{sep}";
+            SetEnvironmentVariable("DOTNET_ENV", "production");
+
+            new EnvLoader()
+                .SetBasePath(basePath)
+                .IgnoreParserExceptions()
+                .LoadEnv(out result);
+
+            msg = result.ErrorMessages;
+            Assert.AreEqual(true, result.HasError());
+
+            StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.production.local)");
+            StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: PROD, Line: 5, FileName: {basePath}.env.production.local)");
+
+            StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a error, Line: 4, FileName: {basePath}.env.local)");
+
+            StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 3, FileName: {basePath}.env.production)");
+            StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a error, Line: 5, FileName: {basePath}.env.production)");
+
+            StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a error, Line: 4, FileName: {basePath}.env)");
+            StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a error, Line: 6, FileName: {basePath}.env)");
+            SetEnvironmentVariable("DOTNET_ENV", null);
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenLocalEnvFilesNotExistAndEnvironmentIsNotDefined_ShouldReadTheErrors()
+        {
+            var loader = new EnvLoader();
+
+            loader
+                .SetBasePath("environment/env_files")
+                .LoadEnv(out var result);
+
+            Assert.AreEqual(true, result.HasError());
+            StringAssert.Contains(result.ErrorMessages, $"{FileNotPresentLoadEnvMessage}: .env.development.local or .env.dev.local or .env.local");
+        }
+
+        [TestMethod]
+        public void LoadEnv_WhenLocalEnvFilesNotExistAndEnvironmentIsDefined_ShouldReadTheErrors()
+        {
+            var loader = new EnvLoader();
+            SetEnvironmentVariable("DOTNET_ENV", "test");
+
+            loader
+                .SetBasePath("environment/env_files")
+                .LoadEnv(out var result);
+
+            Assert.AreEqual(true, result.HasError());
+            StringAssert.Contains(result.ErrorMessages, $"{FileNotPresentLoadEnvMessage}: .env.test.local or .env.local");
+            SetEnvironmentVariable("DOTNET_ENV", null);
         }
     }
 }

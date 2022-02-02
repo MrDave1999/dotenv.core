@@ -19,6 +19,16 @@ namespace DotEnv.Core
         /// Gets or sets the encoding of an .env file.
         /// </summary>
         public Encoding Encoding { get; set; }
+
+        /// <summary>
+        /// A value indicating whether the .env file is present in any directory. Its default value is true.
+        /// </summary>
+        public bool Exists { get; set; } = true;
+
+        /// <summary>
+        /// A value indicating whether the existence of the .env file is optional or not.
+        /// </summary>
+        public bool Optional { get; set; }
     }
 
     /// <summary>

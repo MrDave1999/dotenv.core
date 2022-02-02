@@ -3,15 +3,27 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.ParserException;
+using static DotEnv.Core.EnvFileNotFoundException;
 
 namespace DotEnv.Core
 {
     /// <inheritdoc cref="IEnvLoader" />
     public partial class EnvLoader : IEnvLoader
     {
+        /// <summary>
+        /// Allows access to the configuration options for the loader.
+        /// </summary>
         private readonly EnvLoaderOptions _configuration;
+
+        /// <summary>
+        /// Allows access to the members that control the parser.
+        /// </summary>
         private readonly EnvParser _parser;
+
+        /// <summary>
+        /// Allows access to the errors container of the loader.
+        /// </summary>
+        private readonly EnvValidationResult _validationResult;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvLoader" /> class.
@@ -20,6 +32,7 @@ namespace DotEnv.Core
         {
             _configuration = new EnvLoaderOptions();
             _parser = new EnvParser();
+            _validationResult = new EnvValidationResult();
         }
 
         /// <summary>
@@ -40,7 +53,6 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public void Load(out EnvValidationResult result)
         {
-            var validationResult = new EnvValidationResult();
             result = _parser.ValidationResult;
 
             if(_configuration.EnvFiles.Count == 0)
@@ -48,39 +60,65 @@ namespace DotEnv.Core
 
             foreach (EnvFile envFile in _configuration.EnvFiles)
             {
-                if (!Path.HasExtension(envFile.Path))
-                    envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
-
-                if (envFile.Encoding == null)
-                    envFile.Encoding = _configuration.Encoding;
-
-                envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
-
-                string path = GetEnvFilePath(envFile.Path);
-                if (path != null)
+                SetConfigurationEnvFile(envFile);
+                string fullPath = GetEnvFilePath(envFile.Path);
+                if (fullPath != null)
                 {
-                    string source = File.ReadAllText(path, envFile.Encoding);
-                    _parser.FileName = envFile.Path;
-                    try
-                    {
-                        _parser.Parse(source);
-                    }
-                    catch(ParserException) { }
+                    ReadAndParse(envFile, fullPath);
                     continue;
                 }
                 
-                validationResult.Add(errorMsg: $"{FileNotFoundMessage} (FileName: {envFile.Path})");
+                _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
             }
 
             _parser.CreateParserException();
+            CreateFileNotFoundException();
+        }
 
-            if (validationResult.HasError())
+        /// <summary>
+        /// Creates and throws an exception of type <see cref="FileNotFoundException" />.
+        /// </summary>
+        /// <exception cref="FileNotFoundException"></exception>
+        private void CreateFileNotFoundException()
+        {
+            if (_validationResult.HasError())
             {
                 if (_configuration.ThrowFileNotFoundException)
-                    throw new FileNotFoundException(message: validationResult.ErrorMessages);
+                    throw new FileNotFoundException(message: _validationResult.ErrorMessages);
 
-                _parser.ValidationResult.Add(errorMsg: validationResult.ErrorMessages);
+                _parser.ValidationResult.Add(errorMsg: _validationResult.ErrorMessages);
             }
+        }
+
+        /// <summary>
+        /// Reads the contents of an .env file and invokes the parser.
+        /// </summary>
+        /// <param name="envFile">The instance representing the .env file.</param>
+        /// <param name="fullPath">The full path to the .env file.</param>
+        private void ReadAndParse(EnvFile envFile, string fullPath)
+        {
+            string source = File.ReadAllText(fullPath, envFile.Encoding);
+            _parser.FileName = envFile.Path;
+            try
+            {
+                _parser.Parse(source);
+            }
+            catch (ParserException) { }
+        }
+
+        /// <summary>
+        /// Sets the configuration of an .env file.
+        /// </summary>
+        /// <param name="envFile">The instance representing the .env file.</param>
+        private void SetConfigurationEnvFile(EnvFile envFile)
+        {
+            if (!Path.HasExtension(envFile.Path))
+                envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
+
+            if (envFile.Encoding == null)
+                envFile.Encoding = _configuration.Encoding;
+
+            envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
         }
 
         /// <summary>
