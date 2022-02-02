@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.EnvFileNotFoundException;
 
 namespace DotEnv.Core
 {
@@ -59,14 +60,7 @@ namespace DotEnv.Core
 
             foreach (EnvFile envFile in _configuration.EnvFiles)
             {
-                if (!Path.HasExtension(envFile.Path))
-                    envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
-
-                if (envFile.Encoding == null)
-                    envFile.Encoding = _configuration.Encoding;
-
-                envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
-
+                SetConfigurationEnvFile(envFile);
                 string fullPath = GetEnvFilePath(envFile.Path);
                 if (fullPath != null)
                 {
@@ -74,7 +68,7 @@ namespace DotEnv.Core
                     continue;
                 }
                 
-                _validationResult.Add(errorMsg: $"{FileNotFoundMessage} (FileName: {envFile.Path})");
+                _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
             }
 
             _parser.CreateParserException();
@@ -110,6 +104,21 @@ namespace DotEnv.Core
                 _parser.Parse(source);
             }
             catch (ParserException) { }
+        }
+
+        /// <summary>
+        /// Sets the configuration of an .env file.
+        /// </summary>
+        /// <param name="envFile">The instance representing the .env file.</param>
+        private void SetConfigurationEnvFile(EnvFile envFile)
+        {
+            if (!Path.HasExtension(envFile.Path))
+                envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
+
+            if (envFile.Encoding == null)
+                envFile.Encoding = _configuration.Encoding;
+
+            envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
         }
 
         /// <summary>
