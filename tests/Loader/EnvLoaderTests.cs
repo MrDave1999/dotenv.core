@@ -145,6 +145,22 @@ namespace DotEnv.Core.Tests.Loader
         }
 
         [TestMethod]
+        public void LoadEnv_WhenEnvFileNotFound_ShouldThrowFileNotFoundException()
+        {
+            Action action = () =>
+            {
+                new EnvLoader()
+                 .SetBasePath("environment/files")
+                 .SetDefaultEnvFileName(".env.example")
+                 .AddEnvFiles(".env.example1", "foo/")
+                 .EnableFileNotFoundException()
+                 .LoadEnv();
+            };
+
+            Assert.ThrowsException<FileNotFoundException>(action);
+        }
+
+        [TestMethod]
         public void LoadEnv_WhenEnvironmentIsNotDefined_ShouldBeAbleToReadEnvironmentVariables()
         {
             new EnvLoader()
