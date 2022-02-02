@@ -24,6 +24,11 @@ namespace DotEnv.Core
         /// A value indicating whether the .env file is present in any directory. Its default value is true.
         /// </summary>
         public bool Exists { get; set; } = true;
+
+        /// <summary>
+        /// A value indicating whether the existence of the .env file is optional or not.
+        /// </summary>
+        public bool Optional { get; set; }
     }
 
     /// <summary>

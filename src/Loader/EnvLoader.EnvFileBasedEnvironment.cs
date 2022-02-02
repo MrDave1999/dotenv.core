@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text;
 using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.EnvFileNotFoundException;
 
 namespace DotEnv.Core
 {
@@ -20,15 +21,14 @@ namespace DotEnv.Core
         {
             result = _parser.ValidationResult;
             var enviroment = Environment.GetEnvironmentVariable("DOTNET_ENV");
-            AddEnvFiles(enviroment != null ? new[] { $".env.{enviroment}.local" } : new[] { ".env.development.local", ".env.dev.local" });
-            AddEnvFile(".env.local");
-            AddEnvFiles(enviroment != null ? new[] { $".env.{enviroment}" } : new[] { ".env.development", ".env.dev" });
-            AddEnvFile(".env");
+            AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}.local" } : new[] { ".env.development.local", ".env.dev.local" });
+            AddOptionalEnvFiles(".env.local");
+            AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}" } : new[] { ".env.development", ".env.dev" });
+            AddOptionalEnvFiles(".env");
 
             foreach (EnvFile envFile in _configuration.EnvFiles)
             {
-                envFile.Encoding = _configuration.Encoding;
-                envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
+                SetConfigurationEnvFile(envFile);
                 string fullPath = GetEnvFilePath(envFile.Path);
                 if (fullPath != null)
                 {
@@ -36,6 +36,8 @@ namespace DotEnv.Core
                     continue;
                 }
                 envFile.Exists = false;
+                if (!envFile.Optional)
+                    _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
             }
 
             var envFiles = _configuration.EnvFiles;
@@ -54,6 +56,16 @@ namespace DotEnv.Core
 
             _parser.CreateParserException();
             CreateFileNotFoundException();
+        }
+
+        /// <summary>
+        /// Adds optional .env files to a collection.
+        /// </summary>
+        /// <param name="envFilesNames">The names of the .env files.</param>
+        private void AddOptionalEnvFiles(params string[] envFilesNames)
+        {
+            foreach (string envFileName in envFilesNames)
+                _configuration.EnvFiles.Add(new EnvFile { Path = envFileName, Optional = true });
         }
     }
 }
