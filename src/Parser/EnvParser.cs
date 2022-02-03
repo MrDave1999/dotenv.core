@@ -25,26 +25,26 @@ namespace DotEnv.Core
         internal string FileName { get; set; }
 
         /// <inheritdoc />
-        public void Parse(string input)
+        public void Parse(string dataSource)
         {
-            Parse(input, out _);
+            Parse(dataSource, out _);
         }
 
         /// <inheritdoc />
         // This is the template method and defines the skeleton of the algorithm.
         // See https://en.wikipedia.org/wiki/Template_method_pattern
-        public void Parse(string input, out EnvValidationResult result)
+        public void Parse(string dataSource, out EnvValidationResult result)
         {
             result = ValidationResult;
 
-            if (string.IsNullOrWhiteSpace(input))
+            if (string.IsNullOrWhiteSpace(dataSource))
             {
-                ValidationResult.Add(errorMsg: FormatErrorMessage(InputIsEmptyOrWhitespaceMessage, envFileName: FileName));
+                ValidationResult.Add(errorMsg: FormatErrorMessage(DataSourceIsEmptyOrWhitespaceMessage, envFileName: FileName));
                 CreateParserException();
                 return;
             }
             
-            using(var lines = new StringReader(input))
+            using(var lines = new StringReader(dataSource))
             {
                 int i = 1;
                 for(var line = lines.ReadLine(); line != null; line = lines.ReadLine(), ++i)

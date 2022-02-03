@@ -9,20 +9,20 @@ namespace DotEnv.Core
     /// </summary>
     public interface IEnvParser
     {
-        /// <param name="input">The input to parsing.</param>
+        /// <param name="dataSource">The data source to parsing.</param>
         /// <param name="result">The result that contains the errors found by the parser.</param>
         /// <inheritdoc cref="Parse(string)" />
-        void Parse(string input, out EnvValidationResult result);
+        void Parse(string dataSource, out EnvValidationResult result);
 
         /// <summary>
         /// Start the parsing to extract the key-value pair from the .env file.
         /// </summary>
-        /// <param name="input">The input to parsing.</param>
+        /// <param name="dataSource">The data source to parsing.</param>
         /// <exception cref="ParserException">
         /// If the parser find an error during the parsing.
         /// This exception is only thrown if <see cref="EnvParserOptions.ThrowException" /> property is set to <c>true</c>.
         /// </exception>
-        void Parse(string input);
+        void Parse(string dataSource);
 
         /// <summary>
         /// Disables the trim at the starts of the values.
