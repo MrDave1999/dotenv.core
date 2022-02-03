@@ -48,7 +48,7 @@ namespace DotEnv.Core.Tests.Parser
             StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5)");
             StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5)");
 
-            StringAssert.Contains(msg, InputIsEmptyOrWhitespaceMessage);
+            StringAssert.Contains(msg, DataSourceIsEmptyOrWhitespaceMessage);
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a line, Line: 1)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2)");

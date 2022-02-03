@@ -27,14 +27,14 @@ namespace DotEnv.Core.Tests.Parser
         [TestMethod]
         [DataRow("")]
         [DataRow("       ")]
-        public void Parse_WhenInputIsEmptyOrWhitespace_ShouldThrowParserException(string input)
+        public void Parse_WhenDataSourceIsEmptyOrWhitespace_ShouldThrowParserException(string input)
         {
             var parser = new EnvParser();
 
             Action action = () => parser.Parse(input);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, InputIsEmptyOrWhitespaceMessage);
+            StringAssert.Contains(ex.Message, DataSourceIsEmptyOrWhitespaceMessage);
         }
 
         [TestMethod]

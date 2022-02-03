@@ -37,7 +37,7 @@ namespace DotEnv.Core.Tests.Loader
             StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5, FileName: {basePath}.env.validation.result1)");
             StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5, FileName: {basePath}.env.validation.result1)");
 
-            StringAssert.Contains(msg, $"{InputIsEmptyOrWhitespaceMessage} (FileName: {basePath}.env.validation.result2)");
+            StringAssert.Contains(msg, $"{DataSourceIsEmptyOrWhitespaceMessage} (FileName: {basePath}.env.validation.result2)");
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a line, Line: 1, FileName: {basePath}.env.validation.result3)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.validation.result3)");
