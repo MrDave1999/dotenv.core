@@ -15,12 +15,12 @@ namespace DotEnv.Core
         void Parse(string dataSource, out EnvValidationResult result);
 
         /// <summary>
-        /// Start the parsing to extract the key-value pair from the .env file.
+        /// Start the parsing to extract the key-value pair from a data source.
         /// </summary>
         /// <param name="dataSource">The data source to parsing.</param>
         /// <exception cref="ParserException">
-        /// If the parser find an error during the parsing.
-        /// This exception is only thrown if <see cref="EnvParserOptions.ThrowException" /> property is set to <c>true</c>.
+        /// If the parser encounters one or more errors.
+        /// This exception is only thrown if the <see cref="EnvParserOptions.ThrowException" /> property is set to <c>true</c>.
         /// </exception>
         void Parse(string dataSource);
 
@@ -97,6 +97,9 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="option">The option that indicates whether the concatenation is at the start or at the end of the value.</param>
         /// <exception cref="ArgumentException"><c>option</c> is not one of the <see cref="ConcatKeysOptions" /> values.</exception>
+        /// <remarks>
+        /// What this option actually does is to concatenate the new value of a key with the current value of an existing environment variable.
+        /// </remarks>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvParser AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End);
 

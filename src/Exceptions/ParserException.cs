@@ -5,7 +5,7 @@ using System.Text;
 namespace DotEnv.Core
 {
     /// <summary>
-    /// The exception that is thrown when the parser finds an error during the parsing of the .env file.
+    /// The exception that is thrown when the parser encounters one or more errors.
     /// </summary>
     public class ParserException : Exception
     {
