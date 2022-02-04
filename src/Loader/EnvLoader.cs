@@ -65,7 +65,7 @@ namespace DotEnv.Core
             }
 
             _parser.CreateAndThrowParserException();
-            CreateFileNotFoundException();
+            CreateAndThrowFileNotFoundException();
 
             result = GetInstanceForOutParams();
         }
@@ -109,7 +109,7 @@ namespace DotEnv.Core
             }
 
             _parser.CreateAndThrowParserException();
-            CreateFileNotFoundException();
+            CreateAndThrowFileNotFoundException();
 
             result = GetInstanceForOutParams();
         }
