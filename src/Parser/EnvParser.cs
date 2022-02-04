@@ -40,7 +40,7 @@ namespace DotEnv.Core
             if (string.IsNullOrWhiteSpace(dataSource))
             {
                 ValidationResult.Add(errorMsg: FormatErrorMessage(DataSourceIsEmptyOrWhitespaceMessage, envFileName: FileName));
-                CreateParserException();
+                CreateAndThrowParserException();
                 return;
             }
             
@@ -75,14 +75,14 @@ namespace DotEnv.Core
                 }
             }
 
-            CreateParserException();
+            CreateAndThrowParserException();
         }
 
         /// <summary>
         /// Creates and throws an exception of type <see cref="ParserException" />.
         /// </summary>
         /// <exception cref="ParserException"></exception>
-        internal void CreateParserException()
+        internal void CreateAndThrowParserException()
         {
             if (ValidationResult.HasError() && configuration.ThrowException)
                 throw new ParserException(message: ValidationResult.ErrorMessages);

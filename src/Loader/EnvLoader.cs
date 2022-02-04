@@ -64,7 +64,7 @@ namespace DotEnv.Core
                     _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
             }
 
-            _parser.CreateParserException();
+            _parser.CreateAndThrowParserException();
             CreateFileNotFoundException();
 
             result = GetInstanceForOutParams();
@@ -108,7 +108,7 @@ namespace DotEnv.Core
                     _validationResult.Add(errorMsg: $"{FileNotPresentLoadEnvMessage}: .env.{enviroment}.local or .env.local");
             }
 
-            _parser.CreateParserException();
+            _parser.CreateAndThrowParserException();
             CreateFileNotFoundException();
 
             result = GetInstanceForOutParams();
