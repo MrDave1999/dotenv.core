@@ -101,9 +101,9 @@ namespace DotEnv.Core
         IEnvParser AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End);
 
         /// <summary>
-        /// Ignores parser exceptions. By calling this method the parser will not throw any exceptions when it encounters an error.
+        /// Disables/ignores <see cref="ParserException" />. This method tells the parser not to throw any exception when it encounters one or more errors.
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
-        IEnvParser IgnoreParserExceptions();
+        IEnvParser DisableParserException();
     }
 }

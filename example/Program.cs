@@ -51,7 +51,7 @@ namespace DotEnv.Core.Example
 			Console.WriteLine($"PGSQL_DB={reader["PGSQL_DB"]}");
 
 			new EnvLoader(new CustomEnvParser())
-				.IgnoreParserExceptions()
+				.DisableParserException()
 				.SetDefaultEnvFileName("./files/.env.local")
 				.Load(out var result);
 
