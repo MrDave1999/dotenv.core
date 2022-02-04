@@ -27,7 +27,7 @@ namespace DotEnv.Core
         void Load(out EnvValidationResult result);
 
         /// <summary>
-        /// Loads more than one .env file. By default, it will search for a file called <c>.env</c>.
+        /// Loads one or more .env files. By default, it will search for a file called <c>.env</c>.
         /// </summary>
         /// <remarks>This method starts find the .env file in the current directory and if it does not found it, it starts find in the parent directories of the current directory.</remarks>
         /// <exception cref="ParserException">
@@ -35,7 +35,7 @@ namespace DotEnv.Core
         /// This exception is only thrown if the <see cref="DisableParserException" /> method is invoked.
         /// </exception>
         /// <exception cref="FileNotFoundException">
-        /// If the .env file is not found.
+        /// If the .env files are not found.
         /// This exception is only thrown if the <see cref="EnableFileNotFoundException" /> method is invoked.
         /// </exception>
         void Load();
@@ -84,7 +84,7 @@ namespace DotEnv.Core
         IEnvLoader SetEncoding(Encoding encoding);
 
         /// <summary>
-        /// Enables <see cref="FileNotFoundException" /> when the .env file is not found.
+        /// Enables <see cref="FileNotFoundException" />. This method tells the loader to throw an exception when one or more .env files are not found.
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader EnableFileNotFoundException();
