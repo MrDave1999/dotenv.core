@@ -29,6 +29,7 @@ namespace DotEnv.Core.Tests.Loader
 
             msg = result.ErrorMessages;
             Assert.AreEqual(true, result.HasError());
+            Assert.AreEqual(16, result.Count);
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is an error, Line: 1, FileName: {basePath}.env.validation.result1)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.validation.result1)");
@@ -68,6 +69,7 @@ namespace DotEnv.Core.Tests.Loader
 
             msg = result.ErrorMessages;
             Assert.AreEqual(true, result.HasError());
+            Assert.AreEqual(7, result.Count);
 
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.production.local)");
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: PROD, Line: 5, FileName: {basePath}.env.production.local)");
@@ -92,6 +94,7 @@ namespace DotEnv.Core.Tests.Loader
                 .LoadEnv(out var result);
 
             Assert.AreEqual(true, result.HasError());
+            Assert.AreEqual(1, result.Count);
             StringAssert.Contains(result.ErrorMessages, $"{FileNotPresentLoadEnvMessage}: .env.development.local or .env.dev.local or .env.local");
         }
 
@@ -106,6 +109,7 @@ namespace DotEnv.Core.Tests.Loader
                 .LoadEnv(out var result);
 
             Assert.AreEqual(true, result.HasError());
+            Assert.AreEqual(1, result.Count);
             StringAssert.Contains(result.ErrorMessages, $"{FileNotPresentLoadEnvMessage}: .env.test.local or .env.local");
             SetEnvironmentVariable("DOTNET_ENV", null);
         }

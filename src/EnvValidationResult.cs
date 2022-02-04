@@ -23,6 +23,11 @@ namespace DotEnv.Core
             => _errors.Count > 0;
 
         /// <summary>
+        /// Gets the number of errors contained in the container.
+        /// </summary>
+        public int Count => _errors.Count;
+
+        /// <summary>
         /// Gets the error messages.
         /// </summary>
         public string ErrorMessages
