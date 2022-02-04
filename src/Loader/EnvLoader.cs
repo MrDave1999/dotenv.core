@@ -86,7 +86,8 @@ namespace DotEnv.Core
                 if (_configuration.ThrowFileNotFoundException)
                     throw new FileNotFoundException(message: _validationResult.ErrorMessages);
 
-                _parser.ValidationResult.Add(errorMsg: _validationResult.ErrorMessages);
+                foreach(var errorMsg in _validationResult)
+                    _parser.ValidationResult.Add(errorMsg);
             }
         }
 

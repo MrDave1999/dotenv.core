@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +8,7 @@ namespace DotEnv.Core
     /// <summary>
     /// Represents a container for the results of a validation of the parser and loader.
     /// </summary>
-    public class EnvValidationResult
+    public class EnvValidationResult : IEnumerable<string>
     {
         /// <summary>
         /// Allows access to the errors collection.
@@ -43,5 +44,19 @@ namespace DotEnv.Core
         {
             _errors.Add(errorMsg);
         }
+
+        /// <summary>
+        /// Returns an enumerator that iterates through the errors contained in the container.
+        /// </summary>
+        /// <returns>An enumerator that can be used to iterate through the errors contained in the container.</returns>
+        public IEnumerator<string> GetEnumerator()
+        {
+            foreach (var error in _errors)
+                yield return error;
+        }
+
+        /// <inheritdoc cref="GetEnumerator" />
+        IEnumerator IEnumerable.GetEnumerator()
+            => this.GetEnumerator();
     }
 }
