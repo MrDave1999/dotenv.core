@@ -58,15 +58,5 @@ namespace DotEnv.Core
 
             result = GetInstanceForOutParams();
         }
-
-        /// <summary>
-        /// Adds optional .env files to a collection.
-        /// </summary>
-        /// <param name="envFilesNames">The names of the .env files.</param>
-        private void AddOptionalEnvFiles(params string[] envFilesNames)
-        {
-            foreach (string envFileName in envFilesNames)
-                _configuration.EnvFiles.Add(new EnvFile { Path = envFileName, Optional = true });
-        }
     }
 }
