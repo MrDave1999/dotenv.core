@@ -53,8 +53,6 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public void Load(out EnvValidationResult result)
         {
-            result = _parser.ValidationResult;
-
             if(_configuration.EnvFiles.Count == 0)
                 _configuration.EnvFiles.Add(new EnvFile { Path = _configuration.DefaultEnvFileName, Encoding = _configuration.Encoding });
 
@@ -73,6 +71,8 @@ namespace DotEnv.Core
 
             _parser.CreateParserException();
             CreateFileNotFoundException();
+
+            result = GetInstanceForOutParams();
         }
 
         /// <summary>
@@ -86,7 +86,18 @@ namespace DotEnv.Core
                 if (_configuration.ThrowFileNotFoundException)
                     throw new FileNotFoundException(message: _validationResult.ErrorMessages);
 
-                foreach(var errorMsg in _validationResult)
+                CombineContainers();
+            }
+        }
+
+        /// <summary>
+        /// Combines the container of the loader with of the parser.
+        /// </summary>
+        private void CombineContainers()
+        {
+            if (_parser.ValidationResult.HasError())
+            {
+                foreach (var errorMsg in _validationResult)
                     _parser.ValidationResult.Add(errorMsg);
             }
         }
@@ -121,6 +132,12 @@ namespace DotEnv.Core
 
             envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
         }
+
+        /// <summary>
+        /// Gets an instance for an out parameter ('result').
+        /// </summary>
+        private EnvValidationResult GetInstanceForOutParams()
+            => _parser.ValidationResult.HasError() ? _parser.ValidationResult : _validationResult;
 
         /// <summary>
         /// Gets the full path of the .env file.

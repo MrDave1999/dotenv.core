@@ -19,7 +19,6 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public void LoadEnv(out EnvValidationResult result)
         {
-            result = _parser.ValidationResult;
             var enviroment = Environment.GetEnvironmentVariable("DOTNET_ENV");
             AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}.local" } : new[] { ".env.development.local", ".env.dev.local" });
             AddOptionalEnvFiles(".env.local");
@@ -56,6 +55,8 @@ namespace DotEnv.Core
 
             _parser.CreateParserException();
             CreateFileNotFoundException();
+
+            result = GetInstanceForOutParams();
         }
 
         /// <summary>
