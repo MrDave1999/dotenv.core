@@ -12,7 +12,7 @@ namespace DotEnv.Core.Tests.Parser
         [TestMethod]
         public void Parse_WhenErrorsAreFound_ShouldReadTheErrors()
         {
-            var parser = new EnvParser().IgnoreParserExceptions();
+            var parser = new EnvParser().DisableParserException();
             string env, msg;
             EnvValidationResult result;
 

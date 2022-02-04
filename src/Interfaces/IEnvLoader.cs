@@ -32,7 +32,7 @@ namespace DotEnv.Core
         /// <remarks>This method starts find the .env file in the current directory and if it does not found it, it starts find in the parent directories of the current directory.</remarks>
         /// <exception cref="ParserException">
         /// If the parser find an error during the parsing.
-        /// This exception is only thrown if the <see cref="IgnoreParserExceptions" /> method is invoked.
+        /// This exception is only thrown if the <see cref="DisableParserException" /> method is invoked.
         /// </exception>
         /// <exception cref="FileNotFoundException">
         /// If the .env file is not found.
@@ -122,7 +122,7 @@ namespace DotEnv.Core
         /// <inheritdoc cref="IEnvParser.AllowConcatDuplicateKeys" />
         IEnvLoader AllowConcatDuplicateKeys(ConcatKeysOptions option = ConcatKeysOptions.End);
 
-        /// <inheritdoc cref="IEnvParser.IgnoreParserExceptions" />
-        IEnvLoader IgnoreParserExceptions();
+        /// <inheritdoc cref="IEnvParser.DisableParserException" />
+        IEnvLoader DisableParserException();
     }
 }
