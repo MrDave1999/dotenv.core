@@ -34,7 +34,7 @@ namespace DotEnv.Core
         {
             get
             {
-                var stringBuilder = new StringBuilder();
+                var stringBuilder = new StringBuilder(Environment.NewLine);
                 foreach(var error in _errors)
                     stringBuilder.Append(error + Environment.NewLine);
                 return stringBuilder.ToString();
