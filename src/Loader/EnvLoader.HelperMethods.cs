@@ -39,9 +39,13 @@ namespace DotEnv.Core
         /// Reads the contents of an .env file and invokes the parser.
         /// </summary>
         /// <param name="envFile">The instance representing the .env file.</param>
-        /// <param name="fullPath">The full path to the .env file.</param>
-        private void ReadAndParse(EnvFile envFile, string fullPath)
+        /// <returns>true if the .env file exists, otherwise false.</returns>
+        private bool ReadAndParse(EnvFile envFile)
         {
+            string fullPath = GetEnvFilePath(envFile.Path);
+            if (fullPath == null)
+                return false;
+
             string source = File.ReadAllText(fullPath, envFile.Encoding);
             _parser.FileName = envFile.Path;
             try
@@ -49,6 +53,8 @@ namespace DotEnv.Core
                 _parser.Parse(source);
             }
             catch (ParserException) { }
+
+            return true;
         }
 
         /// <summary>

@@ -59,14 +59,9 @@ namespace DotEnv.Core
             foreach (EnvFile envFile in _configuration.EnvFiles)
             {
                 SetConfigurationEnvFile(envFile);
-                string fullPath = GetEnvFilePath(envFile.Path);
-                if (fullPath != null)
-                {
-                    ReadAndParse(envFile, fullPath);
-                    continue;
-                }
-                
-                _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
+                bool exists = ReadAndParse(envFile);
+                if (!exists)
+                    _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
             }
 
             _parser.CreateParserException();
@@ -93,14 +88,9 @@ namespace DotEnv.Core
             foreach (EnvFile envFile in _configuration.EnvFiles)
             {
                 SetConfigurationEnvFile(envFile);
-                string fullPath = GetEnvFilePath(envFile.Path);
-                if (fullPath != null)
-                {
-                    ReadAndParse(envFile, fullPath);
-                    continue;
-                }
-                envFile.Exists = false;
-                if (!envFile.Optional)
+                envFile.Exists = ReadAndParse(envFile);
+                // This condition was added in case the client adds a new .env file with the 'AddEnvFile' method.
+                if (!envFile.Exists && !envFile.Optional)
                     _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
             }
 
