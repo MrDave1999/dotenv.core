@@ -12,7 +12,7 @@ namespace DotEnv.Core
         /// Creates and throws an exception of type <see cref="FileNotFoundException" />.
         /// </summary>
         /// <exception cref="FileNotFoundException"></exception>
-        private void CreateFileNotFoundException()
+        private void CreateAndThrowFileNotFoundException()
         {
             if (_validationResult.HasError())
             {
