@@ -45,13 +45,11 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
-        public void Load()
-        {
-            Load(out _);
-        }
+        public IDictionary<string, string> Load()
+            => Load(out _);
 
         /// <inheritdoc />
-        public void Load(out EnvValidationResult result)
+        public IDictionary<string, string> Load(out EnvValidationResult result)
         {
             if(_configuration.EnvFiles.Count == 0)
                 _configuration.EnvFiles.Add(new EnvFile { Path = _configuration.DefaultEnvFileName, Encoding = _configuration.Encoding });
@@ -68,16 +66,15 @@ namespace DotEnv.Core
             CreateAndThrowFileNotFoundException();
 
             result = GetInstanceForOutParams();
+            return _parser.KeyValuePairs;
         }
 
         /// <inheritdoc />
-        public void LoadEnv()
-        {
-            LoadEnv(out _);
-        }
+        public IDictionary<string, string> LoadEnv()
+            => LoadEnv(out _);
 
         /// <inheritdoc />
-        public void LoadEnv(out EnvValidationResult result)
+        public IDictionary<string, string> LoadEnv(out EnvValidationResult result)
         {
             var enviroment = Environment.GetEnvironmentVariable("DOTNET_ENV");
             AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}.local" } : new[] { ".env.development.local", ".env.dev.local" });
@@ -112,6 +109,7 @@ namespace DotEnv.Core
             CreateAndThrowFileNotFoundException();
 
             result = GetInstanceForOutParams();
+            return _parser.KeyValuePairs;
         }
     }
 }
