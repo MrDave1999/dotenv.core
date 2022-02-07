@@ -95,5 +95,12 @@ namespace DotEnv.Core
             configuration.ThrowException = false;
             return this;
         }
+
+        /// <inheritdoc />
+        public IEnvParser AvoidModifyEnvironment()
+        {
+            configuration.ModifyEnvironment = false;
+            return this;
+        }
     }
 }

@@ -140,5 +140,12 @@ namespace DotEnv.Core
             _parser.DisableParserException();
             return this;
         }
+
+        /// <inheritdoc />
+        public IEnvLoader AvoidModifyEnvironment()
+        {
+            _parser.AvoidModifyEnvironment();
+            return this;
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace DotEnv.Core
     {
         /// <param name="result">The result that contains the errors found by the loader.</param>
         /// <inheritdoc cref="LoadEnv()" />
-        void LoadEnv(out EnvValidationResult result);
+        IDictionary<string, string> LoadEnv(out EnvValidationResult result);
 
         /// <summary>
         /// Loads an .env file based on the environment (development, test, staging or production).
@@ -20,11 +20,11 @@ namespace DotEnv.Core
         /// .env.[environment].local, .env.local, .env.[environment], .env
         /// </summary>
         /// <inheritdoc cref="Load()" />
-        void LoadEnv();
+        IDictionary<string, string> LoadEnv();
 
         /// <param name="result">The result that contains the errors found by the loader.</param>
         /// <inheritdoc cref="Load()" />
-        void Load(out EnvValidationResult result);
+        IDictionary<string, string> Load(out EnvValidationResult result);
 
         /// <summary>
         /// Loads one or more .env files. By default, it will search for a file called <c>.env</c>.
@@ -38,7 +38,8 @@ namespace DotEnv.Core
         /// If the .env files are not found.
         /// This exception is only thrown if the <see cref="EnableFileNotFoundException" /> method is invoked.
         /// </exception>
-        void Load();
+        /// <inheritdoc cref="EnvParser.Parse(string)" />
+        IDictionary<string, string> Load();
 
         /// <summary>
         /// Sets the default name of an .env file.
@@ -124,5 +125,8 @@ namespace DotEnv.Core
 
         /// <inheritdoc cref="IEnvParser.DisableParserException" />
         IEnvLoader DisableParserException();
+
+        /// <inheritdoc cref="IEnvParser.AvoidModifyEnvironment" />
+        IEnvLoader AvoidModifyEnvironment();
     }
 }
