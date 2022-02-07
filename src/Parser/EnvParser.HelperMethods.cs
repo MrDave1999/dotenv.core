@@ -14,7 +14,7 @@ namespace DotEnv.Core
         /// <summary>
         /// The maximum number of substrings to be returned by the Split method.
         /// </summary>
-        private const int MaxCount = 2;
+        protected const int MaxCount = 2;
 
         /// <summary>
         /// Checks if the line is a comment.

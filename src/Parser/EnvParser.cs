@@ -25,12 +25,20 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the errors container of the parser.
         /// </summary>
-        internal EnvValidationResult ValidationResult { get; } = new EnvValidationResult();
+        protected readonly EnvValidationResult validationResult = new EnvValidationResult();
+
+        /// <inheritdoc cref="validationResult" />
+        internal EnvValidationResult ValidationResult { get => validationResult; }
+
+        /// <summary>
+        /// Allows access to the name of the file that caused an error.
+        /// </summary>
+        protected string fileName;
 
         /// <summary>
         /// This property is for the loader to pass data to the parser.
         /// </summary>
-        internal string FileName { get; set; }
+        internal string FileName { get => fileName; set => fileName = value; }
 
         /// <inheritdoc />
         public IDictionary<string, string> Parse(string dataSource)
