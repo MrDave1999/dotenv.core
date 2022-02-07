@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static System.Environment;
+using static DotEnv.Core.ExceptionMessages;
 
 namespace DotEnv.Core.Tests.Parser
 {
@@ -219,6 +220,41 @@ namespace DotEnv.Core.Tests.Parser
             Action action = () => new EnvParser().AllowConcatDuplicateKeys((ConcatKeysOptions)option);
 
             Assert.ThrowsException<ArgumentException>(action);
+        }
+
+        [TestMethod]
+        public void Parse_WhenEnvironmentCannotBeModified_ShouldReadTheValuesFromDictionary()
+        {
+            string env = @"
+                AVOID_MOD_1 = Hello
+                AVOID_MOD_1 = World
+                AVOID_MOD_2 = ${AVOID_MOD_1}
+            ";
+
+            var dict = new EnvParser()
+                           .AvoidModifyEnvironment()
+                           .AllowConcatDuplicateKeys()
+                           .Parse(env);
+
+            Assert.AreEqual("HelloWorld", dict["AVOID_MOD_1"]);
+            Assert.AreEqual("HelloWorld", dict["AVOID_MOD_2"]);
+            Assert.IsNull(GetEnvironmentVariable("AVOID_MOD_1"));
+            Assert.IsNull(GetEnvironmentVariable("AVOID_MOD_2"));
+        }
+
+        [TestMethod]
+        public void Parse_WhenKeyDoesNotExistInTheDictionary_ShouldThrowParserException()
+        {
+            var parser = new EnvParser().AvoidModifyEnvironment();
+            string env = @"
+                AVOID_MOD_1 = 1
+                AVOID_MOD_1 = ${VARIABLE_NOT_FOUND}
+            ";
+
+            Action action = () => parser.Parse(env);
+
+            var ex = Assert.ThrowsException<ParserException>(action);
+            StringAssert.Contains(ex.Message, KeyNotFoundMessage);
         }
     }
 }
