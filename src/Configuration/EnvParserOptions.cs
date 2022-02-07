@@ -58,5 +58,10 @@ namespace DotEnv.Core
         /// A value indicating whether the parser should throw an exception when it encounters one or more errors. Its default value is <c>true</c>.
         /// </summary>
         public bool ThrowException { get; set; } = true;
+
+        /// <summary>
+        /// A value indicating whether the parser can modify the environment of the current process. Its default value is <c>true</c>.
+        /// </summary>
+        public bool ModifyEnvironment { get; set; } = true;
     }
 }

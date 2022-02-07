@@ -15,6 +15,14 @@ namespace DotEnv.Core
         protected readonly EnvParserOptions configuration = new EnvParserOptions();
 
         /// <summary>
+        /// Allows access to the key dictionary.
+        /// </summary>
+        protected IDictionary<string, string> keyValuePairs;
+
+        /// <inheritdoc cref="keyValuePairs" />
+        internal IDictionary<string, string> KeyValuePairs { get => keyValuePairs; }
+
+        /// <summary>
         /// Allows access to the errors container of the parser.
         /// </summary>
         internal EnvValidationResult ValidationResult { get; } = new EnvValidationResult();
@@ -25,15 +33,13 @@ namespace DotEnv.Core
         internal string FileName { get; set; }
 
         /// <inheritdoc />
-        public void Parse(string dataSource)
-        {
-            Parse(dataSource, out _);
-        }
+        public IDictionary<string, string> Parse(string dataSource)
+            => Parse(dataSource, out _);
 
         /// <inheritdoc />
         // This is the template method and defines the skeleton of the algorithm.
         // See https://en.wikipedia.org/wiki/Template_method_pattern
-        public void Parse(string dataSource, out EnvValidationResult result)
+        public IDictionary<string, string> Parse(string dataSource, out EnvValidationResult result)
         {
             result = ValidationResult;
 
@@ -41,9 +47,11 @@ namespace DotEnv.Core
             {
                 ValidationResult.Add(errorMsg: FormatErrorMessage(DataSourceIsEmptyOrWhitespaceMessage, envFileName: FileName));
                 CreateAndThrowParserException();
-                return;
+                return keyValuePairs;
             }
-            
+
+            CreateDictionary();
+
             using(var lines = new StringReader(dataSource))
             {
                 int i = 1;
@@ -61,21 +69,28 @@ namespace DotEnv.Core
                         continue;
                     }
 
-                    string key = ExtractKey(line);
+                    var key = ExtractKey(line);
                     if (string.IsNullOrEmpty(key))
                     {
                         ValidationResult.Add(errorMsg: FormatErrorMessage(KeyIsAnEmptyStringMessage, lineNumber: i, envFileName: FileName));
                         continue;
                     }
 
-                    string value = ExtractValue(line);
+                    var value = ExtractValue(line);
                     value = ExpandEnvironmentVariables(value, lineNumber: i);
 
-                    SetEnvironmentVariable(key, value);
+                    var retrievedValue = GetEnvironmentVariable(key);
+                    if (retrievedValue == null)
+                        SetEnvironmentVariable(key, value);
+                    else if (configuration.ConcatDuplicateKeys != ConcatKeysOptions.None)
+                        SetEnvironmentVariable(key, ConcatValues(retrievedValue, value));
+                    else if (configuration.OverwriteExistingVars)
+                        SetEnvironmentVariable(key, value);
                 }
             }
 
             CreateAndThrowParserException();
+            return keyValuePairs;
         }
 
         /// <summary>

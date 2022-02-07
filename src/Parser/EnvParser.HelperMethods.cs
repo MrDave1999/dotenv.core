@@ -62,23 +62,54 @@ namespace DotEnv.Core
             => line.Split(configuration.DelimiterKeyValuePair, MaxCount).Length != 2;
 
         /// <summary>
-        /// Create or update an environment variable.
+        /// Creates a dictionary in case the environment cannot be modified.
         /// </summary>
-        /// <remarks>The environment variable will only be updated if the <see cref="EnvParserOptions.OverwriteExistingVars" /> property is set to <c>true</c> 
-        /// or if the <see cref="EnvParserOptions.ConcatDuplicateKeys" /> property is set to <see cref="ConcatKeysOptions.Start" /> or <see cref="ConcatKeysOptions.End" />.
+        protected virtual void CreateDictionary()
+        {
+            if (!configuration.ModifyEnvironment && keyValuePairs == null)
+                keyValuePairs = new Dictionary<string, string>();
+        }
+
+        /// <summary>
+        /// Sets a key as an environment variable stored in the current process. 
+        /// </summary>
+        /// <remarks>
+        /// In case the environment cannot be modified, the method will add the key in a dictionary.
         /// </remarks>
         /// <param name="key">The key of the value to set.</param>
         /// <param name="value">The value to set.</param>
         protected virtual void SetEnvironmentVariable(string key, string value)
         {
-            var retrievedValue = Environment.GetEnvironmentVariable(key);
-            if (retrievedValue == null)
-                Environment.SetEnvironmentVariable(key, value);
-            else if (configuration.ConcatDuplicateKeys != ConcatKeysOptions.None)
-                Environment.SetEnvironmentVariable(key, ConcatValues(retrievedValue, value));
-            else if (configuration.OverwriteExistingVars)
+            if (!configuration.ModifyEnvironment)
+                keyValuePairs[key] = value;
+            else 
                 Environment.SetEnvironmentVariable(key, value);
         }
+
+        /// <summary>
+        /// Gets the value of an environment variable from the current process.
+        /// </summary>
+        /// <remarks>
+        /// In the case that the environment is not accessible, the method will get the value of the key from a dictionary.
+        /// </remarks>
+        /// <param name="key">The key to get.</param>
+        /// <returns>The value of the environment variable or <c>null</c> if the variable is not found.</returns>
+        protected virtual string GetEnvironmentVariable(string key)
+        {
+            if (!configuration.ModifyEnvironment)
+            {
+                keyValuePairs.TryGetValue(key, out string value);
+                return value;
+            }
+            return Environment.GetEnvironmentVariable(key);
+        }
+
+        /// <summary>
+        /// Gets an error message in case the variable is not found in the environment or dictionary.
+        /// </summary>
+        /// <returns>A message that describes the error.</returns>
+        protected virtual string GetVariableNotFoundMessage()
+            => configuration.ModifyEnvironment ? VariableNotFoundMessage : KeyNotFoundMessage;
 
         /// <summary>
         /// Concatenates a value with the current value of a variable.
@@ -108,10 +139,10 @@ namespace DotEnv.Core
                     return match.Value;
                 }
 
-                var retrievedValue = Environment.GetEnvironmentVariable(variable);
+                var retrievedValue = GetEnvironmentVariable(variable);
                 if (retrievedValue == null)
                 {
-                    ValidationResult.Add(errorMsg: FormatErrorMessage(VariableNotFoundMessage, actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
+                    ValidationResult.Add(errorMsg: FormatErrorMessage(GetVariableNotFoundMessage(), actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
                     return match.Value;
                 }
 

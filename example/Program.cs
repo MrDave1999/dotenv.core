@@ -57,6 +57,14 @@ namespace DotEnv.Core.Example
 
 			Console.WriteLine($"API_KEY LENGTH={reader["API_KEY"]}");
 			Console.WriteLine(result.ErrorMessages);
+
+			var dict = new EnvLoader()
+						.AvoidModifyEnvironment()
+						.AddEnvFiles("./", "./files/", "files/sqlite", "./files/pgsql/.env.local")
+						.Load();
+			Console.WriteLine("\n\n\nDictionary:");
+			foreach (var pair in dict)
+				Console.WriteLine($"{pair.Key}, {pair.Value}");
 		}
 	}
 }
