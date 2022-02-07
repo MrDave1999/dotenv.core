@@ -242,5 +242,16 @@ namespace DotEnv.Core.Tests.Parser
             var ex = Assert.ThrowsException<ParserException>(action);
             StringAssert.Contains(ex.Message, VariableIsAnEmptyStringMessage);
         }
+
+        [TestMethod]
+        public void Parse_WhenEnvironmentCanBeModified_ShouldReturnsNull()
+        {
+            var parser = new EnvParser();
+            string env = "ENV_MODIFIED = 1";
+
+            var actual = parser.Parse(env);
+
+            Assert.AreEqual(null, actual);
+        }
     }
 }
