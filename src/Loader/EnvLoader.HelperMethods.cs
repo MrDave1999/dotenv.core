@@ -24,7 +24,7 @@ namespace DotEnv.Core
         }
 
         /// <summary>
-        /// Combines the container of the loader with of the parser.
+        /// Combines the container of the loader with the parser.
         /// </summary>
         private void CombineContainers()
         {
@@ -36,7 +36,7 @@ namespace DotEnv.Core
         }
 
         /// <summary>
-        /// Reads the contents of an .env file and invokes the parser.
+        /// Reads the contents of a .env file and invokes the parser.
         /// </summary>
         /// <param name="envFile">The instance representing the .env file.</param>
         /// <returns>true if the .env file exists, otherwise false.</returns>
@@ -58,7 +58,7 @@ namespace DotEnv.Core
         }
 
         /// <summary>
-        /// Sets the configuration of an .env file.
+        /// Sets the configuration of a .env file.
         /// </summary>
         /// <param name="envFile">The instance representing the .env file.</param>
         private void SetConfigurationEnvFile(EnvFile envFile)

@@ -35,7 +35,7 @@ namespace DotEnv.Core
         public bool TrimStartComments { get; set; } = true;
 
         /// <summary>
-        /// A value indicating whether to overwrite the value of an existing environment variable. Its default value is <c>false</c>.
+        /// A value indicating whether the parser should overwrite the value of an existing variable. Its default value is <c>false</c>.
         /// </summary>
         public bool OverwriteExistingVars { get; set; }
 

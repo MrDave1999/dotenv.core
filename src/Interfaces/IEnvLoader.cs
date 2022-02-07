@@ -10,7 +10,7 @@ namespace DotEnv.Core
     /// </summary>
     public interface IEnvLoader
     {
-        /// <param name="result">The result that contains the errors found by the loader.</param>
+        /// <param name="result">The result contains the errors found by the loader.</param>
         /// <inheritdoc cref="LoadEnv()" />
         IDictionary<string, string> LoadEnv(out EnvValidationResult result);
 
@@ -22,7 +22,7 @@ namespace DotEnv.Core
         /// <inheritdoc cref="Load()" />
         IDictionary<string, string> LoadEnv();
 
-        /// <param name="result">The result that contains the errors found by the loader.</param>
+        /// <param name="result">The result contains the errors found by the loader.</param>
         /// <inheritdoc cref="Load()" />
         IDictionary<string, string> Load(out EnvValidationResult result);
 
