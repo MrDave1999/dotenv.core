@@ -90,6 +90,13 @@ namespace DotEnv.Core
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader EnableFileNotFoundException();
 
+        /// <summary>
+        /// Sets the name of the environment.
+        /// </summary>
+        /// <param name="envName">The name of the environment.</param>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvLoader SetEnvironmentName(string envName);
+
         /// <inheritdoc cref="IEnvParser.DisableTrimStartValues" />
         IEnvLoader DisableTrimStartValues();
 
