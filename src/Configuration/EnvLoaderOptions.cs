@@ -60,5 +60,10 @@ namespace DotEnv.Core
         /// A value indicating whether <see cref="FileNotFoundException" /> may be thrown when the .env file is not found. Its default value is <c>false</c>.
         /// </summary>
         public bool ThrowFileNotFoundException { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name of the environment.
+        /// </summary>
+        public string EnvironmentName { get; set; }
     }
 }
