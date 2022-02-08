@@ -10,10 +10,6 @@ namespace DotEnv.Core
     public enum ConcatKeysOptions
     {
         /// <summary>
-        /// This option is only used as the default value of the <see cref="EnvParserOptions.ConcatDuplicateKeys" /> property.
-        /// </summary>
-        None,
-        /// <summary>
         /// This option will tell the parser to concatenate at the beginning of the value of a duplicate key.
         /// </summary>
         Start,
