@@ -208,5 +208,21 @@ namespace DotEnv.Core.Tests.Loader
             Assert.ThrowsException<ParserException>(action);
             SetEnvironmentVariable("DOTNET_ENV", null);
         }
+
+        [TestMethod]
+        public void LoadEnv_WhenSetsTheEnvironmentName_ShouldBeAbleToReadVariables()
+        {
+            var loader = new EnvLoader()
+                            .AvoidModifyEnvironment()
+                            .SetEnvironmentName("test")
+                            .SetBasePath("Loader/env_files/environment/test");
+
+            var dict = loader.LoadEnv();
+
+            Assert.IsNotNull(dict["TEST_ENV"]);
+            Assert.IsNotNull(dict["TEST_ENV_TEST"]);
+            Assert.IsNotNull(dict["TEST_ENV_TEST_LOCAL"]);
+            Assert.IsNotNull(dict["TEST_ENV_LOCAL"]);
+        }
     }
 }

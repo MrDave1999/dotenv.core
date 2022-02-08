@@ -76,7 +76,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IDictionary<string, string> LoadEnv(out EnvValidationResult result)
         {
-            var enviroment = Environment.GetEnvironmentVariable("DOTNET_ENV");
+            var enviroment = Environment.GetEnvironmentVariable("DOTNET_ENV") ?? _configuration.EnvironmentName;
             AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}.local" } : new[] { ".env.development.local", ".env.dev.local" });
             AddOptionalEnvFiles(".env.local");
             AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}" } : new[] { ".env.development", ".env.dev" });

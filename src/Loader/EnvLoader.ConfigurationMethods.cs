@@ -58,6 +58,13 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
+        public IEnvLoader SetEnvironmentName(string envName)
+        {
+            _configuration.EnvironmentName = envName;
+            return this;
+        }
+
+        /// <inheritdoc />
         public IEnvLoader DisableTrimStartValues()
         {
             _parser.DisableTrimStartValues();
