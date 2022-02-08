@@ -90,7 +90,7 @@ namespace DotEnv.Core
                     var retrievedValue = GetEnvironmentVariable(key);
                     if (retrievedValue == null)
                         SetEnvironmentVariable(key, value);
-                    else if (configuration.ConcatDuplicateKeys != ConcatKeysOptions.None)
+                    else if (configuration.ConcatDuplicateKeys != null)
                         SetEnvironmentVariable(key, ConcatValues(retrievedValue, value));
                     else if (configuration.OverwriteExistingVars)
                         SetEnvironmentVariable(key, value);
