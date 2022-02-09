@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static DotEnv.Core.ExceptionMessages;
 
 namespace DotEnv.Core
 {
@@ -60,6 +61,12 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvLoader SetEnvironmentName(string envName)
         {
+            if (envName == null)
+                throw new ArgumentNullException(nameof(envName));
+
+            if (string.IsNullOrWhiteSpace(envName))
+                throw new ArgumentException(ArgumentIsNullOrWhiteSpaceMessage, nameof(envName));
+
             _configuration.EnvironmentName = envName;
             return this;
         }

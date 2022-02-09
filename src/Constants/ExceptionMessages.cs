@@ -19,5 +19,6 @@ namespace DotEnv.Core
         public const string FileNotFoundMessage = "The .env file could not be found.";
         public const string FileNotPresentLoadEnvMessage = "Any of these .env files must be present in the root directory of your project";
         public const string OptionInvalidMessage = "The option is invalid.";
+        public const string ArgumentIsNullOrWhiteSpaceMessage = "The argument cannot be an empty string or consists only of white-space characters.";
     }
 }
