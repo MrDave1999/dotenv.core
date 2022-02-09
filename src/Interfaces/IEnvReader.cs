@@ -10,6 +10,13 @@ namespace DotEnv.Core
     public interface IEnvReader : IEnumerable<KeyValuePair<string, string>>
     {
         /// <summary>
+        /// Checks if the variable exists in the environment of the current process.
+        /// </summary>
+        /// <param name="variable">The variable to validate.</param>
+        /// <returns><c>true</c> if the variable exists in the current process, otherwise <c>false</c>.</returns>
+        bool Exists(string variable);
+
+        /// <summary>
         /// Gets the value of an environment variable in <c>string</c> format.
         /// </summary>
         /// <param name="variable">The variable name of the value to get.</param>
