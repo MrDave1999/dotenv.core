@@ -224,5 +224,17 @@ namespace DotEnv.Core.Tests.Loader
             Assert.IsNotNull(dict["TEST_ENV_TEST_LOCAL"]);
             Assert.IsNotNull(dict["TEST_ENV_LOCAL"]);
         }
+
+        [TestMethod]
+        public void SetEnvironmentName_WhenEnvironmentNameIsAnEmptyStringOrWhiteSpace_ShouldThrowArgumentException()
+        {
+            var loader = new EnvLoader();
+            Action action;
+
+            action = () => loader.SetEnvironmentName("");
+            Assert.ThrowsException<ArgumentException>(action);
+            action = () => loader.SetEnvironmentName("   ");
+            Assert.ThrowsException<ArgumentException>(action);
+        }
     }
 }
