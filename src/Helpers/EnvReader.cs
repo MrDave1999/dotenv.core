@@ -18,6 +18,13 @@ namespace DotEnv.Core
         /// <remarks>This method is thread-safe.</remarks>
         public static EnvReader Instance => s_instance;
 
+        /// <inheritdoc />
+        public bool Exists(string variable)
+        {
+            var variableValue = GetEnvironmentVariable(variable);
+            return variableValue != null;
+        }
+
         /// <summary>
         /// Returns an enumerator that iterates through the environment variables.
         /// </summary>
