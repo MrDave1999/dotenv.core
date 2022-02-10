@@ -248,10 +248,8 @@ namespace DotEnv.Core.Tests.Parser
         {
             var parser = new EnvParser();
             string env = "ENV_MODIFIED = 1";
-
-            var actual = parser.Parse(env);
-
-            Assert.AreEqual(null, actual);
+            
+            Assert.AreEqual(expected: null, actual: parser.Parse(env));
         }
     }
 }
