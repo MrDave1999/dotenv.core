@@ -19,7 +19,7 @@ namespace DotEnv.Core.Tests.Parser
                 ERRORS_ARE_FOUND_2 = ${} World! Hello ${   }
             ";
 
-            Action action = () => parser.Parse(env);
+            void action() => parser.Parse(env);
 
             Assert.ThrowsException<ParserException>(action);
         }
@@ -31,7 +31,7 @@ namespace DotEnv.Core.Tests.Parser
         {
             var parser = new EnvParser();
 
-            Action action = () => parser.Parse(input);
+            void action() => parser.Parse(input);
 
             var ex = Assert.ThrowsException<ParserException>(action);
             StringAssert.Contains(ex.Message, DataSourceIsEmptyOrWhitespaceMessage);
@@ -46,7 +46,7 @@ namespace DotEnv.Core.Tests.Parser
             ";
             var parser = new EnvParser();
 
-            Action action = () => parser.Parse(env);
+            void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
             StringAssert.Contains(ex.Message, KeyIsAnEmptyStringMessage);
@@ -69,7 +69,7 @@ namespace DotEnv.Core.Tests.Parser
         {
             var parser = new EnvParser();
 
-            Action action = () => parser.Parse(input);
+            void action() => parser.Parse(input);
 
             var ex = Assert.ThrowsException<ParserException>(action);
             StringAssert.Contains(ex.Message, LineHasNoKeyValuePairMessage);
@@ -124,10 +124,10 @@ namespace DotEnv.Core.Tests.Parser
 
             parser.Parse(env);
 
-            Assert.AreEqual("VAL1", GetEnvironmentVariable("READLINE_WITH_VALUE_1"));
-            Assert.AreEqual("VAL2", GetEnvironmentVariable("READLINE_WITH_VALUE_2"));
-            Assert.AreEqual("VAL3", GetEnvironmentVariable("READLINE_WITH_VALUE_3"));
-            Assert.AreEqual("server=localhost;user=root;password=1234;", GetEnvironmentVariable("READLINE_WITH_VALUE_4"));
+            Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("READLINE_WITH_VALUE_1"));
+            Assert.AreEqual(expected: "VAL2", actual: GetEnvironmentVariable("READLINE_WITH_VALUE_2"));
+            Assert.AreEqual(expected: "VAL3", actual: GetEnvironmentVariable("READLINE_WITH_VALUE_3"));
+            Assert.AreEqual(expected: "server=localhost;user=root;password=1234;", actual: GetEnvironmentVariable("READLINE_WITH_VALUE_4"));
         }
 
         [TestMethod]
@@ -142,9 +142,9 @@ namespace DotEnv.Core.Tests.Parser
 
             parser.Parse(env);
 
-            Assert.AreEqual(" ", GetEnvironmentVariable("VALUE_EMPTY_STRING_1"));
-            Assert.AreEqual(" ", GetEnvironmentVariable("VALUE_EMPTY_STRING_2"));
-            Assert.AreEqual(" ", GetEnvironmentVariable("VALUE_EMPTY_STRING_3"));
+            Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("VALUE_EMPTY_STRING_1"));
+            Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("VALUE_EMPTY_STRING_2"));
+            Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("VALUE_EMPTY_STRING_3"));
         }
 
         [TestMethod]
@@ -173,8 +173,8 @@ namespace DotEnv.Core.Tests.Parser
 
             parser.Parse(env);
 
-            Assert.AreEqual("VAL1", GetEnvironmentVariable("VALUE_HAS_WHITESPACES_1"));
-            Assert.AreEqual("VAL2", GetEnvironmentVariable("VALUE_HAS_WHITESPACES_2"));
+            Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("VALUE_HAS_WHITESPACES_1"));
+            Assert.AreEqual(expected: "VAL2", actual: GetEnvironmentVariable("VALUE_HAS_WHITESPACES_2"));
         }
 
         [TestMethod]
@@ -190,8 +190,8 @@ namespace DotEnv.Core.Tests.Parser
 
             parser.Parse(env);
 
-            Assert.AreEqual("1", GetEnvironmentVariable("KEY_EXISTS_1"));
-            Assert.AreEqual("2", GetEnvironmentVariable("KEY_EXISTS_2"));
+            Assert.AreEqual(expected: "1", actual: GetEnvironmentVariable("KEY_EXISTS_1"));
+            Assert.AreEqual(expected: "2", actual: GetEnvironmentVariable("KEY_EXISTS_2"));
         }
 
         [TestMethod]
@@ -211,10 +211,10 @@ namespace DotEnv.Core.Tests.Parser
 
             parser.Parse(env);
 
-            Assert.AreEqual("server=localhost;user=root;password=1234;", GetEnvironmentVariable("CS_MYSQL_EXPAND"));
-            Assert.AreEqual("server=localhost;user=root;password=1234;", GetEnvironmentVariable("CS_SQL_EXPAND"));
-            Assert.AreEqual("${TEST asdasd", GetEnvironmentVariable("EXPAND_2"));
-            Assert.AreEqual("{TEST}$ $TEST {}", GetEnvironmentVariable("EXPAND_3"));
+            Assert.AreEqual(expected: "server=localhost;user=root;password=1234;", actual: GetEnvironmentVariable("CS_MYSQL_EXPAND"));
+            Assert.AreEqual(expected: "server=localhost;user=root;password=1234;", actual: GetEnvironmentVariable("CS_SQL_EXPAND"));
+            Assert.AreEqual(expected: "${TEST asdasd", actual: GetEnvironmentVariable("EXPAND_2"));
+            Assert.AreEqual(expected: "{TEST}$ $TEST {}", actual: GetEnvironmentVariable("EXPAND_3"));
         }
 
         [TestMethod]
@@ -224,7 +224,7 @@ namespace DotEnv.Core.Tests.Parser
         {
             var parser = new EnvParser();
 
-            Action action = () => parser.Parse(env);
+            void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
             StringAssert.Contains(ex.Message, VariableNotFoundMessage);
@@ -237,7 +237,7 @@ namespace DotEnv.Core.Tests.Parser
         {
             var parser = new EnvParser();
 
-            Action action = () => parser.Parse(env);
+            void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
             StringAssert.Contains(ex.Message, VariableIsAnEmptyStringMessage);
