@@ -39,8 +39,8 @@ namespace DotEnv.Core.Tests.Parser
             parser.Parse(env, out result);
 
             msg = result.ErrorMessages;
-            Assert.AreEqual(result.HasError(), true);
-            Assert.AreEqual(12, result.Count);
+            Assert.AreEqual(expected: true, actual: result.HasError());
+            Assert.AreEqual(expected: 12, actual: result.Count);
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is an error, Line: 1)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2)");
