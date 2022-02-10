@@ -19,7 +19,7 @@ namespace DotEnv.Core.Tests.Loader
                 .AddEnvFile(".env.validation.result3")
                 .AddEnvFile(".env.validation.result4");
 
-            Action action = () => loader.Load();
+            void action() => loader.Load();
 
             Assert.ThrowsException<ParserException>(action);
         }
@@ -31,8 +31,8 @@ namespace DotEnv.Core.Tests.Loader
 
             loader.Load();
 
-            Assert.AreEqual("VAL1", GetEnvironmentVariable("CONFIG_DEFAULT_1"));
-            Assert.AreEqual("VAL2", GetEnvironmentVariable("CONFIG_DEFAULT_2"));
+            Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("CONFIG_DEFAULT_1"));
+            Assert.AreEqual(expected: "VAL2", actual: GetEnvironmentVariable("CONFIG_DEFAULT_2"));
         }
 
         [TestMethod]
@@ -49,8 +49,8 @@ namespace DotEnv.Core.Tests.Loader
                 .AddEnvFile(".env.custom.configuration")
                 .Load();
 
-            Assert.AreEqual(" VAL1 ", GetEnvironmentVariable(" CONFIG_CUSTOM_1 "));
-            Assert.AreEqual(" VAL2 ", GetEnvironmentVariable(" CONFIG_CUSTOM_2 "));
+            Assert.AreEqual(expected: " VAL1 ", actual: GetEnvironmentVariable(" CONFIG_CUSTOM_1 "));
+            Assert.AreEqual(expected: " VAL2 ", actual: GetEnvironmentVariable(" CONFIG_CUSTOM_2 "));
         }
 
         [TestMethod]
@@ -95,7 +95,7 @@ namespace DotEnv.Core.Tests.Loader
                 .SetDefaultEnvFileName(".env.local")
                 .Load();
 
-            Assert.AreEqual("VAL1", GetEnvironmentVariable("CURRENT_DIRECTORY"));
+            Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("CURRENT_DIRECTORY"));
         }
 
         [TestMethod]
@@ -108,7 +108,7 @@ namespace DotEnv.Core.Tests.Loader
                 .AddEnvFile(".env.absolute")
                 .Load();
 
-            Assert.AreEqual("VAL1", GetEnvironmentVariable("PATH_ABSOLUTE"));
+            Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("PATH_ABSOLUTE"));
         }
 
         [TestMethod]
@@ -121,25 +121,17 @@ namespace DotEnv.Core.Tests.Loader
                 .AddEnvFile(".env.relative")
                 .Load();
 
-            Assert.AreEqual("VAL1", GetEnvironmentVariable("PATH_RELATIVE"));
+            Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("PATH_RELATIVE"));
         }
 
         [TestMethod]
         public void Load_WhenEnvFileNotFound_ShouldThrowFileNotFoundException()
         {
-            Action action = () =>
-            {
-                new EnvLoader()
-                 .AddEnvFiles(
-                        ".env.not.found",
-                        ".env.not.found3", 
-                        ".env.not.found4", 
-                        ".env.not.found5", 
-                        ".env.not.found6"
-                    )
-                 .EnableFileNotFoundException()
-                 .Load();
-            };
+            var loader = new EnvLoader()
+                            .AddEnvFiles(".env.not.found", ".env.not.found3", ".env.not.found4", ".env.not.found5", ".env.not.found6")
+                            .EnableFileNotFoundException();
+
+            void action() => loader.Load();
 
             Assert.ThrowsException<FileNotFoundException>(action);
         }
@@ -147,15 +139,13 @@ namespace DotEnv.Core.Tests.Loader
         [TestMethod]
         public void LoadEnv_WhenEnvFileNotFound_ShouldThrowFileNotFoundException()
         {
-            Action action = () =>
-            {
-                new EnvLoader()
-                 .SetBasePath("environment/files")
-                 .SetDefaultEnvFileName(".env.example")
-                 .AddEnvFiles(".env.example1", "foo/")
-                 .EnableFileNotFoundException()
-                 .LoadEnv();
-            };
+            var loader = new EnvLoader()
+                            .SetBasePath("environment/files")
+                            .SetDefaultEnvFileName(".env.example")
+                            .AddEnvFiles(".env.example1", "foo/")
+                            .EnableFileNotFoundException();
+
+            void action() => loader.LoadEnv();
 
             Assert.ThrowsException<FileNotFoundException>(action);
         }
@@ -203,7 +193,7 @@ namespace DotEnv.Core.Tests.Loader
             var loader = new EnvLoader().SetBasePath("Loader/env_files/environment/production");
             SetEnvironmentVariable("DOTNET_ENV", "production");
 
-            Action action = () => loader.LoadEnv();
+            void action() => loader.LoadEnv();
 
             Assert.ThrowsException<ParserException>(action);
             SetEnvironmentVariable("DOTNET_ENV", null);
