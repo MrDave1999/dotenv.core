@@ -17,7 +17,7 @@ namespace DotEnv.Core.Tests.Parser
                 .DisableTrimStartValues()
                 .Parse(env);
 
-            Assert.AreEqual("   1", GetEnvironmentVariable("TRIM_START_VALUES"));
+            Assert.AreEqual(expected: "   1", actual: GetEnvironmentVariable("TRIM_START_VALUES"));
         }
 
         [TestMethod]
@@ -29,7 +29,7 @@ namespace DotEnv.Core.Tests.Parser
                 .DisableTrimEndValues()
                 .Parse(env);
 
-            Assert.AreEqual("1   ", GetEnvironmentVariable("TRIM_END_VALUES"));
+            Assert.AreEqual(expected: "1   ", actual: GetEnvironmentVariable("TRIM_END_VALUES"));
         }
 
         [TestMethod]
@@ -41,7 +41,7 @@ namespace DotEnv.Core.Tests.Parser
                 .DisableTrimValues()
                 .Parse(env);
 
-            Assert.AreEqual("   1   ", GetEnvironmentVariable("TRIM_VALUES"));
+            Assert.AreEqual(expected: "   1   ", actual: GetEnvironmentVariable("TRIM_VALUES"));
         }
 
         [TestMethod]
@@ -53,7 +53,7 @@ namespace DotEnv.Core.Tests.Parser
                 .DisableTrimStartKeys()
                 .Parse(env);
 
-            Assert.AreEqual("1", GetEnvironmentVariable("   TRIM_START_KEYS"));
+            Assert.AreEqual(expected: "1", actual: GetEnvironmentVariable("   TRIM_START_KEYS"));
         }
 
         [TestMethod]
@@ -65,7 +65,7 @@ namespace DotEnv.Core.Tests.Parser
                 .DisableTrimEndKeys()
                 .Parse(env);
 
-            Assert.AreEqual("1", GetEnvironmentVariable("TRIM_END_KEYS   "));
+            Assert.AreEqual(expected: "1", actual: GetEnvironmentVariable("TRIM_END_KEYS   "));
         }
 
         [TestMethod]
@@ -77,23 +77,19 @@ namespace DotEnv.Core.Tests.Parser
                 .DisableTrimKeys()
                 .Parse(env);
 
-            Assert.AreEqual("1", GetEnvironmentVariable("   TRIM_KEYS   "));
+            Assert.AreEqual(expected: "1", actual: GetEnvironmentVariable("   TRIM_KEYS   "));
         }
 
         [TestMethod]
         public void Parse_WhenDisabledTrimStartComments_ShouldNotIgnoreLeadingWhitepaces()
         {
             string env = "   #comment1";
+            var parser = new EnvParser().DisableTrimStartComments();
 
-            Action action = () =>
-            {
-                new EnvParser()
-                    .DisableTrimStartComments()
-                    .Parse(env);
-            };
+            void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, ExceptionMessages.LineHasNoKeyValuePairMessage);
+            StringAssert.Contains(ex.Message, LineHasNoKeyValuePairMessage);
         }
 
         [TestMethod]
@@ -110,8 +106,8 @@ namespace DotEnv.Core.Tests.Parser
                 .AllowOverwriteExistingVars()
                 .Parse(env);
 
-            Assert.AreEqual("VAL1", GetEnvironmentVariable("ALLOW_OVERWRITE_1"));
-            Assert.AreEqual("VAL2", GetEnvironmentVariable("ALLOW_OVERWRITE_2"));
+            Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("ALLOW_OVERWRITE_1"));
+            Assert.AreEqual(expected: "VAL2", actual: GetEnvironmentVariable("ALLOW_OVERWRITE_2"));
         }
 
         [TestMethod]
@@ -142,8 +138,8 @@ namespace DotEnv.Core.Tests.Parser
                 .SetDelimiterKeyValuePair(':')
                 .Parse(env);
 
-            Assert.AreEqual("VAL1", GetEnvironmentVariable("DELIMITER_KEYVALUE_1"));
-            Assert.AreEqual("VAL2", GetEnvironmentVariable("DELIMITER_KEYVALUE_2"));
+            Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("DELIMITER_KEYVALUE_1"));
+            Assert.AreEqual(expected: "VAL2", actual: GetEnvironmentVariable("DELIMITER_KEYVALUE_2"));
         }
 
         [TestMethod]
@@ -164,10 +160,10 @@ namespace DotEnv.Core.Tests.Parser
                 .DisableParserException()
                 .Parse(env);
 
-            Assert.AreEqual("VAL1 ${IGNORE_EXCEPTION_2} ...", GetEnvironmentVariable("IGNORE_EXCEPTION_1"));
-            Assert.AreEqual("VAL2 ${IGNORE_EXCEPTION_2} ...", GetEnvironmentVariable("IGNORE_EXCEPTION_2"));
-            Assert.AreEqual("ASDASD ${} ${   }", GetEnvironmentVariable("IGNORE_EXCEPTION_3"));
-            Assert.AreEqual("ASDASD ${   } ASDASD ${}", GetEnvironmentVariable("IGNORE_EXCEPTION_4"));
+            Assert.AreEqual(expected: "VAL1 ${IGNORE_EXCEPTION_2} ...", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_1"));
+            Assert.AreEqual(expected: "VAL2 ${IGNORE_EXCEPTION_2} ...", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_2"));
+            Assert.AreEqual(expected: "ASDASD ${} ${   }", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_3"));
+            Assert.AreEqual(expected: "ASDASD ${   } ASDASD ${}", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_4"));
         }
 
         [TestMethod]
@@ -186,8 +182,8 @@ namespace DotEnv.Core.Tests.Parser
                 .AllowConcatDuplicateKeys()
                 .Parse(env);
 
-            Assert.AreEqual("HelloWorld!!", GetEnvironmentVariable("CONCAT_END1"));
-            Assert.AreEqual("21", GetEnvironmentVariable("CONCAT_END2"));
+            Assert.AreEqual(expected: "HelloWorld!!", actual: GetEnvironmentVariable("CONCAT_END1"));
+            Assert.AreEqual(expected: "21", actual: GetEnvironmentVariable("CONCAT_END2"));
         }
 
 
@@ -207,8 +203,8 @@ namespace DotEnv.Core.Tests.Parser
                 .AllowConcatDuplicateKeys(ConcatKeysOptions.Start)
                 .Parse(env);
 
-            Assert.AreEqual("HelloWorld!!", GetEnvironmentVariable("CONCAT_START1"));
-            Assert.AreEqual("12", GetEnvironmentVariable("CONCAT_START2"));
+            Assert.AreEqual(expected: "HelloWorld!!", actual: GetEnvironmentVariable("CONCAT_START1"));
+            Assert.AreEqual(expected: "12", actual: GetEnvironmentVariable("CONCAT_START2"));
         }
 
         [TestMethod]
@@ -217,7 +213,9 @@ namespace DotEnv.Core.Tests.Parser
         [DataRow(4)]
         public void AllowConcatDuplicateKeys_WhenOptionIsInvalid_ShouldThrowArgumentException(int option)
         {
-            Action action = () => new EnvParser().AllowConcatDuplicateKeys((ConcatKeysOptions)option);
+            var parser = new EnvParser();
+
+            void action() => parser.AllowConcatDuplicateKeys((ConcatKeysOptions)option);
 
             Assert.ThrowsException<ArgumentException>(action);
         }
@@ -236,8 +234,8 @@ namespace DotEnv.Core.Tests.Parser
                            .AllowConcatDuplicateKeys()
                            .Parse(env);
 
-            Assert.AreEqual("HelloWorld", dict["AVOID_MOD_1"]);
-            Assert.AreEqual("HelloWorld", dict["AVOID_MOD_2"]);
+            Assert.AreEqual(expected: "HelloWorld", actual: dict["AVOID_MOD_1"]);
+            Assert.AreEqual(expected: "HelloWorld", actual: dict["AVOID_MOD_2"]);
             Assert.IsNull(GetEnvironmentVariable("AVOID_MOD_1"));
             Assert.IsNull(GetEnvironmentVariable("AVOID_MOD_2"));
         }
@@ -251,7 +249,7 @@ namespace DotEnv.Core.Tests.Parser
                 AVOID_MOD_1 = ${VARIABLE_NOT_FOUND}
             ";
 
-            Action action = () => parser.Parse(env);
+            void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
             StringAssert.Contains(ex.Message, KeyNotFoundMessage);
