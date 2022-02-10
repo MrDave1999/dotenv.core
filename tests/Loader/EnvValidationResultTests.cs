@@ -28,8 +28,8 @@ namespace DotEnv.Core.Tests.Loader
                 .Load(out result);
 
             msg = result.ErrorMessages;
-            Assert.AreEqual(true, result.HasError());
-            Assert.AreEqual(16, result.Count);
+            Assert.AreEqual(expected: true, actual: result.HasError());
+            Assert.AreEqual(expected: 16, actual: result.Count);
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is an error, Line: 1, FileName: {basePath}.env.validation.result1)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.validation.result1)");
@@ -68,8 +68,8 @@ namespace DotEnv.Core.Tests.Loader
                 .LoadEnv(out result);
 
             msg = result.ErrorMessages;
-            Assert.AreEqual(true, result.HasError());
-            Assert.AreEqual(7, result.Count);
+            Assert.AreEqual(expected: true, actual: result.HasError());
+            Assert.AreEqual(expected: 7, actual: result.Count);
 
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.production.local)");
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: PROD, Line: 5, FileName: {basePath}.env.production.local)");
@@ -93,8 +93,8 @@ namespace DotEnv.Core.Tests.Loader
                 .SetBasePath("environment/env_files")
                 .LoadEnv(out var result);
 
-            Assert.AreEqual(true, result.HasError());
-            Assert.AreEqual(1, result.Count);
+            Assert.AreEqual(expected: true, actual: result.HasError());
+            Assert.AreEqual(expected: 1, actual: result.Count);
             StringAssert.Contains(result.ErrorMessages, $"{FileNotPresentLoadEnvMessage}: .env.development.local or .env.dev.local or .env.local");
         }
 
@@ -108,8 +108,8 @@ namespace DotEnv.Core.Tests.Loader
                 .SetBasePath("environment/env_files")
                 .LoadEnv(out var result);
 
-            Assert.AreEqual(true, result.HasError());
-            Assert.AreEqual(1, result.Count);
+            Assert.AreEqual(expected: true, actual: result.HasError());
+            Assert.AreEqual(expected: 1, actual: result.Count);
             StringAssert.Contains(result.ErrorMessages, $"{FileNotPresentLoadEnvMessage}: .env.test.local or .env.local");
             SetEnvironmentVariable("DOTNET_ENV", null);
         }
