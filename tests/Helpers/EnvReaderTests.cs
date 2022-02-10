@@ -14,32 +14,21 @@ namespace DotEnv.Core.Tests.Helpers
         {
             var reader = new EnvReader();
             SetEnvironmentVariable("VARIABLE_NAME", "1");
-            Assert.AreEqual(true, reader.Exists("VARIABLE_NAME"));
+            Assert.AreEqual(expected: true, actual: reader.Exists("VARIABLE_NAME"));
             SetEnvironmentVariable("VARIABLE_NAME", null);
-            Assert.AreEqual(false, reader.Exists("VARIABLE_NAME"));
-            Assert.AreEqual(false, reader.Exists(""));
+            Assert.AreEqual(expected: false, actual: reader.Exists("VARIABLE_NAME"));
+            Assert.AreEqual(expected: false, actual: reader.Exists(""));
         }
 
         [TestMethod]
-        [DataRow(true, "true")]
-        [DataRow(false, "false")]
-        public void GetBoolValue_WhenTheVariableIsFound_ShouldReturnValue(bool expected, string value)
+        public void GetBoolValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            SetEnvironmentVariable("KEY_BOOL", value);
-
-            bool actual = reader.GetBoolValue("KEY_BOOL");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetBoolValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetBoolValue(VariableNotFound);
-
+            SetEnvironmentVariable("KEY_BOOL", "true");
+            Assert.AreEqual(expected: true, actual: reader.GetBoolValue("KEY_BOOL"));
+            SetEnvironmentVariable("KEY_BOOL", "false");
+            Assert.AreEqual(expected: false, actual: reader.GetBoolValue("KEY_BOOL"));
+            void action() => reader.GetBoolValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
@@ -47,214 +36,95 @@ namespace DotEnv.Core.Tests.Helpers
         public void GetByteValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            byte expected = 2;
             SetEnvironmentVariable("KEY_BYTE", "2");
-
-            byte actual = reader.GetByteValue("KEY_BYTE");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetByteValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetByteValue(VariableNotFound);
-
+            Assert.AreEqual(expected: (byte)2, actual: reader.GetByteValue("KEY_BYTE"));
+            void action() => reader.GetByteValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
         [TestMethod]
-        [DataRow('A', "A")]
-        [DataRow('a', "a")]
-        public void GetCharValue_WhenTheVariableIsFound_ShouldReturnValue(char expected, string value)
+        public void GetCharValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            SetEnvironmentVariable("KEY_CHAR", value);
-
-            char actual = reader.GetCharValue("KEY_CHAR");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetCharValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetCharValue(VariableNotFound);
-
+            SetEnvironmentVariable("KEY_CHAR", "A");
+            Assert.AreEqual(expected: 'A', actual: reader.GetCharValue("KEY_CHAR"));
+            void action() => reader.GetCharValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
         [TestMethod]
-        [DataRow(12.5D, "12.5")]
-        [DataRow(-12.5D, "-12.5")]
-        [DataRow(125D, "12,5")]
-        [DataRow(-125D, "-12,5")]
-        public void GetDecimalValue_WhenTheVariableIsFound_ShouldReturnValue(double input, string value)
+        public void GetDecimalValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            decimal expected = Convert.ToDecimal(input);
-            SetEnvironmentVariable("KEY_DECIMAL", value);
-
-            decimal actual = reader.GetDecimalValue("KEY_DECIMAL");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetDecimalValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetDecimalValue(VariableNotFound);
-
+            SetEnvironmentVariable("KEY_DECIMAL", "12.5");
+            Assert.AreEqual(expected: 12.5M, actual: reader.GetDecimalValue("KEY_DECIMAL"));
+            SetEnvironmentVariable("KEY_DECIMAL", "12,5");
+            Assert.AreEqual(expected: 125M, actual: reader.GetDecimalValue("KEY_DECIMAL"));
+            void action() => reader.GetDecimalValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
         [TestMethod]
-        [DataRow(12.5D, "12.5")]
-        [DataRow(-12.5D, "-12.5")]
-        [DataRow(125D, "12,5")]
-        [DataRow(-125D, "-12,5")]
-        public void GetDoubleValue_WhenTheVariableIsFound_ShouldReturnValue(double expected, string value)
+        public void GetDoubleValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            SetEnvironmentVariable("KEY_DOUBLE", value);
-
-            double actual = reader.GetDoubleValue("KEY_DOUBLE");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetDoubleValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetDoubleValue(VariableNotFound);
-
+            SetEnvironmentVariable("KEY_DOUBLE", "12.5");
+            Assert.AreEqual(expected: 12.5D, actual: reader.GetDoubleValue("KEY_DOUBLE"));
+            SetEnvironmentVariable("KEY_DOUBLE", "12,5");
+            Assert.AreEqual(expected: 125D, actual: reader.GetDoubleValue("KEY_DOUBLE"));
+            void action() => reader.GetDoubleValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
         [TestMethod]
-        [DataRow(12.5F, "12.5")]
-        [DataRow(-12.5F, "-12.5")]
-        [DataRow(125F, "12,5")]
-        [DataRow(-125F, "-12,5")]
-        public void GetFloatValue_WhenTheVariableIsFound_ShouldReturnValue(float expected, string value)
+        public void GetFloatValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            SetEnvironmentVariable("KEY_FLOAT", value);
-
-            float actual = reader.GetFloatValue("KEY_FLOAT");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetFloatValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetFloatValue(VariableNotFound);
-
+            SetEnvironmentVariable("KEY_FLOAT", "12.5");
+            Assert.AreEqual(expected: 12.5F, actual: reader.GetFloatValue("KEY_FLOAT"));
+            SetEnvironmentVariable("KEY_FLOAT", "12,5");
+            Assert.AreEqual(expected: 125F, actual: reader.GetFloatValue("KEY_FLOAT"));
+            void action() => reader.GetFloatValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
         [TestMethod]
-        [DataRow(3, "3")]
-        [DataRow(-3, "-3")]
-        public void GetIntValue_WhenTheVariableIsFound_ShouldReturnValue(int expected, string value)
+        public void GetIntValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            SetEnvironmentVariable("KEY_INT", value);
-
-            int actual = reader.GetIntValue("KEY_INT");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetIntValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetIntValue(VariableNotFound);
-
+            SetEnvironmentVariable("KEY_INT", "3");
+            Assert.AreEqual(expected: 3, actual: reader.GetIntValue("KEY_INT"));
+            void action() => reader.GetIntValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
         [TestMethod]
-        [DataRow(3L, "3")]
-        [DataRow(-3L, "-3")]
-        public void GetLongValue_WhenTheVariableIsFound_ShouldReturnValue(long expected, string value)
+        public void GetLongValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            SetEnvironmentVariable("KEY_LONG", value);
-
-            long actual = reader.GetLongValue("KEY_LONG");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetLongValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetLongValue(VariableNotFound);
-
+            SetEnvironmentVariable("KEY_LONG", "3");
+            Assert.AreEqual(expected: 3L, actual: reader.GetLongValue("KEY_LONG"));
+            void action() => reader.GetLongValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
         [TestMethod]
-        [DataRow(3, "3")]
-        [DataRow(-3, "-3")]
-        public void GetSByteValue_WhenTheVariableIsFound_ShouldReturnValue(int input, string value)
+        public void GetSByteValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            sbyte expected = Convert.ToSByte(input);
-            SetEnvironmentVariable("KEY_SBYTE", value);
-
-            sbyte actual = reader.GetSByteValue("KEY_SBYTE");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetSByteValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetSByteValue(VariableNotFound);
-
+            SetEnvironmentVariable("KEY_SBYTE", "3");
+            Assert.AreEqual(expected: (sbyte)3, actual: reader.GetSByteValue("KEY_SBYTE"));
+            void action() => reader.GetSByteValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
         [TestMethod]
-        [DataRow(3, "3")]
-        [DataRow(-3, "-3")]
-        public void GetShortValue_WhenTheVariableIsFound_ShouldReturnValue(int input, string value)
+        public void GetShortValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            short expected = Convert.ToInt16(input);
-            SetEnvironmentVariable("KEY_SHORT", value);
-
-            short actual = reader.GetShortValue("KEY_SHORT");
-
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetShortValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetShortValue(VariableNotFound);
-
+            SetEnvironmentVariable("KEY_SHORT", "3");
+            Assert.AreEqual(expected: (short)3, actual: reader.GetShortValue("KEY_SHORT"));
+            void action() => reader.GetShortValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
@@ -262,20 +132,9 @@ namespace DotEnv.Core.Tests.Helpers
         public void GetStringValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            string expected = "This is a string.";
             SetEnvironmentVariable("KEY_STRING", "This is a string.");
-
-            string actual = reader.GetStringValue("KEY_STRING");
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetStringValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetStringValue(VariableNotFound);
-
+            Assert.AreEqual(expected: "This is a string.", actual: reader.GetStringValue("KEY_STRING"));
+            void action() => reader.GetStringValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
@@ -283,20 +142,9 @@ namespace DotEnv.Core.Tests.Helpers
         public void GetUIntValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            uint expected = 2U;
             SetEnvironmentVariable("KEY_UINT", "2");
-
-            uint actual = reader.GetUIntValue("KEY_UINT");
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetUIntValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetUIntValue(VariableNotFound);
-
+            Assert.AreEqual(expected: 2U, actual: reader.GetUIntValue("KEY_UINT"));
+            void action() => reader.GetUIntValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
@@ -304,20 +152,9 @@ namespace DotEnv.Core.Tests.Helpers
         public void GetULongValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            ulong expected = 2UL;
             SetEnvironmentVariable("KEY_ULONG", "2");
-
-            ulong actual = reader.GetULongValue("KEY_ULONG");
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetULongValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetULongValue(VariableNotFound);
-
+            Assert.AreEqual(expected: 2UL, actual: reader.GetULongValue("KEY_ULONG"));
+            void action() => reader.GetULongValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
 
@@ -325,20 +162,9 @@ namespace DotEnv.Core.Tests.Helpers
         public void GetUShortValue_WhenTheVariableIsFound_ShouldReturnValue()
         {
             var reader = new EnvReader();
-            ushort expected = 2;
             SetEnvironmentVariable("KEY_USHORT", "2");
-
-            ushort actual = reader.GetUShortValue("KEY_USHORT");
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
-        public void GetUShortValue_WhenTheVariableIsNotFound_ShouldThrowEnvVariableNotFound()
-        {
-            var reader = new EnvReader();
-
-            Action action = () => reader.GetUShortValue(VariableNotFound);
-
+            Assert.AreEqual(expected: (ushort)2, actual: reader.GetUShortValue("KEY_USHORT"));
+            void action() => reader.GetUShortValue(VariableNotFound);
             Assert.ThrowsException<EnvVariableNotFoundException>(action);
         }
     }
