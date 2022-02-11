@@ -29,10 +29,7 @@ namespace DotEnv.Core
         private void CombineContainers()
         {
             if (_parser.ValidationResult.HasError())
-            {
-                foreach (var errorMsg in _validationResult)
-                    _parser.ValidationResult.Add(errorMsg);
-            }
+                _parser.ValidationResult.AddRange(errorMessages: _validationResult);
         }
 
         /// <summary>
