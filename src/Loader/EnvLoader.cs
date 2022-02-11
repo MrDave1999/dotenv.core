@@ -77,10 +77,17 @@ namespace DotEnv.Core
         public IDictionary<string, string> LoadEnv(out EnvValidationResult result)
         {
             var enviroment = Environment.GetEnvironmentVariable("DOTNET_ENV") ?? _configuration.EnvironmentName;
+            var envFiles = _configuration.EnvFiles;
+            var copyEnvFiles = envFiles.ToArray();
+            envFiles.Clear();
+
             AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}.local" } : new[] { ".env.development.local", ".env.dev.local" });
             AddOptionalEnvFiles(".env.local");
             AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}" } : new[] { ".env.development", ".env.dev" });
             AddOptionalEnvFiles(".env");
+
+            // The .env files that were added with the 'AddEnvFile' method are added at the end of the collection.
+            envFiles.AddRange(copyEnvFiles);
 
             foreach (EnvFile envFile in _configuration.EnvFiles)
             {
@@ -91,17 +98,19 @@ namespace DotEnv.Core
                     _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
             }
 
-            var envFiles = _configuration.EnvFiles;
             if (enviroment == null)
             {
-                if (envFiles.NotExists(".env.development.local") &&
-                    envFiles.NotExists(".env.dev.local") &&
-                    envFiles.NotExists(".env.local"))
+                var envDevelopmentLocal = envFiles[0]; // .env.development.local
+                var envDevLocal = envFiles[1];         // .env.dev.local
+                var envLocal = envFiles[2];            // .env.local
+                if (!envDevelopmentLocal.Exists && !envDevLocal.Exists && !envLocal.Exists)
                     _validationResult.Add(errorMsg: $"{FileNotPresentLoadEnvMessage}: .env.development.local or .env.dev.local or .env.local");
             }
             else
             {
-                if (envFiles.NotExists($".env.{enviroment}.local") && envFiles.NotExists(".env.local"))
+                var envEnvironmentLocal = envFiles[0];  // .env.[environment].local
+                var envLocal = envFiles[1];             // .env.local
+                if (!envEnvironmentLocal.Exists && !envLocal.Exists)
                     _validationResult.Add(errorMsg: $"{FileNotPresentLoadEnvMessage}: .env.{enviroment}.local or .env.local");
             }
 
