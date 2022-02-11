@@ -53,6 +53,15 @@ namespace DotEnv.Core
         }
 
         /// <summary>
+        /// Adds a set of error messages to the collection.
+        /// </summary>
+        /// <param name="errorMessages">A set of error messages.</param>
+        internal void AddRange(IEnumerable<string> errorMessages)
+        {
+            _errors.AddRange(errorMessages);
+        }
+
+        /// <summary>
         /// Returns an enumerator that iterates through the errors contained in the container.
         /// </summary>
         /// <returns>An enumerator that can be used to iterate through the errors contained in the container.</returns>
