@@ -34,6 +34,8 @@ namespace DotEnv.Core
         {
             get
             {
+                if (_errors.IsEmpty())
+                    return string.Empty;
                 var stringBuilder = new StringBuilder(Environment.NewLine);
                 foreach(var error in _errors)
                     stringBuilder.Append(error + Environment.NewLine);
