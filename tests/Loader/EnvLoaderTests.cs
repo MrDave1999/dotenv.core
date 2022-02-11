@@ -226,5 +226,21 @@ namespace DotEnv.Core.Tests.Loader
             action = () => loader.SetEnvironmentName("   ");
             Assert.ThrowsException<ArgumentException>(action);
         }
+
+        [TestMethod]
+        public void LoadEnv_WhenAddsEnvFiles_ShouldMaintainThePriorityOfTheEnvFiles()
+        {
+            var loader = new EnvLoader()
+                            .SetBasePath("Loader/env_files/local")
+                            .AddEnvFile(".env.example1")
+                            .AddEnvFile(".env.example2");
+
+            loader.LoadEnv();
+
+            Assert.AreEqual(expected: ".env.dev.local", actual: GetEnvironmentVariable("MAX_PRIORITY"));
+            Assert.AreEqual(expected: ".env.local", actual: GetEnvironmentVariable("PRIORITY_2"));
+            Assert.AreEqual(expected: ".env.dev", actual: GetEnvironmentVariable("PRIORITY_3"));
+            Assert.AreEqual(expected: ".env", actual: GetEnvironmentVariable("PRIORITY_4"));
+        }
     }
 }
