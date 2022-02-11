@@ -94,6 +94,10 @@ namespace DotEnv.Core
         /// Sets the name of the environment.
         /// </summary>
         /// <param name="envName">The name of the environment.</param>
+        /// <exception cref="ArgumentNullException"><c>envName</c> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentException">
+        /// <c>envName</c> is a <see cref="string.Empty" /> or consists only of white-space characters.
+        /// </exception>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader SetEnvironmentName(string envName);
 
