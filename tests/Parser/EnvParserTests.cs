@@ -195,7 +195,7 @@ namespace DotEnv.Core.Tests.Parser
         }
 
         [TestMethod]
-        public void Parse_WhenVariablesAreEmbeddedInTheValue_ShouldExpandVariables()
+        public void Parse_WhenVariablesAreInterpolatedInTheValue_ShouldExpandVariables()
         {
             string env = @"
                 MYSQL_USER_EXPAND = root
