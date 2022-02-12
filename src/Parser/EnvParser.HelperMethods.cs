@@ -136,14 +136,14 @@ namespace DotEnv.Core
                 if (string.IsNullOrWhiteSpace(variable))
                 {
                     ValidationResult.Add(errorMsg: FormatErrorMessage(VariableIsAnEmptyStringMessage, lineNumber: lineNumber, envFileName: FileName));
-                    return match.Value;
+                    return string.Empty;
                 }
 
                 var retrievedValue = GetEnvironmentVariable(variable);
                 if (retrievedValue == null)
                 {
                     ValidationResult.Add(errorMsg: FormatErrorMessage(GetVariableNotFoundMessage(), actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
-                    return match.Value;
+                    return string.Empty;
                 }
 
                 return retrievedValue;
