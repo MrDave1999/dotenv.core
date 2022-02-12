@@ -154,16 +154,20 @@ namespace DotEnv.Core.Tests.Parser
                 =VAL1
                 IGNORE_EXCEPTION_3= ASDASD ${} ${   }
                 IGNORE_EXCEPTION_4= ASDASD ${   } ASDASD ${}
+                IGNORE_EXCEPTION_5 = server=${MYSQL_HOST};user=root${ };
+                IGNORE_EXCEPTION_6 = server= ${MYSQL_HOST} ; user=root;
             ";
 
             new EnvParser()
                 .DisableParserException()
                 .Parse(env);
 
-            Assert.AreEqual(expected: "VAL1 ${IGNORE_EXCEPTION_2} ...", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_1"));
-            Assert.AreEqual(expected: "VAL2 ${IGNORE_EXCEPTION_2} ...", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_2"));
-            Assert.AreEqual(expected: "ASDASD ${} ${   }", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_3"));
-            Assert.AreEqual(expected: "ASDASD ${   } ASDASD ${}", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_4"));
+            Assert.AreEqual(expected: "VAL1  ...", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_1"));
+            Assert.AreEqual(expected: "VAL2  ...", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_2"));
+            Assert.AreEqual(expected: "ASDASD  ", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_3"));
+            Assert.AreEqual(expected: "ASDASD  ASDASD ", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_4"));
+            Assert.AreEqual(expected: "server=;user=root;", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_5"));
+            Assert.AreEqual(expected: "server=  ; user=root;", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_6"));
         }
 
         [TestMethod]
