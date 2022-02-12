@@ -220,20 +220,20 @@ namespace DotEnv.Core.Tests.Parser
         [TestMethod]
         [DataRow("EMBEDDED_VAR_1 = asdasd ${EMBEDDED_VAR_1}")]
         [DataRow("EMBEDDED_VAR_2 = ${VARIABLE_NOT_FOUND} asdasd ")]
-        public void Parse_WhenEmbeddedVariableDoesNotExist_ShouldThrowParserException(string env)
+        public void Parse_WhenInterpolatedVariableDoesNotExist_ShouldThrowParserException(string env)
         {
             var parser = new EnvParser();
 
             void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, VariableNotFoundMessage);
+            StringAssert.Contains(ex.Message, InterpolatedVariableNotFoundMessage);
         }
 
         [TestMethod]
         [DataRow("EMBEDDED_VAR_3 = asdasd ${}")]
         [DataRow("EMBEDDED_VAR_4 = ${    } asdasd ")]
-        public void Parse_WhenEmbeddedVariableIsEmptyString_ShouldThrowParserException(string env)
+        public void Parse_WhenInterpolatedVariableIsEmptyString_ShouldThrowParserException(string env)
         {
             var parser = new EnvParser();
 

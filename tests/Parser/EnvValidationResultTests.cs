@@ -44,8 +44,8 @@ namespace DotEnv.Core.Tests.Parser
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is an error, Line: 1)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND_2, Line: 3)");
+            StringAssert.Contains(msg, $"{InterpolatedVariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3)");
+            StringAssert.Contains(msg, $"{InterpolatedVariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND_2, Line: 3)");
             StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5)");
             StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5)");
 
@@ -53,7 +53,7 @@ namespace DotEnv.Core.Tests.Parser
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a line, Line: 1)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3)");
+            StringAssert.Contains(msg, $"{InterpolatedVariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3)");
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a message, Line: 1)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2)");

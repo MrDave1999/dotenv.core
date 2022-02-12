@@ -109,7 +109,7 @@ namespace DotEnv.Core
         /// </summary>
         /// <returns>A message that describes the error.</returns>
         protected virtual string GetVariableNotFoundMessage()
-            => configuration.ModifyEnvironment ? VariableNotFoundMessage : KeyNotFoundMessage;
+            => configuration.ModifyEnvironment ? InterpolatedVariableNotFoundMessage : KeyNotFoundMessage;
 
         /// <summary>
         /// Concatenates a value with the current value of a variable.

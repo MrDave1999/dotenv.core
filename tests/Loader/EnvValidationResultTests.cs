@@ -33,8 +33,8 @@ namespace DotEnv.Core.Tests.Loader
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is an error, Line: 1, FileName: {basePath}.env.validation.result1)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.validation.result1)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3, FileName: {basePath}.env.validation.result1)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND_2, Line: 3, FileName: {basePath}.env.validation.result1)");
+            StringAssert.Contains(msg, $"{InterpolatedVariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3, FileName: {basePath}.env.validation.result1)");
+            StringAssert.Contains(msg, $"{InterpolatedVariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND_2, Line: 3, FileName: {basePath}.env.validation.result1)");
             StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5, FileName: {basePath}.env.validation.result1)");
             StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5, FileName: {basePath}.env.validation.result1)");
 
@@ -42,7 +42,7 @@ namespace DotEnv.Core.Tests.Loader
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a line, Line: 1, FileName: {basePath}.env.validation.result3)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.validation.result3)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3, FileName: {basePath}.env.validation.result3)");
+            StringAssert.Contains(msg, $"{InterpolatedVariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3, FileName: {basePath}.env.validation.result3)");
 
             StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a message, Line: 1, FileName: {basePath}.env.validation.result4)");
             StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2, FileName: {basePath}.env.validation.result4)");
