@@ -63,9 +63,7 @@ namespace DotEnv.Core
             if (!Path.HasExtension(envFile.Path))
                 envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
 
-            if (envFile.Encoding == null)
-                envFile.Encoding = _configuration.Encoding;
-
+            envFile.Encoding = envFile.Encoding ?? _configuration.Encoding;
             envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
         }
 

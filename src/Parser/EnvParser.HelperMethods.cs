@@ -66,8 +66,8 @@ namespace DotEnv.Core
         /// </summary>
         protected virtual void CreateDictionary()
         {
-            if (!configuration.ModifyEnvironment && keyValuePairs == null)
-                keyValuePairs = new Dictionary<string, string>();
+            if (!configuration.ModifyEnvironment)
+                keyValuePairs = keyValuePairs ?? new Dictionary<string, string>();
         }
 
         /// <summary>
