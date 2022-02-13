@@ -49,6 +49,7 @@ namespace DotEnv.Core
         // See https://en.wikipedia.org/wiki/Template_method_pattern
         public IDictionary<string, string> Parse(string dataSource, out EnvValidationResult result)
         {
+            _ = dataSource ?? throw new ArgumentNullException(nameof(dataSource));
             result = ValidationResult;
 
             if (string.IsNullOrWhiteSpace(dataSource))

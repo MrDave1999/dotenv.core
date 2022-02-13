@@ -39,8 +39,10 @@ namespace DotEnv.Core
         /// Initializes a new instance of the <see cref="EnvLoader" /> class with a parser.
         /// </summary>
         /// <param name="parser">The parser instance.</param>
+        /// <exception cref="ArgumentNullException"><c>parser</c> is <c>null</c>.</exception>
         public EnvLoader(EnvParser parser) : this()
         {
+            _ = parser ?? throw new ArgumentNullException(nameof(parser));
             _parser = parser;
         }
 

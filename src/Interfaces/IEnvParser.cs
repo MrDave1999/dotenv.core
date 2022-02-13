@@ -18,6 +18,7 @@ namespace DotEnv.Core
         /// Start the parsing to extract the key-value pair from a data source.
         /// </summary>
         /// <param name="dataSource">The data source to parsing.</param>
+        /// <exception cref="ArgumentNullException"><c>dataSource</c> is <c>null</c>.</exception>
         /// <exception cref="ParserException">
         /// If the parser encounters one or more errors.
         /// This exception is only thrown if the <see cref="EnvParserOptions.ThrowException" /> property is set to <c>true</c>.
