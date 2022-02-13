@@ -24,7 +24,7 @@ namespace DotEnv.Core.Tests.Parser
             ";
             parser.Parse(env, out _);
 
-            env = null;
+            env = "";
             parser.Parse(env, out _);
 
             env = @"This is a line

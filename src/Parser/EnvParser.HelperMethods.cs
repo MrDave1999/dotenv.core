@@ -20,9 +20,11 @@ namespace DotEnv.Core
         /// Checks if the line is a comment.
         /// </summary>
         /// <param name="line">The line to test.</param>
+        /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
         /// <returns><c>true</c> if the line is a comment, otherwise <c>false</c>.</returns>
         protected virtual bool IsComment(string line)
         {
+            _ = line ?? throw new ArgumentNullException(nameof(line));
             line = configuration.TrimStartComments ? line.TrimStart() : line;
             return line[0] == configuration.CommentChar;
         }
@@ -31,9 +33,11 @@ namespace DotEnv.Core
         /// Extracts the key from the line.
         /// </summary>
         /// <param name="line">The line with the key-value pair.</param>
+        /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
         /// <returns>The key extracted.</returns>
         protected virtual string ExtractKey(string line)
         {
+            _ = line ?? throw new ArgumentNullException(nameof(line));
             string key = line.Split(configuration.DelimiterKeyValuePair, MaxCount)[0];
             key = configuration.TrimStartKeys ? key.TrimStart() : key;
             key = configuration.TrimEndKeys ? key.TrimEnd() : key;
@@ -44,9 +48,11 @@ namespace DotEnv.Core
         /// Extracts the value from the line.
         /// </summary>
         /// <param name="line">The line with the key-value pair.</param>
+        /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
         /// <returns>The value extracted.</returns>
         protected virtual string ExtractValue(string line)
         {
+            _ = line ?? throw new ArgumentNullException(nameof(line));
             string value = line.Split(configuration.DelimiterKeyValuePair, MaxCount)[1];
             value = configuration.TrimStartValues ? value.TrimStart() : value;
             value = configuration.TrimEndValues ? value.TrimEnd() : value;
@@ -57,9 +63,13 @@ namespace DotEnv.Core
         /// Checks if the line has no a key-value pair.
         /// </summary>
         /// <param name="line">The line to test.</param>
+        /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
         /// <returns><c>true</c> if the line has no the key-value format, otherwise <c>false</c>.</returns>
         protected virtual bool HasNoKeyValuePair(string line)
-            => line.Split(configuration.DelimiterKeyValuePair, MaxCount).Length != 2;
+        {
+            _ = line ?? throw new ArgumentNullException(nameof(line));
+            return line.Split(configuration.DelimiterKeyValuePair, MaxCount).Length != 2;
+        }
 
         /// <summary>
         /// Creates a dictionary in case the environment cannot be modified.
@@ -78,8 +88,10 @@ namespace DotEnv.Core
         /// </remarks>
         /// <param name="key">The key of the value to set.</param>
         /// <param name="value">The value to set.</param>
+        /// <exception cref="ArgumentNullException"><c>key</c> is <c>null</c>.</exception>
         protected virtual void SetEnvironmentVariable(string key, string value)
         {
+            _ = key ?? throw new ArgumentNullException(nameof(key));
             if (!configuration.ModifyEnvironment)
                 keyValuePairs[key] = value;
             else 
@@ -93,9 +105,11 @@ namespace DotEnv.Core
         /// In the case that the environment is not accessible, the method will get the value of the key from a dictionary.
         /// </remarks>
         /// <param name="key">The key to get.</param>
+        /// <exception cref="ArgumentNullException"><c>key</c> is <c>null</c>.</exception>
         /// <returns>The value of the environment variable or <c>null</c> if the variable is not found.</returns>
         protected virtual string GetEnvironmentVariable(string key)
         {
+            _ = key ?? throw new ArgumentNullException(nameof(key));
             if (!configuration.ModifyEnvironment)
             {
                 keyValuePairs.TryGetValue(key, out string value);
@@ -125,9 +139,11 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="value">A string containing the names of zero or more environment variables.</param>
         /// <param name="lineNumber">The line number where the value was found.</param>
+        /// <exception cref="ArgumentNullException"><c>value</c> is <c>null</c>.</exception>
         /// <returns>A string with each environment variable replaced by its value.</returns>
         protected virtual string ExpandEnvironmentVariables(string value, int lineNumber)
         {
+            _ = value ?? throw new ArgumentNullException(nameof(value));
             var pattern = @"\$\{([^}]*)\}";
             value = Regex.Replace(value, pattern, match =>
             {

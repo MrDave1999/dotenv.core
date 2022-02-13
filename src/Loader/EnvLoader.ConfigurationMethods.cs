@@ -11,6 +11,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvLoader SetDefaultEnvFileName(string envFileName)
         {
+            _ = envFileName ?? throw new ArgumentNullException(nameof(envFileName));
             _configuration.DefaultEnvFileName = envFileName;
             return this;
         }
@@ -18,6 +19,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvLoader SetBasePath(string basePath)
         {
+            _ = basePath ?? throw new ArgumentNullException(nameof(basePath));
             _configuration.BasePath = basePath;
             return this;
         }
@@ -25,6 +27,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvLoader AddEnvFiles(params string[] paths)
         {
+            _ = paths ?? throw new ArgumentNullException(nameof(paths));
             foreach (string path in paths)
                 AddEnvFile(path, null);
             return this;
@@ -40,6 +43,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvLoader AddEnvFile(string path, Encoding encoding)
         {
+            _ = path ?? throw new ArgumentNullException(nameof(path));
             _configuration.EnvFiles.Add(new EnvFile { Path = path, Encoding = encoding });
             return this;
         }
@@ -47,6 +51,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvLoader SetEncoding(Encoding encoding)
         {
+            _ = encoding ?? throw new ArgumentNullException(nameof(encoding));
             _configuration.Encoding = encoding;
             return this;
         }
@@ -61,9 +66,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvLoader SetEnvironmentName(string envName)
         {
-            if (envName == null)
-                throw new ArgumentNullException(nameof(envName));
-
+            _ = envName ?? throw new ArgumentNullException(nameof(envName));
             if (string.IsNullOrWhiteSpace(envName))
                 throw new ArgumentException(ArgumentIsNullOrWhiteSpaceMessage, nameof(envName));
 

@@ -59,9 +59,7 @@ namespace DotEnv.Core
         /// <exception cref="ArgumentNullException"><c>environmentName</c> is <c>null</c>.</exception>
         public static bool IsEnvironment(string environmentName)
         {
-            if (environmentName == null)
-                throw new ArgumentNullException(nameof(environmentName));
-
+            _ = environmentName ?? throw new ArgumentNullException(nameof(environmentName));
             var currentEnvironment = GetEnvironmentVariable("DOTNET_ENV");
             return string.Equals(currentEnvironment, environmentName, StringComparison.OrdinalIgnoreCase);
         }

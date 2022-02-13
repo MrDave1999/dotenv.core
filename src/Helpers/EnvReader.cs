@@ -21,6 +21,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public bool Exists(string variable)
         {
+            _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var variableValue = GetEnvironmentVariable(variable);
             return variableValue != null;
         }
