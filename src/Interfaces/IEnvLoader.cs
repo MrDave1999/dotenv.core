@@ -45,6 +45,7 @@ namespace DotEnv.Core
         /// Sets the default name of an .env file.
         /// </summary>
         /// <param name="envFileName">The default name to set.</param>
+        /// <exception cref="ArgumentNullException"><c>envFileName</c> is <c>null</c>.</exception>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader SetDefaultEnvFileName(string envFileName);
 
@@ -52,6 +53,7 @@ namespace DotEnv.Core
         /// Sets the base path for the .env files.
         /// </summary>
         /// <param name="basePath">The base path to set.</param>
+        /// <exception cref="ArgumentNullException"><c>basePath</c> is <c>null</c>.</exception>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader SetBasePath(string basePath);
 
@@ -59,6 +61,7 @@ namespace DotEnv.Core
         /// Adds the .env files in a collection.
         /// </summary>
         /// <param name="paths">The .env files paths to add.</param>
+        /// <exception cref="ArgumentNullException"><c>paths</c> is <c>null</c>.</exception> 
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader AddEnvFiles(params string[] paths);
 
@@ -66,6 +69,7 @@ namespace DotEnv.Core
         /// Adds an .env file in a collection.
         /// </summary>
         /// <param name="path">The .env file path to add.</param>
+        /// <exception cref="ArgumentNullException"><c>path</c> is <c>null</c>.</exception> 
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader AddEnvFile(string path);
 
@@ -74,6 +78,7 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="path">The .env file path to add.</param>
         /// <param name="encoding">The encoding of the .env file.</param>
+        /// <exception cref="ArgumentNullException"><c>path</c> is <c>null</c>.</exception> 
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader AddEnvFile(string path, Encoding encoding);
 
@@ -81,6 +86,7 @@ namespace DotEnv.Core
         /// Sets the encoding of the .env files.
         /// </summary>
         /// <param name="encoding">The type of encoding to set.</param>
+        /// <exception cref="ArgumentNullException"><c>encoding</c> is <c>null</c>.</exception> 
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader SetEncoding(Encoding encoding);
 
