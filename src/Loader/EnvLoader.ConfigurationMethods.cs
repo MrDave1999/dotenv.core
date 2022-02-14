@@ -26,14 +26,14 @@ namespace DotEnv.Core
         public IEnvLoader AddEnvFiles(params string[] paths)
         {
             foreach (string path in paths)
-                AddEnvFile(path, null);
+                AddEnvFile(path, (Encoding)null);
             return this;
         }
 
         /// <inheritdoc />
         public IEnvLoader AddEnvFile(string path)
         {
-            AddEnvFile(path, null);
+            AddEnvFile(path, (Encoding)null);
             return this;
         }
 
@@ -45,9 +45,37 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
+        public IEnvLoader AddEnvFile(string path, string name)
+        {
+            try
+            {
+                AddEnvFile(path, Encoding.GetEncoding(name));
+            }
+            catch(ArgumentException e)
+            {
+                throw e;
+            }
+            return this;
+        }
+
+        /// <inheritdoc />
         public IEnvLoader SetEncoding(Encoding encoding)
         {
             _configuration.Encoding = encoding;
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IEnvLoader SetEncoding(string name)
+        {
+            try
+            {
+                _configuration.Encoding = Encoding.GetEncoding(name);
+            }
+            catch(ArgumentException e)
+            {
+                throw e;
+            }
             return this;
         }
 
