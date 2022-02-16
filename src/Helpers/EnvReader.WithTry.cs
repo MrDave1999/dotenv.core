@@ -14,13 +14,13 @@ namespace DotEnv.Core
         public virtual bool TryGetStringValue(string variable, out string value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if(variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if(retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = variableValue;
+            value = retrievedValue;
             return true;
         }
 
@@ -28,13 +28,13 @@ namespace DotEnv.Core
         public virtual bool TryGetBoolValue(string variable, out bool value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = bool.Parse(variableValue);
+            value = bool.Parse(retrievedValue);
             return true;
         }
 
@@ -42,13 +42,13 @@ namespace DotEnv.Core
         public virtual bool TryGetByteValue(string variable, out byte value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = byte.Parse(variableValue);
+            value = byte.Parse(retrievedValue);
             return true;
         }
 
@@ -56,13 +56,13 @@ namespace DotEnv.Core
         public virtual bool TryGetSByteValue(string variable, out sbyte value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = sbyte.Parse(variableValue);
+            value = sbyte.Parse(retrievedValue);
             return true;
         }
 
@@ -70,13 +70,13 @@ namespace DotEnv.Core
         public virtual bool TryGetCharValue(string variable, out char value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = char.Parse(variableValue);
+            value = char.Parse(retrievedValue);
             return true;
         }
 
@@ -84,13 +84,13 @@ namespace DotEnv.Core
         public virtual bool TryGetIntValue(string variable, out int value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = int.Parse(variableValue);
+            value = int.Parse(retrievedValue);
             return true;
         }
 
@@ -98,13 +98,13 @@ namespace DotEnv.Core
         public virtual bool TryGetUIntValue(string variable, out uint value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = uint.Parse(variableValue);
+            value = uint.Parse(retrievedValue);
             return true;
         }
 
@@ -112,13 +112,13 @@ namespace DotEnv.Core
         public virtual bool TryGetLongValue(string variable, out long value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = long.Parse(variableValue);
+            value = long.Parse(retrievedValue);
             return true;
         }
 
@@ -126,13 +126,13 @@ namespace DotEnv.Core
         public virtual bool TryGetULongValue(string variable, out ulong value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = ulong.Parse(variableValue);
+            value = ulong.Parse(retrievedValue);
             return true;
         }
 
@@ -140,13 +140,13 @@ namespace DotEnv.Core
         public virtual bool TryGetShortValue(string variable, out short value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = short.Parse(variableValue);
+            value = short.Parse(retrievedValue);
             return true;
         }
 
@@ -154,13 +154,13 @@ namespace DotEnv.Core
         public virtual bool TryGetUShortValue(string variable, out ushort value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = ushort.Parse(variableValue);
+            value = ushort.Parse(retrievedValue);
             return true;
         }
 
@@ -168,13 +168,13 @@ namespace DotEnv.Core
         public virtual bool TryGetDecimalValue(string variable, out decimal value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = decimal.Parse(variableValue, CultureInfo.InvariantCulture);
+            value = decimal.Parse(retrievedValue, CultureInfo.InvariantCulture);
             return true;
         }
 
@@ -182,13 +182,13 @@ namespace DotEnv.Core
         public virtual bool TryGetDoubleValue(string variable, out double value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = double.Parse(variableValue, CultureInfo.InvariantCulture);
+            value = double.Parse(retrievedValue, CultureInfo.InvariantCulture);
             return true;
         }
 
@@ -196,13 +196,13 @@ namespace DotEnv.Core
         public virtual bool TryGetFloatValue(string variable, out float value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            string variableValue = GetEnvironmentVariable(variable);
-            if (variableValue == null)
+            var retrievedValue = GetEnvironmentVariable(variable);
+            if (retrievedValue == null)
             {
                 value = default;
                 return false;
             }
-            value = float.Parse(variableValue, CultureInfo.InvariantCulture);
+            value = float.Parse(retrievedValue, CultureInfo.InvariantCulture);
             return true;
         }
     }

@@ -22,8 +22,8 @@ namespace DotEnv.Core
         public bool Exists(string variable)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var variableValue = GetEnvironmentVariable(variable);
-            return variableValue != null;
+            var retrievedValue = GetEnvironmentVariable(variable);
+            return retrievedValue != null;
         }
 
         /// <summary>
