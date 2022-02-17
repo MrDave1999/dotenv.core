@@ -1,3 +1,21 @@
+v2.0.0
+- Added another type of error handling with the EnvValidationResult class.
+  - You should use the overloaded method of EnvLoader class: Load(out EnvValidationResult).
+- Added support for .env file loads based on environment (development, test, staging, or production).
+  - To use this feature you must use the LoadEnv method of the EnvLoader class.
+- Added the SetEnvironmentName method to the EnvLoader class.
+- The name of the method IgnoreParserExceptions has been changed to DisableParserException.
+- Added support for loading .env files without modifying the environment.
+  - To use this feature you must use the AvoidModifyEnvironment method of the EnvLoader class.
+- Added a new Env helper class to perform checks with the current environment.
+- Removed None option from ConcatKeysOptions enum.
+- Added the Exists method to the EnvLoader class.
+- Added checks to some methods in case the parameter is null.
+- Added the SetEncoding(string) and AddEnvFile(string, string) method to the EnvLoader class.
+- The parser now throws an exception with all errors encountered instead of one at a time.
+- The loader now throws an exception with all errors encountered instead of one at a time.
+- It is no longer possible to override the helper methods of the EnvParser class. This new version follows the encapsulation principle: "The fewer implementation details the client knows, the fewer changes they will have to make".
+
 v1.1.3
 - Fixed issue #11 so that the parser returns a line number that matches the line number of the .env file.
 
