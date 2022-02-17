@@ -13,38 +13,17 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the loader.
         /// </summary>
-        private readonly EnvLoaderOptions _configuration;
+        private readonly EnvLoaderOptions _configuration = new EnvLoaderOptions();
 
         /// <summary>
         /// Allows access to the members that control the parser.
         /// </summary>
-        private readonly EnvParser _parser;
+        private readonly EnvParser _parser = new EnvParser();
 
         /// <summary>
         /// Allows access to the errors container of the loader.
         /// </summary>
-        private readonly EnvValidationResult _validationResult;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EnvLoader" /> class.
-        /// </summary>
-        public EnvLoader()
-        {
-            _configuration = new EnvLoaderOptions();
-            _parser = new EnvParser();
-            _validationResult = new EnvValidationResult();
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EnvLoader" /> class with a parser.
-        /// </summary>
-        /// <param name="parser">The parser instance.</param>
-        /// <exception cref="ArgumentNullException"><c>parser</c> is <c>null</c>.</exception>
-        public EnvLoader(EnvParser parser) : this()
-        {
-            _ = parser ?? throw new ArgumentNullException(nameof(parser));
-            _parser = parser;
-        }
+        private readonly EnvValidationResult _validationResult = new EnvValidationResult();
 
         /// <inheritdoc />
         public IDictionary<string, string> Load()

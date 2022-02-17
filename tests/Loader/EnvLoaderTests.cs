@@ -38,7 +38,7 @@ namespace DotEnv.Core.Tests.Loader
         [TestMethod]
         public void Load_WhenLoadEnvFileWithCustomConfig_ShouldBeAbleToReadEnvironmentVariables()
         {
-            new EnvLoader(new CustomEnvParser())
+            new EnvLoader()
                 .SetBasePath("Loader/env_files")
                 .DisableTrimStartValues()
                 .DisableTrimEndValues()
@@ -71,7 +71,7 @@ namespace DotEnv.Core.Tests.Loader
         public void Load_WhenLoadMultiEnvFiles_ShouldBeAbleToReadEnvironmentVariables()
         {
             string absolutePath = Directory.GetCurrentDirectory();
-            new EnvLoader(new CustomEnvParser())
+            new EnvLoader()
                 .SetBasePath("Loader/env_files/multi")
                 .AddEnvFiles(".env.multi1", "./", ".env.multi2")
                 .AddEnvFile(".env.multi3")

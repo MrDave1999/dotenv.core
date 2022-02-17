@@ -7,14 +7,18 @@ using static DotEnv.Core.ParserException;
 
 namespace DotEnv.Core
 {
-    // This class defines the helper methods to be used in the template method.
-    // See https://en.wikipedia.org/wiki/Template_method_pattern
+    // This class defines the helper private (or internal) methods.
     public partial class EnvParser
     {
         /// <summary>
-        /// The maximum number of substrings to be returned by the Split method.
+        /// Creates and throws an exception of type <see cref="ParserException" />.
         /// </summary>
-        protected const int MaxCount = 2;
+        /// <exception cref="ParserException"></exception>
+        internal void CreateAndThrowParserException()
+        {
+            if (ValidationResult.HasError() && configuration.ThrowException)
+                throw new ParserException(message: ValidationResult.ErrorMessages);
+        }
 
         /// <summary>
         /// Checks if the line is a comment.
@@ -22,7 +26,7 @@ namespace DotEnv.Core
         /// <param name="line">The line to test.</param>
         /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
         /// <returns><c>true</c> if the line is a comment, otherwise <c>false</c>.</returns>
-        protected virtual bool IsComment(string line)
+        private bool IsComment(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
             line = configuration.TrimStartComments ? line.TrimStart() : line;
@@ -35,7 +39,7 @@ namespace DotEnv.Core
         /// <param name="line">The line with the key-value pair.</param>
         /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
         /// <returns>The key extracted.</returns>
-        protected virtual string ExtractKey(string line)
+        private string ExtractKey(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
             string key = line.Split(configuration.DelimiterKeyValuePair, MaxCount)[0];
@@ -50,7 +54,7 @@ namespace DotEnv.Core
         /// <param name="line">The line with the key-value pair.</param>
         /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
         /// <returns>The value extracted.</returns>
-        protected virtual string ExtractValue(string line)
+        private string ExtractValue(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
             string value = line.Split(configuration.DelimiterKeyValuePair, MaxCount)[1];
@@ -65,7 +69,7 @@ namespace DotEnv.Core
         /// <param name="line">The line to test.</param>
         /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
         /// <returns><c>true</c> if the line has no the key-value format, otherwise <c>false</c>.</returns>
-        protected virtual bool HasNoKeyValuePair(string line)
+        private bool HasNoKeyValuePair(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
             return line.Split(configuration.DelimiterKeyValuePair, MaxCount).Length != 2;
@@ -74,7 +78,7 @@ namespace DotEnv.Core
         /// <summary>
         /// Creates a dictionary in case the environment cannot be modified.
         /// </summary>
-        protected virtual void CreateDictionary()
+        private void CreateDictionary()
         {
             if (!configuration.ModifyEnvironment)
                 keyValuePairs = keyValuePairs ?? new Dictionary<string, string>();
@@ -89,7 +93,7 @@ namespace DotEnv.Core
         /// <param name="key">The key of the value to set.</param>
         /// <param name="value">The value to set.</param>
         /// <exception cref="ArgumentNullException"><c>key</c> is <c>null</c>.</exception>
-        protected virtual void SetEnvironmentVariable(string key, string value)
+        private void SetEnvironmentVariable(string key, string value)
         {
             _ = key ?? throw new ArgumentNullException(nameof(key));
             if (!configuration.ModifyEnvironment)
@@ -107,7 +111,7 @@ namespace DotEnv.Core
         /// <param name="key">The key to get.</param>
         /// <exception cref="ArgumentNullException"><c>key</c> is <c>null</c>.</exception>
         /// <returns>The value of the environment variable or <c>null</c> if the variable is not found.</returns>
-        protected virtual string GetEnvironmentVariable(string key)
+        private string GetEnvironmentVariable(string key)
         {
             _ = key ?? throw new ArgumentNullException(nameof(key));
             if (!configuration.ModifyEnvironment)
@@ -122,7 +126,7 @@ namespace DotEnv.Core
         /// Gets an error message in case the variable is not found in the environment or dictionary.
         /// </summary>
         /// <returns>A message that describes the error.</returns>
-        protected virtual string GetVariableNotFoundMessage()
+        private string GetVariableNotFoundMessage()
             => configuration.ModifyEnvironment ? InterpolatedVariableNotFoundMessage : KeyNotFoundMessage;
 
         /// <summary>
@@ -131,7 +135,7 @@ namespace DotEnv.Core
         /// <param name="currentValue">The current value of the variable.</param>
         /// <param name="value">The value to be concatenated with the current value.</param>
         /// <returns>The string with the concatenated values.</returns>
-        protected virtual string ConcatValues(string currentValue, string value)
+        private string ConcatValues(string currentValue, string value)
             => configuration.ConcatDuplicateKeys == ConcatKeysOptions.End ? $"{currentValue}{value}" : $"{value}{currentValue}";
 
         /// <summary>
@@ -141,7 +145,7 @@ namespace DotEnv.Core
         /// <param name="lineNumber">The line number where the value was found.</param>
         /// <exception cref="ArgumentNullException"><c>value</c> is <c>null</c>.</exception>
         /// <returns>A string with each environment variable replaced by its value.</returns>
-        protected virtual string ExpandEnvironmentVariables(string value, int lineNumber)
+        private string ExpandEnvironmentVariables(string value, int lineNumber)
         {
             _ = value ?? throw new ArgumentNullException(nameof(value));
             var pattern = @"\$\{([^}]*)\}";
