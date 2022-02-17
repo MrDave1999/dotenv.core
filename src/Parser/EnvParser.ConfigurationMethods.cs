@@ -10,14 +10,14 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvParser DisableTrimStartValues()
         {
-            configuration.TrimStartValues = false;
+            _configuration.TrimStartValues = false;
             return this;
         }
 
         /// <inheritdoc />
         public IEnvParser DisableTrimEndValues()
         {
-            configuration.TrimEndValues = false;
+            _configuration.TrimEndValues = false;
             return this;
         }
 
@@ -32,14 +32,14 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvParser DisableTrimStartKeys()
         {
-            configuration.TrimStartKeys = false;
+            _configuration.TrimStartKeys = false;
             return this;
         }
 
         /// <inheritdoc />
         public IEnvParser DisableTrimEndKeys()
         {
-            configuration.TrimEndKeys = false;
+            _configuration.TrimEndKeys = false;
             return this;
         }
 
@@ -54,28 +54,28 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvParser DisableTrimStartComments()
         {
-            configuration.TrimStartComments = false;
+            _configuration.TrimStartComments = false;
             return this;
         }
 
         /// <inheritdoc />
         public IEnvParser AllowOverwriteExistingVars()
         {
-            configuration.OverwriteExistingVars = true;
+            _configuration.OverwriteExistingVars = true;
             return this;
         }
 
         /// <inheritdoc />
         public IEnvParser SetCommentChar(char commentChar)
         {
-            configuration.CommentChar = commentChar;
+            _configuration.CommentChar = commentChar;
             return this;
         }
 
         /// <inheritdoc />
         public IEnvParser SetDelimiterKeyValuePair(char separator)
         {
-            configuration.DelimiterKeyValuePair = separator;
+            _configuration.DelimiterKeyValuePair = separator;
             return this;
         }
 
@@ -85,21 +85,21 @@ namespace DotEnv.Core
             if (option < ConcatKeysOptions.Start || option > ConcatKeysOptions.End)
                 throw new ArgumentException(ExceptionMessages.OptionInvalidMessage, nameof(option));
 
-            configuration.ConcatDuplicateKeys = option;
+            _configuration.ConcatDuplicateKeys = option;
             return this;
         }
 
         /// <inheritdoc />
         public IEnvParser DisableParserException()
         {
-            configuration.ThrowException = false;
+            _configuration.ThrowException = false;
             return this;
         }
 
         /// <inheritdoc />
         public IEnvParser AvoidModifyEnvironment()
         {
-            configuration.ModifyEnvironment = false;
+            _configuration.ModifyEnvironment = false;
             return this;
         }
     }

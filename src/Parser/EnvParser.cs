@@ -17,33 +17,33 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the parser.
         /// </summary>
-        private readonly EnvParserOptions configuration = new EnvParserOptions();
+        private readonly EnvParserOptions _configuration = new EnvParserOptions();
 
         /// <summary>
         /// Allows access to the key dictionary.
         /// </summary>
-        private IDictionary<string, string> keyValuePairs;
+        private IDictionary<string, string> _keyValuePairs;
 
-        /// <inheritdoc cref="keyValuePairs" />
-        internal IDictionary<string, string> KeyValuePairs { get => keyValuePairs; }
+        /// <inheritdoc cref="_keyValuePairs" />
+        internal IDictionary<string, string> KeyValuePairs { get => _keyValuePairs; }
 
         /// <summary>
         /// Allows access to the errors container of the parser.
         /// </summary>
-        private readonly EnvValidationResult validationResult = new EnvValidationResult();
+        private readonly EnvValidationResult _validationResult = new EnvValidationResult();
 
-        /// <inheritdoc cref="validationResult" />
-        internal EnvValidationResult ValidationResult { get => validationResult; }
+        /// <inheritdoc cref="_validationResult" />
+        internal EnvValidationResult ValidationResult { get => _validationResult; }
 
         /// <summary>
         /// Allows access to the name of the file that caused an error.
         /// </summary>
-        private string fileName;
+        private string _fileName;
 
         /// <summary>
         /// This property is for the loader to pass data to the parser.
         /// </summary>
-        internal string FileName { get => fileName; set => fileName = value; }
+        internal string FileName { get => _fileName; set => _fileName = value; }
 
         /// <inheritdoc />
         public IDictionary<string, string> Parse(string dataSource)
@@ -59,7 +59,7 @@ namespace DotEnv.Core
             {
                 ValidationResult.Add(errorMsg: FormatErrorMessage(DataSourceIsEmptyOrWhitespaceMessage, envFileName: FileName));
                 CreateAndThrowParserException();
-                return keyValuePairs;
+                return _keyValuePairs;
             }
 
             CreateDictionary();
@@ -94,15 +94,15 @@ namespace DotEnv.Core
                     var retrievedValue = GetEnvironmentVariable(key);
                     if (retrievedValue == null)
                         SetEnvironmentVariable(key, value);
-                    else if (configuration.ConcatDuplicateKeys != null)
+                    else if (_configuration.ConcatDuplicateKeys != null)
                         SetEnvironmentVariable(key, ConcatValues(retrievedValue, value));
-                    else if (configuration.OverwriteExistingVars)
+                    else if (_configuration.OverwriteExistingVars)
                         SetEnvironmentVariable(key, value);
                 }
             }
 
             CreateAndThrowParserException();
-            return keyValuePairs;
+            return _keyValuePairs;
         }
     }
 }

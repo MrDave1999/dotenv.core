@@ -16,7 +16,7 @@ namespace DotEnv.Core
         /// <exception cref="ParserException"></exception>
         internal void CreateAndThrowParserException()
         {
-            if (ValidationResult.HasError() && configuration.ThrowException)
+            if (ValidationResult.HasError() && _configuration.ThrowException)
                 throw new ParserException(message: ValidationResult.ErrorMessages);
         }
 
@@ -29,8 +29,8 @@ namespace DotEnv.Core
         private bool IsComment(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
-            line = configuration.TrimStartComments ? line.TrimStart() : line;
-            return line[0] == configuration.CommentChar;
+            line = _configuration.TrimStartComments ? line.TrimStart() : line;
+            return line[0] == _configuration.CommentChar;
         }
 
         /// <summary>
@@ -42,9 +42,9 @@ namespace DotEnv.Core
         private string ExtractKey(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
-            string key = line.Split(configuration.DelimiterKeyValuePair, MaxCount)[0];
-            key = configuration.TrimStartKeys ? key.TrimStart() : key;
-            key = configuration.TrimEndKeys ? key.TrimEnd() : key;
+            string key = line.Split(_configuration.DelimiterKeyValuePair, MaxCount)[0];
+            key = _configuration.TrimStartKeys ? key.TrimStart() : key;
+            key = _configuration.TrimEndKeys ? key.TrimEnd() : key;
             return key;
         }
 
@@ -57,9 +57,9 @@ namespace DotEnv.Core
         private string ExtractValue(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
-            string value = line.Split(configuration.DelimiterKeyValuePair, MaxCount)[1];
-            value = configuration.TrimStartValues ? value.TrimStart() : value;
-            value = configuration.TrimEndValues ? value.TrimEnd() : value;
+            string value = line.Split(_configuration.DelimiterKeyValuePair, MaxCount)[1];
+            value = _configuration.TrimStartValues ? value.TrimStart() : value;
+            value = _configuration.TrimEndValues ? value.TrimEnd() : value;
             return string.IsNullOrEmpty(value) ? " " : value;
         }
 
@@ -72,7 +72,7 @@ namespace DotEnv.Core
         private bool HasNoKeyValuePair(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
-            return line.Split(configuration.DelimiterKeyValuePair, MaxCount).Length != 2;
+            return line.Split(_configuration.DelimiterKeyValuePair, MaxCount).Length != 2;
         }
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace DotEnv.Core
         /// </summary>
         private void CreateDictionary()
         {
-            if (!configuration.ModifyEnvironment)
-                keyValuePairs = keyValuePairs ?? new Dictionary<string, string>();
+            if (!_configuration.ModifyEnvironment)
+                _keyValuePairs = _keyValuePairs ?? new Dictionary<string, string>();
         }
 
         /// <summary>
@@ -96,8 +96,8 @@ namespace DotEnv.Core
         private void SetEnvironmentVariable(string key, string value)
         {
             _ = key ?? throw new ArgumentNullException(nameof(key));
-            if (!configuration.ModifyEnvironment)
-                keyValuePairs[key] = value;
+            if (!_configuration.ModifyEnvironment)
+                _keyValuePairs[key] = value;
             else 
                 Environment.SetEnvironmentVariable(key, value);
         }
@@ -114,9 +114,9 @@ namespace DotEnv.Core
         private string GetEnvironmentVariable(string key)
         {
             _ = key ?? throw new ArgumentNullException(nameof(key));
-            if (!configuration.ModifyEnvironment)
+            if (!_configuration.ModifyEnvironment)
             {
-                keyValuePairs.TryGetValue(key, out string value);
+                _keyValuePairs.TryGetValue(key, out string value);
                 return value;
             }
             return Environment.GetEnvironmentVariable(key);
@@ -127,7 +127,7 @@ namespace DotEnv.Core
         /// </summary>
         /// <returns>A message that describes the error.</returns>
         private string GetVariableNotFoundMessage()
-            => configuration.ModifyEnvironment ? InterpolatedVariableNotFoundMessage : KeyNotFoundMessage;
+            => _configuration.ModifyEnvironment ? InterpolatedVariableNotFoundMessage : KeyNotFoundMessage;
 
         /// <summary>
         /// Concatenates a value with the current value of a variable.
@@ -136,7 +136,7 @@ namespace DotEnv.Core
         /// <param name="value">The value to be concatenated with the current value.</param>
         /// <returns>The string with the concatenated values.</returns>
         private string ConcatValues(string currentValue, string value)
-            => configuration.ConcatDuplicateKeys == ConcatKeysOptions.End ? $"{currentValue}{value}" : $"{value}{currentValue}";
+            => _configuration.ConcatDuplicateKeys == ConcatKeysOptions.End ? $"{currentValue}{value}" : $"{value}{currentValue}";
 
         /// <summary>
         /// Replaces the name of each environment variable embedded in the specified string with the string equivalent of the value of the variable, then returns the resulting string.
