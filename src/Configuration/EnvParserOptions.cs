@@ -7,7 +7,7 @@ namespace DotEnv.Core
     /// <summary>
     /// Represents the options for configuring various behaviors of the parser.
     /// </summary>
-    public class EnvParserOptions
+    internal class EnvParserOptions
     {
         /// <summary>
         /// A value indicating whether to remove leading white-spaces from values. Its default value is <c>true</c>.

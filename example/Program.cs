@@ -2,16 +2,6 @@ using System;
 
 namespace DotEnv.Core.Example
 {
-	class CustomEnvParser : EnvParser
-	{
-		protected override string ExtractKey(string line)
-		{
-			string key = base.ExtractKey(line);
-			Console.WriteLine($"CustomEnvParser.ExtractKey(string line) -> {key}");
-			return key;
-		}
-	}
-
 	class Program
 	{
 		static void Main(string[] args)
@@ -61,7 +51,7 @@ namespace DotEnv.Core.Example
 			Console.WriteLine("\n\n\n");
 
 			Console.WriteLine("---- EXAMPLE (6):");
-			new EnvLoader(new CustomEnvParser())
+			new EnvLoader()
 				.DisableParserException()
 				.SetDefaultEnvFileName("./files/.env.local")
 				.Load(out var result);

@@ -10,14 +10,19 @@ namespace DotEnv.Core
     public partial class EnvParser : IEnvParser
     {
         /// <summary>
+        /// The maximum number of substrings to be returned by the Split method.
+        /// </summary>
+        private const int MaxCount = 2;
+
+        /// <summary>
         /// Allows access to the configuration options for the parser.
         /// </summary>
-        protected readonly EnvParserOptions configuration = new EnvParserOptions();
+        private readonly EnvParserOptions configuration = new EnvParserOptions();
 
         /// <summary>
         /// Allows access to the key dictionary.
         /// </summary>
-        protected IDictionary<string, string> keyValuePairs;
+        private IDictionary<string, string> keyValuePairs;
 
         /// <inheritdoc cref="keyValuePairs" />
         internal IDictionary<string, string> KeyValuePairs { get => keyValuePairs; }
@@ -25,7 +30,7 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the errors container of the parser.
         /// </summary>
-        protected readonly EnvValidationResult validationResult = new EnvValidationResult();
+        private readonly EnvValidationResult validationResult = new EnvValidationResult();
 
         /// <inheritdoc cref="validationResult" />
         internal EnvValidationResult ValidationResult { get => validationResult; }
@@ -33,7 +38,7 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the name of the file that caused an error.
         /// </summary>
-        protected string fileName;
+        private string fileName;
 
         /// <summary>
         /// This property is for the loader to pass data to the parser.
@@ -45,8 +50,6 @@ namespace DotEnv.Core
             => Parse(dataSource, out _);
 
         /// <inheritdoc />
-        // This is the template method and defines the skeleton of the algorithm.
-        // See https://en.wikipedia.org/wiki/Template_method_pattern
         public IDictionary<string, string> Parse(string dataSource, out EnvValidationResult result)
         {
             _ = dataSource ?? throw new ArgumentNullException(nameof(dataSource));
@@ -100,16 +103,6 @@ namespace DotEnv.Core
 
             CreateAndThrowParserException();
             return keyValuePairs;
-        }
-
-        /// <summary>
-        /// Creates and throws an exception of type <see cref="ParserException" />.
-        /// </summary>
-        /// <exception cref="ParserException"></exception>
-        internal void CreateAndThrowParserException()
-        {
-            if (ValidationResult.HasError() && configuration.ThrowException)
-                throw new ParserException(message: ValidationResult.ErrorMessages);
         }
     }
 }
