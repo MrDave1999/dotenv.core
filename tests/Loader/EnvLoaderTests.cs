@@ -54,6 +54,20 @@ namespace DotEnv.Core.Tests.Loader
         }
 
         [TestMethod]
+        public void Load_WhenSetsEncoding_ShouldBeAbleToReadEnvironmentVariables()
+        {
+            new EnvLoader()
+                .SetBasePath("Loader/env_files")
+                .SetEncoding("UTF-8")
+                .AddEnvFile(".env.unicode.chinese")
+                .AddEnvFile(".env.unicode.russian")
+                .Load();
+
+            Assert.AreEqual(expected: "我们先 坐二号线% 然后 换一号线%", actual: GetEnvironmentVariable("UNICODE_CHINESE"));
+            Assert.AreEqual(expected: "Привет мир! Привет, чем занимаешься", actual: GetEnvironmentVariable("UNICODE_RUSSIAN"));
+        }
+
+        [TestMethod]
         public void Load_WhenLoadMultiEnvFiles_ShouldBeAbleToReadEnvironmentVariables()
         {
             string absolutePath = Directory.GetCurrentDirectory();
