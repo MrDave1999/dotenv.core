@@ -81,7 +81,7 @@ namespace DotEnv.Core
         private void CreateDictionary()
         {
             if (!_configuration.ModifyEnvironment)
-                _keyValuePairs = _keyValuePairs ?? new Dictionary<string, string>();
+                KeyValuePairs = KeyValuePairs ?? new Dictionary<string, string>();
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace DotEnv.Core
         {
             _ = key ?? throw new ArgumentNullException(nameof(key));
             if (!_configuration.ModifyEnvironment)
-                _keyValuePairs[key] = value;
+                KeyValuePairs[key] = value;
             else 
                 Environment.SetEnvironmentVariable(key, value);
         }
@@ -116,7 +116,7 @@ namespace DotEnv.Core
             _ = key ?? throw new ArgumentNullException(nameof(key));
             if (!_configuration.ModifyEnvironment)
             {
-                _keyValuePairs.TryGetValue(key, out string value);
+                KeyValuePairs.TryGetValue(key, out string value);
                 return value;
             }
             return Environment.GetEnvironmentVariable(key);
