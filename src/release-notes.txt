@@ -4,6 +4,7 @@ v2.0.0
 - Added support for .env file loads based on environment (development, test, staging, or production).
   - To use this feature you must use the LoadEnv method of the EnvLoader class.
 - Added the SetEnvironmentName method to the EnvLoader class.
+- Fixed problem with LoadEnv method not maintaining .env files priority.
 - The name of the method IgnoreParserExceptions has been changed to DisableParserException.
 - Added support for loading .env files without modifying the environment.
   - To use this feature you must use the AvoidModifyEnvironment method of the EnvLoader class.
