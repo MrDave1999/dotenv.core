@@ -36,9 +36,11 @@ namespace DotEnv.Core
         /// Reads the contents of a .env file and invokes the parser.
         /// </summary>
         /// <param name="envFile">The instance representing the .env file.</param>
+        /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
         /// <returns>true if the .env file exists, otherwise false.</returns>
         private bool ReadAndParse(EnvFile envFile)
         {
+            _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
             string fullPath = GetEnvFilePath(envFile.Path);
             if (fullPath == null)
                 return false;
@@ -58,8 +60,10 @@ namespace DotEnv.Core
         /// Sets the configuration of a .env file.
         /// </summary>
         /// <param name="envFile">The instance representing the .env file.</param>
+        /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
         private void SetConfigurationEnvFile(EnvFile envFile)
         {
+            _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
             if (!Path.HasExtension(envFile.Path))
                 envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
 
@@ -78,9 +82,11 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="envFileName">The name of the .env file to search for.</param>
         /// <returns>The path of the .env file, otherwise <c>null</c> if not found.</returns>
+        /// <exception cref="ArgumentNullException"><c>envFileName</c> is <c>null</c>.</exception>
         /// <inheritdoc cref="Load()" path="/remarks" />
         private string GetEnvFilePath(string envFileName)
         {
+            _ = envFileName ?? throw new ArgumentNullException(nameof(envFileName));
             if (Path.IsPathRooted(envFileName))
                 return File.Exists(envFileName) ? envFileName : null;
 
@@ -99,8 +105,10 @@ namespace DotEnv.Core
         /// Adds optional .env files to a collection.
         /// </summary>
         /// <param name="envFilesNames">The names of the .env files.</param>
+        /// <exception cref="ArgumentNullException"><c>envFilesNames</c> is <c>null</c>.</exception>
         private void AddOptionalEnvFiles(params string[] envFilesNames)
         {
+            _ = envFilesNames ?? throw new ArgumentNullException(nameof(envFilesNames));
             foreach (string envFileName in envFilesNames)
                 _configuration.EnvFiles.Add(new EnvFile { Path = envFileName, Optional = true });
         }
