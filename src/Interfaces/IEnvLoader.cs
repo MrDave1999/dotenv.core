@@ -38,7 +38,9 @@ namespace DotEnv.Core
         /// If the .env files are not found.
         /// This exception is only thrown if the <see cref="EnableFileNotFoundException" /> method is invoked.
         /// </exception>
-        /// <inheritdoc cref="EnvParser.Parse(string)" />
+        /// <returns>
+        /// A dictionary if the environment cannot be modified, or <c>null</c> if the environment can be modified.
+        /// </returns>
         IDictionary<string, string> Load();
 
         /// <summary>

@@ -21,7 +21,7 @@ namespace DotEnv.Core
         /// <exception cref="ArgumentNullException"><c>dataSource</c> is <c>null</c>.</exception>
         /// <exception cref="ParserException">
         /// If the parser encounters one or more errors.
-        /// This exception is only thrown if the <see cref="EnvParserOptions.ThrowException" /> property is set to <c>true</c>.
+        /// This exception is only thrown if the <see cref="DisableParserException" /> method is invoked.
         /// </exception>
         /// <returns>
         /// A dictionary if the environment cannot be modified, or <c>null</c> if the environment can be modified.
