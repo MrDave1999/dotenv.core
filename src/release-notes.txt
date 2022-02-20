@@ -13,8 +13,7 @@ v2.0.0
 - Added the Exists method to the EnvLoader class.
 - Added checks to some methods in case the parameter is null.
 - Added the SetEncoding(string) and AddEnvFile(string, string) method to the EnvLoader class.
-- The parser now throws an exception with all errors encountered instead of one at a time.
-- The loader now throws an exception with all errors encountered instead of one at a time.
+- The parser and loader now throws an exception with all errors encountered instead of one at a time.
 - It is no longer possible to override the helper methods of the EnvParser class. 
   This new version follows the encapsulation principle: "The fewer implementation details the client knows, the fewer changes they will have to make".
   - The fields and methods that were protected were changed to private in the EnvParser class.
