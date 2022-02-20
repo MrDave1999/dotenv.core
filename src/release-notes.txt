@@ -17,6 +17,8 @@ v2.0.0
 - The loader now throws an exception with all errors encountered instead of one at a time.
 - It is no longer possible to override the helper methods of the EnvParser class. 
   This new version follows the encapsulation principle: "The fewer implementation details the client knows, the fewer changes they will have to make".
+  - The fields and methods that were protected were changed to private in the EnvParser class.
+  - The parameterized constructor of the EnvLoader class was removed.
 
 v1.1.3
 - Fixed issue #11 so that the parser returns a line number that matches the line number of the .env file.
