@@ -17,13 +17,13 @@ namespace DotEnv.Core
         public string VariableName => _variableName;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="EnvVariableNotFoundException" /> class with the a specified error message, the name and value of the variable.
+        /// Initializes a new instance of the <see cref="EnvVariableNotFoundException" /> class with the a specified error message and variable name.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         /// <param name="variableName">The variable name that caused the exception.</param>
         public EnvVariableNotFoundException(
             string message, 
-            string variableName) : base(message)
+            string variableName = null) : base(message)
         {
             _variableName = variableName;
         }
@@ -31,6 +31,6 @@ namespace DotEnv.Core
         /// <summary>
         /// Gets a message that describes the current exception.
         /// </summary>
-        public override string Message => $"{base.Message} (Variable Name: {_variableName})";
+        public override string Message => _variableName != null ? $"{base.Message} (Variable Name: {_variableName})" : base.Message;
     }
 }
