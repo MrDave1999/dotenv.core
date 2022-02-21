@@ -61,13 +61,13 @@ namespace DotEnv.Core.Example
 			Console.WriteLine("\n\n\n");
 
 			Console.WriteLine("---- EXAMPLE (7):");
-			var dict = new EnvLoader()
+			var keyValuePairs = new EnvLoader()
 						.AvoidModifyEnvironment()
 						.AddEnvFiles("./", "./files/", "files/sqlite", "./files/pgsql/.env.local")
 						.Load();
 			Console.WriteLine("Dictionary:");
-			foreach (var pair in dict)
-				Console.WriteLine($"{pair.Key}, {pair.Value}");
+			foreach (var keyValuePair in keyValuePairs)
+				Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
 			Console.WriteLine("\n\n\n");
 
 			Console.WriteLine("---- EXAMPLE (8):");
@@ -82,7 +82,7 @@ namespace DotEnv.Core.Example
 			Console.WriteLine("\n\n\n");
 
 			Console.WriteLine("---- EXAMPLE (9):");
-			dict = new EnvLoader()
+			keyValuePairs = new EnvLoader()
 					.AllowConcatDuplicateKeys()
 					.SetBasePath("./files/environment")
 					.AvoidModifyEnvironment()
@@ -92,8 +92,8 @@ namespace DotEnv.Core.Example
 				Console.WriteLine(result.ErrorMessages);
 			else
             {
-				foreach(var pair in dict)
-					Console.WriteLine($"{pair.Key}, {pair.Value}");
+				foreach(var keyValuePair in keyValuePairs)
+					Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
 			}
 			Console.WriteLine("\n\n\n");
 		}

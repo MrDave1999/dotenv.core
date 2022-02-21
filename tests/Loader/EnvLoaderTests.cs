@@ -221,12 +221,12 @@ namespace DotEnv.Core.Tests.Loader
                             .SetEnvironmentName("test")
                             .SetBasePath("Loader/env_files/environment/test");
 
-            var dict = loader.LoadEnv();
+            var keyValuePairs = loader.LoadEnv();
 
-            Assert.IsNotNull(dict["TEST_ENV"]);
-            Assert.IsNotNull(dict["TEST_ENV_TEST"]);
-            Assert.IsNotNull(dict["TEST_ENV_TEST_LOCAL"]);
-            Assert.IsNotNull(dict["TEST_ENV_LOCAL"]);
+            Assert.IsNotNull(keyValuePairs["TEST_ENV"]);
+            Assert.IsNotNull(keyValuePairs["TEST_ENV_TEST"]);
+            Assert.IsNotNull(keyValuePairs["TEST_ENV_TEST_LOCAL"]);
+            Assert.IsNotNull(keyValuePairs["TEST_ENV_LOCAL"]);
         }
 
         [TestMethod]

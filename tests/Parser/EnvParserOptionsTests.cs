@@ -233,13 +233,13 @@ namespace DotEnv.Core.Tests.Parser
                 AVOID_MOD_2 = ${AVOID_MOD_1}
             ";
 
-            var dict = new EnvParser()
+            var keyValuePairs = new EnvParser()
                            .AvoidModifyEnvironment()
                            .AllowConcatDuplicateKeys()
                            .Parse(env);
 
-            Assert.AreEqual(expected: "HelloWorld", actual: dict["AVOID_MOD_1"]);
-            Assert.AreEqual(expected: "HelloWorld", actual: dict["AVOID_MOD_2"]);
+            Assert.AreEqual(expected: "HelloWorld", actual: keyValuePairs["AVOID_MOD_1"]);
+            Assert.AreEqual(expected: "HelloWorld", actual: keyValuePairs["AVOID_MOD_2"]);
             Assert.IsNull(GetEnvironmentVariable("AVOID_MOD_1"));
             Assert.IsNull(GetEnvironmentVariable("AVOID_MOD_2"));
         }
