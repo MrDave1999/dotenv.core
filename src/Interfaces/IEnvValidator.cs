@@ -19,7 +19,7 @@ namespace DotEnv.Core
         /// <exception cref="InvalidOperationException">The required keys are not set before validation.</exception>
         /// <exception cref="EnvVariableNotFoundException">
         /// If the required keys are not present in the current environment.
-        /// This exception is only thrown if the <see cref="IgnoreException" /> method is invoked.
+        /// This exception is not thrown if the <see cref="IgnoreException" /> method is invoked.
         /// </exception>
         void Validate();
 
