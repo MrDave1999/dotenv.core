@@ -32,7 +32,7 @@ namespace DotEnv.Core
         /// <remarks>This method starts find the .env file in the current directory and if it does not found it, it starts find in the parent directories of the current directory.</remarks>
         /// <exception cref="ParserException">
         /// If the parser encounters one or more errors.
-        /// This exception is only thrown if the <see cref="DisableParserException" /> method is invoked.
+        /// This exception is not thrown if the <see cref="DisableParserException" /> method is invoked.
         /// </exception>
         /// <exception cref="FileNotFoundException">
         /// If the .env files are not found.
