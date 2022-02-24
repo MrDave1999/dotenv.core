@@ -31,6 +31,15 @@ namespace DotEnv.Core
         /// <summary>
         /// Gets a message that describes the current exception.
         /// </summary>
-        public override string Message => _variableName != null ? $"{base.Message} (Variable Name: {_variableName})" : base.Message;
+        public override string Message => FormatErrorMessage(base.Message, _variableName);
+
+        /// <summary>
+        /// Formats an error message.
+        /// </summary>
+        /// <param name="message">The message that describes the error.</param>
+        /// <param name="variableName">The variable name that caused the error.</param>
+        /// <returns>A formatted error message.</returns>
+        internal static string FormatErrorMessage(string message, string variableName)
+            => variableName != null ? $"{message} (Variable Name: {variableName})" : message;
     }
 }
