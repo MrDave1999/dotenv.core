@@ -21,5 +21,7 @@ namespace DotEnv.Core
         public const string FileNotPresentLoadEnvMessage = "Any of these .env files must be present in the root directory of your project";
         public const string OptionInvalidMessage = "The option is invalid.";
         public const string ArgumentIsNullOrWhiteSpaceMessage = "The argument cannot be an empty string or consists only of white-space characters.";
+        public const string RequiredKeysNotSetMessage = "The required keys must be set before invoking the 'Validate' method.";
+        public const string LengthOfParamsListIsZero = "The length of the params list is zero.";
     }
 }
