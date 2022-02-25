@@ -19,7 +19,7 @@ namespace DotEnv.Core.Tests.Loader
             string basePath = $"Loader{sep}env_files{sep}validation{sep}";
             new EnvLoader()
                 .SetBasePath(basePath)
-                .DisableParserException()
+                .IgnoreParserException()
                 .AddEnvFile(".env.validation.result1")
                 .AddEnvFile(".env.validation.result2")
                 .AddEnvFile(".env.validation.result3")
@@ -64,7 +64,7 @@ namespace DotEnv.Core.Tests.Loader
 
             new EnvLoader()
                 .SetBasePath(basePath)
-                .DisableParserException()
+                .IgnoreParserException()
                 .LoadEnv(out result);
 
             msg = result.ErrorMessages;

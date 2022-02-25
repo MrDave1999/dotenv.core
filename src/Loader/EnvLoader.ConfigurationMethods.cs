@@ -180,9 +180,9 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
-        public IEnvLoader DisableParserException()
+        public IEnvLoader IgnoreParserException()
         {
-            _parser.DisableParserException();
+            _parser.IgnoreParserException();
             return this;
         }
 

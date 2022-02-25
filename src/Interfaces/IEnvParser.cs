@@ -21,7 +21,7 @@ namespace DotEnv.Core
         /// <exception cref="ArgumentNullException"><c>dataSource</c> is <c>null</c>.</exception>
         /// <exception cref="ParserException">
         /// If the parser encounters one or more errors.
-        /// This exception is not thrown if the <see cref="DisableParserException" /> method is invoked.
+        /// This exception is not thrown if the <see cref="IgnoreParserException" /> method is invoked.
         /// </exception>
         /// <returns>
         /// A dictionary if the environment cannot be modified, or <c>null</c> if the environment can be modified.
@@ -108,7 +108,7 @@ namespace DotEnv.Core
         /// Disables/ignores <see cref="ParserException" />. This method tells the parser not to throw an exception when it encounters one or more errors.
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
-        IEnvParser DisableParserException();
+        IEnvParser IgnoreParserException();
 
         /// <summary>
         /// Avoids modifying the environment of the current process. 

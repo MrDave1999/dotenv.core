@@ -52,7 +52,7 @@ namespace DotEnv.Core.Example
 
 			Console.WriteLine("---- EXAMPLE (6):");
 			new EnvLoader()
-				.DisableParserException()
+				.IgnoreParserException()
 				.SetDefaultEnvFileName("./files/.env.local")
 				.Load(out var result);
 

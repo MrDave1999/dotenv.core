@@ -143,7 +143,7 @@ namespace DotEnv.Core.Tests.Parser
         }
 
         [TestMethod]
-        public void Parse_WhenDisabledParserException_ShouldNotThrowParserException()
+        public void Parse_WhenIgnoresParserException_ShouldNotThrowParserException()
         {
             string env = @"
                 asdasdasdasd
@@ -159,7 +159,7 @@ namespace DotEnv.Core.Tests.Parser
             ";
 
             new EnvParser()
-                .DisableParserException()
+                .IgnoreParserException()
                 .Parse(env);
 
             Assert.AreEqual(expected: "VAL1  ...", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_1"));

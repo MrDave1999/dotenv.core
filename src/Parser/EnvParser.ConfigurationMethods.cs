@@ -90,7 +90,7 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
-        public IEnvParser DisableParserException()
+        public IEnvParser IgnoreParserException()
         {
             _configuration.ThrowException = false;
             return this;
