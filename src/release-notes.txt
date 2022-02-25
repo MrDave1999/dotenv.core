@@ -5,7 +5,7 @@ v2.0.0
   - To use this feature you must use the LoadEnv method of the EnvLoader class.
 - Added the SetEnvironmentName method to the EnvLoader class.
 - Fixed problem with LoadEnv method not maintaining .env files priority.
-- The name of the method IgnoreParserExceptions has been changed to DisableParserException.
+- The name of the method IgnoreParserExceptions has been changed to IgnoreParserException.
 - Added support for loading .env files without modifying the environment.
   - To use this feature you must use the AvoidModifyEnvironment method of the EnvLoader class.
 - Added a new Env helper class to perform checks with the current environment.
@@ -14,6 +14,7 @@ v2.0.0
 - Added checks to some methods in case the parameter is null.
 - Added the SetEncoding(string) and AddEnvFile(string, string) method to the EnvLoader class.
 - The parser and loader now throws an exception with all errors encountered instead of one at a time.
+- Added the EnvValidator class that validates whether the keys required by the application exist in the current environment.
 - It is no longer possible to override the helper methods of the EnvParser class. 
   This new version follows the encapsulation principle: "The fewer implementation details the client knows, the fewer changes they will have to make".
   - The fields and methods that were protected were changed to private in the EnvParser class.
