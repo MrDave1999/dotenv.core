@@ -23,7 +23,7 @@ namespace DotEnv.Core
         /// <param name="variableName">The variable name that caused the exception.</param>
         public EnvVariableNotFoundException(
             string message, 
-            string variableName = null) : base(message)
+            string variableName) : base(message)
         {
             _variableName = variableName;
         }
@@ -31,15 +31,6 @@ namespace DotEnv.Core
         /// <summary>
         /// Gets a message that describes the current exception.
         /// </summary>
-        public override string Message => FormatErrorMessage(base.Message, _variableName);
-
-        /// <summary>
-        /// Formats an error message.
-        /// </summary>
-        /// <param name="message">The message that describes the error.</param>
-        /// <param name="variableName">The variable name that caused the error.</param>
-        /// <returns>A formatted error message.</returns>
-        internal static string FormatErrorMessage(string message, string variableName)
-            => variableName != null ? $"{message} (Variable Name: {variableName})" : message;
+        public override string Message => FormattingMessage.FormatEnvVariableNotFoundExceptionMessage(base.Message, _variableName);
     }
 }
