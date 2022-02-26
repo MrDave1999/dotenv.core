@@ -45,7 +45,7 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         /// <param name="envFileName">The .env file name.</param>
-        /// <returns></returns>
+        /// <returns>A formatted error message.</returns>
         public static string FormatFileNotFoundExceptionMessage(string message, string envFileName = null)
             => envFileName != null ? $"{message} (FileName: {envFileName})" : message;
 
@@ -63,7 +63,7 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         /// <param name="encodingName">The encoding name that caused the error.</param>
-        /// <returns></returns>
+        /// <returns>A formatted error message.</returns>
         public static string FormatEncodingNotFoundMessage(string message, string encodingName = null)
             => encodingName != null ? $"'{encodingName}' {message}" : message;
     }
