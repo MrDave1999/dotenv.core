@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.EnvFileNotFoundException;
+using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core
 {
@@ -40,7 +40,7 @@ namespace DotEnv.Core
                 SetConfigurationEnvFile(envFile);
                 bool exists = ReadAndParse(envFile);
                 if (!exists)
-                    _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
+                    _validationResult.Add(errorMsg: FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFile.Path));
             }
 
             _parser.CreateAndThrowParserException();
@@ -76,7 +76,7 @@ namespace DotEnv.Core
                 envFile.Exists = ReadAndParse(envFile);
                 // This condition was added in case the client adds a new .env file with the 'AddEnvFile' method.
                 if (!envFile.Exists && !envFile.Optional)
-                    _validationResult.Add(errorMsg: FormatErrorMessage(FileNotFoundMessage, envFile.Path));
+                    _validationResult.Add(errorMsg: FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFile.Path));
             }
 
             if (enviroment == null)

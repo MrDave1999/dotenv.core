@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.ParserException;
+using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core
 {
@@ -155,14 +155,14 @@ namespace DotEnv.Core
 
                 if (string.IsNullOrWhiteSpace(variable))
                 {
-                    ValidationResult.Add(errorMsg: FormatErrorMessage(VariableIsAnEmptyStringMessage, lineNumber: lineNumber, envFileName: FileName));
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(VariableIsAnEmptyStringMessage, lineNumber: lineNumber, envFileName: FileName));
                     return string.Empty;
                 }
 
                 var retrievedValue = GetEnvironmentVariable(variable);
                 if (retrievedValue == null)
                 {
-                    ValidationResult.Add(errorMsg: FormatErrorMessage(GetVariableNotFoundMessage(), actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(GetVariableNotFoundMessage(), actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
                     return string.Empty;
                 }
 

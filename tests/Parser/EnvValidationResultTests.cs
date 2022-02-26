@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core.Tests.Parser
 {
@@ -42,21 +43,22 @@ namespace DotEnv.Core.Tests.Parser
             Assert.AreEqual(expected: true, actual: result.HasError());
             Assert.AreEqual(expected: 12, actual: result.Count);
 
-            StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is an error, Line: 1)");
-            StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2)");
-            StringAssert.Contains(msg, $"{InterpolatedVariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3)");
-            StringAssert.Contains(msg, $"{InterpolatedVariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND_2, Line: 3)");
-            StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5)");
-            StringAssert.Contains(msg, $"{VariableIsAnEmptyStringMessage} (Line: 5)");
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "This is an error", lineNumber: 1));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: 2));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(InterpolatedVariableNotFoundMessage, actualValue: "VARIABLE_NOT_FOUND", lineNumber: 3));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(InterpolatedVariableNotFoundMessage, actualValue: "VARIABLE_NOT_FOUND_2", lineNumber: 3));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(VariableIsAnEmptyStringMessage, lineNumber: 5));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(VariableIsAnEmptyStringMessage, lineNumber: 5));
 
-            StringAssert.Contains(msg, DataSourceIsEmptyOrWhitespaceMessage);
+            StringAssert.Contains(msg, FormatParserExceptionMessage(DataSourceIsEmptyOrWhitespaceMessage));
 
-            StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a line, Line: 1)");
-            StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2)");
-            StringAssert.Contains(msg, $"{InterpolatedVariableNotFoundMessage} (Actual Value: VARIABLE_NOT_FOUND, Line: 3)");
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "This is a line", lineNumber: 1));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: 2));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(InterpolatedVariableNotFoundMessage, actualValue: "VARIABLE_NOT_FOUND", lineNumber: 3));
 
-            StringAssert.Contains(msg, $"{LineHasNoKeyValuePairMessage} (Actual Value: This is a message, Line: 1)");
-            StringAssert.Contains(msg, $"{KeyIsAnEmptyStringMessage} (Line: 2)");
+
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "This is a message", lineNumber: 1));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: 2));
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.EnvVariableNotFoundException;
+using static DotEnv.Core.FormattingMessage;
 using System.Linq;
 
 namespace DotEnv.Core
@@ -35,7 +35,7 @@ namespace DotEnv.Core
             {
                 var retrievedValue = Environment.GetEnvironmentVariable(key);
                 if (retrievedValue == null)
-                    _validationResult.Add(FormatErrorMessage(VariableNotFoundMessage, key));
+                    _validationResult.Add(FormatEnvVariableNotFoundExceptionMessage(VariableNotFoundMessage, key));
             }
 
             if (_validationResult.HasError() && _configuration.ThrowException)

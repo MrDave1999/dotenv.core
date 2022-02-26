@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.ParserException;
+using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core
 {
@@ -47,7 +47,7 @@ namespace DotEnv.Core
 
             if (string.IsNullOrWhiteSpace(dataSource))
             {
-                ValidationResult.Add(errorMsg: FormatErrorMessage(DataSourceIsEmptyOrWhitespaceMessage, envFileName: FileName));
+                ValidationResult.Add(errorMsg: FormatParserExceptionMessage(DataSourceIsEmptyOrWhitespaceMessage, envFileName: FileName));
                 CreateAndThrowParserException();
                 return KeyValuePairs;
             }
@@ -67,14 +67,14 @@ namespace DotEnv.Core
 
                     if (HasNoKeyValuePair(line))
                     {
-                        ValidationResult.Add(errorMsg: FormatErrorMessage(LineHasNoKeyValuePairMessage, actualValue: line, lineNumber: i, envFileName: FileName));
+                        ValidationResult.Add(errorMsg: FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: line, lineNumber: i, envFileName: FileName));
                         continue;
                     }
 
                     var key = ExtractKey(line);
                     if (string.IsNullOrEmpty(key))
                     {
-                        ValidationResult.Add(errorMsg: FormatErrorMessage(KeyIsAnEmptyStringMessage, lineNumber: i, envFileName: FileName));
+                        ValidationResult.Add(errorMsg: FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: i, envFileName: FileName));
                         continue;
                     }
 
