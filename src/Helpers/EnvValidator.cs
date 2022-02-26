@@ -47,7 +47,7 @@ namespace DotEnv.Core
         {
             _ = keys ?? throw new ArgumentNullException(nameof(keys));
             if (keys.IsEmpty())
-                throw new ArgumentException(LengthOfParamsListIsZero, nameof(keys));
+                throw new ArgumentException(LengthOfParamsListIsZeroMessage, nameof(keys));
 
             _configuration.RequiredKeys = keys;
             return this;
