@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core
 {
@@ -49,15 +50,15 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
-        public IEnvLoader AddEnvFile(string path, string name)
+        public IEnvLoader AddEnvFile(string path, string encodingName)
         {
             try
             {
-                AddEnvFile(path, Encoding.GetEncoding(name));
+                AddEnvFile(path, Encoding.GetEncoding(encodingName));
             }
-            catch(ArgumentException e)
+            catch(ArgumentException)
             {
-                throw e;
+                throw new ArgumentException(FormatEncodingNotFoundMessage(EncodingNotFoundMessage, encodingName), nameof(encodingName));
             }
             return this;
         }
@@ -71,15 +72,15 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
-        public IEnvLoader SetEncoding(string name)
+        public IEnvLoader SetEncoding(string encodingName)
         {
             try
             {
-                _configuration.Encoding = Encoding.GetEncoding(name);
+                _configuration.Encoding = Encoding.GetEncoding(encodingName);
             }
-            catch(ArgumentException e)
+            catch(ArgumentException)
             {
-                throw e;
+                throw new ArgumentException(FormatEncodingNotFoundMessage(EncodingNotFoundMessage, encodingName), nameof(encodingName));
             }
             return this;
         }

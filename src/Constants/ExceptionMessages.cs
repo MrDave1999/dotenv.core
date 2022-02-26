@@ -23,5 +23,6 @@ namespace DotEnv.Core
         public const string ArgumentIsNullOrWhiteSpaceMessage = "The argument cannot be an empty string or consists only of white-space characters.";
         public const string RequiredKeysNotSetMessage = "The required keys must be set before invoking the EnvValidator.Validate method.";
         public const string LengthOfParamsListIsZeroMessage = "The length of the params list is zero.";
+        public const string EncodingNotFoundMessage = "is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.";
     }
 }

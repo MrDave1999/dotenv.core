@@ -88,14 +88,14 @@ namespace DotEnv.Core
         /// Adds an .env file with its encoding name in a collection.
         /// </summary>
         /// <param name="path">The .env file path to add.</param>
-        /// <param name="name">The encoding name of the .env file.</param>
+        /// <param name="encodingName">The encoding name of the .env file.</param>
         /// <exception cref="ArgumentNullException"><c>path</c>, or <c>name</c> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException">
-        /// <c>name</c> is not a valid code page name or
+        /// <c>encodingName</c> is not a valid code page name or
         /// is not supported by the underlying platform.
         /// </exception>
         /// <returns>An instance implementing the fluent interface.</returns>
-        IEnvLoader AddEnvFile(string path, string name);
+        IEnvLoader AddEnvFile(string path, string encodingName);
 
         /// <summary>
         /// Sets the encoding of the .env files.
@@ -108,14 +108,14 @@ namespace DotEnv.Core
         /// <summary>
         /// Sets the encoding name of the .env files.
         /// </summary>
-        /// <param name="name">The name of encoding to set.</param>
+        /// <param name="encodingName">The name of encoding to set.</param>
         /// <exception cref="ArgumentNullException"><c>name</c> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException">
-        /// <c>name</c> is not a valid code page name or
+        /// <c>encodingName</c> is not a valid code page name or
         /// is not supported by the underlying platform.
         /// </exception>
         /// <returns>An instance implementing the fluent interface.</returns>
-        IEnvLoader SetEncoding(string name);
+        IEnvLoader SetEncoding(string encodingName);
 
         /// <summary>
         /// Enables <see cref="FileNotFoundException" />. This method tells the loader to throw an exception when one or more .env files are not found.
