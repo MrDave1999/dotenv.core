@@ -68,6 +68,26 @@ namespace DotEnv.Core.Tests.Loader
         }
 
         [TestMethod]
+        public void SetEncoding_WhenEncodingNameIsNotSupported_ShouldThrowArgumentException()
+        {
+            var loader = new EnvLoader();
+
+            void action() => loader.SetEncoding("UTF-88");
+
+            Assert.ThrowsException<ArgumentException>(action);
+        }
+
+        [TestMethod]
+        public void AddEnvFile_WhenEncodingNameIsNotSupported_ShouldThrowArgumentException()
+        {
+            var loader = new EnvLoader();
+
+            void action() => loader.AddEnvFile(".env", "UTF-88");
+
+            Assert.ThrowsException<ArgumentException>(action);
+        }
+
+        [TestMethod]
         public void Load_WhenLoadMultiEnvFiles_ShouldBeAbleToReadEnvironmentVariables()
         {
             string absolutePath = Directory.GetCurrentDirectory();
