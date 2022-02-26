@@ -17,6 +17,14 @@ namespace DotEnv.Core
         public string VariableName => _variableName;
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="EnvVariableNotFoundException" /> class.
+        /// </summary>
+        public EnvVariableNotFoundException()
+        {
+
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="EnvVariableNotFoundException" /> class with the a specified error message and variable name.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
