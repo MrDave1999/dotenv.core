@@ -11,3 +11,6 @@ apiRules:
 - exclude:
     uidRegex: ^DotEnv\.Core\.EnvValidationResult\.System#Collections#IEnumerable#GetEnumerator
     type: method
+- exclude:
+    uidRegex: ^DotEnv\.Core\.FormattingMessage
+    type: class
