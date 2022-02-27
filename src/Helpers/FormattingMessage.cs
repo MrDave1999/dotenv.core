@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static DotEnv.Core.EnvFileNames;
 
 namespace DotEnv.Core
 {
@@ -74,6 +75,6 @@ namespace DotEnv.Core
         /// <param name="environment">The name of the environment.</param>
         /// <returns>A formatted error message.</returns>
         public static string FormatFileNotPresentLoadEnvMessage(string message, string environment = null)
-            => environment != null ? $"{message}: .env.{environment}.local or .env.local" : $"{message}: .env.development.local or .env.dev.local or .env.local";
+            => environment != null ? $"{message}: .env.{environment}.local or {EnvLocalName}" : $"{message}: {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
     }
 }

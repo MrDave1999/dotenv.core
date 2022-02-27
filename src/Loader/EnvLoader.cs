@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.EnvFileNames;
 using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core
@@ -62,10 +63,10 @@ namespace DotEnv.Core
             var copyEnvFiles = envFiles.ToArray();
             envFiles.Clear();
 
-            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}.local" } : new[] { ".env.development.local", ".env.dev.local" });
-            AddOptionalEnvFiles(".env.local");
-            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}" } : new[] { ".env.development", ".env.dev" });
-            AddOptionalEnvFiles(".env");
+            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}.local" } : new[] { EnvDevelopmentLocalName, EnvDevLocalName });
+            AddOptionalEnvFiles(EnvLocalName);
+            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}" } : new[] { EnvDevelopmentName, EnvDevName });
+            AddOptionalEnvFiles(EnvName);
 
             // The .env files that were added with the 'AddEnvFile' method are added at the end of the collection.
             envFiles.AddRange(copyEnvFiles);
