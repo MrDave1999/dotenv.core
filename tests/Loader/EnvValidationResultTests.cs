@@ -80,7 +80,7 @@ namespace DotEnv.Core.Tests.Loader
             StringAssert.Contains(msg, FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: 2, envFileName: fileName));
             StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "PROD", lineNumber: 5, envFileName: fileName));
 
-            var value = "This is a error";
+            var value = "This is an error";
             fileName = $"{basePath}.env.local";
             StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 4, envFileName: fileName));
 
