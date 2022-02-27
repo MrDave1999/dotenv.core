@@ -25,6 +25,19 @@ namespace DotEnv.Core.Tests.Loader
         }
 
         [TestMethod]
+        public void Load_WhenEnvFilesAreOptional_ShouldNotGenerateErrors()
+        {
+            new EnvLoader()
+                .AddEnvFile(".env.example1", Encoding.UTF8, optional: true)
+                .AddEnvFile(".env.example2", encodingName: "UTF-8", optional: true)
+                .AddEnvFile(".env.example3", optional: true)
+                .Load(out var result);
+
+            Assert.AreEqual(expected: false, actual: result.HasError());
+            Assert.AreEqual(expected: 0, actual: result.Count);
+        }
+
+        [TestMethod]
         public void Load_WhenLoadEnvFileWithDefaultConfig_ShouldBeAbleToReadEnvironmentVariables()
         {
             var loader = new EnvLoader();
