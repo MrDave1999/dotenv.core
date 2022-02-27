@@ -10,62 +10,62 @@ namespace DotEnv.Core.Tests.Helpers
         [TestMethod]
         public void IsDevelopment_WhenCurrentEnvironmentIsDevelopmentOrDev_ShouldReturnsTrue()
         {
-            SetEnvironmentVariable("DOTNET_ENV", "development");
+            Env.CurrentEnvironment = "development";
             Assert.AreEqual(expected: true, actual: Env.IsDevelopment());
-            SetEnvironmentVariable("DOTNET_ENV", "DEVELOPMENT");
+            Env.CurrentEnvironment = "DEVELOPMENT";
             Assert.AreEqual(expected: true, actual: Env.IsDevelopment());
-            SetEnvironmentVariable("DOTNET_ENV", "dev");
+            Env.CurrentEnvironment = "dev";
             Assert.AreEqual(expected: true, actual: Env.IsDevelopment());
-            SetEnvironmentVariable("DOTNET_ENV", "DEV");
+            Env.CurrentEnvironment = "DEV";
             Assert.AreEqual(expected: true, actual: Env.IsDevelopment());
-            SetEnvironmentVariable("DOTNET_ENV", null);
+            Env.CurrentEnvironment = null;
             Assert.AreEqual(expected: false, actual: Env.IsDevelopment());
         }
 
         [TestMethod]
         public void IsTest_WhenCurrentEnvironmentIsTest_ShouldReturnsTrue()
         {
-            SetEnvironmentVariable("DOTNET_ENV", "test");
+            Env.CurrentEnvironment = "test";
             Assert.AreEqual(expected: true, actual: Env.IsTest());
-            SetEnvironmentVariable("DOTNET_ENV", "TEST");
+            Env.CurrentEnvironment = "TEST";
             Assert.AreEqual(expected: true, actual: Env.IsTest());
-            SetEnvironmentVariable("DOTNET_ENV", null);
+            Env.CurrentEnvironment = null;
             Assert.AreEqual(expected: false, actual: Env.IsTest());
         }
 
         [TestMethod]
         public void IsStaging_WhenCurrentEnvironmentIsStaging_ShouldReturnsTrue()
         {
-            SetEnvironmentVariable("DOTNET_ENV", "staging");
+            Env.CurrentEnvironment = "staging";
             Assert.AreEqual(expected: true, actual: Env.IsStaging());
-            SetEnvironmentVariable("DOTNET_ENV", "STAGING");
+            Env.CurrentEnvironment = "STAGING";
             Assert.AreEqual(expected: true, actual: Env.IsStaging());
-            SetEnvironmentVariable("DOTNET_ENV", null);
+            Env.CurrentEnvironment = null;
             Assert.AreEqual(expected: false, actual: Env.IsStaging());
         }
 
         [TestMethod]
         public void IsProduction_WhenCurrentEnvironmentIsProductionOrProd_ShouldReturnsTrue()
         {
-            SetEnvironmentVariable("DOTNET_ENV", "production");
+            Env.CurrentEnvironment = "production";
             Assert.AreEqual(expected: true, actual: Env.IsProduction());
-            SetEnvironmentVariable("DOTNET_ENV", "PRODUCTION");
+            Env.CurrentEnvironment = "PRODUCTION";
             Assert.AreEqual(expected: true, actual: Env.IsProduction());
-            SetEnvironmentVariable("DOTNET_ENV", "prod");
+            Env.CurrentEnvironment = "prod";
             Assert.AreEqual(expected: true, actual: Env.IsProduction());
-            SetEnvironmentVariable("DOTNET_ENV", "PROD");
+            Env.CurrentEnvironment = "PROD";
             Assert.AreEqual(expected: true, actual: Env.IsProduction());
-            SetEnvironmentVariable("DOTNET_ENV", null);
+            Env.CurrentEnvironment = null;
             Assert.AreEqual(expected: false, actual: Env.IsProduction());
         }
 
         [TestMethod]
         public void IsEnvironment_WhenCurrentEnvironmentIsProductionAndValueSpecifiedIsProduction_ShouldReturnsTrue()
         {
-            SetEnvironmentVariable("DOTNET_ENV", "production");
+            Env.CurrentEnvironment = "production";
             Assert.AreEqual(expected: true, actual: Env.IsEnvironment("production"));
             Assert.AreEqual(expected: true, actual: Env.IsEnvironment("PRODUCTION"));
-            SetEnvironmentVariable("DOTNET_ENV", null);
+            Env.CurrentEnvironment = null;
             Assert.AreEqual(expected: false, actual: Env.IsEnvironment("production"));
         }
     }
