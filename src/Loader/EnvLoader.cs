@@ -85,14 +85,14 @@ namespace DotEnv.Core
                 var envDevLocal = envFiles[1];         // .env.dev.local
                 var envLocal = envFiles[2];            // .env.local
                 if (!envDevelopmentLocal.Exists && !envDevLocal.Exists && !envLocal.Exists)
-                    _validationResult.Add(errorMsg: $"{FileNotPresentLoadEnvMessage}: .env.development.local or .env.dev.local or .env.local");
+                    _validationResult.Add(errorMsg: FormatFileNotPresentLoadEnvMessage(FileNotPresentLoadEnvMessage));
             }
             else
             {
                 var envEnvironmentLocal = envFiles[0];  // .env.[environment].local
                 var envLocal = envFiles[1];             // .env.local
                 if (!envEnvironmentLocal.Exists && !envLocal.Exists)
-                    _validationResult.Add(errorMsg: $"{FileNotPresentLoadEnvMessage}: .env.{enviroment}.local or .env.local");
+                    _validationResult.Add(errorMsg: FormatFileNotPresentLoadEnvMessage(FileNotPresentLoadEnvMessage, enviroment));
             }
 
             _parser.CreateAndThrowParserException();

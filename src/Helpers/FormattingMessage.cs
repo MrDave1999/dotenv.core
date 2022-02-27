@@ -66,5 +66,14 @@ namespace DotEnv.Core
         /// <returns>A formatted error message.</returns>
         public static string FormatEncodingNotFoundMessage(string message, string encodingName = null)
             => encodingName != null ? $"'{encodingName}' {message}" : message;
+
+        /// <summary>
+        /// Format an error message in case the .env file is not present.
+        /// </summary>
+        /// <param name="message">The message that describes the error.</param>
+        /// <param name="environment">The name of the environment.</param>
+        /// <returns>A formatted error message.</returns>
+        public static string FormatFileNotPresentLoadEnvMessage(string message, string environment = null)
+            => environment != null ? $"{message}: .env.{environment}.local or .env.local" : $"{message}: .env.development.local or .env.dev.local or .env.local";
     }
 }
