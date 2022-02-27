@@ -57,14 +57,14 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IDictionary<string, string> LoadEnv(out EnvValidationResult result)
         {
-            var enviroment = Environment.GetEnvironmentVariable("DOTNET_ENV") ?? _configuration.EnvironmentName;
+            var environment = Environment.GetEnvironmentVariable("DOTNET_ENV") ?? _configuration.EnvironmentName;
             var envFiles = _configuration.EnvFiles;
             var copyEnvFiles = envFiles.ToArray();
             envFiles.Clear();
 
-            AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}.local" } : new[] { ".env.development.local", ".env.dev.local" });
+            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}.local" } : new[] { ".env.development.local", ".env.dev.local" });
             AddOptionalEnvFiles(".env.local");
-            AddOptionalEnvFiles(enviroment != null ? new[] { $".env.{enviroment}" } : new[] { ".env.development", ".env.dev" });
+            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}" } : new[] { ".env.development", ".env.dev" });
             AddOptionalEnvFiles(".env");
 
             // The .env files that were added with the 'AddEnvFile' method are added at the end of the collection.
@@ -79,7 +79,7 @@ namespace DotEnv.Core
                     _validationResult.Add(errorMsg: FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFile.Path));
             }
 
-            if (enviroment == null)
+            if (environment == null)
             {
                 var envDevelopmentLocal = envFiles[0]; // .env.development.local
                 var envDevLocal = envFiles[1];         // .env.dev.local
@@ -92,7 +92,7 @@ namespace DotEnv.Core
                 var envEnvironmentLocal = envFiles[0];  // .env.[environment].local
                 var envLocal = envFiles[1];             // .env.local
                 if (!envEnvironmentLocal.Exists && !envLocal.Exists)
-                    _validationResult.Add(errorMsg: FormatFileNotPresentLoadEnvMessage(FileNotPresentLoadEnvMessage, enviroment));
+                    _validationResult.Add(errorMsg: FormatFileNotPresentLoadEnvMessage(FileNotPresentLoadEnvMessage, environment));
             }
 
             _parser.CreateAndThrowParserException();
