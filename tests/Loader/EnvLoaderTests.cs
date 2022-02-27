@@ -208,7 +208,7 @@ namespace DotEnv.Core.Tests.Loader
         [TestMethod]
         public void LoadEnv_WhenEnvironmentIsDefined_ShouldBeAbleToReadEnvironmentVariables()
         {
-            SetEnvironmentVariable("DOTNET_ENV", "test");
+            Env.CurrentEnvironment = "test";
 
             new EnvLoader()
                 .SetBasePath("Loader/env_files/environment/test")
@@ -218,19 +218,19 @@ namespace DotEnv.Core.Tests.Loader
             Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST"));
             Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST_LOCAL"));
             Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_LOCAL"));
-            SetEnvironmentVariable("DOTNET_ENV", null);
+            Env.CurrentEnvironment = null;
         }
 
         [TestMethod]
         public void LoadEnv_WhenErrorsAreFound_ShouldThrowParserException()
         {
             var loader = new EnvLoader().SetBasePath("Loader/env_files/environment/production");
-            SetEnvironmentVariable("DOTNET_ENV", "production");
+            Env.CurrentEnvironment = "production";
 
             void action() => loader.LoadEnv();
 
             Assert.ThrowsException<ParserException>(action);
-            SetEnvironmentVariable("DOTNET_ENV", null);
+            Env.CurrentEnvironment = null;
         }
 
         [TestMethod]

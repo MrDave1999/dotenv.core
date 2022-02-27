@@ -65,7 +65,7 @@ namespace DotEnv.Core.Tests.Loader
             EnvValidationResult result;
             char sep = DirectorySeparatorChar;
             string basePath = $"Loader{sep}env_files{sep}environment{sep}production{sep}";
-            SetEnvironmentVariable("DOTNET_ENV", "production");
+            Env.CurrentEnvironment = "production";
 
             new EnvLoader()
                 .SetBasePath(basePath)
@@ -91,7 +91,7 @@ namespace DotEnv.Core.Tests.Loader
             fileName = $"{basePath}.env";
             StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 4, envFileName: fileName));
             StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 6, envFileName: fileName));
-            SetEnvironmentVariable("DOTNET_ENV", null);
+            Env.CurrentEnvironment = null;
         }
 
         [TestMethod]
@@ -113,7 +113,7 @@ namespace DotEnv.Core.Tests.Loader
         {
             var loader = new EnvLoader();
             var environment = "test";
-            SetEnvironmentVariable("DOTNET_ENV", environment);
+            Env.CurrentEnvironment = environment;
 
             loader
                 .SetBasePath("environment/env_files")
@@ -122,7 +122,7 @@ namespace DotEnv.Core.Tests.Loader
             Assert.AreEqual(expected: true, actual: result.HasError());
             Assert.AreEqual(expected: 1, actual: result.Count);
             StringAssert.Contains(result.ErrorMessages, FormatFileNotPresentLoadEnvMessage(FileNotPresentLoadEnvMessage, environment));
-            SetEnvironmentVariable("DOTNET_ENV", null);
+            Env.CurrentEnvironment = null;
         }
     }
 }

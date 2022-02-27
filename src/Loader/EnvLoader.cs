@@ -58,7 +58,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IDictionary<string, string> LoadEnv(out EnvValidationResult result)
         {
-            var environment = Environment.GetEnvironmentVariable("DOTNET_ENV") ?? _configuration.EnvironmentName;
+            var environment = Env.CurrentEnvironment ?? _configuration.EnvironmentName;
             var envFiles = _configuration.EnvFiles;
             var copyEnvFiles = envFiles.ToArray();
             envFiles.Clear();
