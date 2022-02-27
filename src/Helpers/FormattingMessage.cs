@@ -44,7 +44,7 @@ namespace DotEnv.Core
         /// Formats an error message in case the .env file is not found in any directory.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
-        /// <param name="envFileName">The .env file name.</param>
+        /// <param name="envFileName">The .env file name that caused the error.</param>
         /// <returns>A formatted error message.</returns>
         public static string FormatFileNotFoundExceptionMessage(string message, string envFileName = null)
             => envFileName != null ? $"{message} (FileName: {envFileName})" : message;
