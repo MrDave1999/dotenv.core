@@ -36,32 +36,41 @@ namespace DotEnv.Core
 
         /// <inheritdoc />
         public IEnvLoader AddEnvFile(string path)
-        {
-            AddEnvFile(path, (Encoding)null);
-            return this;
-        }
+            => AddEnvFile(path, (Encoding)null, false);
 
         /// <inheritdoc />
         public IEnvLoader AddEnvFile(string path, Encoding encoding)
+            => AddEnvFile(path, encoding, false);
+
+        /// <inheritdoc />
+        public IEnvLoader AddEnvFile(string path, Encoding encoding, bool optional)
         {
             _ = path ?? throw new ArgumentNullException(nameof(path));
-            _configuration.EnvFiles.Add(new EnvFile { Path = path, Encoding = encoding });
+            _configuration.EnvFiles.Add(new EnvFile { Path = path, Encoding = encoding, Optional = optional});
             return this;
         }
 
         /// <inheritdoc />
         public IEnvLoader AddEnvFile(string path, string encodingName)
+            => AddEnvFile(path, encodingName, false);
+
+        /// <inheritdoc />
+        public IEnvLoader AddEnvFile(string path, string encodingName, bool optional)
         {
             try
             {
-                AddEnvFile(path, Encoding.GetEncoding(encodingName));
+                AddEnvFile(path, Encoding.GetEncoding(encodingName), optional);
             }
-            catch(ArgumentException)
+            catch (ArgumentException)
             {
                 throw new ArgumentException(FormatEncodingNotFoundMessage(EncodingNotFoundMessage, encodingName), nameof(encodingName));
             }
             return this;
         }
+
+        /// <inheritdoc />
+        public IEnvLoader AddEnvFile(string path, bool optional)
+            => AddEnvFile(path, (Encoding)null, optional);
 
         /// <inheritdoc />
         public IEnvLoader SetEncoding(Encoding encoding)
