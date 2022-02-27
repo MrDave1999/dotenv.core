@@ -2,12 +2,26 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core
 {
     // This class defines the helper private methods.
     public partial class EnvLoader
     {
+        /// <summary>
+        /// Checks if the .env file does not exist and is not optional.
+        /// </summary>
+        /// <param name="envFile">The instance representing the .env file.</param>
+        /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
+        private void CheckEnvFileNotExistsAndNotOptional(EnvFile envFile)
+        {
+            _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
+            if (!envFile.Exists && !envFile.Optional)
+                _validationResult.Add(errorMsg: FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFile.Path));
+        }
+
         /// <summary>
         /// Creates and throws an exception of type <see cref="FileNotFoundException" />.
         /// </summary>

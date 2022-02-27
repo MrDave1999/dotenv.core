@@ -39,9 +39,8 @@ namespace DotEnv.Core
             foreach (EnvFile envFile in _configuration.EnvFiles)
             {
                 SetConfigurationEnvFile(envFile);
-                bool exists = ReadAndParse(envFile);
-                if (!exists)
-                    _validationResult.Add(errorMsg: FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFile.Path));
+                envFile.Exists = ReadAndParse(envFile);
+                CheckEnvFileNotExistsAndNotOptional(envFile);
             }
 
             _parser.CreateAndThrowParserException();
@@ -75,9 +74,7 @@ namespace DotEnv.Core
             {
                 SetConfigurationEnvFile(envFile);
                 envFile.Exists = ReadAndParse(envFile);
-                // This condition was added in case the client adds a new .env file with the 'AddEnvFile' method.
-                if (!envFile.Exists && !envFile.Optional)
-                    _validationResult.Add(errorMsg: FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFile.Path));
+                CheckEnvFileNotExistsAndNotOptional(envFile);
             }
 
             if (environment == null)

@@ -84,18 +84,39 @@ namespace DotEnv.Core
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader AddEnvFile(string path, Encoding encoding);
 
+        /// <param name="path">The .env file path to add.</param>
+        /// <param name="encoding">The encoding of the .env file.</param>
+        /// <param name="optional">The value indicating whether the existence of the .env file is optional, or not.</param>
+        /// <inheritdoc cref="AddEnvFile(string, Encoding)" />
+        IEnvLoader AddEnvFile(string path, Encoding encoding, bool optional);
+
         /// <summary>
         /// Adds an .env file with its encoding name in a collection.
         /// </summary>
         /// <param name="path">The .env file path to add.</param>
         /// <param name="encodingName">The encoding name of the .env file.</param>
-        /// <exception cref="ArgumentNullException"><c>path</c>, or <c>name</c> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><c>path</c>, or <c>encodingName</c> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException">
         /// <c>encodingName</c> is not a valid code page name or
         /// is not supported by the underlying platform.
         /// </exception>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader AddEnvFile(string path, string encodingName);
+
+        /// <param name="path">The .env file path to add.</param>
+        /// <param name="encodingName">The encoding name of the .env file.</param>
+        /// <param name="optional">The value indicating whether the existence of the .env file is optional, or not.</param>
+        /// <inheritdoc cref="AddEnvFile(string, string)" />
+        IEnvLoader AddEnvFile(string path, string encodingName, bool optional);
+
+        /// <summary>
+        /// Adds an .env file to a collection and indicates whether the .env file can be optional, or not.
+        /// </summary>
+        /// <param name="path">The .env file path to add.</param>
+        /// <param name="optional">The value indicating whether the existence of the .env file is optional, or not.</param>
+        /// <exception cref="ArgumentNullException"><c>path</c> is <c>null</c>.</exception>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvLoader AddEnvFile(string path, bool optional);
 
         /// <summary>
         /// Sets the encoding of the .env files.
@@ -109,7 +130,7 @@ namespace DotEnv.Core
         /// Sets the encoding name of the .env files.
         /// </summary>
         /// <param name="encodingName">The name of encoding to set.</param>
-        /// <exception cref="ArgumentNullException"><c>name</c> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><c>encodingName</c> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException">
         /// <c>encodingName</c> is not a valid code page name or
         /// is not supported by the underlying platform.
