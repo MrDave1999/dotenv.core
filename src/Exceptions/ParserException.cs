@@ -10,7 +10,7 @@ namespace DotEnv.Core
     public class ParserException : Exception
     {
         /// <summary>
-        /// /// Initializes a new instance of the <see cref="ParserException" /> class.
+        /// Initializes a new instance of the <see cref="ParserException" /> class.
         /// </summary>
         public ParserException()
         {
