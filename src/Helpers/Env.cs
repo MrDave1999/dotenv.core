@@ -12,44 +12,41 @@ namespace DotEnv.Core
     public static class Env
     {
         /// <summary>
+        /// Gets or sets the current environment (dev, test, staging, or production).
+        /// </summary>
+        public static string CurrentEnvironment
+        {
+            get => GetEnvironmentVariable("DOTNET_ENV");
+            set => SetEnvironmentVariable("DOTNET_ENV", value);
+        }
+
+        /// <summary>
         /// Checks if the current environment name is <c>development</c>, or <c>dev</c>.
         /// </summary>
         /// <returns><c>true</c> if the environment name is development or dev, otherwise <c>false</c>.</returns>
         public static bool IsDevelopment()
-        {
-            var currentEnvironment = GetEnvironmentVariable("DOTNET_ENV");
-            return EnvironmentNames.Development.Contains(currentEnvironment, StringComparer.OrdinalIgnoreCase);
-        }
+            => EnvironmentNames.Development.Contains(CurrentEnvironment, StringComparer.OrdinalIgnoreCase);
 
         /// <summary>
         /// Checks if the current environment name is <c>test</c>.
         /// </summary>
         /// <returns><c>true</c> if the environment name is test, otherwise <c>false</c>.</returns>
         public static bool IsTest()
-        {
-            var currentEnvironment = GetEnvironmentVariable("DOTNET_ENV");
-            return EnvironmentNames.Test.Contains(currentEnvironment, StringComparer.OrdinalIgnoreCase);
-        }
+            => EnvironmentNames.Test.Contains(CurrentEnvironment, StringComparer.OrdinalIgnoreCase);
 
         /// <summary>
         /// Checks if the current environment name is <c>staging</c>.
         /// </summary>
         /// <returns><c>true</c> if the environment name is staging, otherwise <c>false</c>.</returns>
         public static bool IsStaging()
-        {
-            var currentEnvironment = GetEnvironmentVariable("DOTNET_ENV");
-            return EnvironmentNames.Staging.Contains(currentEnvironment, StringComparer.OrdinalIgnoreCase);
-        }
+            => EnvironmentNames.Staging.Contains(CurrentEnvironment, StringComparer.OrdinalIgnoreCase);
 
         /// <summary>
         /// Checks if the current environment name is <c>production</c>, or <c>prod</c>.
         /// </summary>
         /// <returns><c>true</c> if the environment name is production or prod, otherwise <c>false</c>.</returns>
         public static bool IsProduction()
-        {
-            var currentEnvironment = GetEnvironmentVariable("DOTNET_ENV");
-            return EnvironmentNames.Production.Contains(currentEnvironment, StringComparer.OrdinalIgnoreCase);
-        }
+            => EnvironmentNames.Production.Contains(CurrentEnvironment, StringComparer.OrdinalIgnoreCase);
 
         /// <summary>
         /// Compares the current environment name against the specified value.
@@ -60,8 +57,7 @@ namespace DotEnv.Core
         public static bool IsEnvironment(string environmentName)
         {
             _ = environmentName ?? throw new ArgumentNullException(nameof(environmentName));
-            var currentEnvironment = GetEnvironmentVariable("DOTNET_ENV");
-            return string.Equals(currentEnvironment, environmentName, StringComparison.OrdinalIgnoreCase);
+            return string.Equals(CurrentEnvironment, environmentName, StringComparison.OrdinalIgnoreCase);
         }
     }
 }
