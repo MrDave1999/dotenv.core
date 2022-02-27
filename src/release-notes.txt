@@ -15,6 +15,7 @@ v2.0.0
 - Added the SetEncoding(string) and AddEnvFile(string, string) method to the EnvLoader class.
 - The parser and loader now throws an exception with all errors encountered instead of one at a time.
 - Added the EnvValidator class that validates whether the keys required by the application exist in the current environment.
+- Removed parameters: actualValue, currentLine from the parameterized constructor of the ParserException class.
 - It is no longer possible to override the helper methods of the EnvParser class. 
   This new version follows the encapsulation principle: "The fewer implementation details the client knows, the fewer changes they will have to make".
   - The fields and methods that were protected were changed to private in the EnvParser class.
