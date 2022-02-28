@@ -63,7 +63,8 @@ namespace DotEnv.Core
         /// Adds the .env files in a collection.
         /// </summary>
         /// <param name="paths">The .env files paths to add.</param>
-        /// <exception cref="ArgumentNullException"><c>paths</c> is <c>null</c>.</exception> 
+        /// <exception cref="ArgumentNullException"><c>paths</c> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentException">The length of the <c>paths</c> list is zero.</exception>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader AddEnvFiles(params string[] paths);
 

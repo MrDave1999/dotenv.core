@@ -29,8 +29,11 @@ namespace DotEnv.Core
         public IEnvLoader AddEnvFiles(params string[] paths)
         {
             _ = paths ?? throw new ArgumentNullException(nameof(paths));
+            if (paths.IsEmpty())
+                throw new ArgumentException(LengthOfParamsListIsZeroMessage, nameof(paths));
+
             foreach (string path in paths)
-                AddEnvFile(path, (Encoding)null);
+                AddEnvFile(path);
             return this;
         }
 
