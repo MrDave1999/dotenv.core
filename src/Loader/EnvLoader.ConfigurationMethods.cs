@@ -60,6 +60,8 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvLoader AddEnvFile(string path, string encodingName, bool optional)
         {
+            _ = path ?? throw new ArgumentNullException(nameof(path));
+            _ = encodingName ?? throw new ArgumentNullException(nameof(encodingName));
             try
             {
                 AddEnvFile(path, Encoding.GetEncoding(encodingName), optional);
