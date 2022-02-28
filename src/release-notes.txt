@@ -18,6 +18,7 @@ v2.0.0
 - Removed parameters: actualValue, currentLine from the parameterized constructor of the ParserException class.
 - Added a configuration method to indicate that a .env file is optional.
 - Added a configuration method to indicate that all .env files should be optional.
+  - To use this feature you must use the AllowAllEnvFilesOptional method of the EnvLoader class.
 - It is no longer possible to override the helper methods of the EnvParser class. 
   This new version follows the encapsulation principle: "The fewer implementation details the client knows, the fewer changes they will have to make".
   - The fields and methods that were protected were changed to private in the EnvParser class.
