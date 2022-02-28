@@ -113,6 +113,13 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
+        public IEnvLoader AllowAllEnvFilesOptional()
+        {
+            _configuration.Optional = true;
+            return this;
+        }
+
+        /// <inheritdoc />
         public IEnvLoader DisableTrimStartValues()
         {
             _parser.DisableTrimStartValues();

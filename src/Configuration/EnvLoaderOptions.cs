@@ -65,5 +65,10 @@ namespace DotEnv.Core
         /// Gets or sets the name of the environment.
         /// </summary>
         public string EnvironmentName { get; set; }
+
+        /// <summary>
+        /// A value indicating whether the .env files should be optional. Its default value is <c>false</c>.
+        /// </summary>
+        public bool Optional { get; set; }
     }
 }
