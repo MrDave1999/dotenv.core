@@ -155,6 +155,12 @@ namespace DotEnv.Core
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader SetEnvironmentName(string envName);
 
+        /// <summary>
+        /// Allows all .env files to be optional. This tells the loader not to raise an error in case the .env file is not found in any directory.
+        /// </summary>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvLoader AllowAllEnvFilesOptional();
+
         /// <inheritdoc cref="IEnvParser.DisableTrimStartValues" />
         IEnvLoader DisableTrimStartValues();
 

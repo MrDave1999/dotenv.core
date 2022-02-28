@@ -33,8 +33,16 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IDictionary<string, string> Load(out EnvValidationResult result)
         {
-            if(_configuration.EnvFiles.IsEmpty())
-                _configuration.EnvFiles.Add(new EnvFile { Path = _configuration.DefaultEnvFileName, Encoding = _configuration.Encoding });
+            if (_configuration.EnvFiles.IsEmpty())
+            {
+                var envFileDefault = new EnvFile 
+                { 
+                    Path     = _configuration.DefaultEnvFileName, 
+                    Encoding = _configuration.Encoding, 
+                    Optional = _configuration.Optional
+                };
+                _configuration.EnvFiles.Add(envFileDefault);
+            }
 
             foreach (EnvFile envFile in _configuration.EnvFiles)
             {
