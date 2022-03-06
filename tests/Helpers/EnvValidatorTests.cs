@@ -89,7 +89,7 @@ namespace DotEnv.Core.Tests.Helpers
         }
 
         [TestMethod]
-        public void SetRequiredKeys_WhenLengthOfTheKeysListIsZero_ShouldThrowArgumentException()
+        public void AddRequiredKeys_WhenLengthOfTheKeysListIsZero_ShouldThrowArgumentException()
         {
             var validator = new EnvValidator();
 
