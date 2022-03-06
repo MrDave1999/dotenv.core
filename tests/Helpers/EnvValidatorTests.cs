@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static System.Environment;
 using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core.Tests.Helpers
 {
@@ -20,18 +21,18 @@ namespace DotEnv.Core.Tests.Helpers
     public class EnvValidatorTests
     {
         [TestMethod]
-        public void Validate_WhenRequiredKeysAreNotPresent_ShouldThrowEnvVariableNotFoundException()
+        public void Validate_WhenRequiredKeysAreNotPresent_ShouldThrowRequiredKeysNotPresentException()
         {
             var validator = new EnvValidator()
                         .AddRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID");
 
             void action() => validator.Validate();
 
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<RequiredKeysNotPresentException>(action);
         }
 
         [TestMethod]
-        public void Validate_WhenRequiredKeysArePresent_ShouldNotThrowEnvVariableNotFoundException()
+        public void Validate_WhenRequiredKeysArePresent_ShouldNotThrowRequiredKeysNotPresentException()
         {
             SetEnvironmentVariable("JWT_TOKEN", "123");
             SetEnvironmentVariable("API_KEY", "123");
@@ -61,21 +62,35 @@ namespace DotEnv.Core.Tests.Helpers
             Assert.AreEqual(expected: 5, actual: result.Count);
 
             msg = result.ErrorMessages;
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Variable Name: SAMC_KEY)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Variable Name: API_KEY)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Variable Name: JWT_TOKEN)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Variable Name: JWT_TOKEN_ID)");
-            StringAssert.Contains(msg, $"{VariableNotFoundMessage} (Variable Name: SERVICE_ID)");
+            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "SAMC_KEY"));
+            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "API_KEY"));
+            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "JWT_TOKEN"));
+            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "JWT_TOKEN_ID"));
+            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "SERVICE_ID"));
         }
 
         [TestMethod]
-        public void Validate_WhenRequiredKeysAreAddedByMeansOfClass_ShouldThrowEnvVariableNotFoundException()
+        public void Validate_WhenRequiredKeysAreAddedByMeansOfClass_ShouldThrowRequiredKeysNotPresentException()
         {
             var validator = new EnvValidator().AddRequiredKeys<RequiredKeys>();
 
             void action() => validator.Validate();
 
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<RequiredKeysNotPresentException>(action);
+        }
+
+        [TestMethod]
+        public void Validate_WhenRequiredKeysAreNotPresentWithDifferentVariablesProvider_ShouldThrowRequiredKeysNotPresentException()
+        {
+            var envVarsProvider = new EnvParser()
+                    .AvoidModifyEnvironment()
+                    .Parse("KEY=VAL");
+            var validator = new EnvValidator(envVarsProvider)
+                    .AddRequiredKeys<RequiredKeys>();
+
+            void action() => validator.Validate();
+
+            Assert.ThrowsException<RequiredKeysNotPresentException>(action);
         }
 
         [TestMethod]
