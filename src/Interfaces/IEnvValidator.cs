@@ -30,14 +30,14 @@ namespace DotEnv.Core
         /// <exception cref="ArgumentNullException"><c>keys</c> is <c>null</c>.</exception>
         /// <exception cref="ArgumentException">The length of the <c>keys</c> list is zero.</exception>
         /// <returns>An instance implementing the fluent interface.</returns>
-        IEnvValidator SetRequiredKeys(params string[] keys);
+        IEnvValidator AddRequiredKeys(params string[] keys);
 
         /// <summary>
         /// Sets the required keys by means of the properties of a class or struct.
         /// </summary>
         /// <typeparam name="TKeys">The type with the required keys.</typeparam>
         /// <returns>An instance implementing the fluent interface.</returns>
-        IEnvValidator SetRequiredKeys<TKeys>();
+        IEnvValidator AddRequiredKeys<TKeys>();
 
         /// <summary>
         /// Sets the required keys by means of the properties of a class or struct.
@@ -45,7 +45,7 @@ namespace DotEnv.Core
         /// <param name="keysType">The type with the required keys.</param>
         /// <exception cref="ArgumentNullException"><c>keysType</c> is <c>null</c>.</exception>
         /// <returns>An instance implementing the fluent interface.</returns>
-        IEnvValidator SetRequiredKeys(Type keysType);
+        IEnvValidator AddRequiredKeys(Type keysType);
 
         /// <summary>
         /// Disables/ignores <see cref="EnvVariableNotFoundException" />. This method tells the validator not to throw an exception when it encounters one or more errors.

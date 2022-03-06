@@ -23,7 +23,7 @@ namespace DotEnv.Core.Tests.Helpers
         public void Validate_WhenRequiredKeysAreNotPresent_ShouldThrowEnvVariableNotFoundException()
         {
             var validator = new EnvValidator()
-                        .SetRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID");
+                        .AddRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID");
 
             void action() => validator.Validate();
 
@@ -36,7 +36,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("JWT_TOKEN", "123");
             SetEnvironmentVariable("API_KEY", "123");
             var validator = new EnvValidator()
-                        .SetRequiredKeys("JWT_TOKEN", "API_KEY")
+                        .AddRequiredKeys("JWT_TOKEN", "API_KEY")
                         .IgnoreException();          
 
             validator.Validate(out var result);
@@ -52,7 +52,7 @@ namespace DotEnv.Core.Tests.Helpers
         {
             string msg;
             var validator = new EnvValidator()
-                        .SetRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID")
+                        .AddRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID")
                         .IgnoreException();
 
             validator.Validate(out var result);
@@ -69,9 +69,9 @@ namespace DotEnv.Core.Tests.Helpers
         }
 
         [TestMethod]
-        public void Validate_WhenRequiredKeysAreSetsByMeansOfClass_ShouldThrowEnvVariableNotFoundException()
+        public void Validate_WhenRequiredKeysAreAddedByMeansOfClass_ShouldThrowEnvVariableNotFoundException()
         {
-            var validator = new EnvValidator().SetRequiredKeys<RequiredKeys>();
+            var validator = new EnvValidator().AddRequiredKeys<RequiredKeys>();
 
             void action() => validator.Validate();
 
@@ -79,7 +79,7 @@ namespace DotEnv.Core.Tests.Helpers
         }
 
         [TestMethod]
-        public void Validate_WhenRequiredKeysAreNotSet_ShouldThrowInvalidOperationException()
+        public void Validate_WhenRequiredKeysAreNotAdded_ShouldThrowInvalidOperationException()
         {
             var validator = new EnvValidator();
 
@@ -93,7 +93,7 @@ namespace DotEnv.Core.Tests.Helpers
         {
             var validator = new EnvValidator();
 
-            void action() => validator.SetRequiredKeys();
+            void action() => validator.AddRequiredKeys();
 
             Assert.ThrowsException<ArgumentException>(action);
         }

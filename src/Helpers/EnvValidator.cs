@@ -29,7 +29,7 @@ namespace DotEnv.Core
         {
             result = _validationResult;
             if (_configuration.RequiredKeys == null)
-                throw new InvalidOperationException(RequiredKeysNotSetMessage);
+                throw new InvalidOperationException(RequiredKeysNotAddedMessage);
 
             foreach(var key in _configuration.RequiredKeys)
             {
@@ -43,7 +43,7 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
-        public IEnvValidator SetRequiredKeys(params string[] keys)
+        public IEnvValidator AddRequiredKeys(params string[] keys)
         {
             _ = keys ?? throw new ArgumentNullException(nameof(keys));
             if (keys.IsEmpty())
@@ -61,14 +61,14 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
-        public IEnvValidator SetRequiredKeys<TKeys>()
+        public IEnvValidator AddRequiredKeys<TKeys>()
         {
-            SetRequiredKeys(typeof(TKeys));
+            AddRequiredKeys(typeof(TKeys));
             return this;
         }
 
         /// <inheritdoc />
-        public IEnvValidator SetRequiredKeys(Type keysType)
+        public IEnvValidator AddRequiredKeys(Type keysType)
         {
             _ = keysType ?? throw new ArgumentNullException(nameof(keysType));
             var readablePropertyNames =

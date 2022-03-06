@@ -256,7 +256,7 @@ namespace DotEnv.Core.Tests.Parser
             void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, KeyNotFoundMessage);
+            StringAssert.Contains(ex.Message, InterpolatedVariableNotFoundMessage);
         }
     }
 }

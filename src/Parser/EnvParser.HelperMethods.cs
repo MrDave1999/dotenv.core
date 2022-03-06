@@ -123,13 +123,6 @@ namespace DotEnv.Core
         }
 
         /// <summary>
-        /// Gets an error message in case the variable is not found in the environment or dictionary.
-        /// </summary>
-        /// <returns>A message that describes the error.</returns>
-        private string GetVariableNotFoundMessage()
-            => _configuration.ModifyEnvironment ? InterpolatedVariableNotFoundMessage : KeyNotFoundMessage;
-
-        /// <summary>
         /// Concatenates a value with the current value of a variable.
         /// </summary>
         /// <param name="currentValue">The current value of the variable.</param>
@@ -162,7 +155,7 @@ namespace DotEnv.Core
                 var retrievedValue = GetEnvironmentVariable(variable);
                 if (retrievedValue == null)
                 {
-                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(GetVariableNotFoundMessage(), actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(InterpolatedVariableNotFoundMessage, actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
                     return string.Empty;
                 }
 
