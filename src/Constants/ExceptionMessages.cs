@@ -10,7 +10,7 @@ namespace DotEnv.Core
     public class ExceptionMessages
     {
         #pragma warning disable CS1591
-        public const string VariableNotFoundMessage = "The variable is not set.";
+        public const string VariableNotSetMessage = "The variable is not set.";
         public const string InterpolatedVariableNotFoundMessage = "The interpolated variable is not set.";
         public const string DataSourceIsEmptyOrWhitespaceMessage = "The data source (probably the env file) is empty or consists only in whitespace.";
         public const string KeyIsAnEmptyStringMessage = "The key name cannot be an empty string or consists only of white-space characters.";
