@@ -51,12 +51,12 @@ namespace DotEnv.Core
             => envFileName != null ? $"{message} (FileName: {envFileName})" : message;
 
         /// <summary>
-        /// Formats an error message in case the variable is not found in the current environment.
+        /// Formats an error message in case the variable is not set.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         /// <param name="variableName">The variable name that caused the error.</param>
         /// <returns>A formatted error message.</returns>
-        public static string FormatEnvVariableNotFoundExceptionMessage(string message, string variableName = null)
+        public static string FormatVariableNotSetMessage(string message, string variableName = null)
             => variableName != null ? $"{message} (Variable Name: {variableName})" : message;
 
         /// <summary>

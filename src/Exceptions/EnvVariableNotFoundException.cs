@@ -48,6 +48,6 @@ namespace DotEnv.Core
         /// <summary>
         /// Gets a message that describes the current exception.
         /// </summary>
-        public override string Message => FormattingMessage.FormatEnvVariableNotFoundExceptionMessage(base.Message, _variableName);
+        public override string Message => FormattingMessage.FormatVariableNotSetMessage(base.Message, _variableName);
     }
 }
