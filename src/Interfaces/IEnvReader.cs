@@ -23,7 +23,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <value>The value of the variable in <c>string</c> format.</value>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException"><c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         string this[string variable] { get; }
         /// <summary>
         /// Gets the value of an environment variable in <c>string</c> format.
@@ -31,7 +31,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>string</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException"><c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         string GetStringValue(string variable);
         /// <summary>
         /// Gets the value of an environment variable in <c>bool</c> format.
@@ -39,7 +39,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>bool</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>bool</c> format.</exception>
         bool GetBoolValue(string variable);
         /// <summary>
@@ -48,7 +48,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>byte</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>byte</c> format.</exception>
         byte GetByteValue(string variable);
         /// <summary>
@@ -57,7 +57,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>sbyte</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>sbyte</c> format.</exception>
         sbyte GetSByteValue(string variable);
         /// <summary>
@@ -66,7 +66,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>char</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>char</c> format.</exception>
         char GetCharValue(string variable);
         /// <summary>
@@ -75,7 +75,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>int</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>int</c> format.</exception>
         int GetIntValue(string variable);
         /// <summary>
@@ -84,7 +84,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>uint</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>uint</c> format.</exception>
         uint GetUIntValue(string variable);
         /// <summary>
@@ -93,7 +93,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>long</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>long</c> format.</exception>
         long GetLongValue(string variable);
         /// <summary>
@@ -102,7 +102,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>ulong</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>ulong</c> format.</exception>
         ulong GetULongValue(string variable);
         /// <summary>
@@ -111,7 +111,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>short</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>short</c> format.</exception>
         short GetShortValue(string variable);
         /// <summary>
@@ -120,7 +120,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>ushort</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>ushort</c> format.</exception>
         ushort GetUShortValue(string variable);
         /// <summary>
@@ -129,7 +129,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>decimal</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>decimal</c> format.</exception>
         decimal GetDecimalValue(string variable);
         /// <summary>
@@ -138,7 +138,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>double</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>double</c> format.</exception>
         double GetDoubleValue(string variable);
         /// <summary>
@@ -147,7 +147,7 @@ namespace DotEnv.Core
         /// <param name="variable">The variable name of the value to get.</param>
         /// <returns>A value of the variable in <c>float</c> format.</returns>
         /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
-        /// <exception cref="EnvVariableNotFoundException">If the <c>variable</c> is not found in the current process.</exception>
+        /// <exception cref="VariableNotSetException"><c>variable</c> is not set.</exception>
         /// <exception cref="FormatException"><c>value</c> is not in <c>float</c> format.</exception>
         float GetFloatValue(string variable);
 

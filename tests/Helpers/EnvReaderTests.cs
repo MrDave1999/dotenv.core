@@ -29,7 +29,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_BOOL", "false");
             Assert.AreEqual(expected: false, actual: reader.GetBoolValue("KEY_BOOL"));
             void action() => reader.GetBoolValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -39,7 +39,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_BYTE", "2");
             Assert.AreEqual(expected: (byte)2, actual: reader.GetByteValue("KEY_BYTE"));
             void action() => reader.GetByteValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -49,7 +49,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_CHAR", "A");
             Assert.AreEqual(expected: 'A', actual: reader.GetCharValue("KEY_CHAR"));
             void action() => reader.GetCharValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -61,7 +61,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_DECIMAL", "12,5");
             Assert.AreEqual(expected: 125M, actual: reader.GetDecimalValue("KEY_DECIMAL"));
             void action() => reader.GetDecimalValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -73,7 +73,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_DOUBLE", "12,5");
             Assert.AreEqual(expected: 125D, actual: reader.GetDoubleValue("KEY_DOUBLE"));
             void action() => reader.GetDoubleValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -85,7 +85,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_FLOAT", "12,5");
             Assert.AreEqual(expected: 125F, actual: reader.GetFloatValue("KEY_FLOAT"));
             void action() => reader.GetFloatValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -95,7 +95,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_INT", "3");
             Assert.AreEqual(expected: 3, actual: reader.GetIntValue("KEY_INT"));
             void action() => reader.GetIntValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -105,7 +105,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_LONG", "3");
             Assert.AreEqual(expected: 3L, actual: reader.GetLongValue("KEY_LONG"));
             void action() => reader.GetLongValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -115,7 +115,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_SBYTE", "3");
             Assert.AreEqual(expected: (sbyte)3, actual: reader.GetSByteValue("KEY_SBYTE"));
             void action() => reader.GetSByteValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -125,7 +125,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_SHORT", "3");
             Assert.AreEqual(expected: (short)3, actual: reader.GetShortValue("KEY_SHORT"));
             void action() => reader.GetShortValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -135,7 +135,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_STRING", "This is a string.");
             Assert.AreEqual(expected: "This is a string.", actual: reader.GetStringValue("KEY_STRING"));
             void action() => reader.GetStringValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -145,7 +145,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_UINT", "2");
             Assert.AreEqual(expected: 2U, actual: reader.GetUIntValue("KEY_UINT"));
             void action() => reader.GetUIntValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -155,7 +155,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_ULONG", "2");
             Assert.AreEqual(expected: 2UL, actual: reader.GetULongValue("KEY_ULONG"));
             void action() => reader.GetULongValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
 
         [TestMethod]
@@ -165,7 +165,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("KEY_USHORT", "2");
             Assert.AreEqual(expected: (ushort)2, actual: reader.GetUShortValue("KEY_USHORT"));
             void action() => reader.GetUShortValue(VariableNotFound);
-            Assert.ThrowsException<EnvVariableNotFoundException>(action);
+            Assert.ThrowsException<VariableNotSetException>(action);
         }
     }
 }
