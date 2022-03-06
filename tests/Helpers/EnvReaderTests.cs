@@ -10,14 +10,14 @@ namespace DotEnv.Core.Tests.Helpers
         private const string VariableNotFound = nameof(VariableNotFound);
 
         [TestMethod]
-        public void Exists_WhenVariableExistsInTheCurrentProcess_ShouldReturnTrue()
+        public void HasValue_WhenVariableExistsInTheCurrentProcess_ShouldReturnTrue()
         {
             var reader = new EnvReader();
             SetEnvironmentVariable("VARIABLE_NAME", "1");
-            Assert.AreEqual(expected: true, actual: reader.Exists("VARIABLE_NAME"));
+            Assert.AreEqual(expected: true, actual: reader.HasValue("VARIABLE_NAME"));
             SetEnvironmentVariable("VARIABLE_NAME", null);
-            Assert.AreEqual(expected: false, actual: reader.Exists("VARIABLE_NAME"));
-            Assert.AreEqual(expected: false, actual: reader.Exists(""));
+            Assert.AreEqual(expected: false, actual: reader.HasValue("VARIABLE_NAME"));
+            Assert.AreEqual(expected: false, actual: reader.HasValue(""));
         }
 
         [TestMethod]
