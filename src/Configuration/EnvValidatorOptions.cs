@@ -18,5 +18,10 @@ namespace DotEnv.Core
         /// Gets or sets the collection of required keys.
         /// </summary>
         public IEnumerable<string> RequiredKeys { get; set; }
+
+        /// <summary>
+        /// Gets or sets the environment variables provider.
+        /// </summary>
+        public IEnvironmentVariablesProvider EnvVars { get; set; } = new DefaultEnvironmentProvider();
     }
 }
