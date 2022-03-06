@@ -244,12 +244,14 @@ namespace DotEnv.Core.Tests.Parser
         }
 
         [TestMethod]
-        public void Parse_WhenEnvironmentCanBeModified_ShouldReturnsNull()
+        public void Parse_WhenEnvironmentCanBeModified_ShouldReadVariables()
         {
             var parser = new EnvParser();
             string env = "ENV_MODIFIED = 1";
-            
-            Assert.AreEqual(expected: null, actual: parser.Parse(env));
+
+            var envVars = parser.Parse(env);
+
+            Assert.AreEqual(expected: "1", envVars["ENV_MODIFIED"]);
         }
     }
 }
