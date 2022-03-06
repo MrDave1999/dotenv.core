@@ -108,7 +108,7 @@ namespace DotEnv.Core
                 var retrievedValue = EnvVarsProvider[variable];
                 if (retrievedValue == null)
                 {
-                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(InterpolatedVariableNotFoundMessage, actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(InterpolatedVariableNotSetMessage, actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
                     return string.Empty;
                 }
 

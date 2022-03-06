@@ -227,7 +227,7 @@ namespace DotEnv.Core.Tests.Parser
             void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, InterpolatedVariableNotFoundMessage);
+            StringAssert.Contains(ex.Message, InterpolatedVariableNotSetMessage);
         }
 
         [TestMethod]

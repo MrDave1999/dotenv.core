@@ -11,7 +11,7 @@ namespace DotEnv.Core
     {
         #pragma warning disable CS1591
         public const string VariableNotSetMessage = "The variable is not set.";
-        public const string InterpolatedVariableNotFoundMessage = "The interpolated variable is not set.";
+        public const string InterpolatedVariableNotSetMessage = "The interpolated variable is not set.";
         public const string DataSourceIsEmptyOrWhitespaceMessage = "The data source (probably the env file) is empty or consists only in whitespace.";
         public const string KeyIsAnEmptyStringMessage = "The key name cannot be an empty string or consists only of white-space characters.";
         public const string VariableIsAnEmptyStringMessage = "The interpolated variable in the value cannot be an empty string or consists only of white-space characters.";
