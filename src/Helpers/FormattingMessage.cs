@@ -76,5 +76,16 @@ namespace DotEnv.Core
         /// <returns>A formatted error message.</returns>
         public static string FormatFileNotPresentLoadEnvMessage(string message, string environment = null)
             => environment != null ? $"{message}: .env.{environment}.local or {EnvLocalName}" : $"{message}: {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
+
+        /// <summary>
+        /// Format an error message in case the required key is not present in the application.
+        /// </summary>
+        /// <param name="message">The message that describes the error.</param>
+        /// <param name="key">The key that caused the error.</param>
+        /// <returns>A formatted error message.</returns>
+        public static string FormatRequiredKeysNotPresentMessage(string message, string key = null)
+            => key != null ? $"'{key}' {message}" : message;
+
+
     }
 }

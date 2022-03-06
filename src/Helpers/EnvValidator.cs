@@ -20,6 +20,23 @@ namespace DotEnv.Core
         /// </summary>
         private readonly EnvValidationResult _validationResult = new EnvValidationResult();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EnvValidator" /> class.
+        /// </summary>
+        public EnvValidator()
+        {
+
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EnvValidator" /> class with environment variables provider.
+        /// </summary>
+        /// <param name="envVars">The environment variables provider.</param>
+        public EnvValidator(IEnvironmentVariablesProvider envVars)
+        {
+            _configuration.EnvVars = envVars;
+        }
+
         /// <inheritdoc />
         public void Validate()
             => Validate(out _);
@@ -33,13 +50,13 @@ namespace DotEnv.Core
 
             foreach(var key in _configuration.RequiredKeys)
             {
-                var retrievedValue = Environment.GetEnvironmentVariable(key);
+                var retrievedValue = _configuration.EnvVars[key];
                 if (retrievedValue == null)
-                    _validationResult.Add(FormatEnvVariableNotFoundExceptionMessage(VariableNotFoundMessage, key));
+                    _validationResult.Add(FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key));
             }
 
             if (_validationResult.HasError() && _configuration.ThrowException)
-                throw new EnvVariableNotFoundException(message: _validationResult.ErrorMessages);
+                throw new RequiredKeysNotPresentException(message: _validationResult.ErrorMessages);
         }
 
         /// <inheritdoc />
