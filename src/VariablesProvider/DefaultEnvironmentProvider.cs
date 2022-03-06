@@ -14,7 +14,11 @@ namespace DotEnv.Core
         public string this[string variable] 
         {
             get => Environment.GetEnvironmentVariable(variable);
-            set => Environment.SetEnvironmentVariable(variable, value);
+            set
+            {
+                _ = variable ?? throw new ArgumentNullException(nameof(variable));
+                Environment.SetEnvironmentVariable(variable, value);
+            }
         }
 
         public IEnumerator<KeyValuePair<string, string>> GetEnumerator()

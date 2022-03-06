@@ -20,7 +20,11 @@ namespace DotEnv.Core
                 _keyValuePairs.TryGetValue(variable, out var value);
                 return value;
             }
-            set => _keyValuePairs[variable] = value;
+            set
+            {
+                _ = variable ?? throw new ArgumentNullException(nameof(variable));
+                _keyValuePairs[variable] = value;
+            }
         }
 
         public IEnumerator<KeyValuePair<string, string>> GetEnumerator()
