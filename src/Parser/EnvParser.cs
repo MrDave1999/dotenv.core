@@ -20,11 +20,6 @@ namespace DotEnv.Core
         private readonly EnvParserOptions _configuration = new EnvParserOptions();
 
         /// <summary>
-        /// Allows access to the key dictionary.
-        /// </summary>
-        internal IDictionary<string, string> KeyValuePairs { set; get; }
-
-        /// <summary>
         /// Allows access to the errors container of the parser.
         /// </summary>
         internal EnvValidationResult ValidationResult { get; } = new EnvValidationResult();
@@ -33,14 +28,22 @@ namespace DotEnv.Core
         /// Allows access to the name of the file that caused an error.
         /// This property is for the loader to pass data to the parser.
         /// </summary>
-        internal string FileName { set; get; }
+        internal string FileName { get; set; }
+
+        /// <summary>
+        /// Allows access to the environment variables provider.
+        /// </summary>
+        internal IEnvironmentVariablesProvider EnvVarsProvider
+        {
+            get => _configuration.EnvVars;
+        }
 
         /// <inheritdoc />
-        public IDictionary<string, string> Parse(string dataSource)
+        public IEnvironmentVariablesProvider Parse(string dataSource)
             => Parse(dataSource, out _);
 
         /// <inheritdoc />
-        public IDictionary<string, string> Parse(string dataSource, out EnvValidationResult result)
+        public IEnvironmentVariablesProvider Parse(string dataSource, out EnvValidationResult result)
         {
             _ = dataSource ?? throw new ArgumentNullException(nameof(dataSource));
             result = ValidationResult;
@@ -49,10 +52,8 @@ namespace DotEnv.Core
             {
                 ValidationResult.Add(errorMsg: FormatParserExceptionMessage(DataSourceIsEmptyOrWhitespaceMessage, envFileName: FileName));
                 CreateAndThrowParserException();
-                return KeyValuePairs;
+                return _configuration.EnvVars;
             }
-
-            CreateDictionary();
 
             using(var lines = new StringReader(dataSource))
             {
@@ -81,18 +82,18 @@ namespace DotEnv.Core
                     var value = ExtractValue(line);
                     value = ExpandEnvironmentVariables(value, lineNumber: i);
 
-                    var retrievedValue = GetEnvironmentVariable(key);
+                    var retrievedValue = EnvVarsProvider[key];
                     if (retrievedValue == null)
-                        SetEnvironmentVariable(key, value);
+                        EnvVarsProvider[key] = value;
                     else if (_configuration.ConcatDuplicateKeys != null)
-                        SetEnvironmentVariable(key, ConcatValues(retrievedValue, value));
+                        EnvVarsProvider[key] = ConcatValues(retrievedValue, value);
                     else if (_configuration.OverwriteExistingVars)
-                        SetEnvironmentVariable(key, value);
+                        EnvVarsProvider[key] = value;
                 }
             }
 
             CreateAndThrowParserException();
-            return KeyValuePairs;
+            return _configuration.EnvVars;
         }
     }
 }

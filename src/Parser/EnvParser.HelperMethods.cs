@@ -76,53 +76,6 @@ namespace DotEnv.Core
         }
 
         /// <summary>
-        /// Creates a dictionary in case the environment cannot be modified.
-        /// </summary>
-        private void CreateDictionary()
-        {
-            if (!_configuration.ModifyEnvironment)
-                KeyValuePairs = KeyValuePairs ?? new Dictionary<string, string>();
-        }
-
-        /// <summary>
-        /// Sets a key as an environment variable stored in the current process. 
-        /// </summary>
-        /// <remarks>
-        /// In case the environment cannot be modified, the method will add the key in a dictionary.
-        /// </remarks>
-        /// <param name="key">The key of the value to set.</param>
-        /// <param name="value">The value to set.</param>
-        /// <exception cref="ArgumentNullException"><c>key</c> is <c>null</c>.</exception>
-        private void SetEnvironmentVariable(string key, string value)
-        {
-            _ = key ?? throw new ArgumentNullException(nameof(key));
-            if (!_configuration.ModifyEnvironment)
-                KeyValuePairs[key] = value;
-            else 
-                Environment.SetEnvironmentVariable(key, value);
-        }
-
-        /// <summary>
-        /// Gets the value of an environment variable from the current process.
-        /// </summary>
-        /// <remarks>
-        /// In the case that the environment is not accessible, the method will get the value of the key from a dictionary.
-        /// </remarks>
-        /// <param name="key">The key to get.</param>
-        /// <exception cref="ArgumentNullException"><c>key</c> is <c>null</c>.</exception>
-        /// <returns>The value of the environment variable or <c>null</c> if the variable is not found.</returns>
-        private string GetEnvironmentVariable(string key)
-        {
-            _ = key ?? throw new ArgumentNullException(nameof(key));
-            if (!_configuration.ModifyEnvironment)
-            {
-                KeyValuePairs.TryGetValue(key, out string value);
-                return value;
-            }
-            return Environment.GetEnvironmentVariable(key);
-        }
-
-        /// <summary>
         /// Concatenates a value with the current value of a variable.
         /// </summary>
         /// <param name="currentValue">The current value of the variable.</param>
@@ -152,7 +105,7 @@ namespace DotEnv.Core
                     return string.Empty;
                 }
 
-                var retrievedValue = GetEnvironmentVariable(variable);
+                var retrievedValue = EnvVarsProvider[variable];
                 if (retrievedValue == null)
                 {
                     ValidationResult.Add(errorMsg: FormatParserExceptionMessage(InterpolatedVariableNotFoundMessage, actualValue: variable, lineNumber: lineNumber, envFileName: FileName));

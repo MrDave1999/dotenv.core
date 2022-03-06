@@ -12,7 +12,7 @@ namespace DotEnv.Core
     {
         /// <param name="result">The result contains the errors found by the loader.</param>
         /// <inheritdoc cref="LoadEnv()" />
-        IDictionary<string, string> LoadEnv(out EnvValidationResult result);
+        IEnvironmentVariablesProvider LoadEnv(out EnvValidationResult result);
 
         /// <summary>
         /// Loads an .env file based on the environment (development, test, staging or production).
@@ -20,11 +20,11 @@ namespace DotEnv.Core
         /// .env.[environment].local, .env.local, .env.[environment], .env
         /// </summary>
         /// <inheritdoc cref="Load()" />
-        IDictionary<string, string> LoadEnv();
+        IEnvironmentVariablesProvider LoadEnv();
 
         /// <param name="result">The result contains the errors found by the loader.</param>
         /// <inheritdoc cref="Load()" />
-        IDictionary<string, string> Load(out EnvValidationResult result);
+        IEnvironmentVariablesProvider Load(out EnvValidationResult result);
 
         /// <summary>
         /// Loads one or more .env files. By default, it will search for a file called <c>.env</c>.
@@ -38,10 +38,8 @@ namespace DotEnv.Core
         /// If the .env files are not found.
         /// This exception is only thrown if the <see cref="EnableFileNotFoundException" /> method is invoked.
         /// </exception>
-        /// <returns>
-        /// A dictionary if the environment cannot be modified, or <c>null</c> if the environment can be modified.
-        /// </returns>
-        IDictionary<string, string> Load();
+        /// <returns>An instance representing the provider of environment variables.</returns>
+        IEnvironmentVariablesProvider Load();
 
         /// <summary>
         /// Sets the default name of an .env file.

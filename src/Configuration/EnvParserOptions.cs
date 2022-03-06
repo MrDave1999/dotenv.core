@@ -60,8 +60,8 @@ namespace DotEnv.Core
         public bool ThrowException { get; set; } = true;
 
         /// <summary>
-        /// A value indicating whether the parser can modify the environment of the current process. Its default value is <c>true</c>.
+        /// Gets or sets the environment variables provider.
         /// </summary>
-        public bool ModifyEnvironment { get; set; } = true;
+        public IEnvironmentVariablesProvider EnvVars { get; set; } = new DefaultEnvironmentProvider();
     }
 }

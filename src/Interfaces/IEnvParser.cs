@@ -12,7 +12,7 @@ namespace DotEnv.Core
         /// <param name="dataSource">The data source to parsing.</param>
         /// <param name="result">The result contains the errors found by the parser.</param>
         /// <inheritdoc cref="Parse(string)" />
-        IDictionary<string, string> Parse(string dataSource, out EnvValidationResult result);
+        IEnvironmentVariablesProvider Parse(string dataSource, out EnvValidationResult result);
 
         /// <summary>
         /// Start the parsing to extract the key-value pair from a data source.
@@ -23,10 +23,8 @@ namespace DotEnv.Core
         /// If the parser encounters one or more errors.
         /// This exception is not thrown if the <see cref="IgnoreParserException" /> method is invoked.
         /// </exception>
-        /// <returns>
-        /// A dictionary if the environment cannot be modified, or <c>null</c> if the environment can be modified.
-        /// </returns>
-        IDictionary<string, string> Parse(string dataSource);
+        /// <returns>An instance representing the provider of environment variables.</returns>
+        IEnvironmentVariablesProvider Parse(string dataSource);
 
         /// <summary>
         /// Disables the trim at the start of the values.
@@ -112,7 +110,6 @@ namespace DotEnv.Core
 
         /// <summary>
         /// Avoids modifying the environment of the current process. 
-        /// This method tells the parser not to modify the environment, instead, it will return a dictionary with the keys read from a data source (such as an .env file).
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvParser AvoidModifyEnvironment();

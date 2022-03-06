@@ -27,11 +27,11 @@ namespace DotEnv.Core
         private readonly EnvValidationResult _validationResult = new EnvValidationResult();
 
         /// <inheritdoc />
-        public IDictionary<string, string> Load()
+        public IEnvironmentVariablesProvider Load()
             => Load(out _);
 
         /// <inheritdoc />
-        public IDictionary<string, string> Load(out EnvValidationResult result)
+        public IEnvironmentVariablesProvider Load(out EnvValidationResult result)
         {
             if (_configuration.EnvFiles.IsEmpty())
             {
@@ -55,15 +55,15 @@ namespace DotEnv.Core
             CreateAndThrowFileNotFoundException();
 
             result = GetInstanceForOutParams();
-            return _parser.KeyValuePairs;
+            return _parser.EnvVarsProvider;
         }
 
         /// <inheritdoc />
-        public IDictionary<string, string> LoadEnv()
+        public IEnvironmentVariablesProvider LoadEnv()
             => LoadEnv(out _);
 
         /// <inheritdoc />
-        public IDictionary<string, string> LoadEnv(out EnvValidationResult result)
+        public IEnvironmentVariablesProvider LoadEnv(out EnvValidationResult result)
         {
             var environment = Env.CurrentEnvironment ?? _configuration.EnvironmentName;
             var envFiles = _configuration.EnvFiles;
@@ -105,7 +105,7 @@ namespace DotEnv.Core
             CreateAndThrowFileNotFoundException();
 
             result = GetInstanceForOutParams();
-            return _parser.KeyValuePairs;
+            return _parser.EnvVarsProvider;
         }
     }
 }

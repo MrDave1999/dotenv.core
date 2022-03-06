@@ -99,7 +99,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvParser AvoidModifyEnvironment()
         {
-            _configuration.ModifyEnvironment = false;
+            _configuration.EnvVars = new DictionaryProvider();
             return this;
         }
     }
