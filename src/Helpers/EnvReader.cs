@@ -10,7 +10,8 @@ namespace DotEnv.Core
     /// <inheritdoc cref="IEnvReader" />
     public partial class EnvReader : IEnvReader
     {
-        private static EnvReader s_instance = new EnvReader();
+        private static readonly EnvReader s_instance = new EnvReader();
+        private readonly IEnvironmentVariablesProvider _envVars = new DefaultEnvironmentProvider();
 
         /// <summary>
         /// Gets an instance of type <see cref="EnvReader" />.
@@ -18,23 +19,37 @@ namespace DotEnv.Core
         /// <remarks>This method is thread-safe.</remarks>
         public static EnvReader Instance => s_instance;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EnvReader" /> class.
+        /// </summary>
+        public EnvReader()
+        {
+
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EnvReader" /> class with environment variables provider.
+        /// </summary>
+        /// <param name="envVars">The environment variables provider.</param>
+        public EnvReader(IEnvironmentVariablesProvider envVars)
+        {
+            _envVars = envVars;
+        }
+
         /// <inheritdoc />
         public bool Exists(string variable)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             return retrievedValue != null;
         }
 
         /// <summary>
-        /// Returns an enumerator that iterates through the environment variables.
+        /// Returns an enumerator that iterates through the variables.
         /// </summary>
-        /// <returns>An enumerator that can be used to iterate through the environment variables.</returns>
+        /// <returns>An enumerator that can be used to iterate through the variables.</returns>
         public IEnumerator<KeyValuePair<string, string>> GetEnumerator()
-        {
-            foreach (DictionaryEntry de in GetEnvironmentVariables())
-                yield return new KeyValuePair<string, string>((string)de.Key, (string)de.Value);
-        }
+            => _envVars.GetEnumerator();
 
         /// <inheritdoc cref="GetEnumerator" />
         IEnumerator IEnumerable.GetEnumerator()

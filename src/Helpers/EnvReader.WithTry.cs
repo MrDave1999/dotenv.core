@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
-using static System.Environment;
 
 namespace DotEnv.Core
 {
@@ -14,7 +13,7 @@ namespace DotEnv.Core
         public virtual bool TryGetStringValue(string variable, out string value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if(retrievedValue == null)
             {
                 value = default;
@@ -28,7 +27,7 @@ namespace DotEnv.Core
         public virtual bool TryGetBoolValue(string variable, out bool value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -42,7 +41,7 @@ namespace DotEnv.Core
         public virtual bool TryGetByteValue(string variable, out byte value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -56,7 +55,7 @@ namespace DotEnv.Core
         public virtual bool TryGetSByteValue(string variable, out sbyte value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -70,7 +69,7 @@ namespace DotEnv.Core
         public virtual bool TryGetCharValue(string variable, out char value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -84,7 +83,7 @@ namespace DotEnv.Core
         public virtual bool TryGetIntValue(string variable, out int value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -98,7 +97,7 @@ namespace DotEnv.Core
         public virtual bool TryGetUIntValue(string variable, out uint value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -112,7 +111,7 @@ namespace DotEnv.Core
         public virtual bool TryGetLongValue(string variable, out long value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -126,7 +125,7 @@ namespace DotEnv.Core
         public virtual bool TryGetULongValue(string variable, out ulong value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -140,7 +139,7 @@ namespace DotEnv.Core
         public virtual bool TryGetShortValue(string variable, out short value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -154,7 +153,7 @@ namespace DotEnv.Core
         public virtual bool TryGetUShortValue(string variable, out ushort value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -168,7 +167,7 @@ namespace DotEnv.Core
         public virtual bool TryGetDecimalValue(string variable, out decimal value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -182,7 +181,7 @@ namespace DotEnv.Core
         public virtual bool TryGetDoubleValue(string variable, out double value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
@@ -196,7 +195,7 @@ namespace DotEnv.Core
         public virtual bool TryGetFloatValue(string variable, out float value)
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
-            var retrievedValue = GetEnvironmentVariable(variable);
+            var retrievedValue = _envVars[variable];
             if (retrievedValue == null)
             {
                 value = default;
