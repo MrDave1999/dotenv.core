@@ -30,7 +30,7 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="envVars">The environment variables provider.</param>
         /// <returns>A dictionary with the environment variables.</returns>
-        public static IDictionary<string, string> ToDictionary(this IEnvironmentVariablesProvider envVars)
+        public static Dictionary<string, string> ToDictionary(this IEnvironmentVariablesProvider envVars)
         {
             var keyValuePairs = new Dictionary<string, string>();
             foreach (var keyValuePair in envVars)
