@@ -10,8 +10,8 @@ namespace DotEnv.Core
     public class ExceptionMessages
     {
         #pragma warning disable CS1591
-        public const string VariableNotSetMessage = "The variable is not set.";
-        public const string InterpolatedVariableNotSetMessage = "The interpolated variable is not set.";
+        public const string VariableNotSetMessage = "The variable is not set in the provider (e.g., current process or dictionary).";
+        public const string InterpolatedVariableNotSetMessage = "The interpolated variable is not set in the provider (e.g., current process or dictionary).";
         public const string DataSourceIsEmptyOrWhitespaceMessage = "The data source (probably the env file) is empty or consists only in whitespace.";
         public const string KeyIsAnEmptyStringMessage = "The key name cannot be an empty string or consists only of white-space characters.";
         public const string VariableIsAnEmptyStringMessage = "The interpolated variable in the value cannot be an empty string or consists only of white-space characters.";
