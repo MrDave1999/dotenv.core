@@ -5,7 +5,8 @@ using System.Text;
 namespace DotEnv.Core
 {
     /// <summary>
-    /// Represents the environment variables provider.
+    /// Represents the environment variables provider. 
+    /// The environment variables can be obtained from any provider (for example, from a <see cref="Dictionary{TKey, TValue}" /> or from the current process).
     /// </summary>
     public interface IEnvironmentVariablesProvider : IEnumerable<KeyValuePair<string, string>>
     {

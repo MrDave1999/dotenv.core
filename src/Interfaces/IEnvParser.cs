@@ -109,7 +109,8 @@ namespace DotEnv.Core
         IEnvParser IgnoreParserException();
 
         /// <summary>
-        /// Avoids modifying the environment of the current process. 
+        /// Avoids modifying the environment of the current process.
+        /// When this method is used, the environment variables are obtained from a <see cref="Dictionary{TKey, TValue}" /> and not from the current process.
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvParser AvoidModifyEnvironment();
