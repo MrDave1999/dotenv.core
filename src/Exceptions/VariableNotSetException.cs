@@ -5,7 +5,7 @@ using System.Text;
 namespace DotEnv.Core
 {
     /// <summary>
-    /// The exception that is thrown when the variable is not set.
+    /// The exception that is thrown when the environment variable is not set to a specific provider (e.g., current process or a <see cref="Dictionary{TKey, TValue}" />).
     /// </summary>
     public class VariableNotSetException : Exception
     {
