@@ -198,5 +198,8 @@ namespace DotEnv.Core
 
         /// <inheritdoc cref="IEnvParser.AvoidModifyEnvironment" />
         IEnvLoader AvoidModifyEnvironment();
+
+        /// <inheritdoc cref="IEnvParser.SetEnvironmentVariablesProvider" />
+        IEnvLoader SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider provider);
     }
 }

@@ -102,5 +102,12 @@ namespace DotEnv.Core
             _configuration.EnvVars = new DictionaryProvider();
             return this;
         }
+
+        /// <inheritdoc />
+        public IEnvParser SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider provider)
+        {
+            _configuration.EnvVars = provider;
+            return this;
+        }
     }
 }

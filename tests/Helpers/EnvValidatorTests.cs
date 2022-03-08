@@ -80,17 +80,31 @@ namespace DotEnv.Core.Tests.Helpers
         }
 
         [TestMethod]
-        public void Validate_WhenRequiredKeysAreNotPresentWithDifferentVariablesProvider_ShouldThrowRequiredKeysNotPresentException()
+        public void Validate_WhenRequiredKeysAreNotPresentInCustomProvider_ShouldThrowRequiredKeysNotPresentException()
         {
-            var envVarsProvider = new EnvParser()
-                    .AvoidModifyEnvironment()
-                    .Parse("KEY=VAL");
-            var validator = new EnvValidator(envVarsProvider)
-                    .AddRequiredKeys<RequiredKeys>();
+            var customProvider = new CustomEnvironmentVariablesProvider();
+            var validator = new EnvValidator(customProvider).AddRequiredKeys<RequiredKeys>();
 
             void action() => validator.Validate();
 
             Assert.ThrowsException<RequiredKeysNotPresentException>(action);
+        }
+
+        [TestMethod]
+        public void Validate_WhenRequiredKeysArePresentInCustomProvider_ShouldNotThrowRequiredKeysNotPresentException()
+        {
+            var customProvider = new CustomEnvironmentVariablesProvider();
+            var validator = new EnvValidator(customProvider).AddRequiredKeys<RequiredKeys>();
+            customProvider["SAMC_KEY"]     = "";
+            customProvider["API_KEY"]      = "";
+            customProvider["JWT_TOKEN"]    = "";
+            customProvider["JWT_TOKEN_ID"] = "";
+            customProvider["SERVICE_ID"]   = "";
+
+            validator.Validate(out var result);
+
+            Assert.AreEqual(expected: false, actual: result.HasError());
+            Assert.AreEqual(expected: 0, actual: result.Count);
         }
 
         [TestMethod]

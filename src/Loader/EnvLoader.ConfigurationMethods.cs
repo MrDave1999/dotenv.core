@@ -214,5 +214,12 @@ namespace DotEnv.Core
             _parser.AvoidModifyEnvironment();
             return this;
         }
+
+        /// <inheritdoc />
+        public IEnvLoader SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider provider)
+        {
+            _parser.SetEnvironmentVariablesProvider(provider);
+            return this;
+        }
     }
 }
