@@ -258,5 +258,20 @@ namespace DotEnv.Core.Tests.Parser
             var ex = Assert.ThrowsException<ParserException>(action);
             StringAssert.Contains(ex.Message, InterpolatedVariableNotSetMessage);
         }
+
+        [TestMethod]
+        public void Parse_WhenSetsEnvironmentVariablesProvider_ShouldReadVariables()
+        {
+            var customProvider = new CustomEnvironmentVariablesProvider();
+            new EnvParser()
+                .AllowOverwriteExistingVars()
+                .SetEnvironmentVariablesProvider(provider: customProvider)
+                .Parse("KEY1=1\nKEY2=2\nKEY1=2");
+
+            Assert.AreEqual(expected: "2", actual: customProvider["KEY1"]);
+            Assert.AreEqual(expected: "2", actual: customProvider["KEY2"]);
+            Assert.IsNull(GetEnvironmentVariable("KEY1"));
+            Assert.IsNull(GetEnvironmentVariable("KEY2"));
+        }
     }
 }
