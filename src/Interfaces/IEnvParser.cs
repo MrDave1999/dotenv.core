@@ -74,8 +74,7 @@ namespace DotEnv.Core
         IEnvParser DisableTrimStartComments();
 
         /// <summary>
-        /// Allows overwriting the existing variables of an environment or dictionary (in case the environment cannot be modified).
-        /// This method will tell the parser that it can overwrite the value of an existing variable, i.e. if the variable <c>KEY1</c> exists, its value can be overwritten.
+        /// Allows overwriting the existing variables of a specific provider (e.g., current process or a <see cref="Dictionary{TKey, TValue}" />).
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvParser AllowOverwriteExistingVars();
