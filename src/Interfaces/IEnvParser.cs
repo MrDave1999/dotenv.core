@@ -114,5 +114,13 @@ namespace DotEnv.Core
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvParser AvoidModifyEnvironment();
+
+        /// <summary>
+        /// Sets the environment variables provider. 
+        /// When this method is used, the environment variables are obtained from the custom provider.
+        /// </summary>
+        /// <param name="provider">The custom environment variables provider.</param>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvParser SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider provider);
     }
 }
