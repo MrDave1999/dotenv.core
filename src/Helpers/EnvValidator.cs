@@ -31,10 +31,10 @@ namespace DotEnv.Core
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvValidator" /> class with environment variables provider.
         /// </summary>
-        /// <param name="envVars">The environment variables provider.</param>
-        public EnvValidator(IEnvironmentVariablesProvider envVars)
+        /// <param name="provider">The environment variables provider.</param>
+        public EnvValidator(IEnvironmentVariablesProvider provider)
         {
-            _configuration.EnvVars = envVars;
+            _configuration.EnvVars = provider;
         }
 
         /// <inheritdoc />

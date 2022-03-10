@@ -12,28 +12,28 @@ namespace DotEnv.Core
         /// <summary>
         /// Creates an instance that implements the <see cref="IEnvValidator" /> interface.
         /// </summary>
-        /// <param name="envVars">The environment variables provider.</param>
+        /// <param name="provider">The environment variables provider.</param>
         /// <returns>An instance that implements the <see cref="IEnvValidator" /> interface.</returns>
-        public static IEnvValidator CreateValidator(this IEnvironmentVariablesProvider envVars)
-            => new EnvValidator(envVars);
+        public static IEnvValidator CreateValidator(this IEnvironmentVariablesProvider provider)
+            => new EnvValidator(provider);
 
         /// <summary>
         /// Creates an instance that implements the <see cref="IEnvReader" /> interface.
         /// </summary>
-        /// <param name="envVars">The environment variables provider.</param>
+        /// <param name="provider">The environment variables provider.</param>
         /// <returns>An instance that implements the <see cref="IEnvReader" /> interface.</returns>
-        public static IEnvReader CreateReader(this IEnvironmentVariablesProvider envVars)
-            => new EnvReader(envVars);
+        public static IEnvReader CreateReader(this IEnvironmentVariablesProvider provider)
+            => new EnvReader(provider);
 
         /// <summary>
         /// Converts the environment variables provider to a dictionary.
         /// </summary>
-        /// <param name="envVars">The environment variables provider.</param>
+        /// <param name="provider">The environment variables provider.</param>
         /// <returns>A dictionary with the environment variables.</returns>
-        public static Dictionary<string, string> ToDictionary(this IEnvironmentVariablesProvider envVars)
+        public static Dictionary<string, string> ToDictionary(this IEnvironmentVariablesProvider provider)
         {
             var keyValuePairs = new Dictionary<string, string>();
-            foreach (var keyValuePair in envVars)
+            foreach (var keyValuePair in provider)
                 keyValuePairs[keyValuePair.Key] = keyValuePair.Value;
             return keyValuePairs;
         }

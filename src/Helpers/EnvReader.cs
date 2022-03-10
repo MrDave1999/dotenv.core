@@ -30,10 +30,10 @@ namespace DotEnv.Core
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvReader" /> class with environment variables provider.
         /// </summary>
-        /// <param name="envVars">The environment variables provider.</param>
-        public EnvReader(IEnvironmentVariablesProvider envVars)
+        /// <param name="provider">The environment variables provider.</param>
+        public EnvReader(IEnvironmentVariablesProvider provider)
         {
-            _envVars = envVars;
+            _envVars = provider;
         }
 
         /// <inheritdoc />
