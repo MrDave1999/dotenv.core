@@ -68,6 +68,18 @@ namespace DotEnv.Core.Tests.Loader
         }
 
         [TestMethod]
+        public void Load_WhenIgnoresSearchInParentDirectories_ShouldNotLoadTheEnvFile()
+        {
+            new EnvLoader()
+                .SetBasePath("Loader/env_files")
+                .AddEnvFile(".env.parent.directories")
+                .IgnoreParentDirectories()
+                .Load();
+
+            Assert.IsNull(GetEnvironmentVariable("PARENT_DIRECTORIES"));
+        }
+
+        [TestMethod]
         public void Load_WhenLoadEnvFileWithDefaultConfig_ShouldBeAbleToReadEnvironmentVariables()
         {
             var loader = new EnvLoader();

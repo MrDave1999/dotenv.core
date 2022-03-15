@@ -55,7 +55,12 @@ namespace DotEnv.Core
         private bool ReadAndParse(EnvFile envFile)
         {
             _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
-            string fullPath = GetEnvFilePath(envFile.Path);
+            string fullPath;
+            if (_configuration.SearchParentDirectories)
+                fullPath = GetEnvFilePath(envFile.Path);
+            else
+                fullPath = File.Exists(envFile.Path) ? envFile.Path : null;
+
             if (fullPath == null)
                 return false;
 

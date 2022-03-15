@@ -125,6 +125,13 @@ namespace DotEnv.Core
         }
 
         /// <inheritdoc />
+        public IEnvLoader IgnoreParentDirectories()
+        {
+            _configuration.SearchParentDirectories = false;
+            return this;
+        }
+
+        /// <inheritdoc />
         public IEnvLoader DisableTrimStartValues()
         {
             _parser.DisableTrimStartValues();

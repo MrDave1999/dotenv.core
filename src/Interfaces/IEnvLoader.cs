@@ -160,6 +160,12 @@ namespace DotEnv.Core
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvLoader AllowAllEnvFilesOptional();
 
+        /// <summary>
+        /// Ignores search in parent directories. This tells the loader not to search in parent directories when the .env file is not in a directory.
+        /// </summary>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvLoader IgnoreParentDirectories();
+
         /// <inheritdoc cref="IEnvParser.DisableTrimStartValues" />
         IEnvLoader DisableTrimStartValues();
 
