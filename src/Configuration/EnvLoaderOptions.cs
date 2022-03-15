@@ -70,5 +70,11 @@ namespace DotEnv.Core
         /// A value indicating whether the .env files should be optional. Its default value is <c>false</c>.
         /// </summary>
         public bool Optional { get; set; }
+
+        /// <summary>
+        /// A value indicating whether the loader should search the parent directories when it does not find the .env file in a specific directory.
+        /// Its default value is <c>true</c>.
+        /// </summary>
+        public bool SearchParentDirectories { get; set; } = true;
     }
 }
