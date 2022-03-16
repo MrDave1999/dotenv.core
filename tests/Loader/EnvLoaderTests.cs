@@ -195,9 +195,11 @@ namespace DotEnv.Core.Tests.Loader
             new EnvLoader()
                 .SetBasePath(absolutePath)
                 .AddEnvFile(".env.absolute")
+                .AddEnvFile(Path.Combine(absolutePath, ".env.absolute2"))
                 .Load();
 
             Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("PATH_ABSOLUTE"));
+            Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("PATH_ABSOLUTE2"));
         }
 
         [TestMethod]
