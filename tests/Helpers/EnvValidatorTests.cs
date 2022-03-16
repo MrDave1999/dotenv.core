@@ -70,7 +70,7 @@ namespace DotEnv.Core.Tests.Helpers
         }
 
         [TestMethod]
-        public void Validate_WhenRequiredKeysAreAddedByMeansOfClass_ShouldThrowRequiredKeysNotPresentException()
+        public void Validate_WhenRequiredKeysAreSpecifiedByMeansOfClass_ShouldThrowRequiredKeysNotPresentException()
         {
             var validator = new EnvValidator().SetRequiredKeys<RequiredKeys>();
 
@@ -108,7 +108,7 @@ namespace DotEnv.Core.Tests.Helpers
         }
 
         [TestMethod]
-        public void Validate_WhenRequiredKeysAreNotAdded_ShouldThrowInvalidOperationException()
+        public void Validate_WhenRequiredKeysAreNotSpecifiedWithSetRequiredKeysMethod_ShouldThrowInvalidOperationException()
         {
             var validator = new EnvValidator();
 
