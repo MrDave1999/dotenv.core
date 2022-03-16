@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static DotEnv.Core.ExceptionMessages;
 using static DotEnv.Core.FormattingMessage;
-using static System.IO.Path;
-using static System.Environment;
 
 namespace DotEnv.Core.Tests.Loader
 {
@@ -16,8 +14,7 @@ namespace DotEnv.Core.Tests.Loader
         {
             string msg;
             EnvValidationResult result;
-            char sep = DirectorySeparatorChar;
-            string basePath = $"Loader{sep}env_files{sep}validation{sep}";
+            string basePath = $"Loader/env_files/validation/";
             new EnvLoader()
                 .SetBasePath(basePath)
                 .IgnoreParserException()
@@ -63,8 +60,7 @@ namespace DotEnv.Core.Tests.Loader
         {
             string msg;
             EnvValidationResult result;
-            char sep = DirectorySeparatorChar;
-            string basePath = $"Loader{sep}env_files{sep}environment{sep}production{sep}";
+            string basePath = $"Loader/env_files/environment/production/";
             Env.CurrentEnvironment = "production";
 
             new EnvLoader()
