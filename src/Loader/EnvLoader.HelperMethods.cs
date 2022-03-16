@@ -107,10 +107,16 @@ namespace DotEnv.Core
         private string GetEnvFilePath(string envFileName)
         {
             _ = envFileName ?? throw new ArgumentNullException(nameof(envFileName));
+            string path;
             if (Path.IsPathRooted(envFileName))
-                return File.Exists(envFileName) ? envFileName : null;
+            {
+                path = Path.GetDirectoryName(envFileName);
+                envFileName = Path.GetFileName(envFileName);
+            }
+            else
+                path = Directory.GetCurrentDirectory();
 
-            for (var directoryInfo = new DirectoryInfo(Directory.GetCurrentDirectory());
+            for (var directoryInfo = new DirectoryInfo(path);
                 directoryInfo != null;
                 directoryInfo = directoryInfo.Parent)
             {
