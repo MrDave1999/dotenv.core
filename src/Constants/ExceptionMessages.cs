@@ -20,7 +20,7 @@ namespace DotEnv.Core
         public const string FileNotPresentLoadEnvMessage = "Any of these .env files must be present in the root directory of your project";
         public const string OptionInvalidMessage = "The option is invalid.";
         public const string ArgumentIsNullOrWhiteSpaceMessage = "The argument cannot be an empty string or consists only of white-space characters.";
-        public const string RequiredKeysNotAddedMessage = "The keys required must be added with the EnvValidator.AddRequiredKeys method before invoking the EnvValidator.Validate method.";
+        public const string RequiredKeysNotSpecifiedMessage = "The keys required must be specified with the EnvValidator.SetRequiredKeys method before invoking the EnvValidator.Validate method.";
         public const string RequiredKeysNotPresentMessage = "is a key required by the application.";
         public const string LengthOfParamsListIsZeroMessage = "The length of the params list is zero.";
         public const string EncodingNotFoundMessage = "is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.";

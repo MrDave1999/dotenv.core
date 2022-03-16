@@ -46,7 +46,7 @@ namespace DotEnv.Core
         {
             result = _validationResult;
             if (_configuration.RequiredKeys == null)
-                throw new InvalidOperationException(RequiredKeysNotAddedMessage);
+                throw new InvalidOperationException(RequiredKeysNotSpecifiedMessage);
 
             foreach(var key in _configuration.RequiredKeys)
             {
