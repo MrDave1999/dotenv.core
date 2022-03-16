@@ -100,7 +100,10 @@ namespace DotEnv.Core
         /// <summary>
         /// Gets the full path of the .env file.
         /// </summary>
-        /// <param name="envFileName">The name of the .env file to search for.</param>
+        /// <param name="envFileName">
+        /// The name of the .env file to search for.
+        /// The .env file name can include an absolute or relative path.
+        /// </param>
         /// <returns>The path of the .env file, otherwise <c>null</c> if not found.</returns>
         /// <exception cref="ArgumentNullException"><c>envFileName</c> is <c>null</c>.</exception>
         /// <inheritdoc cref="Load()" path="/remarks" />
