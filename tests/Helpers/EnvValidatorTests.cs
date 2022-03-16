@@ -24,7 +24,7 @@ namespace DotEnv.Core.Tests.Helpers
         public void Validate_WhenRequiredKeysAreNotPresent_ShouldThrowRequiredKeysNotPresentException()
         {
             var validator = new EnvValidator()
-                        .AddRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID");
+                        .SetRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID");
 
             void action() => validator.Validate();
 
@@ -37,7 +37,7 @@ namespace DotEnv.Core.Tests.Helpers
             SetEnvironmentVariable("JWT_TOKEN", "123");
             SetEnvironmentVariable("API_KEY", "123");
             var validator = new EnvValidator()
-                        .AddRequiredKeys("JWT_TOKEN", "API_KEY")
+                        .SetRequiredKeys("JWT_TOKEN", "API_KEY")
                         .IgnoreException();          
 
             validator.Validate(out var result);
@@ -53,7 +53,7 @@ namespace DotEnv.Core.Tests.Helpers
         {
             string msg;
             var validator = new EnvValidator()
-                        .AddRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID")
+                        .SetRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID")
                         .IgnoreException();
 
             validator.Validate(out var result);
@@ -72,7 +72,7 @@ namespace DotEnv.Core.Tests.Helpers
         [TestMethod]
         public void Validate_WhenRequiredKeysAreAddedByMeansOfClass_ShouldThrowRequiredKeysNotPresentException()
         {
-            var validator = new EnvValidator().AddRequiredKeys<RequiredKeys>();
+            var validator = new EnvValidator().SetRequiredKeys<RequiredKeys>();
 
             void action() => validator.Validate();
 
@@ -83,7 +83,7 @@ namespace DotEnv.Core.Tests.Helpers
         public void Validate_WhenRequiredKeysAreNotPresentInCustomProvider_ShouldThrowRequiredKeysNotPresentException()
         {
             var customProvider = new CustomEnvironmentVariablesProvider();
-            var validator = new EnvValidator(customProvider).AddRequiredKeys<RequiredKeys>();
+            var validator = new EnvValidator(customProvider).SetRequiredKeys<RequiredKeys>();
 
             void action() => validator.Validate();
 
@@ -94,7 +94,7 @@ namespace DotEnv.Core.Tests.Helpers
         public void Validate_WhenRequiredKeysArePresentInCustomProvider_ShouldNotThrowRequiredKeysNotPresentException()
         {
             var customProvider = new CustomEnvironmentVariablesProvider();
-            var validator = new EnvValidator(customProvider).AddRequiredKeys<RequiredKeys>();
+            var validator = new EnvValidator(customProvider).SetRequiredKeys<RequiredKeys>();
             customProvider["SAMC_KEY"]     = "";
             customProvider["API_KEY"]      = "";
             customProvider["JWT_TOKEN"]    = "";
@@ -122,7 +122,7 @@ namespace DotEnv.Core.Tests.Helpers
         {
             var validator = new EnvValidator();
 
-            void action() => validator.AddRequiredKeys();
+            void action() => validator.SetRequiredKeys();
 
             Assert.ThrowsException<ArgumentException>(action);
         }
