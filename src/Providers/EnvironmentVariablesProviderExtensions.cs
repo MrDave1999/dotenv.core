@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace DotEnv.Core
 {
@@ -31,11 +32,6 @@ namespace DotEnv.Core
         /// <param name="provider">The environment variables provider.</param>
         /// <returns>A dictionary with the environment variables.</returns>
         public static Dictionary<string, string> ToDictionary(this IEnvironmentVariablesProvider provider)
-        {
-            var keyValuePairs = new Dictionary<string, string>();
-            foreach (var keyValuePair in provider)
-                keyValuePairs[keyValuePair.Key] = keyValuePair.Value;
-            return keyValuePairs;
-        }
+            => provider.ToDictionary(KeyValuePair => KeyValuePair.Key, KeyValuePair => KeyValuePair.Value);
     }
 }
