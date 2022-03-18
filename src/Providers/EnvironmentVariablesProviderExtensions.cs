@@ -32,6 +32,6 @@ namespace DotEnv.Core
         /// <param name="provider">The environment variables provider.</param>
         /// <returns>A dictionary with the environment variables.</returns>
         public static Dictionary<string, string> ToDictionary(this IEnvironmentVariablesProvider provider)
-            => provider.ToDictionary(KeyValuePair => KeyValuePair.Key, KeyValuePair => KeyValuePair.Value);
+            => provider.ToDictionary(keyValuePair => keyValuePair.Key, keyValuePair => keyValuePair.Value);
     }
 }
