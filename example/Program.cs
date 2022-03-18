@@ -65,8 +65,8 @@ namespace DotEnv.Core.Example
 						.AvoidModifyEnvironment()
 						.AddEnvFiles("./", "./files/", "files/sqlite", "./files/pgsql/.env.local")
 						.Load();
-			Console.WriteLine("Dictionary:");
-			foreach (var keyValuePair in keyValuePairs)
+			Console.WriteLine("-> Dictionary<string, string>:");
+			foreach (var keyValuePair in keyValuePairs.ToDictionary())
 				Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
 			Console.WriteLine("\n\n\n");
 
