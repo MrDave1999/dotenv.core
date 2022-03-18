@@ -6,7 +6,7 @@ using static System.Environment;
 namespace DotEnv.Core.Tests.Parser
 {
     [TestClass]
-    public class EnvParserTests
+    public partial class EnvParserTests
     {
         [TestMethod]
         public void Parse_WhenErrorsAreFound_ShouldThrowParserException()

@@ -2,12 +2,14 @@
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static System.Environment;
+using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.FormattingMessage;
 using System.Text;
 
 namespace DotEnv.Core.Tests.Loader
 {
     [TestClass]
-    public class EnvLoaderTests
+    public partial class EnvLoaderTests
     {
         [TestMethod]
         public void Load_WhenErrorsAreFound_ShouldThrowParserException()
@@ -228,110 +230,49 @@ namespace DotEnv.Core.Tests.Loader
         }
 
         [TestMethod]
-        public void LoadEnv_WhenEnvFileNotFound_ShouldThrowFileNotFoundException()
+        public void Load_WhenErrorsAreFound_ShouldReadTheErrors()
         {
-            var loader = new EnvLoader()
-                            .SetBasePath("environment/files")
-                            .SetDefaultEnvFileName(".env.example")
-                            .AddEnvFiles(".env.example1", "foo/")
-                            .EnableFileNotFoundException();
-
-            void action() => loader.LoadEnv();
-
-            Assert.ThrowsException<FileNotFoundException>(action);
-        }
-
-        [TestMethod]
-        public void LoadEnv_WhenEnvironmentIsNotDefined_ShouldBeAbleToReadEnvironmentVariables()
-        {
+            string msg;
+            EnvValidationResult result;
+            string basePath = $"Loader/env_files/validation/";
             new EnvLoader()
-                .SetBasePath("Loader/env_files/environment/dev")
-                .LoadEnv();
+                .SetBasePath(basePath)
+                .IgnoreParserException()
+                .AddEnvFile(".env.validation.result1")
+                .AddEnvFile(".env.validation.result2")
+                .AddEnvFile(".env.validation.result3")
+                .AddEnvFile(".env.validation.result4")
+                .AddEnvFiles(".env.not.found3", ".env.not.found4", ".env.not.found5", ".env.not.found6")
+                .Load(out result);
 
-            new EnvLoader()
-                .SetBasePath("Loader/env_files/environment/development")
-                .LoadEnv();
+            msg = result.ErrorMessages;
+            Assert.AreEqual(expected: true, actual: result.HasError());
+            Assert.AreEqual(expected: 16, actual: result.Count);
 
-            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV"));
-            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_DEV"));
-            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_DEV_LOCAL"));
-            Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_LOCAL"));
-            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV"));
-            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV_DEV"));
-            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV_DEV_LOCAL"));
-            Assert.IsNotNull(GetEnvironmentVariable("DEVELOPMENT_ENV_LOCAL"));
-        }
+            var fileName = $"{basePath}.env.validation.result1";
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "This is an error", lineNumber: 1, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: 2, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(InterpolatedVariableNotSetMessage, actualValue: "VARIABLE_NOT_FOUND", lineNumber: 3, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(InterpolatedVariableNotSetMessage, actualValue: "VARIABLE_NOT_FOUND_2", lineNumber: 3, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(VariableIsAnEmptyStringMessage, lineNumber: 5, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(VariableIsAnEmptyStringMessage, lineNumber: 5, envFileName: fileName));
 
-        [TestMethod]
-        public void LoadEnv_WhenEnvironmentIsDefined_ShouldBeAbleToReadEnvironmentVariables()
-        {
-            Env.CurrentEnvironment = "test";
+            fileName = $"{basePath}.env.validation.result2";
+            StringAssert.Contains(msg, FormatParserExceptionMessage(DataSourceIsEmptyOrWhitespaceMessage, envFileName: fileName));
 
-            new EnvLoader()
-                .SetBasePath("Loader/env_files/environment/test")
-                .LoadEnv();
+            fileName = $"{basePath}.env.validation.result3";
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "This is a line", lineNumber: 1, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: 2, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(InterpolatedVariableNotSetMessage, actualValue: "VARIABLE_NOT_FOUND", lineNumber: 3, envFileName: fileName));
 
-            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV"));
-            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST"));
-            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST_LOCAL"));
-            Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_LOCAL"));
-            Env.CurrentEnvironment = null;
-        }
+            fileName = $"{basePath}.env.validation.result4";
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "This is a message", lineNumber: 1, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: 2, envFileName: fileName));
 
-        [TestMethod]
-        public void LoadEnv_WhenErrorsAreFound_ShouldThrowParserException()
-        {
-            var loader = new EnvLoader().SetBasePath("Loader/env_files/environment/production");
-            Env.CurrentEnvironment = "production";
-
-            void action() => loader.LoadEnv();
-
-            Assert.ThrowsException<ParserException>(action);
-            Env.CurrentEnvironment = null;
-        }
-
-        [TestMethod]
-        public void LoadEnv_WhenSetsTheEnvironmentName_ShouldBeAbleToReadVariables()
-        {
-            var loader = new EnvLoader()
-                            .AvoidModifyEnvironment()
-                            .SetEnvironmentName("test")
-                            .SetBasePath("Loader/env_files/environment/test");
-
-            var keyValuePairs = loader.LoadEnv();
-
-            Assert.IsNotNull(keyValuePairs["TEST_ENV"]);
-            Assert.IsNotNull(keyValuePairs["TEST_ENV_TEST"]);
-            Assert.IsNotNull(keyValuePairs["TEST_ENV_TEST_LOCAL"]);
-            Assert.IsNotNull(keyValuePairs["TEST_ENV_LOCAL"]);
-        }
-
-        [TestMethod]
-        public void SetEnvironmentName_WhenEnvironmentNameIsAnEmptyStringOrWhiteSpace_ShouldThrowArgumentException()
-        {
-            var loader = new EnvLoader();
-            Action action;
-
-            action = () => loader.SetEnvironmentName("");
-            Assert.ThrowsException<ArgumentException>(action);
-            action = () => loader.SetEnvironmentName("   ");
-            Assert.ThrowsException<ArgumentException>(action);
-        }
-
-        [TestMethod]
-        public void LoadEnv_WhenAddsEnvFiles_ShouldMaintainThePriorityOfTheEnvFiles()
-        {
-            var loader = new EnvLoader()
-                            .SetBasePath("Loader/env_files/local")
-                            .AddEnvFile(".env.example1")
-                            .AddEnvFile(".env.example2");
-
-            loader.LoadEnv();
-
-            Assert.AreEqual(expected: ".env.dev.local", actual: GetEnvironmentVariable("MAX_PRIORITY"));
-            Assert.AreEqual(expected: ".env.local", actual: GetEnvironmentVariable("PRIORITY_2"));
-            Assert.AreEqual(expected: ".env.dev", actual: GetEnvironmentVariable("PRIORITY_3"));
-            Assert.AreEqual(expected: ".env", actual: GetEnvironmentVariable("PRIORITY_4"));
+            StringAssert.Contains(msg, FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFileName: $"{basePath}.env.not.found3"));
+            StringAssert.Contains(msg, FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFileName: $"{basePath}.env.not.found4"));
+            StringAssert.Contains(msg, FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFileName: $"{basePath}.env.not.found5"));
+            StringAssert.Contains(msg, FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFileName: $"{basePath}.env.not.found6"));
         }
     }
 }
