@@ -5,8 +5,7 @@ using static DotEnv.Core.ExceptionMessages;
 
 namespace DotEnv.Core.Tests.Parser
 {
-    [TestClass]
-    public class EnvParserOptionsTests
+    public partial class EnvParserTests
     {
         [TestMethod]
         public void Parse_WhenDisabledTrimStartValues_ShouldNotIgnoreLeadingWhitepaces()

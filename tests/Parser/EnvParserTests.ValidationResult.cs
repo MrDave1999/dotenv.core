@@ -7,8 +7,7 @@ using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core.Tests.Parser
 {
-    [TestClass]
-    public class EnvValidationResultTests
+    public partial class EnvParserTests
     {
         [TestMethod]
         public void Parse_WhenErrorsAreFound_ShouldReadTheErrors()

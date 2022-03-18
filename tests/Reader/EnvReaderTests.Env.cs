@@ -2,13 +2,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static System.Environment;
 
-namespace DotEnv.Core.Tests.Helpers
+namespace DotEnv.Core.Tests.Reader
 {
-    [TestClass]
-    public class EnvReaderWithDefaultParamsTests
+    public partial class EnvReaderTests
     {
-        private const string VariableNotFound = nameof(VariableNotFound);
-
         [TestMethod]
         public void EnvBool_WhenTheVariableIsFound_ShouldReturnValue()
         {
