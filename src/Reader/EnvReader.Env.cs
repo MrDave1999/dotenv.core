@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DotEnv.Core
 {
-    // These methods return a default value when the environment variable does not exist.
+    // These methods return a default value when the environment variable is not set.
     public partial class EnvReader
     {
         /// <inheritdoc />

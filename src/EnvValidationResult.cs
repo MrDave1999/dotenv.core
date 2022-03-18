@@ -6,7 +6,7 @@ using System.Text;
 namespace DotEnv.Core
 {
     /// <summary>
-    /// Represents a container for the results of a validation of the parser and loader.
+    /// Represents a container for the results of a validation.
     /// </summary>
     public class EnvValidationResult : IEnumerable<string>
     {

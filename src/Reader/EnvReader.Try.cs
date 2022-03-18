@@ -6,7 +6,8 @@ using System.Text;
 
 namespace DotEnv.Core
 {
-    // These methods return false if the environment variable does not exist.
+    // These methods return 'false' if the environment variable is not set.
+    /// <inheritdoc />
     public partial class EnvReader
     {
         /// <inheritdoc />
