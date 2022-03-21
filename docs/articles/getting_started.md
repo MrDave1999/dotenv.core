@@ -4,7 +4,7 @@
 
 If you're an hardcore and want to do it manually, you must add the following to the `csproj` file:
 ```xml
-<PackageReference Include="DotEnv.Core" Version="1.1.2" />
+<PackageReference Include="DotEnv.Core" Version="2.0.0" />
 ```
 If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the **Tools** > **NuGet Package Manager** > **Package Manager Console** command and run the install command:
 ```
@@ -32,9 +32,9 @@ By default, the `Load` method will search for a file called `.env` in the curren
 
 The current directory is where the executable with its dependencies is located.
 
-Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`.
+Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`. Also, by default, the `Load` method does not overwrite the value of the environment variable.
 
-### Accessing the variables
+### Accessing variables
 
 After you have loaded the .env file with the `Load` method, you can access the environment variables using the indexer of the `EnvReader` class:
 ```cs
@@ -48,7 +48,7 @@ string key1 = EnvReader.Instance["KEY1"];
 string key2 = EnvReader.Instance["KEY2"];
 ```
 
-### Changing the default name
+### Changing default name
 
 You can also change the default name of the .env file using the `SetDefaultEnvFileName` method:
 ```cs
@@ -67,15 +67,15 @@ new EnvLoader()
 ```
 The `Load` method will search for two `.env.dev` files in the paths `/foo/foo2` and `/bar/bar2`.
 
-### Specifying the path absolute
+### Specifying path absolute
 
 You can also specify the absolute path to the .env file:
 ```cs
 new EnvLoader()
-    .AddEnvFile("/home/App/.env.dev")
+    .AddEnvFile("/home/MyProject/App/src/.env.dev")
     .Load();
 ```
-In this case the `Load` method will search for the file `.env.dev` in the path `/home/App`, if it does not find it, the method will not search in the current directory or parent directories.
+In this case the `Load` method will search for the `.env.dev` file in the path `/home/MyProject/App/src/`, if it does not find it, the method will search for the `.env.dev` file in the parent directories. In other words, the `Load` method will search for the file in parent directories such as `src`, `App`, `MyProject`.
 
 It is recommended not to use absolute paths, instead use relative paths. Remember that an absolute path can be different in each operating system, so your application could lose portability.
 
@@ -99,19 +99,41 @@ If you need to specify an encoding type for all .env files, you can do it like t
 ```cs
 new EnvLoader()
     .AddEnvFiles("env.example", "env.example2")
-    .SetEncoding(Encoding.Unicode)
+    .SetEncoding(Encoding.Unicode) // Or you can also use: SetEncoding("Unicode")
     .Load();
 ```
 
 You can also specify an encoding type for each .env file using the `AddEnvFile` method:
 ```cs
 new EnvLoader()
-    .AddEnvFile("env.example", Encoding.Unicode)
+    .AddEnvFile("env.example",  Encoding.Unicode)
     .AddEnvFile("env.example2", Encoding.ASCII)
+    .AddEnvFile("env.example3", "Unicode")
+    .AddEnvFile("env.example4", "ASCII")
     .Load();
 ```
 
-### Specifying the path relative
+### Optional .env files
+
+You can indicate that the existence of an .env file is optional by means of the `AddEnvFile` method:
+```cs
+new EnvLoader()
+    .AddEnvFile(".env.example", optional: true)
+    .Load();
+```
+At the end the `Load` method will not generate any error in case the `.env.example` file is not in a directory, since it is optional.
+
+You can also mark all .env files as optional using the `AllowAllEnvFilesOptional` method:
+```cs
+new EnvLoader()
+    .AddEnvFile(".env.example1") 
+    .AddEnvFile(".env.example2") 
+    .AddEnvFile(".env.example3")
+    .AllowAllEnvFilesOptional()
+    .Load();
+```
+
+### Specifying path relative
 
 You can also specify a relative path using the `AddEnvFile` method:
 ```cs
@@ -134,7 +156,7 @@ new EnvLoader()
 ```
 In this case, the **Base Path** is a relative path, so the `.env.example` and `.env.example2` files are inside `dotenv/files`.
 
-### Throw FileNotFoundException
+### Error handling
 
 By default, the `Load` method does not throw any exception if it does not found the .env file but you can change this behavior if you use the `EnableFileNotFoundException` method:
 ```cs
@@ -150,20 +172,24 @@ catch(FileNotFoundException ex)
 }
 ```
 
-### Interpolating variables
+You can handle the error without throwing an exception by means of the `EnvValidationResult` class:
+```cs
+new EnvLoader()
+    .IgnoreParserException() // To ignore the exception thrown by the parser.
+    .Load(out EnvValidationResult result);
 
-Sometimes you will need to interpolate variables within a value, for example:
+if(result.HasError())
+{
+    string msg = result.ErrorMessages;
+    System.Console.WriteLine(msg);
+    // or you can also iterate over the errors:
+    foreach(string errorMsg in result)
+        System.Console.WriteLine(errorMsg); 
+}
+else 
+{
+    // Execute some action when there is no error.
+}
 ```
-MYSQL_USER=root
-MYSQL_ROOT_PASSWORD=1234
-CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
-```
-If the variable embedded in the value does not exist in the current process, the parser will throw an exception, for example:
-```
-CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
-MYSQL_USER=root
-MYSQL_ROOT_PASSWORD=1234
-```
-In the above example, the parser should throw an exception because the `MYSQL_USER` variable does not exist yet.
 
 **Note:** If you don't know what each class does, don't forget to check the [API documentation](xref:DotEnv.Core).

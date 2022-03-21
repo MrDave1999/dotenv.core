@@ -1,10 +1,18 @@
 - name: Getting Started
   href: getting_started.md
-- name: More options for the Loader
-  href: more_options_for_loader.md
-- name: Using Helpers
-  href: using_helpers.md
-- name: Using Parser
+- name: Configuration options
+  href: configuration_options.md
+- name: Creating environment variables provider
+  href: creating_environment_variables_provider.md
+- name: Load .env file without altering the environment
+  href: load_envfile_without_altering_environment.md
+- name: Accessing environment variables
+  href: using_envreader.md
+- name: Required Keys
+  href: required_keys.md
+- name: Load .env file based on environment
+  href: load_envfile_based_environment.md
+- name: Parsing
   href: using_parser.md
 - name: Dependency Injection
   href: dependency_injection.md

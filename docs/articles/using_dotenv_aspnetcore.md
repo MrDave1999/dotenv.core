@@ -7,7 +7,7 @@ public void ConfigureServices(IServiceCollection services)
     // To load the .env file.
     new EnvLoader().Load();
     // To register the IEnvReader service.
-    services.AddSingleton<IEnvReader, EnvReader>();
+    services.AddSingleton<IEnvReader>(new EnvReader());
     // more services...
 }
 ```
@@ -39,7 +39,7 @@ var builder = WebApplication.CreateBuilder(args);
 new EnvLoader().Load();
 
 // Add services to the container.
-builder.services.AddSingleton<IEnvReader, EnvReader>();
+builder.services.AddSingleton<IEnvReader>(new EnvReader());
 
 var app = builder.Build();
 

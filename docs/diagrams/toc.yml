@@ -1,2 +1,4 @@
-- name: Class diagram
+- name: Class Diagram
   href: class_diagram.md
+- name: Package Diagram
+  href: package_diagram.md

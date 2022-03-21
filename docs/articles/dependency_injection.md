@@ -1,5 +1,7 @@
 # Dependency Injection
 
+## Introduction
+
 In some cases, classes should not directly create an instance of the `EnvReader` class, because if you change the implementation, you will have to make changes in the classes that depend on `EnvReader`.
 
 **For example:**
@@ -110,6 +112,9 @@ class Program
     }
 }
 ```
+
+## Container DI
+
 So in the end we would consider using a service container to handle dependency injection. Microsoft has created a package in NuGet specifically for this: [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection).
 
 The above example could be done in this way using the container DI:
@@ -124,9 +129,10 @@ class Program
     {
         // Load the .env file.
         new EnvLoader().Load();
+        // Creates the service collection.
         var services = new ServiceCollection();
         // Register services.
-        services.AddSingleton<IEnvReader, EnvReader>()
+        services.AddSingleton<IEnvReader>(new EnvReader())
             .AddTransient<Foo>()
             .AddTransient<Bar>();
         // Creates the service container.
@@ -136,6 +142,27 @@ class Program
             var foo = serviceProvider.GetRequiredService<Foo>();
             var bar = serviceProvider.GetRequiredService<Bar>();
         }
+    }
+}
+```
+
+### Another example
+```cs
+// Import all types.
+using Microsoft.Extensions.DependencyInjection;
+using DotEnv.Core;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Load the .env file.
+        var envVars = new EnvLoader().Load();
+        // Creates the service collection.
+        var services = new ServiceCollection();
+        // Register services.
+        services.AddSingleton<IEnvReader>(envVars.CreateReader())
+            .AddSingleton<IEnvironmentVariablesProvider>(envVars);
     }
 }
 ```
