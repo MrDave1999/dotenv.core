@@ -111,9 +111,9 @@ CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};databas
 ```
 If the variable embedded in the value is not set, the parser will throw an exception, for example:
 ```
+MYSQL_ROOT_PASSWORD=1234
 CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
 MYSQL_USER=root
-MYSQL_ROOT_PASSWORD=1234
 ```
 In the above example, the parser should throw an exception because the `MYSQL_USER` variable is not set.
 
