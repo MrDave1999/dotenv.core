@@ -15,7 +15,6 @@
 - It has a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface), which makes it simple and easy to use.
 - Support for load multiple .env files.
 - Searches in parent directories when it does not find the .env file in the current directory.
-- You can customize the parser algorithm through inheritance.
 - You can set the base path for a set of .env files.
 - You can change the default .env file name, so it does not necessarily have to be `.env`.
 - Support for the variables interpolation.
@@ -42,7 +41,7 @@ An environment variable is a dynamic variable that can affect the behavior of ru
 
 If you're an hardcore and want to do it manually, you must add the following to the `csproj` file:
 ```xml
-<PackageReference Include="DotEnv.Core" Version="1.1.3" />
+<PackageReference Include="DotEnv.Core" Version="2.0.0" />
 ```
 If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the **Tools** > **NuGet Package Manager** > **Package Manager Console** command and run the install command:
 ```
@@ -68,7 +67,7 @@ By default, the `Load` method will search for a file called `.env` in the curren
 
 The current directory is where the executable with its dependencies is located.
 
-Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`.
+Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`. Also, by default, the `Load` method does not overwrite the value of the environment variable.
 
 After you have loaded the .env file with the `Load` method, you can access the environment variables using the indexer of the `EnvReader` class:
 ```cs
@@ -82,6 +81,41 @@ string key1 = EnvReader.Instance["KEY1"];
 string key2 = EnvReader.Instance["KEY2"];
 ```
 For more information, see the [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html).
+
+## File Format
+
+- Empty lines or lines with white-spaces will be ignored.
+- The key-value format must be as follows: `KEY=VAL`.
+- There is no special handling of quotation marks. This means that **they are part of the VAL.**
+- If the value of a key is an empty string, it will be converted to a white-space.
+- White-spaces at both ends of the key and value are ignored.
+
+### Comments
+
+Each line beginning with the `#` character is a comment. White-spaces at the beginning of each comment will be ignored.
+
+Example:
+```
+# comment without white spaces
+   # comment with white spaces
+KEY=VALUE
+```
+
+### Interpolating variables
+
+Sometimes you will need to interpolate variables within a value, for example:
+```
+MYSQL_USER=root
+MYSQL_ROOT_PASSWORD=1234
+CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+```
+If the variable embedded in the value is not set, the parser will throw an exception, for example:
+```
+CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+MYSQL_USER=root
+MYSQL_ROOT_PASSWORD=1234
+```
+In the above example, the parser should throw an exception because the `MYSQL_USER` variable is not set.
 
 ## Deployment in Production
 
