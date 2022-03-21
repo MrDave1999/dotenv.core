@@ -2,6 +2,8 @@
 
 ## Introduction
 
+Dependency injection is an object-oriented design pattern, in which objects are supplied to a class instead of the class itself creating those objects. The containing class is the one that supplies the object to our class.
+
 In some cases, classes should not directly create an instance of the `EnvReader` class, because if you change the implementation, you will have to make changes in the classes that depend on `EnvReader`.
 
 **For example:**
@@ -56,7 +58,7 @@ class Bar
     }
 }
 ```
-So to avoid those changes in the future, you can make use of Dependency Injection:
+So to avoid those changes in the future, you can make use of dependency injection pattern:
 ```cs
 class Foo
 {
