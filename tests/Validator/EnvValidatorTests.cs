@@ -51,11 +51,11 @@ namespace DotEnv.Core.Tests.Validator
             Assert.AreEqual(expected: 5, actual: result.Count);
 
             msg = result.ErrorMessages;
-            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "SAMC_KEY"));
-            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "API_KEY"));
-            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "JWT_TOKEN"));
-            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "JWT_TOKEN_ID"));
-            StringAssert.Contains(msg, FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key: "SERVICE_ID"));
+            StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "SAMC_KEY"));
+            StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "API_KEY"));
+            StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "JWT_TOKEN"));
+            StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "JWT_TOKEN_ID"));
+            StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "SERVICE_ID"));
         }
 
         [TestMethod]

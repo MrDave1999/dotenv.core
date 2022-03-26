@@ -68,7 +68,7 @@ namespace DotEnv.Core
             }
             catch (ArgumentException)
             {
-                throw new ArgumentException(FormatEncodingNotFoundMessage(EncodingNotFoundMessage, encodingName), nameof(encodingName));
+                throw new ArgumentException(string.Format(EncodingNotFoundMessage, encodingName), nameof(encodingName));
             }
             return this;
         }
@@ -94,7 +94,7 @@ namespace DotEnv.Core
             }
             catch(ArgumentException)
             {
-                throw new ArgumentException(FormatEncodingNotFoundMessage(EncodingNotFoundMessage, encodingName), nameof(encodingName));
+                throw new ArgumentException(string.Format(EncodingNotFoundMessage, encodingName), nameof(encodingName));
             }
             return this;
         }

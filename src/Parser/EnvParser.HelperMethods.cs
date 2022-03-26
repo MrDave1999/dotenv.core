@@ -34,6 +34,36 @@ namespace DotEnv.Core
         }
 
         /// <summary>
+        /// Removes all leading and trailing white-space characters from the current key.
+        /// </summary>
+        /// <param name="key">The key to trim.</param>
+        /// <returns>
+        /// The key that remains after all white-space characters are removed from the start and end of the current key.
+        /// If no characters can be trimmed from the current key, the method returns the current key unchanged.
+        /// </returns>
+        private string TrimKey(string key)
+        {
+            key = _configuration.TrimStartKeys ? key.TrimStart() : key;
+            key = _configuration.TrimEndKeys ? key.TrimEnd() : key;
+            return key;
+        }
+
+        /// <summary>
+        /// Removes all leading and trailing white-space characters from the current value.
+        /// </summary>
+        /// <param name="value">The value to trim.</param>
+        /// <returns>
+        /// The value that remains after all white-space characters are removed from the start and end of the current value.
+        /// If no characters can be trimmed from the current value, the method returns the current value unchanged.
+        /// </returns>
+        private string TrimValue(string value)
+        {
+            value = _configuration.TrimStartValues ? value.TrimStart() : value;
+            value = _configuration.TrimEndValues ? value.TrimEnd() : value;
+            return value;
+        }
+
+        /// <summary>
         /// Extracts the key from the line.
         /// </summary>
         /// <param name="line">The line with the key-value pair.</param>
@@ -43,8 +73,6 @@ namespace DotEnv.Core
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
             string key = line.Split(_configuration.DelimiterKeyValuePair, MaxCount)[0];
-            key = _configuration.TrimStartKeys ? key.TrimStart() : key;
-            key = _configuration.TrimEndKeys ? key.TrimEnd() : key;
             return key;
         }
 
@@ -58,9 +86,7 @@ namespace DotEnv.Core
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
             string value = line.Split(_configuration.DelimiterKeyValuePair, MaxCount)[1];
-            value = _configuration.TrimStartValues ? value.TrimStart() : value;
-            value = _configuration.TrimEndValues ? value.TrimEnd() : value;
-            return string.IsNullOrEmpty(value) ? " " : value;
+            return value;
         }
 
         /// <summary>
@@ -68,11 +94,12 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="line">The line to test.</param>
         /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
-        /// <returns><c>true</c> if the line has no the key-value format, otherwise <c>false</c>.</returns>
+        /// <returns><c>true</c> if the line has no the key-value pair, otherwise <c>false</c>.</returns>
         private bool HasNoKeyValuePair(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
-            return line.Split(_configuration.DelimiterKeyValuePair, MaxCount).Length != 2;
+            var keyValuePair = line.Split(_configuration.DelimiterKeyValuePair, MaxCount);
+            return keyValuePair.Length != 2 || string.IsNullOrWhiteSpace(keyValuePair[0]);
         }
 
         /// <summary>
@@ -87,34 +114,37 @@ namespace DotEnv.Core
         /// <summary>
         /// Replaces the name of each environment variable embedded in the specified string with the string equivalent of the value of the variable, then returns the resulting string.
         /// </summary>
-        /// <param name="value">A string containing the names of zero or more environment variables.</param>
-        /// <param name="lineNumber">The line number where the value was found.</param>
+        /// <param name="name">A string containing the names of zero or more environment variables.</param>
+        /// <param name="currentLine">The number of the current line.</param>
         /// <exception cref="ArgumentNullException"><c>value</c> is <c>null</c>.</exception>
         /// <returns>A string with each environment variable replaced by its value.</returns>
-        private string ExpandEnvironmentVariables(string value, int lineNumber)
+        private string ExpandEnvironmentVariables(string name, int currentLine)
         {
-            _ = value ?? throw new ArgumentNullException(nameof(value));
+            _ = name ?? throw new ArgumentNullException(nameof(name));
             var pattern = @"\$\{([^}]*)\}";
-            value = Regex.Replace(value, pattern, match =>
+            name = Regex.Replace(name, pattern, match =>
             {
                 var variable = match.Groups[1].Value;
 
                 if (string.IsNullOrWhiteSpace(variable))
                 {
-                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(VariableIsAnEmptyStringMessage, lineNumber: lineNumber, envFileName: FileName));
+                    int index = match.Groups[0].Captures[0].Index + 1; // So that the position starts from '1' instead of '0'.
+                    var value = match.Groups[0].Value;
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(VariableIsAnEmptyStringMessage, actualValue: value, lineNumber: currentLine, column: index, envFileName: FileName));
                     return string.Empty;
                 }
 
                 var retrievedValue = EnvVarsProvider[variable];
                 if (retrievedValue == null)
                 {
-                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(InterpolatedVariableNotSetMessage, actualValue: variable, lineNumber: lineNumber, envFileName: FileName));
+                    int index = match.Groups[1].Captures[0].Index + 1; // So that the position starts from '1' instead of '0'.
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(VariableNotSetMessage, actualValue: variable, lineNumber: currentLine, column: index, envFileName: FileName));
                     return string.Empty;
                 }
 
                 return retrievedValue;
             });
-            return value;
+            return name;
         }
     }
 }

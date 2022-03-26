@@ -7,15 +7,8 @@ namespace DotEnv.Core
     /// <summary>
     /// The exception that is thrown when the environment variable is not set to a specific provider (e.g., current process or a <see cref="Dictionary{TKey, TValue}" />).
     /// </summary>
-    public class VariableNotSetException : Exception
+    public class VariableNotSetException : ArgumentException
     {
-        private readonly string _variableName;
-
-        /// <summary>
-        /// Allows access to the name of the variable that causes the exception.
-        /// </summary>
-        public string VariableName => _variableName;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableNotSetException" /> class.
         /// </summary>
@@ -34,20 +27,12 @@ namespace DotEnv.Core
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="VariableNotSetException" /> class with the a specified error message and variable name.
+        /// Initializes a new instance of the <see cref="VariableNotSetException" /> class with the a specified error message, and the parameter name.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
-        /// <param name="variableName">The variable name that caused the exception.</param>
-        public VariableNotSetException(
-            string message, 
-            string variableName) : base(message)
+        /// <param name="paramName">The parameter name that caused the exception.</param>
+        public VariableNotSetException(string message, string paramName) : base(message, paramName)
         {
-            _variableName = variableName;
         }
-
-        /// <summary>
-        /// Gets a message that describes the current exception.
-        /// </summary>
-        public override string Message => FormattingMessage.FormatVariableNotSetMessage(base.Message, _variableName);
     }
 }

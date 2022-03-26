@@ -88,7 +88,7 @@ namespace DotEnv.Core.Tests.Parser
             void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, LineHasNoKeyValuePairMessage);
+            StringAssert.Contains(ex.Message, string.Format(LineHasNoKeyValuePairMessage, env));
         }
 
         [TestMethod]
@@ -163,8 +163,8 @@ namespace DotEnv.Core.Tests.Parser
 
             Assert.AreEqual(expected: "VAL1  ...", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_1"));
             Assert.AreEqual(expected: "VAL2  ...", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_2"));
-            Assert.AreEqual(expected: "ASDASD  ", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_3"));
-            Assert.AreEqual(expected: "ASDASD  ASDASD ", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_4"));
+            Assert.AreEqual(expected: "ASDASD", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_3"));
+            Assert.AreEqual(expected: "ASDASD  ASDASD", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_4"));
             Assert.AreEqual(expected: "server=;user=root;", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_5"));
             Assert.AreEqual(expected: "server=  ; user=root;", actual: GetEnvironmentVariable("IGNORE_EXCEPTION_6"));
         }
@@ -255,7 +255,7 @@ namespace DotEnv.Core.Tests.Parser
             void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, InterpolatedVariableNotSetMessage);
+            StringAssert.Contains(ex.Message, string.Format(VariableNotSetMessage, "VARIABLE_NOT_FOUND"));
         }
 
         [TestMethod]

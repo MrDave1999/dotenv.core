@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static DotEnv.Core.EnvFileNames;
 
 namespace DotEnv.Core
 {
@@ -10,19 +11,25 @@ namespace DotEnv.Core
     public class ExceptionMessages
     {
         #pragma warning disable CS1591
-        public const string VariableNotSetMessage = "The variable is not set in the provider (e.g., current process or dictionary).";
-        public const string InterpolatedVariableNotSetMessage = "The interpolated variable is not set in the provider (e.g., current process or dictionary).";
-        public const string DataSourceIsEmptyOrWhitespaceMessage = "The data source (probably the env file) is empty or consists only in whitespace.";
-        public const string KeyIsAnEmptyStringMessage = "The key name cannot be an empty string or consists only of white-space characters.";
-        public const string VariableIsAnEmptyStringMessage = "The interpolated variable in the value cannot be an empty string or consists only of white-space characters.";
-        public const string LineHasNoKeyValuePairMessage = "The parser found a line that has no key-value pair format.";
-        public const string FileNotFoundMessage = "The .env file could not be found.";
-        public const string FileNotPresentLoadEnvMessage = "Any of these .env files must be present in the root directory of your project";
+        public const string VariableNotSetMessage = "'{0}' is not set.";
+        public const string DataSourceIsEmptyOrWhitespaceMessage = "Data source is empty or consists only in whitespace.";
+        public const string VariableIsAnEmptyStringMessage = "'{0}' is an invalid interpolation expression.";
+        public const string LineHasNoKeyValuePairMessage = "'{0}' does not have the format of key-value pair.";
+        public const string FileNotFoundMessage = "{0}: error: No such file or directory.";
         public const string OptionInvalidMessage = "The option is invalid.";
         public const string ArgumentIsNullOrWhiteSpaceMessage = "The argument cannot be an empty string or consists only of white-space characters.";
         public const string RequiredKeysNotSpecifiedMessage = "The keys required must be specified with the EnvValidator.SetRequiredKeys method before invoking the EnvValidator.Validate method.";
-        public const string RequiredKeysNotPresentMessage = "is a key required by the application.";
+        public const string RequiredKeysNotPresentMessage = "'{0}' is a key required by the application.";
         public const string LengthOfParamsListIsZeroMessage = "The length of the params list is zero.";
-        public const string EncodingNotFoundMessage = "is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.";
+        public const string EncodingNotFoundMessage = "'{0}' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.";
+        
+        public static string LocalFileNotPresentMessage
+        {
+            get
+            {
+                var message = "error: Any of these .env files must be present in the root directory of your project:";
+                return Env.CurrentEnvironment != null ? $"{message} .env.{Env.CurrentEnvironment}.local or {EnvLocalName}" : $"{message} {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
+            }
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace DotEnv.Core
             if (TryGetStringValue(variable, out string value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -26,7 +26,7 @@ namespace DotEnv.Core
             if (TryGetBoolValue(variable, out bool value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -35,7 +35,7 @@ namespace DotEnv.Core
             if (TryGetByteValue(variable, out byte value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -44,7 +44,7 @@ namespace DotEnv.Core
             if (TryGetSByteValue(variable, out sbyte value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -53,7 +53,7 @@ namespace DotEnv.Core
             if (TryGetCharValue(variable, out char value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -62,7 +62,7 @@ namespace DotEnv.Core
             if (TryGetIntValue(variable, out int value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -71,7 +71,7 @@ namespace DotEnv.Core
             if (TryGetUIntValue(variable, out uint value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -80,7 +80,7 @@ namespace DotEnv.Core
             if (TryGetLongValue(variable, out long value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -89,7 +89,7 @@ namespace DotEnv.Core
             if (TryGetULongValue(variable, out ulong value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -98,7 +98,7 @@ namespace DotEnv.Core
             if (TryGetShortValue(variable, out short value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -107,7 +107,7 @@ namespace DotEnv.Core
             if (TryGetUShortValue(variable, out ushort value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -116,7 +116,7 @@ namespace DotEnv.Core
             if (TryGetDecimalValue(variable, out decimal value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -125,7 +125,7 @@ namespace DotEnv.Core
             if (TryGetDoubleValue(variable, out double value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
 
         /// <inheritdoc />
@@ -134,7 +134,7 @@ namespace DotEnv.Core
             if (TryGetFloatValue(variable, out float value))
                 return value;
 
-            throw new VariableNotSetException(VariableNotSetMessage, variable);
+            throw new VariableNotSetException(string.Format(VariableNotSetMessage, variable), nameof(variable));
         }
     }
 }

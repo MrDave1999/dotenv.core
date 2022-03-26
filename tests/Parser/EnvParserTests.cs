@@ -40,31 +40,19 @@ namespace DotEnv.Core.Tests.Parser
         [TestMethod]
         public void Parse_WhenKeyIsAnEmptyString_ShouldThrowParserException()
         {
-            string env = @"
-                KEY_EMPTY_STRING=VAL1
-                =VAL2
-            ";
+            string env = "KEY_EMPTY_STRING=VAL1\n=VAL2";
             var parser = new EnvParser();
 
             void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, KeyIsAnEmptyStringMessage);
+            StringAssert.Contains(ex.Message, string.Format(LineHasNoKeyValuePairMessage, "=VAL2"));
         }
 
         [TestMethod]
-        [DataRow(@"
-            LINE_HAS_NO_KEY_1=VAL1
-            LINE_HAS_NO_KEY_2;VAL2
-        ")]
-        [DataRow(@"
-            LINE_HAS_NO_KEY_3 VAL1
-            LINE_HAS_NO_KEY_4=VAL2
-        ")]
-        [DataRow(@"
-            This is a line.
-            LINE_HAS_NO_KEY_5=VAL2
-        ")]
+        [DataRow("LINE_HAS_NO_KEY_2;VAL2")]
+        [DataRow("LINE_HAS_NO_KEY_3 VAL1")]
+        [DataRow("This is a line.")]
         public void Parse_WhenLineHasNoKeyValuePair_ShouldThrowParserException(string input)
         {
             var parser = new EnvParser();
@@ -72,7 +60,7 @@ namespace DotEnv.Core.Tests.Parser
             void action() => parser.Parse(input);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, LineHasNoKeyValuePairMessage);
+            StringAssert.Contains(ex.Message, string.Format(LineHasNoKeyValuePairMessage, input));
         }
 
         [TestMethod]
@@ -218,29 +206,28 @@ namespace DotEnv.Core.Tests.Parser
         }
 
         [TestMethod]
-        [DataRow("EMBEDDED_VAR_1 = asdasd ${EMBEDDED_VAR_1}")]
-        [DataRow("EMBEDDED_VAR_2 = ${VARIABLE_NOT_FOUND} asdasd ")]
-        public void Parse_WhenInterpolatedVariableDoesNotExist_ShouldThrowParserException(string env)
+        public void Parse_WhenInterpolatedVariableDoesNotExist_ShouldThrowParserException()
         {
+            string env = "EMBEDDED_VAR_1 = asdasd ${VARIABLE_NOT_FOUND}";
             var parser = new EnvParser();
 
             void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, InterpolatedVariableNotSetMessage);
+            StringAssert.Contains(ex.Message, string.Format(VariableNotSetMessage, "VARIABLE_NOT_FOUND"));
         }
 
         [TestMethod]
-        [DataRow("EMBEDDED_VAR_3 = asdasd ${}")]
-        [DataRow("EMBEDDED_VAR_4 = ${    } asdasd ")]
-        public void Parse_WhenInterpolatedVariableIsEmptyString_ShouldThrowParserException(string env)
+        [DataRow("EMBEDDED_VAR_3 = asdasd ${}", "${}")]
+        [DataRow("EMBEDDED_VAR_4 = ${    } asdasd ", "${    }")]
+        public void Parse_WhenInterpolatedVariableIsEmptyString_ShouldThrowParserException(string env, string value)
         {
             var parser = new EnvParser();
 
             void action() => parser.Parse(env);
 
             var ex = Assert.ThrowsException<ParserException>(action);
-            StringAssert.Contains(ex.Message, VariableIsAnEmptyStringMessage);
+            StringAssert.Contains(ex.Message, string.Format(VariableIsAnEmptyStringMessage, value));
         }
 
         [TestMethod]

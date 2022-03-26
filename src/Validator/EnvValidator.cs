@@ -52,7 +52,7 @@ namespace DotEnv.Core
             {
                 var retrievedValue = _configuration.EnvVars[key];
                 if (retrievedValue == null)
-                    _validationResult.Add(FormatRequiredKeysNotPresentMessage(RequiredKeysNotPresentMessage, key));
+                    _validationResult.Add(string.Format(RequiredKeysNotPresentMessage, key));
             }
 
             if (_validationResult.HasError() && _configuration.ThrowException)

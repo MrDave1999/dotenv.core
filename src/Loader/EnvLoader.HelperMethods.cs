@@ -19,7 +19,7 @@ namespace DotEnv.Core
         {
             _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
             if (!envFile.Exists && !envFile.Optional)
-                _validationResult.Add(errorMsg: FormatFileNotFoundExceptionMessage(FileNotFoundMessage, envFile.Path));
+                _validationResult.Add(errorMsg: string.Format(FileNotFoundMessage, envFile.Path));
         }
 
         /// <summary>
