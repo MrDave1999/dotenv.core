@@ -68,19 +68,18 @@ namespace DotEnv.Core
 
                     if (HasNoKeyValuePair(line))
                     {
-                        ValidationResult.Add(errorMsg: FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: line, lineNumber: i, envFileName: FileName));
+                        ValidationResult.Add(errorMsg: FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: line, lineNumber: i, column: 1, envFileName: FileName));
                         continue;
                     }
 
-                    var key = ExtractKey(line);
-                    if (string.IsNullOrEmpty(key))
-                    {
-                        ValidationResult.Add(errorMsg: FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: i, envFileName: FileName));
-                        continue;
-                    }
+                    line = ExpandEnvironmentVariables(line, currentLine: i);
 
+                    var key   = ExtractKey(line);
                     var value = ExtractValue(line);
-                    value = ExpandEnvironmentVariables(value, lineNumber: i);
+
+                    key   = TrimKey(key);
+                    value = TrimValue(value);
+                    value = string.IsNullOrEmpty(value) ? " " : value;
 
                     var retrievedValue = EnvVarsProvider[key];
                     if (retrievedValue == null)

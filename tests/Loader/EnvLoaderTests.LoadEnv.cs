@@ -136,20 +136,20 @@ namespace DotEnv.Core.Tests.Loader
             Assert.AreEqual(expected: 7, actual: result.Count);
 
             var fileName = $"{basePath}.env.production.local";
-            StringAssert.Contains(msg, FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: 2, envFileName: fileName));
-            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "PROD", lineNumber: 5, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "==", lineNumber: 2, column: 1, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "PROD", lineNumber: 5, column: 1, envFileName: fileName));
 
             var value = "This is an error";
             fileName = $"{basePath}.env.local";
-            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 4, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 4, column: 1, envFileName: fileName));
 
             fileName = $"{basePath}.env.production";
-            StringAssert.Contains(msg, FormatParserExceptionMessage(KeyIsAnEmptyStringMessage, lineNumber: 3, envFileName: fileName));
-            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 5, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: "=VAL1", lineNumber: 3, column: 1, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 5, column: 1, envFileName: fileName));
 
             fileName = $"{basePath}.env";
-            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 4, envFileName: fileName));
-            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 6, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 4, column: 1, envFileName: fileName));
+            StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 6, column: 1, envFileName: fileName));
             Env.CurrentEnvironment = null;
         }
 
@@ -164,7 +164,7 @@ namespace DotEnv.Core.Tests.Loader
 
             Assert.AreEqual(expected: true, actual: result.HasError());
             Assert.AreEqual(expected: 1, actual: result.Count);
-            StringAssert.Contains(result.ErrorMessages, FormatFileNotPresentLoadEnvMessage(FileNotPresentLoadEnvMessage));
+            StringAssert.Contains(result.ErrorMessages, LocalFileNotPresentMessage);
         }
 
         [TestMethod]
@@ -180,7 +180,7 @@ namespace DotEnv.Core.Tests.Loader
 
             Assert.AreEqual(expected: true, actual: result.HasError());
             Assert.AreEqual(expected: 1, actual: result.Count);
-            StringAssert.Contains(result.ErrorMessages, FormatFileNotPresentLoadEnvMessage(FileNotPresentLoadEnvMessage, environment));
+            StringAssert.Contains(result.ErrorMessages, LocalFileNotPresentMessage);
             Env.CurrentEnvironment = null;
         }
     }
