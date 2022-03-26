@@ -183,7 +183,7 @@ namespace DotEnv.Core.Tests.Parser
         }
 
         [TestMethod]
-        public void Parse_WhenVariablesAreInterpolatedInTheValue_ShouldExpandVariables()
+        public void Parse_WhenVariablesAreInterpolated_ShouldExpandVariables()
         {
             string env = @"
                 MYSQL_USER_EXPAND = root
@@ -194,8 +194,11 @@ namespace DotEnv.Core.Tests.Parser
                 CS_SQL_EXPAND = ${CS_MYSQL_EXPAND}
                 EXPAND_2 = ${TEST asdasd
                 EXPAND_3 = {TEST}$ $TEST {}
+
+                A_EXPAND = MYSQL_HOST_EXPAND
+                ${A_EXPAND} = 127.0.0.1
             ";
-            var parser = new EnvParser();
+            var parser = new EnvParser().AllowOverwriteExistingVars();
 
             parser.Parse(env);
 
@@ -203,6 +206,8 @@ namespace DotEnv.Core.Tests.Parser
             Assert.AreEqual(expected: "server=localhost;user=root;password=1234;", actual: GetEnvironmentVariable("CS_SQL_EXPAND"));
             Assert.AreEqual(expected: "${TEST asdasd", actual: GetEnvironmentVariable("EXPAND_2"));
             Assert.AreEqual(expected: "{TEST}$ $TEST {}", actual: GetEnvironmentVariable("EXPAND_3"));
+            Assert.AreEqual(expected: "127.0.0.1", actual: GetEnvironmentVariable("MYSQL_HOST_EXPAND"));
+            Assert.IsNull(GetEnvironmentVariable("${EXPAND_1}"));
         }
 
         [TestMethod]
