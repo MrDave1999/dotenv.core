@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.EnvFileNames;
 using static DotEnv.Core.FormattingMessage;
+using static DotEnv.Core.EnvFileNames;
 
 namespace DotEnv.Core
 {
@@ -65,7 +64,8 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvironmentVariablesProvider LoadEnv(out EnvValidationResult result)
         {
-            var environment = Env.CurrentEnvironment ?? _configuration.EnvironmentName;
+            Env.CurrentEnvironment = Env.CurrentEnvironment ?? _configuration.EnvironmentName;
+            var environment = Env.CurrentEnvironment;
             var envFiles = _configuration.EnvFiles;
             var copyEnvFiles = envFiles.ToArray();
             envFiles.Clear();
@@ -90,15 +90,16 @@ namespace DotEnv.Core
                 var envDevelopmentLocal = envFiles[0]; // .env.development.local
                 var envDevLocal = envFiles[1];         // .env.dev.local
                 var envLocal = envFiles[2];            // .env.local
+                Env.CurrentEnvironment = EnvironmentNames.Development[0]; // Defines the default environment.
                 if (!envDevelopmentLocal.Exists && !envDevLocal.Exists && !envLocal.Exists)
-                    _validationResult.Add(errorMsg: LocalFileNotPresentMessage);
+                    _validationResult.Add(errorMsg: FormatLocalFileNotPresentMessage());
             }
             else
             {
                 var envEnvironmentLocal = envFiles[0];  // .env.[environment].local
                 var envLocal = envFiles[1];             // .env.local
                 if (!envEnvironmentLocal.Exists && !envLocal.Exists)
-                    _validationResult.Add(errorMsg: LocalFileNotPresentMessage);
+                    _validationResult.Add(errorMsg: FormatLocalFileNotPresentMessage(environmentName: environment));
             }
 
             _parser.CreateAndThrowParserException();

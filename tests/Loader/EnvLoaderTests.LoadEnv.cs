@@ -14,6 +14,7 @@ namespace DotEnv.Core.Tests.Loader
         [TestMethod]
         public void LoadEnv_WhenEnvFileNotFound_ShouldThrowFileNotFoundException()
         {
+            Env.CurrentEnvironment = "dev";
             var loader = new EnvLoader()
                             .SetBasePath("environment/files")
                             .SetDefaultEnvFileName(".env.example")
@@ -28,6 +29,8 @@ namespace DotEnv.Core.Tests.Loader
         [TestMethod]
         public void LoadEnv_WhenEnvironmentIsNotDefined_ShouldBeAbleToReadEnvironmentVariables()
         {
+            Env.CurrentEnvironment = null;
+            
             new EnvLoader()
                 .SetBasePath("Loader/env_files/environment/dev")
                 .LoadEnv();
@@ -36,6 +39,7 @@ namespace DotEnv.Core.Tests.Loader
                 .SetBasePath("Loader/env_files/environment/development")
                 .LoadEnv();
 
+            Assert.AreEqual(expected: "development", actual: Env.CurrentEnvironment);
             Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV"));
             Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_DEV"));
             Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV_DEV_LOCAL"));
@@ -59,7 +63,6 @@ namespace DotEnv.Core.Tests.Loader
             Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST"));
             Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST_LOCAL"));
             Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_LOCAL"));
-            Env.CurrentEnvironment = null;
         }
 
         [TestMethod]
@@ -71,12 +74,12 @@ namespace DotEnv.Core.Tests.Loader
             void action() => loader.LoadEnv();
 
             Assert.ThrowsException<ParserException>(action);
-            Env.CurrentEnvironment = null;
         }
 
         [TestMethod]
         public void LoadEnv_WhenSetsTheEnvironmentName_ShouldBeAbleToReadVariables()
         {
+            Env.CurrentEnvironment = null;
             var loader = new EnvLoader()
                             .AvoidModifyEnvironment()
                             .SetEnvironmentName("test")
@@ -84,6 +87,7 @@ namespace DotEnv.Core.Tests.Loader
 
             var keyValuePairs = loader.LoadEnv();
 
+            Assert.AreEqual(expected: "test", actual: Env.CurrentEnvironment);
             Assert.IsNotNull(keyValuePairs["TEST_ENV"]);
             Assert.IsNotNull(keyValuePairs["TEST_ENV_TEST"]);
             Assert.IsNotNull(keyValuePairs["TEST_ENV_TEST_LOCAL"]);
@@ -105,6 +109,7 @@ namespace DotEnv.Core.Tests.Loader
         [TestMethod]
         public void LoadEnv_WhenAddsEnvFiles_ShouldMaintainThePriorityOfTheEnvFiles()
         {
+            Env.CurrentEnvironment = "dev";
             var loader = new EnvLoader()
                             .SetBasePath("Loader/env_files/local")
                             .AddEnvFile(".env.example1")
@@ -150,12 +155,12 @@ namespace DotEnv.Core.Tests.Loader
             fileName = $"{basePath}.env";
             StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 4, column: 1, envFileName: fileName));
             StringAssert.Contains(msg, FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: value, lineNumber: 6, column: 1, envFileName: fileName));
-            Env.CurrentEnvironment = null;
         }
 
         [TestMethod]
         public void LoadEnv_WhenLocalEnvFilesNotExistAndEnvironmentIsNotDefined_ShouldReadTheErrors()
         {
+            Env.CurrentEnvironment = null;
             var loader = new EnvLoader();
 
             loader
@@ -164,15 +169,15 @@ namespace DotEnv.Core.Tests.Loader
 
             Assert.AreEqual(expected: true, actual: result.HasError());
             Assert.AreEqual(expected: 1, actual: result.Count);
-            StringAssert.Contains(result.ErrorMessages, LocalFileNotPresentMessage);
+            Assert.AreEqual(expected: "development", actual: Env.CurrentEnvironment);
+            StringAssert.Contains(result.ErrorMessages, FormatLocalFileNotPresentMessage());
         }
 
         [TestMethod]
         public void LoadEnv_WhenLocalEnvFilesNotExistAndEnvironmentIsDefined_ShouldReadTheErrors()
         {
             var loader = new EnvLoader();
-            var environment = "test";
-            Env.CurrentEnvironment = environment;
+            Env.CurrentEnvironment = "test";
 
             loader
                 .SetBasePath("environment/env_files")
@@ -180,8 +185,7 @@ namespace DotEnv.Core.Tests.Loader
 
             Assert.AreEqual(expected: true, actual: result.HasError());
             Assert.AreEqual(expected: 1, actual: result.Count);
-            StringAssert.Contains(result.ErrorMessages, LocalFileNotPresentMessage);
-            Env.CurrentEnvironment = null;
+            StringAssert.Contains(result.ErrorMessages, FormatLocalFileNotPresentMessage(environmentName: Env.CurrentEnvironment));
         }
     }
 }

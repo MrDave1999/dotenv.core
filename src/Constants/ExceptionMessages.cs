@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static DotEnv.Core.EnvFileNames;
 
 namespace DotEnv.Core
 {
@@ -22,14 +21,5 @@ namespace DotEnv.Core
         public const string RequiredKeysNotPresentMessage = "'{0}' is a key required by the application.";
         public const string LengthOfParamsListIsZeroMessage = "The length of the params list is zero.";
         public const string EncodingNotFoundMessage = "'{0}' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method.";
-        
-        public static string LocalFileNotPresentMessage
-        {
-            get
-            {
-                var message = "error: Any of these .env files must be present in the root directory of your project:";
-                return Env.CurrentEnvironment != null ? $"{message} .env.{Env.CurrentEnvironment}.local or {EnvLocalName}" : $"{message} {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
-            }
-        }
     }
 }
