@@ -37,12 +37,14 @@ namespace DotEnv.Core
         /// Removes all leading and trailing white-space characters from the current key.
         /// </summary>
         /// <param name="key">The key to trim.</param>
+        /// <exception cref="ArgumentNullException"><c>key</c> is <c>null</c>.</exception>
         /// <returns>
         /// The key that remains after all white-space characters are removed from the start and end of the current key.
         /// If no characters can be trimmed from the current key, the method returns the current key unchanged.
         /// </returns>
         private string TrimKey(string key)
         {
+            _ = key ?? throw new ArgumentNullException(nameof(key));
             key = _configuration.TrimStartKeys ? key.TrimStart() : key;
             key = _configuration.TrimEndKeys ? key.TrimEnd() : key;
             return key;
@@ -52,12 +54,14 @@ namespace DotEnv.Core
         /// Removes all leading and trailing white-space characters from the current value.
         /// </summary>
         /// <param name="value">The value to trim.</param>
+        /// <exception cref="ArgumentNullException"><c>value</c> is <c>null</c>.</exception>
         /// <returns>
         /// The value that remains after all white-space characters are removed from the start and end of the current value.
         /// If no characters can be trimmed from the current value, the method returns the current value unchanged.
         /// </returns>
         private string TrimValue(string value)
         {
+            _ = value ?? throw new ArgumentNullException(nameof(value));
             value = _configuration.TrimStartValues ? value.TrimStart() : value;
             value = _configuration.TrimEndValues ? value.TrimEnd() : value;
             return value;
@@ -116,7 +120,7 @@ namespace DotEnv.Core
         /// </summary>
         /// <param name="name">A string containing the names of zero or more environment variables.</param>
         /// <param name="currentLine">The number of the current line.</param>
-        /// <exception cref="ArgumentNullException"><c>value</c> is <c>null</c>.</exception>
+        /// <exception cref="ArgumentNullException"><c>name</c> is <c>null</c>.</exception>
         /// <returns>A string with each environment variable replaced by its value.</returns>
         private string ExpandEnvironmentVariables(string name, int currentLine)
         {
