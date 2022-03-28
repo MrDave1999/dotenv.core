@@ -70,7 +70,29 @@ MYSQL_USER=root
 ```
 In the above example, the parser should throw an exception because the `MYSQL_USER` variable is not set.
 
-## Deployment in Production
+## Frequently Answered Questions
 
-In production, you should not add sensitive data (such as passwords) to an .env file, as it would be unencrypted! Instead, you should use a secrets manager such as [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts) or [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
+### Can I use an `.env file` in a production environment?
+
+Generally, you should not add sensitive data (such as passwords) to a .env file, as it would be unencrypted! Instead, you could use a secrets manager such as [Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts) or [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
+
+If you are going to use .env files in production, make sure you have good security at the infrastructure level and also grant read/write permissions to a specific user (such as admin), so that not just anyone can access your .env file.
+
+### Should I commit my .env file?
+
+Credentials should only be accessible on the machines that need access to them. Never commit sensitive information to a repository that is not needed by every development machine.
+
+### Why is it not overriding existing environment variables?
+
+By default, it won't overwrite existing environment variables as dotenv assumes the deployment environment has more knowledge about configuration than the application does.
+
+## Contribution
+
+Follow the steps below:
+
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Added some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new [Pull Request](https://github.com/MrDave1999/dotenv.core/pulls)
 
