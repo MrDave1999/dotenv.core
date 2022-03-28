@@ -1,4 +1,4 @@
-# More options for the Loader
+# Configuration options
 
 There are some options that are for the parser, but we can also use it through the `EnvLoader` class.
 
@@ -111,12 +111,12 @@ So if we follow the above example, the parser will concatenate the duplicate key
 KEY1 = !WorldHello
 ```
 
-## IgnoreParserExceptions
+## IgnoreParserException
 
-Ignores parser exceptions. By calling this method the parser will not throw any exceptions when it encounters an error:
+Disables/ignores [ParserException](xref:DotEnv.Core.ParserException). This method tells the parser not to throw an exception when it encounters one or more errors:
 ```cs
 new EnvLoader()
-    .IgnoreParserExceptions()
+    .IgnoreParserException()
     .Load();
 ```
 
@@ -148,5 +148,3 @@ So the .env file could look like this:
 KEY1: VAL1
 KEY2: VAL2
 ```
-
-**As a side note**, the `EnvLoader` class has a parameterized constructor in which you can specify a custom parser. You can inherit from `EnvParser` and inject the instance into the constructor.

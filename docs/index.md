@@ -12,7 +12,6 @@
 - It has a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface), which makes it simple and easy to use.
 - Support for load multiple .env files.
 - Searches in parent directories when it does not find the .env file in the current directory.
-- You can customize the parser algorithm through inheritance.
 - You can set the base path for a set of .env files.
 - You can change the default .env file name, so it does not necessarily have to be `.env`.
 - Support for the variables interpolation.
@@ -32,6 +31,41 @@ VARIABLE_NAME=value
 ### What is environment variable?
 
 An environment variable is a dynamic variable that can affect the behavior of running processes on a computer. They are part of the environment in which a process runs.
+
+## File Format
+
+- Empty lines or lines with white-spaces will be ignored.
+- The key-value format must be as follows: `KEY=VAL`.
+- There is no special handling of quotation marks. This means that **they are part of the VAL.**
+- If the value of a key is an empty string, it will be converted to a white-space.
+- White-spaces at both ends of the key and value are ignored.
+
+### Comments
+
+Each line beginning with the `#` character is a comment. White-spaces at the beginning of each comment will be ignored.
+
+Example:
+```
+# comment without white spaces
+   # comment with white spaces
+KEY=VALUE
+```
+
+### Interpolating variables
+
+Sometimes you will need to interpolate variables within a value, for example:
+```
+MYSQL_USER=root
+MYSQL_ROOT_PASSWORD=1234
+CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+```
+If the variable embedded in the value is not set, the parser will throw an exception, for example:
+```
+MYSQL_ROOT_PASSWORD=1234
+CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+MYSQL_USER=root
+```
+In the above example, the parser should throw an exception because the `MYSQL_USER` variable is not set.
 
 ## Deployment in Production
 
