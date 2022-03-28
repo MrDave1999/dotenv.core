@@ -96,6 +96,15 @@ namespace DotEnv.Core.Example
 					Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
 			}
 			Console.WriteLine("\n\n\n");
+
+			Console.Write("---- EXAMPLE (10):");
+			new EnvValidator()
+				.SetRequiredKeys("SERVICE_ID", "TOKEN_ID")
+				.IgnoreException()
+				.Validate(out result);
+
+			Console.Write(result.ErrorMessages);
+			Console.WriteLine("\n\n\n");
 		}
 	}
 }
