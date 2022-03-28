@@ -17,8 +17,21 @@ The `environment` is specified by the actual environment variable `DOTNET_ENV`.
 
 It should be noted that the default environment will be `development` or `dev` if the environment is never specified with `DOTNET_ENV`.
 
+## Concepts
+
+- `.env`: defines the default values for all environments and machines.
+- `.env.local`: defines the configuration values for all environments but only on the machine which contains the file. This file should not be committed to the repository.
+- `.env.[environment]` (e.g. `.env.test`): defines the default values for one environment, but for all machines (these files are committed).
+- `.env.[environment].local` (e.g. `.env.test.local`): defines configuration values that are machine-specific but only for one environment.
+
+Real environment variables always win over env vars created by any of the `.env` files.
+
+The `.env` and `.env.[environment]` files should be committed to the repository because they are the same for all developers and machines. However, the env files ending in `.local` (`.env.local` and `.env.[environment].local`) should not be committed because only you will use them. 
+
+## Functioning
+
 The behavior of the `LoadEnv` method is simple. Imagine that you open the shell in Linux and type the following command:
-```bash
+```sh
 export DOTNET_ENV=production;
 ```
 Then we run the application and the following code is executed:

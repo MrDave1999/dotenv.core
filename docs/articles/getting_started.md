@@ -75,7 +75,7 @@ new EnvLoader()
     .AddEnvFile("/home/MyProject/App/src/.env.dev")
     .Load();
 ```
-In this case the `Load` method will search for the `.env.dev` file in the path `/home/MyProject/App/src/`, if it does not find it, the method will search for the `.env.dev` file in the parent directories. In other words, the `Load` method will search for the file in parent directories such as `src`, `App`, `MyProject`.
+In this case the `Load` method will search for the `.env.dev` file in the path `/home/MyProject/App/src/`, if it does not find it, the method will search for the `.env.dev` file in the parent directories. In other words, the `Load` method will search for the file in the parent directories of `src` such as: `App`, `MyProject`, `home`.
 
 It is recommended not to use absolute paths, instead use relative paths. Remember that an absolute path can be different in each operating system, so your application could lose portability.
 
