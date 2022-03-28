@@ -14,10 +14,13 @@
 
 - It has a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface), which makes it simple and easy to use.
 - Support for load multiple .env files.
+- Support to load the .env file depending on the environment (development, test, staging, or production).
 - Searches in parent directories when it does not find the .env file in the current directory.
 - You can set the base path for a set of .env files.
+- You can define which keys should be required by the application.
 - You can change the default .env file name, so it does not necessarily have to be `.env`.
 - Support for the variables interpolation.
+- And much more.
 
 Don't forget to visit the official library [website](https://mrdave1999.github.io/dotenv.core) where you can find [API documentation](https://mrdave1999.github.io/dotenv.core/api/DotEnv.Core.html), [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html) and [diagrams](https://mrdave1999.github.io/dotenv.core/diagrams/class_diagram.html).
 
@@ -123,4 +126,4 @@ In production, you should not add sensitive data (such as passwords) to an .env 
 
 ## Contribution
 
-If you want to contribute in this project, simply fork the repository, make changes and then create a [pull request](https://github.com/MrDave1999/dotenv.core/pulls).
+If you want to contribute in this project, simply fork the repository, make changes (I recommend that you create your own branch) and then create a [pull request](https://github.com/MrDave1999/dotenv.core/pulls).
