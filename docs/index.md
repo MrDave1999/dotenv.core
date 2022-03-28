@@ -11,10 +11,13 @@
 
 - It has a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface), which makes it simple and easy to use.
 - Support for load multiple .env files.
+- Support to load the .env file depending on the environment (development, test, staging, or production).
 - Searches in parent directories when it does not find the .env file in the current directory.
 - You can set the base path for a set of .env files.
+- You can define which keys should be required by the application.
 - You can change the default .env file name, so it does not necessarily have to be `.env`.
 - Support for the variables interpolation.
+- And much more.
 
 ## Basic Concepts
 ### What is a .env file?
