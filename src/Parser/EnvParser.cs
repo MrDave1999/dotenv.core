@@ -55,40 +55,41 @@ namespace DotEnv.Core
                 return _configuration.EnvVars;
             }
 
-            using(var lines = new StringReader(dataSource))
+            var newLines = new[] { "\r\n", "\n", "\r" };
+            var lines = dataSource.Split(newLines, StringSplitOptions.None);
+            for (int i = 0, len = lines.Length; i != len; ++i)
             {
-                int i = 1;
-                for(var line = lines.ReadLine(); line != null; line = lines.ReadLine(), ++i)
+                var line = lines[i];
+                int currentLine = i + 1;
+
+                if (string.IsNullOrWhiteSpace(line))
+                    continue;
+
+                if (IsComment(line))
+                    continue;
+
+                if (HasNoKeyValuePair(line))
                 {
-                    if (string.IsNullOrWhiteSpace(line))
-                        continue;
-
-                    if (IsComment(line))
-                        continue;
-
-                    if (HasNoKeyValuePair(line))
-                    {
-                        ValidationResult.Add(errorMsg: FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: line, lineNumber: i, column: 1, envFileName: FileName));
-                        continue;
-                    }
-
-                    line = ExpandEnvironmentVariables(line, currentLine: i);
-
-                    var key   = ExtractKey(line);
-                    var value = ExtractValue(line);
-
-                    key   = TrimKey(key);
-                    value = TrimValue(value);
-                    value = string.IsNullOrEmpty(value) ? " " : value;
-
-                    var retrievedValue = EnvVarsProvider[key];
-                    if (retrievedValue == null)
-                        EnvVarsProvider[key] = value;
-                    else if (_configuration.ConcatDuplicateKeys != null)
-                        EnvVarsProvider[key] = ConcatValues(retrievedValue, value);
-                    else if (_configuration.OverwriteExistingVars)
-                        EnvVarsProvider[key] = value;
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: line, lineNumber: currentLine, column: 1, envFileName: FileName));
+                    continue;
                 }
+
+                line = ExpandEnvironmentVariables(line, currentLine);
+
+                var key   = ExtractKey(line);
+                var value = ExtractValue(line);
+
+                key   = TrimKey(key);
+                value = TrimValue(value);
+                value = string.IsNullOrEmpty(value) ? " " : value;
+
+                var retrievedValue = EnvVarsProvider[key];
+                if (retrievedValue == null)
+                    EnvVarsProvider[key] = value;
+                else if (_configuration.ConcatDuplicateKeys != null)
+                    EnvVarsProvider[key] = ConcatValues(retrievedValue, value);
+                else if (_configuration.OverwriteExistingVars)
+                    EnvVarsProvider[key] = value;
             }
 
             CreateAndThrowParserException();
