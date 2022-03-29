@@ -8,7 +8,7 @@
     <title>Getting Started with dotenv.core | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started with dotenv.core | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,7 +81,7 @@
 
 <h2 id="installation">Installation</h2>
 <p>If you're an hardcore and want to do it manually, you must add the following to the <code>csproj</code> file:</p>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;DotEnv.Core&quot; Version=&quot;1.1.2&quot; /&gt;
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;DotEnv.Core&quot; Version=&quot;2.0.0&quot; /&gt;
 </code></pre>
 <p>If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the <strong>Tools</strong> &gt; <strong>NuGet Package Manager</strong> &gt; <strong>Package Manager Console</strong> command and run the install command:</p>
 <pre><code>Install-Package DotEnv.Core
@@ -97,10 +97,10 @@
 <p>Then you can load the .env file with the <code>Load</code> method of the <code>EnvLoader</code> class:</p>
 <pre><code class="lang-cs">new EnvLoader().Load();
 </code></pre>
-<p>By default, the <code>Load</code> method will look for a file called <code>.env</code> in the current directory and if it does not find it, it will look for it in the parent directories of the current directory.</p>
+<p>By default, the <code>Load</code> method will search for a file called <code>.env</code> in the current directory and if it does not find it, it will search for it in the parent directories of the current directory.</p>
 <p>The current directory is where the executable with its dependencies is located.</p>
-<p>Remember that if no encoding is specified to the <code>Load</code> method, the default will be <code>UTF-8</code>.</p>
-<h3 id="accessing-the-variables">Accessing the variables</h3>
+<p>Remember that if no encoding is specified to the <code>Load</code> method, the default will be <code>UTF-8</code>. Also, by default, the <code>Load</code> method does not overwrite the value of the environment variable.</p>
+<h3 id="accessing-variables">Accessing variables</h3>
 <p>After you have loaded the .env file with the <code>Load</code> method, you can access the environment variables using the indexer of the <code>EnvReader</code> class:</p>
 <pre><code class="lang-cs">var reader = new EnvReader();
 string key1 = reader[&quot;KEY1&quot;];
@@ -110,27 +110,27 @@ string key2 = reader[&quot;KEY2&quot;];
 <pre><code class="lang-cs">string key1 = EnvReader.Instance[&quot;KEY1&quot;];
 string key2 = EnvReader.Instance[&quot;KEY2&quot;];
 </code></pre>
-<h3 id="changing-the-default-name">Changing the default name</h3>
+<h3 id="changing-default-name">Changing default name</h3>
 <p>You can also change the default name of the .env file using the <code>SetDefaultEnvFileName</code> method:</p>
 <pre><code class="lang-cs">new EnvLoader()
     .SetDefaultEnvFileName(&quot;.env.dev&quot;)
     .Load();
 </code></pre>
-<p>Now the <code>Load</code> method will look for the <strong>.env.dev</strong> file in the current directory and in the parent directories if it is not found in the current directory.</p>
+<p>Now the <code>Load</code> method will search for the <strong>.env.dev</strong> file in the current directory and in the parent directories if it is not found in the current directory.</p>
 <p>Another case would be:</p>
 <pre><code class="lang-cs">new EnvLoader()
     .SetDefaultEnvFileName(&quot;.env.dev&quot;)
     .AddEnvFiles(&quot;/foo/foo2&quot;, &quot;/bar/bar2&quot;)
     .Load();
 </code></pre>
-<p>The <code>Load</code> method will look for two <code>.env.dev</code> files in the paths <code>/foo/foo2</code> and <code>/bar/bar2</code>.</p>
-<h3 id="specifying-the-path-absolute">Specifying the path absolute</h3>
+<p>The <code>Load</code> method will search for two <code>.env.dev</code> files in the paths <code>/foo/foo2</code> and <code>/bar/bar2</code>.</p>
+<h3 id="specifying-path-absolute">Specifying path absolute</h3>
 <p>You can also specify the absolute path to the .env file:</p>
 <pre><code class="lang-cs">new EnvLoader()
-    .AddEnvFile(&quot;/home/App/.env.dev&quot;)
+    .AddEnvFile(&quot;/home/MyProject/App/src/.env.dev&quot;)
     .Load();
 </code></pre>
-<p>In this case the <code>Load</code> method will search for the file <code>.env.dev</code> in the path <code>/home/App</code>, if it does not find it, the method will not search in the current directory or parent directories.</p>
+<p>In this case the <code>Load</code> method will search for the <code>.env.dev</code> file in the path <code>/home/MyProject/App/src/</code>, if it does not find it, the method will search for the <code>.env.dev</code> file in the parent directories. In other words, the <code>Load</code> method will search for the file in the parent directories of <code>src</code> such as: <code>App</code>, <code>MyProject</code>, <code>home</code>.</p>
 <p>It is recommended not to use absolute paths, instead use relative paths. Remember that an absolute path can be different in each operating system, so your application could lose portability.</p>
 <h3 id="loading-multiple-env-files">Loading multiple .env files</h3>
 <p>You can also load multiple .env files in a single call:</p>
@@ -147,22 +147,39 @@ string key2 = EnvReader.Instance[&quot;KEY2&quot;];
 <p>If you need to specify an encoding type for all .env files, you can do it like this:</p>
 <pre><code class="lang-cs">new EnvLoader()
     .AddEnvFiles(&quot;env.example&quot;, &quot;env.example2&quot;)
-    .SetEncoding(Encoding.Unicode)
+    .SetEncoding(Encoding.Unicode) // Or you can also use: SetEncoding(&quot;Unicode&quot;)
     .Load();
 </code></pre>
 <p>You can also specify an encoding type for each .env file using the <code>AddEnvFile</code> method:</p>
 <pre><code class="lang-cs">new EnvLoader()
-    .AddEnvFile(&quot;env.example&quot;, Encoding.Unicode)
+    .AddEnvFile(&quot;env.example&quot;,  Encoding.Unicode)
     .AddEnvFile(&quot;env.example2&quot;, Encoding.ASCII)
+    .AddEnvFile(&quot;env.example3&quot;, &quot;Unicode&quot;)
+    .AddEnvFile(&quot;env.example4&quot;, &quot;ASCII&quot;)
     .Load();
 </code></pre>
-<h3 id="specifying-the-path-relative">Specifying the path relative</h3>
+<h3 id="optional-env-files">Optional .env files</h3>
+<p>You can indicate that the existence of an .env file is optional by means of the <code>AddEnvFile</code> method:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AddEnvFile(&quot;.env.example&quot;, optional: true)
+    .Load();
+</code></pre>
+<p>At the end the <code>Load</code> method will not generate any error in case the <code>.env.example</code> file is not in a directory, since it is optional.</p>
+<p>You can also mark all .env files as optional using the <code>AllowAllEnvFilesOptional</code> method:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .AddEnvFile(&quot;.env.example1&quot;) 
+    .AddEnvFile(&quot;.env.example2&quot;) 
+    .AddEnvFile(&quot;.env.example3&quot;)
+    .AllowAllEnvFilesOptional()
+    .Load();
+</code></pre>
+<h3 id="specifying-path-relative">Specifying path relative</h3>
 <p>You can also specify a relative path using the <code>AddEnvFile</code> method:</p>
 <pre><code class="lang-cs">new EnvLoader()
     .AddEnvFile(&quot;./dotenv/files&quot;)
     .Load();
 </code></pre>
-<p>In this case, the <code>.env</code> file is inside a directory, i.e. in <code>files</code>. The <code>Load</code> method will look for the file <code>dotenv/files/.env</code> in the current directory, if it does not find it, it will look for it in parent directories.</p>
+<p>In this case, the <code>.env</code> file is inside a directory, i.e. in <code>files</code>. The <code>Load</code> method will search for the file <code>dotenv/files/.env</code> in the current directory, if it does not find it, it will search for it in parent directories.</p>
 <p>This is useful when the .env file is located in a different directory than the current one.</p>
 <h3 id="specifying-base-path">Specifying base path</h3>
 <p>You can specify one base path for all .env files:</p>
@@ -172,7 +189,7 @@ string key2 = EnvReader.Instance[&quot;KEY2&quot;];
     .Load();
 </code></pre>
 <p>In this case, the <strong>Base Path</strong> is a relative path, so the <code>.env.example</code> and <code>.env.example2</code> files are inside <code>dotenv/files</code>.</p>
-<h3 id="throw-filenotfoundexception">Throw FileNotFoundException</h3>
+<h3 id="error-handling">Error handling</h3>
 <p>By default, the <code>Load</code> method does not throw any exception if it does not found the .env file but you can change this behavior if you use the <code>EnableFileNotFoundException</code> method:</p>
 <pre><code class="lang-cs">try 
 {
@@ -185,18 +202,24 @@ catch(FileNotFoundException ex)
     System.Console.WriteLine(ex.Message);
 }
 </code></pre>
-<h3 id="interpolating-variables">Interpolating variables</h3>
-<p>Sometimes you will need to interpolate variables within a value, for example:</p>
-<pre><code>MYSQL_USER=root
-MYSQL_ROOT_PASSWORD=1234
-CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+<p>You can handle the error without throwing an exception by means of the <code>EnvValidationResult</code> class:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .IgnoreParserException() // To ignore the exception thrown by the parser.
+    .Load(out EnvValidationResult result);
+
+if(result.HasError())
+{
+    string msg = result.ErrorMessages;
+    System.Console.WriteLine(msg);
+    // or you can also iterate over the errors:
+    foreach(string errorMsg in result)
+        System.Console.WriteLine(errorMsg); 
+}
+else 
+{
+    // Execute some action when there is no error.
+}
 </code></pre>
-<p>If the variable embedded in the value does not exist in the current process, the parser will throw an exception, for example:</p>
-<pre><code>CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
-MYSQL_USER=root
-MYSQL_ROOT_PASSWORD=1234
-</code></pre>
-<p>In the above example, the parser should throw an exception because the <code>MYSQL_USER</code> variable does not exist yet.</p>
 <p><strong>Note:</strong> If you don't know what each class does, don't forget to check the <a class="xref" href="../api/DotEnv.Core.html">API documentation</a>.</p>
 </article>
           </div>

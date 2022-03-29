@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace DotEnv.Core
    | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,34 +87,53 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="DotEnv.Core.Env.html">Env</a></h4>
+      <section><p>This class defines methods to perform checks with the current environment.</p>
+</section>
+      <h4><a class="xref" href="DotEnv.Core.EnvironmentVariablesProviderExtensions.html">EnvironmentVariablesProviderExtensions</a></h4>
+      <section><p>Extension methods for adding <a class="xref" href="DotEnv.Core.IEnvironmentVariablesProvider.html">IEnvironmentVariablesProvider</a>.</p>
+</section>
       <h4><a class="xref" href="DotEnv.Core.EnvLoader.html">EnvLoader</a></h4>
-      <section><p>Represents the .env file loader.</p>
+      <section><p>Represents the .env files loader.</p>
 </section>
       <h4><a class="xref" href="DotEnv.Core.EnvParser.html">EnvParser</a></h4>
       <section><p>Defines the methods that control the parser behavior.</p>
 </section>
-      <h4><a class="xref" href="DotEnv.Core.EnvParserOptions.html">EnvParserOptions</a></h4>
-      <section><p>Represents the options for configuring various behaviors of the parser.</p>
-</section>
       <h4><a class="xref" href="DotEnv.Core.EnvReader.html">EnvReader</a></h4>
-      <section><p>Defines the methods used to read the value of an environment variable from the current process.</p>
+      <section><p>Defines the methods used to read the value of an environment variable.</p>
 </section>
-      <h4><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></h4>
-      <section><p>The exception that is thrown when the environment variable is not found in the current process.</p>
+      <h4><a class="xref" href="DotEnv.Core.EnvValidationResult.html">EnvValidationResult</a></h4>
+      <section><p>Represents a container for the results of a validation.</p>
+</section>
+      <h4><a class="xref" href="DotEnv.Core.EnvValidator.html">EnvValidator</a></h4>
+      <section><p>Represents the validator of the required keys.</p>
 </section>
       <h4><a class="xref" href="DotEnv.Core.ParserException.html">ParserException</a></h4>
-      <section><p>The exception that is thrown when the parser finds an error during the parsing of the .env file.</p>
+      <section><p>The exception that is thrown when the parser encounters one or more errors.</p>
+</section>
+      <h4><a class="xref" href="DotEnv.Core.RequiredKeysNotPresentException.html">RequiredKeysNotPresentException</a></h4>
+      <section><p>The exception that is thrown when the required keys are not present in the application.</p>
+</section>
+      <h4><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></h4>
+      <section><p>The exception that is thrown when the environment variable is not set to a specific provider (e.g., current process or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary&lt;TKey,TValue&gt;</a>).</p>
 </section>
     <h3 id="interfaces">Interfaces
   </h3>
+      <h4><a class="xref" href="DotEnv.Core.IEnvironmentVariablesProvider.html">IEnvironmentVariablesProvider</a></h4>
+      <section><p>Represents the environment variables provider.
+The environment variables can be obtained from any provider (e.g., from a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary&lt;TKey,TValue&gt;</a> or from the current process).</p>
+</section>
       <h4><a class="xref" href="DotEnv.Core.IEnvLoader.html">IEnvLoader</a></h4>
-      <section><p>Represents the .env file loader.</p>
+      <section><p>Represents the .env files loader.</p>
 </section>
       <h4><a class="xref" href="DotEnv.Core.IEnvParser.html">IEnvParser</a></h4>
       <section><p>Defines the methods that control the parser behavior.</p>
 </section>
       <h4><a class="xref" href="DotEnv.Core.IEnvReader.html">IEnvReader</a></h4>
-      <section><p>Defines the methods used to read the value of an environment variable from the current process.</p>
+      <section><p>Defines the methods used to read the value of an environment variable.</p>
+</section>
+      <h4><a class="xref" href="DotEnv.Core.IEnvValidator.html">IEnvValidator</a></h4>
+      <section><p>Represents the validator of the required keys.</p>
 </section>
     <h3 id="enums">Enums
   </h3>

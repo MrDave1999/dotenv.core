@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IEnvReader
    | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,16 +83,16 @@
   
   <h1 id="DotEnv_Core_IEnvReader" data-uid="DotEnv.Core.IEnvReader" class="text-break">Interface IEnvReader
   </h1>
-  <div class="markdown level0 summary"><p>Defines the methods used to read the value of an environment variable from the current process.</p>
+  <div class="markdown level0 summary"><p>Defines the methods used to read the value of an environment variable.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator#System_Collections_Generic_IEnumerable_1_GetEnumerator">IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;.GetEnumerator()</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator#system-collections-generic-ienumerable-1-getenumerator">IEnumerable&lt;KeyValuePair&lt;String, String&gt;&gt;.GetEnumerator()</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator#System_Collections_IEnumerable_GetEnumerator">IEnumerable.GetEnumerator()</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerable.getenumerator#system-collections-ienumerable-getenumerator">IEnumerable.GetEnumerator()</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="DotEnv.Core.html">DotEnv.Core</a></h6>
@@ -108,11 +108,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_Item_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.Item(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L18">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L27">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_Item_" data-uid="DotEnv.Core.IEnvReader.Item*"></a>
   <h4 id="DotEnv_Core_IEnvReader_Item_System_String_" data-uid="DotEnv.Core.IEnvReader.Item(System.String)">Item[String]</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>string</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>string</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -163,8 +163,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p><code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -176,11 +181,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvBool_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvBool(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L259">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L298">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvBool_" data-uid="DotEnv.Core.IEnvReader.EnvBool*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvBool_System_String_System_Boolean_" data-uid="DotEnv.Core.IEnvReader.EnvBool(System.String,System.Boolean)">EnvBool(String, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>bool</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>bool</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -206,7 +211,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -228,7 +233,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvBool_System_String_System_Boolean__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -240,8 +245,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>bool</code> format.</p>
+        <td><p><code>value</code> is not in <code>bool</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -251,11 +261,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvByte_System_String_System_Byte_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvByte(System.String%2CSystem.Byte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L268">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L308">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvByte_" data-uid="DotEnv.Core.IEnvReader.EnvByte*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvByte_System_String_System_Byte_" data-uid="DotEnv.Core.IEnvReader.EnvByte(System.String,System.Byte)">EnvByte(String, Byte)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>byte</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>byte</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -281,7 +291,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -303,7 +313,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvByte_System_String_System_Byte__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,8 +325,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>byte</code> format.</p>
+        <td><p><code>value</code> is not in <code>byte</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -326,11 +341,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvChar_System_String_System_Char_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvChar(System.String%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L286">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L328">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvChar_" data-uid="DotEnv.Core.IEnvReader.EnvChar*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvChar_System_String_System_Char_" data-uid="DotEnv.Core.IEnvReader.EnvChar(System.String,System.Char)">EnvChar(String, Char)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>char</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>char</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -356,7 +371,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -378,7 +393,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvChar_System_String_System_Char__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -390,8 +405,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>char</code> format.</p>
+        <td><p><code>value</code> is not in <code>char</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -401,11 +421,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvDecimal_System_String_System_Decimal_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvDecimal(System.String%2CSystem.Decimal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L349">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L398">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvDecimal_" data-uid="DotEnv.Core.IEnvReader.EnvDecimal*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvDecimal_System_String_System_Decimal_" data-uid="DotEnv.Core.IEnvReader.EnvDecimal(System.String,System.Decimal)">EnvDecimal(String, Decimal)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>decimal</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>decimal</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -431,7 +451,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.decimal">Decimal</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -453,7 +473,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvDecimal_System_String_System_Decimal__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -465,8 +485,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>decimal</code> format.</p>
+        <td><p><code>value</code> is not in <code>decimal</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -476,11 +501,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvDouble_System_String_System_Double_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvDouble(System.String%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L358">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L408">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvDouble_" data-uid="DotEnv.Core.IEnvReader.EnvDouble*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvDouble_System_String_System_Double_" data-uid="DotEnv.Core.IEnvReader.EnvDouble(System.String,System.Double)">EnvDouble(String, Double)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>double</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>double</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -506,7 +531,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -528,7 +553,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvDouble_System_String_System_Double__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -540,8 +565,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>double</code> format.</p>
+        <td><p><code>value</code> is not in <code>double</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -551,11 +581,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvFloat_System_String_System_Single_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvFloat(System.String%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L367">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L418">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvFloat_" data-uid="DotEnv.Core.IEnvReader.EnvFloat*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvFloat_System_String_System_Single_" data-uid="DotEnv.Core.IEnvReader.EnvFloat(System.String,System.Single)">EnvFloat(String, Single)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>float</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>float</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -581,7 +611,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -603,7 +633,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvFloat_System_String_System_Single__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -615,8 +645,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>float</code> format.</p>
+        <td><p><code>value</code> is not in <code>float</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -626,11 +661,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvInt_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvInt(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L295">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L338">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvInt_" data-uid="DotEnv.Core.IEnvReader.EnvInt*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvInt_System_String_System_Int32_" data-uid="DotEnv.Core.IEnvReader.EnvInt(System.String,System.Int32)">EnvInt(String, Int32)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>int</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>int</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -656,7 +691,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -678,7 +713,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvInt_System_String_System_Int32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -690,8 +725,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>int</code> format.</p>
+        <td><p><code>value</code> is not in <code>int</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -701,11 +741,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvLong_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvLong(System.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L313">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L358">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvLong_" data-uid="DotEnv.Core.IEnvReader.EnvLong*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvLong_System_String_System_Int64_" data-uid="DotEnv.Core.IEnvReader.EnvLong(System.String,System.Int64)">EnvLong(String, Int64)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>long</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>long</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -731,7 +771,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -753,7 +793,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvLong_System_String_System_Int64__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -765,8 +805,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>long</code> format.</p>
+        <td><p><code>value</code> is not in <code>long</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -776,11 +821,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvSByte_System_String_System_SByte_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvSByte(System.String%2CSystem.SByte)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L277">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L318">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvSByte_" data-uid="DotEnv.Core.IEnvReader.EnvSByte*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvSByte_System_String_System_SByte_" data-uid="DotEnv.Core.IEnvReader.EnvSByte(System.String,System.SByte)">EnvSByte(String, SByte)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>sbyte</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>sbyte</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -806,7 +851,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.sbyte">SByte</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -828,7 +873,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvSByte_System_String_System_SByte__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -840,8 +885,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>sbyte</code> format.</p>
+        <td><p><code>value</code> is not in <code>sbyte</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -851,11 +901,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvShort_System_String_System_Int16_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvShort(System.String%2CSystem.Int16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L331">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L378">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvShort_" data-uid="DotEnv.Core.IEnvReader.EnvShort*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvShort_System_String_System_Int16_" data-uid="DotEnv.Core.IEnvReader.EnvShort(System.String,System.Int16)">EnvShort(String, Int16)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>short</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>short</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -881,7 +931,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int16">Int16</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -903,7 +953,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvShort_System_String_System_Int16__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -915,8 +965,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>short</code> format.</p>
+        <td><p><code>value</code> is not in <code>short</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -926,11 +981,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvString_System_String_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvString(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L250">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L288">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvString_" data-uid="DotEnv.Core.IEnvReader.EnvString*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvString_System_String_System_String_" data-uid="DotEnv.Core.IEnvReader.EnvString(System.String,System.String)">EnvString(String, String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>string</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>string</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -956,7 +1011,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -978,18 +1033,34 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvString_System_String_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvUInt_System_String_System_UInt32_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvUInt(System.String%2CSystem.UInt32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L304">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L348">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvUInt_" data-uid="DotEnv.Core.IEnvReader.EnvUInt*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvUInt_System_String_System_UInt32_" data-uid="DotEnv.Core.IEnvReader.EnvUInt(System.String,System.UInt32)">EnvUInt(String, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>uint</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>uint</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1015,7 +1086,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -1037,7 +1108,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvUInt_System_String_System_UInt32__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1049,8 +1120,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>uint</code> format.</p>
+        <td><p><code>value</code> is not in <code>uint</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1060,11 +1136,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvULong_System_String_System_UInt64_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvULong(System.String%2CSystem.UInt64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L322">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L368">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvULong_" data-uid="DotEnv.Core.IEnvReader.EnvULong*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvULong_System_String_System_UInt64_" data-uid="DotEnv.Core.IEnvReader.EnvULong(System.String,System.UInt64)">EnvULong(String, UInt64)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>ulong</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>ulong</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1090,7 +1166,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint64">UInt64</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -1112,7 +1188,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvULong_System_String_System_UInt64__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1124,8 +1200,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>ulong</code> format.</p>
+        <td><p><code>value</code> is not in <code>ulong</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1135,11 +1216,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_EnvUShort_System_String_System_UInt16_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.EnvUShort(System.String%2CSystem.UInt16)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L340">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L388">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_EnvUShort_" data-uid="DotEnv.Core.IEnvReader.EnvUShort*"></a>
   <h4 id="DotEnv_Core_IEnvReader_EnvUShort_System_String_System_UInt16_" data-uid="DotEnv.Core.IEnvReader.EnvUShort(System.String,System.UInt16)">EnvUShort(String, UInt16)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>ushort</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>ushort</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1165,7 +1246,7 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint16">UInt16</a></td>
         <td><span class="parametername">defaultValue</span></td>
-        <td><p>A default value in case the environment variable is not found in the current process.</p>
+        <td><p>A default value in case the variable is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -1187,7 +1268,7 @@
     </tbody>
   </table>
   <h5 id="DotEnv_Core_IEnvReader_EnvUShort_System_String_System_UInt16__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>If the environment variable does not exist in the current process, the method will return the default value.</p>
+  <div class="markdown level1 remarks"><p>If the environment variable is not set, the method will return the default value.</p>
 </div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1199,8 +1280,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>ushort</code> format.</p>
+        <td><p><code>value</code> is not in <code>ushort</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1210,11 +1296,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetBoolValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetBoolValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L33">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L44">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetBoolValue_" data-uid="DotEnv.Core.IEnvReader.GetBoolValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetBoolValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetBoolValue(System.String)">GetBoolValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>bool</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>bool</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1265,13 +1351,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>bool</code> format.</p>
+        <td><p><code>value</code> is not in <code>bool</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1281,11 +1372,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetByteValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetByteValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L41">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L53">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetByteValue_" data-uid="DotEnv.Core.IEnvReader.GetByteValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetByteValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetByteValue(System.String)">GetByteValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>byte</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>byte</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1336,13 +1427,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>byte</code> format.</p>
+        <td><p><code>value</code> is not in <code>byte</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1352,11 +1448,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetCharValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetCharValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L57">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L71">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetCharValue_" data-uid="DotEnv.Core.IEnvReader.GetCharValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetCharValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetCharValue(System.String)">GetCharValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>char</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>char</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1407,13 +1503,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>char</code> format.</p>
+        <td><p><code>value</code> is not in <code>char</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1423,11 +1524,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetDecimalValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetDecimalValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L113">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L134">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetDecimalValue_" data-uid="DotEnv.Core.IEnvReader.GetDecimalValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetDecimalValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetDecimalValue(System.String)">GetDecimalValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>decimal</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>decimal</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1478,13 +1579,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>decimal</code> format.</p>
+        <td><p><code>value</code> is not in <code>decimal</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1494,11 +1600,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetDoubleValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetDoubleValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L121">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L143">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetDoubleValue_" data-uid="DotEnv.Core.IEnvReader.GetDoubleValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetDoubleValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetDoubleValue(System.String)">GetDoubleValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>double</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>double</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1549,13 +1655,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>double</code> format.</p>
+        <td><p><code>value</code> is not in <code>double</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1565,11 +1676,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetFloatValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetFloatValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L129">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L152">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetFloatValue_" data-uid="DotEnv.Core.IEnvReader.GetFloatValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetFloatValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetFloatValue(System.String)">GetFloatValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>float</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>float</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1620,13 +1731,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>float</code> format.</p>
+        <td><p><code>value</code> is not in <code>float</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1636,11 +1752,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetIntValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetIntValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L65">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L80">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetIntValue_" data-uid="DotEnv.Core.IEnvReader.GetIntValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetIntValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetIntValue(System.String)">GetIntValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>int</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>int</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1691,13 +1807,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>int</code> format.</p>
+        <td><p><code>value</code> is not in <code>int</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1707,11 +1828,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetLongValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetLongValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L81">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L98">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetLongValue_" data-uid="DotEnv.Core.IEnvReader.GetLongValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetLongValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetLongValue(System.String)">GetLongValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>long</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>long</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1762,13 +1883,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>long</code> format.</p>
+        <td><p><code>value</code> is not in <code>long</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1778,11 +1904,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetSByteValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetSByteValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L49">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L62">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetSByteValue_" data-uid="DotEnv.Core.IEnvReader.GetSByteValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetSByteValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetSByteValue(System.String)">GetSByteValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>sbyte</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>sbyte</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1833,13 +1959,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>sbyte</code> format.</p>
+        <td><p><code>value</code> is not in <code>sbyte</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1849,11 +1980,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetShortValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetShortValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L97">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L116">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetShortValue_" data-uid="DotEnv.Core.IEnvReader.GetShortValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetShortValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetShortValue(System.String)">GetShortValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>short</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>short</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1904,13 +2035,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>short</code> format.</p>
+        <td><p><code>value</code> is not in <code>short</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -1920,11 +2056,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetStringValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetStringValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L25">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L35">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetStringValue_" data-uid="DotEnv.Core.IEnvReader.GetStringValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetStringValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetStringValue(System.String)">GetStringValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>string</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>string</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1975,8 +2111,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p><code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
     </tbody>
@@ -1986,11 +2127,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetUIntValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetUIntValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L73">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L89">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetUIntValue_" data-uid="DotEnv.Core.IEnvReader.GetUIntValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetUIntValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetUIntValue(System.String)">GetUIntValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>uint</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>uint</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2041,13 +2182,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>uint</code> format.</p>
+        <td><p><code>value</code> is not in <code>uint</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2057,11 +2203,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetULongValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetULongValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L89">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L107">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetULongValue_" data-uid="DotEnv.Core.IEnvReader.GetULongValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetULongValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetULongValue(System.String)">GetULongValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>ulong</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>ulong</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2112,13 +2258,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>ulong</code> format.</p>
+        <td><p><code>value</code> is not in <code>ulong</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2128,11 +2279,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_GetUShortValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.GetUShortValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L105">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L125">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_GetUShortValue_" data-uid="DotEnv.Core.IEnvReader.GetUShortValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_GetUShortValue_System_String_" data-uid="DotEnv.Core.IEnvReader.GetUShortValue(System.String)">GetUShortValue(String)</h4>
-  <div class="markdown level1 summary"><p>Gets the value of an environment variable in <code>ushort</code> format.</p>
+  <div class="markdown level1 summary"><p>Gets the value of a variable in <code>ushort</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2183,13 +2334,84 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvVariableNotFoundException.html">EnvVariableNotFoundException</a></td>
-        <td><p>If the <code>variable</code> is not found in the current process.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="DotEnv.Core.VariableNotSetException.html">VariableNotSetException</a></td>
+        <td><p><code>variable</code> is not set.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>ushort</code> format.</p>
+        <td><p><code>value</code> is not in <code>ushort</code> format.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_HasValue_System_String_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.HasValue(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L18">View Source</a>
+  </span>
+  <a id="DotEnv_Core_IEnvReader_HasValue_" data-uid="DotEnv.Core.IEnvReader.HasValue*"></a>
+  <h4 id="DotEnv_Core_IEnvReader_HasValue_System_String_" data-uid="DotEnv.Core.IEnvReader.HasValue(System.String)">HasValue(String)</h4>
+  <div class="markdown level1 summary"><p>Checks if the variable has a value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool HasValue(string variable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">variable</span></td>
+        <td><p>The variable to validate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the variable has a value, otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2199,11 +2421,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetBoolValue_System_String_System_Boolean__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetBoolValue(System.String%2CSystem.Boolean%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L145">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L170">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetBoolValue_" data-uid="DotEnv.Core.IEnvReader.TryGetBoolValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetBoolValue_System_String_System_Boolean__" data-uid="DotEnv.Core.IEnvReader.TryGetBoolValue(System.String,System.Boolean@)">TryGetBoolValue(String, out Boolean)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>bool</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>bool</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2245,7 +2467,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2260,8 +2482,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>bool</code> format.</p>
+        <td><p><code>value</code> is not in <code>bool</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2271,11 +2498,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetByteValue_System_String_System_Byte__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetByteValue(System.String%2CSystem.Byte%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L153">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L179">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetByteValue_" data-uid="DotEnv.Core.IEnvReader.TryGetByteValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetByteValue_System_String_System_Byte__" data-uid="DotEnv.Core.IEnvReader.TryGetByteValue(System.String,System.Byte@)">TryGetByteValue(String, out Byte)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>byte</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>byte</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2317,7 +2544,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2332,8 +2559,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>byte</code> format.</p>
+        <td><p><code>value</code> is not in <code>byte</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2343,11 +2575,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetCharValue_System_String_System_Char__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetCharValue(System.String%2CSystem.Char%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L169">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L197">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetCharValue_" data-uid="DotEnv.Core.IEnvReader.TryGetCharValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetCharValue_System_String_System_Char__" data-uid="DotEnv.Core.IEnvReader.TryGetCharValue(System.String,System.Char@)">TryGetCharValue(String, out Char)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>char</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>char</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2389,7 +2621,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2404,8 +2636,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>char</code> format.</p>
+        <td><p><code>value</code> is not in <code>char</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2415,11 +2652,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetDecimalValue_System_String_System_Decimal__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetDecimalValue(System.String%2CSystem.Decimal%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L225">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L260">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetDecimalValue_" data-uid="DotEnv.Core.IEnvReader.TryGetDecimalValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetDecimalValue_System_String_System_Decimal__" data-uid="DotEnv.Core.IEnvReader.TryGetDecimalValue(System.String,System.Decimal@)">TryGetDecimalValue(String, out Decimal)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>decimal</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>decimal</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2461,7 +2698,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2476,8 +2713,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>decimal</code> format.</p>
+        <td><p><code>value</code> is not in <code>decimal</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2487,11 +2729,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetDoubleValue_System_String_System_Double__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetDoubleValue(System.String%2CSystem.Double%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L233">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L269">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetDoubleValue_" data-uid="DotEnv.Core.IEnvReader.TryGetDoubleValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetDoubleValue_System_String_System_Double__" data-uid="DotEnv.Core.IEnvReader.TryGetDoubleValue(System.String,System.Double@)">TryGetDoubleValue(String, out Double)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>double</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>double</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2533,7 +2775,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2548,8 +2790,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>double</code> format.</p>
+        <td><p><code>value</code> is not in <code>double</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2559,11 +2806,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetFloatValue_System_String_System_Single__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetFloatValue(System.String%2CSystem.Single%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L241">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L278">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetFloatValue_" data-uid="DotEnv.Core.IEnvReader.TryGetFloatValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetFloatValue_System_String_System_Single__" data-uid="DotEnv.Core.IEnvReader.TryGetFloatValue(System.String,System.Single@)">TryGetFloatValue(String, out Single)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>float</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>float</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2605,7 +2852,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2620,8 +2867,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>float</code> format.</p>
+        <td><p><code>value</code> is not in <code>float</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2631,11 +2883,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetIntValue_System_String_System_Int32__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetIntValue(System.String%2CSystem.Int32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L177">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L206">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetIntValue_" data-uid="DotEnv.Core.IEnvReader.TryGetIntValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetIntValue_System_String_System_Int32__" data-uid="DotEnv.Core.IEnvReader.TryGetIntValue(System.String,System.Int32@)">TryGetIntValue(String, out Int32)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>int</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>int</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2677,7 +2929,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2692,8 +2944,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>int</code> format.</p>
+        <td><p><code>value</code> is not in <code>int</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2703,11 +2960,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetLongValue_System_String_System_Int64__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetLongValue(System.String%2CSystem.Int64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L193">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L224">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetLongValue_" data-uid="DotEnv.Core.IEnvReader.TryGetLongValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetLongValue_System_String_System_Int64__" data-uid="DotEnv.Core.IEnvReader.TryGetLongValue(System.String,System.Int64@)">TryGetLongValue(String, out Int64)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>long</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>long</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2749,7 +3006,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2764,8 +3021,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>long</code> format.</p>
+        <td><p><code>value</code> is not in <code>long</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2775,11 +3037,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetSByteValue_System_String_System_SByte__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetSByteValue(System.String%2CSystem.SByte%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L161">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L188">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetSByteValue_" data-uid="DotEnv.Core.IEnvReader.TryGetSByteValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetSByteValue_System_String_System_SByte__" data-uid="DotEnv.Core.IEnvReader.TryGetSByteValue(System.String,System.SByte@)">TryGetSByteValue(String, out SByte)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>sbyte</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>sbyte</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2821,7 +3083,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2836,8 +3098,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>sbyte</code> format.</p>
+        <td><p><code>value</code> is not in <code>sbyte</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2847,11 +3114,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetShortValue_System_String_System_Int16__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetShortValue(System.String%2CSystem.Int16%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L209">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L242">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetShortValue_" data-uid="DotEnv.Core.IEnvReader.TryGetShortValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetShortValue_System_String_System_Int16__" data-uid="DotEnv.Core.IEnvReader.TryGetShortValue(System.String,System.Int16@)">TryGetShortValue(String, out Int16)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>short</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>short</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2893,7 +3160,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2908,8 +3175,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>short</code> format.</p>
+        <td><p><code>value</code> is not in <code>short</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -2919,11 +3191,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetStringValue_System_String_System_String__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetStringValue(System.String%2CSystem.String%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L137">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L161">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetStringValue_" data-uid="DotEnv.Core.IEnvReader.TryGetStringValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetStringValue_System_String_System_String__" data-uid="DotEnv.Core.IEnvReader.TryGetStringValue(System.String,System.String@)">TryGetStringValue(String, out String)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>string</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>string</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -2965,7 +3237,23 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -2975,11 +3263,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetUIntValue_System_String_System_UInt32__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetUIntValue(System.String%2CSystem.UInt32%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L185">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L215">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetUIntValue_" data-uid="DotEnv.Core.IEnvReader.TryGetUIntValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetUIntValue_System_String_System_UInt32__" data-uid="DotEnv.Core.IEnvReader.TryGetUIntValue(System.String,System.UInt32@)">TryGetUIntValue(String, out UInt32)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>uint</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>uint</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3021,7 +3309,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -3036,8 +3324,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>uint</code> format.</p>
+        <td><p><code>value</code> is not in <code>uint</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -3047,11 +3340,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetULongValue_System_String_System_UInt64__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetULongValue(System.String%2CSystem.UInt64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L201">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L233">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetULongValue_" data-uid="DotEnv.Core.IEnvReader.TryGetULongValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetULongValue_System_String_System_UInt64__" data-uid="DotEnv.Core.IEnvReader.TryGetULongValue(System.String,System.UInt64@)">TryGetULongValue(String, out UInt64)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>ulong</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>ulong</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3093,7 +3386,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -3108,8 +3401,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>ulong</code> format.</p>
+        <td><p><code>value</code> is not in <code>ulong</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -3119,11 +3417,11 @@
     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader_TryGetUShortValue_System_String_System_UInt16__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader.TryGetUShortValue(System.String%2CSystem.UInt16%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L217">View Source</a>
+    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L251">View Source</a>
   </span>
   <a id="DotEnv_Core_IEnvReader_TryGetUShortValue_" data-uid="DotEnv.Core.IEnvReader.TryGetUShortValue*"></a>
   <h4 id="DotEnv_Core_IEnvReader_TryGetUShortValue_System_String_System_UInt16__" data-uid="DotEnv.Core.IEnvReader.TryGetUShortValue(System.String,System.UInt16@)">TryGetUShortValue(String, out UInt16)</h4>
-  <div class="markdown level1 summary"><p>Try to retrieve the value of an environment variable in <code>ushort</code> format.</p>
+  <div class="markdown level1 summary"><p>Try to retrieve the value of a variable in <code>ushort</code> format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3165,7 +3463,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if the environment variable exists in the current process, otherwise <code>false</code>.</p>
+        <td><p><code>true</code> if the variable is set, otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -3180,8 +3478,13 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code>variable</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.formatexception">FormatException</a></td>
-        <td><p>If the <code>value</code> is not in <code>ushort</code> format.</p>
+        <td><p><code>value</code> is not in <code>ushort</code> format.</p>
 </td>
       </tr>
     </tbody>
@@ -3197,7 +3500,7 @@
                     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvReader.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Interfaces/IEnvReader.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Reader/IEnvReader.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Parsing | DotEnv.Core </title>
+    <title>Package Diagram | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Parsing | DotEnv.Core ">
+    <meta name="title" content="Package Diagram | DotEnv.Core ">
     <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
@@ -77,72 +77,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="parsing">Parsing</h1>
+<h1 id="package-diagram">Package Diagram</h1>
 
-<h2 id="introduction">Introduction</h2>
-<p>You can also use the parser directly, as in this example:</p>
-<pre><code class="lang-cs">string dataSource = @&quot;
-    KEY1=VAL1
-    KEY2=VAL2
-    KEY3=VAL3
-&quot;;
-new EnvParser().Parse(dataSource);
-
-System.Console.WriteLine(EnvReader.Instance[&quot;KEY1&quot;]); // Print &quot;VAL1&quot;.
-System.Console.WriteLine(EnvReader.Instance[&quot;KEY2&quot;]); // Print &quot;VAL2&quot;.
-System.Console.WriteLine(EnvReader.Instance[&quot;KEY3&quot;]); // Print &quot;VAL3&quot;.
-</code></pre>
-<p>By default, the <code>Parse</code> method does not overwrite the value of the environment variable.</p>
-<p>For example:</p>
-<pre><code class="lang-cs">System.Environment.SetEnvironmentVariable(&quot;KEY1&quot;, &quot;1&quot;);
-new EnvParser().Parse(&quot;KEY1=VAL1&quot;);
-System.Console.WriteLine(EnvReader.Instance[&quot;KEY1&quot;]); // Print &quot;1&quot;.
-</code></pre>
-<p>In this case, the parser does not overwrite the variable <code>KEY1</code>, so its current value is maintained.</p>
-<p>You can also retrieve keys from any data source and pass it to the parser:</p>
-<pre><code class="lang-cs">string dataSource = System.IO.File.ReadAllText(&quot;./.env&quot;);
-new EnvParser().Parse(dataSource);
-</code></pre>
-<h2 id="configuring-parser-behavior">Configuring parser behavior</h2>
-<p>There are configuration options that allow you to change the behavior of the parser, one of them are:</p>
-<pre><code class="lang-cs">string dataSource = System.IO.File.ReadAllText(&quot;./.env&quot;);
-new EnvParser()
-    .DisableTrimStartKeys()
-    .DisableTrimEndKeys() 
-    .DisableTrimStartValues()
-    .DisableTrimEndValues()
-    .DisableTrimStartComments()
-    .AllowOverwriteExistingVars()
-    .Parse(dataSource);
-</code></pre>
-<p>Don't forget to look up in the <a class="xref" href="../api/DotEnv.Core.IEnvParser.html">API documentation</a> what each configuration option means.</p>
-<h2 id="error-handling">Error handling</h2>
-<p>We can handle errors with the <code>EnvValidationResult</code> class instead of throwing an exception:</p>
-<pre><code class="lang-cs">string dataSource = System.IO.File.ReadAllText(&quot;./.env&quot;);
-new EnvParser()
-    .IgnoreParserException() // To ignore the exception thrown by the parser.
-    .Parse(dataSource, out EnvValidationResult result);
-
-if(result.HasError())
-{
-    System.Console.WriteLine(result.ErrorMessages);
-}
-else 
-{
-    // Execute some action when there is no error.
-}
-</code></pre>
-<h2 id="avoid-modifying-the-environment">Avoid modifying the environment</h2>
-<p>You can tell the parser not to modify the environment:</p>
-<pre><code class="lang-cs">string dataSource = System.IO.File.ReadAllText(&quot;./.env&quot;);
-var envVars = new EnvParser()
-        .AvoidModifyEnvironment()
-        .Parse(dataSource);
-</code></pre>
-<p>As the environment cannot be modified, the <code>Parse</code> method will return an instance that implements the <code>IEnvironmentVariablesProvider</code> interface, through this returned instance, we can access the environment variables that have been set in a dictionary:</p>
-<pre><code class="lang-cs">// The value of the variable is obtained from a dictionary and not from the current environment:
-string key1 = envVars[&quot;KEY1&quot;];
-</code></pre>
+<h2 id="library-project">Library Project</h2>
+<p><a href="https://drive.google.com/file/d/1PQiSvbhaKQXBUxv1xHi6d86V2NWs1gXg/view?usp=sharing"><img src="../images/package-diagram-library.png" alt="package-diagram-library"></a></p>
+<h2 id="test-project">Test Project</h2>
+<p><a href="https://drive.google.com/file/d/1PQiSvbhaKQXBUxv1xHi6d86V2NWs1gXg/view?usp=sharing"><img src="../images/package-diagram-testproject.png" alt="package-diagram-testproject"></a></p>
+<p><a href="https://drive.google.com/file/d/1PQiSvbhaKQXBUxv1xHi6d86V2NWs1gXg/view?usp=sharing">Click here</a></p>
 </article>
           </div>
           
@@ -151,7 +92,7 @@ string key1 = envVars[&quot;KEY1&quot;];
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/docs/articles/using_parser.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/docs/diagrams/package_diagram.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

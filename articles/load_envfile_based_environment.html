@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Load .env file based on environment | DotEnv.Core </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Load .env file based on environment | DotEnv.Core ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../images/dotenv-icon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="load-env-file-based-on-environment">Load .env file based on environment</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>You can load an .env file based on the environment (dev, test, staging or production) with the <code>LoadEnv</code> method. The environment is defined by the actual environment variable as <code>DOTNET_ENV</code>:</p>
+<pre><code class="lang-cs">System.Environment.SetEnvironmentVariable(&quot;DOTNET_ENV&quot;, &quot;test&quot;);
+new EnvLoader().LoadEnv();
+</code></pre>
+<p>The <code>LoadEnv</code> method will search for these .env files in the following order:</p>
+<ul>
+<li><code>.env.[environment].local</code> (has the highest priority)</li>
+<li><code>.env.local</code></li>
+<li><code>.env.[environment]</code></li>
+<li><code>.env</code> (has the lowest priority)</li>
+</ul>
+<p>The <code>environment</code> is specified by the actual environment variable <code>DOTNET_ENV</code>.</p>
+<p>It should be noted that the default environment will be <code>development</code> or <code>dev</code> if the environment is never specified with <code>DOTNET_ENV</code>.</p>
+<h2 id="concepts">Concepts</h2>
+<ul>
+<li><code>.env</code>: defines the default values for all environments and machines.</li>
+<li><code>.env.local</code>: defines the configuration values for all environments but only on the machine which contains the file. This file should not be committed to the repository.</li>
+<li><code>.env.[environment]</code> (e.g. <code>.env.test</code>): defines the default values for one environment, but for all machines (these files are committed).</li>
+<li><code>.env.[environment].local</code> (e.g. <code>.env.test.local</code>): defines configuration values that are machine-specific but only for one environment.</li>
+</ul>
+<p>Real environment variables always win over env vars created by any of the <code>.env</code> files.</p>
+<p>The <code>.env</code> and <code>.env.[environment]</code> files should be committed to the repository because they are the same for all developers and machines. However, the env files ending in <code>.local</code> (<code>.env.local</code> and <code>.env.[environment].local</code>) should not be committed because only you will use them.</p>
+<h2 id="functioning">Functioning</h2>
+<p>The behavior of the <code>LoadEnv</code> method is simple. Imagine that you open the shell in Linux and type the following command:</p>
+<pre><code class="lang-sh">export DOTNET_ENV=production;
+</code></pre>
+<p>Then we run the application and the following code is executed:</p>
+<pre><code class="lang-cs">new EnvLoader().LoadEnv();
+</code></pre>
+<p>The <code>LoadEnv</code> method loads the following .env files:</p>
+<ul>
+<li>.env.production.local</li>
+<li>.env.local</li>
+<li>.env.production</li>
+<li>.env</li>
+</ul>
+<p>In this example, at least file <code>.env.production.local</code> or <code>.env.local</code> must be present, otherwise the <code>LoadEnv</code> method generates an error. There must be at least one local file.</p>
+<h2 id="configuration-option">Configuration option</h2>
+<p>The <code>SetEnvironmentName</code> method can be used to set the environment name from source code:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .SetEnvironmentName(&quot;test&quot;)
+    .LoadEnv();
+</code></pre>
+<p>If the actual environment variable <code>DOTNET_ENV</code> is set, the <code>SetEnvironmentName</code> method will have no effect, because the <code>LoadEnv</code> method will give higher priority to the value of <code>DOTNET_ENV</code>.</p>
+<h2 id="error-handling">Error handling</h2>
+<p>You can handle the error without throwing an exception by means of the <code>EnvValidationResult</code> class:</p>
+<pre><code class="lang-cs">new EnvLoader()
+    .IgnoreParserException() // To ignore the exception thrown by the parser.
+    .LoadEnv(out EnvValidationResult result);
+
+if(result.HasError())
+{
+    string msg = result.ErrorMessages;
+    System.Console.WriteLine(msg);
+}
+else
+{
+    // Execute some action when there is no error.
+}
+</code></pre>
+<h2 id="helper-methods">Helper methods</h2>
+<p>The <code>Env</code> class has helper methods to check if the <strong>current environment</strong> is development, test, staging, or production. The <strong>current environment</strong> is defined by the actual environment variable <code>DOTNET_ENV</code>.</p>
+<p>Example:</p>
+<pre><code class="lang-cs">// Equivalent to: Env.CurrentEnvironment = &quot;test&quot;;
+System.Environment.SetEnvironmentVariable(&quot;DOTNET_ENV&quot;, &quot;test&quot;);
+
+System.Console.WriteLine(Env.IsDevelopment()); // output: false
+System.Console.WriteLine(Env.IsTest()); // output: true
+System.Console.WriteLine(Env.IsStaging()); // output: false
+System.Console.WriteLine(Env.IsProduction()); // output: false
+System.Console.WriteLine(Env.IsEnvironment(&quot;test&quot;)); // output: true
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/docs/articles/load_envfile_based_environment.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2021-2022 <b>DotEnv.Core</b>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

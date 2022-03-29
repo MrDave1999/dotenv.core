@@ -8,7 +8,7 @@
     <title>Dependency Injection | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Dependency Injection | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,6 +79,8 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="dependency-injection">Dependency Injection</h1>
 
+<h2 id="introduction">Introduction</h2>
+<p>Dependency injection is an object-oriented design pattern, in which objects are supplied to a class instead of the class itself creating those objects. The containing class is the one that supplies the object to our class.</p>
 <p>In some cases, classes should not directly create an instance of the <code>EnvReader</code> class, because if you change the implementation, you will have to make changes in the classes that depend on <code>EnvReader</code>.</p>
 <p><strong>For example:</strong></p>
 <pre><code class="lang-cs">class Foo
@@ -129,7 +131,7 @@ class Bar
     }
 }
 </code></pre>
-<p>So to avoid those changes in the future, you can make use of Dependency Injection:</p>
+<p>So to avoid those changes in the future, you can make use of dependency injection pattern:</p>
 <pre><code class="lang-cs">class Foo
 {
     private EnvReader _reader;
@@ -182,6 +184,7 @@ class Bar
     }
 }
 </code></pre>
+<h2 id="container-di">Container DI</h2>
 <p>So in the end we would consider using a service container to handle dependency injection. Microsoft has created a package in NuGet specifically for this: <a href="https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection">Microsoft.Extensions.DependencyInjection</a>.</p>
 <p>The above example could be done in this way using the container DI:</p>
 <pre><code class="lang-cs">// Import all types.
@@ -194,9 +197,10 @@ class Program
     {
         // Load the .env file.
         new EnvLoader().Load();
+        // Creates the service collection.
         var services = new ServiceCollection();
         // Register services.
-        services.AddSingleton&lt;IEnvReader, EnvReader&gt;()
+        services.AddSingleton&lt;IEnvReader&gt;(new EnvReader())
             .AddTransient&lt;Foo&gt;()
             .AddTransient&lt;Bar&gt;();
         // Creates the service container.
@@ -206,6 +210,25 @@ class Program
             var foo = serviceProvider.GetRequiredService&lt;Foo&gt;();
             var bar = serviceProvider.GetRequiredService&lt;Bar&gt;();
         }
+    }
+}
+</code></pre>
+<h3 id="another-example">Another example</h3>
+<pre><code class="lang-cs">// Import all types.
+using Microsoft.Extensions.DependencyInjection;
+using DotEnv.Core;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Load the .env file.
+        var envVars = new EnvLoader().Load();
+        // Creates the service collection.
+        var services = new ServiceCollection();
+        // Register services.
+        services.AddSingleton&lt;IEnvReader&gt;(envVars.CreateReader())
+            .AddSingleton&lt;IEnvironmentVariablesProvider&gt;(envVars);
     }
 }
 </code></pre>

@@ -8,7 +8,7 @@
     <title>Features | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Features | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="images/dotenv-icon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -81,11 +81,13 @@
 <ul>
 <li>It has a <a href="https://en.wikipedia.org/wiki/Fluent_interface">fluent interface</a>, which makes it simple and easy to use.</li>
 <li>Support for load multiple .env files.</li>
+<li>Support to load the .env file depending on the environment (development, test, staging, or production).</li>
 <li>Searches in parent directories when it does not find the .env file in the current directory.</li>
-<li>You can customize the parser algorithm through inheritance.</li>
 <li>You can set the base path for a set of .env files.</li>
+<li>You can define which keys should be required by the application.</li>
 <li>You can change the default .env file name, so it does not necessarily have to be <code>.env</code>.</li>
 <li>Support for the variables interpolation.</li>
+<li>And much more.</li>
 </ul>
 <h2 id="basic-concepts">Basic Concepts</h2>
 <h3 id="what-is-a-env-file">What is a .env file?</h3>
@@ -96,8 +98,50 @@
 </code></pre>
 <h3 id="what-is-environment-variable">What is environment variable?</h3>
 <p>An environment variable is a dynamic variable that can affect the behavior of running processes on a computer. They are part of the environment in which a process runs.</p>
-<h2 id="deployment-in-production">Deployment in Production</h2>
-<p>In production, you should not add sensitive data (such as passwords) to an .env file, as it would be unencrypted! Instead, you should use a secrets manager such as <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault</a> or <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.</p>
+<h2 id="file-format">File Format</h2>
+<ul>
+<li>Empty lines or lines with white-spaces will be ignored.</li>
+<li>The key-value format must be as follows: <code>KEY=VAL</code>.</li>
+<li>There is no special handling of quotation marks. This means that <strong>they are part of the VAL.</strong></li>
+<li>If the value of a key is an empty string, it will be converted to a white-space.</li>
+<li>White-spaces at both ends of the key and value are ignored.</li>
+</ul>
+<h3 id="comments">Comments</h3>
+<p>Each line beginning with the <code>#</code> character is a comment. White-spaces at the beginning of each comment will be ignored.</p>
+<p>Example:</p>
+<pre><code># comment without white spaces
+   # comment with white spaces
+KEY=VALUE
+</code></pre>
+<h3 id="interpolating-variables">Interpolating variables</h3>
+<p>Sometimes you will need to interpolate variables within a value, for example:</p>
+<pre><code>MYSQL_USER=root
+MYSQL_ROOT_PASSWORD=1234
+CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+</code></pre>
+<p>If the variable embedded in the value is not set, the parser will throw an exception, for example:</p>
+<pre><code>MYSQL_ROOT_PASSWORD=1234
+CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
+MYSQL_USER=root
+</code></pre>
+<p>In the above example, the parser should throw an exception because the <code>MYSQL_USER</code> variable is not set.</p>
+<h2 id="frequently-answered-questions">Frequently Answered Questions</h2>
+<h3 id="can-i-use-an-env-file-in-a-production-environment">Can I use an <code>.env file</code> in a production environment?</h3>
+<p>Generally, you should not add sensitive data (such as passwords) to a .env file, as it would be unencrypted! Instead, you could use a secrets manager such as <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault</a> or <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.</p>
+<p>If you are going to use .env files in production, make sure you have good security at the infrastructure level and also grant read/write permissions to a specific user (such as admin), so that not just anyone can access your .env file.</p>
+<h3 id="should-i-commit-my-env-file">Should I commit my .env file?</h3>
+<p>Credentials should only be accessible on the machines that need access to them. Never commit sensitive information to a repository that is not needed by every development machine.</p>
+<h3 id="why-is-it-not-overriding-existing-environment-variables">Why is it not overriding existing environment variables?</h3>
+<p>By default, it won't overwrite existing environment variables as dotenv assumes the deployment environment has more knowledge about configuration than the application does.</p>
+<h2 id="contribution">Contribution</h2>
+<p>Follow the steps below:</p>
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (git checkout -b my-new-feature)</li>
+<li>Commit your changes (git commit -am 'Added some feature')</li>
+<li>Push to the branch (git push origin my-new-feature)</li>
+<li>Create new <a href="https://github.com/MrDave1999/dotenv.core/pulls">Pull Request</a></li>
+</ol>
 </article>
           </div>
           

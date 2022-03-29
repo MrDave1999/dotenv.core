@@ -8,7 +8,7 @@
     <title>Using DotEnv in ASP.NET Core | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Using DotEnv in ASP.NET Core | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -85,7 +85,7 @@
     // To load the .env file.
     new EnvLoader().Load();
     // To register the IEnvReader service.
-    services.AddSingleton&lt;IEnvReader, EnvReader&gt;();
+    services.AddSingleton&lt;IEnvReader&gt;(new EnvReader());
     // more services...
 }
 </code></pre>
@@ -114,7 +114,7 @@ var builder = WebApplication.CreateBuilder(args);
 new EnvLoader().Load();
 
 // Add services to the container.
-builder.services.AddSingleton&lt;IEnvReader, EnvReader&gt;();
+builder.services.AddSingleton&lt;IEnvReader&gt;(new EnvReader());
 
 var app = builder.Build();
 

@@ -19,55 +19,183 @@ references:
   commentId: F:DotEnv.Core.ConcatKeysOptions.End
   fullName: DotEnv.Core.ConcatKeysOptions.End
   nameWithType: ConcatKeysOptions.End
-- uid: DotEnv.Core.ConcatKeysOptions.None
-  name: None
-  href: api/DotEnv.Core.ConcatKeysOptions.html#DotEnv_Core_ConcatKeysOptions_None
-  commentId: F:DotEnv.Core.ConcatKeysOptions.None
-  fullName: DotEnv.Core.ConcatKeysOptions.None
-  nameWithType: ConcatKeysOptions.None
 - uid: DotEnv.Core.ConcatKeysOptions.Start
   name: Start
   href: api/DotEnv.Core.ConcatKeysOptions.html#DotEnv_Core_ConcatKeysOptions_Start
   commentId: F:DotEnv.Core.ConcatKeysOptions.Start
   fullName: DotEnv.Core.ConcatKeysOptions.Start
   nameWithType: ConcatKeysOptions.Start
+- uid: DotEnv.Core.Env
+  name: Env
+  href: api/DotEnv.Core.Env.html
+  commentId: T:DotEnv.Core.Env
+  fullName: DotEnv.Core.Env
+  nameWithType: Env
+- uid: DotEnv.Core.Env.CurrentEnvironment
+  name: CurrentEnvironment
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_CurrentEnvironment
+  commentId: P:DotEnv.Core.Env.CurrentEnvironment
+  fullName: DotEnv.Core.Env.CurrentEnvironment
+  nameWithType: Env.CurrentEnvironment
+- uid: DotEnv.Core.Env.CurrentEnvironment*
+  name: CurrentEnvironment
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_CurrentEnvironment_
+  commentId: Overload:DotEnv.Core.Env.CurrentEnvironment
+  isSpec: "True"
+  fullName: DotEnv.Core.Env.CurrentEnvironment
+  nameWithType: Env.CurrentEnvironment
+- uid: DotEnv.Core.Env.IsDevelopment
+  name: IsDevelopment()
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsDevelopment
+  commentId: M:DotEnv.Core.Env.IsDevelopment
+  fullName: DotEnv.Core.Env.IsDevelopment()
+  nameWithType: Env.IsDevelopment()
+- uid: DotEnv.Core.Env.IsDevelopment*
+  name: IsDevelopment
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsDevelopment_
+  commentId: Overload:DotEnv.Core.Env.IsDevelopment
+  isSpec: "True"
+  fullName: DotEnv.Core.Env.IsDevelopment
+  nameWithType: Env.IsDevelopment
+- uid: DotEnv.Core.Env.IsEnvironment(System.String)
+  name: IsEnvironment(String)
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsEnvironment_System_String_
+  commentId: M:DotEnv.Core.Env.IsEnvironment(System.String)
+  fullName: DotEnv.Core.Env.IsEnvironment(System.String)
+  nameWithType: Env.IsEnvironment(String)
+- uid: DotEnv.Core.Env.IsEnvironment*
+  name: IsEnvironment
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsEnvironment_
+  commentId: Overload:DotEnv.Core.Env.IsEnvironment
+  isSpec: "True"
+  fullName: DotEnv.Core.Env.IsEnvironment
+  nameWithType: Env.IsEnvironment
+- uid: DotEnv.Core.Env.IsProduction
+  name: IsProduction()
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsProduction
+  commentId: M:DotEnv.Core.Env.IsProduction
+  fullName: DotEnv.Core.Env.IsProduction()
+  nameWithType: Env.IsProduction()
+- uid: DotEnv.Core.Env.IsProduction*
+  name: IsProduction
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsProduction_
+  commentId: Overload:DotEnv.Core.Env.IsProduction
+  isSpec: "True"
+  fullName: DotEnv.Core.Env.IsProduction
+  nameWithType: Env.IsProduction
+- uid: DotEnv.Core.Env.IsStaging
+  name: IsStaging()
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsStaging
+  commentId: M:DotEnv.Core.Env.IsStaging
+  fullName: DotEnv.Core.Env.IsStaging()
+  nameWithType: Env.IsStaging()
+- uid: DotEnv.Core.Env.IsStaging*
+  name: IsStaging
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsStaging_
+  commentId: Overload:DotEnv.Core.Env.IsStaging
+  isSpec: "True"
+  fullName: DotEnv.Core.Env.IsStaging
+  nameWithType: Env.IsStaging
+- uid: DotEnv.Core.Env.IsTest
+  name: IsTest()
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsTest
+  commentId: M:DotEnv.Core.Env.IsTest
+  fullName: DotEnv.Core.Env.IsTest()
+  nameWithType: Env.IsTest()
+- uid: DotEnv.Core.Env.IsTest*
+  name: IsTest
+  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsTest_
+  commentId: Overload:DotEnv.Core.Env.IsTest
+  isSpec: "True"
+  fullName: DotEnv.Core.Env.IsTest
+  nameWithType: Env.IsTest
+- uid: DotEnv.Core.EnvironmentVariablesProviderExtensions
+  name: EnvironmentVariablesProviderExtensions
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html
+  commentId: T:DotEnv.Core.EnvironmentVariablesProviderExtensions
+  fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions
+  nameWithType: EnvironmentVariablesProviderExtensions
+- uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: CreateReader(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateReader_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: EnvironmentVariablesProviderExtensions.CreateReader(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader*
+  name: CreateReader
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateReader_
+  commentId: Overload:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader
+  nameWithType: EnvironmentVariablesProviderExtensions.CreateReader
+- uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: CreateValidator(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateValidator_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: EnvironmentVariablesProviderExtensions.CreateValidator(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator*
+  name: CreateValidator
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateValidator_
+  commentId: Overload:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator
+  nameWithType: EnvironmentVariablesProviderExtensions.CreateValidator
+- uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: ToDictionary(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_ToDictionary_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: EnvironmentVariablesProviderExtensions.ToDictionary(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary*
+  name: ToDictionary
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_ToDictionary_
+  commentId: Overload:DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary
+  nameWithType: EnvironmentVariablesProviderExtensions.ToDictionary
 - uid: DotEnv.Core.EnvLoader
   name: EnvLoader
   href: api/DotEnv.Core.EnvLoader.html
   commentId: T:DotEnv.Core.EnvLoader
   fullName: DotEnv.Core.EnvLoader
   nameWithType: EnvLoader
-- uid: DotEnv.Core.EnvLoader.#ctor
-  name: EnvLoader()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader__ctor
-  commentId: M:DotEnv.Core.EnvLoader.#ctor
-  fullName: DotEnv.Core.EnvLoader.EnvLoader()
-  nameWithType: EnvLoader.EnvLoader()
-- uid: DotEnv.Core.EnvLoader.#ctor(DotEnv.Core.IEnvParser)
-  name: EnvLoader(IEnvParser)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader__ctor_DotEnv_Core_IEnvParser_
-  commentId: M:DotEnv.Core.EnvLoader.#ctor(DotEnv.Core.IEnvParser)
-  fullName: DotEnv.Core.EnvLoader.EnvLoader(DotEnv.Core.IEnvParser)
-  nameWithType: EnvLoader.EnvLoader(IEnvParser)
-- uid: DotEnv.Core.EnvLoader.#ctor*
-  name: EnvLoader
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader__ctor_
-  commentId: Overload:DotEnv.Core.EnvLoader.#ctor
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvLoader.EnvLoader
-  nameWithType: EnvLoader.EnvLoader
 - uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String)
   name: AddEnvFile(String)
   href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_
   commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String)
   fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String)
   nameWithType: EnvLoader.AddEnvFile(String)
+- uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Boolean)
+  name: AddEnvFile(String, Boolean)
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_Boolean_
+  commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Boolean)
+  fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.Boolean)
+  nameWithType: EnvLoader.AddEnvFile(String, Boolean)
+- uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.String)
+  name: AddEnvFile(String, String)
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_String_
+  commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.String)
+  fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.String)
+  nameWithType: EnvLoader.AddEnvFile(String, String)
+- uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.String,System.Boolean)
+  name: AddEnvFile(String, String, Boolean)
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_String_System_Boolean_
+  commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.String,System.Boolean)
+  fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.String, System.Boolean)
+  nameWithType: EnvLoader.AddEnvFile(String, String, Boolean)
 - uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Text.Encoding)
   name: AddEnvFile(String, Encoding)
   href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_Text_Encoding_
   commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Text.Encoding)
   fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.Text.Encoding)
   nameWithType: EnvLoader.AddEnvFile(String, Encoding)
+- uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Text.Encoding,System.Boolean)
+  name: AddEnvFile(String, Encoding, Boolean)
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_Text_Encoding_System_Boolean_
+  commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Text.Encoding,System.Boolean)
+  fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.Text.Encoding, System.Boolean)
+  nameWithType: EnvLoader.AddEnvFile(String, Encoding, Boolean)
 - uid: DotEnv.Core.EnvLoader.AddEnvFile*
   name: AddEnvFile
   href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_
@@ -91,6 +219,19 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.AddEnvFiles
   nameWithType: EnvLoader.AddEnvFiles
+- uid: DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional
+  name: AllowAllEnvFilesOptional()
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AllowAllEnvFilesOptional
+  commentId: M:DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional
+  fullName: DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional()
+  nameWithType: EnvLoader.AllowAllEnvFilesOptional()
+- uid: DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional*
+  name: AllowAllEnvFilesOptional
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AllowAllEnvFilesOptional_
+  commentId: Overload:DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional
+  nameWithType: EnvLoader.AllowAllEnvFilesOptional
 - uid: DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   name: AllowConcatDuplicateKeys(ConcatKeysOptions)
   href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
@@ -117,6 +258,19 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.AllowOverwriteExistingVars
   nameWithType: EnvLoader.AllowOverwriteExistingVars
+- uid: DotEnv.Core.EnvLoader.AvoidModifyEnvironment
+  name: AvoidModifyEnvironment()
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AvoidModifyEnvironment
+  commentId: M:DotEnv.Core.EnvLoader.AvoidModifyEnvironment
+  fullName: DotEnv.Core.EnvLoader.AvoidModifyEnvironment()
+  nameWithType: EnvLoader.AvoidModifyEnvironment()
+- uid: DotEnv.Core.EnvLoader.AvoidModifyEnvironment*
+  name: AvoidModifyEnvironment
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AvoidModifyEnvironment_
+  commentId: Overload:DotEnv.Core.EnvLoader.AvoidModifyEnvironment
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvLoader.AvoidModifyEnvironment
+  nameWithType: EnvLoader.AvoidModifyEnvironment
 - uid: DotEnv.Core.EnvLoader.DisableTrimEndKeys
   name: DisableTrimEndKeys()
   href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimEndKeys
@@ -221,25 +375,47 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.EnableFileNotFoundException
   nameWithType: EnvLoader.EnableFileNotFoundException
-- uid: DotEnv.Core.EnvLoader.IgnoreParserExceptions
-  name: IgnoreParserExceptions()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParserExceptions
-  commentId: M:DotEnv.Core.EnvLoader.IgnoreParserExceptions
-  fullName: DotEnv.Core.EnvLoader.IgnoreParserExceptions()
-  nameWithType: EnvLoader.IgnoreParserExceptions()
-- uid: DotEnv.Core.EnvLoader.IgnoreParserExceptions*
-  name: IgnoreParserExceptions
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParserExceptions_
-  commentId: Overload:DotEnv.Core.EnvLoader.IgnoreParserExceptions
+- uid: DotEnv.Core.EnvLoader.IgnoreParentDirectories
+  name: IgnoreParentDirectories()
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParentDirectories
+  commentId: M:DotEnv.Core.EnvLoader.IgnoreParentDirectories
+  fullName: DotEnv.Core.EnvLoader.IgnoreParentDirectories()
+  nameWithType: EnvLoader.IgnoreParentDirectories()
+- uid: DotEnv.Core.EnvLoader.IgnoreParentDirectories*
+  name: IgnoreParentDirectories
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParentDirectories_
+  commentId: Overload:DotEnv.Core.EnvLoader.IgnoreParentDirectories
   isSpec: "True"
-  fullName: DotEnv.Core.EnvLoader.IgnoreParserExceptions
-  nameWithType: EnvLoader.IgnoreParserExceptions
+  fullName: DotEnv.Core.EnvLoader.IgnoreParentDirectories
+  nameWithType: EnvLoader.IgnoreParentDirectories
+- uid: DotEnv.Core.EnvLoader.IgnoreParserException
+  name: IgnoreParserException()
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParserException
+  commentId: M:DotEnv.Core.EnvLoader.IgnoreParserException
+  fullName: DotEnv.Core.EnvLoader.IgnoreParserException()
+  nameWithType: EnvLoader.IgnoreParserException()
+- uid: DotEnv.Core.EnvLoader.IgnoreParserException*
+  name: IgnoreParserException
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParserException_
+  commentId: Overload:DotEnv.Core.EnvLoader.IgnoreParserException
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvLoader.IgnoreParserException
+  nameWithType: EnvLoader.IgnoreParserException
 - uid: DotEnv.Core.EnvLoader.Load
   name: Load()
   href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_Load
   commentId: M:DotEnv.Core.EnvLoader.Load
   fullName: DotEnv.Core.EnvLoader.Load()
   nameWithType: EnvLoader.Load()
+- uid: DotEnv.Core.EnvLoader.Load(DotEnv.Core.EnvValidationResult@)
+  name: Load(out EnvValidationResult)
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_Load_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.EnvLoader.Load(DotEnv.Core.EnvValidationResult@)
+  name.vb: Load(ByRef EnvValidationResult)
+  fullName: DotEnv.Core.EnvLoader.Load(out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.EnvLoader.Load(ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: EnvLoader.Load(out EnvValidationResult)
+  nameWithType.vb: EnvLoader.Load(ByRef EnvValidationResult)
 - uid: DotEnv.Core.EnvLoader.Load*
   name: Load
   href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_Load_
@@ -247,6 +423,28 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.Load
   nameWithType: EnvLoader.Load
+- uid: DotEnv.Core.EnvLoader.LoadEnv
+  name: LoadEnv()
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_LoadEnv
+  commentId: M:DotEnv.Core.EnvLoader.LoadEnv
+  fullName: DotEnv.Core.EnvLoader.LoadEnv()
+  nameWithType: EnvLoader.LoadEnv()
+- uid: DotEnv.Core.EnvLoader.LoadEnv(DotEnv.Core.EnvValidationResult@)
+  name: LoadEnv(out EnvValidationResult)
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_LoadEnv_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.EnvLoader.LoadEnv(DotEnv.Core.EnvValidationResult@)
+  name.vb: LoadEnv(ByRef EnvValidationResult)
+  fullName: DotEnv.Core.EnvLoader.LoadEnv(out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.EnvLoader.LoadEnv(ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: EnvLoader.LoadEnv(out EnvValidationResult)
+  nameWithType.vb: EnvLoader.LoadEnv(ByRef EnvValidationResult)
+- uid: DotEnv.Core.EnvLoader.LoadEnv*
+  name: LoadEnv
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_LoadEnv_
+  commentId: Overload:DotEnv.Core.EnvLoader.LoadEnv
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvLoader.LoadEnv
+  nameWithType: EnvLoader.LoadEnv
 - uid: DotEnv.Core.EnvLoader.SetBasePath(System.String)
   name: SetBasePath(String)
   href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetBasePath_System_String_
@@ -299,6 +497,12 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair
   nameWithType: EnvLoader.SetDelimiterKeyValuePair
+- uid: DotEnv.Core.EnvLoader.SetEncoding(System.String)
+  name: SetEncoding(String)
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEncoding_System_String_
+  commentId: M:DotEnv.Core.EnvLoader.SetEncoding(System.String)
+  fullName: DotEnv.Core.EnvLoader.SetEncoding(System.String)
+  nameWithType: EnvLoader.SetEncoding(String)
 - uid: DotEnv.Core.EnvLoader.SetEncoding(System.Text.Encoding)
   name: SetEncoding(Encoding)
   href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEncoding_System_Text_Encoding_
@@ -312,18 +516,38 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.SetEncoding
   nameWithType: EnvLoader.SetEncoding
+- uid: DotEnv.Core.EnvLoader.SetEnvironmentName(System.String)
+  name: SetEnvironmentName(String)
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEnvironmentName_System_String_
+  commentId: M:DotEnv.Core.EnvLoader.SetEnvironmentName(System.String)
+  fullName: DotEnv.Core.EnvLoader.SetEnvironmentName(System.String)
+  nameWithType: EnvLoader.SetEnvironmentName(String)
+- uid: DotEnv.Core.EnvLoader.SetEnvironmentName*
+  name: SetEnvironmentName
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEnvironmentName_
+  commentId: Overload:DotEnv.Core.EnvLoader.SetEnvironmentName
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvLoader.SetEnvironmentName
+  nameWithType: EnvLoader.SetEnvironmentName
+- uid: DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: EnvLoader.SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider*
+  name: SetEnvironmentVariablesProvider
+  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEnvironmentVariablesProvider_
+  commentId: Overload:DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider
+  nameWithType: EnvLoader.SetEnvironmentVariablesProvider
 - uid: DotEnv.Core.EnvParser
   name: EnvParser
   href: api/DotEnv.Core.EnvParser.html
   commentId: T:DotEnv.Core.EnvParser
   fullName: DotEnv.Core.EnvParser
   nameWithType: EnvParser
-- uid: DotEnv.Core.EnvParser._configuration
-  name: _configuration
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser__configuration
-  commentId: F:DotEnv.Core.EnvParser._configuration
-  fullName: DotEnv.Core.EnvParser._configuration
-  nameWithType: EnvParser._configuration
 - uid: DotEnv.Core.EnvParser.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   name: AllowConcatDuplicateKeys(ConcatKeysOptions)
   href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
@@ -350,19 +574,19 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvParser.AllowOverwriteExistingVars
   nameWithType: EnvParser.AllowOverwriteExistingVars
-- uid: DotEnv.Core.EnvParser.ConcatValues(System.String,System.String)
-  name: ConcatValues(String, String)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_ConcatValues_System_String_System_String_
-  commentId: M:DotEnv.Core.EnvParser.ConcatValues(System.String,System.String)
-  fullName: DotEnv.Core.EnvParser.ConcatValues(System.String, System.String)
-  nameWithType: EnvParser.ConcatValues(String, String)
-- uid: DotEnv.Core.EnvParser.ConcatValues*
-  name: ConcatValues
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_ConcatValues_
-  commentId: Overload:DotEnv.Core.EnvParser.ConcatValues
+- uid: DotEnv.Core.EnvParser.AvoidModifyEnvironment
+  name: AvoidModifyEnvironment()
+  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_AvoidModifyEnvironment
+  commentId: M:DotEnv.Core.EnvParser.AvoidModifyEnvironment
+  fullName: DotEnv.Core.EnvParser.AvoidModifyEnvironment()
+  nameWithType: EnvParser.AvoidModifyEnvironment()
+- uid: DotEnv.Core.EnvParser.AvoidModifyEnvironment*
+  name: AvoidModifyEnvironment
+  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_AvoidModifyEnvironment_
+  commentId: Overload:DotEnv.Core.EnvParser.AvoidModifyEnvironment
   isSpec: "True"
-  fullName: DotEnv.Core.EnvParser.ConcatValues
-  nameWithType: EnvParser.ConcatValues
+  fullName: DotEnv.Core.EnvParser.AvoidModifyEnvironment
+  nameWithType: EnvParser.AvoidModifyEnvironment
 - uid: DotEnv.Core.EnvParser.DisableTrimEndKeys
   name: DisableTrimEndKeys()
   href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimEndKeys
@@ -454,90 +678,34 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvParser.DisableTrimValues
   nameWithType: EnvParser.DisableTrimValues
-- uid: DotEnv.Core.EnvParser.ExpandEnvironmentVariables(System.String,System.Int32)
-  name: ExpandEnvironmentVariables(String, Int32)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_ExpandEnvironmentVariables_System_String_System_Int32_
-  commentId: M:DotEnv.Core.EnvParser.ExpandEnvironmentVariables(System.String,System.Int32)
-  fullName: DotEnv.Core.EnvParser.ExpandEnvironmentVariables(System.String, System.Int32)
-  nameWithType: EnvParser.ExpandEnvironmentVariables(String, Int32)
-- uid: DotEnv.Core.EnvParser.ExpandEnvironmentVariables*
-  name: ExpandEnvironmentVariables
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_ExpandEnvironmentVariables_
-  commentId: Overload:DotEnv.Core.EnvParser.ExpandEnvironmentVariables
+- uid: DotEnv.Core.EnvParser.IgnoreParserException
+  name: IgnoreParserException()
+  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_IgnoreParserException
+  commentId: M:DotEnv.Core.EnvParser.IgnoreParserException
+  fullName: DotEnv.Core.EnvParser.IgnoreParserException()
+  nameWithType: EnvParser.IgnoreParserException()
+- uid: DotEnv.Core.EnvParser.IgnoreParserException*
+  name: IgnoreParserException
+  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_IgnoreParserException_
+  commentId: Overload:DotEnv.Core.EnvParser.IgnoreParserException
   isSpec: "True"
-  fullName: DotEnv.Core.EnvParser.ExpandEnvironmentVariables
-  nameWithType: EnvParser.ExpandEnvironmentVariables
-- uid: DotEnv.Core.EnvParser.ExtractKey(System.String)
-  name: ExtractKey(String)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_ExtractKey_System_String_
-  commentId: M:DotEnv.Core.EnvParser.ExtractKey(System.String)
-  fullName: DotEnv.Core.EnvParser.ExtractKey(System.String)
-  nameWithType: EnvParser.ExtractKey(String)
-- uid: DotEnv.Core.EnvParser.ExtractKey*
-  name: ExtractKey
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_ExtractKey_
-  commentId: Overload:DotEnv.Core.EnvParser.ExtractKey
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParser.ExtractKey
-  nameWithType: EnvParser.ExtractKey
-- uid: DotEnv.Core.EnvParser.ExtractValue(System.String)
-  name: ExtractValue(String)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_ExtractValue_System_String_
-  commentId: M:DotEnv.Core.EnvParser.ExtractValue(System.String)
-  fullName: DotEnv.Core.EnvParser.ExtractValue(System.String)
-  nameWithType: EnvParser.ExtractValue(String)
-- uid: DotEnv.Core.EnvParser.ExtractValue*
-  name: ExtractValue
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_ExtractValue_
-  commentId: Overload:DotEnv.Core.EnvParser.ExtractValue
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParser.ExtractValue
-  nameWithType: EnvParser.ExtractValue
-- uid: DotEnv.Core.EnvParser.HasNoKeyValuePair(System.String)
-  name: HasNoKeyValuePair(String)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_HasNoKeyValuePair_System_String_
-  commentId: M:DotEnv.Core.EnvParser.HasNoKeyValuePair(System.String)
-  fullName: DotEnv.Core.EnvParser.HasNoKeyValuePair(System.String)
-  nameWithType: EnvParser.HasNoKeyValuePair(String)
-- uid: DotEnv.Core.EnvParser.HasNoKeyValuePair*
-  name: HasNoKeyValuePair
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_HasNoKeyValuePair_
-  commentId: Overload:DotEnv.Core.EnvParser.HasNoKeyValuePair
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParser.HasNoKeyValuePair
-  nameWithType: EnvParser.HasNoKeyValuePair
-- uid: DotEnv.Core.EnvParser.IgnoreParserExceptions
-  name: IgnoreParserExceptions()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_IgnoreParserExceptions
-  commentId: M:DotEnv.Core.EnvParser.IgnoreParserExceptions
-  fullName: DotEnv.Core.EnvParser.IgnoreParserExceptions()
-  nameWithType: EnvParser.IgnoreParserExceptions()
-- uid: DotEnv.Core.EnvParser.IgnoreParserExceptions*
-  name: IgnoreParserExceptions
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_IgnoreParserExceptions_
-  commentId: Overload:DotEnv.Core.EnvParser.IgnoreParserExceptions
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParser.IgnoreParserExceptions
-  nameWithType: EnvParser.IgnoreParserExceptions
-- uid: DotEnv.Core.EnvParser.IsComment(System.String)
-  name: IsComment(String)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_IsComment_System_String_
-  commentId: M:DotEnv.Core.EnvParser.IsComment(System.String)
-  fullName: DotEnv.Core.EnvParser.IsComment(System.String)
-  nameWithType: EnvParser.IsComment(String)
-- uid: DotEnv.Core.EnvParser.IsComment*
-  name: IsComment
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_IsComment_
-  commentId: Overload:DotEnv.Core.EnvParser.IsComment
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParser.IsComment
-  nameWithType: EnvParser.IsComment
+  fullName: DotEnv.Core.EnvParser.IgnoreParserException
+  nameWithType: EnvParser.IgnoreParserException
 - uid: DotEnv.Core.EnvParser.Parse(System.String)
   name: Parse(String)
   href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_Parse_System_String_
   commentId: M:DotEnv.Core.EnvParser.Parse(System.String)
   fullName: DotEnv.Core.EnvParser.Parse(System.String)
   nameWithType: EnvParser.Parse(String)
+- uid: DotEnv.Core.EnvParser.Parse(System.String,DotEnv.Core.EnvValidationResult@)
+  name: Parse(String, out EnvValidationResult)
+  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_Parse_System_String_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.EnvParser.Parse(System.String,DotEnv.Core.EnvValidationResult@)
+  name.vb: Parse(String, ByRef EnvValidationResult)
+  fullName: DotEnv.Core.EnvParser.Parse(System.String, out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.EnvParser.Parse(System.String, ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: EnvParser.Parse(String, out EnvValidationResult)
+  nameWithType.vb: EnvParser.Parse(String, ByRef EnvValidationResult)
 - uid: DotEnv.Core.EnvParser.Parse*
   name: Parse
   href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_Parse_
@@ -571,161 +739,44 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvParser.SetDelimiterKeyValuePair
   nameWithType: EnvParser.SetDelimiterKeyValuePair
-- uid: DotEnv.Core.EnvParser.SetEnvironmentVariable(System.String,System.String)
-  name: SetEnvironmentVariable(String, String)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetEnvironmentVariable_System_String_System_String_
-  commentId: M:DotEnv.Core.EnvParser.SetEnvironmentVariable(System.String,System.String)
-  fullName: DotEnv.Core.EnvParser.SetEnvironmentVariable(System.String, System.String)
-  nameWithType: EnvParser.SetEnvironmentVariable(String, String)
-- uid: DotEnv.Core.EnvParser.SetEnvironmentVariable*
-  name: SetEnvironmentVariable
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetEnvironmentVariable_
-  commentId: Overload:DotEnv.Core.EnvParser.SetEnvironmentVariable
+- uid: DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: EnvParser.SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider*
+  name: SetEnvironmentVariablesProvider
+  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetEnvironmentVariablesProvider_
+  commentId: Overload:DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider
   isSpec: "True"
-  fullName: DotEnv.Core.EnvParser.SetEnvironmentVariable
-  nameWithType: EnvParser.SetEnvironmentVariable
-- uid: DotEnv.Core.EnvParserOptions
-  name: EnvParserOptions
-  href: api/DotEnv.Core.EnvParserOptions.html
-  commentId: T:DotEnv.Core.EnvParserOptions
-  fullName: DotEnv.Core.EnvParserOptions
-  nameWithType: EnvParserOptions
-- uid: DotEnv.Core.EnvParserOptions.CommentChar
-  name: CommentChar
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_CommentChar
-  commentId: P:DotEnv.Core.EnvParserOptions.CommentChar
-  fullName: DotEnv.Core.EnvParserOptions.CommentChar
-  nameWithType: EnvParserOptions.CommentChar
-- uid: DotEnv.Core.EnvParserOptions.CommentChar*
-  name: CommentChar
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_CommentChar_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.CommentChar
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.CommentChar
-  nameWithType: EnvParserOptions.CommentChar
-- uid: DotEnv.Core.EnvParserOptions.ConcatDuplicateKeys
-  name: ConcatDuplicateKeys
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_ConcatDuplicateKeys
-  commentId: P:DotEnv.Core.EnvParserOptions.ConcatDuplicateKeys
-  fullName: DotEnv.Core.EnvParserOptions.ConcatDuplicateKeys
-  nameWithType: EnvParserOptions.ConcatDuplicateKeys
-- uid: DotEnv.Core.EnvParserOptions.ConcatDuplicateKeys*
-  name: ConcatDuplicateKeys
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_ConcatDuplicateKeys_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.ConcatDuplicateKeys
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.ConcatDuplicateKeys
-  nameWithType: EnvParserOptions.ConcatDuplicateKeys
-- uid: DotEnv.Core.EnvParserOptions.DelimiterKeyValuePair
-  name: DelimiterKeyValuePair
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_DelimiterKeyValuePair
-  commentId: P:DotEnv.Core.EnvParserOptions.DelimiterKeyValuePair
-  fullName: DotEnv.Core.EnvParserOptions.DelimiterKeyValuePair
-  nameWithType: EnvParserOptions.DelimiterKeyValuePair
-- uid: DotEnv.Core.EnvParserOptions.DelimiterKeyValuePair*
-  name: DelimiterKeyValuePair
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_DelimiterKeyValuePair_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.DelimiterKeyValuePair
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.DelimiterKeyValuePair
-  nameWithType: EnvParserOptions.DelimiterKeyValuePair
-- uid: DotEnv.Core.EnvParserOptions.OverwriteExistingVars
-  name: OverwriteExistingVars
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_OverwriteExistingVars
-  commentId: P:DotEnv.Core.EnvParserOptions.OverwriteExistingVars
-  fullName: DotEnv.Core.EnvParserOptions.OverwriteExistingVars
-  nameWithType: EnvParserOptions.OverwriteExistingVars
-- uid: DotEnv.Core.EnvParserOptions.OverwriteExistingVars*
-  name: OverwriteExistingVars
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_OverwriteExistingVars_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.OverwriteExistingVars
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.OverwriteExistingVars
-  nameWithType: EnvParserOptions.OverwriteExistingVars
-- uid: DotEnv.Core.EnvParserOptions.ThrowException
-  name: ThrowException
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_ThrowException
-  commentId: P:DotEnv.Core.EnvParserOptions.ThrowException
-  fullName: DotEnv.Core.EnvParserOptions.ThrowException
-  nameWithType: EnvParserOptions.ThrowException
-- uid: DotEnv.Core.EnvParserOptions.ThrowException*
-  name: ThrowException
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_ThrowException_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.ThrowException
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.ThrowException
-  nameWithType: EnvParserOptions.ThrowException
-- uid: DotEnv.Core.EnvParserOptions.TrimEndKeys
-  name: TrimEndKeys
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimEndKeys
-  commentId: P:DotEnv.Core.EnvParserOptions.TrimEndKeys
-  fullName: DotEnv.Core.EnvParserOptions.TrimEndKeys
-  nameWithType: EnvParserOptions.TrimEndKeys
-- uid: DotEnv.Core.EnvParserOptions.TrimEndKeys*
-  name: TrimEndKeys
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimEndKeys_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.TrimEndKeys
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.TrimEndKeys
-  nameWithType: EnvParserOptions.TrimEndKeys
-- uid: DotEnv.Core.EnvParserOptions.TrimEndValues
-  name: TrimEndValues
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimEndValues
-  commentId: P:DotEnv.Core.EnvParserOptions.TrimEndValues
-  fullName: DotEnv.Core.EnvParserOptions.TrimEndValues
-  nameWithType: EnvParserOptions.TrimEndValues
-- uid: DotEnv.Core.EnvParserOptions.TrimEndValues*
-  name: TrimEndValues
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimEndValues_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.TrimEndValues
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.TrimEndValues
-  nameWithType: EnvParserOptions.TrimEndValues
-- uid: DotEnv.Core.EnvParserOptions.TrimStartComments
-  name: TrimStartComments
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimStartComments
-  commentId: P:DotEnv.Core.EnvParserOptions.TrimStartComments
-  fullName: DotEnv.Core.EnvParserOptions.TrimStartComments
-  nameWithType: EnvParserOptions.TrimStartComments
-- uid: DotEnv.Core.EnvParserOptions.TrimStartComments*
-  name: TrimStartComments
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimStartComments_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.TrimStartComments
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.TrimStartComments
-  nameWithType: EnvParserOptions.TrimStartComments
-- uid: DotEnv.Core.EnvParserOptions.TrimStartKeys
-  name: TrimStartKeys
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimStartKeys
-  commentId: P:DotEnv.Core.EnvParserOptions.TrimStartKeys
-  fullName: DotEnv.Core.EnvParserOptions.TrimStartKeys
-  nameWithType: EnvParserOptions.TrimStartKeys
-- uid: DotEnv.Core.EnvParserOptions.TrimStartKeys*
-  name: TrimStartKeys
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimStartKeys_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.TrimStartKeys
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.TrimStartKeys
-  nameWithType: EnvParserOptions.TrimStartKeys
-- uid: DotEnv.Core.EnvParserOptions.TrimStartValues
-  name: TrimStartValues
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimStartValues
-  commentId: P:DotEnv.Core.EnvParserOptions.TrimStartValues
-  fullName: DotEnv.Core.EnvParserOptions.TrimStartValues
-  nameWithType: EnvParserOptions.TrimStartValues
-- uid: DotEnv.Core.EnvParserOptions.TrimStartValues*
-  name: TrimStartValues
-  href: api/DotEnv.Core.EnvParserOptions.html#DotEnv_Core_EnvParserOptions_TrimStartValues_
-  commentId: Overload:DotEnv.Core.EnvParserOptions.TrimStartValues
-  isSpec: "True"
-  fullName: DotEnv.Core.EnvParserOptions.TrimStartValues
-  nameWithType: EnvParserOptions.TrimStartValues
+  fullName: DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider
+  nameWithType: EnvParser.SetEnvironmentVariablesProvider
 - uid: DotEnv.Core.EnvReader
   name: EnvReader
   href: api/DotEnv.Core.EnvReader.html
   commentId: T:DotEnv.Core.EnvReader
   fullName: DotEnv.Core.EnvReader
   nameWithType: EnvReader
+- uid: DotEnv.Core.EnvReader.#ctor
+  name: EnvReader()
+  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader__ctor
+  commentId: M:DotEnv.Core.EnvReader.#ctor
+  fullName: DotEnv.Core.EnvReader.EnvReader()
+  nameWithType: EnvReader.EnvReader()
+- uid: DotEnv.Core.EnvReader.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: EnvReader(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader__ctor_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.EnvReader.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.EnvReader.EnvReader(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: EnvReader.EnvReader(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.EnvReader.#ctor*
+  name: EnvReader
+  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader__ctor_
+  commentId: Overload:DotEnv.Core.EnvReader.#ctor
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvReader.EnvReader
+  nameWithType: EnvReader.EnvReader
 - uid: DotEnv.Core.EnvReader.EnvBool(System.String,System.Boolean)
   name: EnvBool(String, Boolean)
   href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvBool_System_String_System_Boolean_
@@ -1090,6 +1141,19 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetUShortValue
   nameWithType: EnvReader.GetUShortValue
+- uid: DotEnv.Core.EnvReader.HasValue(System.String)
+  name: HasValue(String)
+  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_HasValue_System_String_
+  commentId: M:DotEnv.Core.EnvReader.HasValue(System.String)
+  fullName: DotEnv.Core.EnvReader.HasValue(System.String)
+  nameWithType: EnvReader.HasValue(String)
+- uid: DotEnv.Core.EnvReader.HasValue*
+  name: HasValue
+  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_HasValue_
+  commentId: Overload:DotEnv.Core.EnvReader.HasValue
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvReader.HasValue
+  nameWithType: EnvReader.HasValue
 - uid: DotEnv.Core.EnvReader.Instance
   name: Instance
   href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_Instance
@@ -1343,51 +1407,177 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetUShortValue
   nameWithType: EnvReader.TryGetUShortValue
-- uid: DotEnv.Core.EnvVariableNotFoundException
-  name: EnvVariableNotFoundException
-  href: api/DotEnv.Core.EnvVariableNotFoundException.html
-  commentId: T:DotEnv.Core.EnvVariableNotFoundException
-  fullName: DotEnv.Core.EnvVariableNotFoundException
-  nameWithType: EnvVariableNotFoundException
-- uid: DotEnv.Core.EnvVariableNotFoundException.#ctor(System.String,System.String)
-  name: EnvVariableNotFoundException(String, String)
-  href: api/DotEnv.Core.EnvVariableNotFoundException.html#DotEnv_Core_EnvVariableNotFoundException__ctor_System_String_System_String_
-  commentId: M:DotEnv.Core.EnvVariableNotFoundException.#ctor(System.String,System.String)
-  fullName: DotEnv.Core.EnvVariableNotFoundException.EnvVariableNotFoundException(System.String, System.String)
-  nameWithType: EnvVariableNotFoundException.EnvVariableNotFoundException(String, String)
-- uid: DotEnv.Core.EnvVariableNotFoundException.#ctor*
-  name: EnvVariableNotFoundException
-  href: api/DotEnv.Core.EnvVariableNotFoundException.html#DotEnv_Core_EnvVariableNotFoundException__ctor_
-  commentId: Overload:DotEnv.Core.EnvVariableNotFoundException.#ctor
+- uid: DotEnv.Core.EnvValidationResult
+  name: EnvValidationResult
+  href: api/DotEnv.Core.EnvValidationResult.html
+  commentId: T:DotEnv.Core.EnvValidationResult
+  fullName: DotEnv.Core.EnvValidationResult
+  nameWithType: EnvValidationResult
+- uid: DotEnv.Core.EnvValidationResult.Count
+  name: Count
+  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_Count
+  commentId: P:DotEnv.Core.EnvValidationResult.Count
+  fullName: DotEnv.Core.EnvValidationResult.Count
+  nameWithType: EnvValidationResult.Count
+- uid: DotEnv.Core.EnvValidationResult.Count*
+  name: Count
+  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_Count_
+  commentId: Overload:DotEnv.Core.EnvValidationResult.Count
   isSpec: "True"
-  fullName: DotEnv.Core.EnvVariableNotFoundException.EnvVariableNotFoundException
-  nameWithType: EnvVariableNotFoundException.EnvVariableNotFoundException
-- uid: DotEnv.Core.EnvVariableNotFoundException.Message
-  name: Message
-  href: api/DotEnv.Core.EnvVariableNotFoundException.html#DotEnv_Core_EnvVariableNotFoundException_Message
-  commentId: P:DotEnv.Core.EnvVariableNotFoundException.Message
-  fullName: DotEnv.Core.EnvVariableNotFoundException.Message
-  nameWithType: EnvVariableNotFoundException.Message
-- uid: DotEnv.Core.EnvVariableNotFoundException.Message*
-  name: Message
-  href: api/DotEnv.Core.EnvVariableNotFoundException.html#DotEnv_Core_EnvVariableNotFoundException_Message_
-  commentId: Overload:DotEnv.Core.EnvVariableNotFoundException.Message
+  fullName: DotEnv.Core.EnvValidationResult.Count
+  nameWithType: EnvValidationResult.Count
+- uid: DotEnv.Core.EnvValidationResult.ErrorMessages
+  name: ErrorMessages
+  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_ErrorMessages
+  commentId: P:DotEnv.Core.EnvValidationResult.ErrorMessages
+  fullName: DotEnv.Core.EnvValidationResult.ErrorMessages
+  nameWithType: EnvValidationResult.ErrorMessages
+- uid: DotEnv.Core.EnvValidationResult.ErrorMessages*
+  name: ErrorMessages
+  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_ErrorMessages_
+  commentId: Overload:DotEnv.Core.EnvValidationResult.ErrorMessages
   isSpec: "True"
-  fullName: DotEnv.Core.EnvVariableNotFoundException.Message
-  nameWithType: EnvVariableNotFoundException.Message
-- uid: DotEnv.Core.EnvVariableNotFoundException.VariableName
-  name: VariableName
-  href: api/DotEnv.Core.EnvVariableNotFoundException.html#DotEnv_Core_EnvVariableNotFoundException_VariableName
-  commentId: P:DotEnv.Core.EnvVariableNotFoundException.VariableName
-  fullName: DotEnv.Core.EnvVariableNotFoundException.VariableName
-  nameWithType: EnvVariableNotFoundException.VariableName
-- uid: DotEnv.Core.EnvVariableNotFoundException.VariableName*
-  name: VariableName
-  href: api/DotEnv.Core.EnvVariableNotFoundException.html#DotEnv_Core_EnvVariableNotFoundException_VariableName_
-  commentId: Overload:DotEnv.Core.EnvVariableNotFoundException.VariableName
+  fullName: DotEnv.Core.EnvValidationResult.ErrorMessages
+  nameWithType: EnvValidationResult.ErrorMessages
+- uid: DotEnv.Core.EnvValidationResult.GetEnumerator
+  name: GetEnumerator()
+  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_GetEnumerator
+  commentId: M:DotEnv.Core.EnvValidationResult.GetEnumerator
+  fullName: DotEnv.Core.EnvValidationResult.GetEnumerator()
+  nameWithType: EnvValidationResult.GetEnumerator()
+- uid: DotEnv.Core.EnvValidationResult.GetEnumerator*
+  name: GetEnumerator
+  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_GetEnumerator_
+  commentId: Overload:DotEnv.Core.EnvValidationResult.GetEnumerator
   isSpec: "True"
-  fullName: DotEnv.Core.EnvVariableNotFoundException.VariableName
-  nameWithType: EnvVariableNotFoundException.VariableName
+  fullName: DotEnv.Core.EnvValidationResult.GetEnumerator
+  nameWithType: EnvValidationResult.GetEnumerator
+- uid: DotEnv.Core.EnvValidationResult.HasError
+  name: HasError()
+  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_HasError
+  commentId: M:DotEnv.Core.EnvValidationResult.HasError
+  fullName: DotEnv.Core.EnvValidationResult.HasError()
+  nameWithType: EnvValidationResult.HasError()
+- uid: DotEnv.Core.EnvValidationResult.HasError*
+  name: HasError
+  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_HasError_
+  commentId: Overload:DotEnv.Core.EnvValidationResult.HasError
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvValidationResult.HasError
+  nameWithType: EnvValidationResult.HasError
+- uid: DotEnv.Core.EnvValidator
+  name: EnvValidator
+  href: api/DotEnv.Core.EnvValidator.html
+  commentId: T:DotEnv.Core.EnvValidator
+  fullName: DotEnv.Core.EnvValidator
+  nameWithType: EnvValidator
+- uid: DotEnv.Core.EnvValidator.#ctor
+  name: EnvValidator()
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator__ctor
+  commentId: M:DotEnv.Core.EnvValidator.#ctor
+  fullName: DotEnv.Core.EnvValidator.EnvValidator()
+  nameWithType: EnvValidator.EnvValidator()
+- uid: DotEnv.Core.EnvValidator.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: EnvValidator(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator__ctor_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.EnvValidator.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.EnvValidator.EnvValidator(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: EnvValidator.EnvValidator(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.EnvValidator.#ctor*
+  name: EnvValidator
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator__ctor_
+  commentId: Overload:DotEnv.Core.EnvValidator.#ctor
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvValidator.EnvValidator
+  nameWithType: EnvValidator.EnvValidator
+- uid: DotEnv.Core.EnvValidator.IgnoreException
+  name: IgnoreException()
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_IgnoreException
+  commentId: M:DotEnv.Core.EnvValidator.IgnoreException
+  fullName: DotEnv.Core.EnvValidator.IgnoreException()
+  nameWithType: EnvValidator.IgnoreException()
+- uid: DotEnv.Core.EnvValidator.IgnoreException*
+  name: IgnoreException
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_IgnoreException_
+  commentId: Overload:DotEnv.Core.EnvValidator.IgnoreException
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvValidator.IgnoreException
+  nameWithType: EnvValidator.IgnoreException
+- uid: DotEnv.Core.EnvValidator.SetRequiredKeys(System.String[])
+  name: SetRequiredKeys(String[])
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_SetRequiredKeys_System_String___
+  commentId: M:DotEnv.Core.EnvValidator.SetRequiredKeys(System.String[])
+  name.vb: SetRequiredKeys(String())
+  fullName: DotEnv.Core.EnvValidator.SetRequiredKeys(System.String[])
+  fullName.vb: DotEnv.Core.EnvValidator.SetRequiredKeys(System.String())
+  nameWithType: EnvValidator.SetRequiredKeys(String[])
+  nameWithType.vb: EnvValidator.SetRequiredKeys(String())
+- uid: DotEnv.Core.EnvValidator.SetRequiredKeys(System.Type)
+  name: SetRequiredKeys(Type)
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_SetRequiredKeys_System_Type_
+  commentId: M:DotEnv.Core.EnvValidator.SetRequiredKeys(System.Type)
+  fullName: DotEnv.Core.EnvValidator.SetRequiredKeys(System.Type)
+  nameWithType: EnvValidator.SetRequiredKeys(Type)
+- uid: DotEnv.Core.EnvValidator.SetRequiredKeys*
+  name: SetRequiredKeys
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_SetRequiredKeys_
+  commentId: Overload:DotEnv.Core.EnvValidator.SetRequiredKeys
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvValidator.SetRequiredKeys
+  nameWithType: EnvValidator.SetRequiredKeys
+- uid: DotEnv.Core.EnvValidator.SetRequiredKeys``1
+  name: SetRequiredKeys<TKeys>()
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_SetRequiredKeys__1
+  commentId: M:DotEnv.Core.EnvValidator.SetRequiredKeys``1
+  name.vb: SetRequiredKeys(Of TKeys)()
+  fullName: DotEnv.Core.EnvValidator.SetRequiredKeys<TKeys>()
+  fullName.vb: DotEnv.Core.EnvValidator.SetRequiredKeys(Of TKeys)()
+  nameWithType: EnvValidator.SetRequiredKeys<TKeys>()
+  nameWithType.vb: EnvValidator.SetRequiredKeys(Of TKeys)()
+- uid: DotEnv.Core.EnvValidator.Validate
+  name: Validate()
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_Validate
+  commentId: M:DotEnv.Core.EnvValidator.Validate
+  fullName: DotEnv.Core.EnvValidator.Validate()
+  nameWithType: EnvValidator.Validate()
+- uid: DotEnv.Core.EnvValidator.Validate(DotEnv.Core.EnvValidationResult@)
+  name: Validate(out EnvValidationResult)
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_Validate_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.EnvValidator.Validate(DotEnv.Core.EnvValidationResult@)
+  name.vb: Validate(ByRef EnvValidationResult)
+  fullName: DotEnv.Core.EnvValidator.Validate(out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.EnvValidator.Validate(ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: EnvValidator.Validate(out EnvValidationResult)
+  nameWithType.vb: EnvValidator.Validate(ByRef EnvValidationResult)
+- uid: DotEnv.Core.EnvValidator.Validate*
+  name: Validate
+  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_Validate_
+  commentId: Overload:DotEnv.Core.EnvValidator.Validate
+  isSpec: "True"
+  fullName: DotEnv.Core.EnvValidator.Validate
+  nameWithType: EnvValidator.Validate
+- uid: DotEnv.Core.IEnvironmentVariablesProvider
+  name: IEnvironmentVariablesProvider
+  href: api/DotEnv.Core.IEnvironmentVariablesProvider.html
+  commentId: T:DotEnv.Core.IEnvironmentVariablesProvider
+  fullName: DotEnv.Core.IEnvironmentVariablesProvider
+  nameWithType: IEnvironmentVariablesProvider
+- uid: DotEnv.Core.IEnvironmentVariablesProvider.Item(System.String)
+  name: Item[String]
+  href: api/DotEnv.Core.IEnvironmentVariablesProvider.html#DotEnv_Core_IEnvironmentVariablesProvider_Item_System_String_
+  commentId: P:DotEnv.Core.IEnvironmentVariablesProvider.Item(System.String)
+  name.vb: Item(String)
+  fullName: DotEnv.Core.IEnvironmentVariablesProvider.Item[System.String]
+  fullName.vb: DotEnv.Core.IEnvironmentVariablesProvider.Item(System.String)
+  nameWithType: IEnvironmentVariablesProvider.Item[String]
+  nameWithType.vb: IEnvironmentVariablesProvider.Item(String)
+- uid: DotEnv.Core.IEnvironmentVariablesProvider.Item*
+  name: Item
+  href: api/DotEnv.Core.IEnvironmentVariablesProvider.html#DotEnv_Core_IEnvironmentVariablesProvider_Item_
+  commentId: Overload:DotEnv.Core.IEnvironmentVariablesProvider.Item
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvironmentVariablesProvider.Item
+  nameWithType: IEnvironmentVariablesProvider.Item
 - uid: DotEnv.Core.IEnvLoader
   name: IEnvLoader
   href: api/DotEnv.Core.IEnvLoader.html
@@ -1400,12 +1590,36 @@ references:
   commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String)
   fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String)
   nameWithType: IEnvLoader.AddEnvFile(String)
+- uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Boolean)
+  name: AddEnvFile(String, Boolean)
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Boolean_
+  commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Boolean)
+  fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.Boolean)
+  nameWithType: IEnvLoader.AddEnvFile(String, Boolean)
+- uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.String)
+  name: AddEnvFile(String, String)
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_String_
+  commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.String)
+  fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.String)
+  nameWithType: IEnvLoader.AddEnvFile(String, String)
+- uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.String,System.Boolean)
+  name: AddEnvFile(String, String, Boolean)
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_String_System_Boolean_
+  commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.String,System.Boolean)
+  fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.String, System.Boolean)
+  nameWithType: IEnvLoader.AddEnvFile(String, String, Boolean)
 - uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Text.Encoding)
   name: AddEnvFile(String, Encoding)
   href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Text_Encoding_
   commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Text.Encoding)
   fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.Text.Encoding)
   nameWithType: IEnvLoader.AddEnvFile(String, Encoding)
+- uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Text.Encoding,System.Boolean)
+  name: AddEnvFile(String, Encoding, Boolean)
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Text_Encoding_System_Boolean_
+  commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Text.Encoding,System.Boolean)
+  fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.Text.Encoding, System.Boolean)
+  nameWithType: IEnvLoader.AddEnvFile(String, Encoding, Boolean)
 - uid: DotEnv.Core.IEnvLoader.AddEnvFile*
   name: AddEnvFile
   href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_
@@ -1429,6 +1643,19 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.AddEnvFiles
   nameWithType: IEnvLoader.AddEnvFiles
+- uid: DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional
+  name: AllowAllEnvFilesOptional()
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AllowAllEnvFilesOptional
+  commentId: M:DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional
+  fullName: DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional()
+  nameWithType: IEnvLoader.AllowAllEnvFilesOptional()
+- uid: DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional*
+  name: AllowAllEnvFilesOptional
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AllowAllEnvFilesOptional_
+  commentId: Overload:DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional
+  nameWithType: IEnvLoader.AllowAllEnvFilesOptional
 - uid: DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   name: AllowConcatDuplicateKeys(ConcatKeysOptions)
   href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
@@ -1455,6 +1682,19 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars
   nameWithType: IEnvLoader.AllowOverwriteExistingVars
+- uid: DotEnv.Core.IEnvLoader.AvoidModifyEnvironment
+  name: AvoidModifyEnvironment()
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AvoidModifyEnvironment
+  commentId: M:DotEnv.Core.IEnvLoader.AvoidModifyEnvironment
+  fullName: DotEnv.Core.IEnvLoader.AvoidModifyEnvironment()
+  nameWithType: IEnvLoader.AvoidModifyEnvironment()
+- uid: DotEnv.Core.IEnvLoader.AvoidModifyEnvironment*
+  name: AvoidModifyEnvironment
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AvoidModifyEnvironment_
+  commentId: Overload:DotEnv.Core.IEnvLoader.AvoidModifyEnvironment
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvLoader.AvoidModifyEnvironment
+  nameWithType: IEnvLoader.AvoidModifyEnvironment
 - uid: DotEnv.Core.IEnvLoader.DisableTrimEndKeys
   name: DisableTrimEndKeys()
   href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimEndKeys
@@ -1559,25 +1799,47 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.EnableFileNotFoundException
   nameWithType: IEnvLoader.EnableFileNotFoundException
-- uid: DotEnv.Core.IEnvLoader.IgnoreParserExceptions
-  name: IgnoreParserExceptions()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParserExceptions
-  commentId: M:DotEnv.Core.IEnvLoader.IgnoreParserExceptions
-  fullName: DotEnv.Core.IEnvLoader.IgnoreParserExceptions()
-  nameWithType: IEnvLoader.IgnoreParserExceptions()
-- uid: DotEnv.Core.IEnvLoader.IgnoreParserExceptions*
-  name: IgnoreParserExceptions
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParserExceptions_
-  commentId: Overload:DotEnv.Core.IEnvLoader.IgnoreParserExceptions
+- uid: DotEnv.Core.IEnvLoader.IgnoreParentDirectories
+  name: IgnoreParentDirectories()
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParentDirectories
+  commentId: M:DotEnv.Core.IEnvLoader.IgnoreParentDirectories
+  fullName: DotEnv.Core.IEnvLoader.IgnoreParentDirectories()
+  nameWithType: IEnvLoader.IgnoreParentDirectories()
+- uid: DotEnv.Core.IEnvLoader.IgnoreParentDirectories*
+  name: IgnoreParentDirectories
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParentDirectories_
+  commentId: Overload:DotEnv.Core.IEnvLoader.IgnoreParentDirectories
   isSpec: "True"
-  fullName: DotEnv.Core.IEnvLoader.IgnoreParserExceptions
-  nameWithType: IEnvLoader.IgnoreParserExceptions
+  fullName: DotEnv.Core.IEnvLoader.IgnoreParentDirectories
+  nameWithType: IEnvLoader.IgnoreParentDirectories
+- uid: DotEnv.Core.IEnvLoader.IgnoreParserException
+  name: IgnoreParserException()
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParserException
+  commentId: M:DotEnv.Core.IEnvLoader.IgnoreParserException
+  fullName: DotEnv.Core.IEnvLoader.IgnoreParserException()
+  nameWithType: IEnvLoader.IgnoreParserException()
+- uid: DotEnv.Core.IEnvLoader.IgnoreParserException*
+  name: IgnoreParserException
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParserException_
+  commentId: Overload:DotEnv.Core.IEnvLoader.IgnoreParserException
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvLoader.IgnoreParserException
+  nameWithType: IEnvLoader.IgnoreParserException
 - uid: DotEnv.Core.IEnvLoader.Load
   name: Load()
   href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_Load
   commentId: M:DotEnv.Core.IEnvLoader.Load
   fullName: DotEnv.Core.IEnvLoader.Load()
   nameWithType: IEnvLoader.Load()
+- uid: DotEnv.Core.IEnvLoader.Load(DotEnv.Core.EnvValidationResult@)
+  name: Load(out EnvValidationResult)
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_Load_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.IEnvLoader.Load(DotEnv.Core.EnvValidationResult@)
+  name.vb: Load(ByRef EnvValidationResult)
+  fullName: DotEnv.Core.IEnvLoader.Load(out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.IEnvLoader.Load(ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: IEnvLoader.Load(out EnvValidationResult)
+  nameWithType.vb: IEnvLoader.Load(ByRef EnvValidationResult)
 - uid: DotEnv.Core.IEnvLoader.Load*
   name: Load
   href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_Load_
@@ -1585,6 +1847,28 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.Load
   nameWithType: IEnvLoader.Load
+- uid: DotEnv.Core.IEnvLoader.LoadEnv
+  name: LoadEnv()
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_LoadEnv
+  commentId: M:DotEnv.Core.IEnvLoader.LoadEnv
+  fullName: DotEnv.Core.IEnvLoader.LoadEnv()
+  nameWithType: IEnvLoader.LoadEnv()
+- uid: DotEnv.Core.IEnvLoader.LoadEnv(DotEnv.Core.EnvValidationResult@)
+  name: LoadEnv(out EnvValidationResult)
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_LoadEnv_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.IEnvLoader.LoadEnv(DotEnv.Core.EnvValidationResult@)
+  name.vb: LoadEnv(ByRef EnvValidationResult)
+  fullName: DotEnv.Core.IEnvLoader.LoadEnv(out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.IEnvLoader.LoadEnv(ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: IEnvLoader.LoadEnv(out EnvValidationResult)
+  nameWithType.vb: IEnvLoader.LoadEnv(ByRef EnvValidationResult)
+- uid: DotEnv.Core.IEnvLoader.LoadEnv*
+  name: LoadEnv
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_LoadEnv_
+  commentId: Overload:DotEnv.Core.IEnvLoader.LoadEnv
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvLoader.LoadEnv
+  nameWithType: IEnvLoader.LoadEnv
 - uid: DotEnv.Core.IEnvLoader.SetBasePath(System.String)
   name: SetBasePath(String)
   href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetBasePath_System_String_
@@ -1637,6 +1921,12 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair
   nameWithType: IEnvLoader.SetDelimiterKeyValuePair
+- uid: DotEnv.Core.IEnvLoader.SetEncoding(System.String)
+  name: SetEncoding(String)
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEncoding_System_String_
+  commentId: M:DotEnv.Core.IEnvLoader.SetEncoding(System.String)
+  fullName: DotEnv.Core.IEnvLoader.SetEncoding(System.String)
+  nameWithType: IEnvLoader.SetEncoding(String)
 - uid: DotEnv.Core.IEnvLoader.SetEncoding(System.Text.Encoding)
   name: SetEncoding(Encoding)
   href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEncoding_System_Text_Encoding_
@@ -1650,6 +1940,32 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.SetEncoding
   nameWithType: IEnvLoader.SetEncoding
+- uid: DotEnv.Core.IEnvLoader.SetEnvironmentName(System.String)
+  name: SetEnvironmentName(String)
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEnvironmentName_System_String_
+  commentId: M:DotEnv.Core.IEnvLoader.SetEnvironmentName(System.String)
+  fullName: DotEnv.Core.IEnvLoader.SetEnvironmentName(System.String)
+  nameWithType: IEnvLoader.SetEnvironmentName(String)
+- uid: DotEnv.Core.IEnvLoader.SetEnvironmentName*
+  name: SetEnvironmentName
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEnvironmentName_
+  commentId: Overload:DotEnv.Core.IEnvLoader.SetEnvironmentName
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvLoader.SetEnvironmentName
+  nameWithType: IEnvLoader.SetEnvironmentName
+- uid: DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: IEnvLoader.SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider*
+  name: SetEnvironmentVariablesProvider
+  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEnvironmentVariablesProvider_
+  commentId: Overload:DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider
+  nameWithType: IEnvLoader.SetEnvironmentVariablesProvider
 - uid: DotEnv.Core.IEnvParser
   name: IEnvParser
   href: api/DotEnv.Core.IEnvParser.html
@@ -1682,6 +1998,19 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.AllowOverwriteExistingVars
   nameWithType: IEnvParser.AllowOverwriteExistingVars
+- uid: DotEnv.Core.IEnvParser.AvoidModifyEnvironment
+  name: AvoidModifyEnvironment()
+  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_AvoidModifyEnvironment
+  commentId: M:DotEnv.Core.IEnvParser.AvoidModifyEnvironment
+  fullName: DotEnv.Core.IEnvParser.AvoidModifyEnvironment()
+  nameWithType: IEnvParser.AvoidModifyEnvironment()
+- uid: DotEnv.Core.IEnvParser.AvoidModifyEnvironment*
+  name: AvoidModifyEnvironment
+  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_AvoidModifyEnvironment_
+  commentId: Overload:DotEnv.Core.IEnvParser.AvoidModifyEnvironment
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvParser.AvoidModifyEnvironment
+  nameWithType: IEnvParser.AvoidModifyEnvironment
 - uid: DotEnv.Core.IEnvParser.DisableTrimEndKeys
   name: DisableTrimEndKeys()
   href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimEndKeys
@@ -1773,25 +2102,34 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.DisableTrimValues
   nameWithType: IEnvParser.DisableTrimValues
-- uid: DotEnv.Core.IEnvParser.IgnoreParserExceptions
-  name: IgnoreParserExceptions()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_IgnoreParserExceptions
-  commentId: M:DotEnv.Core.IEnvParser.IgnoreParserExceptions
-  fullName: DotEnv.Core.IEnvParser.IgnoreParserExceptions()
-  nameWithType: IEnvParser.IgnoreParserExceptions()
-- uid: DotEnv.Core.IEnvParser.IgnoreParserExceptions*
-  name: IgnoreParserExceptions
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_IgnoreParserExceptions_
-  commentId: Overload:DotEnv.Core.IEnvParser.IgnoreParserExceptions
+- uid: DotEnv.Core.IEnvParser.IgnoreParserException
+  name: IgnoreParserException()
+  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_IgnoreParserException
+  commentId: M:DotEnv.Core.IEnvParser.IgnoreParserException
+  fullName: DotEnv.Core.IEnvParser.IgnoreParserException()
+  nameWithType: IEnvParser.IgnoreParserException()
+- uid: DotEnv.Core.IEnvParser.IgnoreParserException*
+  name: IgnoreParserException
+  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_IgnoreParserException_
+  commentId: Overload:DotEnv.Core.IEnvParser.IgnoreParserException
   isSpec: "True"
-  fullName: DotEnv.Core.IEnvParser.IgnoreParserExceptions
-  nameWithType: IEnvParser.IgnoreParserExceptions
+  fullName: DotEnv.Core.IEnvParser.IgnoreParserException
+  nameWithType: IEnvParser.IgnoreParserException
 - uid: DotEnv.Core.IEnvParser.Parse(System.String)
   name: Parse(String)
   href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_Parse_System_String_
   commentId: M:DotEnv.Core.IEnvParser.Parse(System.String)
   fullName: DotEnv.Core.IEnvParser.Parse(System.String)
   nameWithType: IEnvParser.Parse(String)
+- uid: DotEnv.Core.IEnvParser.Parse(System.String,DotEnv.Core.EnvValidationResult@)
+  name: Parse(String, out EnvValidationResult)
+  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_Parse_System_String_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.IEnvParser.Parse(System.String,DotEnv.Core.EnvValidationResult@)
+  name.vb: Parse(String, ByRef EnvValidationResult)
+  fullName: DotEnv.Core.IEnvParser.Parse(System.String, out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.IEnvParser.Parse(System.String, ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: IEnvParser.Parse(String, out EnvValidationResult)
+  nameWithType.vb: IEnvParser.Parse(String, ByRef EnvValidationResult)
 - uid: DotEnv.Core.IEnvParser.Parse*
   name: Parse
   href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_Parse_
@@ -1825,6 +2163,19 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair
   nameWithType: IEnvParser.SetDelimiterKeyValuePair
+- uid: DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: IEnvParser.SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider*
+  name: SetEnvironmentVariablesProvider
+  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_SetEnvironmentVariablesProvider_
+  commentId: Overload:DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider
+  nameWithType: IEnvParser.SetEnvironmentVariablesProvider
 - uid: DotEnv.Core.IEnvReader
   name: IEnvReader
   href: api/DotEnv.Core.IEnvReader.html
@@ -2195,6 +2546,19 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetUShortValue
   nameWithType: IEnvReader.GetUShortValue
+- uid: DotEnv.Core.IEnvReader.HasValue(System.String)
+  name: HasValue(String)
+  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_HasValue_System_String_
+  commentId: M:DotEnv.Core.IEnvReader.HasValue(System.String)
+  fullName: DotEnv.Core.IEnvReader.HasValue(System.String)
+  nameWithType: IEnvReader.HasValue(String)
+- uid: DotEnv.Core.IEnvReader.HasValue*
+  name: HasValue
+  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_HasValue_
+  commentId: Overload:DotEnv.Core.IEnvReader.HasValue
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvReader.HasValue
+  nameWithType: IEnvReader.HasValue
 - uid: DotEnv.Core.IEnvReader.Item(System.String)
   name: Item[String]
   href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_Item_System_String_
@@ -2435,21 +2799,96 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetUShortValue
   nameWithType: IEnvReader.TryGetUShortValue
+- uid: DotEnv.Core.IEnvValidator
+  name: IEnvValidator
+  href: api/DotEnv.Core.IEnvValidator.html
+  commentId: T:DotEnv.Core.IEnvValidator
+  fullName: DotEnv.Core.IEnvValidator
+  nameWithType: IEnvValidator
+- uid: DotEnv.Core.IEnvValidator.IgnoreException
+  name: IgnoreException()
+  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_IgnoreException
+  commentId: M:DotEnv.Core.IEnvValidator.IgnoreException
+  fullName: DotEnv.Core.IEnvValidator.IgnoreException()
+  nameWithType: IEnvValidator.IgnoreException()
+- uid: DotEnv.Core.IEnvValidator.IgnoreException*
+  name: IgnoreException
+  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_IgnoreException_
+  commentId: Overload:DotEnv.Core.IEnvValidator.IgnoreException
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvValidator.IgnoreException
+  nameWithType: IEnvValidator.IgnoreException
+- uid: DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String[])
+  name: SetRequiredKeys(String[])
+  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_System_String___
+  commentId: M:DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String[])
+  name.vb: SetRequiredKeys(String())
+  fullName: DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String[])
+  fullName.vb: DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String())
+  nameWithType: IEnvValidator.SetRequiredKeys(String[])
+  nameWithType.vb: IEnvValidator.SetRequiredKeys(String())
+- uid: DotEnv.Core.IEnvValidator.SetRequiredKeys(System.Type)
+  name: SetRequiredKeys(Type)
+  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_System_Type_
+  commentId: M:DotEnv.Core.IEnvValidator.SetRequiredKeys(System.Type)
+  fullName: DotEnv.Core.IEnvValidator.SetRequiredKeys(System.Type)
+  nameWithType: IEnvValidator.SetRequiredKeys(Type)
+- uid: DotEnv.Core.IEnvValidator.SetRequiredKeys*
+  name: SetRequiredKeys
+  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_
+  commentId: Overload:DotEnv.Core.IEnvValidator.SetRequiredKeys
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvValidator.SetRequiredKeys
+  nameWithType: IEnvValidator.SetRequiredKeys
+- uid: DotEnv.Core.IEnvValidator.SetRequiredKeys``1
+  name: SetRequiredKeys<TKeys>()
+  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_SetRequiredKeys__1
+  commentId: M:DotEnv.Core.IEnvValidator.SetRequiredKeys``1
+  name.vb: SetRequiredKeys(Of TKeys)()
+  fullName: DotEnv.Core.IEnvValidator.SetRequiredKeys<TKeys>()
+  fullName.vb: DotEnv.Core.IEnvValidator.SetRequiredKeys(Of TKeys)()
+  nameWithType: IEnvValidator.SetRequiredKeys<TKeys>()
+  nameWithType.vb: IEnvValidator.SetRequiredKeys(Of TKeys)()
+- uid: DotEnv.Core.IEnvValidator.Validate
+  name: Validate()
+  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_Validate
+  commentId: M:DotEnv.Core.IEnvValidator.Validate
+  fullName: DotEnv.Core.IEnvValidator.Validate()
+  nameWithType: IEnvValidator.Validate()
+- uid: DotEnv.Core.IEnvValidator.Validate(DotEnv.Core.EnvValidationResult@)
+  name: Validate(out EnvValidationResult)
+  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_Validate_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.IEnvValidator.Validate(DotEnv.Core.EnvValidationResult@)
+  name.vb: Validate(ByRef EnvValidationResult)
+  fullName: DotEnv.Core.IEnvValidator.Validate(out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.IEnvValidator.Validate(ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: IEnvValidator.Validate(out EnvValidationResult)
+  nameWithType.vb: IEnvValidator.Validate(ByRef EnvValidationResult)
+- uid: DotEnv.Core.IEnvValidator.Validate*
+  name: Validate
+  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_Validate_
+  commentId: Overload:DotEnv.Core.IEnvValidator.Validate
+  isSpec: "True"
+  fullName: DotEnv.Core.IEnvValidator.Validate
+  nameWithType: IEnvValidator.Validate
 - uid: DotEnv.Core.ParserException
   name: ParserException
   href: api/DotEnv.Core.ParserException.html
   commentId: T:DotEnv.Core.ParserException
   fullName: DotEnv.Core.ParserException
   nameWithType: ParserException
-- uid: DotEnv.Core.ParserException.#ctor(System.String,System.Object,System.Nullable{System.Int32})
-  name: ParserException(String, Object, Nullable<Int32>)
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException__ctor_System_String_System_Object_System_Nullable_System_Int32__
-  commentId: M:DotEnv.Core.ParserException.#ctor(System.String,System.Object,System.Nullable{System.Int32})
-  name.vb: ParserException(String, Object, Nullable(Of Int32))
-  fullName: DotEnv.Core.ParserException.ParserException(System.String, System.Object, System.Nullable<System.Int32>)
-  fullName.vb: DotEnv.Core.ParserException.ParserException(System.String, System.Object, System.Nullable(Of System.Int32))
-  nameWithType: ParserException.ParserException(String, Object, Nullable<Int32>)
-  nameWithType.vb: ParserException.ParserException(String, Object, Nullable(Of Int32))
+- uid: DotEnv.Core.ParserException.#ctor
+  name: ParserException()
+  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException__ctor
+  commentId: M:DotEnv.Core.ParserException.#ctor
+  fullName: DotEnv.Core.ParserException.ParserException()
+  nameWithType: ParserException.ParserException()
+- uid: DotEnv.Core.ParserException.#ctor(System.String)
+  name: ParserException(String)
+  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException__ctor_System_String_
+  commentId: M:DotEnv.Core.ParserException.#ctor(System.String)
+  fullName: DotEnv.Core.ParserException.ParserException(System.String)
+  nameWithType: ParserException.ParserException(String)
 - uid: DotEnv.Core.ParserException.#ctor*
   name: ParserException
   href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException__ctor_
@@ -2457,42 +2896,59 @@ references:
   isSpec: "True"
   fullName: DotEnv.Core.ParserException.ParserException
   nameWithType: ParserException.ParserException
-- uid: DotEnv.Core.ParserException.ActualValue
-  name: ActualValue
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException_ActualValue
-  commentId: P:DotEnv.Core.ParserException.ActualValue
-  fullName: DotEnv.Core.ParserException.ActualValue
-  nameWithType: ParserException.ActualValue
-- uid: DotEnv.Core.ParserException.ActualValue*
-  name: ActualValue
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException_ActualValue_
-  commentId: Overload:DotEnv.Core.ParserException.ActualValue
+- uid: DotEnv.Core.RequiredKeysNotPresentException
+  name: RequiredKeysNotPresentException
+  href: api/DotEnv.Core.RequiredKeysNotPresentException.html
+  commentId: T:DotEnv.Core.RequiredKeysNotPresentException
+  fullName: DotEnv.Core.RequiredKeysNotPresentException
+  nameWithType: RequiredKeysNotPresentException
+- uid: DotEnv.Core.RequiredKeysNotPresentException.#ctor
+  name: RequiredKeysNotPresentException()
+  href: api/DotEnv.Core.RequiredKeysNotPresentException.html#DotEnv_Core_RequiredKeysNotPresentException__ctor
+  commentId: M:DotEnv.Core.RequiredKeysNotPresentException.#ctor
+  fullName: DotEnv.Core.RequiredKeysNotPresentException.RequiredKeysNotPresentException()
+  nameWithType: RequiredKeysNotPresentException.RequiredKeysNotPresentException()
+- uid: DotEnv.Core.RequiredKeysNotPresentException.#ctor(System.String)
+  name: RequiredKeysNotPresentException(String)
+  href: api/DotEnv.Core.RequiredKeysNotPresentException.html#DotEnv_Core_RequiredKeysNotPresentException__ctor_System_String_
+  commentId: M:DotEnv.Core.RequiredKeysNotPresentException.#ctor(System.String)
+  fullName: DotEnv.Core.RequiredKeysNotPresentException.RequiredKeysNotPresentException(System.String)
+  nameWithType: RequiredKeysNotPresentException.RequiredKeysNotPresentException(String)
+- uid: DotEnv.Core.RequiredKeysNotPresentException.#ctor*
+  name: RequiredKeysNotPresentException
+  href: api/DotEnv.Core.RequiredKeysNotPresentException.html#DotEnv_Core_RequiredKeysNotPresentException__ctor_
+  commentId: Overload:DotEnv.Core.RequiredKeysNotPresentException.#ctor
   isSpec: "True"
-  fullName: DotEnv.Core.ParserException.ActualValue
-  nameWithType: ParserException.ActualValue
-- uid: DotEnv.Core.ParserException.CurrentLine
-  name: CurrentLine
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException_CurrentLine
-  commentId: P:DotEnv.Core.ParserException.CurrentLine
-  fullName: DotEnv.Core.ParserException.CurrentLine
-  nameWithType: ParserException.CurrentLine
-- uid: DotEnv.Core.ParserException.CurrentLine*
-  name: CurrentLine
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException_CurrentLine_
-  commentId: Overload:DotEnv.Core.ParserException.CurrentLine
+  fullName: DotEnv.Core.RequiredKeysNotPresentException.RequiredKeysNotPresentException
+  nameWithType: RequiredKeysNotPresentException.RequiredKeysNotPresentException
+- uid: DotEnv.Core.VariableNotSetException
+  name: VariableNotSetException
+  href: api/DotEnv.Core.VariableNotSetException.html
+  commentId: T:DotEnv.Core.VariableNotSetException
+  fullName: DotEnv.Core.VariableNotSetException
+  nameWithType: VariableNotSetException
+- uid: DotEnv.Core.VariableNotSetException.#ctor
+  name: VariableNotSetException()
+  href: api/DotEnv.Core.VariableNotSetException.html#DotEnv_Core_VariableNotSetException__ctor
+  commentId: M:DotEnv.Core.VariableNotSetException.#ctor
+  fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException()
+  nameWithType: VariableNotSetException.VariableNotSetException()
+- uid: DotEnv.Core.VariableNotSetException.#ctor(System.String)
+  name: VariableNotSetException(String)
+  href: api/DotEnv.Core.VariableNotSetException.html#DotEnv_Core_VariableNotSetException__ctor_System_String_
+  commentId: M:DotEnv.Core.VariableNotSetException.#ctor(System.String)
+  fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException(System.String)
+  nameWithType: VariableNotSetException.VariableNotSetException(String)
+- uid: DotEnv.Core.VariableNotSetException.#ctor(System.String,System.String)
+  name: VariableNotSetException(String, String)
+  href: api/DotEnv.Core.VariableNotSetException.html#DotEnv_Core_VariableNotSetException__ctor_System_String_System_String_
+  commentId: M:DotEnv.Core.VariableNotSetException.#ctor(System.String,System.String)
+  fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException(System.String, System.String)
+  nameWithType: VariableNotSetException.VariableNotSetException(String, String)
+- uid: DotEnv.Core.VariableNotSetException.#ctor*
+  name: VariableNotSetException
+  href: api/DotEnv.Core.VariableNotSetException.html#DotEnv_Core_VariableNotSetException__ctor_
+  commentId: Overload:DotEnv.Core.VariableNotSetException.#ctor
   isSpec: "True"
-  fullName: DotEnv.Core.ParserException.CurrentLine
-  nameWithType: ParserException.CurrentLine
-- uid: DotEnv.Core.ParserException.Message
-  name: Message
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException_Message
-  commentId: P:DotEnv.Core.ParserException.Message
-  fullName: DotEnv.Core.ParserException.Message
-  nameWithType: ParserException.Message
-- uid: DotEnv.Core.ParserException.Message*
-  name: Message
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException_Message_
-  commentId: Overload:DotEnv.Core.ParserException.Message
-  isSpec: "True"
-  fullName: DotEnv.Core.ParserException.Message
-  nameWithType: ParserException.Message
+  fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException
+  nameWithType: VariableNotSetException.VariableNotSetException
