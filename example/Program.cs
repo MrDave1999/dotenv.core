@@ -51,10 +51,11 @@ namespace DotEnv.Core.Example
 			Console.WriteLine("\n\n\n");
 
 			Console.WriteLine("---- EXAMPLE (6):");
+			EnvValidationResult result;
 			new EnvLoader()
 				.IgnoreParserException()
 				.SetDefaultEnvFileName("./files/.env.local")
-				.Load(out var result);
+				.Load(out result);
 
 			Console.WriteLine($"API_KEY LENGTH={reader["API_KEY"].Length}");
 			Console.WriteLine(result.ErrorMessages);
