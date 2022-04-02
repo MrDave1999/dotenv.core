@@ -33,80 +33,74 @@ references:
   nameWithType: Env
 - uid: DotEnv.Core.Env.CurrentEnvironment
   name: CurrentEnvironment
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_CurrentEnvironment
+  href: api/DotEnv.Core.Env.CurrentEnvironment.html#DotEnv_Core_Env_CurrentEnvironment
   commentId: P:DotEnv.Core.Env.CurrentEnvironment
   fullName: DotEnv.Core.Env.CurrentEnvironment
   nameWithType: Env.CurrentEnvironment
 - uid: DotEnv.Core.Env.CurrentEnvironment*
   name: CurrentEnvironment
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_CurrentEnvironment_
+  href: api/DotEnv.Core.Env.CurrentEnvironment.html
   commentId: Overload:DotEnv.Core.Env.CurrentEnvironment
-  isSpec: "True"
   fullName: DotEnv.Core.Env.CurrentEnvironment
   nameWithType: Env.CurrentEnvironment
 - uid: DotEnv.Core.Env.IsDevelopment
   name: IsDevelopment()
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsDevelopment
+  href: api/DotEnv.Core.Env.IsDevelopment.html#DotEnv_Core_Env_IsDevelopment
   commentId: M:DotEnv.Core.Env.IsDevelopment
   fullName: DotEnv.Core.Env.IsDevelopment()
   nameWithType: Env.IsDevelopment()
 - uid: DotEnv.Core.Env.IsDevelopment*
   name: IsDevelopment
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsDevelopment_
+  href: api/DotEnv.Core.Env.IsDevelopment.html
   commentId: Overload:DotEnv.Core.Env.IsDevelopment
-  isSpec: "True"
   fullName: DotEnv.Core.Env.IsDevelopment
   nameWithType: Env.IsDevelopment
 - uid: DotEnv.Core.Env.IsEnvironment(System.String)
   name: IsEnvironment(String)
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsEnvironment_System_String_
+  href: api/DotEnv.Core.Env.IsEnvironment.html#DotEnv_Core_Env_IsEnvironment_System_String_
   commentId: M:DotEnv.Core.Env.IsEnvironment(System.String)
   fullName: DotEnv.Core.Env.IsEnvironment(System.String)
   nameWithType: Env.IsEnvironment(String)
 - uid: DotEnv.Core.Env.IsEnvironment*
   name: IsEnvironment
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsEnvironment_
+  href: api/DotEnv.Core.Env.IsEnvironment.html
   commentId: Overload:DotEnv.Core.Env.IsEnvironment
-  isSpec: "True"
   fullName: DotEnv.Core.Env.IsEnvironment
   nameWithType: Env.IsEnvironment
 - uid: DotEnv.Core.Env.IsProduction
   name: IsProduction()
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsProduction
+  href: api/DotEnv.Core.Env.IsProduction.html#DotEnv_Core_Env_IsProduction
   commentId: M:DotEnv.Core.Env.IsProduction
   fullName: DotEnv.Core.Env.IsProduction()
   nameWithType: Env.IsProduction()
 - uid: DotEnv.Core.Env.IsProduction*
   name: IsProduction
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsProduction_
+  href: api/DotEnv.Core.Env.IsProduction.html
   commentId: Overload:DotEnv.Core.Env.IsProduction
-  isSpec: "True"
   fullName: DotEnv.Core.Env.IsProduction
   nameWithType: Env.IsProduction
 - uid: DotEnv.Core.Env.IsStaging
   name: IsStaging()
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsStaging
+  href: api/DotEnv.Core.Env.IsStaging.html#DotEnv_Core_Env_IsStaging
   commentId: M:DotEnv.Core.Env.IsStaging
   fullName: DotEnv.Core.Env.IsStaging()
   nameWithType: Env.IsStaging()
 - uid: DotEnv.Core.Env.IsStaging*
   name: IsStaging
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsStaging_
+  href: api/DotEnv.Core.Env.IsStaging.html
   commentId: Overload:DotEnv.Core.Env.IsStaging
-  isSpec: "True"
   fullName: DotEnv.Core.Env.IsStaging
   nameWithType: Env.IsStaging
 - uid: DotEnv.Core.Env.IsTest
   name: IsTest()
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsTest
+  href: api/DotEnv.Core.Env.IsTest.html#DotEnv_Core_Env_IsTest
   commentId: M:DotEnv.Core.Env.IsTest
   fullName: DotEnv.Core.Env.IsTest()
   nameWithType: Env.IsTest()
 - uid: DotEnv.Core.Env.IsTest*
   name: IsTest
-  href: api/DotEnv.Core.Env.html#DotEnv_Core_Env_IsTest_
+  href: api/DotEnv.Core.Env.IsTest.html
   commentId: Overload:DotEnv.Core.Env.IsTest
-  isSpec: "True"
   fullName: DotEnv.Core.Env.IsTest
   nameWithType: Env.IsTest
 - uid: DotEnv.Core.EnvironmentVariablesProviderExtensions
@@ -117,41 +111,38 @@ references:
   nameWithType: EnvironmentVariablesProviderExtensions
 - uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader(DotEnv.Core.IEnvironmentVariablesProvider)
   name: CreateReader(IEnvironmentVariablesProvider)
-  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateReader_DotEnv_Core_IEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateReader_DotEnv_Core_IEnvironmentVariablesProvider_
   commentId: M:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader(DotEnv.Core.IEnvironmentVariablesProvider)
   fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader(DotEnv.Core.IEnvironmentVariablesProvider)
   nameWithType: EnvironmentVariablesProviderExtensions.CreateReader(IEnvironmentVariablesProvider)
 - uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader*
   name: CreateReader
-  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateReader_
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader.html
   commentId: Overload:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader
-  isSpec: "True"
   fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader
   nameWithType: EnvironmentVariablesProviderExtensions.CreateReader
 - uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator(DotEnv.Core.IEnvironmentVariablesProvider)
   name: CreateValidator(IEnvironmentVariablesProvider)
-  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateValidator_DotEnv_Core_IEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateValidator_DotEnv_Core_IEnvironmentVariablesProvider_
   commentId: M:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator(DotEnv.Core.IEnvironmentVariablesProvider)
   fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator(DotEnv.Core.IEnvironmentVariablesProvider)
   nameWithType: EnvironmentVariablesProviderExtensions.CreateValidator(IEnvironmentVariablesProvider)
 - uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator*
   name: CreateValidator
-  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateValidator_
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator.html
   commentId: Overload:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator
-  isSpec: "True"
   fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator
   nameWithType: EnvironmentVariablesProviderExtensions.CreateValidator
 - uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary(DotEnv.Core.IEnvironmentVariablesProvider)
   name: ToDictionary(IEnvironmentVariablesProvider)
-  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_ToDictionary_DotEnv_Core_IEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_ToDictionary_DotEnv_Core_IEnvironmentVariablesProvider_
   commentId: M:DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary(DotEnv.Core.IEnvironmentVariablesProvider)
   fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary(DotEnv.Core.IEnvironmentVariablesProvider)
   nameWithType: EnvironmentVariablesProviderExtensions.ToDictionary(IEnvironmentVariablesProvider)
 - uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary*
   name: ToDictionary
-  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_ToDictionary_
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary.html
   commentId: Overload:DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary
-  isSpec: "True"
   fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary
   nameWithType: EnvironmentVariablesProviderExtensions.ToDictionary
 - uid: DotEnv.Core.EnvLoader
@@ -162,50 +153,49 @@ references:
   nameWithType: EnvLoader
 - uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String)
   name: AddEnvFile(String)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_
+  href: api/DotEnv.Core.EnvLoader.AddEnvFile.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_
   commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String)
   fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String)
   nameWithType: EnvLoader.AddEnvFile(String)
 - uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Boolean)
   name: AddEnvFile(String, Boolean)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_Boolean_
+  href: api/DotEnv.Core.EnvLoader.AddEnvFile.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_Boolean_
   commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Boolean)
   fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.Boolean)
   nameWithType: EnvLoader.AddEnvFile(String, Boolean)
 - uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.String)
   name: AddEnvFile(String, String)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_String_
+  href: api/DotEnv.Core.EnvLoader.AddEnvFile.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_String_
   commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.String)
   fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.String)
   nameWithType: EnvLoader.AddEnvFile(String, String)
 - uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.String,System.Boolean)
   name: AddEnvFile(String, String, Boolean)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_String_System_Boolean_
+  href: api/DotEnv.Core.EnvLoader.AddEnvFile.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_String_System_Boolean_
   commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.String,System.Boolean)
   fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.String, System.Boolean)
   nameWithType: EnvLoader.AddEnvFile(String, String, Boolean)
 - uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Text.Encoding)
   name: AddEnvFile(String, Encoding)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_Text_Encoding_
+  href: api/DotEnv.Core.EnvLoader.AddEnvFile.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_Text_Encoding_
   commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Text.Encoding)
   fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.Text.Encoding)
   nameWithType: EnvLoader.AddEnvFile(String, Encoding)
 - uid: DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Text.Encoding,System.Boolean)
   name: AddEnvFile(String, Encoding, Boolean)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_Text_Encoding_System_Boolean_
+  href: api/DotEnv.Core.EnvLoader.AddEnvFile.html#DotEnv_Core_EnvLoader_AddEnvFile_System_String_System_Text_Encoding_System_Boolean_
   commentId: M:DotEnv.Core.EnvLoader.AddEnvFile(System.String,System.Text.Encoding,System.Boolean)
   fullName: DotEnv.Core.EnvLoader.AddEnvFile(System.String, System.Text.Encoding, System.Boolean)
   nameWithType: EnvLoader.AddEnvFile(String, Encoding, Boolean)
 - uid: DotEnv.Core.EnvLoader.AddEnvFile*
   name: AddEnvFile
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFile_
+  href: api/DotEnv.Core.EnvLoader.AddEnvFile.html
   commentId: Overload:DotEnv.Core.EnvLoader.AddEnvFile
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.AddEnvFile
   nameWithType: EnvLoader.AddEnvFile
 - uid: DotEnv.Core.EnvLoader.AddEnvFiles(System.String[])
   name: AddEnvFiles(String[])
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFiles_System_String___
+  href: api/DotEnv.Core.EnvLoader.AddEnvFiles.html#DotEnv_Core_EnvLoader_AddEnvFiles_System_String___
   commentId: M:DotEnv.Core.EnvLoader.AddEnvFiles(System.String[])
   name.vb: AddEnvFiles(String())
   fullName: DotEnv.Core.EnvLoader.AddEnvFiles(System.String[])
@@ -214,202 +204,187 @@ references:
   nameWithType.vb: EnvLoader.AddEnvFiles(String())
 - uid: DotEnv.Core.EnvLoader.AddEnvFiles*
   name: AddEnvFiles
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AddEnvFiles_
+  href: api/DotEnv.Core.EnvLoader.AddEnvFiles.html
   commentId: Overload:DotEnv.Core.EnvLoader.AddEnvFiles
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.AddEnvFiles
   nameWithType: EnvLoader.AddEnvFiles
 - uid: DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional
   name: AllowAllEnvFilesOptional()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AllowAllEnvFilesOptional
+  href: api/DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional.html#DotEnv_Core_EnvLoader_AllowAllEnvFilesOptional
   commentId: M:DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional
   fullName: DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional()
   nameWithType: EnvLoader.AllowAllEnvFilesOptional()
 - uid: DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional*
   name: AllowAllEnvFilesOptional
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AllowAllEnvFilesOptional_
+  href: api/DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional.html
   commentId: Overload:DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional
   nameWithType: EnvLoader.AllowAllEnvFilesOptional
 - uid: DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   name: AllowConcatDuplicateKeys(ConcatKeysOptions)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
+  href: api/DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys.html#DotEnv_Core_EnvLoader_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
   commentId: M:DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   fullName: DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   nameWithType: EnvLoader.AllowConcatDuplicateKeys(ConcatKeysOptions)
 - uid: DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys*
   name: AllowConcatDuplicateKeys
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AllowConcatDuplicateKeys_
+  href: api/DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys.html
   commentId: Overload:DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys
   nameWithType: EnvLoader.AllowConcatDuplicateKeys
 - uid: DotEnv.Core.EnvLoader.AllowOverwriteExistingVars
   name: AllowOverwriteExistingVars()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AllowOverwriteExistingVars
+  href: api/DotEnv.Core.EnvLoader.AllowOverwriteExistingVars.html#DotEnv_Core_EnvLoader_AllowOverwriteExistingVars
   commentId: M:DotEnv.Core.EnvLoader.AllowOverwriteExistingVars
   fullName: DotEnv.Core.EnvLoader.AllowOverwriteExistingVars()
   nameWithType: EnvLoader.AllowOverwriteExistingVars()
 - uid: DotEnv.Core.EnvLoader.AllowOverwriteExistingVars*
   name: AllowOverwriteExistingVars
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AllowOverwriteExistingVars_
+  href: api/DotEnv.Core.EnvLoader.AllowOverwriteExistingVars.html
   commentId: Overload:DotEnv.Core.EnvLoader.AllowOverwriteExistingVars
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.AllowOverwriteExistingVars
   nameWithType: EnvLoader.AllowOverwriteExistingVars
 - uid: DotEnv.Core.EnvLoader.AvoidModifyEnvironment
   name: AvoidModifyEnvironment()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AvoidModifyEnvironment
+  href: api/DotEnv.Core.EnvLoader.AvoidModifyEnvironment.html#DotEnv_Core_EnvLoader_AvoidModifyEnvironment
   commentId: M:DotEnv.Core.EnvLoader.AvoidModifyEnvironment
   fullName: DotEnv.Core.EnvLoader.AvoidModifyEnvironment()
   nameWithType: EnvLoader.AvoidModifyEnvironment()
 - uid: DotEnv.Core.EnvLoader.AvoidModifyEnvironment*
   name: AvoidModifyEnvironment
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_AvoidModifyEnvironment_
+  href: api/DotEnv.Core.EnvLoader.AvoidModifyEnvironment.html
   commentId: Overload:DotEnv.Core.EnvLoader.AvoidModifyEnvironment
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.AvoidModifyEnvironment
   nameWithType: EnvLoader.AvoidModifyEnvironment
 - uid: DotEnv.Core.EnvLoader.DisableTrimEndKeys
   name: DisableTrimEndKeys()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimEndKeys
+  href: api/DotEnv.Core.EnvLoader.DisableTrimEndKeys.html#DotEnv_Core_EnvLoader_DisableTrimEndKeys
   commentId: M:DotEnv.Core.EnvLoader.DisableTrimEndKeys
   fullName: DotEnv.Core.EnvLoader.DisableTrimEndKeys()
   nameWithType: EnvLoader.DisableTrimEndKeys()
 - uid: DotEnv.Core.EnvLoader.DisableTrimEndKeys*
   name: DisableTrimEndKeys
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimEndKeys_
+  href: api/DotEnv.Core.EnvLoader.DisableTrimEndKeys.html
   commentId: Overload:DotEnv.Core.EnvLoader.DisableTrimEndKeys
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.DisableTrimEndKeys
   nameWithType: EnvLoader.DisableTrimEndKeys
 - uid: DotEnv.Core.EnvLoader.DisableTrimEndValues
   name: DisableTrimEndValues()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimEndValues
+  href: api/DotEnv.Core.EnvLoader.DisableTrimEndValues.html#DotEnv_Core_EnvLoader_DisableTrimEndValues
   commentId: M:DotEnv.Core.EnvLoader.DisableTrimEndValues
   fullName: DotEnv.Core.EnvLoader.DisableTrimEndValues()
   nameWithType: EnvLoader.DisableTrimEndValues()
 - uid: DotEnv.Core.EnvLoader.DisableTrimEndValues*
   name: DisableTrimEndValues
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimEndValues_
+  href: api/DotEnv.Core.EnvLoader.DisableTrimEndValues.html
   commentId: Overload:DotEnv.Core.EnvLoader.DisableTrimEndValues
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.DisableTrimEndValues
   nameWithType: EnvLoader.DisableTrimEndValues
 - uid: DotEnv.Core.EnvLoader.DisableTrimKeys
   name: DisableTrimKeys()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimKeys
+  href: api/DotEnv.Core.EnvLoader.DisableTrimKeys.html#DotEnv_Core_EnvLoader_DisableTrimKeys
   commentId: M:DotEnv.Core.EnvLoader.DisableTrimKeys
   fullName: DotEnv.Core.EnvLoader.DisableTrimKeys()
   nameWithType: EnvLoader.DisableTrimKeys()
 - uid: DotEnv.Core.EnvLoader.DisableTrimKeys*
   name: DisableTrimKeys
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimKeys_
+  href: api/DotEnv.Core.EnvLoader.DisableTrimKeys.html
   commentId: Overload:DotEnv.Core.EnvLoader.DisableTrimKeys
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.DisableTrimKeys
   nameWithType: EnvLoader.DisableTrimKeys
 - uid: DotEnv.Core.EnvLoader.DisableTrimStartComments
   name: DisableTrimStartComments()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimStartComments
+  href: api/DotEnv.Core.EnvLoader.DisableTrimStartComments.html#DotEnv_Core_EnvLoader_DisableTrimStartComments
   commentId: M:DotEnv.Core.EnvLoader.DisableTrimStartComments
   fullName: DotEnv.Core.EnvLoader.DisableTrimStartComments()
   nameWithType: EnvLoader.DisableTrimStartComments()
 - uid: DotEnv.Core.EnvLoader.DisableTrimStartComments*
   name: DisableTrimStartComments
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimStartComments_
+  href: api/DotEnv.Core.EnvLoader.DisableTrimStartComments.html
   commentId: Overload:DotEnv.Core.EnvLoader.DisableTrimStartComments
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.DisableTrimStartComments
   nameWithType: EnvLoader.DisableTrimStartComments
 - uid: DotEnv.Core.EnvLoader.DisableTrimStartKeys
   name: DisableTrimStartKeys()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimStartKeys
+  href: api/DotEnv.Core.EnvLoader.DisableTrimStartKeys.html#DotEnv_Core_EnvLoader_DisableTrimStartKeys
   commentId: M:DotEnv.Core.EnvLoader.DisableTrimStartKeys
   fullName: DotEnv.Core.EnvLoader.DisableTrimStartKeys()
   nameWithType: EnvLoader.DisableTrimStartKeys()
 - uid: DotEnv.Core.EnvLoader.DisableTrimStartKeys*
   name: DisableTrimStartKeys
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimStartKeys_
+  href: api/DotEnv.Core.EnvLoader.DisableTrimStartKeys.html
   commentId: Overload:DotEnv.Core.EnvLoader.DisableTrimStartKeys
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.DisableTrimStartKeys
   nameWithType: EnvLoader.DisableTrimStartKeys
 - uid: DotEnv.Core.EnvLoader.DisableTrimStartValues
   name: DisableTrimStartValues()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimStartValues
+  href: api/DotEnv.Core.EnvLoader.DisableTrimStartValues.html#DotEnv_Core_EnvLoader_DisableTrimStartValues
   commentId: M:DotEnv.Core.EnvLoader.DisableTrimStartValues
   fullName: DotEnv.Core.EnvLoader.DisableTrimStartValues()
   nameWithType: EnvLoader.DisableTrimStartValues()
 - uid: DotEnv.Core.EnvLoader.DisableTrimStartValues*
   name: DisableTrimStartValues
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimStartValues_
+  href: api/DotEnv.Core.EnvLoader.DisableTrimStartValues.html
   commentId: Overload:DotEnv.Core.EnvLoader.DisableTrimStartValues
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.DisableTrimStartValues
   nameWithType: EnvLoader.DisableTrimStartValues
 - uid: DotEnv.Core.EnvLoader.DisableTrimValues
   name: DisableTrimValues()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimValues
+  href: api/DotEnv.Core.EnvLoader.DisableTrimValues.html#DotEnv_Core_EnvLoader_DisableTrimValues
   commentId: M:DotEnv.Core.EnvLoader.DisableTrimValues
   fullName: DotEnv.Core.EnvLoader.DisableTrimValues()
   nameWithType: EnvLoader.DisableTrimValues()
 - uid: DotEnv.Core.EnvLoader.DisableTrimValues*
   name: DisableTrimValues
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_DisableTrimValues_
+  href: api/DotEnv.Core.EnvLoader.DisableTrimValues.html
   commentId: Overload:DotEnv.Core.EnvLoader.DisableTrimValues
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.DisableTrimValues
   nameWithType: EnvLoader.DisableTrimValues
 - uid: DotEnv.Core.EnvLoader.EnableFileNotFoundException
   name: EnableFileNotFoundException()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_EnableFileNotFoundException
+  href: api/DotEnv.Core.EnvLoader.EnableFileNotFoundException.html#DotEnv_Core_EnvLoader_EnableFileNotFoundException
   commentId: M:DotEnv.Core.EnvLoader.EnableFileNotFoundException
   fullName: DotEnv.Core.EnvLoader.EnableFileNotFoundException()
   nameWithType: EnvLoader.EnableFileNotFoundException()
 - uid: DotEnv.Core.EnvLoader.EnableFileNotFoundException*
   name: EnableFileNotFoundException
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_EnableFileNotFoundException_
+  href: api/DotEnv.Core.EnvLoader.EnableFileNotFoundException.html
   commentId: Overload:DotEnv.Core.EnvLoader.EnableFileNotFoundException
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.EnableFileNotFoundException
   nameWithType: EnvLoader.EnableFileNotFoundException
 - uid: DotEnv.Core.EnvLoader.IgnoreParentDirectories
   name: IgnoreParentDirectories()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParentDirectories
+  href: api/DotEnv.Core.EnvLoader.IgnoreParentDirectories.html#DotEnv_Core_EnvLoader_IgnoreParentDirectories
   commentId: M:DotEnv.Core.EnvLoader.IgnoreParentDirectories
   fullName: DotEnv.Core.EnvLoader.IgnoreParentDirectories()
   nameWithType: EnvLoader.IgnoreParentDirectories()
 - uid: DotEnv.Core.EnvLoader.IgnoreParentDirectories*
   name: IgnoreParentDirectories
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParentDirectories_
+  href: api/DotEnv.Core.EnvLoader.IgnoreParentDirectories.html
   commentId: Overload:DotEnv.Core.EnvLoader.IgnoreParentDirectories
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.IgnoreParentDirectories
   nameWithType: EnvLoader.IgnoreParentDirectories
 - uid: DotEnv.Core.EnvLoader.IgnoreParserException
   name: IgnoreParserException()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParserException
+  href: api/DotEnv.Core.EnvLoader.IgnoreParserException.html#DotEnv_Core_EnvLoader_IgnoreParserException
   commentId: M:DotEnv.Core.EnvLoader.IgnoreParserException
   fullName: DotEnv.Core.EnvLoader.IgnoreParserException()
   nameWithType: EnvLoader.IgnoreParserException()
 - uid: DotEnv.Core.EnvLoader.IgnoreParserException*
   name: IgnoreParserException
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_IgnoreParserException_
+  href: api/DotEnv.Core.EnvLoader.IgnoreParserException.html
   commentId: Overload:DotEnv.Core.EnvLoader.IgnoreParserException
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.IgnoreParserException
   nameWithType: EnvLoader.IgnoreParserException
 - uid: DotEnv.Core.EnvLoader.Load
   name: Load()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_Load
+  href: api/DotEnv.Core.EnvLoader.Load.html#DotEnv_Core_EnvLoader_Load
   commentId: M:DotEnv.Core.EnvLoader.Load
   fullName: DotEnv.Core.EnvLoader.Load()
   nameWithType: EnvLoader.Load()
 - uid: DotEnv.Core.EnvLoader.Load(DotEnv.Core.EnvValidationResult@)
   name: Load(out EnvValidationResult)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_Load_DotEnv_Core_EnvValidationResult__
+  href: api/DotEnv.Core.EnvLoader.Load.html#DotEnv_Core_EnvLoader_Load_DotEnv_Core_EnvValidationResult__
   commentId: M:DotEnv.Core.EnvLoader.Load(DotEnv.Core.EnvValidationResult@)
   name.vb: Load(ByRef EnvValidationResult)
   fullName: DotEnv.Core.EnvLoader.Load(out DotEnv.Core.EnvValidationResult)
@@ -418,20 +393,19 @@ references:
   nameWithType.vb: EnvLoader.Load(ByRef EnvValidationResult)
 - uid: DotEnv.Core.EnvLoader.Load*
   name: Load
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_Load_
+  href: api/DotEnv.Core.EnvLoader.Load.html
   commentId: Overload:DotEnv.Core.EnvLoader.Load
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.Load
   nameWithType: EnvLoader.Load
 - uid: DotEnv.Core.EnvLoader.LoadEnv
   name: LoadEnv()
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_LoadEnv
+  href: api/DotEnv.Core.EnvLoader.LoadEnv.html#DotEnv_Core_EnvLoader_LoadEnv
   commentId: M:DotEnv.Core.EnvLoader.LoadEnv
   fullName: DotEnv.Core.EnvLoader.LoadEnv()
   nameWithType: EnvLoader.LoadEnv()
 - uid: DotEnv.Core.EnvLoader.LoadEnv(DotEnv.Core.EnvValidationResult@)
   name: LoadEnv(out EnvValidationResult)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_LoadEnv_DotEnv_Core_EnvValidationResult__
+  href: api/DotEnv.Core.EnvLoader.LoadEnv.html#DotEnv_Core_EnvLoader_LoadEnv_DotEnv_Core_EnvValidationResult__
   commentId: M:DotEnv.Core.EnvLoader.LoadEnv(DotEnv.Core.EnvValidationResult@)
   name.vb: LoadEnv(ByRef EnvValidationResult)
   fullName: DotEnv.Core.EnvLoader.LoadEnv(out DotEnv.Core.EnvValidationResult)
@@ -440,106 +414,98 @@ references:
   nameWithType.vb: EnvLoader.LoadEnv(ByRef EnvValidationResult)
 - uid: DotEnv.Core.EnvLoader.LoadEnv*
   name: LoadEnv
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_LoadEnv_
+  href: api/DotEnv.Core.EnvLoader.LoadEnv.html
   commentId: Overload:DotEnv.Core.EnvLoader.LoadEnv
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.LoadEnv
   nameWithType: EnvLoader.LoadEnv
 - uid: DotEnv.Core.EnvLoader.SetBasePath(System.String)
   name: SetBasePath(String)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetBasePath_System_String_
+  href: api/DotEnv.Core.EnvLoader.SetBasePath.html#DotEnv_Core_EnvLoader_SetBasePath_System_String_
   commentId: M:DotEnv.Core.EnvLoader.SetBasePath(System.String)
   fullName: DotEnv.Core.EnvLoader.SetBasePath(System.String)
   nameWithType: EnvLoader.SetBasePath(String)
 - uid: DotEnv.Core.EnvLoader.SetBasePath*
   name: SetBasePath
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetBasePath_
+  href: api/DotEnv.Core.EnvLoader.SetBasePath.html
   commentId: Overload:DotEnv.Core.EnvLoader.SetBasePath
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.SetBasePath
   nameWithType: EnvLoader.SetBasePath
 - uid: DotEnv.Core.EnvLoader.SetCommentChar(System.Char)
   name: SetCommentChar(Char)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetCommentChar_System_Char_
+  href: api/DotEnv.Core.EnvLoader.SetCommentChar.html#DotEnv_Core_EnvLoader_SetCommentChar_System_Char_
   commentId: M:DotEnv.Core.EnvLoader.SetCommentChar(System.Char)
   fullName: DotEnv.Core.EnvLoader.SetCommentChar(System.Char)
   nameWithType: EnvLoader.SetCommentChar(Char)
 - uid: DotEnv.Core.EnvLoader.SetCommentChar*
   name: SetCommentChar
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetCommentChar_
+  href: api/DotEnv.Core.EnvLoader.SetCommentChar.html
   commentId: Overload:DotEnv.Core.EnvLoader.SetCommentChar
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.SetCommentChar
   nameWithType: EnvLoader.SetCommentChar
 - uid: DotEnv.Core.EnvLoader.SetDefaultEnvFileName(System.String)
   name: SetDefaultEnvFileName(String)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetDefaultEnvFileName_System_String_
+  href: api/DotEnv.Core.EnvLoader.SetDefaultEnvFileName.html#DotEnv_Core_EnvLoader_SetDefaultEnvFileName_System_String_
   commentId: M:DotEnv.Core.EnvLoader.SetDefaultEnvFileName(System.String)
   fullName: DotEnv.Core.EnvLoader.SetDefaultEnvFileName(System.String)
   nameWithType: EnvLoader.SetDefaultEnvFileName(String)
 - uid: DotEnv.Core.EnvLoader.SetDefaultEnvFileName*
   name: SetDefaultEnvFileName
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetDefaultEnvFileName_
+  href: api/DotEnv.Core.EnvLoader.SetDefaultEnvFileName.html
   commentId: Overload:DotEnv.Core.EnvLoader.SetDefaultEnvFileName
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.SetDefaultEnvFileName
   nameWithType: EnvLoader.SetDefaultEnvFileName
 - uid: DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair(System.Char)
   name: SetDelimiterKeyValuePair(Char)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetDelimiterKeyValuePair_System_Char_
+  href: api/DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair.html#DotEnv_Core_EnvLoader_SetDelimiterKeyValuePair_System_Char_
   commentId: M:DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair(System.Char)
   fullName: DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair(System.Char)
   nameWithType: EnvLoader.SetDelimiterKeyValuePair(Char)
 - uid: DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair*
   name: SetDelimiterKeyValuePair
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetDelimiterKeyValuePair_
+  href: api/DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair.html
   commentId: Overload:DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair
   nameWithType: EnvLoader.SetDelimiterKeyValuePair
 - uid: DotEnv.Core.EnvLoader.SetEncoding(System.String)
   name: SetEncoding(String)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEncoding_System_String_
+  href: api/DotEnv.Core.EnvLoader.SetEncoding.html#DotEnv_Core_EnvLoader_SetEncoding_System_String_
   commentId: M:DotEnv.Core.EnvLoader.SetEncoding(System.String)
   fullName: DotEnv.Core.EnvLoader.SetEncoding(System.String)
   nameWithType: EnvLoader.SetEncoding(String)
 - uid: DotEnv.Core.EnvLoader.SetEncoding(System.Text.Encoding)
   name: SetEncoding(Encoding)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEncoding_System_Text_Encoding_
+  href: api/DotEnv.Core.EnvLoader.SetEncoding.html#DotEnv_Core_EnvLoader_SetEncoding_System_Text_Encoding_
   commentId: M:DotEnv.Core.EnvLoader.SetEncoding(System.Text.Encoding)
   fullName: DotEnv.Core.EnvLoader.SetEncoding(System.Text.Encoding)
   nameWithType: EnvLoader.SetEncoding(Encoding)
 - uid: DotEnv.Core.EnvLoader.SetEncoding*
   name: SetEncoding
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEncoding_
+  href: api/DotEnv.Core.EnvLoader.SetEncoding.html
   commentId: Overload:DotEnv.Core.EnvLoader.SetEncoding
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.SetEncoding
   nameWithType: EnvLoader.SetEncoding
 - uid: DotEnv.Core.EnvLoader.SetEnvironmentName(System.String)
   name: SetEnvironmentName(String)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEnvironmentName_System_String_
+  href: api/DotEnv.Core.EnvLoader.SetEnvironmentName.html#DotEnv_Core_EnvLoader_SetEnvironmentName_System_String_
   commentId: M:DotEnv.Core.EnvLoader.SetEnvironmentName(System.String)
   fullName: DotEnv.Core.EnvLoader.SetEnvironmentName(System.String)
   nameWithType: EnvLoader.SetEnvironmentName(String)
 - uid: DotEnv.Core.EnvLoader.SetEnvironmentName*
   name: SetEnvironmentName
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEnvironmentName_
+  href: api/DotEnv.Core.EnvLoader.SetEnvironmentName.html
   commentId: Overload:DotEnv.Core.EnvLoader.SetEnvironmentName
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.SetEnvironmentName
   nameWithType: EnvLoader.SetEnvironmentName
 - uid: DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   name: SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider.html#DotEnv_Core_EnvLoader_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
   commentId: M:DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   fullName: DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   nameWithType: EnvLoader.SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
 - uid: DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider*
   name: SetEnvironmentVariablesProvider
-  href: api/DotEnv.Core.EnvLoader.html#DotEnv_Core_EnvLoader_SetEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider.html
   commentId: Overload:DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider
-  isSpec: "True"
   fullName: DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider
   nameWithType: EnvLoader.SetEnvironmentVariablesProvider
 - uid: DotEnv.Core.EnvParser
@@ -550,156 +516,145 @@ references:
   nameWithType: EnvParser
 - uid: DotEnv.Core.EnvParser.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   name: AllowConcatDuplicateKeys(ConcatKeysOptions)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
+  href: api/DotEnv.Core.EnvParser.AllowConcatDuplicateKeys.html#DotEnv_Core_EnvParser_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
   commentId: M:DotEnv.Core.EnvParser.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   fullName: DotEnv.Core.EnvParser.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   nameWithType: EnvParser.AllowConcatDuplicateKeys(ConcatKeysOptions)
 - uid: DotEnv.Core.EnvParser.AllowConcatDuplicateKeys*
   name: AllowConcatDuplicateKeys
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_AllowConcatDuplicateKeys_
+  href: api/DotEnv.Core.EnvParser.AllowConcatDuplicateKeys.html
   commentId: Overload:DotEnv.Core.EnvParser.AllowConcatDuplicateKeys
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.AllowConcatDuplicateKeys
   nameWithType: EnvParser.AllowConcatDuplicateKeys
 - uid: DotEnv.Core.EnvParser.AllowOverwriteExistingVars
   name: AllowOverwriteExistingVars()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_AllowOverwriteExistingVars
+  href: api/DotEnv.Core.EnvParser.AllowOverwriteExistingVars.html#DotEnv_Core_EnvParser_AllowOverwriteExistingVars
   commentId: M:DotEnv.Core.EnvParser.AllowOverwriteExistingVars
   fullName: DotEnv.Core.EnvParser.AllowOverwriteExistingVars()
   nameWithType: EnvParser.AllowOverwriteExistingVars()
 - uid: DotEnv.Core.EnvParser.AllowOverwriteExistingVars*
   name: AllowOverwriteExistingVars
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_AllowOverwriteExistingVars_
+  href: api/DotEnv.Core.EnvParser.AllowOverwriteExistingVars.html
   commentId: Overload:DotEnv.Core.EnvParser.AllowOverwriteExistingVars
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.AllowOverwriteExistingVars
   nameWithType: EnvParser.AllowOverwriteExistingVars
 - uid: DotEnv.Core.EnvParser.AvoidModifyEnvironment
   name: AvoidModifyEnvironment()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_AvoidModifyEnvironment
+  href: api/DotEnv.Core.EnvParser.AvoidModifyEnvironment.html#DotEnv_Core_EnvParser_AvoidModifyEnvironment
   commentId: M:DotEnv.Core.EnvParser.AvoidModifyEnvironment
   fullName: DotEnv.Core.EnvParser.AvoidModifyEnvironment()
   nameWithType: EnvParser.AvoidModifyEnvironment()
 - uid: DotEnv.Core.EnvParser.AvoidModifyEnvironment*
   name: AvoidModifyEnvironment
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_AvoidModifyEnvironment_
+  href: api/DotEnv.Core.EnvParser.AvoidModifyEnvironment.html
   commentId: Overload:DotEnv.Core.EnvParser.AvoidModifyEnvironment
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.AvoidModifyEnvironment
   nameWithType: EnvParser.AvoidModifyEnvironment
 - uid: DotEnv.Core.EnvParser.DisableTrimEndKeys
   name: DisableTrimEndKeys()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimEndKeys
+  href: api/DotEnv.Core.EnvParser.DisableTrimEndKeys.html#DotEnv_Core_EnvParser_DisableTrimEndKeys
   commentId: M:DotEnv.Core.EnvParser.DisableTrimEndKeys
   fullName: DotEnv.Core.EnvParser.DisableTrimEndKeys()
   nameWithType: EnvParser.DisableTrimEndKeys()
 - uid: DotEnv.Core.EnvParser.DisableTrimEndKeys*
   name: DisableTrimEndKeys
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimEndKeys_
+  href: api/DotEnv.Core.EnvParser.DisableTrimEndKeys.html
   commentId: Overload:DotEnv.Core.EnvParser.DisableTrimEndKeys
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.DisableTrimEndKeys
   nameWithType: EnvParser.DisableTrimEndKeys
 - uid: DotEnv.Core.EnvParser.DisableTrimEndValues
   name: DisableTrimEndValues()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimEndValues
+  href: api/DotEnv.Core.EnvParser.DisableTrimEndValues.html#DotEnv_Core_EnvParser_DisableTrimEndValues
   commentId: M:DotEnv.Core.EnvParser.DisableTrimEndValues
   fullName: DotEnv.Core.EnvParser.DisableTrimEndValues()
   nameWithType: EnvParser.DisableTrimEndValues()
 - uid: DotEnv.Core.EnvParser.DisableTrimEndValues*
   name: DisableTrimEndValues
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimEndValues_
+  href: api/DotEnv.Core.EnvParser.DisableTrimEndValues.html
   commentId: Overload:DotEnv.Core.EnvParser.DisableTrimEndValues
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.DisableTrimEndValues
   nameWithType: EnvParser.DisableTrimEndValues
 - uid: DotEnv.Core.EnvParser.DisableTrimKeys
   name: DisableTrimKeys()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimKeys
+  href: api/DotEnv.Core.EnvParser.DisableTrimKeys.html#DotEnv_Core_EnvParser_DisableTrimKeys
   commentId: M:DotEnv.Core.EnvParser.DisableTrimKeys
   fullName: DotEnv.Core.EnvParser.DisableTrimKeys()
   nameWithType: EnvParser.DisableTrimKeys()
 - uid: DotEnv.Core.EnvParser.DisableTrimKeys*
   name: DisableTrimKeys
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimKeys_
+  href: api/DotEnv.Core.EnvParser.DisableTrimKeys.html
   commentId: Overload:DotEnv.Core.EnvParser.DisableTrimKeys
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.DisableTrimKeys
   nameWithType: EnvParser.DisableTrimKeys
 - uid: DotEnv.Core.EnvParser.DisableTrimStartComments
   name: DisableTrimStartComments()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimStartComments
+  href: api/DotEnv.Core.EnvParser.DisableTrimStartComments.html#DotEnv_Core_EnvParser_DisableTrimStartComments
   commentId: M:DotEnv.Core.EnvParser.DisableTrimStartComments
   fullName: DotEnv.Core.EnvParser.DisableTrimStartComments()
   nameWithType: EnvParser.DisableTrimStartComments()
 - uid: DotEnv.Core.EnvParser.DisableTrimStartComments*
   name: DisableTrimStartComments
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimStartComments_
+  href: api/DotEnv.Core.EnvParser.DisableTrimStartComments.html
   commentId: Overload:DotEnv.Core.EnvParser.DisableTrimStartComments
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.DisableTrimStartComments
   nameWithType: EnvParser.DisableTrimStartComments
 - uid: DotEnv.Core.EnvParser.DisableTrimStartKeys
   name: DisableTrimStartKeys()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimStartKeys
+  href: api/DotEnv.Core.EnvParser.DisableTrimStartKeys.html#DotEnv_Core_EnvParser_DisableTrimStartKeys
   commentId: M:DotEnv.Core.EnvParser.DisableTrimStartKeys
   fullName: DotEnv.Core.EnvParser.DisableTrimStartKeys()
   nameWithType: EnvParser.DisableTrimStartKeys()
 - uid: DotEnv.Core.EnvParser.DisableTrimStartKeys*
   name: DisableTrimStartKeys
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimStartKeys_
+  href: api/DotEnv.Core.EnvParser.DisableTrimStartKeys.html
   commentId: Overload:DotEnv.Core.EnvParser.DisableTrimStartKeys
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.DisableTrimStartKeys
   nameWithType: EnvParser.DisableTrimStartKeys
 - uid: DotEnv.Core.EnvParser.DisableTrimStartValues
   name: DisableTrimStartValues()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimStartValues
+  href: api/DotEnv.Core.EnvParser.DisableTrimStartValues.html#DotEnv_Core_EnvParser_DisableTrimStartValues
   commentId: M:DotEnv.Core.EnvParser.DisableTrimStartValues
   fullName: DotEnv.Core.EnvParser.DisableTrimStartValues()
   nameWithType: EnvParser.DisableTrimStartValues()
 - uid: DotEnv.Core.EnvParser.DisableTrimStartValues*
   name: DisableTrimStartValues
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimStartValues_
+  href: api/DotEnv.Core.EnvParser.DisableTrimStartValues.html
   commentId: Overload:DotEnv.Core.EnvParser.DisableTrimStartValues
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.DisableTrimStartValues
   nameWithType: EnvParser.DisableTrimStartValues
 - uid: DotEnv.Core.EnvParser.DisableTrimValues
   name: DisableTrimValues()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimValues
+  href: api/DotEnv.Core.EnvParser.DisableTrimValues.html#DotEnv_Core_EnvParser_DisableTrimValues
   commentId: M:DotEnv.Core.EnvParser.DisableTrimValues
   fullName: DotEnv.Core.EnvParser.DisableTrimValues()
   nameWithType: EnvParser.DisableTrimValues()
 - uid: DotEnv.Core.EnvParser.DisableTrimValues*
   name: DisableTrimValues
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_DisableTrimValues_
+  href: api/DotEnv.Core.EnvParser.DisableTrimValues.html
   commentId: Overload:DotEnv.Core.EnvParser.DisableTrimValues
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.DisableTrimValues
   nameWithType: EnvParser.DisableTrimValues
 - uid: DotEnv.Core.EnvParser.IgnoreParserException
   name: IgnoreParserException()
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_IgnoreParserException
+  href: api/DotEnv.Core.EnvParser.IgnoreParserException.html#DotEnv_Core_EnvParser_IgnoreParserException
   commentId: M:DotEnv.Core.EnvParser.IgnoreParserException
   fullName: DotEnv.Core.EnvParser.IgnoreParserException()
   nameWithType: EnvParser.IgnoreParserException()
 - uid: DotEnv.Core.EnvParser.IgnoreParserException*
   name: IgnoreParserException
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_IgnoreParserException_
+  href: api/DotEnv.Core.EnvParser.IgnoreParserException.html
   commentId: Overload:DotEnv.Core.EnvParser.IgnoreParserException
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.IgnoreParserException
   nameWithType: EnvParser.IgnoreParserException
 - uid: DotEnv.Core.EnvParser.Parse(System.String)
   name: Parse(String)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_Parse_System_String_
+  href: api/DotEnv.Core.EnvParser.Parse.html#DotEnv_Core_EnvParser_Parse_System_String_
   commentId: M:DotEnv.Core.EnvParser.Parse(System.String)
   fullName: DotEnv.Core.EnvParser.Parse(System.String)
   nameWithType: EnvParser.Parse(String)
 - uid: DotEnv.Core.EnvParser.Parse(System.String,DotEnv.Core.EnvValidationResult@)
   name: Parse(String, out EnvValidationResult)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_Parse_System_String_DotEnv_Core_EnvValidationResult__
+  href: api/DotEnv.Core.EnvParser.Parse.html#DotEnv_Core_EnvParser_Parse_System_String_DotEnv_Core_EnvValidationResult__
   commentId: M:DotEnv.Core.EnvParser.Parse(System.String,DotEnv.Core.EnvValidationResult@)
   name.vb: Parse(String, ByRef EnvValidationResult)
   fullName: DotEnv.Core.EnvParser.Parse(System.String, out DotEnv.Core.EnvValidationResult)
@@ -708,48 +663,44 @@ references:
   nameWithType.vb: EnvParser.Parse(String, ByRef EnvValidationResult)
 - uid: DotEnv.Core.EnvParser.Parse*
   name: Parse
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_Parse_
+  href: api/DotEnv.Core.EnvParser.Parse.html
   commentId: Overload:DotEnv.Core.EnvParser.Parse
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.Parse
   nameWithType: EnvParser.Parse
 - uid: DotEnv.Core.EnvParser.SetCommentChar(System.Char)
   name: SetCommentChar(Char)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetCommentChar_System_Char_
+  href: api/DotEnv.Core.EnvParser.SetCommentChar.html#DotEnv_Core_EnvParser_SetCommentChar_System_Char_
   commentId: M:DotEnv.Core.EnvParser.SetCommentChar(System.Char)
   fullName: DotEnv.Core.EnvParser.SetCommentChar(System.Char)
   nameWithType: EnvParser.SetCommentChar(Char)
 - uid: DotEnv.Core.EnvParser.SetCommentChar*
   name: SetCommentChar
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetCommentChar_
+  href: api/DotEnv.Core.EnvParser.SetCommentChar.html
   commentId: Overload:DotEnv.Core.EnvParser.SetCommentChar
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.SetCommentChar
   nameWithType: EnvParser.SetCommentChar
 - uid: DotEnv.Core.EnvParser.SetDelimiterKeyValuePair(System.Char)
   name: SetDelimiterKeyValuePair(Char)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetDelimiterKeyValuePair_System_Char_
+  href: api/DotEnv.Core.EnvParser.SetDelimiterKeyValuePair.html#DotEnv_Core_EnvParser_SetDelimiterKeyValuePair_System_Char_
   commentId: M:DotEnv.Core.EnvParser.SetDelimiterKeyValuePair(System.Char)
   fullName: DotEnv.Core.EnvParser.SetDelimiterKeyValuePair(System.Char)
   nameWithType: EnvParser.SetDelimiterKeyValuePair(Char)
 - uid: DotEnv.Core.EnvParser.SetDelimiterKeyValuePair*
   name: SetDelimiterKeyValuePair
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetDelimiterKeyValuePair_
+  href: api/DotEnv.Core.EnvParser.SetDelimiterKeyValuePair.html
   commentId: Overload:DotEnv.Core.EnvParser.SetDelimiterKeyValuePair
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.SetDelimiterKeyValuePair
   nameWithType: EnvParser.SetDelimiterKeyValuePair
 - uid: DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   name: SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider.html#DotEnv_Core_EnvParser_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
   commentId: M:DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   fullName: DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   nameWithType: EnvParser.SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
 - uid: DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider*
   name: SetEnvironmentVariablesProvider
-  href: api/DotEnv.Core.EnvParser.html#DotEnv_Core_EnvParser_SetEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider.html
   commentId: Overload:DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider
-  isSpec: "True"
   fullName: DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider
   nameWithType: EnvParser.SetEnvironmentVariablesProvider
 - uid: DotEnv.Core.EnvReader
@@ -760,416 +711,385 @@ references:
   nameWithType: EnvReader
 - uid: DotEnv.Core.EnvReader.#ctor
   name: EnvReader()
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader__ctor
+  href: api/DotEnv.Core.EnvReader.-ctor.html#DotEnv_Core_EnvReader__ctor
   commentId: M:DotEnv.Core.EnvReader.#ctor
   fullName: DotEnv.Core.EnvReader.EnvReader()
   nameWithType: EnvReader.EnvReader()
 - uid: DotEnv.Core.EnvReader.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
   name: EnvReader(IEnvironmentVariablesProvider)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader__ctor_DotEnv_Core_IEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.EnvReader.-ctor.html#DotEnv_Core_EnvReader__ctor_DotEnv_Core_IEnvironmentVariablesProvider_
   commentId: M:DotEnv.Core.EnvReader.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
   fullName: DotEnv.Core.EnvReader.EnvReader(DotEnv.Core.IEnvironmentVariablesProvider)
   nameWithType: EnvReader.EnvReader(IEnvironmentVariablesProvider)
 - uid: DotEnv.Core.EnvReader.#ctor*
   name: EnvReader
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader__ctor_
+  href: api/DotEnv.Core.EnvReader.-ctor.html
   commentId: Overload:DotEnv.Core.EnvReader.#ctor
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvReader
   nameWithType: EnvReader.EnvReader
 - uid: DotEnv.Core.EnvReader.EnvBool(System.String,System.Boolean)
   name: EnvBool(String, Boolean)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvBool_System_String_System_Boolean_
+  href: api/DotEnv.Core.EnvReader.EnvBool.html#DotEnv_Core_EnvReader_EnvBool_System_String_System_Boolean_
   commentId: M:DotEnv.Core.EnvReader.EnvBool(System.String,System.Boolean)
   fullName: DotEnv.Core.EnvReader.EnvBool(System.String, System.Boolean)
   nameWithType: EnvReader.EnvBool(String, Boolean)
 - uid: DotEnv.Core.EnvReader.EnvBool*
   name: EnvBool
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvBool_
+  href: api/DotEnv.Core.EnvReader.EnvBool.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvBool
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvBool
   nameWithType: EnvReader.EnvBool
 - uid: DotEnv.Core.EnvReader.EnvByte(System.String,System.Byte)
   name: EnvByte(String, Byte)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvByte_System_String_System_Byte_
+  href: api/DotEnv.Core.EnvReader.EnvByte.html#DotEnv_Core_EnvReader_EnvByte_System_String_System_Byte_
   commentId: M:DotEnv.Core.EnvReader.EnvByte(System.String,System.Byte)
   fullName: DotEnv.Core.EnvReader.EnvByte(System.String, System.Byte)
   nameWithType: EnvReader.EnvByte(String, Byte)
 - uid: DotEnv.Core.EnvReader.EnvByte*
   name: EnvByte
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvByte_
+  href: api/DotEnv.Core.EnvReader.EnvByte.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvByte
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvByte
   nameWithType: EnvReader.EnvByte
 - uid: DotEnv.Core.EnvReader.EnvChar(System.String,System.Char)
   name: EnvChar(String, Char)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvChar_System_String_System_Char_
+  href: api/DotEnv.Core.EnvReader.EnvChar.html#DotEnv_Core_EnvReader_EnvChar_System_String_System_Char_
   commentId: M:DotEnv.Core.EnvReader.EnvChar(System.String,System.Char)
   fullName: DotEnv.Core.EnvReader.EnvChar(System.String, System.Char)
   nameWithType: EnvReader.EnvChar(String, Char)
 - uid: DotEnv.Core.EnvReader.EnvChar*
   name: EnvChar
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvChar_
+  href: api/DotEnv.Core.EnvReader.EnvChar.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvChar
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvChar
   nameWithType: EnvReader.EnvChar
 - uid: DotEnv.Core.EnvReader.EnvDecimal(System.String,System.Decimal)
   name: EnvDecimal(String, Decimal)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvDecimal_System_String_System_Decimal_
+  href: api/DotEnv.Core.EnvReader.EnvDecimal.html#DotEnv_Core_EnvReader_EnvDecimal_System_String_System_Decimal_
   commentId: M:DotEnv.Core.EnvReader.EnvDecimal(System.String,System.Decimal)
   fullName: DotEnv.Core.EnvReader.EnvDecimal(System.String, System.Decimal)
   nameWithType: EnvReader.EnvDecimal(String, Decimal)
 - uid: DotEnv.Core.EnvReader.EnvDecimal*
   name: EnvDecimal
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvDecimal_
+  href: api/DotEnv.Core.EnvReader.EnvDecimal.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvDecimal
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvDecimal
   nameWithType: EnvReader.EnvDecimal
 - uid: DotEnv.Core.EnvReader.EnvDouble(System.String,System.Double)
   name: EnvDouble(String, Double)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvDouble_System_String_System_Double_
+  href: api/DotEnv.Core.EnvReader.EnvDouble.html#DotEnv_Core_EnvReader_EnvDouble_System_String_System_Double_
   commentId: M:DotEnv.Core.EnvReader.EnvDouble(System.String,System.Double)
   fullName: DotEnv.Core.EnvReader.EnvDouble(System.String, System.Double)
   nameWithType: EnvReader.EnvDouble(String, Double)
 - uid: DotEnv.Core.EnvReader.EnvDouble*
   name: EnvDouble
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvDouble_
+  href: api/DotEnv.Core.EnvReader.EnvDouble.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvDouble
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvDouble
   nameWithType: EnvReader.EnvDouble
 - uid: DotEnv.Core.EnvReader.EnvFloat(System.String,System.Single)
   name: EnvFloat(String, Single)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvFloat_System_String_System_Single_
+  href: api/DotEnv.Core.EnvReader.EnvFloat.html#DotEnv_Core_EnvReader_EnvFloat_System_String_System_Single_
   commentId: M:DotEnv.Core.EnvReader.EnvFloat(System.String,System.Single)
   fullName: DotEnv.Core.EnvReader.EnvFloat(System.String, System.Single)
   nameWithType: EnvReader.EnvFloat(String, Single)
 - uid: DotEnv.Core.EnvReader.EnvFloat*
   name: EnvFloat
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvFloat_
+  href: api/DotEnv.Core.EnvReader.EnvFloat.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvFloat
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvFloat
   nameWithType: EnvReader.EnvFloat
 - uid: DotEnv.Core.EnvReader.EnvInt(System.String,System.Int32)
   name: EnvInt(String, Int32)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvInt_System_String_System_Int32_
+  href: api/DotEnv.Core.EnvReader.EnvInt.html#DotEnv_Core_EnvReader_EnvInt_System_String_System_Int32_
   commentId: M:DotEnv.Core.EnvReader.EnvInt(System.String,System.Int32)
   fullName: DotEnv.Core.EnvReader.EnvInt(System.String, System.Int32)
   nameWithType: EnvReader.EnvInt(String, Int32)
 - uid: DotEnv.Core.EnvReader.EnvInt*
   name: EnvInt
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvInt_
+  href: api/DotEnv.Core.EnvReader.EnvInt.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvInt
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvInt
   nameWithType: EnvReader.EnvInt
 - uid: DotEnv.Core.EnvReader.EnvLong(System.String,System.Int64)
   name: EnvLong(String, Int64)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvLong_System_String_System_Int64_
+  href: api/DotEnv.Core.EnvReader.EnvLong.html#DotEnv_Core_EnvReader_EnvLong_System_String_System_Int64_
   commentId: M:DotEnv.Core.EnvReader.EnvLong(System.String,System.Int64)
   fullName: DotEnv.Core.EnvReader.EnvLong(System.String, System.Int64)
   nameWithType: EnvReader.EnvLong(String, Int64)
 - uid: DotEnv.Core.EnvReader.EnvLong*
   name: EnvLong
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvLong_
+  href: api/DotEnv.Core.EnvReader.EnvLong.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvLong
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvLong
   nameWithType: EnvReader.EnvLong
 - uid: DotEnv.Core.EnvReader.EnvSByte(System.String,System.SByte)
   name: EnvSByte(String, SByte)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvSByte_System_String_System_SByte_
+  href: api/DotEnv.Core.EnvReader.EnvSByte.html#DotEnv_Core_EnvReader_EnvSByte_System_String_System_SByte_
   commentId: M:DotEnv.Core.EnvReader.EnvSByte(System.String,System.SByte)
   fullName: DotEnv.Core.EnvReader.EnvSByte(System.String, System.SByte)
   nameWithType: EnvReader.EnvSByte(String, SByte)
 - uid: DotEnv.Core.EnvReader.EnvSByte*
   name: EnvSByte
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvSByte_
+  href: api/DotEnv.Core.EnvReader.EnvSByte.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvSByte
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvSByte
   nameWithType: EnvReader.EnvSByte
 - uid: DotEnv.Core.EnvReader.EnvShort(System.String,System.Int16)
   name: EnvShort(String, Int16)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvShort_System_String_System_Int16_
+  href: api/DotEnv.Core.EnvReader.EnvShort.html#DotEnv_Core_EnvReader_EnvShort_System_String_System_Int16_
   commentId: M:DotEnv.Core.EnvReader.EnvShort(System.String,System.Int16)
   fullName: DotEnv.Core.EnvReader.EnvShort(System.String, System.Int16)
   nameWithType: EnvReader.EnvShort(String, Int16)
 - uid: DotEnv.Core.EnvReader.EnvShort*
   name: EnvShort
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvShort_
+  href: api/DotEnv.Core.EnvReader.EnvShort.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvShort
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvShort
   nameWithType: EnvReader.EnvShort
 - uid: DotEnv.Core.EnvReader.EnvString(System.String,System.String)
   name: EnvString(String, String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvString_System_String_System_String_
+  href: api/DotEnv.Core.EnvReader.EnvString.html#DotEnv_Core_EnvReader_EnvString_System_String_System_String_
   commentId: M:DotEnv.Core.EnvReader.EnvString(System.String,System.String)
   fullName: DotEnv.Core.EnvReader.EnvString(System.String, System.String)
   nameWithType: EnvReader.EnvString(String, String)
 - uid: DotEnv.Core.EnvReader.EnvString*
   name: EnvString
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvString_
+  href: api/DotEnv.Core.EnvReader.EnvString.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvString
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvString
   nameWithType: EnvReader.EnvString
 - uid: DotEnv.Core.EnvReader.EnvUInt(System.String,System.UInt32)
   name: EnvUInt(String, UInt32)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvUInt_System_String_System_UInt32_
+  href: api/DotEnv.Core.EnvReader.EnvUInt.html#DotEnv_Core_EnvReader_EnvUInt_System_String_System_UInt32_
   commentId: M:DotEnv.Core.EnvReader.EnvUInt(System.String,System.UInt32)
   fullName: DotEnv.Core.EnvReader.EnvUInt(System.String, System.UInt32)
   nameWithType: EnvReader.EnvUInt(String, UInt32)
 - uid: DotEnv.Core.EnvReader.EnvUInt*
   name: EnvUInt
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvUInt_
+  href: api/DotEnv.Core.EnvReader.EnvUInt.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvUInt
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvUInt
   nameWithType: EnvReader.EnvUInt
 - uid: DotEnv.Core.EnvReader.EnvULong(System.String,System.UInt64)
   name: EnvULong(String, UInt64)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvULong_System_String_System_UInt64_
+  href: api/DotEnv.Core.EnvReader.EnvULong.html#DotEnv_Core_EnvReader_EnvULong_System_String_System_UInt64_
   commentId: M:DotEnv.Core.EnvReader.EnvULong(System.String,System.UInt64)
   fullName: DotEnv.Core.EnvReader.EnvULong(System.String, System.UInt64)
   nameWithType: EnvReader.EnvULong(String, UInt64)
 - uid: DotEnv.Core.EnvReader.EnvULong*
   name: EnvULong
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvULong_
+  href: api/DotEnv.Core.EnvReader.EnvULong.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvULong
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvULong
   nameWithType: EnvReader.EnvULong
 - uid: DotEnv.Core.EnvReader.EnvUShort(System.String,System.UInt16)
   name: EnvUShort(String, UInt16)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvUShort_System_String_System_UInt16_
+  href: api/DotEnv.Core.EnvReader.EnvUShort.html#DotEnv_Core_EnvReader_EnvUShort_System_String_System_UInt16_
   commentId: M:DotEnv.Core.EnvReader.EnvUShort(System.String,System.UInt16)
   fullName: DotEnv.Core.EnvReader.EnvUShort(System.String, System.UInt16)
   nameWithType: EnvReader.EnvUShort(String, UInt16)
 - uid: DotEnv.Core.EnvReader.EnvUShort*
   name: EnvUShort
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvUShort_
+  href: api/DotEnv.Core.EnvReader.EnvUShort.html
   commentId: Overload:DotEnv.Core.EnvReader.EnvUShort
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.EnvUShort
   nameWithType: EnvReader.EnvUShort
 - uid: DotEnv.Core.EnvReader.GetBoolValue(System.String)
   name: GetBoolValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetBoolValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetBoolValue.html#DotEnv_Core_EnvReader_GetBoolValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetBoolValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetBoolValue(System.String)
   nameWithType: EnvReader.GetBoolValue(String)
 - uid: DotEnv.Core.EnvReader.GetBoolValue*
   name: GetBoolValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetBoolValue_
+  href: api/DotEnv.Core.EnvReader.GetBoolValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetBoolValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetBoolValue
   nameWithType: EnvReader.GetBoolValue
 - uid: DotEnv.Core.EnvReader.GetByteValue(System.String)
   name: GetByteValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetByteValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetByteValue.html#DotEnv_Core_EnvReader_GetByteValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetByteValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetByteValue(System.String)
   nameWithType: EnvReader.GetByteValue(String)
 - uid: DotEnv.Core.EnvReader.GetByteValue*
   name: GetByteValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetByteValue_
+  href: api/DotEnv.Core.EnvReader.GetByteValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetByteValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetByteValue
   nameWithType: EnvReader.GetByteValue
 - uid: DotEnv.Core.EnvReader.GetCharValue(System.String)
   name: GetCharValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetCharValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetCharValue.html#DotEnv_Core_EnvReader_GetCharValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetCharValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetCharValue(System.String)
   nameWithType: EnvReader.GetCharValue(String)
 - uid: DotEnv.Core.EnvReader.GetCharValue*
   name: GetCharValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetCharValue_
+  href: api/DotEnv.Core.EnvReader.GetCharValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetCharValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetCharValue
   nameWithType: EnvReader.GetCharValue
 - uid: DotEnv.Core.EnvReader.GetDecimalValue(System.String)
   name: GetDecimalValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetDecimalValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetDecimalValue.html#DotEnv_Core_EnvReader_GetDecimalValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetDecimalValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetDecimalValue(System.String)
   nameWithType: EnvReader.GetDecimalValue(String)
 - uid: DotEnv.Core.EnvReader.GetDecimalValue*
   name: GetDecimalValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetDecimalValue_
+  href: api/DotEnv.Core.EnvReader.GetDecimalValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetDecimalValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetDecimalValue
   nameWithType: EnvReader.GetDecimalValue
 - uid: DotEnv.Core.EnvReader.GetDoubleValue(System.String)
   name: GetDoubleValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetDoubleValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetDoubleValue.html#DotEnv_Core_EnvReader_GetDoubleValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetDoubleValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetDoubleValue(System.String)
   nameWithType: EnvReader.GetDoubleValue(String)
 - uid: DotEnv.Core.EnvReader.GetDoubleValue*
   name: GetDoubleValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetDoubleValue_
+  href: api/DotEnv.Core.EnvReader.GetDoubleValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetDoubleValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetDoubleValue
   nameWithType: EnvReader.GetDoubleValue
 - uid: DotEnv.Core.EnvReader.GetFloatValue(System.String)
   name: GetFloatValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetFloatValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetFloatValue.html#DotEnv_Core_EnvReader_GetFloatValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetFloatValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetFloatValue(System.String)
   nameWithType: EnvReader.GetFloatValue(String)
 - uid: DotEnv.Core.EnvReader.GetFloatValue*
   name: GetFloatValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetFloatValue_
+  href: api/DotEnv.Core.EnvReader.GetFloatValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetFloatValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetFloatValue
   nameWithType: EnvReader.GetFloatValue
 - uid: DotEnv.Core.EnvReader.GetIntValue(System.String)
   name: GetIntValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetIntValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetIntValue.html#DotEnv_Core_EnvReader_GetIntValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetIntValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetIntValue(System.String)
   nameWithType: EnvReader.GetIntValue(String)
 - uid: DotEnv.Core.EnvReader.GetIntValue*
   name: GetIntValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetIntValue_
+  href: api/DotEnv.Core.EnvReader.GetIntValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetIntValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetIntValue
   nameWithType: EnvReader.GetIntValue
 - uid: DotEnv.Core.EnvReader.GetLongValue(System.String)
   name: GetLongValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetLongValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetLongValue.html#DotEnv_Core_EnvReader_GetLongValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetLongValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetLongValue(System.String)
   nameWithType: EnvReader.GetLongValue(String)
 - uid: DotEnv.Core.EnvReader.GetLongValue*
   name: GetLongValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetLongValue_
+  href: api/DotEnv.Core.EnvReader.GetLongValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetLongValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetLongValue
   nameWithType: EnvReader.GetLongValue
 - uid: DotEnv.Core.EnvReader.GetSByteValue(System.String)
   name: GetSByteValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetSByteValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetSByteValue.html#DotEnv_Core_EnvReader_GetSByteValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetSByteValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetSByteValue(System.String)
   nameWithType: EnvReader.GetSByteValue(String)
 - uid: DotEnv.Core.EnvReader.GetSByteValue*
   name: GetSByteValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetSByteValue_
+  href: api/DotEnv.Core.EnvReader.GetSByteValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetSByteValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetSByteValue
   nameWithType: EnvReader.GetSByteValue
 - uid: DotEnv.Core.EnvReader.GetShortValue(System.String)
   name: GetShortValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetShortValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetShortValue.html#DotEnv_Core_EnvReader_GetShortValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetShortValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetShortValue(System.String)
   nameWithType: EnvReader.GetShortValue(String)
 - uid: DotEnv.Core.EnvReader.GetShortValue*
   name: GetShortValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetShortValue_
+  href: api/DotEnv.Core.EnvReader.GetShortValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetShortValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetShortValue
   nameWithType: EnvReader.GetShortValue
 - uid: DotEnv.Core.EnvReader.GetStringValue(System.String)
   name: GetStringValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetStringValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetStringValue.html#DotEnv_Core_EnvReader_GetStringValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetStringValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetStringValue(System.String)
   nameWithType: EnvReader.GetStringValue(String)
 - uid: DotEnv.Core.EnvReader.GetStringValue*
   name: GetStringValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetStringValue_
+  href: api/DotEnv.Core.EnvReader.GetStringValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetStringValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetStringValue
   nameWithType: EnvReader.GetStringValue
 - uid: DotEnv.Core.EnvReader.GetUIntValue(System.String)
   name: GetUIntValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetUIntValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetUIntValue.html#DotEnv_Core_EnvReader_GetUIntValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetUIntValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetUIntValue(System.String)
   nameWithType: EnvReader.GetUIntValue(String)
 - uid: DotEnv.Core.EnvReader.GetUIntValue*
   name: GetUIntValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetUIntValue_
+  href: api/DotEnv.Core.EnvReader.GetUIntValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetUIntValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetUIntValue
   nameWithType: EnvReader.GetUIntValue
 - uid: DotEnv.Core.EnvReader.GetULongValue(System.String)
   name: GetULongValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetULongValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetULongValue.html#DotEnv_Core_EnvReader_GetULongValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetULongValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetULongValue(System.String)
   nameWithType: EnvReader.GetULongValue(String)
 - uid: DotEnv.Core.EnvReader.GetULongValue*
   name: GetULongValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetULongValue_
+  href: api/DotEnv.Core.EnvReader.GetULongValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetULongValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetULongValue
   nameWithType: EnvReader.GetULongValue
 - uid: DotEnv.Core.EnvReader.GetUShortValue(System.String)
   name: GetUShortValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetUShortValue_System_String_
+  href: api/DotEnv.Core.EnvReader.GetUShortValue.html#DotEnv_Core_EnvReader_GetUShortValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.GetUShortValue(System.String)
   fullName: DotEnv.Core.EnvReader.GetUShortValue(System.String)
   nameWithType: EnvReader.GetUShortValue(String)
 - uid: DotEnv.Core.EnvReader.GetUShortValue*
   name: GetUShortValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetUShortValue_
+  href: api/DotEnv.Core.EnvReader.GetUShortValue.html
   commentId: Overload:DotEnv.Core.EnvReader.GetUShortValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.GetUShortValue
   nameWithType: EnvReader.GetUShortValue
 - uid: DotEnv.Core.EnvReader.HasValue(System.String)
   name: HasValue(String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_HasValue_System_String_
+  href: api/DotEnv.Core.EnvReader.HasValue.html#DotEnv_Core_EnvReader_HasValue_System_String_
   commentId: M:DotEnv.Core.EnvReader.HasValue(System.String)
   fullName: DotEnv.Core.EnvReader.HasValue(System.String)
   nameWithType: EnvReader.HasValue(String)
 - uid: DotEnv.Core.EnvReader.HasValue*
   name: HasValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_HasValue_
+  href: api/DotEnv.Core.EnvReader.HasValue.html
   commentId: Overload:DotEnv.Core.EnvReader.HasValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.HasValue
   nameWithType: EnvReader.HasValue
 - uid: DotEnv.Core.EnvReader.Instance
   name: Instance
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_Instance
+  href: api/DotEnv.Core.EnvReader.Instance.html#DotEnv_Core_EnvReader_Instance
   commentId: P:DotEnv.Core.EnvReader.Instance
   fullName: DotEnv.Core.EnvReader.Instance
   nameWithType: EnvReader.Instance
 - uid: DotEnv.Core.EnvReader.Instance*
   name: Instance
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_Instance_
+  href: api/DotEnv.Core.EnvReader.Instance.html
   commentId: Overload:DotEnv.Core.EnvReader.Instance
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.Instance
   nameWithType: EnvReader.Instance
 - uid: DotEnv.Core.EnvReader.Item(System.String)
   name: Item[String]
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_Item_System_String_
+  href: api/DotEnv.Core.EnvReader.Item.html#DotEnv_Core_EnvReader_Item_System_String_
   commentId: P:DotEnv.Core.EnvReader.Item(System.String)
   name.vb: Item(String)
   fullName: DotEnv.Core.EnvReader.Item[System.String]
@@ -1178,14 +1098,13 @@ references:
   nameWithType.vb: EnvReader.Item(String)
 - uid: DotEnv.Core.EnvReader.Item*
   name: Item
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_Item_
+  href: api/DotEnv.Core.EnvReader.Item.html
   commentId: Overload:DotEnv.Core.EnvReader.Item
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.Item
   nameWithType: EnvReader.Item
 - uid: DotEnv.Core.EnvReader.TryGetBoolValue(System.String,System.Boolean@)
   name: TryGetBoolValue(String, out Boolean)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetBoolValue_System_String_System_Boolean__
+  href: api/DotEnv.Core.EnvReader.TryGetBoolValue.html#DotEnv_Core_EnvReader_TryGetBoolValue_System_String_System_Boolean__
   commentId: M:DotEnv.Core.EnvReader.TryGetBoolValue(System.String,System.Boolean@)
   name.vb: TryGetBoolValue(String, ByRef Boolean)
   fullName: DotEnv.Core.EnvReader.TryGetBoolValue(System.String, out System.Boolean)
@@ -1194,14 +1113,13 @@ references:
   nameWithType.vb: EnvReader.TryGetBoolValue(String, ByRef Boolean)
 - uid: DotEnv.Core.EnvReader.TryGetBoolValue*
   name: TryGetBoolValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetBoolValue_
+  href: api/DotEnv.Core.EnvReader.TryGetBoolValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetBoolValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetBoolValue
   nameWithType: EnvReader.TryGetBoolValue
 - uid: DotEnv.Core.EnvReader.TryGetByteValue(System.String,System.Byte@)
   name: TryGetByteValue(String, out Byte)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetByteValue_System_String_System_Byte__
+  href: api/DotEnv.Core.EnvReader.TryGetByteValue.html#DotEnv_Core_EnvReader_TryGetByteValue_System_String_System_Byte__
   commentId: M:DotEnv.Core.EnvReader.TryGetByteValue(System.String,System.Byte@)
   name.vb: TryGetByteValue(String, ByRef Byte)
   fullName: DotEnv.Core.EnvReader.TryGetByteValue(System.String, out System.Byte)
@@ -1210,14 +1128,13 @@ references:
   nameWithType.vb: EnvReader.TryGetByteValue(String, ByRef Byte)
 - uid: DotEnv.Core.EnvReader.TryGetByteValue*
   name: TryGetByteValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetByteValue_
+  href: api/DotEnv.Core.EnvReader.TryGetByteValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetByteValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetByteValue
   nameWithType: EnvReader.TryGetByteValue
 - uid: DotEnv.Core.EnvReader.TryGetCharValue(System.String,System.Char@)
   name: TryGetCharValue(String, out Char)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetCharValue_System_String_System_Char__
+  href: api/DotEnv.Core.EnvReader.TryGetCharValue.html#DotEnv_Core_EnvReader_TryGetCharValue_System_String_System_Char__
   commentId: M:DotEnv.Core.EnvReader.TryGetCharValue(System.String,System.Char@)
   name.vb: TryGetCharValue(String, ByRef Char)
   fullName: DotEnv.Core.EnvReader.TryGetCharValue(System.String, out System.Char)
@@ -1226,14 +1143,13 @@ references:
   nameWithType.vb: EnvReader.TryGetCharValue(String, ByRef Char)
 - uid: DotEnv.Core.EnvReader.TryGetCharValue*
   name: TryGetCharValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetCharValue_
+  href: api/DotEnv.Core.EnvReader.TryGetCharValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetCharValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetCharValue
   nameWithType: EnvReader.TryGetCharValue
 - uid: DotEnv.Core.EnvReader.TryGetDecimalValue(System.String,System.Decimal@)
   name: TryGetDecimalValue(String, out Decimal)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetDecimalValue_System_String_System_Decimal__
+  href: api/DotEnv.Core.EnvReader.TryGetDecimalValue.html#DotEnv_Core_EnvReader_TryGetDecimalValue_System_String_System_Decimal__
   commentId: M:DotEnv.Core.EnvReader.TryGetDecimalValue(System.String,System.Decimal@)
   name.vb: TryGetDecimalValue(String, ByRef Decimal)
   fullName: DotEnv.Core.EnvReader.TryGetDecimalValue(System.String, out System.Decimal)
@@ -1242,14 +1158,13 @@ references:
   nameWithType.vb: EnvReader.TryGetDecimalValue(String, ByRef Decimal)
 - uid: DotEnv.Core.EnvReader.TryGetDecimalValue*
   name: TryGetDecimalValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetDecimalValue_
+  href: api/DotEnv.Core.EnvReader.TryGetDecimalValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetDecimalValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetDecimalValue
   nameWithType: EnvReader.TryGetDecimalValue
 - uid: DotEnv.Core.EnvReader.TryGetDoubleValue(System.String,System.Double@)
   name: TryGetDoubleValue(String, out Double)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetDoubleValue_System_String_System_Double__
+  href: api/DotEnv.Core.EnvReader.TryGetDoubleValue.html#DotEnv_Core_EnvReader_TryGetDoubleValue_System_String_System_Double__
   commentId: M:DotEnv.Core.EnvReader.TryGetDoubleValue(System.String,System.Double@)
   name.vb: TryGetDoubleValue(String, ByRef Double)
   fullName: DotEnv.Core.EnvReader.TryGetDoubleValue(System.String, out System.Double)
@@ -1258,14 +1173,13 @@ references:
   nameWithType.vb: EnvReader.TryGetDoubleValue(String, ByRef Double)
 - uid: DotEnv.Core.EnvReader.TryGetDoubleValue*
   name: TryGetDoubleValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetDoubleValue_
+  href: api/DotEnv.Core.EnvReader.TryGetDoubleValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetDoubleValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetDoubleValue
   nameWithType: EnvReader.TryGetDoubleValue
 - uid: DotEnv.Core.EnvReader.TryGetFloatValue(System.String,System.Single@)
   name: TryGetFloatValue(String, out Single)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetFloatValue_System_String_System_Single__
+  href: api/DotEnv.Core.EnvReader.TryGetFloatValue.html#DotEnv_Core_EnvReader_TryGetFloatValue_System_String_System_Single__
   commentId: M:DotEnv.Core.EnvReader.TryGetFloatValue(System.String,System.Single@)
   name.vb: TryGetFloatValue(String, ByRef Single)
   fullName: DotEnv.Core.EnvReader.TryGetFloatValue(System.String, out System.Single)
@@ -1274,14 +1188,13 @@ references:
   nameWithType.vb: EnvReader.TryGetFloatValue(String, ByRef Single)
 - uid: DotEnv.Core.EnvReader.TryGetFloatValue*
   name: TryGetFloatValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetFloatValue_
+  href: api/DotEnv.Core.EnvReader.TryGetFloatValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetFloatValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetFloatValue
   nameWithType: EnvReader.TryGetFloatValue
 - uid: DotEnv.Core.EnvReader.TryGetIntValue(System.String,System.Int32@)
   name: TryGetIntValue(String, out Int32)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetIntValue_System_String_System_Int32__
+  href: api/DotEnv.Core.EnvReader.TryGetIntValue.html#DotEnv_Core_EnvReader_TryGetIntValue_System_String_System_Int32__
   commentId: M:DotEnv.Core.EnvReader.TryGetIntValue(System.String,System.Int32@)
   name.vb: TryGetIntValue(String, ByRef Int32)
   fullName: DotEnv.Core.EnvReader.TryGetIntValue(System.String, out System.Int32)
@@ -1290,14 +1203,13 @@ references:
   nameWithType.vb: EnvReader.TryGetIntValue(String, ByRef Int32)
 - uid: DotEnv.Core.EnvReader.TryGetIntValue*
   name: TryGetIntValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetIntValue_
+  href: api/DotEnv.Core.EnvReader.TryGetIntValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetIntValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetIntValue
   nameWithType: EnvReader.TryGetIntValue
 - uid: DotEnv.Core.EnvReader.TryGetLongValue(System.String,System.Int64@)
   name: TryGetLongValue(String, out Int64)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetLongValue_System_String_System_Int64__
+  href: api/DotEnv.Core.EnvReader.TryGetLongValue.html#DotEnv_Core_EnvReader_TryGetLongValue_System_String_System_Int64__
   commentId: M:DotEnv.Core.EnvReader.TryGetLongValue(System.String,System.Int64@)
   name.vb: TryGetLongValue(String, ByRef Int64)
   fullName: DotEnv.Core.EnvReader.TryGetLongValue(System.String, out System.Int64)
@@ -1306,14 +1218,13 @@ references:
   nameWithType.vb: EnvReader.TryGetLongValue(String, ByRef Int64)
 - uid: DotEnv.Core.EnvReader.TryGetLongValue*
   name: TryGetLongValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetLongValue_
+  href: api/DotEnv.Core.EnvReader.TryGetLongValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetLongValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetLongValue
   nameWithType: EnvReader.TryGetLongValue
 - uid: DotEnv.Core.EnvReader.TryGetSByteValue(System.String,System.SByte@)
   name: TryGetSByteValue(String, out SByte)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetSByteValue_System_String_System_SByte__
+  href: api/DotEnv.Core.EnvReader.TryGetSByteValue.html#DotEnv_Core_EnvReader_TryGetSByteValue_System_String_System_SByte__
   commentId: M:DotEnv.Core.EnvReader.TryGetSByteValue(System.String,System.SByte@)
   name.vb: TryGetSByteValue(String, ByRef SByte)
   fullName: DotEnv.Core.EnvReader.TryGetSByteValue(System.String, out System.SByte)
@@ -1322,14 +1233,13 @@ references:
   nameWithType.vb: EnvReader.TryGetSByteValue(String, ByRef SByte)
 - uid: DotEnv.Core.EnvReader.TryGetSByteValue*
   name: TryGetSByteValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetSByteValue_
+  href: api/DotEnv.Core.EnvReader.TryGetSByteValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetSByteValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetSByteValue
   nameWithType: EnvReader.TryGetSByteValue
 - uid: DotEnv.Core.EnvReader.TryGetShortValue(System.String,System.Int16@)
   name: TryGetShortValue(String, out Int16)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetShortValue_System_String_System_Int16__
+  href: api/DotEnv.Core.EnvReader.TryGetShortValue.html#DotEnv_Core_EnvReader_TryGetShortValue_System_String_System_Int16__
   commentId: M:DotEnv.Core.EnvReader.TryGetShortValue(System.String,System.Int16@)
   name.vb: TryGetShortValue(String, ByRef Int16)
   fullName: DotEnv.Core.EnvReader.TryGetShortValue(System.String, out System.Int16)
@@ -1338,14 +1248,13 @@ references:
   nameWithType.vb: EnvReader.TryGetShortValue(String, ByRef Int16)
 - uid: DotEnv.Core.EnvReader.TryGetShortValue*
   name: TryGetShortValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetShortValue_
+  href: api/DotEnv.Core.EnvReader.TryGetShortValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetShortValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetShortValue
   nameWithType: EnvReader.TryGetShortValue
 - uid: DotEnv.Core.EnvReader.TryGetStringValue(System.String,System.String@)
   name: TryGetStringValue(String, out String)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetStringValue_System_String_System_String__
+  href: api/DotEnv.Core.EnvReader.TryGetStringValue.html#DotEnv_Core_EnvReader_TryGetStringValue_System_String_System_String__
   commentId: M:DotEnv.Core.EnvReader.TryGetStringValue(System.String,System.String@)
   name.vb: TryGetStringValue(String, ByRef String)
   fullName: DotEnv.Core.EnvReader.TryGetStringValue(System.String, out System.String)
@@ -1354,14 +1263,13 @@ references:
   nameWithType.vb: EnvReader.TryGetStringValue(String, ByRef String)
 - uid: DotEnv.Core.EnvReader.TryGetStringValue*
   name: TryGetStringValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetStringValue_
+  href: api/DotEnv.Core.EnvReader.TryGetStringValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetStringValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetStringValue
   nameWithType: EnvReader.TryGetStringValue
 - uid: DotEnv.Core.EnvReader.TryGetUIntValue(System.String,System.UInt32@)
   name: TryGetUIntValue(String, out UInt32)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetUIntValue_System_String_System_UInt32__
+  href: api/DotEnv.Core.EnvReader.TryGetUIntValue.html#DotEnv_Core_EnvReader_TryGetUIntValue_System_String_System_UInt32__
   commentId: M:DotEnv.Core.EnvReader.TryGetUIntValue(System.String,System.UInt32@)
   name.vb: TryGetUIntValue(String, ByRef UInt32)
   fullName: DotEnv.Core.EnvReader.TryGetUIntValue(System.String, out System.UInt32)
@@ -1370,14 +1278,13 @@ references:
   nameWithType.vb: EnvReader.TryGetUIntValue(String, ByRef UInt32)
 - uid: DotEnv.Core.EnvReader.TryGetUIntValue*
   name: TryGetUIntValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetUIntValue_
+  href: api/DotEnv.Core.EnvReader.TryGetUIntValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetUIntValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetUIntValue
   nameWithType: EnvReader.TryGetUIntValue
 - uid: DotEnv.Core.EnvReader.TryGetULongValue(System.String,System.UInt64@)
   name: TryGetULongValue(String, out UInt64)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetULongValue_System_String_System_UInt64__
+  href: api/DotEnv.Core.EnvReader.TryGetULongValue.html#DotEnv_Core_EnvReader_TryGetULongValue_System_String_System_UInt64__
   commentId: M:DotEnv.Core.EnvReader.TryGetULongValue(System.String,System.UInt64@)
   name.vb: TryGetULongValue(String, ByRef UInt64)
   fullName: DotEnv.Core.EnvReader.TryGetULongValue(System.String, out System.UInt64)
@@ -1386,14 +1293,13 @@ references:
   nameWithType.vb: EnvReader.TryGetULongValue(String, ByRef UInt64)
 - uid: DotEnv.Core.EnvReader.TryGetULongValue*
   name: TryGetULongValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetULongValue_
+  href: api/DotEnv.Core.EnvReader.TryGetULongValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetULongValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetULongValue
   nameWithType: EnvReader.TryGetULongValue
 - uid: DotEnv.Core.EnvReader.TryGetUShortValue(System.String,System.UInt16@)
   name: TryGetUShortValue(String, out UInt16)
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetUShortValue_System_String_System_UInt16__
+  href: api/DotEnv.Core.EnvReader.TryGetUShortValue.html#DotEnv_Core_EnvReader_TryGetUShortValue_System_String_System_UInt16__
   commentId: M:DotEnv.Core.EnvReader.TryGetUShortValue(System.String,System.UInt16@)
   name.vb: TryGetUShortValue(String, ByRef UInt16)
   fullName: DotEnv.Core.EnvReader.TryGetUShortValue(System.String, out System.UInt16)
@@ -1402,9 +1308,8 @@ references:
   nameWithType.vb: EnvReader.TryGetUShortValue(String, ByRef UInt16)
 - uid: DotEnv.Core.EnvReader.TryGetUShortValue*
   name: TryGetUShortValue
-  href: api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetUShortValue_
+  href: api/DotEnv.Core.EnvReader.TryGetUShortValue.html
   commentId: Overload:DotEnv.Core.EnvReader.TryGetUShortValue
-  isSpec: "True"
   fullName: DotEnv.Core.EnvReader.TryGetUShortValue
   nameWithType: EnvReader.TryGetUShortValue
 - uid: DotEnv.Core.EnvValidationResult
@@ -1415,54 +1320,50 @@ references:
   nameWithType: EnvValidationResult
 - uid: DotEnv.Core.EnvValidationResult.Count
   name: Count
-  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_Count
+  href: api/DotEnv.Core.EnvValidationResult.Count.html#DotEnv_Core_EnvValidationResult_Count
   commentId: P:DotEnv.Core.EnvValidationResult.Count
   fullName: DotEnv.Core.EnvValidationResult.Count
   nameWithType: EnvValidationResult.Count
 - uid: DotEnv.Core.EnvValidationResult.Count*
   name: Count
-  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_Count_
+  href: api/DotEnv.Core.EnvValidationResult.Count.html
   commentId: Overload:DotEnv.Core.EnvValidationResult.Count
-  isSpec: "True"
   fullName: DotEnv.Core.EnvValidationResult.Count
   nameWithType: EnvValidationResult.Count
 - uid: DotEnv.Core.EnvValidationResult.ErrorMessages
   name: ErrorMessages
-  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_ErrorMessages
+  href: api/DotEnv.Core.EnvValidationResult.ErrorMessages.html#DotEnv_Core_EnvValidationResult_ErrorMessages
   commentId: P:DotEnv.Core.EnvValidationResult.ErrorMessages
   fullName: DotEnv.Core.EnvValidationResult.ErrorMessages
   nameWithType: EnvValidationResult.ErrorMessages
 - uid: DotEnv.Core.EnvValidationResult.ErrorMessages*
   name: ErrorMessages
-  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_ErrorMessages_
+  href: api/DotEnv.Core.EnvValidationResult.ErrorMessages.html
   commentId: Overload:DotEnv.Core.EnvValidationResult.ErrorMessages
-  isSpec: "True"
   fullName: DotEnv.Core.EnvValidationResult.ErrorMessages
   nameWithType: EnvValidationResult.ErrorMessages
 - uid: DotEnv.Core.EnvValidationResult.GetEnumerator
   name: GetEnumerator()
-  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_GetEnumerator
+  href: api/DotEnv.Core.EnvValidationResult.GetEnumerator.html#DotEnv_Core_EnvValidationResult_GetEnumerator
   commentId: M:DotEnv.Core.EnvValidationResult.GetEnumerator
   fullName: DotEnv.Core.EnvValidationResult.GetEnumerator()
   nameWithType: EnvValidationResult.GetEnumerator()
 - uid: DotEnv.Core.EnvValidationResult.GetEnumerator*
   name: GetEnumerator
-  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_GetEnumerator_
+  href: api/DotEnv.Core.EnvValidationResult.GetEnumerator.html
   commentId: Overload:DotEnv.Core.EnvValidationResult.GetEnumerator
-  isSpec: "True"
   fullName: DotEnv.Core.EnvValidationResult.GetEnumerator
   nameWithType: EnvValidationResult.GetEnumerator
 - uid: DotEnv.Core.EnvValidationResult.HasError
   name: HasError()
-  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_HasError
+  href: api/DotEnv.Core.EnvValidationResult.HasError.html#DotEnv_Core_EnvValidationResult_HasError
   commentId: M:DotEnv.Core.EnvValidationResult.HasError
   fullName: DotEnv.Core.EnvValidationResult.HasError()
   nameWithType: EnvValidationResult.HasError()
 - uid: DotEnv.Core.EnvValidationResult.HasError*
   name: HasError
-  href: api/DotEnv.Core.EnvValidationResult.html#DotEnv_Core_EnvValidationResult_HasError_
+  href: api/DotEnv.Core.EnvValidationResult.HasError.html
   commentId: Overload:DotEnv.Core.EnvValidationResult.HasError
-  isSpec: "True"
   fullName: DotEnv.Core.EnvValidationResult.HasError
   nameWithType: EnvValidationResult.HasError
 - uid: DotEnv.Core.EnvValidator
@@ -1473,39 +1374,37 @@ references:
   nameWithType: EnvValidator
 - uid: DotEnv.Core.EnvValidator.#ctor
   name: EnvValidator()
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator__ctor
+  href: api/DotEnv.Core.EnvValidator.-ctor.html#DotEnv_Core_EnvValidator__ctor
   commentId: M:DotEnv.Core.EnvValidator.#ctor
   fullName: DotEnv.Core.EnvValidator.EnvValidator()
   nameWithType: EnvValidator.EnvValidator()
 - uid: DotEnv.Core.EnvValidator.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
   name: EnvValidator(IEnvironmentVariablesProvider)
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator__ctor_DotEnv_Core_IEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.EnvValidator.-ctor.html#DotEnv_Core_EnvValidator__ctor_DotEnv_Core_IEnvironmentVariablesProvider_
   commentId: M:DotEnv.Core.EnvValidator.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
   fullName: DotEnv.Core.EnvValidator.EnvValidator(DotEnv.Core.IEnvironmentVariablesProvider)
   nameWithType: EnvValidator.EnvValidator(IEnvironmentVariablesProvider)
 - uid: DotEnv.Core.EnvValidator.#ctor*
   name: EnvValidator
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator__ctor_
+  href: api/DotEnv.Core.EnvValidator.-ctor.html
   commentId: Overload:DotEnv.Core.EnvValidator.#ctor
-  isSpec: "True"
   fullName: DotEnv.Core.EnvValidator.EnvValidator
   nameWithType: EnvValidator.EnvValidator
 - uid: DotEnv.Core.EnvValidator.IgnoreException
   name: IgnoreException()
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_IgnoreException
+  href: api/DotEnv.Core.EnvValidator.IgnoreException.html#DotEnv_Core_EnvValidator_IgnoreException
   commentId: M:DotEnv.Core.EnvValidator.IgnoreException
   fullName: DotEnv.Core.EnvValidator.IgnoreException()
   nameWithType: EnvValidator.IgnoreException()
 - uid: DotEnv.Core.EnvValidator.IgnoreException*
   name: IgnoreException
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_IgnoreException_
+  href: api/DotEnv.Core.EnvValidator.IgnoreException.html
   commentId: Overload:DotEnv.Core.EnvValidator.IgnoreException
-  isSpec: "True"
   fullName: DotEnv.Core.EnvValidator.IgnoreException
   nameWithType: EnvValidator.IgnoreException
 - uid: DotEnv.Core.EnvValidator.SetRequiredKeys(System.String[])
   name: SetRequiredKeys(String[])
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_SetRequiredKeys_System_String___
+  href: api/DotEnv.Core.EnvValidator.SetRequiredKeys.html#DotEnv_Core_EnvValidator_SetRequiredKeys_System_String___
   commentId: M:DotEnv.Core.EnvValidator.SetRequiredKeys(System.String[])
   name.vb: SetRequiredKeys(String())
   fullName: DotEnv.Core.EnvValidator.SetRequiredKeys(System.String[])
@@ -1514,20 +1413,19 @@ references:
   nameWithType.vb: EnvValidator.SetRequiredKeys(String())
 - uid: DotEnv.Core.EnvValidator.SetRequiredKeys(System.Type)
   name: SetRequiredKeys(Type)
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_SetRequiredKeys_System_Type_
+  href: api/DotEnv.Core.EnvValidator.SetRequiredKeys.html#DotEnv_Core_EnvValidator_SetRequiredKeys_System_Type_
   commentId: M:DotEnv.Core.EnvValidator.SetRequiredKeys(System.Type)
   fullName: DotEnv.Core.EnvValidator.SetRequiredKeys(System.Type)
   nameWithType: EnvValidator.SetRequiredKeys(Type)
 - uid: DotEnv.Core.EnvValidator.SetRequiredKeys*
   name: SetRequiredKeys
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_SetRequiredKeys_
+  href: api/DotEnv.Core.EnvValidator.SetRequiredKeys.html
   commentId: Overload:DotEnv.Core.EnvValidator.SetRequiredKeys
-  isSpec: "True"
   fullName: DotEnv.Core.EnvValidator.SetRequiredKeys
   nameWithType: EnvValidator.SetRequiredKeys
 - uid: DotEnv.Core.EnvValidator.SetRequiredKeys``1
   name: SetRequiredKeys<TKeys>()
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_SetRequiredKeys__1
+  href: api/DotEnv.Core.EnvValidator.SetRequiredKeys.html#DotEnv_Core_EnvValidator_SetRequiredKeys__1
   commentId: M:DotEnv.Core.EnvValidator.SetRequiredKeys``1
   name.vb: SetRequiredKeys(Of TKeys)()
   fullName: DotEnv.Core.EnvValidator.SetRequiredKeys<TKeys>()
@@ -1536,13 +1434,13 @@ references:
   nameWithType.vb: EnvValidator.SetRequiredKeys(Of TKeys)()
 - uid: DotEnv.Core.EnvValidator.Validate
   name: Validate()
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_Validate
+  href: api/DotEnv.Core.EnvValidator.Validate.html#DotEnv_Core_EnvValidator_Validate
   commentId: M:DotEnv.Core.EnvValidator.Validate
   fullName: DotEnv.Core.EnvValidator.Validate()
   nameWithType: EnvValidator.Validate()
 - uid: DotEnv.Core.EnvValidator.Validate(DotEnv.Core.EnvValidationResult@)
   name: Validate(out EnvValidationResult)
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_Validate_DotEnv_Core_EnvValidationResult__
+  href: api/DotEnv.Core.EnvValidator.Validate.html#DotEnv_Core_EnvValidator_Validate_DotEnv_Core_EnvValidationResult__
   commentId: M:DotEnv.Core.EnvValidator.Validate(DotEnv.Core.EnvValidationResult@)
   name.vb: Validate(ByRef EnvValidationResult)
   fullName: DotEnv.Core.EnvValidator.Validate(out DotEnv.Core.EnvValidationResult)
@@ -1551,9 +1449,8 @@ references:
   nameWithType.vb: EnvValidator.Validate(ByRef EnvValidationResult)
 - uid: DotEnv.Core.EnvValidator.Validate*
   name: Validate
-  href: api/DotEnv.Core.EnvValidator.html#DotEnv_Core_EnvValidator_Validate_
+  href: api/DotEnv.Core.EnvValidator.Validate.html
   commentId: Overload:DotEnv.Core.EnvValidator.Validate
-  isSpec: "True"
   fullName: DotEnv.Core.EnvValidator.Validate
   nameWithType: EnvValidator.Validate
 - uid: DotEnv.Core.IEnvironmentVariablesProvider
@@ -1564,7 +1461,7 @@ references:
   nameWithType: IEnvironmentVariablesProvider
 - uid: DotEnv.Core.IEnvironmentVariablesProvider.Item(System.String)
   name: Item[String]
-  href: api/DotEnv.Core.IEnvironmentVariablesProvider.html#DotEnv_Core_IEnvironmentVariablesProvider_Item_System_String_
+  href: api/DotEnv.Core.IEnvironmentVariablesProvider.Item.html#DotEnv_Core_IEnvironmentVariablesProvider_Item_System_String_
   commentId: P:DotEnv.Core.IEnvironmentVariablesProvider.Item(System.String)
   name.vb: Item(String)
   fullName: DotEnv.Core.IEnvironmentVariablesProvider.Item[System.String]
@@ -1573,9 +1470,8 @@ references:
   nameWithType.vb: IEnvironmentVariablesProvider.Item(String)
 - uid: DotEnv.Core.IEnvironmentVariablesProvider.Item*
   name: Item
-  href: api/DotEnv.Core.IEnvironmentVariablesProvider.html#DotEnv_Core_IEnvironmentVariablesProvider_Item_
+  href: api/DotEnv.Core.IEnvironmentVariablesProvider.Item.html
   commentId: Overload:DotEnv.Core.IEnvironmentVariablesProvider.Item
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvironmentVariablesProvider.Item
   nameWithType: IEnvironmentVariablesProvider.Item
 - uid: DotEnv.Core.IEnvLoader
@@ -1586,50 +1482,49 @@ references:
   nameWithType: IEnvLoader
 - uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String)
   name: AddEnvFile(String)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_
+  href: api/DotEnv.Core.IEnvLoader.AddEnvFile.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_
   commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String)
   fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String)
   nameWithType: IEnvLoader.AddEnvFile(String)
 - uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Boolean)
   name: AddEnvFile(String, Boolean)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Boolean_
+  href: api/DotEnv.Core.IEnvLoader.AddEnvFile.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Boolean_
   commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Boolean)
   fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.Boolean)
   nameWithType: IEnvLoader.AddEnvFile(String, Boolean)
 - uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.String)
   name: AddEnvFile(String, String)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_String_
+  href: api/DotEnv.Core.IEnvLoader.AddEnvFile.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_String_
   commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.String)
   fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.String)
   nameWithType: IEnvLoader.AddEnvFile(String, String)
 - uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.String,System.Boolean)
   name: AddEnvFile(String, String, Boolean)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_String_System_Boolean_
+  href: api/DotEnv.Core.IEnvLoader.AddEnvFile.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_String_System_Boolean_
   commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.String,System.Boolean)
   fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.String, System.Boolean)
   nameWithType: IEnvLoader.AddEnvFile(String, String, Boolean)
 - uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Text.Encoding)
   name: AddEnvFile(String, Encoding)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Text_Encoding_
+  href: api/DotEnv.Core.IEnvLoader.AddEnvFile.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Text_Encoding_
   commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Text.Encoding)
   fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.Text.Encoding)
   nameWithType: IEnvLoader.AddEnvFile(String, Encoding)
 - uid: DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Text.Encoding,System.Boolean)
   name: AddEnvFile(String, Encoding, Boolean)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Text_Encoding_System_Boolean_
+  href: api/DotEnv.Core.IEnvLoader.AddEnvFile.html#DotEnv_Core_IEnvLoader_AddEnvFile_System_String_System_Text_Encoding_System_Boolean_
   commentId: M:DotEnv.Core.IEnvLoader.AddEnvFile(System.String,System.Text.Encoding,System.Boolean)
   fullName: DotEnv.Core.IEnvLoader.AddEnvFile(System.String, System.Text.Encoding, System.Boolean)
   nameWithType: IEnvLoader.AddEnvFile(String, Encoding, Boolean)
 - uid: DotEnv.Core.IEnvLoader.AddEnvFile*
   name: AddEnvFile
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFile_
+  href: api/DotEnv.Core.IEnvLoader.AddEnvFile.html
   commentId: Overload:DotEnv.Core.IEnvLoader.AddEnvFile
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.AddEnvFile
   nameWithType: IEnvLoader.AddEnvFile
 - uid: DotEnv.Core.IEnvLoader.AddEnvFiles(System.String[])
   name: AddEnvFiles(String[])
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFiles_System_String___
+  href: api/DotEnv.Core.IEnvLoader.AddEnvFiles.html#DotEnv_Core_IEnvLoader_AddEnvFiles_System_String___
   commentId: M:DotEnv.Core.IEnvLoader.AddEnvFiles(System.String[])
   name.vb: AddEnvFiles(String())
   fullName: DotEnv.Core.IEnvLoader.AddEnvFiles(System.String[])
@@ -1638,202 +1533,187 @@ references:
   nameWithType.vb: IEnvLoader.AddEnvFiles(String())
 - uid: DotEnv.Core.IEnvLoader.AddEnvFiles*
   name: AddEnvFiles
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AddEnvFiles_
+  href: api/DotEnv.Core.IEnvLoader.AddEnvFiles.html
   commentId: Overload:DotEnv.Core.IEnvLoader.AddEnvFiles
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.AddEnvFiles
   nameWithType: IEnvLoader.AddEnvFiles
 - uid: DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional
   name: AllowAllEnvFilesOptional()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AllowAllEnvFilesOptional
+  href: api/DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional.html#DotEnv_Core_IEnvLoader_AllowAllEnvFilesOptional
   commentId: M:DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional
   fullName: DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional()
   nameWithType: IEnvLoader.AllowAllEnvFilesOptional()
 - uid: DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional*
   name: AllowAllEnvFilesOptional
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AllowAllEnvFilesOptional_
+  href: api/DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional.html
   commentId: Overload:DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional
   nameWithType: IEnvLoader.AllowAllEnvFilesOptional
 - uid: DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   name: AllowConcatDuplicateKeys(ConcatKeysOptions)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
+  href: api/DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys.html#DotEnv_Core_IEnvLoader_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
   commentId: M:DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   fullName: DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   nameWithType: IEnvLoader.AllowConcatDuplicateKeys(ConcatKeysOptions)
 - uid: DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys*
   name: AllowConcatDuplicateKeys
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AllowConcatDuplicateKeys_
+  href: api/DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys.html
   commentId: Overload:DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys
   nameWithType: IEnvLoader.AllowConcatDuplicateKeys
 - uid: DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars
   name: AllowOverwriteExistingVars()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AllowOverwriteExistingVars
+  href: api/DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars.html#DotEnv_Core_IEnvLoader_AllowOverwriteExistingVars
   commentId: M:DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars
   fullName: DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars()
   nameWithType: IEnvLoader.AllowOverwriteExistingVars()
 - uid: DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars*
   name: AllowOverwriteExistingVars
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AllowOverwriteExistingVars_
+  href: api/DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars.html
   commentId: Overload:DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars
   nameWithType: IEnvLoader.AllowOverwriteExistingVars
 - uid: DotEnv.Core.IEnvLoader.AvoidModifyEnvironment
   name: AvoidModifyEnvironment()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AvoidModifyEnvironment
+  href: api/DotEnv.Core.IEnvLoader.AvoidModifyEnvironment.html#DotEnv_Core_IEnvLoader_AvoidModifyEnvironment
   commentId: M:DotEnv.Core.IEnvLoader.AvoidModifyEnvironment
   fullName: DotEnv.Core.IEnvLoader.AvoidModifyEnvironment()
   nameWithType: IEnvLoader.AvoidModifyEnvironment()
 - uid: DotEnv.Core.IEnvLoader.AvoidModifyEnvironment*
   name: AvoidModifyEnvironment
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AvoidModifyEnvironment_
+  href: api/DotEnv.Core.IEnvLoader.AvoidModifyEnvironment.html
   commentId: Overload:DotEnv.Core.IEnvLoader.AvoidModifyEnvironment
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.AvoidModifyEnvironment
   nameWithType: IEnvLoader.AvoidModifyEnvironment
 - uid: DotEnv.Core.IEnvLoader.DisableTrimEndKeys
   name: DisableTrimEndKeys()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimEndKeys
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimEndKeys.html#DotEnv_Core_IEnvLoader_DisableTrimEndKeys
   commentId: M:DotEnv.Core.IEnvLoader.DisableTrimEndKeys
   fullName: DotEnv.Core.IEnvLoader.DisableTrimEndKeys()
   nameWithType: IEnvLoader.DisableTrimEndKeys()
 - uid: DotEnv.Core.IEnvLoader.DisableTrimEndKeys*
   name: DisableTrimEndKeys
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimEndKeys_
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimEndKeys.html
   commentId: Overload:DotEnv.Core.IEnvLoader.DisableTrimEndKeys
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.DisableTrimEndKeys
   nameWithType: IEnvLoader.DisableTrimEndKeys
 - uid: DotEnv.Core.IEnvLoader.DisableTrimEndValues
   name: DisableTrimEndValues()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimEndValues
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimEndValues.html#DotEnv_Core_IEnvLoader_DisableTrimEndValues
   commentId: M:DotEnv.Core.IEnvLoader.DisableTrimEndValues
   fullName: DotEnv.Core.IEnvLoader.DisableTrimEndValues()
   nameWithType: IEnvLoader.DisableTrimEndValues()
 - uid: DotEnv.Core.IEnvLoader.DisableTrimEndValues*
   name: DisableTrimEndValues
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimEndValues_
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimEndValues.html
   commentId: Overload:DotEnv.Core.IEnvLoader.DisableTrimEndValues
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.DisableTrimEndValues
   nameWithType: IEnvLoader.DisableTrimEndValues
 - uid: DotEnv.Core.IEnvLoader.DisableTrimKeys
   name: DisableTrimKeys()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimKeys
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimKeys.html#DotEnv_Core_IEnvLoader_DisableTrimKeys
   commentId: M:DotEnv.Core.IEnvLoader.DisableTrimKeys
   fullName: DotEnv.Core.IEnvLoader.DisableTrimKeys()
   nameWithType: IEnvLoader.DisableTrimKeys()
 - uid: DotEnv.Core.IEnvLoader.DisableTrimKeys*
   name: DisableTrimKeys
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimKeys_
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimKeys.html
   commentId: Overload:DotEnv.Core.IEnvLoader.DisableTrimKeys
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.DisableTrimKeys
   nameWithType: IEnvLoader.DisableTrimKeys
 - uid: DotEnv.Core.IEnvLoader.DisableTrimStartComments
   name: DisableTrimStartComments()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimStartComments
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimStartComments.html#DotEnv_Core_IEnvLoader_DisableTrimStartComments
   commentId: M:DotEnv.Core.IEnvLoader.DisableTrimStartComments
   fullName: DotEnv.Core.IEnvLoader.DisableTrimStartComments()
   nameWithType: IEnvLoader.DisableTrimStartComments()
 - uid: DotEnv.Core.IEnvLoader.DisableTrimStartComments*
   name: DisableTrimStartComments
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimStartComments_
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimStartComments.html
   commentId: Overload:DotEnv.Core.IEnvLoader.DisableTrimStartComments
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.DisableTrimStartComments
   nameWithType: IEnvLoader.DisableTrimStartComments
 - uid: DotEnv.Core.IEnvLoader.DisableTrimStartKeys
   name: DisableTrimStartKeys()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimStartKeys
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimStartKeys.html#DotEnv_Core_IEnvLoader_DisableTrimStartKeys
   commentId: M:DotEnv.Core.IEnvLoader.DisableTrimStartKeys
   fullName: DotEnv.Core.IEnvLoader.DisableTrimStartKeys()
   nameWithType: IEnvLoader.DisableTrimStartKeys()
 - uid: DotEnv.Core.IEnvLoader.DisableTrimStartKeys*
   name: DisableTrimStartKeys
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimStartKeys_
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimStartKeys.html
   commentId: Overload:DotEnv.Core.IEnvLoader.DisableTrimStartKeys
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.DisableTrimStartKeys
   nameWithType: IEnvLoader.DisableTrimStartKeys
 - uid: DotEnv.Core.IEnvLoader.DisableTrimStartValues
   name: DisableTrimStartValues()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimStartValues
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimStartValues.html#DotEnv_Core_IEnvLoader_DisableTrimStartValues
   commentId: M:DotEnv.Core.IEnvLoader.DisableTrimStartValues
   fullName: DotEnv.Core.IEnvLoader.DisableTrimStartValues()
   nameWithType: IEnvLoader.DisableTrimStartValues()
 - uid: DotEnv.Core.IEnvLoader.DisableTrimStartValues*
   name: DisableTrimStartValues
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimStartValues_
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimStartValues.html
   commentId: Overload:DotEnv.Core.IEnvLoader.DisableTrimStartValues
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.DisableTrimStartValues
   nameWithType: IEnvLoader.DisableTrimStartValues
 - uid: DotEnv.Core.IEnvLoader.DisableTrimValues
   name: DisableTrimValues()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimValues
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimValues.html#DotEnv_Core_IEnvLoader_DisableTrimValues
   commentId: M:DotEnv.Core.IEnvLoader.DisableTrimValues
   fullName: DotEnv.Core.IEnvLoader.DisableTrimValues()
   nameWithType: IEnvLoader.DisableTrimValues()
 - uid: DotEnv.Core.IEnvLoader.DisableTrimValues*
   name: DisableTrimValues
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_DisableTrimValues_
+  href: api/DotEnv.Core.IEnvLoader.DisableTrimValues.html
   commentId: Overload:DotEnv.Core.IEnvLoader.DisableTrimValues
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.DisableTrimValues
   nameWithType: IEnvLoader.DisableTrimValues
 - uid: DotEnv.Core.IEnvLoader.EnableFileNotFoundException
   name: EnableFileNotFoundException()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_EnableFileNotFoundException
+  href: api/DotEnv.Core.IEnvLoader.EnableFileNotFoundException.html#DotEnv_Core_IEnvLoader_EnableFileNotFoundException
   commentId: M:DotEnv.Core.IEnvLoader.EnableFileNotFoundException
   fullName: DotEnv.Core.IEnvLoader.EnableFileNotFoundException()
   nameWithType: IEnvLoader.EnableFileNotFoundException()
 - uid: DotEnv.Core.IEnvLoader.EnableFileNotFoundException*
   name: EnableFileNotFoundException
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_EnableFileNotFoundException_
+  href: api/DotEnv.Core.IEnvLoader.EnableFileNotFoundException.html
   commentId: Overload:DotEnv.Core.IEnvLoader.EnableFileNotFoundException
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.EnableFileNotFoundException
   nameWithType: IEnvLoader.EnableFileNotFoundException
 - uid: DotEnv.Core.IEnvLoader.IgnoreParentDirectories
   name: IgnoreParentDirectories()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParentDirectories
+  href: api/DotEnv.Core.IEnvLoader.IgnoreParentDirectories.html#DotEnv_Core_IEnvLoader_IgnoreParentDirectories
   commentId: M:DotEnv.Core.IEnvLoader.IgnoreParentDirectories
   fullName: DotEnv.Core.IEnvLoader.IgnoreParentDirectories()
   nameWithType: IEnvLoader.IgnoreParentDirectories()
 - uid: DotEnv.Core.IEnvLoader.IgnoreParentDirectories*
   name: IgnoreParentDirectories
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParentDirectories_
+  href: api/DotEnv.Core.IEnvLoader.IgnoreParentDirectories.html
   commentId: Overload:DotEnv.Core.IEnvLoader.IgnoreParentDirectories
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.IgnoreParentDirectories
   nameWithType: IEnvLoader.IgnoreParentDirectories
 - uid: DotEnv.Core.IEnvLoader.IgnoreParserException
   name: IgnoreParserException()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParserException
+  href: api/DotEnv.Core.IEnvLoader.IgnoreParserException.html#DotEnv_Core_IEnvLoader_IgnoreParserException
   commentId: M:DotEnv.Core.IEnvLoader.IgnoreParserException
   fullName: DotEnv.Core.IEnvLoader.IgnoreParserException()
   nameWithType: IEnvLoader.IgnoreParserException()
 - uid: DotEnv.Core.IEnvLoader.IgnoreParserException*
   name: IgnoreParserException
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_IgnoreParserException_
+  href: api/DotEnv.Core.IEnvLoader.IgnoreParserException.html
   commentId: Overload:DotEnv.Core.IEnvLoader.IgnoreParserException
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.IgnoreParserException
   nameWithType: IEnvLoader.IgnoreParserException
 - uid: DotEnv.Core.IEnvLoader.Load
   name: Load()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_Load
+  href: api/DotEnv.Core.IEnvLoader.Load.html#DotEnv_Core_IEnvLoader_Load
   commentId: M:DotEnv.Core.IEnvLoader.Load
   fullName: DotEnv.Core.IEnvLoader.Load()
   nameWithType: IEnvLoader.Load()
 - uid: DotEnv.Core.IEnvLoader.Load(DotEnv.Core.EnvValidationResult@)
   name: Load(out EnvValidationResult)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_Load_DotEnv_Core_EnvValidationResult__
+  href: api/DotEnv.Core.IEnvLoader.Load.html#DotEnv_Core_IEnvLoader_Load_DotEnv_Core_EnvValidationResult__
   commentId: M:DotEnv.Core.IEnvLoader.Load(DotEnv.Core.EnvValidationResult@)
   name.vb: Load(ByRef EnvValidationResult)
   fullName: DotEnv.Core.IEnvLoader.Load(out DotEnv.Core.EnvValidationResult)
@@ -1842,20 +1722,19 @@ references:
   nameWithType.vb: IEnvLoader.Load(ByRef EnvValidationResult)
 - uid: DotEnv.Core.IEnvLoader.Load*
   name: Load
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_Load_
+  href: api/DotEnv.Core.IEnvLoader.Load.html
   commentId: Overload:DotEnv.Core.IEnvLoader.Load
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.Load
   nameWithType: IEnvLoader.Load
 - uid: DotEnv.Core.IEnvLoader.LoadEnv
   name: LoadEnv()
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_LoadEnv
+  href: api/DotEnv.Core.IEnvLoader.LoadEnv.html#DotEnv_Core_IEnvLoader_LoadEnv
   commentId: M:DotEnv.Core.IEnvLoader.LoadEnv
   fullName: DotEnv.Core.IEnvLoader.LoadEnv()
   nameWithType: IEnvLoader.LoadEnv()
 - uid: DotEnv.Core.IEnvLoader.LoadEnv(DotEnv.Core.EnvValidationResult@)
   name: LoadEnv(out EnvValidationResult)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_LoadEnv_DotEnv_Core_EnvValidationResult__
+  href: api/DotEnv.Core.IEnvLoader.LoadEnv.html#DotEnv_Core_IEnvLoader_LoadEnv_DotEnv_Core_EnvValidationResult__
   commentId: M:DotEnv.Core.IEnvLoader.LoadEnv(DotEnv.Core.EnvValidationResult@)
   name.vb: LoadEnv(ByRef EnvValidationResult)
   fullName: DotEnv.Core.IEnvLoader.LoadEnv(out DotEnv.Core.EnvValidationResult)
@@ -1864,106 +1743,98 @@ references:
   nameWithType.vb: IEnvLoader.LoadEnv(ByRef EnvValidationResult)
 - uid: DotEnv.Core.IEnvLoader.LoadEnv*
   name: LoadEnv
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_LoadEnv_
+  href: api/DotEnv.Core.IEnvLoader.LoadEnv.html
   commentId: Overload:DotEnv.Core.IEnvLoader.LoadEnv
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.LoadEnv
   nameWithType: IEnvLoader.LoadEnv
 - uid: DotEnv.Core.IEnvLoader.SetBasePath(System.String)
   name: SetBasePath(String)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetBasePath_System_String_
+  href: api/DotEnv.Core.IEnvLoader.SetBasePath.html#DotEnv_Core_IEnvLoader_SetBasePath_System_String_
   commentId: M:DotEnv.Core.IEnvLoader.SetBasePath(System.String)
   fullName: DotEnv.Core.IEnvLoader.SetBasePath(System.String)
   nameWithType: IEnvLoader.SetBasePath(String)
 - uid: DotEnv.Core.IEnvLoader.SetBasePath*
   name: SetBasePath
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetBasePath_
+  href: api/DotEnv.Core.IEnvLoader.SetBasePath.html
   commentId: Overload:DotEnv.Core.IEnvLoader.SetBasePath
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.SetBasePath
   nameWithType: IEnvLoader.SetBasePath
 - uid: DotEnv.Core.IEnvLoader.SetCommentChar(System.Char)
   name: SetCommentChar(Char)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetCommentChar_System_Char_
+  href: api/DotEnv.Core.IEnvLoader.SetCommentChar.html#DotEnv_Core_IEnvLoader_SetCommentChar_System_Char_
   commentId: M:DotEnv.Core.IEnvLoader.SetCommentChar(System.Char)
   fullName: DotEnv.Core.IEnvLoader.SetCommentChar(System.Char)
   nameWithType: IEnvLoader.SetCommentChar(Char)
 - uid: DotEnv.Core.IEnvLoader.SetCommentChar*
   name: SetCommentChar
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetCommentChar_
+  href: api/DotEnv.Core.IEnvLoader.SetCommentChar.html
   commentId: Overload:DotEnv.Core.IEnvLoader.SetCommentChar
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.SetCommentChar
   nameWithType: IEnvLoader.SetCommentChar
 - uid: DotEnv.Core.IEnvLoader.SetDefaultEnvFileName(System.String)
   name: SetDefaultEnvFileName(String)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetDefaultEnvFileName_System_String_
+  href: api/DotEnv.Core.IEnvLoader.SetDefaultEnvFileName.html#DotEnv_Core_IEnvLoader_SetDefaultEnvFileName_System_String_
   commentId: M:DotEnv.Core.IEnvLoader.SetDefaultEnvFileName(System.String)
   fullName: DotEnv.Core.IEnvLoader.SetDefaultEnvFileName(System.String)
   nameWithType: IEnvLoader.SetDefaultEnvFileName(String)
 - uid: DotEnv.Core.IEnvLoader.SetDefaultEnvFileName*
   name: SetDefaultEnvFileName
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetDefaultEnvFileName_
+  href: api/DotEnv.Core.IEnvLoader.SetDefaultEnvFileName.html
   commentId: Overload:DotEnv.Core.IEnvLoader.SetDefaultEnvFileName
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.SetDefaultEnvFileName
   nameWithType: IEnvLoader.SetDefaultEnvFileName
 - uid: DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair(System.Char)
   name: SetDelimiterKeyValuePair(Char)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetDelimiterKeyValuePair_System_Char_
+  href: api/DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair.html#DotEnv_Core_IEnvLoader_SetDelimiterKeyValuePair_System_Char_
   commentId: M:DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair(System.Char)
   fullName: DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair(System.Char)
   nameWithType: IEnvLoader.SetDelimiterKeyValuePair(Char)
 - uid: DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair*
   name: SetDelimiterKeyValuePair
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetDelimiterKeyValuePair_
+  href: api/DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair.html
   commentId: Overload:DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair
   nameWithType: IEnvLoader.SetDelimiterKeyValuePair
 - uid: DotEnv.Core.IEnvLoader.SetEncoding(System.String)
   name: SetEncoding(String)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEncoding_System_String_
+  href: api/DotEnv.Core.IEnvLoader.SetEncoding.html#DotEnv_Core_IEnvLoader_SetEncoding_System_String_
   commentId: M:DotEnv.Core.IEnvLoader.SetEncoding(System.String)
   fullName: DotEnv.Core.IEnvLoader.SetEncoding(System.String)
   nameWithType: IEnvLoader.SetEncoding(String)
 - uid: DotEnv.Core.IEnvLoader.SetEncoding(System.Text.Encoding)
   name: SetEncoding(Encoding)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEncoding_System_Text_Encoding_
+  href: api/DotEnv.Core.IEnvLoader.SetEncoding.html#DotEnv_Core_IEnvLoader_SetEncoding_System_Text_Encoding_
   commentId: M:DotEnv.Core.IEnvLoader.SetEncoding(System.Text.Encoding)
   fullName: DotEnv.Core.IEnvLoader.SetEncoding(System.Text.Encoding)
   nameWithType: IEnvLoader.SetEncoding(Encoding)
 - uid: DotEnv.Core.IEnvLoader.SetEncoding*
   name: SetEncoding
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEncoding_
+  href: api/DotEnv.Core.IEnvLoader.SetEncoding.html
   commentId: Overload:DotEnv.Core.IEnvLoader.SetEncoding
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.SetEncoding
   nameWithType: IEnvLoader.SetEncoding
 - uid: DotEnv.Core.IEnvLoader.SetEnvironmentName(System.String)
   name: SetEnvironmentName(String)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEnvironmentName_System_String_
+  href: api/DotEnv.Core.IEnvLoader.SetEnvironmentName.html#DotEnv_Core_IEnvLoader_SetEnvironmentName_System_String_
   commentId: M:DotEnv.Core.IEnvLoader.SetEnvironmentName(System.String)
   fullName: DotEnv.Core.IEnvLoader.SetEnvironmentName(System.String)
   nameWithType: IEnvLoader.SetEnvironmentName(String)
 - uid: DotEnv.Core.IEnvLoader.SetEnvironmentName*
   name: SetEnvironmentName
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEnvironmentName_
+  href: api/DotEnv.Core.IEnvLoader.SetEnvironmentName.html
   commentId: Overload:DotEnv.Core.IEnvLoader.SetEnvironmentName
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.SetEnvironmentName
   nameWithType: IEnvLoader.SetEnvironmentName
 - uid: DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   name: SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider.html#DotEnv_Core_IEnvLoader_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
   commentId: M:DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   fullName: DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   nameWithType: IEnvLoader.SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
 - uid: DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider*
   name: SetEnvironmentVariablesProvider
-  href: api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_SetEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider.html
   commentId: Overload:DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider
   nameWithType: IEnvLoader.SetEnvironmentVariablesProvider
 - uid: DotEnv.Core.IEnvParser
@@ -1974,156 +1845,145 @@ references:
   nameWithType: IEnvParser
 - uid: DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   name: AllowConcatDuplicateKeys(ConcatKeysOptions)
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
+  href: api/DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys.html#DotEnv_Core_IEnvParser_AllowConcatDuplicateKeys_DotEnv_Core_ConcatKeysOptions_
   commentId: M:DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   fullName: DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys(DotEnv.Core.ConcatKeysOptions)
   nameWithType: IEnvParser.AllowConcatDuplicateKeys(ConcatKeysOptions)
 - uid: DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys*
   name: AllowConcatDuplicateKeys
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_AllowConcatDuplicateKeys_
+  href: api/DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys.html
   commentId: Overload:DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys
   nameWithType: IEnvParser.AllowConcatDuplicateKeys
 - uid: DotEnv.Core.IEnvParser.AllowOverwriteExistingVars
   name: AllowOverwriteExistingVars()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_AllowOverwriteExistingVars
+  href: api/DotEnv.Core.IEnvParser.AllowOverwriteExistingVars.html#DotEnv_Core_IEnvParser_AllowOverwriteExistingVars
   commentId: M:DotEnv.Core.IEnvParser.AllowOverwriteExistingVars
   fullName: DotEnv.Core.IEnvParser.AllowOverwriteExistingVars()
   nameWithType: IEnvParser.AllowOverwriteExistingVars()
 - uid: DotEnv.Core.IEnvParser.AllowOverwriteExistingVars*
   name: AllowOverwriteExistingVars
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_AllowOverwriteExistingVars_
+  href: api/DotEnv.Core.IEnvParser.AllowOverwriteExistingVars.html
   commentId: Overload:DotEnv.Core.IEnvParser.AllowOverwriteExistingVars
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.AllowOverwriteExistingVars
   nameWithType: IEnvParser.AllowOverwriteExistingVars
 - uid: DotEnv.Core.IEnvParser.AvoidModifyEnvironment
   name: AvoidModifyEnvironment()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_AvoidModifyEnvironment
+  href: api/DotEnv.Core.IEnvParser.AvoidModifyEnvironment.html#DotEnv_Core_IEnvParser_AvoidModifyEnvironment
   commentId: M:DotEnv.Core.IEnvParser.AvoidModifyEnvironment
   fullName: DotEnv.Core.IEnvParser.AvoidModifyEnvironment()
   nameWithType: IEnvParser.AvoidModifyEnvironment()
 - uid: DotEnv.Core.IEnvParser.AvoidModifyEnvironment*
   name: AvoidModifyEnvironment
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_AvoidModifyEnvironment_
+  href: api/DotEnv.Core.IEnvParser.AvoidModifyEnvironment.html
   commentId: Overload:DotEnv.Core.IEnvParser.AvoidModifyEnvironment
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.AvoidModifyEnvironment
   nameWithType: IEnvParser.AvoidModifyEnvironment
 - uid: DotEnv.Core.IEnvParser.DisableTrimEndKeys
   name: DisableTrimEndKeys()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimEndKeys
+  href: api/DotEnv.Core.IEnvParser.DisableTrimEndKeys.html#DotEnv_Core_IEnvParser_DisableTrimEndKeys
   commentId: M:DotEnv.Core.IEnvParser.DisableTrimEndKeys
   fullName: DotEnv.Core.IEnvParser.DisableTrimEndKeys()
   nameWithType: IEnvParser.DisableTrimEndKeys()
 - uid: DotEnv.Core.IEnvParser.DisableTrimEndKeys*
   name: DisableTrimEndKeys
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimEndKeys_
+  href: api/DotEnv.Core.IEnvParser.DisableTrimEndKeys.html
   commentId: Overload:DotEnv.Core.IEnvParser.DisableTrimEndKeys
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.DisableTrimEndKeys
   nameWithType: IEnvParser.DisableTrimEndKeys
 - uid: DotEnv.Core.IEnvParser.DisableTrimEndValues
   name: DisableTrimEndValues()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimEndValues
+  href: api/DotEnv.Core.IEnvParser.DisableTrimEndValues.html#DotEnv_Core_IEnvParser_DisableTrimEndValues
   commentId: M:DotEnv.Core.IEnvParser.DisableTrimEndValues
   fullName: DotEnv.Core.IEnvParser.DisableTrimEndValues()
   nameWithType: IEnvParser.DisableTrimEndValues()
 - uid: DotEnv.Core.IEnvParser.DisableTrimEndValues*
   name: DisableTrimEndValues
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimEndValues_
+  href: api/DotEnv.Core.IEnvParser.DisableTrimEndValues.html
   commentId: Overload:DotEnv.Core.IEnvParser.DisableTrimEndValues
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.DisableTrimEndValues
   nameWithType: IEnvParser.DisableTrimEndValues
 - uid: DotEnv.Core.IEnvParser.DisableTrimKeys
   name: DisableTrimKeys()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimKeys
+  href: api/DotEnv.Core.IEnvParser.DisableTrimKeys.html#DotEnv_Core_IEnvParser_DisableTrimKeys
   commentId: M:DotEnv.Core.IEnvParser.DisableTrimKeys
   fullName: DotEnv.Core.IEnvParser.DisableTrimKeys()
   nameWithType: IEnvParser.DisableTrimKeys()
 - uid: DotEnv.Core.IEnvParser.DisableTrimKeys*
   name: DisableTrimKeys
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimKeys_
+  href: api/DotEnv.Core.IEnvParser.DisableTrimKeys.html
   commentId: Overload:DotEnv.Core.IEnvParser.DisableTrimKeys
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.DisableTrimKeys
   nameWithType: IEnvParser.DisableTrimKeys
 - uid: DotEnv.Core.IEnvParser.DisableTrimStartComments
   name: DisableTrimStartComments()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimStartComments
+  href: api/DotEnv.Core.IEnvParser.DisableTrimStartComments.html#DotEnv_Core_IEnvParser_DisableTrimStartComments
   commentId: M:DotEnv.Core.IEnvParser.DisableTrimStartComments
   fullName: DotEnv.Core.IEnvParser.DisableTrimStartComments()
   nameWithType: IEnvParser.DisableTrimStartComments()
 - uid: DotEnv.Core.IEnvParser.DisableTrimStartComments*
   name: DisableTrimStartComments
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimStartComments_
+  href: api/DotEnv.Core.IEnvParser.DisableTrimStartComments.html
   commentId: Overload:DotEnv.Core.IEnvParser.DisableTrimStartComments
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.DisableTrimStartComments
   nameWithType: IEnvParser.DisableTrimStartComments
 - uid: DotEnv.Core.IEnvParser.DisableTrimStartKeys
   name: DisableTrimStartKeys()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimStartKeys
+  href: api/DotEnv.Core.IEnvParser.DisableTrimStartKeys.html#DotEnv_Core_IEnvParser_DisableTrimStartKeys
   commentId: M:DotEnv.Core.IEnvParser.DisableTrimStartKeys
   fullName: DotEnv.Core.IEnvParser.DisableTrimStartKeys()
   nameWithType: IEnvParser.DisableTrimStartKeys()
 - uid: DotEnv.Core.IEnvParser.DisableTrimStartKeys*
   name: DisableTrimStartKeys
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimStartKeys_
+  href: api/DotEnv.Core.IEnvParser.DisableTrimStartKeys.html
   commentId: Overload:DotEnv.Core.IEnvParser.DisableTrimStartKeys
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.DisableTrimStartKeys
   nameWithType: IEnvParser.DisableTrimStartKeys
 - uid: DotEnv.Core.IEnvParser.DisableTrimStartValues
   name: DisableTrimStartValues()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimStartValues
+  href: api/DotEnv.Core.IEnvParser.DisableTrimStartValues.html#DotEnv_Core_IEnvParser_DisableTrimStartValues
   commentId: M:DotEnv.Core.IEnvParser.DisableTrimStartValues
   fullName: DotEnv.Core.IEnvParser.DisableTrimStartValues()
   nameWithType: IEnvParser.DisableTrimStartValues()
 - uid: DotEnv.Core.IEnvParser.DisableTrimStartValues*
   name: DisableTrimStartValues
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimStartValues_
+  href: api/DotEnv.Core.IEnvParser.DisableTrimStartValues.html
   commentId: Overload:DotEnv.Core.IEnvParser.DisableTrimStartValues
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.DisableTrimStartValues
   nameWithType: IEnvParser.DisableTrimStartValues
 - uid: DotEnv.Core.IEnvParser.DisableTrimValues
   name: DisableTrimValues()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimValues
+  href: api/DotEnv.Core.IEnvParser.DisableTrimValues.html#DotEnv_Core_IEnvParser_DisableTrimValues
   commentId: M:DotEnv.Core.IEnvParser.DisableTrimValues
   fullName: DotEnv.Core.IEnvParser.DisableTrimValues()
   nameWithType: IEnvParser.DisableTrimValues()
 - uid: DotEnv.Core.IEnvParser.DisableTrimValues*
   name: DisableTrimValues
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_DisableTrimValues_
+  href: api/DotEnv.Core.IEnvParser.DisableTrimValues.html
   commentId: Overload:DotEnv.Core.IEnvParser.DisableTrimValues
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.DisableTrimValues
   nameWithType: IEnvParser.DisableTrimValues
 - uid: DotEnv.Core.IEnvParser.IgnoreParserException
   name: IgnoreParserException()
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_IgnoreParserException
+  href: api/DotEnv.Core.IEnvParser.IgnoreParserException.html#DotEnv_Core_IEnvParser_IgnoreParserException
   commentId: M:DotEnv.Core.IEnvParser.IgnoreParserException
   fullName: DotEnv.Core.IEnvParser.IgnoreParserException()
   nameWithType: IEnvParser.IgnoreParserException()
 - uid: DotEnv.Core.IEnvParser.IgnoreParserException*
   name: IgnoreParserException
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_IgnoreParserException_
+  href: api/DotEnv.Core.IEnvParser.IgnoreParserException.html
   commentId: Overload:DotEnv.Core.IEnvParser.IgnoreParserException
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.IgnoreParserException
   nameWithType: IEnvParser.IgnoreParserException
 - uid: DotEnv.Core.IEnvParser.Parse(System.String)
   name: Parse(String)
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_Parse_System_String_
+  href: api/DotEnv.Core.IEnvParser.Parse.html#DotEnv_Core_IEnvParser_Parse_System_String_
   commentId: M:DotEnv.Core.IEnvParser.Parse(System.String)
   fullName: DotEnv.Core.IEnvParser.Parse(System.String)
   nameWithType: IEnvParser.Parse(String)
 - uid: DotEnv.Core.IEnvParser.Parse(System.String,DotEnv.Core.EnvValidationResult@)
   name: Parse(String, out EnvValidationResult)
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_Parse_System_String_DotEnv_Core_EnvValidationResult__
+  href: api/DotEnv.Core.IEnvParser.Parse.html#DotEnv_Core_IEnvParser_Parse_System_String_DotEnv_Core_EnvValidationResult__
   commentId: M:DotEnv.Core.IEnvParser.Parse(System.String,DotEnv.Core.EnvValidationResult@)
   name.vb: Parse(String, ByRef EnvValidationResult)
   fullName: DotEnv.Core.IEnvParser.Parse(System.String, out DotEnv.Core.EnvValidationResult)
@@ -2132,48 +1992,44 @@ references:
   nameWithType.vb: IEnvParser.Parse(String, ByRef EnvValidationResult)
 - uid: DotEnv.Core.IEnvParser.Parse*
   name: Parse
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_Parse_
+  href: api/DotEnv.Core.IEnvParser.Parse.html
   commentId: Overload:DotEnv.Core.IEnvParser.Parse
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.Parse
   nameWithType: IEnvParser.Parse
 - uid: DotEnv.Core.IEnvParser.SetCommentChar(System.Char)
   name: SetCommentChar(Char)
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_SetCommentChar_System_Char_
+  href: api/DotEnv.Core.IEnvParser.SetCommentChar.html#DotEnv_Core_IEnvParser_SetCommentChar_System_Char_
   commentId: M:DotEnv.Core.IEnvParser.SetCommentChar(System.Char)
   fullName: DotEnv.Core.IEnvParser.SetCommentChar(System.Char)
   nameWithType: IEnvParser.SetCommentChar(Char)
 - uid: DotEnv.Core.IEnvParser.SetCommentChar*
   name: SetCommentChar
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_SetCommentChar_
+  href: api/DotEnv.Core.IEnvParser.SetCommentChar.html
   commentId: Overload:DotEnv.Core.IEnvParser.SetCommentChar
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.SetCommentChar
   nameWithType: IEnvParser.SetCommentChar
 - uid: DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair(System.Char)
   name: SetDelimiterKeyValuePair(Char)
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_SetDelimiterKeyValuePair_System_Char_
+  href: api/DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair.html#DotEnv_Core_IEnvParser_SetDelimiterKeyValuePair_System_Char_
   commentId: M:DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair(System.Char)
   fullName: DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair(System.Char)
   nameWithType: IEnvParser.SetDelimiterKeyValuePair(Char)
 - uid: DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair*
   name: SetDelimiterKeyValuePair
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_SetDelimiterKeyValuePair_
+  href: api/DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair.html
   commentId: Overload:DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair
   nameWithType: IEnvParser.SetDelimiterKeyValuePair
 - uid: DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   name: SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider.html#DotEnv_Core_IEnvParser_SetEnvironmentVariablesProvider_DotEnv_Core_IEnvironmentVariablesProvider_
   commentId: M:DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   fullName: DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider(DotEnv.Core.IEnvironmentVariablesProvider)
   nameWithType: IEnvParser.SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider)
 - uid: DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider*
   name: SetEnvironmentVariablesProvider
-  href: api/DotEnv.Core.IEnvParser.html#DotEnv_Core_IEnvParser_SetEnvironmentVariablesProvider_
+  href: api/DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider.html
   commentId: Overload:DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider
   nameWithType: IEnvParser.SetEnvironmentVariablesProvider
 - uid: DotEnv.Core.IEnvReader
@@ -2184,384 +2040,355 @@ references:
   nameWithType: IEnvReader
 - uid: DotEnv.Core.IEnvReader.EnvBool(System.String,System.Boolean)
   name: EnvBool(String, Boolean)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvBool_System_String_System_Boolean_
+  href: api/DotEnv.Core.IEnvReader.EnvBool.html#DotEnv_Core_IEnvReader_EnvBool_System_String_System_Boolean_
   commentId: M:DotEnv.Core.IEnvReader.EnvBool(System.String,System.Boolean)
   fullName: DotEnv.Core.IEnvReader.EnvBool(System.String, System.Boolean)
   nameWithType: IEnvReader.EnvBool(String, Boolean)
 - uid: DotEnv.Core.IEnvReader.EnvBool*
   name: EnvBool
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvBool_
+  href: api/DotEnv.Core.IEnvReader.EnvBool.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvBool
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvBool
   nameWithType: IEnvReader.EnvBool
 - uid: DotEnv.Core.IEnvReader.EnvByte(System.String,System.Byte)
   name: EnvByte(String, Byte)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvByte_System_String_System_Byte_
+  href: api/DotEnv.Core.IEnvReader.EnvByte.html#DotEnv_Core_IEnvReader_EnvByte_System_String_System_Byte_
   commentId: M:DotEnv.Core.IEnvReader.EnvByte(System.String,System.Byte)
   fullName: DotEnv.Core.IEnvReader.EnvByte(System.String, System.Byte)
   nameWithType: IEnvReader.EnvByte(String, Byte)
 - uid: DotEnv.Core.IEnvReader.EnvByte*
   name: EnvByte
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvByte_
+  href: api/DotEnv.Core.IEnvReader.EnvByte.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvByte
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvByte
   nameWithType: IEnvReader.EnvByte
 - uid: DotEnv.Core.IEnvReader.EnvChar(System.String,System.Char)
   name: EnvChar(String, Char)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvChar_System_String_System_Char_
+  href: api/DotEnv.Core.IEnvReader.EnvChar.html#DotEnv_Core_IEnvReader_EnvChar_System_String_System_Char_
   commentId: M:DotEnv.Core.IEnvReader.EnvChar(System.String,System.Char)
   fullName: DotEnv.Core.IEnvReader.EnvChar(System.String, System.Char)
   nameWithType: IEnvReader.EnvChar(String, Char)
 - uid: DotEnv.Core.IEnvReader.EnvChar*
   name: EnvChar
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvChar_
+  href: api/DotEnv.Core.IEnvReader.EnvChar.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvChar
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvChar
   nameWithType: IEnvReader.EnvChar
 - uid: DotEnv.Core.IEnvReader.EnvDecimal(System.String,System.Decimal)
   name: EnvDecimal(String, Decimal)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvDecimal_System_String_System_Decimal_
+  href: api/DotEnv.Core.IEnvReader.EnvDecimal.html#DotEnv_Core_IEnvReader_EnvDecimal_System_String_System_Decimal_
   commentId: M:DotEnv.Core.IEnvReader.EnvDecimal(System.String,System.Decimal)
   fullName: DotEnv.Core.IEnvReader.EnvDecimal(System.String, System.Decimal)
   nameWithType: IEnvReader.EnvDecimal(String, Decimal)
 - uid: DotEnv.Core.IEnvReader.EnvDecimal*
   name: EnvDecimal
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvDecimal_
+  href: api/DotEnv.Core.IEnvReader.EnvDecimal.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvDecimal
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvDecimal
   nameWithType: IEnvReader.EnvDecimal
 - uid: DotEnv.Core.IEnvReader.EnvDouble(System.String,System.Double)
   name: EnvDouble(String, Double)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvDouble_System_String_System_Double_
+  href: api/DotEnv.Core.IEnvReader.EnvDouble.html#DotEnv_Core_IEnvReader_EnvDouble_System_String_System_Double_
   commentId: M:DotEnv.Core.IEnvReader.EnvDouble(System.String,System.Double)
   fullName: DotEnv.Core.IEnvReader.EnvDouble(System.String, System.Double)
   nameWithType: IEnvReader.EnvDouble(String, Double)
 - uid: DotEnv.Core.IEnvReader.EnvDouble*
   name: EnvDouble
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvDouble_
+  href: api/DotEnv.Core.IEnvReader.EnvDouble.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvDouble
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvDouble
   nameWithType: IEnvReader.EnvDouble
 - uid: DotEnv.Core.IEnvReader.EnvFloat(System.String,System.Single)
   name: EnvFloat(String, Single)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvFloat_System_String_System_Single_
+  href: api/DotEnv.Core.IEnvReader.EnvFloat.html#DotEnv_Core_IEnvReader_EnvFloat_System_String_System_Single_
   commentId: M:DotEnv.Core.IEnvReader.EnvFloat(System.String,System.Single)
   fullName: DotEnv.Core.IEnvReader.EnvFloat(System.String, System.Single)
   nameWithType: IEnvReader.EnvFloat(String, Single)
 - uid: DotEnv.Core.IEnvReader.EnvFloat*
   name: EnvFloat
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvFloat_
+  href: api/DotEnv.Core.IEnvReader.EnvFloat.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvFloat
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvFloat
   nameWithType: IEnvReader.EnvFloat
 - uid: DotEnv.Core.IEnvReader.EnvInt(System.String,System.Int32)
   name: EnvInt(String, Int32)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvInt_System_String_System_Int32_
+  href: api/DotEnv.Core.IEnvReader.EnvInt.html#DotEnv_Core_IEnvReader_EnvInt_System_String_System_Int32_
   commentId: M:DotEnv.Core.IEnvReader.EnvInt(System.String,System.Int32)
   fullName: DotEnv.Core.IEnvReader.EnvInt(System.String, System.Int32)
   nameWithType: IEnvReader.EnvInt(String, Int32)
 - uid: DotEnv.Core.IEnvReader.EnvInt*
   name: EnvInt
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvInt_
+  href: api/DotEnv.Core.IEnvReader.EnvInt.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvInt
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvInt
   nameWithType: IEnvReader.EnvInt
 - uid: DotEnv.Core.IEnvReader.EnvLong(System.String,System.Int64)
   name: EnvLong(String, Int64)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvLong_System_String_System_Int64_
+  href: api/DotEnv.Core.IEnvReader.EnvLong.html#DotEnv_Core_IEnvReader_EnvLong_System_String_System_Int64_
   commentId: M:DotEnv.Core.IEnvReader.EnvLong(System.String,System.Int64)
   fullName: DotEnv.Core.IEnvReader.EnvLong(System.String, System.Int64)
   nameWithType: IEnvReader.EnvLong(String, Int64)
 - uid: DotEnv.Core.IEnvReader.EnvLong*
   name: EnvLong
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvLong_
+  href: api/DotEnv.Core.IEnvReader.EnvLong.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvLong
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvLong
   nameWithType: IEnvReader.EnvLong
 - uid: DotEnv.Core.IEnvReader.EnvSByte(System.String,System.SByte)
   name: EnvSByte(String, SByte)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvSByte_System_String_System_SByte_
+  href: api/DotEnv.Core.IEnvReader.EnvSByte.html#DotEnv_Core_IEnvReader_EnvSByte_System_String_System_SByte_
   commentId: M:DotEnv.Core.IEnvReader.EnvSByte(System.String,System.SByte)
   fullName: DotEnv.Core.IEnvReader.EnvSByte(System.String, System.SByte)
   nameWithType: IEnvReader.EnvSByte(String, SByte)
 - uid: DotEnv.Core.IEnvReader.EnvSByte*
   name: EnvSByte
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvSByte_
+  href: api/DotEnv.Core.IEnvReader.EnvSByte.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvSByte
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvSByte
   nameWithType: IEnvReader.EnvSByte
 - uid: DotEnv.Core.IEnvReader.EnvShort(System.String,System.Int16)
   name: EnvShort(String, Int16)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvShort_System_String_System_Int16_
+  href: api/DotEnv.Core.IEnvReader.EnvShort.html#DotEnv_Core_IEnvReader_EnvShort_System_String_System_Int16_
   commentId: M:DotEnv.Core.IEnvReader.EnvShort(System.String,System.Int16)
   fullName: DotEnv.Core.IEnvReader.EnvShort(System.String, System.Int16)
   nameWithType: IEnvReader.EnvShort(String, Int16)
 - uid: DotEnv.Core.IEnvReader.EnvShort*
   name: EnvShort
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvShort_
+  href: api/DotEnv.Core.IEnvReader.EnvShort.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvShort
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvShort
   nameWithType: IEnvReader.EnvShort
 - uid: DotEnv.Core.IEnvReader.EnvString(System.String,System.String)
   name: EnvString(String, String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvString_System_String_System_String_
+  href: api/DotEnv.Core.IEnvReader.EnvString.html#DotEnv_Core_IEnvReader_EnvString_System_String_System_String_
   commentId: M:DotEnv.Core.IEnvReader.EnvString(System.String,System.String)
   fullName: DotEnv.Core.IEnvReader.EnvString(System.String, System.String)
   nameWithType: IEnvReader.EnvString(String, String)
 - uid: DotEnv.Core.IEnvReader.EnvString*
   name: EnvString
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvString_
+  href: api/DotEnv.Core.IEnvReader.EnvString.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvString
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvString
   nameWithType: IEnvReader.EnvString
 - uid: DotEnv.Core.IEnvReader.EnvUInt(System.String,System.UInt32)
   name: EnvUInt(String, UInt32)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvUInt_System_String_System_UInt32_
+  href: api/DotEnv.Core.IEnvReader.EnvUInt.html#DotEnv_Core_IEnvReader_EnvUInt_System_String_System_UInt32_
   commentId: M:DotEnv.Core.IEnvReader.EnvUInt(System.String,System.UInt32)
   fullName: DotEnv.Core.IEnvReader.EnvUInt(System.String, System.UInt32)
   nameWithType: IEnvReader.EnvUInt(String, UInt32)
 - uid: DotEnv.Core.IEnvReader.EnvUInt*
   name: EnvUInt
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvUInt_
+  href: api/DotEnv.Core.IEnvReader.EnvUInt.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvUInt
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvUInt
   nameWithType: IEnvReader.EnvUInt
 - uid: DotEnv.Core.IEnvReader.EnvULong(System.String,System.UInt64)
   name: EnvULong(String, UInt64)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvULong_System_String_System_UInt64_
+  href: api/DotEnv.Core.IEnvReader.EnvULong.html#DotEnv_Core_IEnvReader_EnvULong_System_String_System_UInt64_
   commentId: M:DotEnv.Core.IEnvReader.EnvULong(System.String,System.UInt64)
   fullName: DotEnv.Core.IEnvReader.EnvULong(System.String, System.UInt64)
   nameWithType: IEnvReader.EnvULong(String, UInt64)
 - uid: DotEnv.Core.IEnvReader.EnvULong*
   name: EnvULong
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvULong_
+  href: api/DotEnv.Core.IEnvReader.EnvULong.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvULong
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvULong
   nameWithType: IEnvReader.EnvULong
 - uid: DotEnv.Core.IEnvReader.EnvUShort(System.String,System.UInt16)
   name: EnvUShort(String, UInt16)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvUShort_System_String_System_UInt16_
+  href: api/DotEnv.Core.IEnvReader.EnvUShort.html#DotEnv_Core_IEnvReader_EnvUShort_System_String_System_UInt16_
   commentId: M:DotEnv.Core.IEnvReader.EnvUShort(System.String,System.UInt16)
   fullName: DotEnv.Core.IEnvReader.EnvUShort(System.String, System.UInt16)
   nameWithType: IEnvReader.EnvUShort(String, UInt16)
 - uid: DotEnv.Core.IEnvReader.EnvUShort*
   name: EnvUShort
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_EnvUShort_
+  href: api/DotEnv.Core.IEnvReader.EnvUShort.html
   commentId: Overload:DotEnv.Core.IEnvReader.EnvUShort
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.EnvUShort
   nameWithType: IEnvReader.EnvUShort
 - uid: DotEnv.Core.IEnvReader.GetBoolValue(System.String)
   name: GetBoolValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetBoolValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetBoolValue.html#DotEnv_Core_IEnvReader_GetBoolValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetBoolValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetBoolValue(System.String)
   nameWithType: IEnvReader.GetBoolValue(String)
 - uid: DotEnv.Core.IEnvReader.GetBoolValue*
   name: GetBoolValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetBoolValue_
+  href: api/DotEnv.Core.IEnvReader.GetBoolValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetBoolValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetBoolValue
   nameWithType: IEnvReader.GetBoolValue
 - uid: DotEnv.Core.IEnvReader.GetByteValue(System.String)
   name: GetByteValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetByteValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetByteValue.html#DotEnv_Core_IEnvReader_GetByteValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetByteValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetByteValue(System.String)
   nameWithType: IEnvReader.GetByteValue(String)
 - uid: DotEnv.Core.IEnvReader.GetByteValue*
   name: GetByteValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetByteValue_
+  href: api/DotEnv.Core.IEnvReader.GetByteValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetByteValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetByteValue
   nameWithType: IEnvReader.GetByteValue
 - uid: DotEnv.Core.IEnvReader.GetCharValue(System.String)
   name: GetCharValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetCharValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetCharValue.html#DotEnv_Core_IEnvReader_GetCharValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetCharValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetCharValue(System.String)
   nameWithType: IEnvReader.GetCharValue(String)
 - uid: DotEnv.Core.IEnvReader.GetCharValue*
   name: GetCharValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetCharValue_
+  href: api/DotEnv.Core.IEnvReader.GetCharValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetCharValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetCharValue
   nameWithType: IEnvReader.GetCharValue
 - uid: DotEnv.Core.IEnvReader.GetDecimalValue(System.String)
   name: GetDecimalValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetDecimalValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetDecimalValue.html#DotEnv_Core_IEnvReader_GetDecimalValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetDecimalValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetDecimalValue(System.String)
   nameWithType: IEnvReader.GetDecimalValue(String)
 - uid: DotEnv.Core.IEnvReader.GetDecimalValue*
   name: GetDecimalValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetDecimalValue_
+  href: api/DotEnv.Core.IEnvReader.GetDecimalValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetDecimalValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetDecimalValue
   nameWithType: IEnvReader.GetDecimalValue
 - uid: DotEnv.Core.IEnvReader.GetDoubleValue(System.String)
   name: GetDoubleValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetDoubleValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetDoubleValue.html#DotEnv_Core_IEnvReader_GetDoubleValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetDoubleValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetDoubleValue(System.String)
   nameWithType: IEnvReader.GetDoubleValue(String)
 - uid: DotEnv.Core.IEnvReader.GetDoubleValue*
   name: GetDoubleValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetDoubleValue_
+  href: api/DotEnv.Core.IEnvReader.GetDoubleValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetDoubleValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetDoubleValue
   nameWithType: IEnvReader.GetDoubleValue
 - uid: DotEnv.Core.IEnvReader.GetFloatValue(System.String)
   name: GetFloatValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetFloatValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetFloatValue.html#DotEnv_Core_IEnvReader_GetFloatValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetFloatValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetFloatValue(System.String)
   nameWithType: IEnvReader.GetFloatValue(String)
 - uid: DotEnv.Core.IEnvReader.GetFloatValue*
   name: GetFloatValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetFloatValue_
+  href: api/DotEnv.Core.IEnvReader.GetFloatValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetFloatValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetFloatValue
   nameWithType: IEnvReader.GetFloatValue
 - uid: DotEnv.Core.IEnvReader.GetIntValue(System.String)
   name: GetIntValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetIntValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetIntValue.html#DotEnv_Core_IEnvReader_GetIntValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetIntValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetIntValue(System.String)
   nameWithType: IEnvReader.GetIntValue(String)
 - uid: DotEnv.Core.IEnvReader.GetIntValue*
   name: GetIntValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetIntValue_
+  href: api/DotEnv.Core.IEnvReader.GetIntValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetIntValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetIntValue
   nameWithType: IEnvReader.GetIntValue
 - uid: DotEnv.Core.IEnvReader.GetLongValue(System.String)
   name: GetLongValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetLongValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetLongValue.html#DotEnv_Core_IEnvReader_GetLongValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetLongValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetLongValue(System.String)
   nameWithType: IEnvReader.GetLongValue(String)
 - uid: DotEnv.Core.IEnvReader.GetLongValue*
   name: GetLongValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetLongValue_
+  href: api/DotEnv.Core.IEnvReader.GetLongValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetLongValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetLongValue
   nameWithType: IEnvReader.GetLongValue
 - uid: DotEnv.Core.IEnvReader.GetSByteValue(System.String)
   name: GetSByteValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetSByteValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetSByteValue.html#DotEnv_Core_IEnvReader_GetSByteValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetSByteValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetSByteValue(System.String)
   nameWithType: IEnvReader.GetSByteValue(String)
 - uid: DotEnv.Core.IEnvReader.GetSByteValue*
   name: GetSByteValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetSByteValue_
+  href: api/DotEnv.Core.IEnvReader.GetSByteValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetSByteValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetSByteValue
   nameWithType: IEnvReader.GetSByteValue
 - uid: DotEnv.Core.IEnvReader.GetShortValue(System.String)
   name: GetShortValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetShortValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetShortValue.html#DotEnv_Core_IEnvReader_GetShortValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetShortValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetShortValue(System.String)
   nameWithType: IEnvReader.GetShortValue(String)
 - uid: DotEnv.Core.IEnvReader.GetShortValue*
   name: GetShortValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetShortValue_
+  href: api/DotEnv.Core.IEnvReader.GetShortValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetShortValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetShortValue
   nameWithType: IEnvReader.GetShortValue
 - uid: DotEnv.Core.IEnvReader.GetStringValue(System.String)
   name: GetStringValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetStringValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetStringValue.html#DotEnv_Core_IEnvReader_GetStringValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetStringValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetStringValue(System.String)
   nameWithType: IEnvReader.GetStringValue(String)
 - uid: DotEnv.Core.IEnvReader.GetStringValue*
   name: GetStringValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetStringValue_
+  href: api/DotEnv.Core.IEnvReader.GetStringValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetStringValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetStringValue
   nameWithType: IEnvReader.GetStringValue
 - uid: DotEnv.Core.IEnvReader.GetUIntValue(System.String)
   name: GetUIntValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetUIntValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetUIntValue.html#DotEnv_Core_IEnvReader_GetUIntValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetUIntValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetUIntValue(System.String)
   nameWithType: IEnvReader.GetUIntValue(String)
 - uid: DotEnv.Core.IEnvReader.GetUIntValue*
   name: GetUIntValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetUIntValue_
+  href: api/DotEnv.Core.IEnvReader.GetUIntValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetUIntValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetUIntValue
   nameWithType: IEnvReader.GetUIntValue
 - uid: DotEnv.Core.IEnvReader.GetULongValue(System.String)
   name: GetULongValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetULongValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetULongValue.html#DotEnv_Core_IEnvReader_GetULongValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetULongValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetULongValue(System.String)
   nameWithType: IEnvReader.GetULongValue(String)
 - uid: DotEnv.Core.IEnvReader.GetULongValue*
   name: GetULongValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetULongValue_
+  href: api/DotEnv.Core.IEnvReader.GetULongValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetULongValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetULongValue
   nameWithType: IEnvReader.GetULongValue
 - uid: DotEnv.Core.IEnvReader.GetUShortValue(System.String)
   name: GetUShortValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetUShortValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.GetUShortValue.html#DotEnv_Core_IEnvReader_GetUShortValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.GetUShortValue(System.String)
   fullName: DotEnv.Core.IEnvReader.GetUShortValue(System.String)
   nameWithType: IEnvReader.GetUShortValue(String)
 - uid: DotEnv.Core.IEnvReader.GetUShortValue*
   name: GetUShortValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_GetUShortValue_
+  href: api/DotEnv.Core.IEnvReader.GetUShortValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.GetUShortValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.GetUShortValue
   nameWithType: IEnvReader.GetUShortValue
 - uid: DotEnv.Core.IEnvReader.HasValue(System.String)
   name: HasValue(String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_HasValue_System_String_
+  href: api/DotEnv.Core.IEnvReader.HasValue.html#DotEnv_Core_IEnvReader_HasValue_System_String_
   commentId: M:DotEnv.Core.IEnvReader.HasValue(System.String)
   fullName: DotEnv.Core.IEnvReader.HasValue(System.String)
   nameWithType: IEnvReader.HasValue(String)
 - uid: DotEnv.Core.IEnvReader.HasValue*
   name: HasValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_HasValue_
+  href: api/DotEnv.Core.IEnvReader.HasValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.HasValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.HasValue
   nameWithType: IEnvReader.HasValue
 - uid: DotEnv.Core.IEnvReader.Item(System.String)
   name: Item[String]
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_Item_System_String_
+  href: api/DotEnv.Core.IEnvReader.Item.html#DotEnv_Core_IEnvReader_Item_System_String_
   commentId: P:DotEnv.Core.IEnvReader.Item(System.String)
   name.vb: Item(String)
   fullName: DotEnv.Core.IEnvReader.Item[System.String]
@@ -2570,14 +2397,13 @@ references:
   nameWithType.vb: IEnvReader.Item(String)
 - uid: DotEnv.Core.IEnvReader.Item*
   name: Item
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_Item_
+  href: api/DotEnv.Core.IEnvReader.Item.html
   commentId: Overload:DotEnv.Core.IEnvReader.Item
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.Item
   nameWithType: IEnvReader.Item
 - uid: DotEnv.Core.IEnvReader.TryGetBoolValue(System.String,System.Boolean@)
   name: TryGetBoolValue(String, out Boolean)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetBoolValue_System_String_System_Boolean__
+  href: api/DotEnv.Core.IEnvReader.TryGetBoolValue.html#DotEnv_Core_IEnvReader_TryGetBoolValue_System_String_System_Boolean__
   commentId: M:DotEnv.Core.IEnvReader.TryGetBoolValue(System.String,System.Boolean@)
   name.vb: TryGetBoolValue(String, ByRef Boolean)
   fullName: DotEnv.Core.IEnvReader.TryGetBoolValue(System.String, out System.Boolean)
@@ -2586,14 +2412,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetBoolValue(String, ByRef Boolean)
 - uid: DotEnv.Core.IEnvReader.TryGetBoolValue*
   name: TryGetBoolValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetBoolValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetBoolValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetBoolValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetBoolValue
   nameWithType: IEnvReader.TryGetBoolValue
 - uid: DotEnv.Core.IEnvReader.TryGetByteValue(System.String,System.Byte@)
   name: TryGetByteValue(String, out Byte)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetByteValue_System_String_System_Byte__
+  href: api/DotEnv.Core.IEnvReader.TryGetByteValue.html#DotEnv_Core_IEnvReader_TryGetByteValue_System_String_System_Byte__
   commentId: M:DotEnv.Core.IEnvReader.TryGetByteValue(System.String,System.Byte@)
   name.vb: TryGetByteValue(String, ByRef Byte)
   fullName: DotEnv.Core.IEnvReader.TryGetByteValue(System.String, out System.Byte)
@@ -2602,14 +2427,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetByteValue(String, ByRef Byte)
 - uid: DotEnv.Core.IEnvReader.TryGetByteValue*
   name: TryGetByteValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetByteValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetByteValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetByteValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetByteValue
   nameWithType: IEnvReader.TryGetByteValue
 - uid: DotEnv.Core.IEnvReader.TryGetCharValue(System.String,System.Char@)
   name: TryGetCharValue(String, out Char)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetCharValue_System_String_System_Char__
+  href: api/DotEnv.Core.IEnvReader.TryGetCharValue.html#DotEnv_Core_IEnvReader_TryGetCharValue_System_String_System_Char__
   commentId: M:DotEnv.Core.IEnvReader.TryGetCharValue(System.String,System.Char@)
   name.vb: TryGetCharValue(String, ByRef Char)
   fullName: DotEnv.Core.IEnvReader.TryGetCharValue(System.String, out System.Char)
@@ -2618,14 +2442,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetCharValue(String, ByRef Char)
 - uid: DotEnv.Core.IEnvReader.TryGetCharValue*
   name: TryGetCharValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetCharValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetCharValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetCharValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetCharValue
   nameWithType: IEnvReader.TryGetCharValue
 - uid: DotEnv.Core.IEnvReader.TryGetDecimalValue(System.String,System.Decimal@)
   name: TryGetDecimalValue(String, out Decimal)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetDecimalValue_System_String_System_Decimal__
+  href: api/DotEnv.Core.IEnvReader.TryGetDecimalValue.html#DotEnv_Core_IEnvReader_TryGetDecimalValue_System_String_System_Decimal__
   commentId: M:DotEnv.Core.IEnvReader.TryGetDecimalValue(System.String,System.Decimal@)
   name.vb: TryGetDecimalValue(String, ByRef Decimal)
   fullName: DotEnv.Core.IEnvReader.TryGetDecimalValue(System.String, out System.Decimal)
@@ -2634,14 +2457,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetDecimalValue(String, ByRef Decimal)
 - uid: DotEnv.Core.IEnvReader.TryGetDecimalValue*
   name: TryGetDecimalValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetDecimalValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetDecimalValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetDecimalValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetDecimalValue
   nameWithType: IEnvReader.TryGetDecimalValue
 - uid: DotEnv.Core.IEnvReader.TryGetDoubleValue(System.String,System.Double@)
   name: TryGetDoubleValue(String, out Double)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetDoubleValue_System_String_System_Double__
+  href: api/DotEnv.Core.IEnvReader.TryGetDoubleValue.html#DotEnv_Core_IEnvReader_TryGetDoubleValue_System_String_System_Double__
   commentId: M:DotEnv.Core.IEnvReader.TryGetDoubleValue(System.String,System.Double@)
   name.vb: TryGetDoubleValue(String, ByRef Double)
   fullName: DotEnv.Core.IEnvReader.TryGetDoubleValue(System.String, out System.Double)
@@ -2650,14 +2472,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetDoubleValue(String, ByRef Double)
 - uid: DotEnv.Core.IEnvReader.TryGetDoubleValue*
   name: TryGetDoubleValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetDoubleValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetDoubleValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetDoubleValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetDoubleValue
   nameWithType: IEnvReader.TryGetDoubleValue
 - uid: DotEnv.Core.IEnvReader.TryGetFloatValue(System.String,System.Single@)
   name: TryGetFloatValue(String, out Single)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetFloatValue_System_String_System_Single__
+  href: api/DotEnv.Core.IEnvReader.TryGetFloatValue.html#DotEnv_Core_IEnvReader_TryGetFloatValue_System_String_System_Single__
   commentId: M:DotEnv.Core.IEnvReader.TryGetFloatValue(System.String,System.Single@)
   name.vb: TryGetFloatValue(String, ByRef Single)
   fullName: DotEnv.Core.IEnvReader.TryGetFloatValue(System.String, out System.Single)
@@ -2666,14 +2487,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetFloatValue(String, ByRef Single)
 - uid: DotEnv.Core.IEnvReader.TryGetFloatValue*
   name: TryGetFloatValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetFloatValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetFloatValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetFloatValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetFloatValue
   nameWithType: IEnvReader.TryGetFloatValue
 - uid: DotEnv.Core.IEnvReader.TryGetIntValue(System.String,System.Int32@)
   name: TryGetIntValue(String, out Int32)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetIntValue_System_String_System_Int32__
+  href: api/DotEnv.Core.IEnvReader.TryGetIntValue.html#DotEnv_Core_IEnvReader_TryGetIntValue_System_String_System_Int32__
   commentId: M:DotEnv.Core.IEnvReader.TryGetIntValue(System.String,System.Int32@)
   name.vb: TryGetIntValue(String, ByRef Int32)
   fullName: DotEnv.Core.IEnvReader.TryGetIntValue(System.String, out System.Int32)
@@ -2682,14 +2502,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetIntValue(String, ByRef Int32)
 - uid: DotEnv.Core.IEnvReader.TryGetIntValue*
   name: TryGetIntValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetIntValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetIntValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetIntValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetIntValue
   nameWithType: IEnvReader.TryGetIntValue
 - uid: DotEnv.Core.IEnvReader.TryGetLongValue(System.String,System.Int64@)
   name: TryGetLongValue(String, out Int64)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetLongValue_System_String_System_Int64__
+  href: api/DotEnv.Core.IEnvReader.TryGetLongValue.html#DotEnv_Core_IEnvReader_TryGetLongValue_System_String_System_Int64__
   commentId: M:DotEnv.Core.IEnvReader.TryGetLongValue(System.String,System.Int64@)
   name.vb: TryGetLongValue(String, ByRef Int64)
   fullName: DotEnv.Core.IEnvReader.TryGetLongValue(System.String, out System.Int64)
@@ -2698,14 +2517,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetLongValue(String, ByRef Int64)
 - uid: DotEnv.Core.IEnvReader.TryGetLongValue*
   name: TryGetLongValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetLongValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetLongValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetLongValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetLongValue
   nameWithType: IEnvReader.TryGetLongValue
 - uid: DotEnv.Core.IEnvReader.TryGetSByteValue(System.String,System.SByte@)
   name: TryGetSByteValue(String, out SByte)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetSByteValue_System_String_System_SByte__
+  href: api/DotEnv.Core.IEnvReader.TryGetSByteValue.html#DotEnv_Core_IEnvReader_TryGetSByteValue_System_String_System_SByte__
   commentId: M:DotEnv.Core.IEnvReader.TryGetSByteValue(System.String,System.SByte@)
   name.vb: TryGetSByteValue(String, ByRef SByte)
   fullName: DotEnv.Core.IEnvReader.TryGetSByteValue(System.String, out System.SByte)
@@ -2714,14 +2532,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetSByteValue(String, ByRef SByte)
 - uid: DotEnv.Core.IEnvReader.TryGetSByteValue*
   name: TryGetSByteValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetSByteValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetSByteValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetSByteValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetSByteValue
   nameWithType: IEnvReader.TryGetSByteValue
 - uid: DotEnv.Core.IEnvReader.TryGetShortValue(System.String,System.Int16@)
   name: TryGetShortValue(String, out Int16)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetShortValue_System_String_System_Int16__
+  href: api/DotEnv.Core.IEnvReader.TryGetShortValue.html#DotEnv_Core_IEnvReader_TryGetShortValue_System_String_System_Int16__
   commentId: M:DotEnv.Core.IEnvReader.TryGetShortValue(System.String,System.Int16@)
   name.vb: TryGetShortValue(String, ByRef Int16)
   fullName: DotEnv.Core.IEnvReader.TryGetShortValue(System.String, out System.Int16)
@@ -2730,14 +2547,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetShortValue(String, ByRef Int16)
 - uid: DotEnv.Core.IEnvReader.TryGetShortValue*
   name: TryGetShortValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetShortValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetShortValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetShortValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetShortValue
   nameWithType: IEnvReader.TryGetShortValue
 - uid: DotEnv.Core.IEnvReader.TryGetStringValue(System.String,System.String@)
   name: TryGetStringValue(String, out String)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetStringValue_System_String_System_String__
+  href: api/DotEnv.Core.IEnvReader.TryGetStringValue.html#DotEnv_Core_IEnvReader_TryGetStringValue_System_String_System_String__
   commentId: M:DotEnv.Core.IEnvReader.TryGetStringValue(System.String,System.String@)
   name.vb: TryGetStringValue(String, ByRef String)
   fullName: DotEnv.Core.IEnvReader.TryGetStringValue(System.String, out System.String)
@@ -2746,14 +2562,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetStringValue(String, ByRef String)
 - uid: DotEnv.Core.IEnvReader.TryGetStringValue*
   name: TryGetStringValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetStringValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetStringValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetStringValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetStringValue
   nameWithType: IEnvReader.TryGetStringValue
 - uid: DotEnv.Core.IEnvReader.TryGetUIntValue(System.String,System.UInt32@)
   name: TryGetUIntValue(String, out UInt32)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetUIntValue_System_String_System_UInt32__
+  href: api/DotEnv.Core.IEnvReader.TryGetUIntValue.html#DotEnv_Core_IEnvReader_TryGetUIntValue_System_String_System_UInt32__
   commentId: M:DotEnv.Core.IEnvReader.TryGetUIntValue(System.String,System.UInt32@)
   name.vb: TryGetUIntValue(String, ByRef UInt32)
   fullName: DotEnv.Core.IEnvReader.TryGetUIntValue(System.String, out System.UInt32)
@@ -2762,14 +2577,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetUIntValue(String, ByRef UInt32)
 - uid: DotEnv.Core.IEnvReader.TryGetUIntValue*
   name: TryGetUIntValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetUIntValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetUIntValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetUIntValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetUIntValue
   nameWithType: IEnvReader.TryGetUIntValue
 - uid: DotEnv.Core.IEnvReader.TryGetULongValue(System.String,System.UInt64@)
   name: TryGetULongValue(String, out UInt64)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetULongValue_System_String_System_UInt64__
+  href: api/DotEnv.Core.IEnvReader.TryGetULongValue.html#DotEnv_Core_IEnvReader_TryGetULongValue_System_String_System_UInt64__
   commentId: M:DotEnv.Core.IEnvReader.TryGetULongValue(System.String,System.UInt64@)
   name.vb: TryGetULongValue(String, ByRef UInt64)
   fullName: DotEnv.Core.IEnvReader.TryGetULongValue(System.String, out System.UInt64)
@@ -2778,14 +2592,13 @@ references:
   nameWithType.vb: IEnvReader.TryGetULongValue(String, ByRef UInt64)
 - uid: DotEnv.Core.IEnvReader.TryGetULongValue*
   name: TryGetULongValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetULongValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetULongValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetULongValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetULongValue
   nameWithType: IEnvReader.TryGetULongValue
 - uid: DotEnv.Core.IEnvReader.TryGetUShortValue(System.String,System.UInt16@)
   name: TryGetUShortValue(String, out UInt16)
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetUShortValue_System_String_System_UInt16__
+  href: api/DotEnv.Core.IEnvReader.TryGetUShortValue.html#DotEnv_Core_IEnvReader_TryGetUShortValue_System_String_System_UInt16__
   commentId: M:DotEnv.Core.IEnvReader.TryGetUShortValue(System.String,System.UInt16@)
   name.vb: TryGetUShortValue(String, ByRef UInt16)
   fullName: DotEnv.Core.IEnvReader.TryGetUShortValue(System.String, out System.UInt16)
@@ -2794,9 +2607,8 @@ references:
   nameWithType.vb: IEnvReader.TryGetUShortValue(String, ByRef UInt16)
 - uid: DotEnv.Core.IEnvReader.TryGetUShortValue*
   name: TryGetUShortValue
-  href: api/DotEnv.Core.IEnvReader.html#DotEnv_Core_IEnvReader_TryGetUShortValue_
+  href: api/DotEnv.Core.IEnvReader.TryGetUShortValue.html
   commentId: Overload:DotEnv.Core.IEnvReader.TryGetUShortValue
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvReader.TryGetUShortValue
   nameWithType: IEnvReader.TryGetUShortValue
 - uid: DotEnv.Core.IEnvValidator
@@ -2807,20 +2619,19 @@ references:
   nameWithType: IEnvValidator
 - uid: DotEnv.Core.IEnvValidator.IgnoreException
   name: IgnoreException()
-  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_IgnoreException
+  href: api/DotEnv.Core.IEnvValidator.IgnoreException.html#DotEnv_Core_IEnvValidator_IgnoreException
   commentId: M:DotEnv.Core.IEnvValidator.IgnoreException
   fullName: DotEnv.Core.IEnvValidator.IgnoreException()
   nameWithType: IEnvValidator.IgnoreException()
 - uid: DotEnv.Core.IEnvValidator.IgnoreException*
   name: IgnoreException
-  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_IgnoreException_
+  href: api/DotEnv.Core.IEnvValidator.IgnoreException.html
   commentId: Overload:DotEnv.Core.IEnvValidator.IgnoreException
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvValidator.IgnoreException
   nameWithType: IEnvValidator.IgnoreException
 - uid: DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String[])
   name: SetRequiredKeys(String[])
-  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_System_String___
+  href: api/DotEnv.Core.IEnvValidator.SetRequiredKeys.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_System_String___
   commentId: M:DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String[])
   name.vb: SetRequiredKeys(String())
   fullName: DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String[])
@@ -2829,20 +2640,19 @@ references:
   nameWithType.vb: IEnvValidator.SetRequiredKeys(String())
 - uid: DotEnv.Core.IEnvValidator.SetRequiredKeys(System.Type)
   name: SetRequiredKeys(Type)
-  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_System_Type_
+  href: api/DotEnv.Core.IEnvValidator.SetRequiredKeys.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_System_Type_
   commentId: M:DotEnv.Core.IEnvValidator.SetRequiredKeys(System.Type)
   fullName: DotEnv.Core.IEnvValidator.SetRequiredKeys(System.Type)
   nameWithType: IEnvValidator.SetRequiredKeys(Type)
 - uid: DotEnv.Core.IEnvValidator.SetRequiredKeys*
   name: SetRequiredKeys
-  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_
+  href: api/DotEnv.Core.IEnvValidator.SetRequiredKeys.html
   commentId: Overload:DotEnv.Core.IEnvValidator.SetRequiredKeys
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvValidator.SetRequiredKeys
   nameWithType: IEnvValidator.SetRequiredKeys
 - uid: DotEnv.Core.IEnvValidator.SetRequiredKeys``1
   name: SetRequiredKeys<TKeys>()
-  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_SetRequiredKeys__1
+  href: api/DotEnv.Core.IEnvValidator.SetRequiredKeys.html#DotEnv_Core_IEnvValidator_SetRequiredKeys__1
   commentId: M:DotEnv.Core.IEnvValidator.SetRequiredKeys``1
   name.vb: SetRequiredKeys(Of TKeys)()
   fullName: DotEnv.Core.IEnvValidator.SetRequiredKeys<TKeys>()
@@ -2851,13 +2661,13 @@ references:
   nameWithType.vb: IEnvValidator.SetRequiredKeys(Of TKeys)()
 - uid: DotEnv.Core.IEnvValidator.Validate
   name: Validate()
-  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_Validate
+  href: api/DotEnv.Core.IEnvValidator.Validate.html#DotEnv_Core_IEnvValidator_Validate
   commentId: M:DotEnv.Core.IEnvValidator.Validate
   fullName: DotEnv.Core.IEnvValidator.Validate()
   nameWithType: IEnvValidator.Validate()
 - uid: DotEnv.Core.IEnvValidator.Validate(DotEnv.Core.EnvValidationResult@)
   name: Validate(out EnvValidationResult)
-  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_Validate_DotEnv_Core_EnvValidationResult__
+  href: api/DotEnv.Core.IEnvValidator.Validate.html#DotEnv_Core_IEnvValidator_Validate_DotEnv_Core_EnvValidationResult__
   commentId: M:DotEnv.Core.IEnvValidator.Validate(DotEnv.Core.EnvValidationResult@)
   name.vb: Validate(ByRef EnvValidationResult)
   fullName: DotEnv.Core.IEnvValidator.Validate(out DotEnv.Core.EnvValidationResult)
@@ -2866,9 +2676,8 @@ references:
   nameWithType.vb: IEnvValidator.Validate(ByRef EnvValidationResult)
 - uid: DotEnv.Core.IEnvValidator.Validate*
   name: Validate
-  href: api/DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_Validate_
+  href: api/DotEnv.Core.IEnvValidator.Validate.html
   commentId: Overload:DotEnv.Core.IEnvValidator.Validate
-  isSpec: "True"
   fullName: DotEnv.Core.IEnvValidator.Validate
   nameWithType: IEnvValidator.Validate
 - uid: DotEnv.Core.ParserException
@@ -2879,21 +2688,20 @@ references:
   nameWithType: ParserException
 - uid: DotEnv.Core.ParserException.#ctor
   name: ParserException()
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException__ctor
+  href: api/DotEnv.Core.ParserException.-ctor.html#DotEnv_Core_ParserException__ctor
   commentId: M:DotEnv.Core.ParserException.#ctor
   fullName: DotEnv.Core.ParserException.ParserException()
   nameWithType: ParserException.ParserException()
 - uid: DotEnv.Core.ParserException.#ctor(System.String)
   name: ParserException(String)
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException__ctor_System_String_
+  href: api/DotEnv.Core.ParserException.-ctor.html#DotEnv_Core_ParserException__ctor_System_String_
   commentId: M:DotEnv.Core.ParserException.#ctor(System.String)
   fullName: DotEnv.Core.ParserException.ParserException(System.String)
   nameWithType: ParserException.ParserException(String)
 - uid: DotEnv.Core.ParserException.#ctor*
   name: ParserException
-  href: api/DotEnv.Core.ParserException.html#DotEnv_Core_ParserException__ctor_
+  href: api/DotEnv.Core.ParserException.-ctor.html
   commentId: Overload:DotEnv.Core.ParserException.#ctor
-  isSpec: "True"
   fullName: DotEnv.Core.ParserException.ParserException
   nameWithType: ParserException.ParserException
 - uid: DotEnv.Core.RequiredKeysNotPresentException
@@ -2904,21 +2712,20 @@ references:
   nameWithType: RequiredKeysNotPresentException
 - uid: DotEnv.Core.RequiredKeysNotPresentException.#ctor
   name: RequiredKeysNotPresentException()
-  href: api/DotEnv.Core.RequiredKeysNotPresentException.html#DotEnv_Core_RequiredKeysNotPresentException__ctor
+  href: api/DotEnv.Core.RequiredKeysNotPresentException.-ctor.html#DotEnv_Core_RequiredKeysNotPresentException__ctor
   commentId: M:DotEnv.Core.RequiredKeysNotPresentException.#ctor
   fullName: DotEnv.Core.RequiredKeysNotPresentException.RequiredKeysNotPresentException()
   nameWithType: RequiredKeysNotPresentException.RequiredKeysNotPresentException()
 - uid: DotEnv.Core.RequiredKeysNotPresentException.#ctor(System.String)
   name: RequiredKeysNotPresentException(String)
-  href: api/DotEnv.Core.RequiredKeysNotPresentException.html#DotEnv_Core_RequiredKeysNotPresentException__ctor_System_String_
+  href: api/DotEnv.Core.RequiredKeysNotPresentException.-ctor.html#DotEnv_Core_RequiredKeysNotPresentException__ctor_System_String_
   commentId: M:DotEnv.Core.RequiredKeysNotPresentException.#ctor(System.String)
   fullName: DotEnv.Core.RequiredKeysNotPresentException.RequiredKeysNotPresentException(System.String)
   nameWithType: RequiredKeysNotPresentException.RequiredKeysNotPresentException(String)
 - uid: DotEnv.Core.RequiredKeysNotPresentException.#ctor*
   name: RequiredKeysNotPresentException
-  href: api/DotEnv.Core.RequiredKeysNotPresentException.html#DotEnv_Core_RequiredKeysNotPresentException__ctor_
+  href: api/DotEnv.Core.RequiredKeysNotPresentException.-ctor.html
   commentId: Overload:DotEnv.Core.RequiredKeysNotPresentException.#ctor
-  isSpec: "True"
   fullName: DotEnv.Core.RequiredKeysNotPresentException.RequiredKeysNotPresentException
   nameWithType: RequiredKeysNotPresentException.RequiredKeysNotPresentException
 - uid: DotEnv.Core.VariableNotSetException
@@ -2929,26 +2736,25 @@ references:
   nameWithType: VariableNotSetException
 - uid: DotEnv.Core.VariableNotSetException.#ctor
   name: VariableNotSetException()
-  href: api/DotEnv.Core.VariableNotSetException.html#DotEnv_Core_VariableNotSetException__ctor
+  href: api/DotEnv.Core.VariableNotSetException.-ctor.html#DotEnv_Core_VariableNotSetException__ctor
   commentId: M:DotEnv.Core.VariableNotSetException.#ctor
   fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException()
   nameWithType: VariableNotSetException.VariableNotSetException()
 - uid: DotEnv.Core.VariableNotSetException.#ctor(System.String)
   name: VariableNotSetException(String)
-  href: api/DotEnv.Core.VariableNotSetException.html#DotEnv_Core_VariableNotSetException__ctor_System_String_
+  href: api/DotEnv.Core.VariableNotSetException.-ctor.html#DotEnv_Core_VariableNotSetException__ctor_System_String_
   commentId: M:DotEnv.Core.VariableNotSetException.#ctor(System.String)
   fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException(System.String)
   nameWithType: VariableNotSetException.VariableNotSetException(String)
 - uid: DotEnv.Core.VariableNotSetException.#ctor(System.String,System.String)
   name: VariableNotSetException(String, String)
-  href: api/DotEnv.Core.VariableNotSetException.html#DotEnv_Core_VariableNotSetException__ctor_System_String_System_String_
+  href: api/DotEnv.Core.VariableNotSetException.-ctor.html#DotEnv_Core_VariableNotSetException__ctor_System_String_System_String_
   commentId: M:DotEnv.Core.VariableNotSetException.#ctor(System.String,System.String)
   fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException(System.String, System.String)
   nameWithType: VariableNotSetException.VariableNotSetException(String, String)
 - uid: DotEnv.Core.VariableNotSetException.#ctor*
   name: VariableNotSetException
-  href: api/DotEnv.Core.VariableNotSetException.html#DotEnv_Core_VariableNotSetException__ctor_
+  href: api/DotEnv.Core.VariableNotSetException.-ctor.html
   commentId: Overload:DotEnv.Core.VariableNotSetException.#ctor
-  isSpec: "True"
   fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException
   nameWithType: VariableNotSetException.VariableNotSetException

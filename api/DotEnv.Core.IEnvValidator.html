@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IEnvValidator
    | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -94,208 +94,6 @@
   </div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvValidator_IgnoreException.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvValidator.IgnoreException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Validator/IEnvValidator.cs/#L54">View Source</a>
-  </span>
-  <a id="DotEnv_Core_IEnvValidator_IgnoreException_" data-uid="DotEnv.Core.IEnvValidator.IgnoreException*"></a>
-  <h4 id="DotEnv_Core_IEnvValidator_IgnoreException" data-uid="DotEnv.Core.IEnvValidator.IgnoreException">IgnoreException()</h4>
-  <div class="markdown level1 summary"><p>Disables/ignores <a class="xref" href="DotEnv.Core.RequiredKeysNotPresentException.html">RequiredKeysNotPresentException</a>. This method tells the validator not to throw an exception when it encounters one or more errors.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnvValidator IgnoreException()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotEnv.Core.IEnvValidator.html">IEnvValidator</a></td>
-        <td><p>An instance implementing the fluent interface.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvValidator_SetRequiredKeys_System_String___.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Validator/IEnvValidator.cs/#L33">View Source</a>
-  </span>
-  <a id="DotEnv_Core_IEnvValidator_SetRequiredKeys_" data-uid="DotEnv.Core.IEnvValidator.SetRequiredKeys*"></a>
-  <h4 id="DotEnv_Core_IEnvValidator_SetRequiredKeys_System_String___" data-uid="DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String[])">SetRequiredKeys(String[])</h4>
-  <div class="markdown level1 summary"><p>Sets the required keys by means of a string collection.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnvValidator SetRequiredKeys(params string[] keys)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
-        <td><span class="parametername">keys</span></td>
-        <td><p>The required keys to set.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotEnv.Core.IEnvValidator.html">IEnvValidator</a></td>
-        <td><p>An instance implementing the fluent interface.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p><code>keys</code> is <code>null</code>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td><p>The length of the <code>keys</code> list is zero.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvValidator_SetRequiredKeys_System_Type_.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvValidator.SetRequiredKeys(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Validator/IEnvValidator.cs/#L48">View Source</a>
-  </span>
-  <a id="DotEnv_Core_IEnvValidator_SetRequiredKeys_" data-uid="DotEnv.Core.IEnvValidator.SetRequiredKeys*"></a>
-  <h4 id="DotEnv_Core_IEnvValidator_SetRequiredKeys_System_Type_" data-uid="DotEnv.Core.IEnvValidator.SetRequiredKeys(System.Type)">SetRequiredKeys(Type)</h4>
-  <div class="markdown level1 summary"><p>Sets the required keys by means of the properties of a class or struct.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnvValidator SetRequiredKeys(Type keysType)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><span class="parametername">keysType</span></td>
-        <td><p>The type with the required keys.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotEnv.Core.IEnvValidator.html">IEnvValidator</a></td>
-        <td><p>An instance implementing the fluent interface.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p><code>keysType</code> is <code>null</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvValidator_SetRequiredKeys__1.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvValidator.SetRequiredKeys%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Validator/IEnvValidator.cs/#L40">View Source</a>
-  </span>
-  <a id="DotEnv_Core_IEnvValidator_SetRequiredKeys_" data-uid="DotEnv.Core.IEnvValidator.SetRequiredKeys*"></a>
-  <h4 id="DotEnv_Core_IEnvValidator_SetRequiredKeys__1" data-uid="DotEnv.Core.IEnvValidator.SetRequiredKeys``1">SetRequiredKeys&lt;TKeys&gt;()</h4>
-  <div class="markdown level1 summary"><p>Sets the required keys by means of the properties of a class or struct.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnvValidator SetRequiredKeys&lt;TKeys&gt;()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotEnv.Core.IEnvValidator.html">IEnvValidator</a></td>
-        <td><p>An instance implementing the fluent interface.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -305,102 +103,45 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">TKeys</span></td>
-        <td><p>The type with the required keys.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvValidator_Validate.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvValidator.Validate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Validator/IEnvValidator.cs/#L24">View Source</a>
-  </span>
-  <a id="DotEnv_Core_IEnvValidator_Validate_" data-uid="DotEnv.Core.IEnvValidator.Validate*"></a>
-  <h4 id="DotEnv_Core_IEnvValidator_Validate" data-uid="DotEnv.Core.IEnvValidator.Validate">Validate()</h4>
-  <div class="markdown level1 summary"><p>Validates whether the required keys are present in the application.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Validate()</code></pre>
-  </div>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
-        <td><p>The required keys are not specified with the <code>SetRequiredKeys</code> method.</p>
+        <td id="DotEnv_Core_IEnvValidator_IgnoreException" data-uid="DotEnv.Core.IEnvValidator.IgnoreException">
+          <a class="xref" href="DotEnv.Core.IEnvValidator.IgnoreException.html#DotEnv_Core_IEnvValidator_IgnoreException">IgnoreException()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Disables/ignores <a class="xref" href="DotEnv.Core.RequiredKeysNotPresentException.html">RequiredKeysNotPresentException</a>. This method tells the validator not to throw an exception when it encounters one or more errors.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.RequiredKeysNotPresentException.html">RequiredKeysNotPresentException</a></td>
-        <td><p>If the required keys are not present in the application.
-This exception is not thrown if the <a class="xref" href="DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_IgnoreException">IgnoreException()</a> method is invoked.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvValidator_Validate_DotEnv_Core_EnvValidationResult__.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvValidator.Validate(DotEnv.Core.EnvValidationResult%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Validator/IEnvValidator.cs/#L14">View Source</a>
-  </span>
-  <a id="DotEnv_Core_IEnvValidator_Validate_" data-uid="DotEnv.Core.IEnvValidator.Validate*"></a>
-  <h4 id="DotEnv_Core_IEnvValidator_Validate_DotEnv_Core_EnvValidationResult__" data-uid="DotEnv.Core.IEnvValidator.Validate(DotEnv.Core.EnvValidationResult@)">Validate(out EnvValidationResult)</h4>
-  <div class="markdown level1 summary"><p>Validates whether the required keys are present in the application.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Validate(out EnvValidationResult result)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="DotEnv.Core.EnvValidationResult.html">EnvValidationResult</a></td>
-        <td><span class="parametername">result</span></td>
-        <td><p>The result contains the errors found by the validator.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
-        <td><p>The required keys are not specified with the <code>SetRequiredKeys</code> method.</p>
+        <td id="DotEnv_Core_IEnvValidator_SetRequiredKeys_System_String___" data-uid="DotEnv.Core.IEnvValidator.SetRequiredKeys(System.String[])">
+          <a class="xref" href="DotEnv.Core.IEnvValidator.SetRequiredKeys.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_System_String___">SetRequiredKeys(String[])</a>
+        </td>
+        <td class="markdown level1 summary"><p>Sets the required keys by means of a string collection.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="DotEnv.Core.RequiredKeysNotPresentException.html">RequiredKeysNotPresentException</a></td>
-        <td><p>If the required keys are not present in the application.
-This exception is not thrown if the <a class="xref" href="DotEnv.Core.IEnvValidator.html#DotEnv_Core_IEnvValidator_IgnoreException">IgnoreException()</a> method is invoked.</p>
+        <td id="DotEnv_Core_IEnvValidator_SetRequiredKeys_System_Type_" data-uid="DotEnv.Core.IEnvValidator.SetRequiredKeys(System.Type)">
+          <a class="xref" href="DotEnv.Core.IEnvValidator.SetRequiredKeys.html#DotEnv_Core_IEnvValidator_SetRequiredKeys_System_Type_">SetRequiredKeys(Type)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Sets the required keys by means of the properties of a class or struct.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="DotEnv_Core_IEnvValidator_SetRequiredKeys__1" data-uid="DotEnv.Core.IEnvValidator.SetRequiredKeys``1">
+          <a class="xref" href="DotEnv.Core.IEnvValidator.SetRequiredKeys.html#DotEnv_Core_IEnvValidator_SetRequiredKeys__1">SetRequiredKeys&lt;TKeys&gt;()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Sets the required keys by means of the properties of a class or struct.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="DotEnv_Core_IEnvValidator_Validate" data-uid="DotEnv.Core.IEnvValidator.Validate">
+          <a class="xref" href="DotEnv.Core.IEnvValidator.Validate.html#DotEnv_Core_IEnvValidator_Validate">Validate()</a>
+        </td>
+        <td class="markdown level1 summary"><p>Validates whether the required keys are present in the application.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="DotEnv_Core_IEnvValidator_Validate_DotEnv_Core_EnvValidationResult__" data-uid="DotEnv.Core.IEnvValidator.Validate(DotEnv.Core.EnvValidationResult@)">
+          <a class="xref" href="DotEnv.Core.IEnvValidator.Validate.html#DotEnv_Core_IEnvValidator_Validate_DotEnv_Core_EnvValidationResult__">Validate(out EnvValidationResult)</a>
+        </td>
+        <td class="markdown level1 summary"><p>Validates whether the required keys are present in the application.</p>
 </td>
       </tr>
     </tbody>
@@ -416,7 +157,7 @@ This exception is not thrown if the <a class="xref" href="DotEnv.Core.IEnvValida
                     <a href="https://github.com/MrDave1999/dotenv.core/new/master/apiSpec/new?filename=DotEnv_Core_IEnvValidator.md&amp;value=---%0Auid%3A%20DotEnv.Core.IEnvValidator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/src/Validator/IEnvValidator.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/mrdave1999/dotenv.core/blob/master/src/Validator/IEnvValidator.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

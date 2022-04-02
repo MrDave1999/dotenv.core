@@ -8,7 +8,7 @@
     <title>Creating environment variables provider | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Creating environment variables provider | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,7 +84,7 @@
 <p>The <strong>DotEnv library</strong> has two providers of environment variables:</p>
 <ul>
 <li>Environment of the current process.</li>
-<li>A dictionary of key/value pairs (this provider is used when using <a class="xref" href="../api/DotEnv.Core.IEnvLoader.html#DotEnv_Core_IEnvLoader_AvoidModifyEnvironment">AvoidModifyEnvironment</a> method).</li>
+<li>A dictionary of key/value pairs (this provider is used when using <a class="xref" href="../api/DotEnv.Core.IEnvLoader.AvoidModifyEnvironment.html#DotEnv_Core_IEnvLoader_AvoidModifyEnvironment">AvoidModifyEnvironment</a> method).</li>
 </ul>
 <p>In fact, if you look at the source code of the library, you will notice that it has two classes that represent the provider: <code>DefaultEnvironmentProvider</code> and <code>DictionaryProvider</code>.</p>
 <p>The library exposes an interface to access the provider: <code>IEnvironmentVariablesProvider</code>.</p>

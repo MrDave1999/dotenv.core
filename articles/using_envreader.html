@@ -8,7 +8,7 @@
     <title>Accessing environment variables | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Accessing environment variables | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -103,7 +103,7 @@ catch(VariableNotSetException ex)
     System.Console.WriteLine(ex.Message);
 }
 </code></pre>
-<p>Don't forget to consult the <a class="xref" href="../api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_GetBoolValue_System_String_">API documentation</a> for more helper methods starting with the word <em>Get</em>.</p>
+<p>Don't forget to consult the <a class="xref" href="../api/DotEnv.Core.EnvReader.GetBoolValue.html#DotEnv_Core_EnvReader_GetBoolValue_System_String_">API documentation</a> for more helper methods starting with the word <em>Get</em>.</p>
 <h3 id="trygettypevalue">TryGet{Type}Value</h3>
 <p>The helper methods that begin with the word <em>Try</em> do not throw an exception, but return a <code>false</code> value when the environment variable is not set:</p>
 <pre><code class="lang-cs">TryGetStringValue
@@ -132,7 +132,7 @@ else
     System.Console.WriteLine(&quot;Variable not found!&quot;);
 }
 </code></pre>
-<p>Don't forget to consult the <a class="xref" href="../api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_TryGetBoolValue_System_String_System_Boolean__">API documentation</a> for more helper methods starting with the word <em>Try</em>.</p>
+<p>Don't forget to consult the <a class="xref" href="../api/DotEnv.Core.EnvReader.TryGetBoolValue.html#DotEnv_Core_EnvReader_TryGetBoolValue_System_String_System_Boolean__">API documentation</a> for more helper methods starting with the word <em>Try</em>.</p>
 <h3 id="envtype">Env{Type}</h3>
 <p>The helper methods starting with the word <em>Env</em> return a default value when the environment variable is not set:</p>
 <pre><code class="lang-cs">EnvString
@@ -157,7 +157,7 @@ long key3 = reader.EnvLong(&quot;KEY3&quot;); // default value: 0
 float key4 = reader.EnvFloat(&quot;KEY4&quot;); // default value: 0.0
 </code></pre>
 <p>Here for example, if <code>KEY1</code> is not set, the method returns <code>null</code> (default value).</p>
-<p>Don't forget to consult the <a class="xref" href="../api/DotEnv.Core.EnvReader.html#DotEnv_Core_EnvReader_EnvBool_System_String_System_Boolean_">API documentation</a> for more helper methods starting with the word <em>Env</em>.</p>
+<p>Don't forget to consult the <a class="xref" href="../api/DotEnv.Core.EnvReader.EnvBool.html#DotEnv_Core_EnvReader_EnvBool_System_String_System_Boolean_">API documentation</a> for more helper methods starting with the word <em>Env</em>.</p>
 <h3 id="hasvalue">HasValue</h3>
 <p>You can use this method to check if an environment variable has a value:</p>
 <pre><code class="lang-cs">var reader = new EnvReader();
