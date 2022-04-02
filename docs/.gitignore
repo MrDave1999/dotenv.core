@@ -6,4 +6,6 @@
 /**/packages/
 /**/bin/
 /**/obj/
+plugins
+templates
 _site
