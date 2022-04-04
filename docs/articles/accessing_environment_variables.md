@@ -1,9 +1,12 @@
 # Accessing environment variables
 
 ## Helper methods
+
+The `EnvReader` class has multiple **helper methods** that are used to access the environment variables of a specific provider.
+
 ### Get{Type}Value
 
-The `EnvReader class` has multiple helper methods, so methods starting with the word *Get* will throw an exception when the environment variable is not set:
+The helper methods that begin with the word *Get* will throw an exception when the environment variable is not set:
 ```cs
 GetStringValue
 GetIntValue
@@ -65,7 +68,7 @@ Don't forget to consult the [API documentation](xref:DotEnv.Core.EnvReader.TryGe
 
 ### Env{Type}
 
-The helper methods starting with the word *Env* return a default value when the environment variable is not set:
+The helper methods that begin with the word *Env* return a default value when the environment variable is not set:
 ```cs
 EnvString
 EnvInt
