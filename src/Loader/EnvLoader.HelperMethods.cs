@@ -117,7 +117,7 @@ namespace DotEnv.Core
                 envFileName = Path.GetFileName(envFileName);
             }
             else
-                path = Directory.GetCurrentDirectory();
+                path = AppContext.BaseDirectory;
 
             for (var directoryInfo = new DirectoryInfo(path);
                 directoryInfo != null;
