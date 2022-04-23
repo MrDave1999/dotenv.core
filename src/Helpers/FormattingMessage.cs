@@ -18,7 +18,7 @@ namespace DotEnv.Core
         /// <returns>A formatted error message.</returns>
         public static string FormatLocalFileNotPresentMessage(string message = null, string environmentName = null)
         {
-            message = message ?? "error: Any of these .env files must be present in the root directory of your project:";
+            message ??= "error: Any of these .env files must be present in the root directory of your project:";
             return environmentName != null ? $"{message} .env.{environmentName}.local or {EnvLocalName}" : $"{message} {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
         }
 

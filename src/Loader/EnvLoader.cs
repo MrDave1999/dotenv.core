@@ -64,7 +64,7 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvironmentVariablesProvider LoadEnv(out EnvValidationResult result)
         {
-            Env.CurrentEnvironment = Env.CurrentEnvironment ?? _configuration.EnvironmentName;
+            Env.CurrentEnvironment ??= _configuration.EnvironmentName;
             var environment = Env.CurrentEnvironment;
             var envFiles = _configuration.EnvFiles;
             var copyEnvFiles = envFiles.ToArray();
