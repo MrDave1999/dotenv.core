@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static DotEnv.Core.EnumerableExtensions;
 using static DotEnv.Core.EnvFileNames;
 
 namespace DotEnv.Core
@@ -33,10 +34,10 @@ namespace DotEnv.Core
         /// <returns>A formatted error message.</returns>
         public static string FormatParserExceptionMessage(string message, object actualValue = null, int? lineNumber = null, int? column = null, string envFileName = null)
         {
-            if (envFileName is not null && lineNumber is not null && column is not null && actualValue is not null)
+            if(AreNotNull(envFileName, lineNumber, column, actualValue))
                 return $"{envFileName}:(line {lineNumber}, col {column}): error: {string.Format(message, actualValue)}";
 
-            if (lineNumber is not null && column is not null && actualValue is not null)
+            if(AreNotNull(lineNumber, column, actualValue))
                 return $"Parsing error (line {lineNumber}, col {column}): error: {string.Format(message, actualValue)}";
 
             if (envFileName is not null)
