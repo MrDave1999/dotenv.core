@@ -1,8 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static System.Environment;
-
-namespace DotEnv.Core.Tests.Helpers
+﻿namespace DotEnv.Core.Tests.Helpers
 {
     [TestClass]
     public class EnvTests

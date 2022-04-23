@@ -1,9 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static System.Environment;
-using static DotEnv.Core.ExceptionMessages;
-
-namespace DotEnv.Core.Tests.Parser
+﻿namespace DotEnv.Core.Tests.Parser
 {
     public partial class EnvParserTests
     {

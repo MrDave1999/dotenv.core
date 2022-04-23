@@ -1,8 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static System.Environment;
-
-namespace DotEnv.Core.Tests.Reader
+﻿namespace DotEnv.Core.Tests.Reader
 {
     [TestClass]
     public partial class EnvReaderTests

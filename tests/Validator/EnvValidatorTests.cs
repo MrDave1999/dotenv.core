@@ -1,10 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static System.Environment;
-using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.FormattingMessage;
-
-namespace DotEnv.Core.Tests.Validator
+﻿namespace DotEnv.Core.Tests.Validator
 {
     [TestClass]
     public class EnvValidatorTests

@@ -1,8 +1,3 @@
-using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static DotEnv.Core.ExceptionMessages;
-using static System.Environment;
-
 namespace DotEnv.Core.Tests.Parser
 {
     [TestClass]

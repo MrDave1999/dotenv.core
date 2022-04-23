@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DotEnv.Core.Tests
+﻿namespace DotEnv.Core.Tests
 {
     internal class CustomEnvironmentVariablesProvider : IEnvironmentVariablesProvider
     {

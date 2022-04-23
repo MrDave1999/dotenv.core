@@ -1,12 +1,4 @@
-﻿using System;
-using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static System.Environment;
-using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.FormattingMessage;
-using System.Text;
-
-namespace DotEnv.Core.Tests.Loader
+﻿namespace DotEnv.Core.Tests.Loader
 {
     [TestClass]
     public partial class EnvLoaderTests
