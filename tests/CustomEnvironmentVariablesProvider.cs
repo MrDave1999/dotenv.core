@@ -2,7 +2,7 @@
 
 internal class CustomEnvironmentVariablesProvider : IEnvironmentVariablesProvider
 {
-    private Dictionary<string, string> _keyValuePairs = new();
+    private readonly Dictionary<string, string> _keyValuePairs = new();
 
     public string this[string variable]
     {
