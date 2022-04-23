@@ -39,7 +39,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            return retrievedValue != null;
+            return retrievedValue is not null;
         }
 
         /// <summary>

@@ -61,7 +61,7 @@ namespace DotEnv.Core
             else
                 fullPath = File.Exists(envFile.Path) ? envFile.Path : null;
 
-            if (fullPath == null)
+            if (fullPath is null)
                 return false;
 
             string source = File.ReadAllText(fullPath, envFile.Encoding);
@@ -120,7 +120,7 @@ namespace DotEnv.Core
                 path = AppContext.BaseDirectory;
 
             for (var directoryInfo = new DirectoryInfo(path);
-                directoryInfo != null;
+                directoryInfo is not null;
                 directoryInfo = directoryInfo.Parent)
             {
                 string fullName = Path.Combine(directoryInfo.FullName, envFileName);

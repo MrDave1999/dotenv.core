@@ -45,13 +45,13 @@ namespace DotEnv.Core
         public void Validate(out EnvValidationResult result)
         {
             result = _validationResult;
-            if (_configuration.RequiredKeys == null)
+            if (_configuration.RequiredKeys is null)
                 throw new InvalidOperationException(RequiredKeysNotSpecifiedMessage);
 
             foreach(var key in _configuration.RequiredKeys)
             {
                 var retrievedValue = _configuration.EnvVars[key];
-                if (retrievedValue == null)
+                if (retrievedValue is null)
                     _validationResult.Add(string.Format(RequiredKeysNotPresentMessage, key));
             }
 

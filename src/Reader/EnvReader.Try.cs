@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DotEnv.Core
 {
-    // These methods return 'false' if the environment variable is not set.
+    // These methods return 'false' if the environment variable is null not set.
     /// <inheritdoc />
     public partial class EnvReader
     {
@@ -15,7 +15,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if(retrievedValue == null)
+            if(retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -29,7 +29,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -43,7 +43,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -57,7 +57,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -71,7 +71,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -85,7 +85,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -99,7 +99,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -113,7 +113,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -127,7 +127,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -141,7 +141,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -155,7 +155,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -169,7 +169,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -183,7 +183,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;
@@ -197,7 +197,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            if (retrievedValue == null)
+            if (retrievedValue is null)
             {
                 value = default;
                 return false;

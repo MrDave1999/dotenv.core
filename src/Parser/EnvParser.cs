@@ -84,9 +84,9 @@ namespace DotEnv.Core
                 value = string.IsNullOrEmpty(value) ? " " : value;
 
                 var retrievedValue = EnvVarsProvider[key];
-                if (retrievedValue == null)
+                if (retrievedValue is null)
                     EnvVarsProvider[key] = value;
-                else if (_configuration.ConcatDuplicateKeys != null)
+                else if (_configuration.ConcatDuplicateKeys is not null)
                     EnvVarsProvider[key] = ConcatValues(retrievedValue, value);
                 else if (_configuration.OverwriteExistingVars)
                     EnvVarsProvider[key] = value;

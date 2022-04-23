@@ -70,9 +70,9 @@ namespace DotEnv.Core
             var copyEnvFiles = envFiles.ToArray();
             envFiles.Clear();
 
-            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}.local" } : new[] { EnvDevelopmentLocalName, EnvDevLocalName });
+            AddOptionalEnvFiles(environment is not null ? new[] { $".env.{environment}.local" } : new[] { EnvDevelopmentLocalName, EnvDevLocalName });
             AddOptionalEnvFiles(EnvLocalName);
-            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}" } : new[] { EnvDevelopmentName, EnvDevName });
+            AddOptionalEnvFiles(environment is not null ? new[] { $".env.{environment}" } : new[] { EnvDevelopmentName, EnvDevName });
             AddOptionalEnvFiles(EnvName);
 
             // The .env files that were added with the 'AddEnvFile' method are added at the end of the collection.
@@ -85,7 +85,7 @@ namespace DotEnv.Core
                 CheckEnvFileNotExistsAndNotOptional(envFile);
             }
 
-            if (environment == null)
+            if (environment is null)
             {
                 var envDevelopmentLocal = envFiles[0]; // .env.development.local
                 var envDevLocal = envFiles[1];         // .env.dev.local
