@@ -17,7 +17,7 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the parser.
         /// </summary>
-        private readonly EnvParserOptions _configuration = new EnvParserOptions();
+        private readonly EnvParserOptions _configuration = new();
 
         /// <summary>
         /// Allows access to the errors container of the parser.

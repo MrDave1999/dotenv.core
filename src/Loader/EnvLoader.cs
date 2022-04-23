@@ -13,17 +13,17 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the loader.
         /// </summary>
-        private readonly EnvLoaderOptions _configuration = new EnvLoaderOptions();
+        private readonly EnvLoaderOptions _configuration = new();
 
         /// <summary>
         /// Allows access to the members that control the parser.
         /// </summary>
-        private readonly EnvParser _parser = new EnvParser();
+        private readonly EnvParser _parser = new();
 
         /// <summary>
         /// Allows access to the errors container of the loader.
         /// </summary>
-        private readonly EnvValidationResult _validationResult = new EnvValidationResult();
+        private readonly EnvValidationResult _validationResult = new();
 
         /// <inheritdoc />
         public IEnvironmentVariablesProvider Load()

@@ -13,12 +13,12 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the validator.
         /// </summary>
-        private readonly EnvValidatorOptions _configuration = new EnvValidatorOptions();
+        private readonly EnvValidatorOptions _configuration = new();
 
         /// <summary>
         /// Allows access to the errors container of the validator.
         /// </summary>
-        private readonly EnvValidationResult _validationResult = new EnvValidationResult();
+        private readonly EnvValidationResult _validationResult = new();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvValidator" /> class.

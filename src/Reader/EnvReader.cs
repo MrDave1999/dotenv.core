@@ -8,7 +8,7 @@ namespace DotEnv.Core
     /// <inheritdoc cref="IEnvReader" />
     public partial class EnvReader : IEnvReader
     {
-        private static readonly EnvReader s_instance = new EnvReader();
+        private static readonly EnvReader s_instance = new();
         private readonly IEnvironmentVariablesProvider _envVars = new DefaultEnvironmentProvider();
 
         /// <summary>
