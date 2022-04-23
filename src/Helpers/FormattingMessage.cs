@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static DotEnv.Core.EnumerableExtensions;
 using static DotEnv.Core.EnvFileNames;
 
 namespace DotEnv.Core
@@ -18,8 +19,8 @@ namespace DotEnv.Core
         /// <returns>A formatted error message.</returns>
         public static string FormatLocalFileNotPresentMessage(string message = null, string environmentName = null)
         {
-            message = message ?? "error: Any of these .env files must be present in the root directory of your project:";
-            return environmentName != null ? $"{message} .env.{environmentName}.local or {EnvLocalName}" : $"{message} {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
+            message ??= "error: Any of these .env files must be present in the root directory of your project:";
+            return environmentName is not null ? $"{message} .env.{environmentName}.local or {EnvLocalName}" : $"{message} {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
         }
 
         /// <summary>
@@ -33,13 +34,13 @@ namespace DotEnv.Core
         /// <returns>A formatted error message.</returns>
         public static string FormatParserExceptionMessage(string message, object actualValue = null, int? lineNumber = null, int? column = null, string envFileName = null)
         {
-            if (envFileName != null && lineNumber != null && column != null && actualValue != null)
+            if(AreNotNull(envFileName, lineNumber, column, actualValue))
                 return $"{envFileName}:(line {lineNumber}, col {column}): error: {string.Format(message, actualValue)}";
 
-            if (lineNumber != null && column != null && actualValue != null)
+            if(AreNotNull(lineNumber, column, actualValue))
                 return $"Parsing error (line {lineNumber}, col {column}): error: {string.Format(message, actualValue)}";
 
-            if (envFileName != null)
+            if (envFileName is not null)
                 return $"{envFileName}: error: {message}";
 
             return $"Parsing error: {message}";

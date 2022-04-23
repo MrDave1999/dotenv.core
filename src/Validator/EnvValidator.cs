@@ -13,12 +13,12 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the validator.
         /// </summary>
-        private readonly EnvValidatorOptions _configuration = new EnvValidatorOptions();
+        private readonly EnvValidatorOptions _configuration = new();
 
         /// <summary>
         /// Allows access to the errors container of the validator.
         /// </summary>
-        private readonly EnvValidationResult _validationResult = new EnvValidationResult();
+        private readonly EnvValidationResult _validationResult = new();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="EnvValidator" /> class.
@@ -45,13 +45,13 @@ namespace DotEnv.Core
         public void Validate(out EnvValidationResult result)
         {
             result = _validationResult;
-            if (_configuration.RequiredKeys == null)
+            if (_configuration.RequiredKeys is null)
                 throw new InvalidOperationException(RequiredKeysNotSpecifiedMessage);
 
             foreach(var key in _configuration.RequiredKeys)
             {
                 var retrievedValue = _configuration.EnvVars[key];
-                if (retrievedValue == null)
+                if (retrievedValue is null)
                     _validationResult.Add(string.Format(RequiredKeysNotPresentMessage, key));
             }
 

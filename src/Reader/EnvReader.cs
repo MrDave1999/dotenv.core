@@ -8,7 +8,7 @@ namespace DotEnv.Core
     /// <inheritdoc cref="IEnvReader" />
     public partial class EnvReader : IEnvReader
     {
-        private static readonly EnvReader s_instance = new EnvReader();
+        private static readonly EnvReader s_instance = new();
         private readonly IEnvironmentVariablesProvider _envVars = new DefaultEnvironmentProvider();
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace DotEnv.Core
         {
             _ = variable ?? throw new ArgumentNullException(nameof(variable));
             var retrievedValue = _envVars[variable];
-            return retrievedValue != null;
+            return retrievedValue is not null;
         }
 
         /// <summary>

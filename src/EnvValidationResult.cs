@@ -13,7 +13,7 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the errors collection.
         /// </summary>
-        private readonly List<string> _errors = new List<string>();
+        private readonly List<string> _errors = new();
 
         /// <summary>
         /// Check if there has been an error.

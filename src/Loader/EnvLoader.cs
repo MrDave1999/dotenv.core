@@ -13,17 +13,17 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the loader.
         /// </summary>
-        private readonly EnvLoaderOptions _configuration = new EnvLoaderOptions();
+        private readonly EnvLoaderOptions _configuration = new();
 
         /// <summary>
         /// Allows access to the members that control the parser.
         /// </summary>
-        private readonly EnvParser _parser = new EnvParser();
+        private readonly EnvParser _parser = new();
 
         /// <summary>
         /// Allows access to the errors container of the loader.
         /// </summary>
-        private readonly EnvValidationResult _validationResult = new EnvValidationResult();
+        private readonly EnvValidationResult _validationResult = new();
 
         /// <inheritdoc />
         public IEnvironmentVariablesProvider Load()
@@ -64,15 +64,15 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public IEnvironmentVariablesProvider LoadEnv(out EnvValidationResult result)
         {
-            Env.CurrentEnvironment = Env.CurrentEnvironment ?? _configuration.EnvironmentName;
+            Env.CurrentEnvironment ??= _configuration.EnvironmentName;
             var environment = Env.CurrentEnvironment;
             var envFiles = _configuration.EnvFiles;
             var copyEnvFiles = envFiles.ToArray();
             envFiles.Clear();
 
-            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}.local" } : new[] { EnvDevelopmentLocalName, EnvDevLocalName });
+            AddOptionalEnvFiles(environment is not null ? new[] { $".env.{environment}.local" } : new[] { EnvDevelopmentLocalName, EnvDevLocalName });
             AddOptionalEnvFiles(EnvLocalName);
-            AddOptionalEnvFiles(environment != null ? new[] { $".env.{environment}" } : new[] { EnvDevelopmentName, EnvDevName });
+            AddOptionalEnvFiles(environment is not null ? new[] { $".env.{environment}" } : new[] { EnvDevelopmentName, EnvDevName });
             AddOptionalEnvFiles(EnvName);
 
             // The .env files that were added with the 'AddEnvFile' method are added at the end of the collection.
@@ -85,7 +85,7 @@ namespace DotEnv.Core
                 CheckEnvFileNotExistsAndNotOptional(envFile);
             }
 
-            if (environment == null)
+            if (environment is null)
             {
                 var envDevelopmentLocal = envFiles[0]; // .env.development.local
                 var envDevLocal = envFiles[1];         // .env.dev.local

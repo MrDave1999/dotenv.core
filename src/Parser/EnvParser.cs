@@ -17,7 +17,7 @@ namespace DotEnv.Core
         /// <summary>
         /// Allows access to the configuration options for the parser.
         /// </summary>
-        private readonly EnvParserOptions _configuration = new EnvParserOptions();
+        private readonly EnvParserOptions _configuration = new();
 
         /// <summary>
         /// Allows access to the errors container of the parser.
@@ -84,9 +84,9 @@ namespace DotEnv.Core
                 value = string.IsNullOrEmpty(value) ? " " : value;
 
                 var retrievedValue = EnvVarsProvider[key];
-                if (retrievedValue == null)
+                if (retrievedValue is null)
                     EnvVarsProvider[key] = value;
-                else if (_configuration.ConcatDuplicateKeys != null)
+                else if (_configuration.ConcatDuplicateKeys is not null)
                     EnvVarsProvider[key] = ConcatValues(retrievedValue, value);
                 else if (_configuration.OverwriteExistingVars)
                     EnvVarsProvider[key] = value;
