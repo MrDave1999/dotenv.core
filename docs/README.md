@@ -2,6 +2,8 @@
 
 ## Installation
 
+You must download the [memberpage](https://www.nuget.org/packages/memberpage/) package and then uncompresse the file in the `plugins/memberpage/` folder.
+
 ### Windows
 
 Install the latest version of [DocFX](https://github.com/dotnet/docfx/releases/latest). Once the .zip file is downloaded and uncompressed, you must add the path where docfx.exe is located in the PATH environment variable, in order to be able to run docfx.exe from any location.
