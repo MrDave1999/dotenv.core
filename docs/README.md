@@ -40,14 +40,14 @@ Go to https://localhost:8080 to view the DotEnv.Core site.
 
 Each command must be executed in the directory where the `docfx.json` file (i.e. in the `docs` folder) is located, otherwise, you must pass the path to DocFX.
 
-### Examples in Windows:
+### Example in Windows:
 
 **Build/Deploy:**
 ```cmd
 docfx C:\Program Files\MyApp\docs\docfx.json --serve
 ```
 
-### Examples in Linux:
+### Example in Linux:
 
 **Build/Deploy:**
 ```sh
