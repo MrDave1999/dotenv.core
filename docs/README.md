@@ -1,4 +1,4 @@
-# Documentation
+# DocFX
 
 ## Installation
 
@@ -18,14 +18,14 @@ Remember that DocFX is a .NET Framework application and it is not possible to ru
 
 ### Windows
 
-Open cmd.exe and build documentation:
+Open cmd.exe and build/deploy the DotEnv.Core site:
 ```cmd
 docfx --serve
 ```
 
 ### Linux
 
-Open bash and build documentation:
+Open bash and build/deploy the DotEnv.Core site:
 ```sh
 ./docfx.sh --serve
 ```
@@ -34,7 +34,7 @@ You may need to grant permission to execute:
 chmod u+x docfx.sh
 ```
 
-Go to https://localhost:8080 to view the sample DocFX site.
+Go to https://localhost:8080 to view the DotEnv.Core site.
 
 ## Observation
 
