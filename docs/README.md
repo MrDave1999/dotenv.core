@@ -14,66 +14,42 @@ You must also install the latest version of [DocFX](https://github.com/dotnet/do
 
 Remember that DocFX is a .NET Framework application and it is not possible to run it on Linux, therefore, you must install [mono](https://www.mono-project.com/download/stable/#download-lin) to be able to run DocFX.
 
-## Build
+## Build/Deploy
 
 ### Windows
 
 Open cmd.exe and build documentation:
 ```cmd
-docfx
+docfx --serve
 ```
 
 ### Linux
 
 Open bash and build documentation:
 ```sh
-./docfx.sh
+./docfx.sh --serve
 ```
 You may need to grant permission to execute:
 ```sh
 chmod u+x docfx.sh
 ```
 
-## Deployment
-
-### Windows
-
-Start the server:
-```cmd
-docfx serve
-```
-
-### Linux
-
-Start the server:
-```sh
-./docfx.sh serve
-```
+Go to https://localhost:8080 to view the sample DocFX site.
 
 ## Observation
 
-Each command must be executed in the directory where the `docfx.json` file is located, otherwise, you must pass the path to DocFX.
+Each command must be executed in the directory where the `docfx.json` file (i.e. in the `docs` folder) is located, otherwise, you must pass the path to DocFX.
 
 ### Examples in Windows:
 
-**Build:**
+**Build/Deploy:**
 ```cmd
-docfx C:\Program Files\MyApp\docs\docfx.json
-```
-
-**Deploy:**
-```cmd
-docfx serve C:\Program Files\MyApp\docs\docfx.json
+docfx C:\Program Files\MyApp\docs\docfx.json --serve
 ```
 
 ### Examples in Linux:
 
-**Build:**
+**Build/Deploy:**
 ```sh
-./docfx.sh $HOME/MyApp/docs/docfx.json
-```
-
-**Deploy:**
-```sh
-./docfx.sh serve $HOME/MyApp/docs/docfx.json
+./docfx.sh $HOME/MyApp/docs/docfx.json --serve
 ```
