@@ -25,6 +25,7 @@ The advantage of using this library is that you do not need to set the environme
   * [Required Keys](#required-keys)
   * [Load .env file based on environment](#load-env-file-based-on-environment)
   * [Parsing .env files](#parsing-env-files)
+  * [Using DotEnv in ASP.NET Core](#using-dotenv-in-aspnet-core)
 - [File Format](#file-format)
   * [Comments](#comments)
   * [Interpolating variables](#interpolating-variables)
@@ -174,6 +175,32 @@ string myDataSource = @"
     SERVICE_SECRET=1234example$
 ";
 new EnvParser().Parse(myDataSource);
+```
+
+### Using DotEnv in ASP.NET Core
+
+Open the `Startup.cs` file and add this code in the constructor:
+```cs
+new EnvLoader().Load();
+Configuration = new ConfigurationBuilder()
+          .AddEnvironmentVariables()
+          .Build();
+```
+Once the environment variables have been set from an .env file, we call the `AddEnvironmentVariables` method to take care of adding the environment variables in the **configuration object** managed by **ASP.NET Core**. Then, the keys can be accessed with the `IConfiguration` interface, for example:
+```cs
+class HomeController
+{
+    public HomeController(IConfiguration configuration)
+    {
+        string key = configuration["KEY_NAME"];
+    }
+}
+```
+If you are using **ASP.NET Core with .NET 6**, you will not need to add anything in a `Startup.cs` file. Simply go to `Program.cs` and add the following code after the `WebApplication.CreateBuilder` method:
+```cs
+// var builder = WebApplication.CreateBuilder(args);
+new EnvLoader().Load();
+builder.Configuration.AddEnvironmentVariables();
 ```
 
 ## File Format
