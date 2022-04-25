@@ -24,6 +24,7 @@ The advantage of using this library is that you do not need to set the environme
   * [Load .env file without altering the environment](#load-env-file-without-altering-the-environment)
   * [Required Keys](#required-keys)
   * [Load .env file based on environment](#load-env-file-based-on-environment)
+  * [Parsing .env files](#parsing-env-files)
 - [File Format](#file-format)
   * [Comments](#comments)
   * [Interpolating variables](#interpolating-variables)
@@ -162,6 +163,18 @@ The `environment` is specified by the actual environment variable `DOTNET_ENV`.
 It should be noted that the default environment will be `development` or `dev` if the environment is never specified with `DOTNET_ENV`.
 
 For more information, see the [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html).
+
+### Parsing .env files
+
+You can analyze key-value pairs from any data source (a .env file, a database, a web service, etc):
+```cs
+string myDataSource = @"
+    SERVICE_APP_ID=1
+    SERVICE_KEY=1234$
+    SERVICE_SECRET=1234example$
+";
+new EnvParser().Parse(myDataSource);
+```
 
 ## File Format
 
