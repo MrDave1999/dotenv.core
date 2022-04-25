@@ -10,6 +10,31 @@
 
 **dotenv.core** is a class library for read and parsing .env files in .NET Core and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.
 
+The advantage of using this library is that you do not need to set the environment variable from the operating system shell (**dotenv** sets environment variables from a .env file).
+
+- [Features](#features)
+- [Basic Concepts](#basic-concepts)
+  * [What is a .env file?](#what-is-a-env-file)
+  * [What do .env files look like?](#what-do-env-files-look-like)
+  * [What is environment variable?](#what-is-environment-variable)
+- [Installation](#installation)
+- [Overview](#overview)
+  * [Load .env file](#load-env-file)
+  * [Accessing environment variables](#accessing-environment-variables)
+  * [Load .env file without altering the environment](#load-env-file-without-altering-the-environment)
+  * [Required Keys](#required-keys)
+  * [Load .env file based on environment](#load-env-file-based-on-environment)
+  * [Parsing .env files](#parsing-env-files)
+  * [Using DotEnv in ASP.NET Core](#using-dotenv-in-aspnet-core)
+- [File Format](#file-format)
+  * [Comments](#comments)
+  * [Interpolating variables](#interpolating-variables)
+- [Frequently Answered Questions](#frequently-answered-questions)
+  * [Can I use an .env file in a production environment?](#can-i-use-an-env-file-in-a-production-environment)
+  * [Should I commit my .env file?](#should-i-commit-my-env-file)
+  * [Why is it not overriding existing environment variables?](#why-is-it-not-overriding-existing-environment-variables)
+- [Contribution](#contribution)
+
 ## Features
 
 - It has a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface), which makes it simple and easy to use.
@@ -55,7 +80,8 @@ If you are making use of the dotnet CLI, then run the following in your terminal
 dotnet add package DotEnv.Core
 ```
 
-## Usage
+## Overview
+### Load .env file
 
 You must import the namespace types at the beginning of your class file:
 ```cs
@@ -70,7 +96,16 @@ By default, the `Load` method will search for a file called `.env` in the curren
 
 The current directory is where the executable with its dependencies is located.
 
-Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`. Also, by default, the `Load` method does not overwrite the value of the environment variable.
+Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`. Also, by default, the `Load` method does not overwrite the value of an existing environment variable.
+
+You can also load your own .env file using the `AddEnvFile` method:
+```cs
+new EnvLoader()
+   .AddEnvFile("config.env")
+   .Load();
+```
+
+### Accessing environment variables
 
 After you have loaded the .env file with the `Load` method, you can access the environment variables using the indexer of the `EnvReader` class:
 ```cs
@@ -83,7 +118,91 @@ Or you can also access the environment variables using the static property `Inst
 string key1 = EnvReader.Instance["KEY1"];
 string key2 = EnvReader.Instance["KEY2"];
 ```
+If you don't want to use the `EnvReader` class to access environment variables, you can use the `System.Environment` class:
+```cs
+string key1 = System.Environment.GetEnvironmentVariable("KEY1");
+string key2 = System.Environment.GetEnvironmentVariable("KEY2");
+```
+
+### Load .env file without altering the environment
+
+You can load an .env file without having to modify the environment:
+```cs
+var envVars = new EnvLoader()
+        .AvoidModifyEnvironment()
+        .Load();
+
+string key1 = envVars["KEY1"];
+string key2 = envVars["KEY2"];
+```
+The `Load` method will return an instance that implements the `IEnvironmentVariablesProvider` interface and through this instance we can access the environment variables. In fact, the environment variables are obtained from a dictionary, instead of the current process.
+
+### Required Keys
+
+You can specify which keys should be required by the application, in case they are missing, throw an error:
+```cs
+new EnvValidator()
+    .SetRequiredKeys("SERVICE_APP_ID", "SERVICE_KEY", "SERVICE_SECRET")
+    .Validate();
+```
+The `Validate` method will check if the keys "SERVICE_APP_ID", "SERVICE_KEY", "SERVICE_SECRET" are present in the application, otherwise it throws an exception.
+
+### Load .env file based on environment
+
+You can load an .env file based on the environment (dev, test, staging or production) with the `LoadEnv` method. The environment is defined by the actual environment variable as `DOTNET_ENV`:
+```cs
+new EnvLoader().LoadEnv();
+```
+The `LoadEnv` method will search for these .env files in the following order:
+- `.env.[environment].local` (has the highest priority)
+- `.env.local`
+- `.env.[environment]`
+- `.env` (has the lowest priority)
+
+The `environment` is specified by the actual environment variable `DOTNET_ENV`.
+
+It should be noted that the default environment will be `development` or `dev` if the environment is never specified with `DOTNET_ENV`.
+
 For more information, see the [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html).
+
+### Parsing .env files
+
+You can analyze key-value pairs from any data source (a .env file, a database, a web service, etc):
+```cs
+string myDataSource = @"
+    SERVICE_APP_ID=1
+    SERVICE_KEY=1234$
+    SERVICE_SECRET=1234example$
+";
+new EnvParser().Parse(myDataSource);
+```
+Then you can access the environment variables with the `EnvReader` or `System.Environment` class.
+
+### Using DotEnv in ASP.NET Core
+
+Open the `Startup.cs` file and add this code in the constructor:
+```cs
+new EnvLoader().Load();
+Configuration = new ConfigurationBuilder()
+          .AddEnvironmentVariables()
+          .Build();
+```
+Once the environment variables have been set from an .env file, we call the `AddEnvironmentVariables` method to take care of adding the environment variables in the **configuration object** managed by **ASP.NET Core**. Then, the keys can be accessed with the `IConfiguration` interface, for example:
+```cs
+class HomeController
+{
+    public HomeController(IConfiguration configuration)
+    {
+        string key = configuration["KEY_NAME"];
+    }
+}
+```
+If you are using **ASP.NET Core with .NET 6**, you will not need to add anything in a `Startup.cs` file. Simply go to `Program.cs` and add the following code after the `WebApplication.CreateBuilder` method:
+```cs
+// var builder = WebApplication.CreateBuilder(args);
+new EnvLoader().Load();
+builder.Configuration.AddEnvironmentVariables();
+```
 
 ## File Format
 
