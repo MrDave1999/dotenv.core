@@ -31,7 +31,7 @@ The advantage of using this library is that you do not need to set the environme
   * [Can I use an .env file in a production environment?](#can-i-use-an-env-file-in-a-production-environment)
   * [Should I commit my .env file?](#should-i-commit-my-env-file)
   * [Why is it not overriding existing environment variables?](#why-is-it-not-overriding-existing-environment-variables)
-  * [Contribution](#contribution)
+- [Contribution](#contribution)
 
 ## Features
 
