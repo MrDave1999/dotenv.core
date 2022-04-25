@@ -176,6 +176,7 @@ string myDataSource = @"
 ";
 new EnvParser().Parse(myDataSource);
 ```
+Then you can access the environment variables with the `EnvReader` or `System.Environment` class.
 
 ### Using DotEnv in ASP.NET Core
 
