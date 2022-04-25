@@ -163,8 +163,6 @@ The `environment` is specified by the actual environment variable `DOTNET_ENV`.
 
 It should be noted that the default environment will be `development` or `dev` if the environment is never specified with `DOTNET_ENV`.
 
-For more information, see the [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html).
-
 ### Parsing .env files
 
 You can analyze key-value pairs from any data source (a .env file, a database, a web service, etc):
@@ -203,6 +201,8 @@ If you are using **ASP.NET Core with .NET 6**, you will not need to add anything
 new EnvLoader().Load();
 builder.Configuration.AddEnvironmentVariables();
 ```
+
+For more information, see the [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html).
 
 ## File Format
 
