@@ -32,7 +32,7 @@ By default, the `Load` method will search for a file called `.env` in the curren
 
 The current directory is where the executable with its dependencies is located.
 
-Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`. Also, by default, the `Load` method does not overwrite the value of the environment variable.
+Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`. Also, by default, the Load method does not overwrite the value of an existing environment variable.
 
 ### Accessing variables
 
@@ -46,6 +46,11 @@ Or you can also access the environment variables using the static property `Inst
 ```cs
 string key1 = EnvReader.Instance["KEY1"];
 string key2 = EnvReader.Instance["KEY2"];
+```
+If you don't want to use the `EnvReader` class to access environment variables, you can use the `System.Environment` class:
+```cs
+string key1 = System.Environment.GetEnvironmentVariable("KEY1");
+string key2 = System.Environment.GetEnvironmentVariable("KEY2");
 ```
 
 ### Changing default name
