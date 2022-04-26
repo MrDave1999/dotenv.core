@@ -32,7 +32,7 @@ By default, the `Load` method will search for a file called `.env` in the curren
 
 The current directory is where the executable with its dependencies is located.
 
-Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`. Also, by default, the Load method does not overwrite the value of an existing environment variable.
+Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`. Also, by default, the `Load` method does not overwrite the value of an existing environment variable.
 
 ### Accessing variables
 
