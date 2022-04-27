@@ -196,7 +196,6 @@ class HomeController
 ```
 If you are using **ASP.NET Core with .NET 6**, you will not need to add anything in a `Startup.cs` file. Simply go to `Program.cs` and add the following code after the `WebApplication.CreateBuilder` method:
 ```cs
-// var builder = WebApplication.CreateBuilder(args);
 new EnvLoader().Load();
 builder.Configuration.AddEnvironmentVariables();
 ```
