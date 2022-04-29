@@ -92,9 +92,7 @@ Then you can load the .env file with the `Load` method of the `EnvLoader` class:
 ```cs
 new EnvLoader().Load();
 ```
-By default, the `Load` method will search for a file called `.env` in the current directory and if it does not find it, it will search for it in the parent directories of the current directory.
-
-The current directory is where the executable with its dependencies is located.
+By default, the `Load` method will search for a file called `.env` in the current directory and if it does not find it, it will search for it in the parent directories of the current directory. Generally, the current directory is where the executable (your application itself) with its dependencies is located.
 
 Remember that if no encoding is specified to the `Load` method, the default will be `UTF-8`. Also, by default, the `Load` method does not overwrite the value of an existing environment variable.
 
@@ -104,6 +102,7 @@ new EnvLoader()
    .AddEnvFile("config.env")
    .Load();
 ```
+In this case, the `Load` method will search for a file called `config.env` instead of `.env`.
 
 ### Accessing environment variables
 
@@ -195,9 +194,8 @@ class HomeController
     }
 }
 ```
-If you are using **ASP.NET Core with .NET 6**, you will not need to add anything in a `Startup.cs` file. Simply go to `Program.cs` and add the following code after the `WebApplication.CreateBuilder` method:
+If you are using **ASP.NET Core 6**, you will not need to add anything in a `Startup.cs` file. Simply go to `Program.cs` and add the following code after the `WebApplication.CreateBuilder` method:
 ```cs
-// var builder = WebApplication.CreateBuilder(args);
 new EnvLoader().Load();
 builder.Configuration.AddEnvironmentVariables();
 ```
