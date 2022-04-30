@@ -8,7 +8,7 @@
     <title>Getting Started with dotenv.core | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started with dotenv.core | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,7 +81,7 @@
 
 <h2 id="installation">Installation</h2>
 <p>If you're an hardcore and want to do it manually, you must add the following to the <code>csproj</code> file:</p>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;DotEnv.Core&quot; Version=&quot;2.0.0&quot; /&gt;
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;DotEnv.Core&quot; Version=&quot;2.0.1&quot; /&gt;
 </code></pre>
 <p>If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the <strong>Tools</strong> &gt; <strong>NuGet Package Manager</strong> &gt; <strong>Package Manager Console</strong> command and run the install command:</p>
 <pre><code>Install-Package DotEnv.Core
@@ -97,9 +97,8 @@
 <p>Then you can load the .env file with the <code>Load</code> method of the <code>EnvLoader</code> class:</p>
 <pre><code class="lang-cs">new EnvLoader().Load();
 </code></pre>
-<p>By default, the <code>Load</code> method will search for a file called <code>.env</code> in the current directory and if it does not find it, it will search for it in the parent directories of the current directory.</p>
-<p>The current directory is where the executable with its dependencies is located.</p>
-<p>Remember that if no encoding is specified to the <code>Load</code> method, the default will be <code>UTF-8</code>. Also, by default, the <code>Load</code> method does not overwrite the value of the environment variable.</p>
+<p>By default, the <code>Load</code> method will search for a file called <code>.env</code> in the current directory and if it does not find it, it will search for it in the parent directories of the current directory. Generally, the current directory is where the executable (your application itself) with its dependencies is located.</p>
+<p>Remember that if no encoding is specified to the <code>Load</code> method, the default will be <code>UTF-8</code>. Also, by default, the <code>Load</code> method does not overwrite the value of an existing environment variable.</p>
 <h3 id="accessing-variables">Accessing variables</h3>
 <p>After you have loaded the .env file with the <code>Load</code> method, you can access the environment variables using the indexer of the <code>EnvReader</code> class:</p>
 <pre><code class="lang-cs">var reader = new EnvReader();
@@ -109,6 +108,10 @@ string key2 = reader[&quot;KEY2&quot;];
 <p>Or you can also access the environment variables using the static property <code>Instance</code>:</p>
 <pre><code class="lang-cs">string key1 = EnvReader.Instance[&quot;KEY1&quot;];
 string key2 = EnvReader.Instance[&quot;KEY2&quot;];
+</code></pre>
+<p>If you don't want to use the <code>EnvReader</code> class to access environment variables, you can use the <code>System.Environment</code> class:</p>
+<pre><code class="lang-cs">string key1 = System.Environment.GetEnvironmentVariable(&quot;KEY1&quot;);
+string key2 = System.Environment.GetEnvironmentVariable(&quot;KEY2&quot;);
 </code></pre>
 <h3 id="changing-default-name">Changing default name</h3>
 <p>You can also change the default name of the .env file using the <code>SetDefaultEnvFileName</code> method:</p>

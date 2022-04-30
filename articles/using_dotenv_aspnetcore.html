@@ -8,7 +8,7 @@
     <title>Using DotEnv in ASP.NET Core | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Using DotEnv in ASP.NET Core | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,59 +79,152 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="using-dotenv-in-aspnet-core">Using DotEnv in ASP.NET Core</h1>
 
-<p>Use the dotenv.core library in ASP. NET Core is very easy, the only thing you have to do, is to open the <code>Startup.cs</code> file and then add the following code in the <code>ConfigureServices</code> method:</p>
+<h2 id="registering-ienvreader">Registering IEnvReader</h2>
+<p>Open the <code>Startup.cs</code> file and in the <code>ConfigureServices</code> method you must load the .env file and register the <code>IEnvReader</code> service:</p>
 <pre><code class="lang-cs">public void ConfigureServices(IServiceCollection services)
 {
-    // To load the .env file.
     new EnvLoader().Load();
-    // To register the IEnvReader service.
     services.AddSingleton&lt;IEnvReader&gt;(new EnvReader());
-    // more services...
 }
 </code></pre>
-<p>It is useful to register the <code>IEnvReader</code> service when other classes use the <code>IEnvReader</code> interface, however, it is optional.</p>
-<p>Of course, you can also load the .env file in the <code>main</code> method:</p>
-<pre><code class="lang-cs">public static void Main(string[] args)
+<p>Then you can access the environment variables with <code>IEnvReader</code>, for example:</p>
+<pre><code class="lang-cs">class HomeController
 {
-    // To load the .env file.
-    new EnvLoader().Load();
-    CreateHostBuilder(args).Build().Run();
+    public HomeController(IEnvReader reader)
+    {
+        string key = reader[&quot;KEY_NAME&quot;];
+    }
 }
-
-public static IHostBuilder CreateHostBuilder(string[] args) =&gt;
-    Host.CreateDefaultBuilder(args)
-        .ConfigureWebHostDefaults(webBuilder =&gt;
-        {
-            webBuilder.UseStartup&lt;Startup&gt;();
-        });
 </code></pre>
-<p>Maybe you are using .NET 6, so you won't find a <code>Startup.cs</code> file or main method. Simply load the .env file into the <code>Program.cs</code> file. For example:</p>
-<pre><code class="lang-cs">// In Program.cs
-
-var builder = WebApplication.CreateBuilder(args);
-
-// To load the .env file.
+<p>If you are using <strong>ASP.NET Core 6</strong> you do not need to add anything in the <code>Startup.cs</code> file, just go to <code>Program.cs</code> and load the .env file and register the service:</p>
+<pre><code class="lang-cs">var builder = WebApplication.CreateBuilder(args);
 new EnvLoader().Load();
-
-// Add services to the container.
-builder.services.AddSingleton&lt;IEnvReader&gt;(new EnvReader());
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+builder.Services.AddSingleton&lt;IEnvReader&gt;(new EnvReader());
+</code></pre>
+<h2 id="using-iconfiguration">Using IConfiguration</h2>
+<p>Open the <code>Startup.cs</code> file and in the constructor of the <code>Startup</code> class you will need to load the .env file and build a new configuration:</p>
+<pre><code class="lang-cs">class Startup
 {
-    app.UseExceptionHandler(&quot;/Error&quot;);
+    public Startup(IConfiguration configuration)
+    {
+        new EnvLoader().Load();
+        Configuration = new ConfigurationBuilder()
+                .AddEnvironmentVariables()
+                .Build();
+    }
+
+    public IConfiguration Configuration { get; }
 }
-app.UseStaticFiles();
+</code></pre>
+<p>The <code>AddEnvironmentVariables</code> method must be called because it will add the environment variables in the <strong>configuration object</strong> managed by ASP.NET Core, so you can access the variables with <code>IConfiguration</code>:</p>
+<pre><code class="lang-cs">class HomeController
+{
+    public HomeController(IConfiguration configuration)
+    {
+        string key = configuration[&quot;KEY_NAME&quot;];
+    }
+}
+</code></pre>
+<p>If you are using <strong>ASP.NET Core 6</strong>, open the <code>Program.cs</code> file and load the .env file and call the <code>Configuration</code> property of the <code>WebApplicationBuilder</code> class:</p>
+<pre><code class="lang-cs">var builder = WebApplication.CreateBuilder(args);
+new EnvLoader().Load();
+builder.Configuration.AddEnvironmentVariables();
+</code></pre>
+<h2 id="using-ioptions">Using IOptions</h2>
+<p>If you do not want to use <code>IEnvReader</code> or <code>IConfiguration</code>, you can create your own configuration class and with this custom class you will be able to access the keys that are read from an .env file:</p>
+<pre><code class="lang-cs">// My Custom Class
+class AppSettings
+{
+    public string ConnectionString { get; set; }
+    public string JwtSecret { get; set; }
+}
+</code></pre>
+<p>Remember that each property must match the key name of the .env file.</p>
+<p>Then you must open the <code>Startup.cs</code> file and load the .env file and build the configuration in the constructor of the <code>Startup</code> class:</p>
+<pre><code class="lang-cs">class Startup
+{
+    public Startup(IConfiguration configuration)
+    {
+        new EnvLoader().Load();
+        Configuration = new ConfigurationBuilder()
+                .AddEnvironmentVariables()
+                .Build();
+    }
 
-app.UseRouting();
+    public IConfiguration Configuration { get; }
+}
+</code></pre>
+<p>Then go to <code>ConfigureServices</code> method and register the configuration instance. The idea is to bind the <code>AppSettings</code> class with the configuration instance referenced by the <code>Startup.Configuration</code> property:</p>
+<pre><code class="lang-cs">class Startup
+{
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.Configure&lt;AppSettings&gt;(Configuration);
+    }
 
-app.UseAuthorization();
+    public IConfiguration Configuration { get; }
+}
+</code></pre>
+<p>And ready, you can now use the <code>IOptions</code> interface to access the keys:</p>
+<pre><code class="lang-cs">class HomeController
+{
+    public HomeController(IOptions&lt;AppSettings&gt; options)
+    {
+        AppSettings settings = options.Value;
+        string key1 = settings.ConnectionString;
+        string key2 = settings.JwtSecret;
+    }
+}
+</code></pre>
+<p>The above explanation is not difficult to adapt to <strong>ASP.NET Core 6</strong> if you are using it. I leave you the complete example so that you can guide you:</p>
+<pre><code class="lang-cs">// In Program.cs file:
+var builder = WebApplication.CreateBuilder(args);
+new EnvLoader().Load();
+builder.Configuration.AddEnvironmentVariables();
+builder.Services.Configure&lt;AppSettings&gt;(builder.Configuration);
+</code></pre>
+<h2 id="registering-appsettings">Registering AppSettings</h2>
+<p>If you don't want to use the <code>IOptions</code> interface, you can register the <code>AppSettings</code> class as service:</p>
+<pre><code class="lang-cs">class Startup
+{
+    public Startup(IConfiguration configuration)
+    {
+        // Load .env file
+        new EnvLoader().Load();
+        // Build Configuration
+        Configuration = new ConfigurationBuilder()
+                .AddEnvironmentVariables()
+                .Build();
+    }
 
-app.MapRazorPages();
+    public void ConfigureServices(IServiceCollection services)
+    {
+        // Bind the 'AppSettings' class with the configuration instance.
+        AppSettings settings = ConfigurationBinder.Get&lt;AppSettings&gt;(Configuration);
+        // Register the `AppSettings` class as service.
+        services.AddSingleton(settings);
+    }
 
-app.Run();
+    public IConfiguration Configuration { get; }
+}
+</code></pre>
+<p>Then you can directly use the <code>AppSettings</code> class to access the configuration values:</p>
+<pre><code class="lang-cs">class HomeController
+{
+    public HomeController(AppSettings settings)
+    {
+        string key1 = settings.ConnectionString;
+        string key2 = settings.JwtSecret;
+    }
+}
+</code></pre>
+<p>In case you are using <strong>ASP.NET Core 6</strong>:</p>
+<pre><code class="lang-cs">// In Program.cs file:
+var builder = WebApplication.CreateBuilder(args);
+new EnvLoader().Load();
+builder.Configuration.AddEnvironmentVariables();
+AppSettings settings = ConfigurationBinder.Get&lt;AppSettings&gt;(builder.Configuration);
+builder.Services.AddSingleton(settings);
 </code></pre>
 </article>
           </div>
