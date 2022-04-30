@@ -7,6 +7,8 @@
 
 **dotenv.core** is a class library for read and parsing .env files in .NET Core and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.
 
+The advantage of using this library is that you do not need to set the environment variable from the operating system shell (**dotenv** sets environment variables from a .env file).
+
 ## Features
 
 - It has a [fluent interface](https://en.wikipedia.org/wiki/Fluent_interface), which makes it simple and easy to use.
