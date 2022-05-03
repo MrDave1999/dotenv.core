@@ -31,11 +31,6 @@ Open bash and build/deploy the DotEnv.Core site:
 ```sh
 ./docfx.sh --serve
 ```
-You may need to grant permission to execute:
-```sh
-chmod u+x docfx.sh
-```
-
 Go to https://localhost:8080 to view the DotEnv.Core site.
 
 ## Observation
