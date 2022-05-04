@@ -78,6 +78,31 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
+    public void Parse_WhenLineHasInlineComment_ShouldRemoveInlineComment()
+    {
+        string env = @"
+                INLINE_COMMENT_1=VAL # This is an inline comment.
+                INLINE_COMMENT_2=VAL  # This is an inline comment # Other comment.
+                INLINE_COMMENT_3=VAL ### This is an inline comment.
+                INLINE_COMMENT_4=VAL# This isn't an inline comment.
+                INLINE_COMMENT_5=#This isn't an inline comment.
+                INLINE_COMMENT_6= #This is an inline comment.
+                INLINE_COMMENT_TOKEN=6U+c'UDH""l`ZFDD5%/|'t{Ojt.5hzu+#wUBH#:9w*l_I2z{^m/7h-U&!qcLlXZ
+            ";
+
+        new EnvParser().Parse(env);
+
+        Assert.AreEqual(expected: "VAL", actual: GetEnvironmentVariable("INLINE_COMMENT_1"));
+        Assert.AreEqual(expected: "VAL", actual: GetEnvironmentVariable("INLINE_COMMENT_2"));
+        Assert.AreEqual(expected: "VAL", actual: GetEnvironmentVariable("INLINE_COMMENT_3"));
+        Assert.AreEqual(expected: "VAL# This isn't an inline comment.", actual: GetEnvironmentVariable("INLINE_COMMENT_4"));
+        Assert.AreEqual(expected: "#This isn't an inline comment.", actual: GetEnvironmentVariable("INLINE_COMMENT_5"));
+        Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("INLINE_COMMENT_6"));
+        var token = "6U+c'UDH\"l`ZFDD5%/|'t{Ojt.5hzu+#wUBH#:9w*l_I2z{^m/7h-U&!qcLlXZ";
+        Assert.AreEqual(expected: token, actual: GetEnvironmentVariable("INLINE_COMMENT_TOKEN"));
+    }
+
+    [TestMethod]
     public void Parse_WhenReadLineWithKeyValuePair_ShouldExtractKey()
     {
         string env = @"

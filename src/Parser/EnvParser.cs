@@ -74,6 +74,7 @@ namespace DotEnv.Core
                     continue;
                 }
 
+                line = RemoveInlineComment(line);
                 line = ExpandEnvironmentVariables(line, currentLine);
 
                 var key   = ExtractKey(line);

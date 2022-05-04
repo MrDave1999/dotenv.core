@@ -34,6 +34,18 @@ namespace DotEnv.Core
         }
 
         /// <summary>
+        /// Removes the inline comment.
+        /// </summary>
+        /// <param name="line">The line with the inline comment to remove.</param>
+        /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
+        /// <returns>A string without the inline comment.</returns>
+        private string RemoveInlineComment(string line)
+        {
+            _ = line ?? throw new ArgumentNullException(nameof(line));
+            return line.Split(new[] { " #" }, MaxCount, StringSplitOptions.None)[0];
+        }
+
+        /// <summary>
         /// Removes all leading and trailing white-space characters from the current key.
         /// </summary>
         /// <param name="key">The key to trim.</param>
