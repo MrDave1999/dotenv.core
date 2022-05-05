@@ -82,6 +82,8 @@ namespace DotEnv.Core
 
                 key   = TrimKey(key);
                 value = TrimValue(value);
+                if(IsQuoted(value))
+                    value = RemoveQuotes(value);
                 value = string.IsNullOrEmpty(value) ? " " : value;
 
                 var retrievedValue = EnvVarsProvider[key];

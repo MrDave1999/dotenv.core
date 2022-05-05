@@ -162,5 +162,26 @@ namespace DotEnv.Core
             });
             return name;
         }
+
+        /// <summary>
+        /// Checks if the text is quoted with single or double quotes.
+        /// </summary>
+        /// <param name="text">The text to validate.</param>
+        /// <returns><c>true</c> if the text is quoted, or <c>false</c>.</returns>
+        private bool IsQuoted(string text)
+        {
+            if(text.Length <= 1)
+                return false;
+            return (text.StartsWith("\"") && text.EndsWith("\"")) 
+                || (text.StartsWith("'") && text.EndsWith("'"));
+        }
+
+        /// <summary>
+        /// Removes single or double quotes.
+        /// </summary>
+        /// <param name="text">The text with quotes to remove.</param>
+        /// <returns>A string without single or double quotes.</returns>
+        private string RemoveQuotes(string text)
+            => text.Trim(new[] { '\'', '"' });
     }
 }
