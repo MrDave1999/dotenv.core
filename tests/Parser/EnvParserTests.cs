@@ -103,6 +103,56 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
+    public void Parse_WhenValueIsQuoted_ShouldRemoveSingleOrDoubleQuotes()
+    {
+        string env = @"
+                DOUBLE_QUOTES_1=""VAL""
+                DOUBLE_QUOTES_2=""  VAL  ""
+                DOUBLE_QUOTES_3=""""
+                DOUBLE_QUOTES_4=""   ""
+
+                SINGLE_QUOTES_1='VAL'
+                SINGLE_QUOTES_2='  VAL  '
+                SINGLE_QUOTES_3=''
+                SINGLE_QUOTES_4='   '
+
+                COMBINED_QUOTES_1='VAL""
+                COMBINED_QUOTES_2=""VAL'
+
+                INCOMPLETE_QUOTES_1='VAL
+                INCOMPLETE_QUOTES_2=""VAL
+                INCOMPLETE_QUOTES_3=VAL'
+                INCOMPLETE_QUOTES_4=VAL""
+                INCOMPLETE_QUOTES_5='
+                INCOMPLETE_QUOTES_6=""
+                INCOMPLETE_QUOTES_7=
+            ";
+        
+        new EnvParser().Parse(env);
+
+        Assert.AreEqual(expected: "VAL", actual: GetEnvironmentVariable("DOUBLE_QUOTES_1"));
+        Assert.AreEqual(expected: "  VAL  ", actual: GetEnvironmentVariable("DOUBLE_QUOTES_2"));
+        Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("DOUBLE_QUOTES_3"));
+        Assert.AreEqual(expected: "   ", actual: GetEnvironmentVariable("DOUBLE_QUOTES_4"));
+
+        Assert.AreEqual(expected: "VAL", actual: GetEnvironmentVariable("SINGLE_QUOTES_1"));
+        Assert.AreEqual(expected: "  VAL  ", actual: GetEnvironmentVariable("SINGLE_QUOTES_2"));
+        Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("SINGLE_QUOTES_3"));
+        Assert.AreEqual(expected: "   ", actual: GetEnvironmentVariable("SINGLE_QUOTES_4"));
+
+        Assert.AreEqual(expected: "'VAL\"", actual: GetEnvironmentVariable("COMBINED_QUOTES_1"));
+        Assert.AreEqual(expected: "\"VAL'", actual: GetEnvironmentVariable("COMBINED_QUOTES_2"));
+        
+        Assert.AreEqual(expected: "'VAL", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_1"));
+        Assert.AreEqual(expected: "\"VAL", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_2"));
+        Assert.AreEqual(expected: "VAL'", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_3"));
+        Assert.AreEqual(expected: "VAL\"", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_4"));
+        Assert.AreEqual(expected: "'", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_5"));
+        Assert.AreEqual(expected: "\"", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_6"));
+        Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_7"));
+    }
+
+    [TestMethod]
     public void Parse_WhenReadLineWithKeyValuePair_ShouldExtractKey()
     {
         string env = @"
