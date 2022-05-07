@@ -5,7 +5,7 @@ using System.Text;
 namespace DotEnv.Core
 {
     /// <summary>
-    /// Defines the methods used to read environment variables from a specific <see href="xref:DotEnv.Core.IEnvironmentVariablesProvider">provider</see>.
+    /// Defines the methods used to read environment variables from a specific <see cref="IEnvironmentVariablesProvider">provider</see>.
     /// </summary>
     public interface IEnvReader : IEnumerable<KeyValuePair<string, string>>
     {
