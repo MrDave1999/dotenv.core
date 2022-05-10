@@ -53,7 +53,8 @@ namespace DotEnv.Core
 
                 if (retrievedValue is null)
                 {
-                    var errorMsg = envKeyAttribute is not null ? string.Format(KeyAssignedToPropertyIsNotSet, type.Name, property.Name, envKeyAttribute.Name) : string.Format(PropertyDoesNotMatchConfigKeyMessage, property.Name);
+                    var errorMsg = envKeyAttribute is not null ? string.Format(KeyAssignedToPropertyIsNotSet, type.Name, property.Name, envKeyAttribute.Name) 
+                        : string.Format(PropertyDoesNotMatchConfigKeyMessage, property.Name);
                     _validationResult.Add(errorMsg);
                     continue;
                 }
