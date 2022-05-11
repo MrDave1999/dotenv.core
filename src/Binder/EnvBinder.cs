@@ -69,10 +69,17 @@ namespace DotEnv.Core
                 }
             }
 
-            if(_validationResult.HasError())
+            if(_validationResult.HasError() && _configuration.ThrowException)
                 throw new BinderException(message: _validationResult.ErrorMessages);
 
             return settings;
+        }
+
+        /// <inheritdoc />
+        public IEnvBinder IgnoreException()
+        {
+            _configuration.ThrowException = false;
+            return this;
         }
     }
 }
