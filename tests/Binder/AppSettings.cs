@@ -31,3 +31,20 @@ public class SettingsExample3
     [EnvKey("BIND_WEATHER_ID")]
     public int WeatherId { get; set; }
 }
+
+public class ReadOnlyProperties
+{
+    [EnvKey("SECRET_KEY")]
+    public string SecretKey { get; }
+    public string ApiKey { get; }
+}
+
+public class WriteOnlyProperties
+{
+    public int weatherId;
+    public string apiKey;
+
+    [EnvKey("WEATHER_ID")]
+    public int WeatherId { set => weatherId = value; }
+    public string ApiKey { set => apiKey = value; }
+}

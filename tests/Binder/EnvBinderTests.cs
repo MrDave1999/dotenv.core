@@ -94,4 +94,32 @@ public class EnvBinderTests
         StringAssert.Contains(msg, string.Format(PropertyDoesNotMatchConfigKeyMessage, "BindSecretKey"));
         StringAssert.Contains(msg, string.Format(PropertyDoesNotMatchConfigKeyMessage, "BindJwtSecret"));
     }
+
+    [TestMethod]
+    public void Bind_WhenPropertyIsReadOnly_ShouldIgnoreTheReadOnlyProperty()
+    {
+        var customProvider = new CustomEnvironmentVariablesProvider();
+        var binder = new EnvBinder(customProvider);
+        customProvider["SECRET_KEY"]  = "12345ex";
+        customProvider["ApiKey"]      = "example12345";
+
+        var settings = binder.Bind<ReadOnlyProperties>();
+
+        Assert.AreNotEqual(notExpected: "12345ex",      actual: settings.SecretKey);
+        Assert.AreNotEqual(notExpected: "example12345", actual: settings.ApiKey);
+    }
+
+    [TestMethod]
+    public void Bind_WhenPropertyIsWriteOnly_ShouldIgnoreTheWriteOnlyProperty()
+    {
+        var customProvider = new CustomEnvironmentVariablesProvider();
+        var binder = new EnvBinder(customProvider);
+        customProvider["WEATHER_ID"]  = "10";
+        customProvider["ApiKey"]      = "123456";
+
+        var settings = binder.Bind<WriteOnlyProperties>();
+
+        Assert.AreNotEqual(notExpected: 10,       actual: settings.weatherId);
+        Assert.AreNotEqual(notExpected: "123456", actual: settings.apiKey);
+    }
 }
