@@ -47,6 +47,9 @@ namespace DotEnv.Core
             result = _validationResult;
             foreach (PropertyInfo property in type.GetProperties())
             {
+                if(IsReadOnlyOrWriteOnly(property)) 
+                    continue;
+
                 var envKeyAttribute = (EnvKeyAttribute)Attribute.GetCustomAttribute(property, typeof(EnvKeyAttribute));
                 var variableName = envKeyAttribute is not null ? envKeyAttribute.Name : property.Name;
                 var retrievedValue = _configuration.EnvVars[variableName];
@@ -74,6 +77,13 @@ namespace DotEnv.Core
 
             return settings;
         }
+
+        /// <summary>
+        /// Checks whether the property is read-only or write-only.
+        /// </summary>
+        /// <returns><c>true</c> if the property is read-only or write-only, or <c>false</c> if the property is read-write.</returns>
+        private bool IsReadOnlyOrWriteOnly(PropertyInfo property)
+            => !property.CanRead || !property.CanWrite;
 
         /// <inheritdoc />
         public IEnvBinder IgnoreException()
