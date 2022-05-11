@@ -1,5 +1,3 @@
-using DotEnv.Core;
-
 var reader = new EnvReader();
 
 Console.WriteLine("---- EXAMPLE (1):");
@@ -8,6 +6,12 @@ new EnvLoader()
     .Load();
 Console.WriteLine($"MYSQL_HOST={reader["MYSQL_HOST"]}");
 Console.WriteLine($"MYSQL_DB={reader["MYSQL_DB"]}");
+Console.WriteLine("\n\n\n");
+
+Console.WriteLine("---- SPECIAL EXAMPLE:");
+var settings = new EnvBinder().Bind<AppSettings>();
+Console.WriteLine($"MYSQL_HOST={settings.MySqlHost}");
+Console.WriteLine($"MYSQL_DB={settings.MySqlDb}");
 Console.WriteLine("\n\n\n");
 
 Console.WriteLine("---- EXAMPLE (2):");
