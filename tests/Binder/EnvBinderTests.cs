@@ -73,4 +73,25 @@ public class EnvBinderTests
         var ex = Assert.ThrowsException<BinderException>(action);
         StringAssert.Contains(ex.Message, string.Format(FailedConvertConfigurationValueMessage, "BIND_WEATHER_ID", "Int32", "This is not an int", "Int32"));
     }
+
+    [TestMethod]
+    public void Bind_WhenErrorsAreFound_ShouldReadTheErrors()
+    {
+        string msg;
+        var customProvider = new CustomEnvironmentVariablesProvider();
+        var binder = new EnvBinder(customProvider).IgnoreException();
+        customProvider["BIND_RACE_TIME"]  = "This is not an int";
+        
+        binder.Bind<AppSettings>(out var result);
+
+        Assert.AreEqual(expected: true, actual: result.HasError());
+        Assert.AreEqual(expected: 5, actual: result.Count);
+
+        msg = result.ErrorMessages;
+        StringAssert.Contains(msg, string.Format(KeyAssignedToPropertyIsNotSet, "AppSettings", "JwtSecret", "BIND_JWT_SECRET"));
+        StringAssert.Contains(msg, string.Format(KeyAssignedToPropertyIsNotSet, "AppSettings", "TokenId", "BIND_TOKEN_ID"));
+        StringAssert.Contains(msg, string.Format(FailedConvertConfigurationValueMessage, "BIND_RACE_TIME", "Int32", "This is not an int", "Int32"));
+        StringAssert.Contains(msg, string.Format(PropertyDoesNotMatchConfigKeyMessage, "BindSecretKey"));
+        StringAssert.Contains(msg, string.Format(PropertyDoesNotMatchConfigKeyMessage, "BindJwtSecret"));
+    }
 }

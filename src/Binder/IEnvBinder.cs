@@ -21,5 +21,11 @@ namespace DotEnv.Core
         /// </exception>
         /// <returns>The new instance of TSettings.</returns>
         TSettings Bind<TSettings>() where TSettings : new();
+
+        /// <summary>
+        /// Disables/ignores <see cref="BinderException" />. This method tells the binder not to throw an exception when it encounters one or more errors.
+        /// </summary>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvBinder IgnoreException();
     }
 }
