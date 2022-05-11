@@ -13,7 +13,7 @@ namespace DotEnv.Core
         TSettings Bind<TSettings>(out EnvValidationResult result) where TSettings : new();
 
         /// <summary>
-        /// Binds the instance of the environment variables provider to a new instance of type TSettings.
+        /// Binds the instance of the environment variables provider to a new instance of type TSettings (binds only read-write properties).
         /// </summary>
         /// <typeparam name="TSettings">The type of the new instance to bind.</typeparam>
         /// <exception cref="BinderException">
