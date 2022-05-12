@@ -45,7 +45,8 @@ namespace DotEnv.Core
             var settings = new TSettings();
             var type = typeof(TSettings);
             result = _validationResult;
-            foreach (PropertyInfo property in type.GetProperties())
+            var properties = _configuration.BindNonPublicProperties ? type.GetPublicAndNonPublicProperties() : type.GetProperties();
+            foreach (PropertyInfo property in properties)
             {
                 if(IsReadOnlyOrWriteOnly(property)) 
                     continue;
@@ -84,11 +85,18 @@ namespace DotEnv.Core
         /// <returns><c>true</c> if the property is read-only or write-only, or <c>false</c> if the property is read-write.</returns>
         private bool IsReadOnlyOrWriteOnly(PropertyInfo property)
             => !property.CanRead || !property.CanWrite;
-
+            
         /// <inheritdoc />
         public IEnvBinder IgnoreException()
         {
             _configuration.ThrowException = false;
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IEnvBinder AllowBindNonPublicProperties()
+        {
+            _configuration.BindNonPublicProperties = true;
             return this;
         }
     }

@@ -14,6 +14,12 @@ namespace DotEnv.Core
         public bool ThrowException { get; set; } = true;
 
         /// <summary>
+        /// When <c>false</c> (the default), the binder will only to set public properties. 
+        /// If <c>true</c>, the binder will to set all non-public properties.
+        /// </summary>
+        public bool BindNonPublicProperties { get; set; }
+
+        /// <summary>
         /// Gets or sets the environment variables provider.
         /// </summary>
         public IEnvironmentVariablesProvider EnvVars { get; set; } = new DefaultEnvironmentProvider();

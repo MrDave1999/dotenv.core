@@ -13,12 +13,13 @@ namespace DotEnv.Core
         TSettings Bind<TSettings>(out EnvValidationResult result) where TSettings : new();
 
         /// <summary>
-        /// Binds the instance of the environment variables provider to a new instance of type TSettings (binds only read-write properties).
+        /// Binds the instance of the environment variables provider to a new instance of type TSettings.
         /// </summary>
         /// <typeparam name="TSettings">The type of the new instance to bind.</typeparam>
         /// <exception cref="BinderException">
         /// If the binder encounters one or more errors.
         /// </exception>
+        /// <remarks>Binds only read-write properties and, moreover, only sets public properties.</remarks>
         /// <returns>The new instance of TSettings.</returns>
         TSettings Bind<TSettings>() where TSettings : new();
 
@@ -27,5 +28,12 @@ namespace DotEnv.Core
         /// </summary>
         /// <returns>An instance implementing the fluent interface.</returns>
         IEnvBinder IgnoreException();
+
+        /// <summary>
+        /// Allows binding of non-public properties.
+        /// This method tells the binder that it can set non-public properties.
+        /// </summary>
+        /// <returns>An instance implementing the fluent interface.</returns>
+        IEnvBinder AllowBindNonPublicProperties();
     }
 }
