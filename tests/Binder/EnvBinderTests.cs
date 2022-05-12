@@ -122,4 +122,26 @@ public class EnvBinderTests
         Assert.AreNotEqual(notExpected: 10,       actual: settings.weatherId);
         Assert.AreNotEqual(notExpected: "123456", actual: settings.apiKey);
     }
+
+    [TestMethod]
+    public void Bind_WhenAllowedBindNonPublicProperties_ShouldSetNonPublicProperties()
+    {
+        var customProvider = new CustomEnvironmentVariablesProvider();
+        var binder = new EnvBinder(customProvider).AllowBindNonPublicProperties();
+        customProvider["TokenId"]    = "e45d";
+        customProvider["ApiKey"]     = "example123";
+        customProvider["WeatherId"]  = "3";
+        customProvider["SecretKey"]  = "23example";
+        customProvider["TimeId"]     = "34";
+        customProvider["Url"]        = "example.com";
+
+        var settings = binder.Bind<NonPublicProperties>();
+
+        Assert.AreEqual(expected: "e45d",        actual: settings.TokenId);
+        Assert.AreEqual(expected: "example123",  actual: settings.apiKey);
+        Assert.AreEqual(expected: 3,             actual: settings.weatherId);
+        Assert.AreEqual(expected: "23example",   actual: settings.SecretKey);
+        Assert.AreEqual(expected: 34,            actual: settings.TimeId);
+        Assert.AreEqual(expected: "example.com", actual: settings.url);
+    }
 }
