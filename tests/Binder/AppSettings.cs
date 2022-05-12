@@ -13,6 +13,7 @@ public class AppSettings
 
     public string BindSecretKey { get; set; }
     public string BindJwtSecret { get; set; }
+    private string IgnoredProperty { get; set; }
 }
 
 public class SettingsExample1
@@ -47,4 +48,17 @@ public class WriteOnlyProperties
     [EnvKey("WEATHER_ID")]
     public int WeatherId { set => weatherId = value; }
     public string ApiKey { set => apiKey = value; }
+}
+
+public class NonPublicProperties
+{
+    public string apiKey;
+    public int weatherId;
+    public string url;
+    public string TokenId { get; private set; }
+    private string ApiKey { get => apiKey; set => apiKey = value; }
+    protected int WeatherId { get => weatherId; set => weatherId = value; }
+    internal string SecretKey { get; set; }
+    protected internal int TimeId { get; set; }
+    private protected string Url { get => url; set => url = value; }
 }
