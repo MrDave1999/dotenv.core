@@ -27,6 +27,14 @@ namespace DotEnv.Core
             => new EnvReader(provider);
 
         /// <summary>
+        /// Creates an instance that implements the <see cref="IEnvBinder" /> interface.
+        /// </summary>
+        /// <param name="provider">The environment variables provider.</param>
+        /// <returns>An instance that implements the <see cref="IEnvBinder" /> interface.</returns>
+        public static IEnvBinder CreateBinder(this IEnvironmentVariablesProvider provider)
+            => new EnvBinder(provider);
+
+        /// <summary>
         /// Converts the environment variables provider to a dictionary.
         /// </summary>
         /// <param name="provider">The environment variables provider.</param>
