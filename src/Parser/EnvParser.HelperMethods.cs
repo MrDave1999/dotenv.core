@@ -146,7 +146,13 @@ namespace DotEnv.Core
                 {
                     int index = match.Groups[0].Captures[0].Index + 1; // So that the position starts from '1' instead of '0'.
                     var value = match.Groups[0].Value;
-                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(VariableIsAnEmptyStringMessage, actualValue: value, lineNumber: currentLine, column: index, envFileName: FileName));
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
+                        VariableIsAnEmptyStringMessage, 
+                        actualValue: value, 
+                        lineNumber: currentLine, 
+                        column: index, 
+                        envFileName: FileName
+                    ));
                     return string.Empty;
                 }
 
@@ -154,7 +160,13 @@ namespace DotEnv.Core
                 if (retrievedValue is null)
                 {
                     int index = match.Groups[1].Captures[0].Index + 1; // So that the position starts from '1' instead of '0'.
-                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(VariableNotSetMessage, actualValue: variable, lineNumber: currentLine, column: index, envFileName: FileName));
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
+                        VariableNotSetMessage, 
+                        actualValue: variable, 
+                        lineNumber: currentLine, 
+                        column: index, 
+                        envFileName: FileName
+                    ));
                     return string.Empty;
                 }
 

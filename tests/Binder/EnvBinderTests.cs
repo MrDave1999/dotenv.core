@@ -59,7 +59,12 @@ public class EnvBinderTests
         void action() => binder.Bind<SettingsExample2>();
 
         var ex = Assert.ThrowsException<BinderException>(action);
-        StringAssert.Contains(ex.Message, string.Format(KeyAssignedToPropertyIsNotSetMessage, "SettingsExample2", "SecretKey", "SECRET_KEY"));
+        StringAssert.Contains(ex.Message, string.Format(
+            KeyAssignedToPropertyIsNotSetMessage, 
+            "SettingsExample2", 
+            "SecretKey", 
+            "SECRET_KEY"
+        ));
     }
 
     [TestMethod]
@@ -71,7 +76,13 @@ public class EnvBinderTests
         void action() => binder.Bind<SettingsExample3>();
 
         var ex = Assert.ThrowsException<BinderException>(action);
-        StringAssert.Contains(ex.Message, string.Format(FailedConvertConfigurationValueMessage, "BIND_WEATHER_ID", "Int32", "This is not an int", "Int32"));
+        StringAssert.Contains(ex.Message, string.Format(
+            FailedConvertConfigurationValueMessage, 
+            "BIND_WEATHER_ID", 
+            "Int32", 
+            "This is not an int", 
+            "Int32"
+        ));
     }
 
     [TestMethod]
@@ -88,9 +99,25 @@ public class EnvBinderTests
         Assert.AreEqual(expected: 5, actual: result.Count);
 
         msg = result.ErrorMessages;
-        StringAssert.Contains(msg, string.Format(KeyAssignedToPropertyIsNotSetMessage, "AppSettings", "JwtSecret", "BIND_JWT_SECRET"));
-        StringAssert.Contains(msg, string.Format(KeyAssignedToPropertyIsNotSetMessage, "AppSettings", "TokenId", "BIND_TOKEN_ID"));
-        StringAssert.Contains(msg, string.Format(FailedConvertConfigurationValueMessage, "BIND_RACE_TIME", "Int32", "This is not an int", "Int32"));
+        StringAssert.Contains(msg, string.Format(
+            KeyAssignedToPropertyIsNotSetMessage, 
+            "AppSettings", 
+            "JwtSecret", 
+            "BIND_JWT_SECRET"
+        ));
+        StringAssert.Contains(msg, string.Format(
+            KeyAssignedToPropertyIsNotSetMessage, 
+            "AppSettings", 
+            "TokenId", 
+            "BIND_TOKEN_ID"
+        ));
+        StringAssert.Contains(msg, string.Format(
+            FailedConvertConfigurationValueMessage, 
+            "BIND_RACE_TIME", 
+            "Int32", 
+            "This is not an int", 
+            "Int32"
+        ));
         StringAssert.Contains(msg, string.Format(PropertyDoesNotMatchConfigKeyMessage, "BindSecretKey"));
         StringAssert.Contains(msg, string.Format(PropertyDoesNotMatchConfigKeyMessage, "BindJwtSecret"));
     }

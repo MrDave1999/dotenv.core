@@ -50,7 +50,10 @@ namespace DotEnv.Core
 
             if (string.IsNullOrWhiteSpace(dataSource))
             {
-                ValidationResult.Add(errorMsg: FormatParserExceptionMessage(DataSourceIsEmptyOrWhitespaceMessage, envFileName: FileName));
+                ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
+                    DataSourceIsEmptyOrWhitespaceMessage, 
+                    envFileName: FileName
+                ));
                 CreateAndThrowParserException();
                 return _configuration.EnvVars;
             }
@@ -70,7 +73,13 @@ namespace DotEnv.Core
 
                 if (HasNoKeyValuePair(line))
                 {
-                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(LineHasNoKeyValuePairMessage, actualValue: line, lineNumber: currentLine, column: 1, envFileName: FileName));
+                    ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
+                        LineHasNoKeyValuePairMessage, 
+                        actualValue: line, 
+                        lineNumber: currentLine, 
+                        column: 1, 
+                        envFileName: FileName
+                    ));
                     continue;
                 }
 
