@@ -93,7 +93,6 @@ public partial class EnvParserTests
             column: 40
         ));
 
-
         StringAssert.Contains(msg, FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "This is a message", 
