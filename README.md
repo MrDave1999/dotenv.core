@@ -131,11 +131,11 @@ Create the model representing the setting class of the application:
 ```cs
 class AppSettings
 {
-  [EnvKey("CONNECTION_STRING")]
-  public string ConnectionString { get; set; }
+    [EnvKey("CONNECTION_STRING")]
+    public string ConnectionString { get; set; }
 
-  [EnvKey("SECRET_KEY")]
-  public string SecretKey { get; set; }
+    [EnvKey("SECRET_KEY")]
+    public string SecretKey { get; set; }
 }
 ```
 The `EnvKey` attribute is used in case the key names do not match the properties and this is because the key names in a .env file usually follow this convention: `KEY_NAME=VALUE` (UpperCase + SnakeCase).
