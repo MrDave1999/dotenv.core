@@ -29,7 +29,7 @@ A .env file or dotenv file is a simple text configuration file for controlling y
 ### What do .env files look like?
 
 .env files are line delimitated text files, meaning that each new line represents a single variable. By convention .env variable names are uppercase words separated by underscores. Variable names are followed directly by an = which, in turn is followed directly by the value, for example:
-```
+```bash
 VARIABLE_NAME=value
 ```
 
@@ -50,13 +50,13 @@ An environment variable is a dynamic variable that can affect the behavior of ru
 Each line beginning with the `#` character is a comment. White-spaces at the beginning of each comment will be ignored.
 
 Example:
-```
+```bash
 # comment without white spaces
    # comment with white spaces
 KEY=VALUE
 ```
 You can also add inline comments:
-```cs
+```bash
 KEY=VALUE #This is a comment
 KEY=VALUE#This is not a comment
 ```
@@ -64,13 +64,13 @@ KEY=VALUE#This is not a comment
 ### Interpolating variables
 
 Sometimes you will need to interpolate variables within a value, for example:
-```
+```bash
 MYSQL_USER=root
 MYSQL_ROOT_PASSWORD=1234
 CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
 ```
 If the variable embedded in the value is not set, the parser will throw an exception, for example:
-```
+```bash
 MYSQL_ROOT_PASSWORD=1234
 CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
 MYSQL_USER=root
