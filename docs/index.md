@@ -55,6 +55,11 @@ Example:
    # comment with white spaces
 KEY=VALUE
 ```
+You can also add inline comments:
+```cs
+KEY=VALUE #This is a comment
+KEY=VALUE#This is not a comment
+```
 
 ### Interpolating variables
 
