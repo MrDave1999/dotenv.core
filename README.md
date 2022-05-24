@@ -21,6 +21,7 @@ The advantage of using this library is that you do not need to set the environme
 - [Overview](#overview)
   * [Load .env file](#load-env-file)
   * [Accessing environment variables](#accessing-environment-variables)
+  * [Bind the model instance with the configuration keys](#bind-the-model-instance-with-the-configuration-keys)
   * [Load .env file without altering the environment](#load-env-file-without-altering-the-environment)
   * [Required Keys](#required-keys)
   * [Load .env file based on environment](#load-env-file-based-on-environment)
@@ -121,6 +122,30 @@ If you don't want to use the `EnvReader` class to access environment variables, 
 ```cs
 string key1 = System.Environment.GetEnvironmentVariable("KEY1");
 string key2 = System.Environment.GetEnvironmentVariable("KEY2");
+```
+### Bind the model instance with the configuration keys
+
+In case you do not want to use the `EnvReader` or `Environment` class, you can bind your own instance of the model with the keys of a .env file.
+
+Create the model representing the setting class of the application:
+```cs
+class AppSettings
+{
+  [EnvKey("CONNECTION_STRING")]
+  public string ConnectionString { get; set; }
+
+  [EnvKey("SECRET_KEY")]
+  public string SecretKey { get; set; }
+}
+```
+The `EnvKey` attribute is used in case the key names do not match the properties and this is because the key names in a .env file usually follow this convention: `KEY_NAME=VALUE` (UpperCase + SnakeCase).
+
+Then call the `EnvBinder.Bind` method to bind the `AppSettings` class with the configuration keys:
+```cs
+new EnvLoader().Load();
+var settings = new EnvBinder().Bind<AppSettings>();
+string key1 = settings.ConnectionString;
+string key2 = settings.SecretKey;
 ```
 
 ### Load .env file without altering the environment
