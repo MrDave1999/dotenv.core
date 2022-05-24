@@ -231,7 +231,7 @@ For more information, see the [articles](https://mrdave1999.github.io/dotenv.cor
 
 - Empty lines or lines with white-spaces will be ignored.
 - The key-value format must be as follows: `KEY=VAL`.
-- There is no special handling of quotation marks. This means that **they are part of the VAL.**
+- Single or double quotes in a value are removed.
 - If the value of a key is an empty string, it will be converted to a white-space.
 - White-spaces at both ends of the key and value are ignored.
 
