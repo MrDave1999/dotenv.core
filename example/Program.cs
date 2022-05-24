@@ -49,14 +49,14 @@ Console.WriteLine($"PGSQL_DB={reader["PGSQL_DB"]}");
 Console.WriteLine("\n\n\n");
 
 Console.WriteLine("---- EXAMPLE (6):");
-EnvValidationResult result;
+EnvValidationResult resultExample6;
 new EnvLoader()
     .IgnoreParserException()
     .SetDefaultEnvFileName("./files/.env.local")
-    .Load(out result);
+    .Load(out resultExample6);
 
 Console.WriteLine($"API_KEY LENGTH={reader["API_KEY"].Length}");
-Console.WriteLine(result.ErrorMessages);
+Console.WriteLine(resultExample6.ErrorMessages);
 Console.WriteLine("\n\n\n");
 
 Console.WriteLine("---- EXAMPLE (7):");
@@ -70,37 +70,40 @@ foreach (var keyValuePair in keyValuePairs.ToDictionary())
 Console.WriteLine("\n\n\n");
 
 Console.WriteLine("---- EXAMPLE (8):");
+EnvValidationResult resultExample8;
 new EnvLoader()
     .SetBasePath("./files/environment")
     .AllowConcatDuplicateKeys()
-    .LoadEnv(out result);
-if (result.HasError())
-    Console.WriteLine(result.ErrorMessages);
+    .LoadEnv(out resultExample8);
+if (resultExample8.HasError())
+    Console.WriteLine(resultExample8.ErrorMessages);
 else
     Console.WriteLine($"CONNECTION_STRING_MSSQL={reader["CONNECTION_STRING_MSSQL"]}");
 Console.WriteLine("\n\n\n");
 
 Console.WriteLine("---- EXAMPLE (9):");
-keyValuePairs = new EnvLoader()
+EnvValidationResult resultExample9;
+var envVars = new EnvLoader()
     .AllowConcatDuplicateKeys()
     .SetBasePath("./files/environment")
     .AvoidModifyEnvironment()
-    .LoadEnv(out result);
+    .LoadEnv(out resultExample9);
 
-if (result.HasError())
-    Console.WriteLine(result.ErrorMessages);
+if (resultExample9.HasError())
+    Console.WriteLine(resultExample9.ErrorMessages);
 else
 {
-    foreach (var keyValuePair in keyValuePairs)
+    foreach (var keyValuePair in envVars)
         Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
 }
 Console.WriteLine("\n\n\n");
 
 Console.Write("---- EXAMPLE (10):");
+EnvValidationResult resultExample10;
 new EnvValidator()
     .SetRequiredKeys("SERVICE_ID", "TOKEN_ID")
     .IgnoreException()
-    .Validate(out result);
+    .Validate(out resultExample10);
 
-Console.Write(result.ErrorMessages);
+Console.Write(resultExample10.ErrorMessages);
 Console.WriteLine("\n\n\n");
