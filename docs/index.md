@@ -41,7 +41,7 @@ An environment variable is a dynamic variable that can affect the behavior of ru
 
 - Empty lines or lines with white-spaces will be ignored.
 - The key-value format must be as follows: `KEY=VAL`.
-- There is no special handling of quotation marks. This means that **they are part of the VAL.**
+- Single or double quotes in a value are removed.
 - If the value of a key is an empty string, it will be converted to a white-space.
 - White-spaces at both ends of the key and value are ignored.
 
