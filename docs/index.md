@@ -51,14 +51,14 @@ Each line beginning with the `#` character is a comment. White-spaces at the beg
 
 Example:
 ```bash
-# comment without white spaces
-   # comment with white spaces
+# This is a comment without white-spaces
+   # This is a comment with white-spaces
 KEY=VALUE
 ```
-You can also add inline comments:
+A comment may begin anywhere on a line after a space (inline comments):
 ```bash
-KEY=VALUE #This is a comment
-KEY=VALUE#This is not a comment
+KEY=VALUE # This is an inline comment
+VAR=VALUE    # This is another inline comment
 ```
 
 ### Interpolating variables
