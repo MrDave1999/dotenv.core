@@ -1,4 +1,5 @@
 {
+    "editor.formatOnType": true,
     "coverage-gutters.showGutterCoverage": false,
     "coverage-gutters.showLineCoverage": true,
     "dotnet-test-explorer.testProjectPath": "**/*Tests.csproj",
