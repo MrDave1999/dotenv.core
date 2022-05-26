@@ -46,13 +46,17 @@ new EnvValidator()
     .SetRequiredKeys<RequiredKeys>()
     .Validate();
 ```
-
 You can also pass an instance of type `System.Type`:
 ```cs
 new EnvValidator()
     .SetRequiredKeys(typeof(RequiredKeys))
     .Validate();
 ```
+You should note that the `RequiredKeys` class must follow the following rules:
+- Each required key is represented as a property.
+- Each property represents a value of type `string`.
+- Each property must be `public`.
+- Each property can be read-only or read-write.
 
 ## Error handling
 
