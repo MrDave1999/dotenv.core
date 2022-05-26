@@ -8,6 +8,8 @@
   href: load_envfile_without_altering_environment.md
 - name: Accessing environment variables
   href: accessing_environment_variables.md
+- name: Bind the model instance with the configuration keys
+  href: using_binder.md
 - name: Required Keys
   href: required_keys.md
 - name: Load .env file based on environment
