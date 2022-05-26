@@ -115,11 +115,11 @@ class Program
 }
 ```
 
-## Container DI
+## DI Container
 
 So in the end we would consider using a service container to handle dependency injection. Microsoft has created a package in NuGet specifically for this: [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection).
 
-The above example could be done in this way using the container DI:
+The above example could be done in this way using the DI Container:
 ```cs
 // Import all types.
 using Microsoft.Extensions.DependencyInjection;
