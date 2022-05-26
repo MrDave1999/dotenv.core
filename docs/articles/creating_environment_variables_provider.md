@@ -2,7 +2,7 @@
 
 ## Introduction
 
-An environment variable provider is a class that provides services to other classes. What kind of service? Access to environment variables.
+**An environment variables provider** (*or also called key-value pairs provider*) is an entity that represents a storage of environment variables and provides a service to access them. In the context of this library, the term "*environment variable*" means a "*pair of key-value*".
 
 The **DotEnv library** has two providers of environment variables:
 - Environment of the current process.
@@ -28,7 +28,7 @@ Let's start creating our environment variables provider:
 ```cs
 class CustomProvider : IEnvironmentVariablesProvider
 {
-    private Dictionary<string, string> _keyValuePairs = new Dictionary<string, string>();
+    private Dictionary<string, string> _keyValuePairs = new();
 
     public string this[string variable] 
     {
@@ -61,9 +61,7 @@ The `IEnvironmentVariablesProvider` interface has its own extension methods:
 
 ### CreateReader
 
-Creates an instance that implements the `IEnvReader` interface.
-
-Example:
+Creates an instance that implements the `IEnvReader` interface:
 ```cs
 var envVars = new EnvLoader()
         .SetEnvironmentVariablesProvider(new CustomProvider())
@@ -76,9 +74,7 @@ string key1 = envVars["KEY1"];
 
 ### CreateValidator
 
-Creates an instance that implements the `IEnvValidator` interface.
-
-Example:
+Creates an instance that implements the `IEnvValidator` interface:
 ```cs
 var envVars = new EnvLoader()
         .SetEnvironmentVariablesProvider(new CustomProvider())
@@ -88,14 +84,27 @@ var envVars = new EnvLoader()
 IEnvValidator validator = envVars.CreateValidator();
 ```
 
+### CreateBinder
+
+Creates an instance that implements the `IEnvBinder` interface:
+```cs
+var envVars = new EnvLoader()
+        .SetEnvironmentVariablesProvider(new CustomProvider())
+        .Load();
+
+// Equivalent to: var binder = new EnvBinder(envVars);
+IEnvBinder binder = envVars.CreateBinder();
+```
+
 ### ToDictionary
 
-Converts the provider instance to a dictionary.
-
-Example:
+Converts the provider instance to a dictionary:
 ```cs
 var envVars = new EnvLoader().Load();
-var dic = envVars.ToDictionary();
+var dict = envVars.ToDictionary();
 ```
+
+More information can be found in the [API Documentation](xref:DotEnv.Core.EnvironmentVariablesProviderExtensions).
+
 
 
