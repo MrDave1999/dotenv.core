@@ -28,6 +28,7 @@ The advantage of using this library is that you do not need to set the environme
   * [Load .env file based on environment](#load-env-file-based-on-environment)
   * [Parsing .env files](#parsing-env-files)
   * [Using DotEnv in ASP.NET Core](#using-dotenv-in-aspnet-core)
+- [Copying .env file to the output directory](#copying-env-file-to-the-output-directory)
 - [File Format](#file-format)
   * [Comments](#comments)
   * [Interpolating variables](#interpolating-variables)
@@ -83,6 +84,9 @@ dotnet add package DotEnv.Core
 ```
 
 ## Overview
+
+The first thing you need to do is create a `.env` file in the root directory of your project.
+
 ### Load .env file
 
 You must import the namespace types at the beginning of your class file:
@@ -227,6 +231,18 @@ builder.Configuration.AddEnvironmentVariables();
 ```
 
 For more information, see the [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html).
+
+## Copying .env file to the output directory
+
+If you want to copy the .env file to the output directory, you have to add the following to your .csproj file:
+```xml
+<ItemGroup>
+  <Content Include=".env">
+    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
+```
+**NOTE:** Your .env file must be in the same directory as the .csproj file.
 
 ## File Format
 
