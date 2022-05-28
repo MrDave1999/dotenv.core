@@ -17,6 +17,8 @@ dotnet add package DotEnv.Core
 
 ## Usage
 
+The first thing you need to do is create a `.env` file in the root directory of your project.
+
 ### Loading .env file
 
 You must import the namespace types at the beginning of your class file:
@@ -196,3 +198,15 @@ else
 ```
 
 **Note:** If you don't know what each class does, don't forget to check the [API documentation](xref:DotEnv.Core).
+
+## Copying .env file to the output directory
+
+If you want to copy the .env file to the output directory, you have to add the following to your .csproj file:
+```xml
+<ItemGroup>
+  <Content Include=".env">
+    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+  </Content>
+</ItemGroup>
+```
+**NOTE:** Your .env file must be in the same directory as the .csproj file.
