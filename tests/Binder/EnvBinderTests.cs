@@ -49,7 +49,8 @@ public class EnvBinderTests
 
         var ex = Assert.ThrowsException<BinderException>(action);
         StringAssert.Contains(ex.Message, string.Format(
-            PropertyDoesNotMatchConfigKeyMessage, 
+            PropertyDoesNotMatchConfigKeyMessage,
+            nameof(SettingsExample1),
             nameof(SettingsExample1.SecretKey)
         ));
     }
@@ -122,11 +123,13 @@ public class EnvBinderTests
             nameof(Int32)
         ));
         StringAssert.Contains(msg, string.Format(
-            PropertyDoesNotMatchConfigKeyMessage, 
+            PropertyDoesNotMatchConfigKeyMessage,
+            nameof(AppSettings) ,
             nameof(AppSettings.BindSecretKey)
         ));
         StringAssert.Contains(msg, string.Format(
-            PropertyDoesNotMatchConfigKeyMessage, 
+            PropertyDoesNotMatchConfigKeyMessage,
+            nameof(AppSettings),
             nameof(AppSettings.BindJwtSecret)
         ));
     }
