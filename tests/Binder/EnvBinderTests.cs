@@ -48,7 +48,10 @@ public class EnvBinderTests
         void action() => binder.Bind<SettingsExample1>();
 
         var ex = Assert.ThrowsException<BinderException>(action);
-        StringAssert.Contains(ex.Message, string.Format(PropertyDoesNotMatchConfigKeyMessage, "SecretKey"));
+        StringAssert.Contains(ex.Message, string.Format(
+            PropertyDoesNotMatchConfigKeyMessage, 
+            nameof(SettingsExample1.SecretKey)
+        ));
     }
 
     [TestMethod]
@@ -61,8 +64,8 @@ public class EnvBinderTests
         var ex = Assert.ThrowsException<BinderException>(action);
         StringAssert.Contains(ex.Message, string.Format(
             KeyAssignedToPropertyIsNotSetMessage, 
-            "SettingsExample2", 
-            "SecretKey", 
+            nameof(SettingsExample2), 
+            nameof(SettingsExample2.SecretKey), 
             "SECRET_KEY"
         ));
     }
@@ -79,9 +82,9 @@ public class EnvBinderTests
         StringAssert.Contains(ex.Message, string.Format(
             FailedConvertConfigurationValueMessage, 
             "BIND_WEATHER_ID", 
-            "Int32", 
+            nameof(Int32), 
             "This is not an int", 
-            "Int32"
+            nameof(Int32)
         ));
     }
 
@@ -101,25 +104,31 @@ public class EnvBinderTests
         msg = result.ErrorMessages;
         StringAssert.Contains(msg, string.Format(
             KeyAssignedToPropertyIsNotSetMessage, 
-            "AppSettings", 
-            "JwtSecret", 
+            nameof(AppSettings), 
+            nameof(AppSettings.JwtSecret), 
             "BIND_JWT_SECRET"
         ));
         StringAssert.Contains(msg, string.Format(
             KeyAssignedToPropertyIsNotSetMessage, 
-            "AppSettings", 
-            "TokenId", 
+            nameof(AppSettings), 
+            nameof(AppSettings.TokenId), 
             "BIND_TOKEN_ID"
         ));
         StringAssert.Contains(msg, string.Format(
             FailedConvertConfigurationValueMessage, 
             "BIND_RACE_TIME", 
-            "Int32", 
+            nameof(Int32),
             "This is not an int", 
-            "Int32"
+            nameof(Int32)
         ));
-        StringAssert.Contains(msg, string.Format(PropertyDoesNotMatchConfigKeyMessage, "BindSecretKey"));
-        StringAssert.Contains(msg, string.Format(PropertyDoesNotMatchConfigKeyMessage, "BindJwtSecret"));
+        StringAssert.Contains(msg, string.Format(
+            PropertyDoesNotMatchConfigKeyMessage, 
+            nameof(AppSettings.BindSecretKey)
+        ));
+        StringAssert.Contains(msg, string.Format(
+            PropertyDoesNotMatchConfigKeyMessage, 
+            nameof(AppSettings.BindJwtSecret)
+        ));
     }
 
     [TestMethod]
