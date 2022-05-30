@@ -25,6 +25,7 @@
     <ContentWithTargetPath Include="Loader\env_files\.env.local" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.local" />
     <ContentWithTargetPath Include="Loader\env_files\.env.absolute" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.absolute" />
     <ContentWithTargetPath Include="Loader\env_files\.env.relative" CopyToOutputDirectory="PreserveNewest" TargetPath="dotenv\files\.env.relative" />
+    <ContentWithTargetPath Include="Loader\env_files\.env.parent.directories2" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.parent.directories2" />
   </ItemGroup>
   
 </Project>
