@@ -66,12 +66,12 @@ public partial class EnvLoaderTests
     {
         new EnvLoader()
             .AddEnvFile("Loader/env_files/.env.parent.directories")
-            .AddEnvFile(".env.parent.directories2")
+            .AddEnvFile(".env.only.currentdirectory") // This file if copied to the current directory
             .IgnoreParentDirectories()
             .Load();
 
         Assert.IsNull(GetEnvironmentVariable("PARENT_DIRECTORIES"));
-        Assert.IsNotNull(GetEnvironmentVariable("PARENT_DIRECTORIES_2"));
+        Assert.IsNotNull(GetEnvironmentVariable("ONLY_CURRENT_DIRECTORY"));
     }
 
     [TestMethod]
