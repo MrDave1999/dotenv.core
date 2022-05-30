@@ -313,7 +313,7 @@ public partial class EnvParserTests
 
         var envVars = parser.Parse(env);
 
-        Assert.AreEqual(expected: "1", envVars["ENV_MODIFIED"]);
-        Assert.AreEqual(expected: "1", GetEnvironmentVariable("ENV_MODIFIED"));
+        Assert.AreEqual(expected: "1", actual: envVars["ENV_MODIFIED"]);
+        Assert.AreEqual(expected: "1", actual: GetEnvironmentVariable("ENV_MODIFIED"));
     }
 }
