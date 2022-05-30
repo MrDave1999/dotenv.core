@@ -4,7 +4,7 @@ namespace DotEnv.Core.Tests.Binder;
 public class EnvBinderTests
 {
     [TestMethod]
-    public void Bind_WhenPropertiesAreLinkedToTheDefaultProviderInstance_ShouldReturnsSettingsInstance()
+    public void Bind_WhenPropertiesAreLinkedToTheDefaultProviderInstance_ShouldReturnSettingsInstance()
     {
         SetEnvironmentVariable("BIND_JWT_SECRET", "12example");
         SetEnvironmentVariable("BIND_TOKEN_ID",   "e32d");
@@ -22,7 +22,7 @@ public class EnvBinderTests
     }
 
     [TestMethod]
-    public void Bind_WhenPropertiesAreLinkedToTheCustomProviderInstance_ShouldReturnsSettingsInstance()
+    public void Bind_WhenPropertiesAreLinkedToTheCustomProviderInstance_ShouldReturnSettingsInstance()
     {
         var customProvider = new CustomEnvironmentVariablesProvider();
         customProvider["BIND_JWT_SECRET"] = "13example";
@@ -90,7 +90,7 @@ public class EnvBinderTests
     }
 
     [TestMethod]
-    public void Bind_WhenErrorsAreFound_ShouldReadTheErrors()
+    public void Bind_WhenAnErrorIsFound_ShouldStoreErrorMessageInCollection()
     {
         string msg;
         var customProvider = new CustomEnvironmentVariablesProvider();

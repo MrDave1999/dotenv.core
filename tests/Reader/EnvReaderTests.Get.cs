@@ -3,7 +3,7 @@
 public partial class EnvReaderTests
 {
     [TestMethod]
-    public void GetBoolValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetBoolValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_BOOL", "true");
@@ -15,7 +15,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetByteValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetByteValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_BYTE", "2");
@@ -25,7 +25,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetCharValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetCharValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_CHAR", "A");
@@ -35,7 +35,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetDecimalValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetDecimalValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_DECIMAL", "12.5");
@@ -47,7 +47,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetDoubleValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetDoubleValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_DOUBLE", "12.5");
@@ -59,7 +59,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetFloatValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetFloatValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_FLOAT", "12.5");
@@ -71,7 +71,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetIntValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetIntValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_INT", "3");
@@ -81,7 +81,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetLongValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetLongValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_LONG", "3");
@@ -91,7 +91,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetSByteValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetSByteValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_SBYTE", "3");
@@ -101,7 +101,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetShortValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetShortValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_SHORT", "3");
@@ -111,7 +111,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetStringValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetStringValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_STRING", "This is a string.");
@@ -121,7 +121,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetUIntValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetUIntValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_UINT", "2");
@@ -131,7 +131,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetULongValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetULongValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_ULONG", "2");
@@ -141,7 +141,7 @@ public partial class EnvReaderTests
     }
 
     [TestMethod]
-    public void GetUShortValue_WhenTheVariableIsFound_ShouldReturnValue()
+    public void GetUShortValue_WhenVariableIsSet_ShouldReturnValueOfTheVariable()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_USHORT", "2");

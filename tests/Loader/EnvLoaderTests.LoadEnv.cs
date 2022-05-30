@@ -18,17 +18,19 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void LoadEnv_WhenEnvironmentIsNotDefined_ShouldBeAbleToReadEnvironmentVariables()
+    public void LoadEnv_WhenEnvironmentIsNotDefined_ShouldLoadFourEnvFilesForDevelopmentEnvironment()
     {
-        Env.CurrentEnvironment = null;
+        Env.CurrentEnvironment = null; // Environment is not defined
         
         new EnvLoader()
             .SetBasePath("Loader/env_files/environment/dev")
-            .LoadEnv();
+            .LoadEnv(); // It should load four .env files: 
+                        // .env.dev.local, .env.local, .env.dev, .env
 
         new EnvLoader()
             .SetBasePath("Loader/env_files/environment/development")
-            .LoadEnv();
+            .LoadEnv(); // It should load four .env files: 
+                        // .env.development.local, .env.local, .env.development, .env
 
         Assert.AreEqual(expected: "development", actual: Env.CurrentEnvironment);
         Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV"));
@@ -42,13 +44,14 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void LoadEnv_WhenEnvironmentIsDefined_ShouldBeAbleToReadEnvironmentVariables()
+    public void LoadEnv_WhenEnvironmentIsDefined_ShouldLoadFourEnvFilesForCurrentEnvironment()
     {
         Env.CurrentEnvironment = "test";
 
         new EnvLoader()
             .SetBasePath("Loader/env_files/environment/test")
-            .LoadEnv();
+            .LoadEnv(); // It should load four .env files: 
+                        // .env.test.local, .env.local, .env.test, .env
 
         Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV"));
         Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST"));
@@ -68,7 +71,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void LoadEnv_WhenSetsTheEnvironmentName_ShouldBeAbleToReadVariables()
+    public void LoadEnv_WhenSetsTheEnvironmentName_ShouldLoadFourEnvFilesForCurrentEnvironment()
     {
         Env.CurrentEnvironment = null;
         var loader = new EnvLoader()
@@ -76,6 +79,8 @@ public partial class EnvLoaderTests
                         .SetEnvironmentName("test")
                         .SetBasePath("Loader/env_files/environment/test");
 
+        // It should load four .env files: 
+        // .env.test.local, .env.local, .env.test, .env
         var keyValuePairs = loader.LoadEnv();
 
         Assert.AreEqual(expected: "test", actual: Env.CurrentEnvironment);
@@ -115,7 +120,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void LoadEnv_WhenErrorsAreFound_ShouldReadTheErrors()
+    public void LoadEnv_WhenAnErrorIsFound_ShouldStoreErrorMessageInCollection()
     {
         string msg;
         EnvValidationResult result;
@@ -191,7 +196,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void LoadEnv_WhenLocalEnvFilesNotExistAndEnvironmentIsNotDefined_ShouldReadTheErrors()
+    public void LoadEnv_WhenLocalEnvFilesNotExistAndEnvironmentIsNotDefined_ShouldGenerateAnError()
     {
         Env.CurrentEnvironment = null;
         var loader = new EnvLoader();
@@ -207,7 +212,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void LoadEnv_WhenLocalEnvFilesNotExistAndEnvironmentIsDefined_ShouldReadTheErrors()
+    public void LoadEnv_WhenLocalEnvFilesNotExistAndEnvironmentIsDefined_ShouldGenerateAnError()
     {
         var loader = new EnvLoader();
         Env.CurrentEnvironment = "test";

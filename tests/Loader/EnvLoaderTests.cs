@@ -19,7 +19,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenEnvFilesAreOptional_ShouldNotGenerateErrors()
+    public void Load_WhenEnvFilesAreOptional_ShouldNotGenerateAnErrorIfTheFileDoesNotExist()
     {
         new EnvLoader()
             .AddEnvFile(".env.example1", Encoding.UTF8, optional: true)
@@ -32,7 +32,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenAllEnvFilesAreOptional_ShouldNotGenerateErrors()
+    public void Load_WhenAllEnvFilesAreOptional_ShouldNotGenerateAnErrorIfTheFileDoesNotExist()
     {
         new EnvLoader()
             .AddEnvFile(".env.example1", Encoding.UTF8)
@@ -50,19 +50,19 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenDefaultEnvFileIsOptional_ShouldNotGenerateErrors()
+    public void Load_WhenDefaultEnvFileIsOptional_ShouldNotGenerateAnErrorIfTheFileDoesNotExist()
     {
         new EnvLoader()
             .SetBasePath("dotnet/files")
             .AllowAllEnvFilesOptional()
-            .Load(out var result);
+            .Load(out var result); // Loads a default file: .env
 
         Assert.AreEqual(expected: false, actual: result.HasError());
         Assert.AreEqual(expected: 0, actual: result.Count);
     }
 
     [TestMethod]
-    public void Load_WhenIgnoresSearchInParentDirectories_ShouldNotLoadTheEnvFile()
+    public void Load_WhenIgnoresSearchInParentDirectories_ShouldOnlySearchInTheCurrentDirectory()
     {
         new EnvLoader()
             .SetBasePath("Loader/env_files")
@@ -74,7 +74,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenLoadEnvFileWithDefaultConfig_ShouldBeAbleToReadEnvironmentVariables()
+    public void Load_WhenLoadEnvFileWithDefaultConfig_ShouldSetEnvironmentVariablesFromAnEnvFile()
     {
         var loader = new EnvLoader();
 
@@ -85,7 +85,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenLoadEnvFileWithCustomConfig_ShouldBeAbleToReadEnvironmentVariables()
+    public void Load_WhenLoadEnvFileWithCustomConfig_ShouldSetEnvironmentVariablesFromAnEnvFile()
     {
         new EnvLoader()
             .SetBasePath("Loader/env_files")
@@ -103,7 +103,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenSetsEncoding_ShouldBeAbleToReadEnvironmentVariables()
+    public void Load_WhenSetsEncoding_ShouldLoadTheEnvFileCorrectly()
     {
         new EnvLoader()
             .SetBasePath("Loader/env_files")
@@ -137,7 +137,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenLoadMultiEnvFiles_ShouldBeAbleToReadEnvironmentVariables()
+    public void Load_WhenLoadMultiEnvFiles_ShouldSetEnvironmentVariablesFromAnEnvFile()
     {
         string absolutePath = Directory.GetCurrentDirectory();
         new EnvLoader()
@@ -159,12 +159,12 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenEnvFilesHasNoExtension_ShouldBeAbleToReadEnvironmentVariables()
+    public void Load_WhenEnvFileIsAddedAsDirectory_ShouldCombineDirectoryWithDefaultEnvFileName()
     {
         new EnvLoader()
             .SetBasePath("Loader/env_files")
             .SetDefaultEnvFileName(".env.dev")
-            .AddEnvFiles("./foo", "./bar")
+            .AddEnvFiles("./foo", "./bar") // Equivalent to: ./foo/.env.dev, ./bar/.env.dev
             .Load();
 
         Assert.IsNotNull(GetEnvironmentVariable("HAS_NOT_EXTENSION_1"));
@@ -172,7 +172,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenEnvFileIsInTheCurrentDirectory_ShouldBeAbleToReadEnvironmentVariables()
+    public void Load_WhenEnvFileIsInTheCurrentDirectory_ShouldReadContentsOfTheEnvFile()
     {
         new EnvLoader()
             .SetDefaultEnvFileName(".env.local")
@@ -182,7 +182,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenPathIsAbsolute_ShouldBeAbleToReadEnvironmentVariables()
+    public void Load_WhenEnvFileIsInAnAbsolutePath_ShouldReadContentsOfTheEnvFile()
     {
         string absolutePath = Directory.GetCurrentDirectory();
 
@@ -197,7 +197,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenPathIsRelative_ShouldBeAbleToReadEnvironmentVariables()
+    public void Load_WhenEnvFileIsInAnRelativePath_ShouldReadContentsOfTheEnvFile()
     {
         string relativePath = "./dotenv/files";
 
@@ -222,7 +222,7 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void Load_WhenErrorsAreFound_ShouldReadTheErrors()
+    public void Load_WhenAnErrorIsFound_ShouldStoreErrorMessageInCollection()
     {
         string msg;
         EnvValidationResult result;
