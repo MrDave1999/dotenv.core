@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace DotEnv.Core
    | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.1.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -87,11 +87,20 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="DotEnv.Core.BinderException.html">BinderException</a></h4>
+      <section><p>The exception that is thrown when the binder encounters one or more errors.</p>
+</section>
       <h4><a class="xref" href="DotEnv.Core.Env.html">Env</a></h4>
       <section><p>This class defines methods to perform checks with the current environment.</p>
 </section>
+      <h4><a class="xref" href="DotEnv.Core.EnvBinder.html">EnvBinder</a></h4>
+      <section><p>Allows binding strongly typed objects to configuration values.</p>
+</section>
       <h4><a class="xref" href="DotEnv.Core.EnvironmentVariablesProviderExtensions.html">EnvironmentVariablesProviderExtensions</a></h4>
       <section><p>Extension methods for adding <a class="xref" href="DotEnv.Core.IEnvironmentVariablesProvider.html">IEnvironmentVariablesProvider</a>.</p>
+</section>
+      <h4><a class="xref" href="DotEnv.Core.EnvKeyAttribute.html">EnvKeyAttribute</a></h4>
+      <section><p>Represents the key of a .env file that is assigned to a property.</p>
 </section>
       <h4><a class="xref" href="DotEnv.Core.EnvLoader.html">EnvLoader</a></h4>
       <section><p>Represents the .env files loader.</p>
@@ -119,6 +128,9 @@
 </section>
     <h3 id="interfaces">Interfaces
   </h3>
+      <h4><a class="xref" href="DotEnv.Core.IEnvBinder.html">IEnvBinder</a></h4>
+      <section><p>Allows binding strongly typed objects to configuration values.</p>
+</section>
       <h4><a class="xref" href="DotEnv.Core.IEnvironmentVariablesProvider.html">IEnvironmentVariablesProvider</a></h4>
       <section><p>Represents the environment variables provider.
 The environment variables can be obtained from any provider (e.g., from a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary&lt;TKey,TValue&gt;</a> or from the current process).</p>

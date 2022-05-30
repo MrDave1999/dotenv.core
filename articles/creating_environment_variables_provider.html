@@ -8,7 +8,7 @@
     <title>Creating environment variables provider | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Creating environment variables provider | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.1.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -80,7 +80,7 @@
 <h1 id="creating-environment-variables-provider">Creating environment variables provider</h1>
 
 <h2 id="introduction">Introduction</h2>
-<p>An environment variable provider is a class that provides services to other classes. What kind of service? Access to environment variables.</p>
+<p><strong>An environment variables provider</strong> (<em>or also called key-value pairs provider</em>) is an entity that represents a storage of environment variables and provides a service to access them. In the context of this library, the term &quot;<em>environment variable</em>&quot; means a &quot;<em>pair of key-value</em>&quot;.</p>
 <p>The <strong>DotEnv library</strong> has two providers of environment variables:</p>
 <ul>
 <li>Environment of the current process.</li>
@@ -99,7 +99,7 @@
 <p>Let's start creating our environment variables provider:</p>
 <pre><code class="lang-cs">class CustomProvider : IEnvironmentVariablesProvider
 {
-    private Dictionary&lt;string, string&gt; _keyValuePairs = new Dictionary&lt;string, string&gt;();
+    private Dictionary&lt;string, string&gt; _keyValuePairs = new();
 
     public string this[string variable] 
     {
@@ -126,8 +126,7 @@ string key1 = envVars[&quot;KEY1&quot;];
 <h2 id="extension-methods">Extension methods</h2>
 <p>The <code>IEnvironmentVariablesProvider</code> interface has its own extension methods:</p>
 <h3 id="createreader">CreateReader</h3>
-<p>Creates an instance that implements the <code>IEnvReader</code> interface.</p>
-<p>Example:</p>
+<p>Creates an instance that implements the <code>IEnvReader</code> interface:</p>
 <pre><code class="lang-cs">var envVars = new EnvLoader()
         .SetEnvironmentVariablesProvider(new CustomProvider())
         .Load();
@@ -137,8 +136,7 @@ IEnvReader reader = envVars.CreateReader();
 string key1 = envVars[&quot;KEY1&quot;];
 </code></pre>
 <h3 id="createvalidator">CreateValidator</h3>
-<p>Creates an instance that implements the <code>IEnvValidator</code> interface.</p>
-<p>Example:</p>
+<p>Creates an instance that implements the <code>IEnvValidator</code> interface:</p>
 <pre><code class="lang-cs">var envVars = new EnvLoader()
         .SetEnvironmentVariablesProvider(new CustomProvider())
         .Load();
@@ -146,12 +144,21 @@ string key1 = envVars[&quot;KEY1&quot;];
 // Equivalent to: var validator = new EnvValidator(envVars);
 IEnvValidator validator = envVars.CreateValidator();
 </code></pre>
-<h3 id="todictionary">ToDictionary</h3>
-<p>Converts the provider instance to a dictionary.</p>
-<p>Example:</p>
-<pre><code class="lang-cs">var envVars = new EnvLoader().Load();
-var dic = envVars.ToDictionary();
+<h3 id="createbinder">CreateBinder</h3>
+<p>Creates an instance that implements the <code>IEnvBinder</code> interface:</p>
+<pre><code class="lang-cs">var envVars = new EnvLoader()
+        .SetEnvironmentVariablesProvider(new CustomProvider())
+        .Load();
+
+// Equivalent to: var binder = new EnvBinder(envVars);
+IEnvBinder binder = envVars.CreateBinder();
 </code></pre>
+<h3 id="todictionary">ToDictionary</h3>
+<p>Converts the provider instance to a dictionary:</p>
+<pre><code class="lang-cs">var envVars = new EnvLoader().Load();
+var dict = envVars.ToDictionary();
+</code></pre>
+<p>More information can be found in the <a class="xref" href="../api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html">API Documentation</a>.</p>
 </article>
           </div>
           

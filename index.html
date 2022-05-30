@@ -8,7 +8,7 @@
     <title>Features | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Features | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.1.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="images/dotenv-icon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -75,7 +75,8 @@
 <p><a href="https://github.com/mrdave1999/dotenv.core"><img src="https://img.shields.io/badge/.NET%20Standard-2.0-red" alt="dotenv.core"></a>
 <a href="https://raw.githubusercontent.com/MrDave1999/dotenv.core/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="dotenv.core"></a>
 <a href="https://github.com/mrdave1999/dotenv.core"><img src="https://img.shields.io/badge/Project-Class%20Library-yellow" alt="dotenv.core"></a>
-<a href="https://www.nuget.org/packages/dotenv.core/"><img src="https://buildstats.info/nuget/dotenv.core" alt="Nuget-Badges"></a></p>
+<a href="https://www.nuget.org/packages/dotenv.core/"><img src="https://buildstats.info/nuget/dotenv.core" alt="Nuget-Badges"></a>
+<a href="https://www.paypal.com/paypalme/DavidRomanAmariles"><img src="https://img.shields.io/badge/paypal-donate-orange" alt="PayPal-donate-button"></a></p>
 <p><strong>dotenv.core</strong> is a class library for read and parsing .env files in .NET Core and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.</p>
 <p>The advantage of using this library is that you do not need to set the environment variable from the operating system shell (<strong>dotenv</strong> sets environment variables from a .env file).</p>
 <h2 id="features">Features</h2>
@@ -95,7 +96,7 @@
 <p>A .env file or dotenv file is a simple text configuration file for controlling your Applications environment constants.</p>
 <h3 id="what-do-env-files-look-like">What do .env files look like?</h3>
 <p>.env files are line delimitated text files, meaning that each new line represents a single variable. By convention .env variable names are uppercase words separated by underscores. Variable names are followed directly by an = which, in turn is followed directly by the value, for example:</p>
-<pre><code>VARIABLE_NAME=value
+<pre><code class="lang-bash">VARIABLE_NAME=value
 </code></pre>
 <h3 id="what-is-environment-variable">What is environment variable?</h3>
 <p>An environment variable is a dynamic variable that can affect the behavior of running processes on a computer. They are part of the environment in which a process runs.</p>
@@ -103,25 +104,29 @@
 <ul>
 <li>Empty lines or lines with white-spaces will be ignored.</li>
 <li>The key-value format must be as follows: <code>KEY=VAL</code>.</li>
-<li>There is no special handling of quotation marks. This means that <strong>they are part of the VAL.</strong></li>
+<li>Single or double quotes in a value are removed.</li>
 <li>If the value of a key is an empty string, it will be converted to a white-space.</li>
 <li>White-spaces at both ends of the key and value are ignored.</li>
 </ul>
 <h3 id="comments">Comments</h3>
 <p>Each line beginning with the <code>#</code> character is a comment. White-spaces at the beginning of each comment will be ignored.</p>
 <p>Example:</p>
-<pre><code># comment without white spaces
-   # comment with white spaces
+<pre><code class="lang-bash"># This is a comment without white-spaces
+   # This is a comment with white-spaces
 KEY=VALUE
+</code></pre>
+<p>A comment may begin anywhere on a line after a space (inline comments):</p>
+<pre><code class="lang-bash">KEY=VALUE # This is an inline comment
+VAR=VALUE    # This is another inline comment
 </code></pre>
 <h3 id="interpolating-variables">Interpolating variables</h3>
 <p>Sometimes you will need to interpolate variables within a value, for example:</p>
-<pre><code>MYSQL_USER=root
+<pre><code class="lang-bash">MYSQL_USER=root
 MYSQL_ROOT_PASSWORD=1234
 CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
 </code></pre>
 <p>If the variable embedded in the value is not set, the parser will throw an exception, for example:</p>
-<pre><code>MYSQL_ROOT_PASSWORD=1234
+<pre><code class="lang-bash">MYSQL_ROOT_PASSWORD=1234
 CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};database=testdb;
 MYSQL_USER=root
 </code></pre>

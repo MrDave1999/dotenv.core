@@ -8,7 +8,7 @@
     <title>Required Keys | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Required Keys | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.1.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -118,6 +118,13 @@ new EnvValidator()
     .SetRequiredKeys(typeof(RequiredKeys))
     .Validate();
 </code></pre>
+<p>You should note that the <code>RequiredKeys</code> class must follow the following rules:</p>
+<ul>
+<li>Each required key is represented as a property.</li>
+<li>Each property represents a value of type <code>string</code>.</li>
+<li>Each property must be <code>public</code>.</li>
+<li>Each property can be read-only or read-write.</li>
+</ul>
 <h2 id="error-handling">Error handling</h2>
 <p>You can handle the error through the <code>EnvValidationResult</code> class instead of throwing an exception:</p>
 <pre><code class="lang-cs">new EnvLoader().Load();

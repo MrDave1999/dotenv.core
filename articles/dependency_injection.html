@@ -8,7 +8,7 @@
     <title>Dependency Injection | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Dependency Injection | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.1.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -184,9 +184,9 @@ class Bar
     }
 }
 </code></pre>
-<h2 id="container-di">Container DI</h2>
+<h2 id="di-container">DI Container</h2>
 <p>So in the end we would consider using a service container to handle dependency injection. Microsoft has created a package in NuGet specifically for this: <a href="https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection">Microsoft.Extensions.DependencyInjection</a>.</p>
-<p>The above example could be done in this way using the container DI:</p>
+<p>The above example could be done in this way using the DI Container:</p>
 <pre><code class="lang-cs">// Import all types.
 using Microsoft.Extensions.DependencyInjection;
 using DotEnv.Core;

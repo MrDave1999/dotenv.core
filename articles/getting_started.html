@@ -8,7 +8,7 @@
     <title>Getting Started with dotenv.core | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Getting Started with dotenv.core | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.1.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -81,7 +81,7 @@
 
 <h2 id="installation">Installation</h2>
 <p>If you're an hardcore and want to do it manually, you must add the following to the <code>csproj</code> file:</p>
-<pre><code class="lang-xml">&lt;PackageReference Include=&quot;DotEnv.Core&quot; Version=&quot;2.0.1&quot; /&gt;
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;DotEnv.Core&quot; Version=&quot;2.1.0&quot; /&gt;
 </code></pre>
 <p>If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the <strong>Tools</strong> &gt; <strong>NuGet Package Manager</strong> &gt; <strong>Package Manager Console</strong> command and run the install command:</p>
 <pre><code>Install-Package DotEnv.Core
@@ -90,6 +90,7 @@
 <pre><code>dotnet add package DotEnv.Core
 </code></pre>
 <h2 id="usage">Usage</h2>
+<p>The first thing you need to do is create a <code>.env</code> file in the root directory of your project.</p>
 <h3 id="loading-env-file">Loading .env file</h3>
 <p>You must import the namespace types at the beginning of your class file:</p>
 <pre><code class="lang-cs">using DotEnv.Core;
@@ -224,6 +225,15 @@ else
 }
 </code></pre>
 <p><strong>Note:</strong> If you don't know what each class does, don't forget to check the <a class="xref" href="../api/DotEnv.Core.html">API documentation</a>.</p>
+<h2 id="copying-env-file-to-the-output-directory">Copying .env file to the output directory</h2>
+<p>If you want to copy the .env file to the output directory, you have to add the following to your .csproj file:</p>
+<pre><code class="lang-xml">&lt;ItemGroup&gt;
+  &lt;Content Include=&quot;.env&quot;&gt;
+    &lt;CopyToOutputDirectory&gt;Always&lt;/CopyToOutputDirectory&gt;
+  &lt;/Content&gt;
+&lt;/ItemGroup&gt;
+</code></pre>
+<p><strong>NOTE:</strong> Your .env file must be in the same directory as the .csproj file.</p>
 </article>
           </div>
           

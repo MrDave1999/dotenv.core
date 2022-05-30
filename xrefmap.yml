@@ -7,6 +7,30 @@ references:
   commentId: N:DotEnv.Core
   fullName: DotEnv.Core
   nameWithType: DotEnv.Core
+- uid: DotEnv.Core.BinderException
+  name: BinderException
+  href: api/DotEnv.Core.BinderException.html
+  commentId: T:DotEnv.Core.BinderException
+  fullName: DotEnv.Core.BinderException
+  nameWithType: BinderException
+- uid: DotEnv.Core.BinderException.#ctor
+  name: BinderException()
+  href: api/DotEnv.Core.BinderException.-ctor.html#DotEnv_Core_BinderException__ctor
+  commentId: M:DotEnv.Core.BinderException.#ctor
+  fullName: DotEnv.Core.BinderException.BinderException()
+  nameWithType: BinderException.BinderException()
+- uid: DotEnv.Core.BinderException.#ctor(System.String)
+  name: BinderException(String)
+  href: api/DotEnv.Core.BinderException.-ctor.html#DotEnv_Core_BinderException__ctor_System_String_
+  commentId: M:DotEnv.Core.BinderException.#ctor(System.String)
+  fullName: DotEnv.Core.BinderException.BinderException(System.String)
+  nameWithType: BinderException.BinderException(String)
+- uid: DotEnv.Core.BinderException.#ctor*
+  name: BinderException
+  href: api/DotEnv.Core.BinderException.-ctor.html
+  commentId: Overload:DotEnv.Core.BinderException.#ctor
+  fullName: DotEnv.Core.BinderException.BinderException
+  nameWithType: BinderException.BinderException
 - uid: DotEnv.Core.ConcatKeysOptions
   name: ConcatKeysOptions
   href: api/DotEnv.Core.ConcatKeysOptions.html
@@ -103,12 +127,96 @@ references:
   commentId: Overload:DotEnv.Core.Env.IsTest
   fullName: DotEnv.Core.Env.IsTest
   nameWithType: Env.IsTest
+- uid: DotEnv.Core.EnvBinder
+  name: EnvBinder
+  href: api/DotEnv.Core.EnvBinder.html
+  commentId: T:DotEnv.Core.EnvBinder
+  fullName: DotEnv.Core.EnvBinder
+  nameWithType: EnvBinder
+- uid: DotEnv.Core.EnvBinder.#ctor
+  name: EnvBinder()
+  href: api/DotEnv.Core.EnvBinder.-ctor.html#DotEnv_Core_EnvBinder__ctor
+  commentId: M:DotEnv.Core.EnvBinder.#ctor
+  fullName: DotEnv.Core.EnvBinder.EnvBinder()
+  nameWithType: EnvBinder.EnvBinder()
+- uid: DotEnv.Core.EnvBinder.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: EnvBinder(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.EnvBinder.-ctor.html#DotEnv_Core_EnvBinder__ctor_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.EnvBinder.#ctor(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.EnvBinder.EnvBinder(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: EnvBinder.EnvBinder(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.EnvBinder.#ctor*
+  name: EnvBinder
+  href: api/DotEnv.Core.EnvBinder.-ctor.html
+  commentId: Overload:DotEnv.Core.EnvBinder.#ctor
+  fullName: DotEnv.Core.EnvBinder.EnvBinder
+  nameWithType: EnvBinder.EnvBinder
+- uid: DotEnv.Core.EnvBinder.AllowBindNonPublicProperties
+  name: AllowBindNonPublicProperties()
+  href: api/DotEnv.Core.EnvBinder.AllowBindNonPublicProperties.html#DotEnv_Core_EnvBinder_AllowBindNonPublicProperties
+  commentId: M:DotEnv.Core.EnvBinder.AllowBindNonPublicProperties
+  fullName: DotEnv.Core.EnvBinder.AllowBindNonPublicProperties()
+  nameWithType: EnvBinder.AllowBindNonPublicProperties()
+- uid: DotEnv.Core.EnvBinder.AllowBindNonPublicProperties*
+  name: AllowBindNonPublicProperties
+  href: api/DotEnv.Core.EnvBinder.AllowBindNonPublicProperties.html
+  commentId: Overload:DotEnv.Core.EnvBinder.AllowBindNonPublicProperties
+  fullName: DotEnv.Core.EnvBinder.AllowBindNonPublicProperties
+  nameWithType: EnvBinder.AllowBindNonPublicProperties
+- uid: DotEnv.Core.EnvBinder.Bind*
+  name: Bind
+  href: api/DotEnv.Core.EnvBinder.Bind.html
+  commentId: Overload:DotEnv.Core.EnvBinder.Bind
+  fullName: DotEnv.Core.EnvBinder.Bind
+  nameWithType: EnvBinder.Bind
+- uid: DotEnv.Core.EnvBinder.Bind``1
+  name: Bind<TSettings>()
+  href: api/DotEnv.Core.EnvBinder.Bind.html#DotEnv_Core_EnvBinder_Bind__1
+  commentId: M:DotEnv.Core.EnvBinder.Bind``1
+  name.vb: Bind(Of TSettings)()
+  fullName: DotEnv.Core.EnvBinder.Bind<TSettings>()
+  fullName.vb: DotEnv.Core.EnvBinder.Bind(Of TSettings)()
+  nameWithType: EnvBinder.Bind<TSettings>()
+  nameWithType.vb: EnvBinder.Bind(Of TSettings)()
+- uid: DotEnv.Core.EnvBinder.Bind``1(DotEnv.Core.EnvValidationResult@)
+  name: Bind<TSettings>(out EnvValidationResult)
+  href: api/DotEnv.Core.EnvBinder.Bind.html#DotEnv_Core_EnvBinder_Bind__1_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.EnvBinder.Bind``1(DotEnv.Core.EnvValidationResult@)
+  name.vb: Bind(Of TSettings)(ByRef EnvValidationResult)
+  fullName: DotEnv.Core.EnvBinder.Bind<TSettings>(out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.EnvBinder.Bind(Of TSettings)(ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: EnvBinder.Bind<TSettings>(out EnvValidationResult)
+  nameWithType.vb: EnvBinder.Bind(Of TSettings)(ByRef EnvValidationResult)
+- uid: DotEnv.Core.EnvBinder.IgnoreException
+  name: IgnoreException()
+  href: api/DotEnv.Core.EnvBinder.IgnoreException.html#DotEnv_Core_EnvBinder_IgnoreException
+  commentId: M:DotEnv.Core.EnvBinder.IgnoreException
+  fullName: DotEnv.Core.EnvBinder.IgnoreException()
+  nameWithType: EnvBinder.IgnoreException()
+- uid: DotEnv.Core.EnvBinder.IgnoreException*
+  name: IgnoreException
+  href: api/DotEnv.Core.EnvBinder.IgnoreException.html
+  commentId: Overload:DotEnv.Core.EnvBinder.IgnoreException
+  fullName: DotEnv.Core.EnvBinder.IgnoreException
+  nameWithType: EnvBinder.IgnoreException
 - uid: DotEnv.Core.EnvironmentVariablesProviderExtensions
   name: EnvironmentVariablesProviderExtensions
   href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html
   commentId: T:DotEnv.Core.EnvironmentVariablesProviderExtensions
   fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions
   nameWithType: EnvironmentVariablesProviderExtensions
+- uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder(DotEnv.Core.IEnvironmentVariablesProvider)
+  name: CreateBinder(IEnvironmentVariablesProvider)
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateBinder_DotEnv_Core_IEnvironmentVariablesProvider_
+  commentId: M:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder(DotEnv.Core.IEnvironmentVariablesProvider)
+  fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder(DotEnv.Core.IEnvironmentVariablesProvider)
+  nameWithType: EnvironmentVariablesProviderExtensions.CreateBinder(IEnvironmentVariablesProvider)
+- uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder*
+  name: CreateBinder
+  href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder.html
+  commentId: Overload:DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder
+  fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder
+  nameWithType: EnvironmentVariablesProviderExtensions.CreateBinder
 - uid: DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader(DotEnv.Core.IEnvironmentVariablesProvider)
   name: CreateReader(IEnvironmentVariablesProvider)
   href: api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateReader.html#DotEnv_Core_EnvironmentVariablesProviderExtensions_CreateReader_DotEnv_Core_IEnvironmentVariablesProvider_
@@ -145,6 +253,42 @@ references:
   commentId: Overload:DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary
   fullName: DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary
   nameWithType: EnvironmentVariablesProviderExtensions.ToDictionary
+- uid: DotEnv.Core.EnvKeyAttribute
+  name: EnvKeyAttribute
+  href: api/DotEnv.Core.EnvKeyAttribute.html
+  commentId: T:DotEnv.Core.EnvKeyAttribute
+  fullName: DotEnv.Core.EnvKeyAttribute
+  nameWithType: EnvKeyAttribute
+- uid: DotEnv.Core.EnvKeyAttribute.#ctor
+  name: EnvKeyAttribute()
+  href: api/DotEnv.Core.EnvKeyAttribute.-ctor.html#DotEnv_Core_EnvKeyAttribute__ctor
+  commentId: M:DotEnv.Core.EnvKeyAttribute.#ctor
+  fullName: DotEnv.Core.EnvKeyAttribute.EnvKeyAttribute()
+  nameWithType: EnvKeyAttribute.EnvKeyAttribute()
+- uid: DotEnv.Core.EnvKeyAttribute.#ctor(System.String)
+  name: EnvKeyAttribute(String)
+  href: api/DotEnv.Core.EnvKeyAttribute.-ctor.html#DotEnv_Core_EnvKeyAttribute__ctor_System_String_
+  commentId: M:DotEnv.Core.EnvKeyAttribute.#ctor(System.String)
+  fullName: DotEnv.Core.EnvKeyAttribute.EnvKeyAttribute(System.String)
+  nameWithType: EnvKeyAttribute.EnvKeyAttribute(String)
+- uid: DotEnv.Core.EnvKeyAttribute.#ctor*
+  name: EnvKeyAttribute
+  href: api/DotEnv.Core.EnvKeyAttribute.-ctor.html
+  commentId: Overload:DotEnv.Core.EnvKeyAttribute.#ctor
+  fullName: DotEnv.Core.EnvKeyAttribute.EnvKeyAttribute
+  nameWithType: EnvKeyAttribute.EnvKeyAttribute
+- uid: DotEnv.Core.EnvKeyAttribute.Name
+  name: Name
+  href: api/DotEnv.Core.EnvKeyAttribute.Name.html#DotEnv_Core_EnvKeyAttribute_Name
+  commentId: P:DotEnv.Core.EnvKeyAttribute.Name
+  fullName: DotEnv.Core.EnvKeyAttribute.Name
+  nameWithType: EnvKeyAttribute.Name
+- uid: DotEnv.Core.EnvKeyAttribute.Name*
+  name: Name
+  href: api/DotEnv.Core.EnvKeyAttribute.Name.html
+  commentId: Overload:DotEnv.Core.EnvKeyAttribute.Name
+  fullName: DotEnv.Core.EnvKeyAttribute.Name
+  nameWithType: EnvKeyAttribute.Name
 - uid: DotEnv.Core.EnvLoader
   name: EnvLoader
   href: api/DotEnv.Core.EnvLoader.html
@@ -1453,6 +1597,60 @@ references:
   commentId: Overload:DotEnv.Core.EnvValidator.Validate
   fullName: DotEnv.Core.EnvValidator.Validate
   nameWithType: EnvValidator.Validate
+- uid: DotEnv.Core.IEnvBinder
+  name: IEnvBinder
+  href: api/DotEnv.Core.IEnvBinder.html
+  commentId: T:DotEnv.Core.IEnvBinder
+  fullName: DotEnv.Core.IEnvBinder
+  nameWithType: IEnvBinder
+- uid: DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties
+  name: AllowBindNonPublicProperties()
+  href: api/DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties.html#DotEnv_Core_IEnvBinder_AllowBindNonPublicProperties
+  commentId: M:DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties
+  fullName: DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties()
+  nameWithType: IEnvBinder.AllowBindNonPublicProperties()
+- uid: DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties*
+  name: AllowBindNonPublicProperties
+  href: api/DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties.html
+  commentId: Overload:DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties
+  fullName: DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties
+  nameWithType: IEnvBinder.AllowBindNonPublicProperties
+- uid: DotEnv.Core.IEnvBinder.Bind*
+  name: Bind
+  href: api/DotEnv.Core.IEnvBinder.Bind.html
+  commentId: Overload:DotEnv.Core.IEnvBinder.Bind
+  fullName: DotEnv.Core.IEnvBinder.Bind
+  nameWithType: IEnvBinder.Bind
+- uid: DotEnv.Core.IEnvBinder.Bind``1
+  name: Bind<TSettings>()
+  href: api/DotEnv.Core.IEnvBinder.Bind.html#DotEnv_Core_IEnvBinder_Bind__1
+  commentId: M:DotEnv.Core.IEnvBinder.Bind``1
+  name.vb: Bind(Of TSettings)()
+  fullName: DotEnv.Core.IEnvBinder.Bind<TSettings>()
+  fullName.vb: DotEnv.Core.IEnvBinder.Bind(Of TSettings)()
+  nameWithType: IEnvBinder.Bind<TSettings>()
+  nameWithType.vb: IEnvBinder.Bind(Of TSettings)()
+- uid: DotEnv.Core.IEnvBinder.Bind``1(DotEnv.Core.EnvValidationResult@)
+  name: Bind<TSettings>(out EnvValidationResult)
+  href: api/DotEnv.Core.IEnvBinder.Bind.html#DotEnv_Core_IEnvBinder_Bind__1_DotEnv_Core_EnvValidationResult__
+  commentId: M:DotEnv.Core.IEnvBinder.Bind``1(DotEnv.Core.EnvValidationResult@)
+  name.vb: Bind(Of TSettings)(ByRef EnvValidationResult)
+  fullName: DotEnv.Core.IEnvBinder.Bind<TSettings>(out DotEnv.Core.EnvValidationResult)
+  fullName.vb: DotEnv.Core.IEnvBinder.Bind(Of TSettings)(ByRef DotEnv.Core.EnvValidationResult)
+  nameWithType: IEnvBinder.Bind<TSettings>(out EnvValidationResult)
+  nameWithType.vb: IEnvBinder.Bind(Of TSettings)(ByRef EnvValidationResult)
+- uid: DotEnv.Core.IEnvBinder.IgnoreException
+  name: IgnoreException()
+  href: api/DotEnv.Core.IEnvBinder.IgnoreException.html#DotEnv_Core_IEnvBinder_IgnoreException
+  commentId: M:DotEnv.Core.IEnvBinder.IgnoreException
+  fullName: DotEnv.Core.IEnvBinder.IgnoreException()
+  nameWithType: IEnvBinder.IgnoreException()
+- uid: DotEnv.Core.IEnvBinder.IgnoreException*
+  name: IgnoreException
+  href: api/DotEnv.Core.IEnvBinder.IgnoreException.html
+  commentId: Overload:DotEnv.Core.IEnvBinder.IgnoreException
+  fullName: DotEnv.Core.IEnvBinder.IgnoreException
+  nameWithType: IEnvBinder.IgnoreException
 - uid: DotEnv.Core.IEnvironmentVariablesProvider
   name: IEnvironmentVariablesProvider
   href: api/DotEnv.Core.IEnvironmentVariablesProvider.html
