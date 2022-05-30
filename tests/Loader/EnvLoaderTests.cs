@@ -65,12 +65,13 @@ public partial class EnvLoaderTests
     public void Load_WhenIgnoresSearchInParentDirectories_ShouldOnlySearchInTheCurrentDirectory()
     {
         new EnvLoader()
-            .SetBasePath("Loader/env_files")
-            .AddEnvFile(".env.parent.directories")
+            .AddEnvFile("Loader/env_files/.env.parent.directories")
+            .AddEnvFile(".env.parent.directories2")
             .IgnoreParentDirectories()
             .Load();
 
         Assert.IsNull(GetEnvironmentVariable("PARENT_DIRECTORIES"));
+        Assert.IsNotNull(GetEnvironmentVariable("PARENT_DIRECTORIES_2"));
     }
 
     [TestMethod]
