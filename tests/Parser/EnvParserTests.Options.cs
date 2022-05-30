@@ -87,7 +87,7 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
-    public void Parse_WhenAllowedOverwriteExistingVars_ShouldOverwriteTheValue()
+    public void Parse_WhenAllowedOverwriteExistingVars_ShouldBeAbleToOverwriteValue()
     {
         string env = @"
                 ALLOW_OVERWRITE_1 = VAL1
@@ -121,7 +121,7 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
-    public void Parse_WhenSetsDelimiterKeyValuePair_ShouldReadVariables()
+    public void Parse_WhenSetsDelimiterKeyValuePair_ShouldReadKeyValuePair()
     {
         string env = @"
                 DELIMITER_KEYVALUE_1 : VAL1
@@ -165,7 +165,7 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
-    public void Parse_WhenConcatDuplicateKeysAtEnd_ShouldReadDuplicateVariable()
+    public void Parse_WhenAllowedConcatDuplicateKeysAtEnd_ShouldConcatenateDuplicateKeys()
     {
         string env = @"
                 CONCAT_END2 = 1
@@ -186,7 +186,7 @@ public partial class EnvParserTests
 
 
     [TestMethod]
-    public void Parse_WhenConcatDuplicateKeysAtStart_ShouldReadDuplicateVariable()
+    public void Parse_WhenAllowedConcatDuplicateKeysAtStart_ShouldConcatenateDuplicateKeys()
     {
         string env = @"
                 CONCAT_START2 = 1
@@ -219,7 +219,7 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
-    public void Parse_WhenEnvironmentCannotBeModified_ShouldReadTheValuesFromDictionary()
+    public void Parse_WhenEnvironmentCannotBeModified_ShouldStoreTheKeysInDictionary()
     {
         string env = @"
                 AVOID_MOD_1 = Hello
@@ -254,7 +254,7 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
-    public void Parse_WhenSetsEnvironmentVariablesProvider_ShouldReadVariables()
+    public void Parse_WhenSetsEnvironmentVariablesProvider_ShouldStoreTheKeysInCustomProvider()
     {
         var customProvider = new CustomEnvironmentVariablesProvider();
         new EnvParser()

@@ -59,7 +59,7 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
-    public void Parse_WhenReadComment_ShouldIgnoreComment()
+    public void Parse_WhenLineIsComment_ShouldIgnoreComment()
     {
         string env = @"
                 #KEY1=VAL1
@@ -306,7 +306,7 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
-    public void Parse_WhenEnvironmentCanBeModified_ShouldReadVariables()
+    public void Parse_WhenEnvironmentCanBeModified_ShouldStoreTheKeysInCurrentEnvironment()
     {
         var parser = new EnvParser();
         string env = "ENV_MODIFIED = 1";
@@ -314,5 +314,6 @@ public partial class EnvParserTests
         var envVars = parser.Parse(env);
 
         Assert.AreEqual(expected: "1", envVars["ENV_MODIFIED"]);
+        Assert.AreEqual(expected: "1", GetEnvironmentVariable("ENV_MODIFIED"));
     }
 }

@@ -4,7 +4,7 @@
 public class EnvTests
 {
     [TestMethod]
-    public void IsDevelopment_WhenCurrentEnvironmentIsDevelopmentOrDev_ShouldReturnsTrue()
+    public void IsDevelopment_WhenCurrentEnvironmentIsDevelopmentOrDev_ShouldReturnTrue()
     {
         Env.CurrentEnvironment = "development";
         Assert.AreEqual(expected: true, actual: Env.IsDevelopment());
@@ -19,7 +19,7 @@ public class EnvTests
     }
 
     [TestMethod]
-    public void IsTest_WhenCurrentEnvironmentIsTest_ShouldReturnsTrue()
+    public void IsTest_WhenCurrentEnvironmentIsTest_ShouldReturnTrue()
     {
         Env.CurrentEnvironment = "test";
         Assert.AreEqual(expected: true, actual: Env.IsTest());
@@ -30,7 +30,7 @@ public class EnvTests
     }
 
     [TestMethod]
-    public void IsStaging_WhenCurrentEnvironmentIsStaging_ShouldReturnsTrue()
+    public void IsStaging_WhenCurrentEnvironmentIsStaging_ShouldReturnTrue()
     {
         Env.CurrentEnvironment = "staging";
         Assert.AreEqual(expected: true, actual: Env.IsStaging());
@@ -41,7 +41,7 @@ public class EnvTests
     }
 
     [TestMethod]
-    public void IsProduction_WhenCurrentEnvironmentIsProductionOrProd_ShouldReturnsTrue()
+    public void IsProduction_WhenCurrentEnvironmentIsProductionOrProd_ShouldReturnTrue()
     {
         Env.CurrentEnvironment = "production";
         Assert.AreEqual(expected: true, actual: Env.IsProduction());
@@ -56,7 +56,7 @@ public class EnvTests
     }
 
     [TestMethod]
-    public void IsEnvironment_WhenCurrentEnvironmentIsProductionAndValueSpecifiedIsProduction_ShouldReturnsTrue()
+    public void IsEnvironment_WhenCurrentEnvironmentIsProductionAndValueSpecifiedIsProduction_ShouldReturnTrue()
     {
         Env.CurrentEnvironment = "production";
         Assert.AreEqual(expected: true, actual: Env.IsEnvironment("production"));

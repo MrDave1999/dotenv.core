@@ -3,7 +3,7 @@
 public partial class EnvParserTests
 {
     [TestMethod]
-    public void Parse_WhenErrorsAreFound_ShouldReadTheErrors()
+    public void Parse_WhenAnErrorIsFound_ShouldStoreErrorMessageInCollection()
     {
         var parser = new EnvParser().IgnoreParserException();
         string env, msg;

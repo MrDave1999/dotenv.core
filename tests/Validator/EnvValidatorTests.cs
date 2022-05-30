@@ -32,7 +32,7 @@ public class EnvValidatorTests
     }
 
     [TestMethod]
-    public void Validate_WhenErrorsAreFound_ShouldReadTheErrors()
+    public void Validate_WhenAnErrorIsFound_ShouldStoreErrorMessageInCollection()
     {
         string msg;
         var validator = new EnvValidator()
@@ -53,7 +53,7 @@ public class EnvValidatorTests
     }
 
     [TestMethod]
-    public void Validate_WhenRequiredKeysAreSpecifiedByMeansOfClass_ShouldThrowRequiredKeysNotPresentException()
+    public void Validate_WhenRequiredKeysAreNotPresentAndAreSpecifiedByMeansOfClass_ShouldThrowRequiredKeysNotPresentException()
     {
         var validator = new EnvValidator().SetRequiredKeys<RequiredKeys>();
 
