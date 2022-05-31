@@ -7,7 +7,13 @@ public class EnvValidatorTests
     public void Validate_WhenRequiredKeysAreNotPresent_ShouldThrowRequiredKeysNotPresentException()
     {
         var validator = new EnvValidator()
-                    .SetRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID");
+                    .SetRequiredKeys(
+                        "SAMC_KEY", 
+                        "API_KEY", 
+                        "JWT_TOKEN", 
+                        "JWT_TOKEN_ID", 
+                        "SERVICE_ID"
+                    );
 
         void action() => validator.Validate();
 
@@ -36,7 +42,13 @@ public class EnvValidatorTests
     {
         string msg;
         var validator = new EnvValidator()
-                    .SetRequiredKeys("SAMC_KEY", "API_KEY", "JWT_TOKEN", "JWT_TOKEN_ID", "SERVICE_ID")
+                    .SetRequiredKeys(
+                        "SAMC_KEY", 
+                        "API_KEY", 
+                        "JWT_TOKEN", 
+                        "JWT_TOKEN_ID", 
+                        "SERVICE_ID"
+                      )
                     .IgnoreException();
 
         validator.Validate(out var result);

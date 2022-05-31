@@ -214,7 +214,13 @@ public partial class EnvLoaderTests
     public void Load_WhenEnvFileNotFound_ShouldThrowFileNotFoundException()
     {
         var loader = new EnvLoader()
-                        .AddEnvFiles(".env.not.found", ".env.not.found3", ".env.not.found4", ".env.not.found5", ".env.not.found6")
+                        .AddEnvFiles(
+                            ".env.not.found", 
+                            ".env.not.found3", 
+                            ".env.not.found4", 
+                            ".env.not.found5", 
+                            ".env.not.found6"
+                          )
                         .EnableFileNotFoundException();
 
         void action() => loader.Load();
@@ -235,7 +241,12 @@ public partial class EnvLoaderTests
             .AddEnvFile(".env.validation.result2")
             .AddEnvFile(".env.validation.result3")
             .AddEnvFile(".env.validation.result4")
-            .AddEnvFiles(".env.not.found3", ".env.not.found4", ".env.not.found5", ".env.not.found6")
+            .AddEnvFiles(
+                ".env.not.found3", 
+                ".env.not.found4", 
+                ".env.not.found5", 
+                ".env.not.found6"
+              )
             .Load(out result);
 
         msg = result.ErrorMessages;
