@@ -9,7 +9,6 @@ namespace DotEnv.Core
     /// </summary>
     public class ExceptionMessages
     {
-        #pragma warning disable CS1591
         public const string VariableNotSetMessage = "'{0}' is not set.";
         public const string DataSourceIsEmptyOrWhitespaceMessage = "Data source is empty or consists only in whitespace.";
         public const string VariableIsAnEmptyStringMessage = "'{0}' is an invalid interpolation expression.";
