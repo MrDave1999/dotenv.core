@@ -19,6 +19,7 @@
     <Description>dotenv.core is a class library for read and parsing .env files in .NET Core</Description>
     <Version>2.1.0</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <NoWarn>1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
