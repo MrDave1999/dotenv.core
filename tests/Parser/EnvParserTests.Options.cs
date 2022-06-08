@@ -228,9 +228,9 @@ public partial class EnvParserTests
             ";
 
         var keyValuePairs = new EnvParser()
-                       .AvoidModifyEnvironment()
-                       .AllowConcatDuplicateKeys()
-                       .Parse(env);
+                                .AvoidModifyEnvironment()
+                                .AllowConcatDuplicateKeys()
+                                .Parse(env);
 
         Assert.AreEqual(expected: "HelloWorld", actual: keyValuePairs["AVOID_MOD_1"]);
         Assert.AreEqual(expected: "HelloWorld", actual: keyValuePairs["AVOID_MOD_2"]);

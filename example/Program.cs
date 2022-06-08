@@ -61,9 +61,14 @@ Console.WriteLine("\n\n\n");
 
 Console.WriteLine("---- EXAMPLE (7):");
 var keyValuePairs = new EnvLoader()
-    .AvoidModifyEnvironment()
-    .AddEnvFiles("./", "./files/", "files/sqlite", "./files/pgsql/.env.local")
-    .Load();
+                        .AvoidModifyEnvironment()
+                        .AddEnvFiles(
+                            "./", 
+                            "./files/", 
+                            "files/sqlite", 
+                            "./files/pgsql/.env.local"
+                          )
+                        .Load();
 Console.WriteLine("-> Dictionary<string, string>:");
 foreach (var keyValuePair in keyValuePairs.ToDictionary())
     Console.WriteLine($"{keyValuePair.Key}, {keyValuePair.Value}");
@@ -84,10 +89,10 @@ Console.WriteLine("\n\n\n");
 Console.WriteLine("---- EXAMPLE (9):");
 EnvValidationResult resultExample9;
 var envVars = new EnvLoader()
-    .AllowConcatDuplicateKeys()
-    .SetBasePath("./files/environment")
-    .AvoidModifyEnvironment()
-    .LoadEnv(out resultExample9);
+                  .AllowConcatDuplicateKeys()
+                  .SetBasePath("./files/environment")
+                  .AvoidModifyEnvironment()
+                  .LoadEnv(out resultExample9);
 
 if (resultExample9.HasError())
     Console.WriteLine(resultExample9.ErrorMessages);
