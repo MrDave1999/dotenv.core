@@ -153,6 +153,36 @@ public partial class EnvParserTests
     }
 
     [TestMethod]
+    public void Parse_WhenExportPrefixIsFoundBeforeTheKey_ShouldRemoveExportPrefix()
+    {
+        string env = @"
+                export EXPORT_PREFIX_1=1
+                EXPORT_PREFIX_2=1
+                export   EXPORT_PREFIX_3=1
+                export.EXPORT_PREFIX_4=1
+                export_EXPORT_PREFIX_5=1
+                exportEXPORT_PREFIX_6=1
+                   export EXPORT_PREFIX_7=1
+                export exportEXPORT_PREFIX_8=1
+                EXPORT EXPORT_PREFIX_9=1
+                EXPORT export EXPORT_PREFIX_10=1
+            ";
+
+        new EnvParser().Parse(env);
+
+        Assert.IsNotNull(GetEnvironmentVariable("EXPORT_PREFIX_1"));
+        Assert.IsNotNull(GetEnvironmentVariable("EXPORT_PREFIX_2"));
+        Assert.IsNotNull(GetEnvironmentVariable("EXPORT_PREFIX_3"));
+        Assert.IsNotNull(GetEnvironmentVariable("export.EXPORT_PREFIX_4"));
+        Assert.IsNotNull(GetEnvironmentVariable("export_EXPORT_PREFIX_5"));
+        Assert.IsNotNull(GetEnvironmentVariable("exportEXPORT_PREFIX_6"));
+        Assert.IsNotNull(GetEnvironmentVariable("EXPORT_PREFIX_7"));
+        Assert.IsNotNull(GetEnvironmentVariable("exportEXPORT_PREFIX_8"));
+        Assert.IsNotNull(GetEnvironmentVariable("EXPORT EXPORT_PREFIX_9"));
+        Assert.IsNotNull(GetEnvironmentVariable("EXPORT export EXPORT_PREFIX_10"));
+    }
+
+    [TestMethod]
     public void Parse_WhenReadLineWithKeyValuePair_ShouldExtractKey()
     {
         string env = @"

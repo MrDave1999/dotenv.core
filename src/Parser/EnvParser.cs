@@ -9,6 +9,8 @@ namespace DotEnv.Core
     /// <inheritdoc cref="IEnvParser" />
     public partial class EnvParser : IEnvParser
     {
+        private const string ExportPrefix = "export ";
+
         /// <summary>
         /// The maximum number of substrings to be returned by the Split method.
         /// </summary>
@@ -89,6 +91,7 @@ namespace DotEnv.Core
                 var key   = ExtractKey(line);
                 var value = ExtractValue(line);
 
+                key   = RemovePrefixBeforeKey(key, ExportPrefix);
                 key   = TrimKey(key);
                 value = TrimValue(value);
                 if(IsQuoted(value))
