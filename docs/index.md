@@ -90,6 +90,22 @@ The `export` prefix makes it possible to export environment variables from a fil
 source .env
 ```
 
+### Multiline values
+
+It is possible for single- or double-quoted values to span multiple lines. The following examples are equivalent:
+```bash
+KEY="first line
+second line"
+
+VAR='first line
+second line'
+```
+
+```bash
+KEY="first line\nsecond line"
+VAR='first line\nsecond line'
+```
+
 ## Frequently Answered Questions
 
 ### Can I use an `.env file` in a production environment?

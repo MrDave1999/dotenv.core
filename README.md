@@ -33,6 +33,7 @@ The advantage of using this library is that you do not need to set the environme
   * [Comments](#comments)
   * [Interpolating variables](#interpolating-variables)
   * [Export variables](#export-variables)
+  * [Multiline values](#multiline-values)
 - [Frequently Answered Questions](#frequently-answered-questions)
   * [Can I use an .env file in a production environment?](#can-i-use-an-env-file-in-a-production-environment)
   * [Should I commit my .env file?](#should-i-commit-my-env-file)
@@ -295,6 +296,22 @@ export KEY=VALUE
 The `export` prefix makes it possible to export environment variables from a file using the `source` command:
 ```bash
 source .env
+```
+
+### Multiline values
+
+It is possible for single- or double-quoted values to span multiple lines. The following examples are equivalent:
+```bash
+KEY="first line
+second line"
+
+VAR='first line
+second line'
+```
+
+```bash
+KEY="first line\nsecond line"
+VAR='first line\nsecond line'
 ```
 
 ## Frequently Answered Questions
