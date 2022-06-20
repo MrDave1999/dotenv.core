@@ -164,6 +164,8 @@ public partial class EnvParserTests
                 exportEXPORT_PREFIX_6=1
                    export EXPORT_PREFIX_7=1
                 export exportEXPORT_PREFIX_8=1
+                EXPORT EXPORT_PREFIX_9=1
+                EXPORT export EXPORT_PREFIX_10=1
             ";
 
         new EnvParser().Parse(env);
@@ -176,6 +178,8 @@ public partial class EnvParserTests
         Assert.IsNotNull(GetEnvironmentVariable("exportEXPORT_PREFIX_6"));
         Assert.IsNotNull(GetEnvironmentVariable("EXPORT_PREFIX_7"));
         Assert.IsNotNull(GetEnvironmentVariable("exportEXPORT_PREFIX_8"));
+        Assert.IsNotNull(GetEnvironmentVariable("EXPORT EXPORT_PREFIX_9"));
+        Assert.IsNotNull(GetEnvironmentVariable("EXPORT export EXPORT_PREFIX_10"));
     }
 
     [TestMethod]
