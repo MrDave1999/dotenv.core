@@ -195,5 +195,18 @@ namespace DotEnv.Core
         /// <returns>A string without single or double quotes.</returns>
         private string RemoveQuotes(string text)
             => text.Trim(new[] { '\'', '"' });
+
+        /// <summary>
+        /// Removes the prefix before the key.
+        /// </summary>
+        /// <param name="key">The key with the prefix to remove.</param>
+        /// <param name="prefix">The prefix name.</param>
+        /// <returns>A key without the prefix.</returns>
+        private string RemovePrefixBeforeKey(string key, string prefix)
+        {
+            var aux = key;
+            key = key.TrimStart();
+            return key.IndexOf(prefix) == 0 ? key.Remove(0, prefix.Length) : aux;
+        }
     }
 }
