@@ -78,6 +78,18 @@ MYSQL_USER=root
 ```
 In the above example, the parser should throw an exception because the `MYSQL_USER` variable is not set.
 
+### Export variables
+
+Lines can start with the `export` prefix, which has no effect on their interpretation.
+```bash
+export VAR=VALUE
+export KEY=VALUE
+```
+The `export` prefix makes it possible to export environment variables from a file using the `source` command:
+```bash
+source .env
+```
+
 ## Frequently Answered Questions
 
 ### Can I use an `.env file` in a production environment?

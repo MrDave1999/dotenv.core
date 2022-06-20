@@ -32,6 +32,7 @@ The advantage of using this library is that you do not need to set the environme
 - [File Format](#file-format)
   * [Comments](#comments)
   * [Interpolating variables](#interpolating-variables)
+  * [Export variables](#export-variables)
 - [Frequently Answered Questions](#frequently-answered-questions)
   * [Can I use an .env file in a production environment?](#can-i-use-an-env-file-in-a-production-environment)
   * [Should I commit my .env file?](#should-i-commit-my-env-file)
@@ -283,6 +284,18 @@ CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};databas
 MYSQL_USER=root
 ```
 In the above example, the parser should throw an exception because the `MYSQL_USER` variable is not set.
+
+### Export variables
+
+Lines can start with the `export` prefix, which has no effect on their interpretation.
+```bash
+export VAR=VALUE
+export KEY=VALUE
+```
+The `export` prefix makes it possible to export environment variables from a file using the `source` command:
+```bash
+source .env
+```
 
 ## Frequently Answered Questions
 
