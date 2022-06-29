@@ -332,4 +332,12 @@ By default, it won't overwrite existing environment variables as dotenv assumes 
 
 ## Contribution
 
-If you want to contribute in this project, simply fork the repository, make changes (I recommend that you create your own branch) and then create a [pull request](https://github.com/MrDave1999/dotenv.core/pulls).
+Any contribution is welcome, in fact, the **parser** is still VERY dumb, so if you can improve it, do it.
+
+Follow the steps below:
+
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Added some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new [Pull Request](https://github.com/MrDave1999/dotenv.core/pulls)
