@@ -40,6 +40,12 @@ namespace DotEnv.Core
             if(AreNotNull(lineNumber, column, actualValue))
                 return $"Parsing error (line {lineNumber}, col {column}): error: {string.Format(message, actualValue)}";
 
+            if(AreNotNull(envFileName, lineNumber, column))
+                return $"{envFileName}:(line {lineNumber}, col {column}): error: {message}";
+
+            if(AreNotNull(lineNumber, column))
+                return $"Parsing error (line {lineNumber}, col {column}): error: {message}";
+
             if (envFileName is not null)
                 return $"{envFileName}: error: {message}";
 
