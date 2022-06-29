@@ -116,16 +116,9 @@ public partial class EnvParserTests
                 SINGLE_QUOTES_3=''
                 SINGLE_QUOTES_4='   '
 
-                COMBINED_QUOTES_1='VAL""
-                COMBINED_QUOTES_2=""VAL'
-
-                INCOMPLETE_QUOTES_1='VAL
-                INCOMPLETE_QUOTES_2=""VAL
-                INCOMPLETE_QUOTES_3=VAL'
-                INCOMPLETE_QUOTES_4=VAL""
-                INCOMPLETE_QUOTES_5='
-                INCOMPLETE_QUOTES_6=""
-                INCOMPLETE_QUOTES_7=
+                INCOMPLETE_QUOTES_1=VAL'
+                INCOMPLETE_QUOTES_2=VAL""
+                INCOMPLETE_QUOTES_3=
             ";
         
         new EnvParser().Parse(env);
@@ -134,22 +127,13 @@ public partial class EnvParserTests
         Assert.AreEqual(expected: "  VAL  ", actual: GetEnvironmentVariable("DOUBLE_QUOTES_2"));
         Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("DOUBLE_QUOTES_3"));
         Assert.AreEqual(expected: "   ", actual: GetEnvironmentVariable("DOUBLE_QUOTES_4"));
-
         Assert.AreEqual(expected: "VAL", actual: GetEnvironmentVariable("SINGLE_QUOTES_1"));
         Assert.AreEqual(expected: "  VAL  ", actual: GetEnvironmentVariable("SINGLE_QUOTES_2"));
         Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("SINGLE_QUOTES_3"));
         Assert.AreEqual(expected: "   ", actual: GetEnvironmentVariable("SINGLE_QUOTES_4"));
-
-        Assert.AreEqual(expected: "'VAL\"", actual: GetEnvironmentVariable("COMBINED_QUOTES_1"));
-        Assert.AreEqual(expected: "\"VAL'", actual: GetEnvironmentVariable("COMBINED_QUOTES_2"));
-        
-        Assert.AreEqual(expected: "'VAL", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_1"));
-        Assert.AreEqual(expected: "\"VAL", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_2"));
-        Assert.AreEqual(expected: "VAL'", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_3"));
-        Assert.AreEqual(expected: "VAL\"", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_4"));
-        Assert.AreEqual(expected: "'", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_5"));
-        Assert.AreEqual(expected: "\"", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_6"));
-        Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_7"));
+        Assert.AreEqual(expected: "VAL'", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_1"));
+        Assert.AreEqual(expected: "VAL\"", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_2"));
+        Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_3"));
     }
 
     [TestMethod]
