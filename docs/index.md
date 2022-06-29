@@ -124,6 +124,8 @@ By default, it won't overwrite existing environment variables as dotenv assumes 
 
 ## Contribution
 
+Any contribution is welcome, in fact, the **parser** is still VERY dumb, so if you can improve it, do it.
+
 Follow the steps below:
 
 1. Fork it
