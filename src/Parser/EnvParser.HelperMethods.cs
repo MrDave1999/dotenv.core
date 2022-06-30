@@ -182,6 +182,7 @@ namespace DotEnv.Core
         /// <returns><c>true</c> if the text is quoted, or <c>false</c>.</returns>
         private bool IsQuoted(string text)
         {
+            text = text.Trim();
             if(text.Length <= 1)
                 return false;
             return (text.StartsWith("\"") && text.EndsWith("\"")) 
@@ -194,7 +195,7 @@ namespace DotEnv.Core
         /// <param name="text">The text with quotes to remove.</param>
         /// <returns>A string without single or double quotes.</returns>
         private string RemoveQuotes(string text)
-            => text.Trim(new[] { '\'', '"' });
+            => text.Trim().Trim(new[] { '\'', '"' });
 
         /// <summary>
         /// Removes the prefix before the key.
