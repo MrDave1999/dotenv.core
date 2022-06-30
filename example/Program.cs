@@ -6,6 +6,7 @@ new EnvLoader()
     .Load();
 Console.WriteLine($"MYSQL_HOST={reader["MYSQL_HOST"]}");
 Console.WriteLine($"MYSQL_DB={reader["MYSQL_DB"]}");
+Console.WriteLine($"PRIVATE_KEY={reader["PRIVATE_KEY"]}");
 Console.WriteLine("\n\n\n");
 
 Console.WriteLine("---- SPECIAL EXAMPLE:");

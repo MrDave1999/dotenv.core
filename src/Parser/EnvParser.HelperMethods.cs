@@ -42,7 +42,8 @@ namespace DotEnv.Core
         private string RemoveInlineComment(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
-            return line.Split(new[] { " #" }, MaxCount, StringSplitOptions.None)[0];
+            var separator = $" {_configuration.CommentChar}";
+            return line.Split(new[] { separator }, MaxCount, StringSplitOptions.None)[0];
         }
 
         /// <summary>
@@ -184,8 +185,8 @@ namespace DotEnv.Core
         {
             if(text.Length <= 1)
                 return false;
-            return (text.StartsWith("\"") && text.EndsWith("\"")) 
-                || (text.StartsWith("'") && text.EndsWith("'"));
+            return (text.StartsWith(DoubleQuote) && text.EndsWith(DoubleQuote)) 
+                || (text.StartsWith(SingleQuote) && text.EndsWith(SingleQuote));
         }
 
         /// <summary>
@@ -194,7 +195,7 @@ namespace DotEnv.Core
         /// <param name="text">The text with quotes to remove.</param>
         /// <returns>A string without single or double quotes.</returns>
         private string RemoveQuotes(string text)
-            => text.Trim(new[] { '\'', '"' });
+            => text.Trim(new[] { SingleQuote, DoubleQuote });
 
         /// <summary>
         /// Removes the prefix before the key.
@@ -207,6 +208,65 @@ namespace DotEnv.Core
             var aux = key;
             key = key.TrimStart();
             return key.IndexOf(prefix) == 0 ? key.Remove(0, prefix.Length) : aux;
+        }
+
+        /// <summary>
+        /// Checks if the value of a key is in multi-lines.
+        /// </summary>
+        /// <param name="value">The value to validate.</param>
+        /// <returns>
+        /// <c>true</c> if the <c>value</c> of a key is in multi-lines, or <c>false</c>.
+        /// </returns>
+        private bool IsMultiline(string value)
+        {
+            value = value.Trim();
+            if(value.Length == 0)
+                return false;
+
+            if(value.Length == 1 && value[0] is DoubleQuote or SingleQuote)
+                return true;
+
+            return (value.StartsWith(DoubleQuote) && !value.EndsWith(DoubleQuote)) 
+                || (value.StartsWith(SingleQuote) && !value.EndsWith(SingleQuote));
+        }
+
+        /// <summary>
+        /// Gets the values of several lines of a key.
+        /// </summary>
+        /// <param name="lines"></param>
+        /// <param name="index">Contains the index of a line.</param>
+        /// <param name="value">The value of a key.</param>
+        /// <returns>
+        /// A string with the values separated by a new line, or <c>null</c> if the line has no end quote.
+        /// </returns>
+        private string GetValuesMultilines(string[] lines, ref int index, string value)
+        {
+            value = value.TrimStart();
+            char quoteChar = value[0]; // Double or single-quoted
+            value = value.Substring(1);
+            int initialLine = index + 1;
+            int len = lines.Length;
+            while(++index < len)
+            {
+                var line = lines[index];
+                line = ExpandEnvironmentVariables(line, currentLine: index + 1);
+                var trimmedLine = line.TrimEnd();
+                if (trimmedLine.EndsWith(quoteChar))
+                {
+                    var lineWithoutQuote = line.Substring(0, trimmedLine.Length - 1);
+                    value = $"{value}\n{lineWithoutQuote}";
+                    return value;
+                }
+                value = $"{value}\n{line}";
+            }
+            
+            ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
+                quoteChar == DoubleQuote ? LineHasNoEndDoubleQuoteMessage : LineHasNoEndSingleQuoteMessage,
+                lineNumber: initialLine,
+                column: 1,
+                envFileName: FileName
+            ));
+            return null;
         }
     }
 }

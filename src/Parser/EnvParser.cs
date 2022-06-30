@@ -10,6 +10,8 @@ namespace DotEnv.Core
     public partial class EnvParser : IEnvParser
     {
         private const string ExportPrefix = "export ";
+        private const char DoubleQuote = '"';
+        private const char SingleQuote = '\'';
 
         /// <summary>
         /// The maximum number of substrings to be returned by the Split method.
@@ -62,7 +64,7 @@ namespace DotEnv.Core
 
             var newLines = new[] { "\r\n", "\n", "\r" };
             var lines = dataSource.Split(newLines, StringSplitOptions.None);
-            for (int i = 0, len = lines.Length; i != len; ++i)
+            for (int i = 0, len = lines.Length; i < len; ++i)
             {
                 var line = lines[i];
                 int currentLine = i + 1;
@@ -96,6 +98,12 @@ namespace DotEnv.Core
                 value = TrimValue(value);
                 if(IsQuoted(value))
                     value = RemoveQuotes(value);
+                else if (IsMultiline(value))
+                {
+                    value = GetValuesMultilines(lines, ref i, value);
+                    if (value is null)
+                        continue;
+                }
                 value = string.IsNullOrEmpty(value) ? " " : value;
 
                 var retrievedValue = EnvVarsProvider[key];

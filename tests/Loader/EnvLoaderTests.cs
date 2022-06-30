@@ -241,6 +241,7 @@ public partial class EnvLoaderTests
             .AddEnvFile(".env.validation.result2")
             .AddEnvFile(".env.validation.result3")
             .AddEnvFile(".env.validation.result4")
+            .AddEnvFile(".env.validation.result5")
             .AddEnvFiles(
                 ".env.not.found3", 
                 ".env.not.found4", 
@@ -251,7 +252,7 @@ public partial class EnvLoaderTests
 
         msg = result.ErrorMessages;
         Assert.AreEqual(expected: true, actual: result.HasError());
-        Assert.AreEqual(expected: 17, actual: result.Count);
+        Assert.AreEqual(expected: 20, actual: result.Count);
 
         var fileName = $"{basePath}.env.validation.result1";
         StringAssert.Contains(msg, FormatParserExceptionMessage(
@@ -346,6 +347,28 @@ public partial class EnvLoaderTests
             actualValue: "KEY", 
             lineNumber: 4, 
             column: 1, 
+            envFileName: fileName
+        ));
+
+        fileName = $"{basePath}.env.validation.result5";
+        StringAssert.Contains(msg, FormatParserExceptionMessage(
+            LineHasNoEndDoubleQuoteMessage, 
+            lineNumber: 1, 
+            column: 1,
+            envFileName: fileName
+        ));
+        StringAssert.Contains(msg, FormatParserExceptionMessage(
+            VariableNotSetMessage, 
+            actualValue: "VARIABLE_NOT_FOUND", 
+            lineNumber: 2, 
+            column: 12,
+            envFileName: fileName
+        ));
+        StringAssert.Contains(msg, FormatParserExceptionMessage(
+            VariableNotSetMessage, 
+            actualValue: "VARIABLE_NOT_FOUND_2", 
+            lineNumber: 3, 
+            column: 16,
             envFileName: fileName
         ));
 

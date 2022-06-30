@@ -26,6 +26,7 @@
     <ContentWithTargetPath Include="Loader\env_files\.env.absolute" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.absolute" />
     <ContentWithTargetPath Include="Loader\env_files\.env.relative" CopyToOutputDirectory="PreserveNewest" TargetPath="dotenv\files\.env.relative" />
     <ContentWithTargetPath Include="Loader\env_files\.env.only.currentdirectory" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.only.currentdirectory" />
+    <ContentWithTargetPath Include="Parser\.env.multi-lines" CopyToOutputDirectory="PreserveNewest" TargetPath=".env.multi-lines" />
   </ItemGroup>
   
 </Project>

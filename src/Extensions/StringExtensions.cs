@@ -15,5 +15,26 @@ namespace DotEnv.Core
         /// <returns>An array that contains at most count substrings from this instance that are delimited by separator.</returns>
         public static string[] Split(this string str, char separator, int count)
             => str.Split(new[] { separator }, count);
+
+        /// <summary>
+        /// Determines whether this string instance starts with the specified character. 
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="value">The character to compare.</param>
+        /// <returns>true if value matches the beginning of this string; otherwise, false.</returns>
+        public static bool StartsWith(this string str, char value)
+            => str.Length != 0 && str[0] == value;
+
+        /// <summary>
+        /// Determines whether the end of this string instance matches the specified character.
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="value">The character to compare to the character at the end of this instance.</param>
+        /// <returns>true if value matches the end of this instance; otherwise, false.</returns>
+        public static bool EndsWith(this string str, char value)
+        {
+            int len = str.Length;
+            return len != 0 && str[len - 1] == value;
+        }
     }
 }
