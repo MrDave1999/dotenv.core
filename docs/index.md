@@ -78,6 +78,34 @@ MYSQL_USER=root
 ```
 In the above example, the parser should throw an exception because the `MYSQL_USER` variable is not set.
 
+### Export variables
+
+Lines can start with the `export` prefix, which has no effect on their interpretation.
+```bash
+export VAR=VALUE
+export KEY=VALUE
+```
+The `export` prefix makes it possible to export environment variables from a file using the `source` command:
+```bash
+source .env
+```
+
+### Multiline values
+
+It is possible for single- or double-quoted values to span multiple lines. The following examples are equivalent:
+```bash
+KEY="first line
+second line"
+
+VAR='first line
+second line'
+```
+
+```bash
+KEY="first line\nsecond line"
+VAR='first line\nsecond line'
+```
+
 ## Frequently Answered Questions
 
 ### Can I use an `.env file` in a production environment?
@@ -95,6 +123,8 @@ Credentials should only be accessible on the machines that need access to them. 
 By default, it won't overwrite existing environment variables as dotenv assumes the deployment environment has more knowledge about configuration than the application does.
 
 ## Contribution
+
+Any contribution is welcome, the **parser** is still VERY dumb, so if you can improve it, do it.
 
 Follow the steps below:
 

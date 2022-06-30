@@ -32,6 +32,8 @@ The advantage of using this library is that you do not need to set the environme
 - [File Format](#file-format)
   * [Comments](#comments)
   * [Interpolating variables](#interpolating-variables)
+  * [Export variables](#export-variables)
+  * [Multiline values](#multiline-values)
 - [Frequently Answered Questions](#frequently-answered-questions)
   * [Can I use an .env file in a production environment?](#can-i-use-an-env-file-in-a-production-environment)
   * [Should I commit my .env file?](#should-i-commit-my-env-file)
@@ -70,10 +72,6 @@ An environment variable is a dynamic variable that can affect the behavior of ru
 
 ## Installation
 
-If you're an hardcore and want to do it manually, you must add the following to the `csproj` file:
-```xml
-<PackageReference Include="DotEnv.Core" Version="2.0.1" />
-```
 If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the **Tools** > **NuGet Package Manager** > **Package Manager Console** command and run the install command:
 ```
 Install-Package DotEnv.Core
@@ -284,6 +282,34 @@ MYSQL_USER=root
 ```
 In the above example, the parser should throw an exception because the `MYSQL_USER` variable is not set.
 
+### Export variables
+
+Lines can start with the `export` prefix, which has no effect on their interpretation.
+```bash
+export VAR=VALUE
+export KEY=VALUE
+```
+The `export` prefix makes it possible to export environment variables from a file using the `source` command:
+```bash
+source .env
+```
+
+### Multiline values
+
+It is possible for single- or double-quoted values to span multiple lines. The following examples are equivalent:
+```bash
+KEY="first line
+second line"
+
+VAR='first line
+second line'
+```
+
+```bash
+KEY="first line\nsecond line"
+VAR='first line\nsecond line'
+```
+
 ## Frequently Answered Questions
 
 ### Can I use an `.env file` in a production environment?
@@ -302,4 +328,12 @@ By default, it won't overwrite existing environment variables as dotenv assumes 
 
 ## Contribution
 
-If you want to contribute in this project, simply fork the repository, make changes (I recommend that you create your own branch) and then create a [pull request](https://github.com/MrDave1999/dotenv.core/pulls).
+Any contribution is welcome, the **parser** is still VERY dumb, so if you can improve it, do it.
+
+Follow the steps below:
+
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Added some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new [Pull Request](https://github.com/MrDave1999/dotenv.core/pulls)
