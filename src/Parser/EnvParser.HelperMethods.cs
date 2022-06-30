@@ -180,9 +180,11 @@ namespace DotEnv.Core
         /// Checks if the text is quoted with single or double quotes.
         /// </summary>
         /// <param name="text">The text to validate.</param>
+        /// <exception cref="ArgumentNullException"><c>text</c> is <c>null</c>.</exception>
         /// <returns><c>true</c> if the text is quoted, or <c>false</c>.</returns>
         private bool IsQuoted(string text)
         {
+            _ = text ?? throw new ArgumentNullException(nameof(text));
             text = text.Trim();
             if(text.Length <= 1)
                 return false;
@@ -194,18 +196,25 @@ namespace DotEnv.Core
         /// Removes single or double quotes.
         /// </summary>
         /// <param name="text">The text with quotes to remove.</param>
+        /// <exception cref="ArgumentNullException"><c>text</c> is <c>null</c>.</exception>
         /// <returns>A string without single or double quotes.</returns>
         private string RemoveQuotes(string text)
-            => text.Trim().Trim(new[] { SingleQuote, DoubleQuote });
+        {
+            _ = text ?? throw new ArgumentNullException(nameof(text));
+            return text.Trim().Trim(new[] { SingleQuote, DoubleQuote });
+        }
 
         /// <summary>
         /// Removes the prefix before the key.
         /// </summary>
         /// <param name="key">The key with the prefix to remove.</param>
         /// <param name="prefix">The prefix name.</param>
+        /// <exception cref="ArgumentNullException">key or prefix is <c>null</c>.</exception>
         /// <returns>A key without the prefix.</returns>
         private string RemovePrefixBeforeKey(string key, string prefix)
         {
+            _ = key    ?? throw new ArgumentNullException(nameof(key));
+            _ = prefix ?? throw new ArgumentNullException(nameof(prefix));
             var aux = key;
             key = key.TrimStart();
             return key.IndexOf(prefix) == 0 ? key.Remove(0, prefix.Length) : aux;
@@ -215,11 +224,13 @@ namespace DotEnv.Core
         /// Checks if the value of a key is in multi-lines.
         /// </summary>
         /// <param name="value">The value to validate.</param>
+        /// <exception cref="ArgumentNullException"><c>value</c> is <c>null</c>.</exception>
         /// <returns>
         /// <c>true</c> if the <c>value</c> of a key is in multi-lines, or <c>false</c>.
         /// </returns>
         private bool IsMultiline(string value)
         {
+            _ = value ?? throw new ArgumentNullException(nameof(value));
             value = value.Trim();
             if(value.Length == 0)
                 return false;
@@ -237,11 +248,14 @@ namespace DotEnv.Core
         /// <param name="lines"></param>
         /// <param name="index">Contains the index of a line.</param>
         /// <param name="value">The value of a key.</param>
+        /// <exception cref="ArgumentNullException">lines or value is <c>null</c>.</exception>
         /// <returns>
         /// A string with the values separated by a new line, or <c>null</c> if the line has no end quote.
         /// </returns>
         private string GetValuesMultilines(string[] lines, ref int index, string value)
         {
+            _ = lines ?? throw new ArgumentNullException(nameof(lines));
+            _ = value ?? throw new ArgumentNullException(nameof(value));
             value = value.TrimStart();
             char quoteChar = value[0]; // Double or single-quoted
             value = value.Substring(1);
