@@ -110,27 +110,35 @@ public partial class EnvParserTests
                 DOUBLE_QUOTES_2=""  VAL  ""
                 DOUBLE_QUOTES_3=""""
                 DOUBLE_QUOTES_4=""   ""
+                DOUBLE_QUOTES_5=  "" VAL""  
 
                 SINGLE_QUOTES_1='VAL'
                 SINGLE_QUOTES_2='  VAL  '
                 SINGLE_QUOTES_3=''
                 SINGLE_QUOTES_4='   '
+                SINGLE_QUOTES_5=  ' VAL'  
 
                 INCOMPLETE_QUOTES_1=VAL'
                 INCOMPLETE_QUOTES_2=VAL""
                 INCOMPLETE_QUOTES_3=
             ";
         
-        new EnvParser().Parse(env);
+        new EnvParser()
+            .DisableTrimValues()
+            .Parse(env);
 
         Assert.AreEqual(expected: "VAL", actual: GetEnvironmentVariable("DOUBLE_QUOTES_1"));
         Assert.AreEqual(expected: "  VAL  ", actual: GetEnvironmentVariable("DOUBLE_QUOTES_2"));
         Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("DOUBLE_QUOTES_3"));
         Assert.AreEqual(expected: "   ", actual: GetEnvironmentVariable("DOUBLE_QUOTES_4"));
+        Assert.AreEqual(expected: " VAL", actual: GetEnvironmentVariable("DOUBLE_QUOTES_5"));
+        
         Assert.AreEqual(expected: "VAL", actual: GetEnvironmentVariable("SINGLE_QUOTES_1"));
         Assert.AreEqual(expected: "  VAL  ", actual: GetEnvironmentVariable("SINGLE_QUOTES_2"));
         Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("SINGLE_QUOTES_3"));
         Assert.AreEqual(expected: "   ", actual: GetEnvironmentVariable("SINGLE_QUOTES_4"));
+        Assert.AreEqual(expected: " VAL", actual: GetEnvironmentVariable("SINGLE_QUOTES_5"));
+
         Assert.AreEqual(expected: "VAL'", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_1"));
         Assert.AreEqual(expected: "VAL\"", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_2"));
         Assert.AreEqual(expected: " ", actual: GetEnvironmentVariable("INCOMPLETE_QUOTES_3"));
