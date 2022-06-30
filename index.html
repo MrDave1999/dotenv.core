@@ -131,6 +131,25 @@ CONNECTION_STRING=username=${MYSQL_USER};password=${MYSQL_ROOT_PASSWORD};databas
 MYSQL_USER=root
 </code></pre>
 <p>In the above example, the parser should throw an exception because the <code>MYSQL_USER</code> variable is not set.</p>
+<h3 id="export-variables">Export variables</h3>
+<p>Lines can start with the <code>export</code> prefix, which has no effect on their interpretation.</p>
+<pre><code class="lang-bash">export VAR=VALUE
+export KEY=VALUE
+</code></pre>
+<p>The <code>export</code> prefix makes it possible to export environment variables from a file using the <code>source</code> command:</p>
+<pre><code class="lang-bash">source .env
+</code></pre>
+<h3 id="multiline-values">Multiline values</h3>
+<p>It is possible for single- or double-quoted values to span multiple lines. The following examples are equivalent:</p>
+<pre><code class="lang-bash">KEY=&quot;first line
+second line&quot;
+
+VAR='first line
+second line'
+</code></pre>
+<pre><code class="lang-bash">KEY=&quot;first line\nsecond line&quot;
+VAR='first line\nsecond line'
+</code></pre>
 <h2 id="frequently-answered-questions">Frequently Answered Questions</h2>
 <h3 id="can-i-use-an-env-file-in-a-production-environment">Can I use an <code>.env file</code> in a production environment?</h3>
 <p>Generally, you should not add sensitive data (such as passwords) to a .env file, as it would be unencrypted! Instead, you could use a secrets manager such as <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault</a> or <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.</p>
@@ -140,6 +159,7 @@ MYSQL_USER=root
 <h3 id="why-is-it-not-overriding-existing-environment-variables">Why is it not overriding existing environment variables?</h3>
 <p>By default, it won't overwrite existing environment variables as dotenv assumes the deployment environment has more knowledge about configuration than the application does.</p>
 <h2 id="contribution">Contribution</h2>
+<p>Any contribution is welcome, the <strong>parser</strong> is still VERY dumb, so if you can improve it, do it.</p>
 <p>Follow the steps below:</p>
 <ol>
 <li>Fork it</li>
