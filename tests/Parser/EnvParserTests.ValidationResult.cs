@@ -28,12 +28,13 @@ public partial class EnvParserTests
 
         env = @"This is a message
                 =VAL3
+                KEY #comment=VAL
             ";
         parser.Parse(env, out result);
 
         msg = result.ErrorMessages;
         Assert.AreEqual(expected: true, actual: result.HasError());
-        Assert.AreEqual(expected: 12, actual: result.Count);
+        Assert.AreEqual(expected: 13, actual: result.Count);
 
         StringAssert.Contains(msg, FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
@@ -103,6 +104,12 @@ public partial class EnvParserTests
             LineHasNoKeyValuePairMessage, 
             actualValue: "                =VAL3", 
             lineNumber: 2, 
+            column: 1
+        ));
+        StringAssert.Contains(msg, FormatParserExceptionMessage(
+            LineHasNoKeyValuePairMessage, 
+            actualValue: "                KEY", 
+            lineNumber: 3, 
             column: 1
         ));
     }

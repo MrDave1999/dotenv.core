@@ -73,6 +73,7 @@ namespace DotEnv.Core
                 if (IsComment(line))
                     continue;
 
+                line = RemoveInlineComment(line);
                 if (HasNoKeyValuePair(line))
                 {
                     ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
@@ -85,7 +86,6 @@ namespace DotEnv.Core
                     continue;
                 }
 
-                line = RemoveInlineComment(line);
                 line = ExpandEnvironmentVariables(line, currentLine);
 
                 var key   = ExtractKey(line);

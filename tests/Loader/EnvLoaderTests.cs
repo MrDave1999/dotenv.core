@@ -251,7 +251,7 @@ public partial class EnvLoaderTests
 
         msg = result.ErrorMessages;
         Assert.AreEqual(expected: true, actual: result.HasError());
-        Assert.AreEqual(expected: 16, actual: result.Count);
+        Assert.AreEqual(expected: 17, actual: result.Count);
 
         var fileName = $"{basePath}.env.validation.result1";
         StringAssert.Contains(msg, FormatParserExceptionMessage(
@@ -338,6 +338,13 @@ public partial class EnvLoaderTests
             LineHasNoKeyValuePairMessage, 
             actualValue: "=VAL3", 
             lineNumber: 2, 
+            column: 1, 
+            envFileName: fileName
+        ));
+        StringAssert.Contains(msg, FormatParserExceptionMessage(
+            LineHasNoKeyValuePairMessage, 
+            actualValue: "KEY", 
+            lineNumber: 4, 
             column: 1, 
             envFileName: fileName
         ));
