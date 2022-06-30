@@ -42,7 +42,8 @@ namespace DotEnv.Core
         private string RemoveInlineComment(string line)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
-            return line.Split(new[] { " #" }, MaxCount, StringSplitOptions.None)[0];
+            var separator = $" {_configuration.CommentChar}";
+            return line.Split(new[] { separator }, MaxCount, StringSplitOptions.None)[0];
         }
 
         /// <summary>
