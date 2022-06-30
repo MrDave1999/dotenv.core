@@ -83,7 +83,7 @@ public partial class EnvParserTests
         void action() => parser.Parse(env);
 
         var ex = Assert.ThrowsException<ParserException>(action);
-        StringAssert.Contains(ex.Message, string.Format(LineHasNoKeyValuePairMessage, env));
+        StringAssert.Contains(ex.Message, string.Format(LineHasNoKeyValuePairMessage, "  "));
     }
 
     [TestMethod]
