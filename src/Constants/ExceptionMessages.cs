@@ -23,5 +23,7 @@ namespace DotEnv.Core
         public const string PropertyDoesNotMatchConfigKeyMessage = "The '{0}.{1}' property does not match any configuration key.";
         public const string KeyAssignedToPropertyIsNotSetMessage = "Could not set the value in the '{0}.{1}' property because the '{2}' key is not set.";
         public const string FailedConvertConfigurationValueMessage = "Failed to convert configuration value of '{0}' to type '{1}'. '{2}' is not a valid value for {3}.";
+        public const string LineHasNoEndDoubleQuoteMessage = "The line must end with a double-quoted at the end.";
+        public const string LineHasNoEndSingleQuoteMessage = "The line must end with a single-quoted at the end.";
     }
 }
