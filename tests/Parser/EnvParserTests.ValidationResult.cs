@@ -29,11 +29,18 @@ public partial class EnvParserTests
         env = @"This is a message
                 =VAL3
             ";
+        parser.Parse(env, out _);
+
+        env = @"
+                MULTI_UNENDED=""THIS
+                LINE HAS ${VARIABLE_NOT_FOUND}
+                NO END QUOTE ${VARIABLE_NOT_FOUND_2}'
+            ";
         parser.Parse(env, out result);
 
         msg = result.ErrorMessages;
         Assert.AreEqual(expected: true, actual: result.HasError());
-        Assert.AreEqual(expected: 12, actual: result.Count);
+        Assert.AreEqual(expected: 15, actual: result.Count);
 
         StringAssert.Contains(msg, FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
@@ -104,6 +111,24 @@ public partial class EnvParserTests
             actualValue: "                =VAL3", 
             lineNumber: 2, 
             column: 1
+        ));
+
+        StringAssert.Contains(msg, FormatParserExceptionMessage(
+            LineHasNoEndDoubleQuoteMessage, 
+            lineNumber: 2, 
+            column: 1
+        ));
+        StringAssert.Contains(msg, FormatParserExceptionMessage(
+            VariableNotSetMessage, 
+            actualValue: "VARIABLE_NOT_FOUND", 
+            lineNumber: 3, 
+            column: 28
+        ));
+        StringAssert.Contains(msg, FormatParserExceptionMessage(
+            VariableNotSetMessage, 
+            actualValue: "VARIABLE_NOT_FOUND_2", 
+            lineNumber: 4, 
+            column: 32
         ));
     }
 }
