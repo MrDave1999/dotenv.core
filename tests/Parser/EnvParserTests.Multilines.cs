@@ -10,7 +10,7 @@ public partial class EnvParserTests
         parser.Parse(File.ReadAllText(".env.multi-lines"));
 
         Assert.AreEqual(
-            expected: "first line\nsecond line #b\nthird line #c\nfour line #d", 
+            expected: "first line #a \nsecond line #b\nthird line #c\nfour line #d", 
             actual: GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_1")
         );
         Assert.AreEqual(
@@ -21,7 +21,7 @@ public partial class EnvParserTests
         Assert.AreEqual(expected: "\n", actual: GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_4"));
         Assert.AreEqual(expected: "  \n", actual: GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_5"));
         Assert.AreEqual(
-            expected: "first line\nsecond line #b\nthird line #c\nfour line #d", 
+            expected: "first line #a \nsecond line #b\nthird line #c\nfour line #d", 
             actual: GetEnvironmentVariable("MULTI_SINGLE_QUOTED_1")
         );
         Assert.AreEqual(

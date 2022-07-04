@@ -37,14 +37,26 @@ namespace DotEnv.Core
         /// Removes the inline comment.
         /// </summary>
         /// <param name="line">The line with the inline comment to remove.</param>
+        /// <param name="comment">Contains the removed comment or null if there is no comment.</param>
         /// <exception cref="ArgumentNullException"><c>line</c> is <c>null</c>.</exception>
         /// <returns>A string without the inline comment.</returns>
-        private string RemoveInlineComment(string line)
+        private string RemoveInlineComment(string line, out string comment)
         {
             _ = line ?? throw new ArgumentNullException(nameof(line));
             var separator = $" {_configuration.CommentChar}";
-            return line.Split(new[] { separator }, MaxCount, StringSplitOptions.None)[0];
+            var substrings = line.Split(new[] { separator }, MaxCount, StringSplitOptions.None);
+            comment = substrings.Length == 1 ? null : substrings[1];
+            return substrings[0];
         }
+
+        /// <summary>
+        /// Concatenates the comment with the value.
+        /// </summary>
+        /// <param name="value">The value of a key.</param>
+        /// <param name="comment">The comment to concatenate with the value.</param>
+        /// <returns>A string with the concatenated comment.</returns>
+        private string ConcatCommentWithValue(string value, string comment)
+            => comment is null ? value : $"{value} {_configuration.CommentChar}{comment}";
 
         /// <summary>
         /// Removes all leading and trailing white-space characters from the current key.
@@ -283,5 +295,13 @@ namespace DotEnv.Core
             ));
             return null;
         }
+
+        /// <summary>
+        /// Converts an empty string to a whitespace.
+        /// </summary>
+        /// <param name="value">The value to convert.</param>
+        /// <returns>A string with the converted value.</returns>
+        private string ConvertStringEmptyToWhitespace(string value)
+            => string.IsNullOrEmpty(value) ? " " : value;
     }
 }
