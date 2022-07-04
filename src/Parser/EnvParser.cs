@@ -75,7 +75,7 @@ namespace DotEnv.Core
                 if (IsComment(line))
                     continue;
 
-                line = RemoveInlineComment(line);
+                line = RemoveInlineComment(line, out var removedComment);
                 if (HasNoKeyValuePair(line))
                 {
                     ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
@@ -95,16 +95,17 @@ namespace DotEnv.Core
 
                 key   = RemovePrefixBeforeKey(key, ExportPrefix);
                 key   = TrimKey(key);
-                value = TrimValue(value);
-                if(IsQuoted(value))
+                if (IsQuoted(value))
                     value = RemoveQuotes(value);
                 else if (IsMultiline(value))
                 {
-                    value = GetValuesMultilines(lines, ref i, value);
+                    value = GetValuesMultilines(lines, ref i, ConcatCommentWithValue(value, removedComment));
                     if (value is null)
                         continue;
                 }
-                value = string.IsNullOrEmpty(value) ? " " : value;
+                else
+                    value = TrimValue(value);
+                value = ConvertStringEmptyToWhitespace(value);
 
                 var retrievedValue = EnvVarsProvider[key];
                 if (retrievedValue is null)
