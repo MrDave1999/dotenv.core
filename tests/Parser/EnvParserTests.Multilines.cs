@@ -5,7 +5,7 @@ public partial class EnvParserTests
     [TestMethod]
     public void Parse_WhenValuesAreOnMultiLines_ShouldGetValuesSeparatedByNewLine()
     {
-        var parser = new EnvParser().DisableTrimValues();
+        var parser = new EnvParser();
 
         parser.Parse(File.ReadAllText(".env.multi-lines"));
 
