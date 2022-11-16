@@ -1,3 +1,4 @@
+using System.Text;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -42,19 +43,22 @@ namespace DotEnv.Core
         /// <inheritdoc />
         public TSettings Bind<TSettings>(out EnvValidationResult result) where TSettings : new()
         {
-            var settings = new TSettings();
-            var type = typeof(TSettings);
-            result = _validationResult;
+            var sb         = new StringBuilder(capacity: 40);
+            var envVars    = _configuration.EnvVars;
+            var settings   = new TSettings();
+            var type       = typeof(TSettings);
             var properties = _configuration.BindNonPublicProperties ? type.GetPublicAndNonPublicProperties() : type.GetProperties();
+            result         = _validationResult;
             foreach (PropertyInfo property in properties)
             {
                 if(IsReadOnlyOrWriteOnly(property)) 
                     continue;
 
                 var envKeyAttribute = (EnvKeyAttribute)Attribute.GetCustomAttribute(property, typeof(EnvKeyAttribute));
-                var variableName = envKeyAttribute is not null ? envKeyAttribute.Name : property.Name;
-                var retrievedValue = _configuration.EnvVars[variableName];
-
+                var variableName    = envKeyAttribute is not null ? envKeyAttribute.Name : property.Name;
+                var retrievedValue  = envVars[variableName];
+                retrievedValue    ??= envKeyAttribute is not null ? retrievedValue : envVars[variableName.ToUpperCaseSnakeCase(sb)];
+                sb.Clear();
                 if (retrievedValue is null)
                 {
                     string errorMsg;
