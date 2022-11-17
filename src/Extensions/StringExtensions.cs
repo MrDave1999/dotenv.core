@@ -36,5 +36,21 @@ namespace DotEnv.Core
             int len = str.Length;
             return len != 0 && str[len - 1] == value;
         }
+
+        /// <summary>
+        /// Converts from PascalCase to UpperCaseSnakeCase.
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="sb"></param>
+        /// <returns></returns>
+        public static string ToUpperCaseSnakeCase(this string str, StringBuilder sb)
+        {
+            int len = str.Length;
+            sb.Append(str[0]);
+            for (int i = 1; i < len; i++)
+                sb.Append(char.IsUpper(str[i]) ? $"_{str[i]}" : char.ToUpper(str[i]));
+
+            return sb.ToString();
+        }
     }
 }
