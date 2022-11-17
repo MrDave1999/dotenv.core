@@ -4,6 +4,16 @@ namespace DotEnv.Core.Tests.Binder;
 public class EnvBinderTests
 {
     [TestMethod]
+    public void Bind_WhenPropertyNameDoesNotMatchRealKey_ShouldReturnSettingsInstance()
+    {
+        SetEnvironmentVariable("REAL_KEY", "1234D");
+
+        var settings = new EnvBinder().Bind<SettingsExample0>();
+
+        Assert.AreEqual(expected: "1234D",  actual: settings.RealKey);
+    }
+
+    [TestMethod]
     public void Bind_WhenPropertiesAreLinkedToTheDefaultProviderInstance_ShouldReturnSettingsInstance()
     {
         SetEnvironmentVariable("BIND_JWT_SECRET", "12example");

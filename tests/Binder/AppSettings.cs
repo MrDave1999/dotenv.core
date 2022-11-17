@@ -16,6 +16,11 @@ public class AppSettings
     private string IgnoredProperty { get; set; }
 }
 
+public class SettingsExample0
+{
+    public string RealKey { get; set; }
+}
+
 public class SettingsExample1
 {
     public string SecretKey { get; set; }
