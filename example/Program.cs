@@ -11,8 +11,8 @@ Console.WriteLine("\n\n\n");
 
 Console.WriteLine("---- SPECIAL EXAMPLE:");
 var settings = new EnvBinder().Bind<AppSettings>();
-Console.WriteLine($"MYSQL_HOST={settings.MySqlHost}");
-Console.WriteLine($"MYSQL_DB={settings.MySqlDb}");
+Console.WriteLine($"MYSQL_HOST={settings.MysqlHost}");
+Console.WriteLine($"MYSQL_DB={settings.MysqlDb}");
 Console.WriteLine("\n\n\n");
 
 Console.WriteLine("---- EXAMPLE (2):");
