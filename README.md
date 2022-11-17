@@ -143,6 +143,8 @@ class AppSettings
 ```
 The `EnvKey` attribute is used in case the key names do not match the properties and this is because the key names in a .env file usually follow this convention: `KEY_NAME=VALUE` (UpperCase + SnakeCase).
 
+> Note: As of version 2.3.0, it is no longer necessary to use the `EnvKey` attribute, because the binder performs an additional step: It converts the property name to UpperCaseSnakeCase and then checks if it exists in the environment. Note that this additional step only occurs if the `EnvKey` attribute is not used.
+
 Then call the `EnvBinder.Bind` method to bind the `AppSettings` class with the configuration keys:
 ```cs
 new EnvLoader().Load();
