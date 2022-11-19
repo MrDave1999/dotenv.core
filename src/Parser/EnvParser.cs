@@ -1,4 +1,10 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.FormattingMessage;
+
+namespace DotEnv.Core
 {
     /// <inheritdoc cref="IEnvParser" />
     public partial class EnvParser : IEnvParser

@@ -1,4 +1,8 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DotEnv.Core
 {
     internal class EnvFileNames
     {

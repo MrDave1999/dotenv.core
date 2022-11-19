@@ -1,4 +1,8 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DotEnv.Core
 {
     // This class defines the configuration methods that will be used to change the behavior of the parser.
     public partial class EnvParser

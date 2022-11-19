@@ -1,4 +1,10 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using static DotEnv.Core.EnumerableExtensions;
+using static DotEnv.Core.EnvFileNames;
+
+namespace DotEnv.Core
 {
     /// <summary>
     /// Define methods that format error messages.

@@ -1,4 +1,9 @@
-﻿using static DotEnv.Core.FormattingMessage;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using static DotEnv.Core.FormattingMessage;
+using static DotEnv.Core.EnvFileNames;
 
 namespace DotEnv.Core
 {

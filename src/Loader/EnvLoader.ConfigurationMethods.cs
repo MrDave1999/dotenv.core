@@ -1,4 +1,10 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using static DotEnv.Core.ExceptionMessages;
+using static DotEnv.Core.FormattingMessage;
+
+namespace DotEnv.Core
 {
     // This class defines the configuration methods that will be used to change the behavior of the loader and parser.
     public partial class EnvLoader

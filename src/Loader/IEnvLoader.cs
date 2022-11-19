@@ -1,4 +1,9 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+
+namespace DotEnv.Core
 {
     /// <summary>
     /// Represents the .env files loader.

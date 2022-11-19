@@ -1,4 +1,8 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DotEnv.Core
 {
     /// <summary>
     /// Defines the methods that control the parser behavior.

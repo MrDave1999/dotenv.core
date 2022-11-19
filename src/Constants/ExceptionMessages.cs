@@ -1,4 +1,8 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DotEnv.Core
 {
     /// <summary>
     /// Represents the messages of an exception.

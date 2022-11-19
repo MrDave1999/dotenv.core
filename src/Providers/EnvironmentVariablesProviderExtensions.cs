@@ -1,4 +1,9 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Linq;
+
+namespace DotEnv.Core
 {
     /// <summary>
     /// Extension methods for adding <see cref="IEnvironmentVariablesProvider"/>.

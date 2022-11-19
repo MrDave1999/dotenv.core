@@ -1,4 +1,8 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DotEnv.Core
 {
     /// <summary>
     /// The exception that is thrown when the required keys are not present in the application.

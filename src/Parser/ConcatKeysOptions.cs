@@ -1,4 +1,8 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DotEnv.Core
 {
     /// <summary>
     /// Specifies the options for concatenation of duplicate keys such as whether to concatenate at the start or end of the value.

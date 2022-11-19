@@ -1,4 +1,9 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DotEnv.Core
 {
     /// <inheritdoc cref="IEnvReader" />
     public partial class EnvReader : IEnvReader

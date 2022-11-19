@@ -1,4 +1,10 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Text;
+
+namespace DotEnv.Core
 {
     // These methods return 'false' if the environment variable is null not set.
     /// <inheritdoc />

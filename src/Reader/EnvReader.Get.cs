@@ -1,4 +1,9 @@
-﻿namespace DotEnv.Core
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using static DotEnv.Core.ExceptionMessages;
+
+namespace DotEnv.Core
 {
     // These methods throw an exception when the environment variable is not set.
     public partial class EnvReader
