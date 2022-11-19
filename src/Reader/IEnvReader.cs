@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DotEnv.Core
+﻿namespace DotEnv.Core
 {
     /// <summary>
     /// Defines the methods used to read environment variables from a specific <see cref="IEnvironmentVariablesProvider">provider</see>.

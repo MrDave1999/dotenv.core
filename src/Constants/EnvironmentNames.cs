@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DotEnv.Core
+﻿namespace DotEnv.Core
 {
     internal class EnvironmentNames
     {

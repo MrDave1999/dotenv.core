@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace DotEnv.Core
+﻿namespace DotEnv.Core
 {
     internal static class EnumerableExtensions
     {

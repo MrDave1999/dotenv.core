@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-
 namespace DotEnv.Core
 {
     internal static class TypeExtensions

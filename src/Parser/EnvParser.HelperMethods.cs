@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
-using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.FormattingMessage;
-
-namespace DotEnv.Core
+﻿namespace DotEnv.Core
 {
     // This class defines the helper private (or internal) methods.
     public partial class EnvParser

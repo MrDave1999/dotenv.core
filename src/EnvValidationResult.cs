@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DotEnv.Core
+﻿namespace DotEnv.Core
 {
     /// <summary>
     /// Represents a container for the results of a validation.

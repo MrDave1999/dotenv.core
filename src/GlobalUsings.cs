@@ -1,0 +1,10 @@
+﻿global using static DotEnv.Core.EnumerableExtensions;
+global using static DotEnv.Core.EnvFileNames;
+global using static DotEnv.Core.ExceptionMessages;
+global using static DotEnv.Core.FormattingMessage;
+global using static System.Environment;
+global using System.Collections;
+global using System.Globalization;
+global using System.Reflection;
+global using System.Text.RegularExpressions;
+global using System.Text;

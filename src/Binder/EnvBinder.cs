@@ -1,9 +1,3 @@
-using System.Text;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using static DotEnv.Core.ExceptionMessages;
-
 namespace DotEnv.Core
 {
     /// <inheritdoc cref="IEnvBinder" />

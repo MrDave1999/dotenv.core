@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using static System.Environment;
-
-namespace DotEnv.Core
+﻿namespace DotEnv.Core
 {
     /// <summary>
     /// This class defines methods to perform checks with the current environment.
