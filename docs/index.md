@@ -106,6 +106,12 @@ KEY="first line\nsecond line"
 VAR='first line\nsecond line'
 ```
 
+## Extensions
+
+- [Dotenv.Extensions.Microsoft.DependencyInjection](https://github.com/MrDave1999/Dotenv.Extensions.Microsoft.DependencyInjection)
+
+  - This package adds extension methods for [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection), which can be accessed from the `IServiceCollection` interface.
+
 ## Frequently Answered Questions
 
 ### Can I use an `.env file` in a production environment?

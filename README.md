@@ -29,6 +29,7 @@ The advantage of using this library is that you do not need to set the environme
   * [Parsing .env files](#parsing-env-files)
   * [Using DotEnv in ASP.NET Core](#using-dotenv-in-aspnet-core)
 - [Copying .env file to the output directory](#copying-env-file-to-the-output-directory)
+- [Extensions](#extensions)
 - [File Format](#file-format)
   * [Comments](#comments)
   * [Interpolating variables](#interpolating-variables)
@@ -243,6 +244,12 @@ If you want to copy the .env file to the output directory, you have to add the f
 </ItemGroup>
 ```
 **NOTE:** Your .env file must be in the same directory as the .csproj file.
+
+## Extensions
+
+- [Dotenv.Extensions.Microsoft.DependencyInjection](https://github.com/MrDave1999/Dotenv.Extensions.Microsoft.DependencyInjection)
+
+  - This package adds extension methods for [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection), which can be accessed from the `IServiceCollection` interface.
 
 ## File Format
 
