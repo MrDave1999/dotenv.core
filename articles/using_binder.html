@@ -8,7 +8,7 @@
     <title>Bind the model instance with the configuration keys | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Bind the model instance with the configuration keys | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../images/dotenv-icon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -92,7 +92,7 @@
 </code></pre>
 <p>The <code>EnvKey</code> attribute is used in case the key names do not match the properties and this is because the key names in a .env file usually follow this convention: <code>KEY_NAME=VALUE</code> (UpperCase + SnakeCase).</p>
 <blockquote>
-  <p>Note: As of version 2.3.0, it is no longer necessary to use the <code>EnvKey</code> attribute, because the binder performs an additional step: It converts the property name to UpperCaseSnakeCase and then checks if it exists in the environment. Note that this additional step only occurs if the <code>EnvKey</code> attribute is not used.</p>
+<p>Note: As of version 2.3.0, it is no longer necessary to use the <code>EnvKey</code> attribute, because the binder performs an additional step: It converts the property name to UpperCaseSnakeCase and then checks if it exists in the environment. Note that this additional step only occurs if the <code>EnvKey</code> attribute is not used.</p>
 </blockquote>
 <p>In case the key names of a .env file match the properties, then it is not necessary to use the attribute (<em>or decorator</em>):</p>
 <pre><code class="lang-cs">class AppSettings

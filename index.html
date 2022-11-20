@@ -8,7 +8,7 @@
     <title>Features | DotEnv.Core </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Features | DotEnv.Core ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="images/dotenv-icon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -150,6 +150,14 @@ second line'
 <pre><code class="lang-bash">KEY=&quot;first line\nsecond line&quot;
 VAR='first line\nsecond line'
 </code></pre>
+<h2 id="extensions">Extensions</h2>
+<ul>
+<li><p><a href="https://github.com/MrDave1999/Dotenv.Extensions.Microsoft.DependencyInjection">Dotenv.Extensions.Microsoft.DependencyInjection</a></p>
+<ul>
+<li>This package adds extension methods for <a href="https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection">Microsoft.Extensions.DependencyInjection</a>, which can be accessed from the <code>IServiceCollection</code> interface.</li>
+</ul>
+</li>
+</ul>
 <h2 id="frequently-answered-questions">Frequently Answered Questions</h2>
 <h3 id="can-i-use-an-env-file-in-a-production-environment">Can I use an <code>.env file</code> in a production environment?</h3>
 <p>Generally, you should not add sensitive data (such as passwords) to a .env file, as it would be unencrypted! Instead, you could use a secrets manager such as <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault</a> or <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.</p>
