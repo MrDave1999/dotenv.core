@@ -64,7 +64,8 @@ You can handle the error through the `EnvValidationResult` class instead of thro
 ```cs
 new EnvLoader().Load();
 new EnvValidator()
-    .IgnoreException() // To ignore the exception thrown by the validator.
+    // To ignore the exception thrown by the validator.
+    .IgnoreException()
     .SetRequiredKeys<RequiredKeys>()
     .Validate(out EnvValidationResult result);
 

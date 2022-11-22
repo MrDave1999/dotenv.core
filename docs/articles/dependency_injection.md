@@ -42,7 +42,7 @@ class Foo
 
     public Foo()
     {
-        // change #1
+        // Change #1.
         _reader = new CustomEnvReader();
     }
 }
@@ -53,7 +53,7 @@ class Bar
 
     public Bar()
     {
-        // change #2
+        // Change #2.
         _reader = new CustomEnvReader();
     }
 }
@@ -110,7 +110,7 @@ class Program
     {
         var foo = new Foo(new CustomEnvReader());
         var bar = new Bar(new CustomEnvReader());
-        // more code...
+        // More code...
     }
 }
 ```

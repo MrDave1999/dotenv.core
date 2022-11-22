@@ -27,7 +27,8 @@ class AppSettings
 ```
 Then call the `Bind` method to bind the `AppSettings` class to the keys of a .env file:
 ```cs
-new EnvLoader().Load(); // You must first load the .env file
+// You must first load the .env file.
+new EnvLoader().Load();
 var settings = new EnvBinder().Bind<AppSettings>();
 string key1 = settings.ConnectionString;
 string key2 = settings.SecretKey;
@@ -72,7 +73,8 @@ You can handle the error through the `EnvValidationResult` class instead of thro
 ```cs
 new EnvLoader().Load();
 var settings = new EnvBinder()
-    .IgnoreException() // To ignore the exception thrown by the binder.
+    // To ignore the exception thrown by the binder.
+    .IgnoreException()
     .Bind<AppSettings>(out EnvValidationResult result);
 
 if(result.HasError())
@@ -93,8 +95,8 @@ The `EnvBinder` class is flexible, it adapts to any provider, so you can use it 
 Example:
 ```cs
 var envVars = new EnvLoader()
-        .AvoidModifyEnvironment()
-        .Load();
+    .AvoidModifyEnvironment()
+    .Load();
 
 var settings = new EnvBinder(provider: envVars).Bind<AppSettings>();
 ```
@@ -107,18 +109,22 @@ The `Load` method will return an instance that implements the `IEnvironmentVaria
 If you want to use a DI Container as [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection), you must register the model as a service so that the container takes care of injecting the service when required:
 ```cs
 // In Program.cs:
-new EnvLoader().Load(); // You must first load the .env file
+// You must first load the .env file.
+new EnvLoader().Load();
 var settings = new EnvBinder().Bind<AppSettings>();
 var services = new ServiceCollection();
-services.AddSingleton<AppSettings>(settings); // Register the model as a service
+// Register the model as a service.
+services.AddSingleton<AppSettings>(settings);
 ```
 If you are using **ASP.NET Core 3.1**, you must register the service in the `ConfigureServices` method of the `Startup` class:
 ```cs
 public void ConfigureServices(IServiceCollection services)
 {
-    new EnvLoader().Load(); // You must first load the .env file
+    // You must first load the .env file.
+    new EnvLoader().Load();
     var settings = new EnvBinder().Bind<AppSettings>();
-    services.AddSingleton<AppSettings>(settings); // Register the model as a service
+    // Register the model as a service.
+    services.AddSingleton<AppSettings>(settings);
 }
 ```
 In **ASP.NET Core 6**, you must register the service in `Program.cs`:
