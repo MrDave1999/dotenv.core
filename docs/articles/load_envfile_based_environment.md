@@ -61,7 +61,8 @@ If the actual environment variable `DOTNET_ENV` is set, the `SetEnvironmentName`
 You can handle the error without throwing an exception by means of the `EnvValidationResult` class:
 ```cs
 new EnvLoader()
-    .IgnoreParserException() // To ignore the exception thrown by the parser.
+    // To ignore the exception thrown by the parser.
+    .IgnoreParserException()
     .LoadEnv(out EnvValidationResult result);
 
 if(result.HasError())
@@ -84,9 +85,15 @@ Example:
 // Equivalent to: Env.CurrentEnvironment = "test";
 System.Environment.SetEnvironmentVariable("DOTNET_ENV", "test");
 
-System.Console.WriteLine(Env.IsDevelopment()); // output: false
-System.Console.WriteLine(Env.IsTest()); // output: true
-System.Console.WriteLine(Env.IsStaging()); // output: false
-System.Console.WriteLine(Env.IsProduction()); // output: false
-System.Console.WriteLine(Env.IsEnvironment("test")); // output: true
+System.Console.WriteLine(Env.IsDevelopment());
+System.Console.WriteLine(Env.IsTest());
+System.Console.WriteLine(Env.IsStaging());
+System.Console.WriteLine(Env.IsProduction());
+System.Console.WriteLine(Env.IsEnvironment("test"));
+// The example displays the following output to the console:
+// false
+// true
+// false
+// false
+// true
 ```

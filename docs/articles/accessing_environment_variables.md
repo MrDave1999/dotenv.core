@@ -12,7 +12,7 @@ GetStringValue
 GetIntValue
 GetLongValue
 GetFloatValue
-//and so on...
+// And so on...
 ```
 For example:
 ```cs
@@ -40,7 +40,7 @@ TryGetStringValue
 TryGetIntValue
 TryGetLongValue
 TryGetFloatValue
-//and so on...
+// And so on...
 ```
 
 For example:
@@ -74,7 +74,7 @@ EnvString
 EnvInt
 EnvLong
 EnvFloat
-//and so on...
+// And so on...
 ```
 
 For example:
@@ -90,10 +90,14 @@ Then, if for example, the variable `KEY1` is not set, then the method returns `V
 The second parameter is optional:
 ```cs
 var reader = new EnvReader();
-string key1 = reader.EnvString("KEY1"); // default value: null
-int key2 = reader.EnvInt("KEY2"); // default value: 0
-long key3 = reader.EnvLong("KEY3"); // default value: 0
-float key4 = reader.EnvFloat("KEY4"); // default value: 0.0
+// Default value: null.
+string key1 = reader.EnvString("KEY1");
+// Default value: 0.
+int key2 = reader.EnvInt("KEY2");
+// Default value: 0.
+long key3 = reader.EnvLong("KEY3");
+// Default value: 0.0
+float key4 = reader.EnvFloat("KEY4");
 ```
 Here for example, if `KEY1` is not set, the method returns `null` (default value).
 
@@ -134,7 +138,7 @@ class CustomEnvReader : EnvReader
         // Here you can write your own implementation.
     }
 
-    //and so on...
+    // And so on...
 }
 ```
 
@@ -158,7 +162,8 @@ var envVars = new EnvLoader()
         .Load();
 
 var reader = new EnvReader(provider: envVars);
-string key1 = reader["KEY1"]; // we access from a dictionary instead of the current environment.
+// We access from a dictionary instead of the current environment.
+string key1 = reader["KEY1"]; 
 ```
 In the previous example we load the .env file without altering the environment, so the environment variables are in a dictionary.
 

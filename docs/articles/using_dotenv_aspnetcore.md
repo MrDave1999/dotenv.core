@@ -130,9 +130,9 @@ class Startup
 {
     public Startup(IConfiguration configuration)
     {
-        // Load .env file
+        // Load .env file.
         new EnvLoader().Load();
-        // Build Configuration
+        // Build Configuration.
         Configuration = new ConfigurationBuilder()
                 .AddEnvironmentVariables()
                 .Build();
@@ -142,7 +142,7 @@ class Startup
     {
         // Bind the 'AppSettings' class with the configuration instance.
         AppSettings settings = ConfigurationBinder.Get<AppSettings>(Configuration);
-        // Register the `AppSettings` class as service.
+        // Register the 'AppSettings' class as service.
         services.AddSingleton(settings);
     }
 

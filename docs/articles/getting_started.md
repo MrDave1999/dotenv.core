@@ -100,7 +100,8 @@ If you need to specify an encoding type for all .env files, you can do it like t
 ```cs
 new EnvLoader()
     .AddEnvFiles("env.example", "env.example2")
-    .SetEncoding(Encoding.Unicode) // Or you can also use: SetEncoding("Unicode")
+    // Or you can also use: SetEncoding("Unicode")
+    .SetEncoding(Encoding.Unicode)
     .Load();
 ```
 
@@ -176,14 +177,15 @@ catch(FileNotFoundException ex)
 You can handle the error without throwing an exception by means of the `EnvValidationResult` class:
 ```cs
 new EnvLoader()
-    .IgnoreParserException() // To ignore the exception thrown by the parser.
+    // To ignore the exception thrown by the parser.
+    .IgnoreParserException()
     .Load(out EnvValidationResult result);
 
 if(result.HasError())
 {
     string msg = result.ErrorMessages;
     System.Console.WriteLine(msg);
-    // or you can also iterate over the errors:
+    // Or you can also iterate over the errors.
     foreach(string errorMsg in result)
         System.Console.WriteLine(errorMsg); 
 }
