@@ -17,7 +17,14 @@ public interface IEnvLoader
     /// <summary>
     /// Loads an .env file based on the environment (development, test, staging or production).
     /// This method will load these .env files in the following order:
-    /// .env.[environment].local, .env.local, .env.[environment], .env
+    /// <list type="bullet">
+    /// <item><c>.env.[environment].local</c> (has the highest priority).</item>
+    /// <item><c>.env.local</c></item>
+    /// <item><c>.env.[environment]</c></item>
+    /// <item><c>.env</c> (has the lowest priority).</item>
+    /// </list>
+    /// The <c>environment</c> is specified by the actual environment variable <c>DOTNET_ENV</c>.
+    /// <para>It should be noted that the default environment will be <c>development</c> or <c>dev</c> if the environment is never specified with <c>DOTNET_ENV</c>.</para>
     /// </summary>
     /// <inheritdoc cref="Load()" />
     IEnvironmentVariablesProvider LoadEnv();
