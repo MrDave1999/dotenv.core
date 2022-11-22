@@ -129,7 +129,8 @@ new EnvValidator()
 <p>You can handle the error through the <code>EnvValidationResult</code> class instead of throwing an exception:</p>
 <pre><code class="lang-cs">new EnvLoader().Load();
 new EnvValidator()
-    .IgnoreException() // To ignore the exception thrown by the validator.
+    // To ignore the exception thrown by the validator.
+    .IgnoreException()
     .SetRequiredKeys&lt;RequiredKeys&gt;()
     .Validate(out EnvValidationResult result);
 

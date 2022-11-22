@@ -189,9 +189,9 @@ builder.Services.Configure&lt;AppSettings&gt;(builder.Configuration);
 {
     public Startup(IConfiguration configuration)
     {
-        // Load .env file
+        // Load .env file.
         new EnvLoader().Load();
-        // Build Configuration
+        // Build Configuration.
         Configuration = new ConfigurationBuilder()
                 .AddEnvironmentVariables()
                 .Build();
@@ -201,7 +201,7 @@ builder.Services.Configure&lt;AppSettings&gt;(builder.Configuration);
     {
         // Bind the 'AppSettings' class with the configuration instance.
         AppSettings settings = ConfigurationBinder.Get&lt;AppSettings&gt;(Configuration);
-        // Register the `AppSettings` class as service.
+        // Register the 'AppSettings' class as service.
         services.AddSingleton(settings);
     }
 

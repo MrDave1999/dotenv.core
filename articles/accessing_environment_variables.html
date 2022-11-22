@@ -87,7 +87,7 @@
 GetIntValue
 GetLongValue
 GetFloatValue
-//and so on...
+// And so on...
 </code></pre>
 <p>For example:</p>
 <pre><code class="lang-cs">var reader = new EnvReader();
@@ -111,7 +111,7 @@ catch(VariableNotSetException ex)
 TryGetIntValue
 TryGetLongValue
 TryGetFloatValue
-//and so on...
+// And so on...
 </code></pre>
 <p>For example:</p>
 <pre><code class="lang-cs">var reader = new EnvReader();
@@ -140,7 +140,7 @@ else
 EnvInt
 EnvLong
 EnvFloat
-//and so on...
+// And so on...
 </code></pre>
 <p>For example:</p>
 <pre><code class="lang-cs">var reader = new EnvReader();
@@ -152,10 +152,14 @@ float key4 = reader.EnvFloat(&quot;KEY4&quot;, -1.0F);
 <p>Then, if for example, the variable <code>KEY1</code> is not set, then the method returns <code>Variable Not Found!</code> (default value).</p>
 <p>The second parameter is optional:</p>
 <pre><code class="lang-cs">var reader = new EnvReader();
-string key1 = reader.EnvString(&quot;KEY1&quot;); // default value: null
-int key2 = reader.EnvInt(&quot;KEY2&quot;); // default value: 0
-long key3 = reader.EnvLong(&quot;KEY3&quot;); // default value: 0
-float key4 = reader.EnvFloat(&quot;KEY4&quot;); // default value: 0.0
+// Default value: null.
+string key1 = reader.EnvString(&quot;KEY1&quot;);
+// Default value: 0.
+int key2 = reader.EnvInt(&quot;KEY2&quot;);
+// Default value: 0.
+long key3 = reader.EnvLong(&quot;KEY3&quot;);
+// Default value: 0.0
+float key4 = reader.EnvFloat(&quot;KEY4&quot;);
 </code></pre>
 <p>Here for example, if <code>KEY1</code> is not set, the method returns <code>null</code> (default value).</p>
 <p>Don't forget to consult the <a class="xref" href="../api/DotEnv.Core.EnvReader.EnvBool.html#DotEnv_Core_EnvReader_EnvBool_System_String_System_Boolean_">API documentation</a> for more helper methods starting with the word <em>Env</em>.</p>
@@ -188,7 +192,7 @@ Console.WriteLine(EnvReader.Instance.HasValue(&quot;VARIABLE_NAME&quot;));
         // Here you can write your own implementation.
     }
 
-    //and so on...
+    // And so on...
 }
 </code></pre>
 <h2 id="iterate">Iterate</h2>
@@ -205,7 +209,8 @@ foreach(string(key, value) in reader)
         .Load();
 
 var reader = new EnvReader(provider: envVars);
-string key1 = reader[&quot;KEY1&quot;]; // we access from a dictionary instead of the current environment.
+// We access from a dictionary instead of the current environment.
+string key1 = reader[&quot;KEY1&quot;]; 
 </code></pre>
 <p>In the previous example we load the .env file without altering the environment, so the environment variables are in a dictionary.</p>
 <p>Later, we inject the instance of type <code>IEnvironmentVariablesProvider</code> that returns the <code>Load</code> method in the constructor of the <code>EnvReader</code> class, this way we can access the environment variables from a dictionary.</p>

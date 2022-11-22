@@ -148,7 +148,8 @@ string key2 = System.Environment.GetEnvironmentVariable(&quot;KEY2&quot;);
 <p>If you need to specify an encoding type for all .env files, you can do it like this:</p>
 <pre><code class="lang-cs">new EnvLoader()
     .AddEnvFiles(&quot;env.example&quot;, &quot;env.example2&quot;)
-    .SetEncoding(Encoding.Unicode) // Or you can also use: SetEncoding(&quot;Unicode&quot;)
+    // Or you can also use: SetEncoding(&quot;Unicode&quot;)
+    .SetEncoding(Encoding.Unicode)
     .Load();
 </code></pre>
 <p>You can also specify an encoding type for each .env file using the <code>AddEnvFile</code> method:</p>
@@ -205,14 +206,15 @@ catch(FileNotFoundException ex)
 </code></pre>
 <p>You can handle the error without throwing an exception by means of the <code>EnvValidationResult</code> class:</p>
 <pre><code class="lang-cs">new EnvLoader()
-    .IgnoreParserException() // To ignore the exception thrown by the parser.
+    // To ignore the exception thrown by the parser.
+    .IgnoreParserException()
     .Load(out EnvValidationResult result);
 
 if(result.HasError())
 {
     string msg = result.ErrorMessages;
     System.Console.WriteLine(msg);
-    // or you can also iterate over the errors:
+    // Or you can also iterate over the errors.
     foreach(string errorMsg in result)
         System.Console.WriteLine(errorMsg); 
 }

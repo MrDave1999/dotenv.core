@@ -88,15 +88,21 @@
 &quot;;
 new EnvParser().Parse(dataSource);
 
-System.Console.WriteLine(EnvReader.Instance[&quot;KEY1&quot;]); // Print &quot;VAL1&quot;.
-System.Console.WriteLine(EnvReader.Instance[&quot;KEY2&quot;]); // Print &quot;VAL2&quot;.
-System.Console.WriteLine(EnvReader.Instance[&quot;KEY3&quot;]); // Print &quot;VAL3&quot;.
+System.Console.WriteLine(EnvReader.Instance[&quot;KEY1&quot;]);
+System.Console.WriteLine(EnvReader.Instance[&quot;KEY2&quot;]);
+System.Console.WriteLine(EnvReader.Instance[&quot;KEY3&quot;]);
+// The example displays the following output to the console:
+// VAL1
+// VAL2
+// VAL3
 </code></pre>
 <p>By default, the <code>Parse</code> method does not overwrite the value of the environment variable.</p>
 <p>For example:</p>
 <pre><code class="lang-cs">System.Environment.SetEnvironmentVariable(&quot;KEY1&quot;, &quot;1&quot;);
 new EnvParser().Parse(&quot;KEY1=VAL1&quot;);
-System.Console.WriteLine(EnvReader.Instance[&quot;KEY1&quot;]); // Print &quot;1&quot;.
+System.Console.WriteLine(EnvReader.Instance[&quot;KEY1&quot;]);
+// The example displays the following output to the console:
+// 1
 </code></pre>
 <p>In this case, the parser does not overwrite the variable <code>KEY1</code>, so its current value is maintained.</p>
 <p>You can also retrieve keys from any data source and pass it to the parser:</p>
@@ -120,7 +126,8 @@ new EnvParser()
 <p>We can handle errors with the <code>EnvValidationResult</code> class instead of throwing an exception:</p>
 <pre><code class="lang-cs">string dataSource = System.IO.File.ReadAllText(&quot;./.env&quot;);
 new EnvParser()
-    .IgnoreParserException() // To ignore the exception thrown by the parser.
+    // To ignore the exception thrown by the parser.
+    .IgnoreParserException()
     .Parse(dataSource, out EnvValidationResult result);
 
 if(result.HasError())
@@ -140,7 +147,7 @@ var envVars = new EnvParser()
         .Parse(dataSource);
 </code></pre>
 <p>As the environment cannot be modified, the <code>Parse</code> method will return an instance that implements the <code>IEnvironmentVariablesProvider</code> interface, through this returned instance, we can access the environment variables that have been set in a dictionary:</p>
-<pre><code class="lang-cs">// The value of the variable is obtained from a dictionary and not from the current environment:
+<pre><code class="lang-cs">// The value of the variable is obtained from a dictionary and not from the current environment.
 string key1 = envVars[&quot;KEY1&quot;];
 </code></pre>
 </article>
