@@ -87,17 +87,23 @@ public partial class EnvLoader : IEnvLoader
 
         if (environment is null)
         {
-            var envDevelopmentLocal = envFiles[0]; // .env.development.local
-            var envDevLocal = envFiles[1];         // .env.dev.local
-            var envLocal = envFiles[2];            // .env.local
-            Env.CurrentEnvironment = EnvironmentNames.Development[0]; // Defines the default environment.
+            // .env.development.local
+            var envDevelopmentLocal = envFiles[0];
+            // .env.dev.local
+            var envDevLocal = envFiles[1];
+            // .env.local
+            var envLocal = envFiles[2];
+            // Defines the default environment.
+            Env.CurrentEnvironment = EnvironmentNames.Development[0];
             if (!envDevelopmentLocal.Exists && !envDevLocal.Exists && !envLocal.Exists)
                 _validationResult.Add(errorMsg: FormatLocalFileNotPresentMessage());
         }
         else
         {
-            var envEnvironmentLocal = envFiles[0];  // .env.[environment].local
-            var envLocal = envFiles[1];             // .env.local
+            // .env.[environment].local
+            var envEnvironmentLocal = envFiles[0];
+            // .env.local
+            var envLocal = envFiles[1];
             if (!envEnvironmentLocal.Exists && !envLocal.Exists)
                 _validationResult.Add(errorMsg: FormatLocalFileNotPresentMessage(environmentName: environment));
         }

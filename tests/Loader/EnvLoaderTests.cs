@@ -55,7 +55,8 @@ public partial class EnvLoaderTests
         new EnvLoader()
             .SetBasePath("dotnet/files")
             .AllowAllEnvFilesOptional()
-            .Load(out var result); // Loads a default file: .env
+            // Loads a default file: .env
+            .Load(out var result);
 
         Assert.AreEqual(expected: false, actual: result.HasError());
         Assert.AreEqual(expected: 0, actual: result.Count);
@@ -66,7 +67,8 @@ public partial class EnvLoaderTests
     {
         new EnvLoader()
             .AddEnvFile("Loader/env_files/.env.parent.directories")
-            .AddEnvFile(".env.only.currentdirectory") // This file if copied to the current directory
+            // This file if copied to the current directory.
+            .AddEnvFile(".env.only.currentdirectory")
             .IgnoreParentDirectories()
             .Load();
 
@@ -165,7 +167,8 @@ public partial class EnvLoaderTests
         new EnvLoader()
             .SetBasePath("Loader/env_files")
             .SetDefaultEnvFileName(".env.dev")
-            .AddEnvFiles("./foo", "./bar") // Equivalent to: ./foo/.env.dev, ./bar/.env.dev
+            // Equivalent to: ./foo/.env.dev, ./bar/.env.dev
+            .AddEnvFiles("./foo", "./bar")
             .Load();
 
         Assert.IsNotNull(GetEnvironmentVariable("HAS_NOT_EXTENSION_1"));
