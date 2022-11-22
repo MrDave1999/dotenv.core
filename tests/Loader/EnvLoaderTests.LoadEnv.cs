@@ -20,17 +20,20 @@ public partial class EnvLoaderTests
     [TestMethod]
     public void LoadEnv_WhenEnvironmentIsNotDefined_ShouldLoadFourEnvFilesForDevelopmentEnvironment()
     {
-        Env.CurrentEnvironment = null; // Environment is not defined
+        // Environment is not defined.
+        Env.CurrentEnvironment = null;
         
         new EnvLoader()
             .SetBasePath("Loader/env_files/environment/dev")
-            .LoadEnv(); // It should load four .env files: 
-                        // .env.dev.local, .env.local, .env.dev, .env
+            // It should load four .env files: 
+            // .env.dev.local, .env.local, .env.dev, .env
+            .LoadEnv();
 
         new EnvLoader()
             .SetBasePath("Loader/env_files/environment/development")
-            .LoadEnv(); // It should load four .env files: 
-                        // .env.development.local, .env.local, .env.development, .env
+            // It should load four .env files: 
+            // .env.development.local, .env.local, .env.development, .env
+            .LoadEnv();
 
         Assert.AreEqual(expected: "development", actual: Env.CurrentEnvironment);
         Assert.IsNotNull(GetEnvironmentVariable("DEV_ENV"));
@@ -50,8 +53,9 @@ public partial class EnvLoaderTests
 
         new EnvLoader()
             .SetBasePath("Loader/env_files/environment/test")
-            .LoadEnv(); // It should load four .env files: 
-                        // .env.test.local, .env.local, .env.test, .env
+            // It should load four .env files: 
+            // .env.test.local, .env.local, .env.test, .env
+            .LoadEnv(); 
 
         Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV"));
         Assert.IsNotNull(GetEnvironmentVariable("TEST_ENV_TEST"));

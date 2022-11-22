@@ -157,7 +157,8 @@ public partial class EnvParser
 
             if (string.IsNullOrWhiteSpace(variable))
             {
-                int index = match.Groups[0].Captures[0].Index + 1; // So that the position starts from '1' instead of '0'.
+                // So that the position starts from '1' instead of '0'.
+                int index = match.Groups[0].Captures[0].Index + 1;
                 var value = match.Groups[0].Value;
                 ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
                     VariableIsAnEmptyStringMessage, 
@@ -172,7 +173,8 @@ public partial class EnvParser
             var retrievedValue = EnvVarsProvider[variable];
             if (retrievedValue is null)
             {
-                int index = match.Groups[1].Captures[0].Index + 1; // So that the position starts from '1' instead of '0'.
+                // So that the position starts from '1' instead of '0'.
+                int index = match.Groups[1].Captures[0].Index + 1;
                 ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
                     VariableNotSetMessage, 
                     actualValue: variable, 
@@ -269,7 +271,8 @@ public partial class EnvParser
         _ = lines ?? throw new ArgumentNullException(nameof(lines));
         _ = value ?? throw new ArgumentNullException(nameof(value));
         value = value.TrimStart();
-        char quoteChar = value[0]; // Double or single-quoted
+        // Double or single-quoted.
+        char quoteChar = value[0];
         value = value.Substring(1);
         int initialLine = index + 1;
         int len = lines.Length;
