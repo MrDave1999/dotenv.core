@@ -274,8 +274,10 @@ This method will tell the parser not to remove leading white spaces from the val
           <a class="xref" href="DotEnv.Core.IEnvLoader.LoadEnv.html#DotEnv_Core_IEnvLoader_LoadEnv">LoadEnv()</a>
         </td>
         <td class="markdown level1 summary"><p>Loads an .env file based on the environment (development, test, staging or production).
-This method will load these .env files in the following order:
-.env.[environment].local, .env.local, .env.[environment], .env</p>
+This method will load these .env files in the following order:</p>
+<ul><li><code>.env.[environment].local</code> (has the highest priority).</li><li><code>.env.local</code></li><li><code>.env.[environment]</code></li><li><code>.env</code> (has the lowest priority).</li></ul>
+The <code>environment</code> is specified by the actual environment variable <code>DOTNET_ENV</code>.
+<p>It should be noted that the default environment will be <code>development</code> or <code>dev</code> if the environment is never specified with <code>DOTNET_ENV</code>.</p>
 </td>
       </tr>
       <tr>
@@ -283,8 +285,10 @@ This method will load these .env files in the following order:
           <a class="xref" href="DotEnv.Core.IEnvLoader.LoadEnv.html#DotEnv_Core_IEnvLoader_LoadEnv_DotEnv_Core_EnvValidationResult__">LoadEnv(out EnvValidationResult)</a>
         </td>
         <td class="markdown level1 summary"><p>Loads an .env file based on the environment (development, test, staging or production).
-This method will load these .env files in the following order:
-.env.[environment].local, .env.local, .env.[environment], .env</p>
+This method will load these .env files in the following order:</p>
+<ul><li><code>.env.[environment].local</code> (has the highest priority).</li><li><code>.env.local</code></li><li><code>.env.[environment]</code></li><li><code>.env</code> (has the lowest priority).</li></ul>
+The <code>environment</code> is specified by the actual environment variable <code>DOTNET_ENV</code>.
+<p>It should be noted that the default environment will be <code>development</code> or <code>dev</code> if the environment is never specified with <code>DOTNET_ENV</code>.</p>
 </td>
       </tr>
       <tr>

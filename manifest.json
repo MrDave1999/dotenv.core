@@ -17,8 +17,8 @@
       "source_relative_path": "api/DotEnv.Core.BinderException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.BinderException.html",
-          "hash": "1OuRTTLxhlf9ihdvL0UQIWl+6Pk4ixHp1LF2VtEaLSE="
+          "relative_path": "api/DotEnv.Core.BinderException.-ctor.html",
+          "hash": "3HkCHHUegIpOIt6FJFsmRyslsXTjSDpaNxFixifPPMM="
         }
       },
       "is_incremental": false,
@@ -29,8 +29,8 @@
       "source_relative_path": "api/DotEnv.Core.BinderException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.BinderException.-ctor.html",
-          "hash": "3HkCHHUegIpOIt6FJFsmRyslsXTjSDpaNxFixifPPMM="
+          "relative_path": "api/DotEnv.Core.BinderException.html",
+          "hash": "1OuRTTLxhlf9ihdvL0UQIWl+6Pk4ixHp1LF2VtEaLSE="
         }
       },
       "is_incremental": false,
@@ -53,56 +53,8 @@
       "source_relative_path": "api/DotEnv.Core.Env.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.Env.html",
-          "hash": "ml95Y7WErm3VHR86WZxKOgm4dwXF06CFOq5R6tcyKik="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.Env.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.Env.IsEnvironment.html",
-          "hash": "coBeRqLmAFc/QVbhUlodGI2AR8dqDp7rgPYyPxbSV2c="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.Env.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.Env.IsProduction.html",
-          "hash": "3DPOCXhCXGK04FQpmAXSmrLaA4H/xgHWQoEOllJ7mhM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.Env.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.Env.IsStaging.html",
-          "hash": "r/dx2OophLhXO7ViiRfyWwgxKmAdvZ2EIwQJHSibCQY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.Env.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.Env.IsTest.html",
-          "hash": "jEOIB7dtDwz4edIAwKAxNhD3e4TDjc3y7xQRDOWQ998="
+          "relative_path": "api/DotEnv.Core.Env.CurrentEnvironment.html",
+          "hash": "w0rLLENgJDeNaKz7k/SsS9qdYE8XsQaRqCwF7Bymsj4="
         }
       },
       "is_incremental": false,
@@ -125,8 +77,56 @@
       "source_relative_path": "api/DotEnv.Core.Env.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.Env.CurrentEnvironment.html",
-          "hash": "w0rLLENgJDeNaKz7k/SsS9qdYE8XsQaRqCwF7Bymsj4="
+          "relative_path": "api/DotEnv.Core.Env.IsTest.html",
+          "hash": "jEOIB7dtDwz4edIAwKAxNhD3e4TDjc3y7xQRDOWQ998="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.Env.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.Env.IsStaging.html",
+          "hash": "r/dx2OophLhXO7ViiRfyWwgxKmAdvZ2EIwQJHSibCQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.Env.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.Env.IsProduction.html",
+          "hash": "3DPOCXhCXGK04FQpmAXSmrLaA4H/xgHWQoEOllJ7mhM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.Env.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.Env.IsEnvironment.html",
+          "hash": "coBeRqLmAFc/QVbhUlodGI2AR8dqDp7rgPYyPxbSV2c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.Env.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.Env.html",
+          "hash": "ml95Y7WErm3VHR86WZxKOgm4dwXF06CFOq5R6tcyKik="
         }
       },
       "is_incremental": false,
@@ -137,32 +137,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvBinder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvBinder.html",
-          "hash": "Xbtm4lhqXzVWWd6bY5j8Xfi/yGOK8o3GtyHK4u4Y7/k="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvBinder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvBinder.AllowBindNonPublicProperties.html",
-          "hash": "c5hqykVN5/W0frNeslFMT85l0R2reOc6tRlwmaqVuB0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvBinder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvBinder.IgnoreException.html",
-          "hash": "7ky7FRGUA2ejv4uD65mZGWIG4rtEceUnEckyeDi6eLg="
+          "relative_path": "api/DotEnv.Core.EnvBinder.-ctor.html",
+          "hash": "frh/+uMxEPfQoxwS9EDEsTsKAnX1XGdlV687eqf5UgA="
         }
       },
       "is_incremental": false,
@@ -185,8 +161,32 @@
       "source_relative_path": "api/DotEnv.Core.EnvBinder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvBinder.-ctor.html",
-          "hash": "frh/+uMxEPfQoxwS9EDEsTsKAnX1XGdlV687eqf5UgA="
+          "relative_path": "api/DotEnv.Core.EnvBinder.IgnoreException.html",
+          "hash": "7ky7FRGUA2ejv4uD65mZGWIG4rtEceUnEckyeDi6eLg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvBinder.AllowBindNonPublicProperties.html",
+          "hash": "c5hqykVN5/W0frNeslFMT85l0R2reOc6tRlwmaqVuB0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvBinder.html",
+          "hash": "Xbtm4lhqXzVWWd6bY5j8Xfi/yGOK8o3GtyHK4u4Y7/k="
         }
       },
       "is_incremental": false,
@@ -197,8 +197,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvKeyAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvKeyAttribute.html",
-          "hash": "9jmeDQ5w2628KcTAEKSth79pGiiaz7EkfwqOP0+Ug88="
+          "relative_path": "api/DotEnv.Core.EnvKeyAttribute.Name.html",
+          "hash": "ULGiPBvFOtNMMLhbbCUHJRM+P4Lti0Es62MehywRc9o="
         }
       },
       "is_incremental": false,
@@ -221,32 +221,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvKeyAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvKeyAttribute.Name.html",
-          "hash": "ULGiPBvFOtNMMLhbbCUHJRM+P4Lti0Es62MehywRc9o="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.IgnoreParentDirectories.html",
-          "hash": "vV/sbBKUQDk6HIUofw4lwSG8bszdmfM1o/Bm60GMpFI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional.html",
-          "hash": "RYJlHRHWsC08ndtpXDpxhfihiAfmY7JAm6EHTjD+GUY="
+          "relative_path": "api/DotEnv.Core.EnvKeyAttribute.html",
+          "hash": "9jmeDQ5w2628KcTAEKSth79pGiiaz7EkfwqOP0+Ug88="
         }
       },
       "is_incremental": false,
@@ -269,8 +245,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.EnableFileNotFoundException.html",
-          "hash": "cxRPf3Y8lbuoVw4hfaqydgLZdfjcq4Jax1ENPSfq0bo="
+          "relative_path": "api/DotEnv.Core.EnvLoader.AllowAllEnvFilesOptional.html",
+          "hash": "RYJlHRHWsC08ndtpXDpxhfihiAfmY7JAm6EHTjD+GUY="
         }
       },
       "is_incremental": false,
@@ -281,8 +257,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.SetEncoding.html",
-          "hash": "vTSmdobqwZNp04K0ZH3rej3r9lWQ+uHaBlT3OsXqi6I="
+          "relative_path": "api/DotEnv.Core.EnvLoader.IgnoreParentDirectories.html",
+          "hash": "vV/sbBKUQDk6HIUofw4lwSG8bszdmfM1o/Bm60GMpFI="
         }
       },
       "is_incremental": false,
@@ -293,224 +269,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.AddEnvFile.html",
-          "hash": "HJcSh/MwcoCm1BZG4eA5+/pSh1gCexSyo9B4DNIdCqc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.AddEnvFiles.html",
-          "hash": "P/bJSs5G7Wx779ma7u+oY3amsctSAm7l+fHGc9zvjIQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.SetBasePath.html",
-          "hash": "7AbOLPBIped+hFPRs2cuIThk+5rX9P/p61hCFdzSisU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.SetDefaultEnvFileName.html",
-          "hash": "9niwVR5o8ZrK9fx7Gy77N6LxBNzzvHoe09tlDzEwR3M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.html",
-          "hash": "1H3+LcgkR2lJlcO0BlbJ7PD6dzie7fwZ+upyvLHma/8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.LoadEnv.html",
-          "hash": "wA+2K1Pc5XbsHLKIZcZjVg6dqfTTqgnauddSj426/Fg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.Load.html",
-          "hash": "uf/n0qhEhuHHa5vkWWI3nA5QUGE51v4D/te+Y6PSqYI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider.html",
-          "hash": "wWT1KIIDFNKDDBRs59IOG/x+pTTb44CIVjegfOXj5vo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.AvoidModifyEnvironment.html",
-          "hash": "C2hnz0oqwLo3Hnzs6FeojUUpFnEZBPlm3ZhNp9gq0A0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.IgnoreParserException.html",
-          "hash": "HOf7EAYJlVpI1Y/NE+aAKfsUWDWbiU4jJGbE77afdEg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys.html",
-          "hash": "W7DCfyP1mzr915YlYo7NEpPRJfAGCR6Wbidx46FOCec="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair.html",
-          "hash": "sHvvR1qgxsd8w0K9BJGJcSLL61N6xHOPY7FAWcxGatg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.SetCommentChar.html",
-          "hash": "ObboYsV7b6oOeuMK0RCABDcApGLxLIxRA36JpX0pS1E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.AllowOverwriteExistingVars.html",
-          "hash": "SIoobrx8lTZ8V0tCfcxxAaGND0ePMW1Gl3eiGJzCYmw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimStartComments.html",
-          "hash": "pDQ9TZin+ackTN1Bs7wihnZEseUeysRq++QG6Nrghfg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimKeys.html",
-          "hash": "8yGKjBStuEa5nWw97kotFE90UJvuMiIO/7Q6wG7Dy7s="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimEndKeys.html",
-          "hash": "iDgYVOmvpvqv88bburjUJAu4E5GeUAmuDjhPwgaZC5w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimStartKeys.html",
-          "hash": "sb3YQyOTD3W6r4y2CMOj9nO7xmdlCd7VlmAyU2RoKQ8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimValues.html",
-          "hash": "LRphCBwtxLryEzfEVyoVRhIyUw1Zzs7xa3PpmYK4tFk="
+          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimStartValues.html",
+          "hash": "Z/VtQI0rJ4ldnZkar3l9QzYEZoaqOD3DgpDXPhn8EyM="
         }
       },
       "is_incremental": false,
@@ -533,8 +293,248 @@
       "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimStartValues.html",
-          "hash": "Z/VtQI0rJ4ldnZkar3l9QzYEZoaqOD3DgpDXPhn8EyM="
+          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimValues.html",
+          "hash": "LRphCBwtxLryEzfEVyoVRhIyUw1Zzs7xa3PpmYK4tFk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimStartKeys.html",
+          "hash": "sb3YQyOTD3W6r4y2CMOj9nO7xmdlCd7VlmAyU2RoKQ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimEndKeys.html",
+          "hash": "iDgYVOmvpvqv88bburjUJAu4E5GeUAmuDjhPwgaZC5w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimKeys.html",
+          "hash": "8yGKjBStuEa5nWw97kotFE90UJvuMiIO/7Q6wG7Dy7s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.DisableTrimStartComments.html",
+          "hash": "pDQ9TZin+ackTN1Bs7wihnZEseUeysRq++QG6Nrghfg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.AllowOverwriteExistingVars.html",
+          "hash": "SIoobrx8lTZ8V0tCfcxxAaGND0ePMW1Gl3eiGJzCYmw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.SetCommentChar.html",
+          "hash": "ObboYsV7b6oOeuMK0RCABDcApGLxLIxRA36JpX0pS1E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.SetDelimiterKeyValuePair.html",
+          "hash": "sHvvR1qgxsd8w0K9BJGJcSLL61N6xHOPY7FAWcxGatg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.AllowConcatDuplicateKeys.html",
+          "hash": "W7DCfyP1mzr915YlYo7NEpPRJfAGCR6Wbidx46FOCec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.IgnoreParserException.html",
+          "hash": "HOf7EAYJlVpI1Y/NE+aAKfsUWDWbiU4jJGbE77afdEg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.AvoidModifyEnvironment.html",
+          "hash": "C2hnz0oqwLo3Hnzs6FeojUUpFnEZBPlm3ZhNp9gq0A0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.SetEnvironmentVariablesProvider.html",
+          "hash": "wWT1KIIDFNKDDBRs59IOG/x+pTTb44CIVjegfOXj5vo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.Load.html",
+          "hash": "uf/n0qhEhuHHa5vkWWI3nA5QUGE51v4D/te+Y6PSqYI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.LoadEnv.html",
+          "hash": "tXy3TdKfWnKMZbRJ5JMkHw3dA9W1JpoXf/mHGQUPGJ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.html",
+          "hash": "4s6xLfMMDCbwpxUJt4YkJi2F+A6b03RuiGgLPpIdzRs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.SetEncoding.html",
+          "hash": "vTSmdobqwZNp04K0ZH3rej3r9lWQ+uHaBlT3OsXqi6I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.SetDefaultEnvFileName.html",
+          "hash": "9niwVR5o8ZrK9fx7Gy77N6LxBNzzvHoe09tlDzEwR3M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.SetBasePath.html",
+          "hash": "7AbOLPBIped+hFPRs2cuIThk+5rX9P/p61hCFdzSisU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.AddEnvFiles.html",
+          "hash": "P/bJSs5G7Wx779ma7u+oY3amsctSAm7l+fHGc9zvjIQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.AddEnvFile.html",
+          "hash": "HJcSh/MwcoCm1BZG4eA5+/pSh1gCexSyo9B4DNIdCqc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvLoader.EnableFileNotFoundException.html",
+          "hash": "cxRPf3Y8lbuoVw4hfaqydgLZdfjcq4Jax1ENPSfq0bo="
         }
       },
       "is_incremental": false,
@@ -545,164 +545,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.html",
-          "hash": "RRAUd6Im9glSOQh8Duqg61pVR8nmxkqGwtaDeIGY+j8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.Parse.html",
-          "hash": "p7NTFlF6vqfzaY5PRd2o/gcGIqFDjdRQ/yycW0VYXCI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider.html",
-          "hash": "ntiFFe4cICjRxT/Iovu9OFZuMyeGzGE6NTNb7F7phWA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.AvoidModifyEnvironment.html",
-          "hash": "kxwCM1WD3xkbR5Ibublj662uisjB+VAzXetzDmFLGDY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.IgnoreParserException.html",
-          "hash": "ZqHG5nTi0V7NS4EWPrAMNBQljn81nOxHRCWM10CeSe4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.AllowConcatDuplicateKeys.html",
-          "hash": "u5DbMBj6rz/sz1HpJBuPV/3UqmqteXHbQoE/11EaRr8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.SetDelimiterKeyValuePair.html",
-          "hash": "n+TZ4blZMx7E/aU0RTQ+4Z2igboT1WVBWPn4jKnV73w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.SetCommentChar.html",
-          "hash": "rGoSYSkuM9626OxmQljIiKfwkBo4fl0xQaZZc7YToIs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.AllowOverwriteExistingVars.html",
-          "hash": "SH7d893J3bCF05LzniPMtqlNVGj2ChAkALD4+/G1wHk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimStartComments.html",
-          "hash": "X24F+QqMQkeuyr+H2JKHMWAhy2n8601BTBVKWKJ7NJQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimKeys.html",
-          "hash": "Wt76ea+H8zve1sxONeivkk7R56/BqPe5NDBRfOuHNOQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimEndKeys.html",
-          "hash": "2vPX9uWM0f/h6lo817ruoMoBZ3JgOFYi4gA8re5X2BQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimStartKeys.html",
-          "hash": "atjV1jNqEm/Lk0slZonw/Fu/1yeZlqZUOdjGMtLFJUI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimValues.html",
-          "hash": "UEOarGwJfD4/O/Q1yQl0mAcjlJ1KkmJkaI4tLKfoVKs="
+          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimStartValues.html",
+          "hash": "vK1RtpfhyJZe0Phxxp0zFScz/JvgdTy8HyAZXUqPujQ="
         }
       },
       "is_incremental": false,
@@ -725,8 +569,164 @@
       "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimStartValues.html",
-          "hash": "vK1RtpfhyJZe0Phxxp0zFScz/JvgdTy8HyAZXUqPujQ="
+          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimValues.html",
+          "hash": "UEOarGwJfD4/O/Q1yQl0mAcjlJ1KkmJkaI4tLKfoVKs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimStartKeys.html",
+          "hash": "atjV1jNqEm/Lk0slZonw/Fu/1yeZlqZUOdjGMtLFJUI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimEndKeys.html",
+          "hash": "2vPX9uWM0f/h6lo817ruoMoBZ3JgOFYi4gA8re5X2BQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimKeys.html",
+          "hash": "Wt76ea+H8zve1sxONeivkk7R56/BqPe5NDBRfOuHNOQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.DisableTrimStartComments.html",
+          "hash": "X24F+QqMQkeuyr+H2JKHMWAhy2n8601BTBVKWKJ7NJQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.AllowOverwriteExistingVars.html",
+          "hash": "SH7d893J3bCF05LzniPMtqlNVGj2ChAkALD4+/G1wHk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.SetCommentChar.html",
+          "hash": "rGoSYSkuM9626OxmQljIiKfwkBo4fl0xQaZZc7YToIs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.SetDelimiterKeyValuePair.html",
+          "hash": "n+TZ4blZMx7E/aU0RTQ+4Z2igboT1WVBWPn4jKnV73w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.AllowConcatDuplicateKeys.html",
+          "hash": "u5DbMBj6rz/sz1HpJBuPV/3UqmqteXHbQoE/11EaRr8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.IgnoreParserException.html",
+          "hash": "ZqHG5nTi0V7NS4EWPrAMNBQljn81nOxHRCWM10CeSe4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.AvoidModifyEnvironment.html",
+          "hash": "kxwCM1WD3xkbR5Ibublj662uisjB+VAzXetzDmFLGDY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.SetEnvironmentVariablesProvider.html",
+          "hash": "ntiFFe4cICjRxT/Iovu9OFZuMyeGzGE6NTNb7F7phWA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.Parse.html",
+          "hash": "p7NTFlF6vqfzaY5PRd2o/gcGIqFDjdRQ/yycW0VYXCI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvParser.html",
+          "hash": "RRAUd6Im9glSOQh8Duqg61pVR8nmxkqGwtaDeIGY+j8="
         }
       },
       "is_incremental": false,
@@ -737,536 +737,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.html",
-          "hash": "DKBKsl8Db/6EF+YURQrkDfCpVCOLAIGEA/puBSBPZ7Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetFloatValue.html",
-          "hash": "BFDM8qaE8lzOUsG1U3jXXXtJvaBiBtOAedJ0bU0s6f8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetDoubleValue.html",
-          "hash": "JFJbGX0T5tbNEmNnn/Px+F/hupPEQngPep9BhmNBA1A="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetDecimalValue.html",
-          "hash": "wZWWJH9Hgx6IsK3zQhAJxNfgBCwK9QK8m3rQ2QKNrEg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetUShortValue.html",
-          "hash": "Fim4X/+FWm1+0mca05BOg28oLeW7sjP3GZOYHUArpMI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetShortValue.html",
-          "hash": "BhxmEtSrL5ZYEf4zxfZK0UoCvk2pP6OsCI6WIJTJxcI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetULongValue.html",
-          "hash": "OgIWiUtMV2xYX/m1GAh3parxVIElegMIiYDs43luD1Q="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetLongValue.html",
-          "hash": "ZmoYT2ksO/UHOxFMleone5d7SFenk1XYnY2xUl5zWgw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetUIntValue.html",
-          "hash": "HJY/ugI1YHs7lL+tSkomyk8T49guJ5TGMsES6LZOdB8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetIntValue.html",
-          "hash": "2pdtrBPirk7hYRew5cSGXOtm38MxMmOLxg3muNcsqjk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetCharValue.html",
-          "hash": "1epIIts3bb25hnu8sWdwIgaIlhxwm0n7IrqHbv+o3ic="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetSByteValue.html",
-          "hash": "gyc+2kqyIbPDndOBq4ksmO32c0YIhhdNAoJNSDWp9zg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetByteValue.html",
-          "hash": "RXJk+vLYr7qq/ZU3yFcT9JZ1QwPcT/dQzhVRL/pgwKE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetBoolValue.html",
-          "hash": "cxCezypz+CVC+qQcnzIIBYsfLsCQ7s2Uc6enczb2zrU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.TryGetStringValue.html",
-          "hash": "jCS+e+sz/q3uprZE9UxqBpmLQn17e21RMjSmxZ2paIQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetFloatValue.html",
-          "hash": "KN4NLnyBdGS6HFGtl15Qdhd4fA28WsSH8EbaJMdwKaQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetDoubleValue.html",
-          "hash": "Xxc/jPgsrWf8MkPASu+w1sdkcXAxg5/1VGkxQIQf48s="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetDecimalValue.html",
-          "hash": "KBpYN3hzvmxo9imwCxrvFJqAicIXYfc2aQlCuMexGnk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetUShortValue.html",
-          "hash": "kqVVuGg4com8K47KZkfdcXPJUh/ASqBHa4VLw+DR7VE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetShortValue.html",
-          "hash": "G5b+Y/kuTuUqRurcfh8ZBzVeBEMCVXxvhfGGQ1fuWIU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetULongValue.html",
-          "hash": "epFCo6F1JXKTAa2zUrhGM4OFfv16SAw7IajpFFFYlZo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetLongValue.html",
-          "hash": "jQHLo2ci9N9Uk2N050Sr6VwBfv6TizTDkk+Hy4k4sxA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetUIntValue.html",
-          "hash": "evHzJI5mwjO5QcswkCw4A8/RSFUglGgEgbWXR2+IB9c="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetIntValue.html",
-          "hash": "07QHRQd6Zzge3zRwWvUXQAC1fzzP9t8FFIme0flf6Zc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetCharValue.html",
-          "hash": "zfSiBeywraS0XfjqkE4BEgChhMClkfsEQZTa1uvueb0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetSByteValue.html",
-          "hash": "veu0JWQGKqhiMXkQqfwUldBEhFR16AHvtYRfklTDHKQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetByteValue.html",
-          "hash": "CZikuRQYUh/nOClOmMk6t2oKQLdxTCeR4wzaqNHPpCo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetBoolValue.html",
-          "hash": "eO1IFtlSdrPurYvzmXmDzo5r72eYxH9Y5C9ULvPYmmM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.GetStringValue.html",
-          "hash": "hIXvaZeyGW7BXeOAD+53yqdZVGse3ZPttZMBXMveepY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.Item.html",
-          "hash": "A/1zP5BSS2GDvZoi+5dYYdRKQW1CS6B1Zfvh3g0I6as="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvFloat.html",
-          "hash": "Zj3KP4eE7+3ZP438a+XCb60fhdLCiBjM3RaYHiHaw60="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvDouble.html",
-          "hash": "nN1MCPdrD+bbnDBOL6rts8cCv6uqSf2pe86Wb32Xiq8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvDecimal.html",
-          "hash": "hQIack5yH5P8uiColqKwYvFm7rnR2I1106Zf4oWF+JQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvUShort.html",
-          "hash": "LntT9wUcYGM10mLVZMlYrJa/GV0qM2J69ul3+eVWW0M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvShort.html",
-          "hash": "udru2IGCYUYqtvTlrrejssUnuKrWS6qTcXiOKmB2Ks8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvULong.html",
-          "hash": "35+rfKjsXGAQvL3htMpMui3YosVBVsP7juefnVDjdsk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvLong.html",
-          "hash": "8T8HT+retDCVgfHgVml42y+NwwSkaDE79xFZg1PWYmk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvUInt.html",
-          "hash": "ZHSDw/VMq+kJglO2LzdPp7375bDeeByWcOpHW4dxpCc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvInt.html",
-          "hash": "mbPP7I/Jm0uKxSR2YVcCO1Lk7jNU8+RRh4e4Y8RLaZI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvChar.html",
-          "hash": "GVdZxVNnXFIOiLSt6rSFVWkxELYY4ChRKeoMg+umxUQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvSByte.html",
-          "hash": "t4pr+bTqUVkU3kL4jviTlweBFXyhBg3q/96cCEHao2o="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvByte.html",
-          "hash": "iFtmcuUrjvTdeqiK2fbeuimWuKss2DI2e0vfBBhDNvo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvBool.html",
-          "hash": "Z+MSJeodZpybCODjonkQkBh3Ul05anm1fZ55Acndiq8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.EnvString.html",
-          "hash": "g4FuwHiS04I1L9imBSHrSxQQEUowOnS5qxgBHeQafMM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.HasValue.html",
-          "hash": "yoZ3E5ysqg25f7uPs0XHptYa+vCXsGYQcjS2RKR9QaQ="
+          "relative_path": "api/DotEnv.Core.EnvReader.Instance.html",
+          "hash": "12kpocUx0WVBntyBRmk7he/9esqJeIfUEDe27Wuczko="
         }
       },
       "is_incremental": false,
@@ -1289,8 +761,536 @@
       "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvReader.Instance.html",
-          "hash": "12kpocUx0WVBntyBRmk7he/9esqJeIfUEDe27Wuczko="
+          "relative_path": "api/DotEnv.Core.EnvReader.HasValue.html",
+          "hash": "yoZ3E5ysqg25f7uPs0XHptYa+vCXsGYQcjS2RKR9QaQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvString.html",
+          "hash": "g4FuwHiS04I1L9imBSHrSxQQEUowOnS5qxgBHeQafMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvBool.html",
+          "hash": "Z+MSJeodZpybCODjonkQkBh3Ul05anm1fZ55Acndiq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvByte.html",
+          "hash": "iFtmcuUrjvTdeqiK2fbeuimWuKss2DI2e0vfBBhDNvo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvSByte.html",
+          "hash": "t4pr+bTqUVkU3kL4jviTlweBFXyhBg3q/96cCEHao2o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvChar.html",
+          "hash": "GVdZxVNnXFIOiLSt6rSFVWkxELYY4ChRKeoMg+umxUQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvInt.html",
+          "hash": "mbPP7I/Jm0uKxSR2YVcCO1Lk7jNU8+RRh4e4Y8RLaZI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvUInt.html",
+          "hash": "ZHSDw/VMq+kJglO2LzdPp7375bDeeByWcOpHW4dxpCc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvLong.html",
+          "hash": "8T8HT+retDCVgfHgVml42y+NwwSkaDE79xFZg1PWYmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvULong.html",
+          "hash": "35+rfKjsXGAQvL3htMpMui3YosVBVsP7juefnVDjdsk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvShort.html",
+          "hash": "udru2IGCYUYqtvTlrrejssUnuKrWS6qTcXiOKmB2Ks8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvUShort.html",
+          "hash": "LntT9wUcYGM10mLVZMlYrJa/GV0qM2J69ul3+eVWW0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvDecimal.html",
+          "hash": "hQIack5yH5P8uiColqKwYvFm7rnR2I1106Zf4oWF+JQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvDouble.html",
+          "hash": "nN1MCPdrD+bbnDBOL6rts8cCv6uqSf2pe86Wb32Xiq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.EnvFloat.html",
+          "hash": "Zj3KP4eE7+3ZP438a+XCb60fhdLCiBjM3RaYHiHaw60="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.Item.html",
+          "hash": "A/1zP5BSS2GDvZoi+5dYYdRKQW1CS6B1Zfvh3g0I6as="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetStringValue.html",
+          "hash": "hIXvaZeyGW7BXeOAD+53yqdZVGse3ZPttZMBXMveepY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetBoolValue.html",
+          "hash": "eO1IFtlSdrPurYvzmXmDzo5r72eYxH9Y5C9ULvPYmmM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetByteValue.html",
+          "hash": "CZikuRQYUh/nOClOmMk6t2oKQLdxTCeR4wzaqNHPpCo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetSByteValue.html",
+          "hash": "veu0JWQGKqhiMXkQqfwUldBEhFR16AHvtYRfklTDHKQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetCharValue.html",
+          "hash": "zfSiBeywraS0XfjqkE4BEgChhMClkfsEQZTa1uvueb0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetIntValue.html",
+          "hash": "07QHRQd6Zzge3zRwWvUXQAC1fzzP9t8FFIme0flf6Zc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetUIntValue.html",
+          "hash": "evHzJI5mwjO5QcswkCw4A8/RSFUglGgEgbWXR2+IB9c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetLongValue.html",
+          "hash": "jQHLo2ci9N9Uk2N050Sr6VwBfv6TizTDkk+Hy4k4sxA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetULongValue.html",
+          "hash": "epFCo6F1JXKTAa2zUrhGM4OFfv16SAw7IajpFFFYlZo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetShortValue.html",
+          "hash": "G5b+Y/kuTuUqRurcfh8ZBzVeBEMCVXxvhfGGQ1fuWIU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetUShortValue.html",
+          "hash": "kqVVuGg4com8K47KZkfdcXPJUh/ASqBHa4VLw+DR7VE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetDecimalValue.html",
+          "hash": "KBpYN3hzvmxo9imwCxrvFJqAicIXYfc2aQlCuMexGnk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetDoubleValue.html",
+          "hash": "Xxc/jPgsrWf8MkPASu+w1sdkcXAxg5/1VGkxQIQf48s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.GetFloatValue.html",
+          "hash": "KN4NLnyBdGS6HFGtl15Qdhd4fA28WsSH8EbaJMdwKaQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetStringValue.html",
+          "hash": "jCS+e+sz/q3uprZE9UxqBpmLQn17e21RMjSmxZ2paIQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetBoolValue.html",
+          "hash": "cxCezypz+CVC+qQcnzIIBYsfLsCQ7s2Uc6enczb2zrU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetByteValue.html",
+          "hash": "RXJk+vLYr7qq/ZU3yFcT9JZ1QwPcT/dQzhVRL/pgwKE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetSByteValue.html",
+          "hash": "gyc+2kqyIbPDndOBq4ksmO32c0YIhhdNAoJNSDWp9zg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetCharValue.html",
+          "hash": "1epIIts3bb25hnu8sWdwIgaIlhxwm0n7IrqHbv+o3ic="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetIntValue.html",
+          "hash": "2pdtrBPirk7hYRew5cSGXOtm38MxMmOLxg3muNcsqjk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetUIntValue.html",
+          "hash": "HJY/ugI1YHs7lL+tSkomyk8T49guJ5TGMsES6LZOdB8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetLongValue.html",
+          "hash": "ZmoYT2ksO/UHOxFMleone5d7SFenk1XYnY2xUl5zWgw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetULongValue.html",
+          "hash": "OgIWiUtMV2xYX/m1GAh3parxVIElegMIiYDs43luD1Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetShortValue.html",
+          "hash": "BhxmEtSrL5ZYEf4zxfZK0UoCvk2pP6OsCI6WIJTJxcI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetUShortValue.html",
+          "hash": "Fim4X/+FWm1+0mca05BOg28oLeW7sjP3GZOYHUArpMI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetDecimalValue.html",
+          "hash": "wZWWJH9Hgx6IsK3zQhAJxNfgBCwK9QK8m3rQ2QKNrEg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetDoubleValue.html",
+          "hash": "JFJbGX0T5tbNEmNnn/Px+F/hupPEQngPep9BhmNBA1A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.TryGetFloatValue.html",
+          "hash": "BFDM8qaE8lzOUsG1U3jXXXtJvaBiBtOAedJ0bU0s6f8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvReader.html",
+          "hash": "DKBKsl8Db/6EF+YURQrkDfCpVCOLAIGEA/puBSBPZ7Y="
         }
       },
       "is_incremental": false,
@@ -1301,32 +1301,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvValidationResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvValidationResult.html",
-          "hash": "KnxbeZuW8aqqOGs0Jp+Cd1C0i6A0ucFLKVwsicptrYU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvValidationResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvValidationResult.GetEnumerator.html",
-          "hash": "X4fMQrG1K+zz3Ik9ZYTY7jQ4+Zj1YGFGH4YQsTXpg74="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvValidationResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvValidationResult.ErrorMessages.html",
-          "hash": "qdhwGBZ7vOswgLinS/zkSJoeHgy3JTbasPXCS9U2clE="
+          "relative_path": "api/DotEnv.Core.EnvValidationResult.HasError.html",
+          "hash": "/y6KqUirqNBhkXYBBYn8MAC36XLSHExK9NwmeSHl2kQ="
         }
       },
       "is_incremental": false,
@@ -1349,8 +1325,32 @@
       "source_relative_path": "api/DotEnv.Core.EnvValidationResult.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvValidationResult.HasError.html",
-          "hash": "/y6KqUirqNBhkXYBBYn8MAC36XLSHExK9NwmeSHl2kQ="
+          "relative_path": "api/DotEnv.Core.EnvValidationResult.ErrorMessages.html",
+          "hash": "qdhwGBZ7vOswgLinS/zkSJoeHgy3JTbasPXCS9U2clE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvValidationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvValidationResult.GetEnumerator.html",
+          "hash": "X4fMQrG1K+zz3Ik9ZYTY7jQ4+Zj1YGFGH4YQsTXpg74="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvValidationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvValidationResult.html",
+          "hash": "KnxbeZuW8aqqOGs0Jp+Cd1C0i6A0ucFLKVwsicptrYU="
         }
       },
       "is_incremental": false,
@@ -1361,32 +1361,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvValidator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvValidator.html",
-          "hash": "8JcgObfPq0+L4AoKL5xsO18gpkMWxkw/bofTd8GNccI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvValidator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvValidator.IgnoreException.html",
-          "hash": "EamwULof5a3f99GTTLJxCnPgKTiX5IfMpLtIZxuw/TQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvValidator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvValidator.SetRequiredKeys.html",
-          "hash": "gpBRsAbVUw9XtoffokZienyQv7qm1rAMj83NgCt/j3o="
+          "relative_path": "api/DotEnv.Core.EnvValidator.-ctor.html",
+          "hash": "zYHSUd0i9haJ6KWusrFJQvQOwicdO/8GttajzzIP7yw="
         }
       },
       "is_incremental": false,
@@ -1409,8 +1385,32 @@
       "source_relative_path": "api/DotEnv.Core.EnvValidator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvValidator.-ctor.html",
-          "hash": "zYHSUd0i9haJ6KWusrFJQvQOwicdO/8GttajzzIP7yw="
+          "relative_path": "api/DotEnv.Core.EnvValidator.SetRequiredKeys.html",
+          "hash": "gpBRsAbVUw9XtoffokZienyQv7qm1rAMj83NgCt/j3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvValidator.IgnoreException.html",
+          "hash": "EamwULof5a3f99GTTLJxCnPgKTiX5IfMpLtIZxuw/TQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvValidator.html",
+          "hash": "8JcgObfPq0+L4AoKL5xsO18gpkMWxkw/bofTd8GNccI="
         }
       },
       "is_incremental": false,
@@ -1421,32 +1421,8 @@
       "source_relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html",
-          "hash": "6+GjI+/ZStglbRtD2OBzVBv9y4S2o6FaCiYtSN0XwOY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary.html",
-          "hash": "DIvCOFZtDpZdMHxPGDZ/8T/eqEpPfhG3hpTSABhMF2s="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder.html",
-          "hash": "ymH0iu8OD5/s7pwe/A1NQ+v2HERHheLj6p1WS5lBw/4="
+          "relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator.html",
+          "hash": "aevzBiB8ECiloDl1WV5WYtYzTJ2BySfe/1Kia8jtAPk="
         }
       },
       "is_incremental": false,
@@ -1469,8 +1445,32 @@
       "source_relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateValidator.html",
-          "hash": "aevzBiB8ECiloDl1WV5WYtYzTJ2BySfe/1Kia8jtAPk="
+          "relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.CreateBinder.html",
+          "hash": "ymH0iu8OD5/s7pwe/A1NQ+v2HERHheLj6p1WS5lBw/4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.ToDictionary.html",
+          "hash": "DIvCOFZtDpZdMHxPGDZ/8T/eqEpPfhG3hpTSABhMF2s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.EnvironmentVariablesProviderExtensions.html",
+          "hash": "6+GjI+/ZStglbRtD2OBzVBv9y4S2o6FaCiYtSN0XwOY="
         }
       },
       "is_incremental": false,
@@ -1481,20 +1481,8 @@
       "source_relative_path": "api/DotEnv.Core.IEnvBinder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvBinder.html",
-          "hash": "yjJCvzvvydtJf4m8zGuwSoAouxLvTgOD7zuld0nSIVE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvBinder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties.html",
-          "hash": "ZTcHmjiEKYKKB5Z2OZPXfYyAjO96zhIkv1A8z7X6tU8="
+          "relative_path": "api/DotEnv.Core.IEnvBinder.Bind.html",
+          "hash": "Jk9YCvsiJFWbtiGF1eXoFc1IGFEgZoO/loNEvz46dYs="
         }
       },
       "is_incremental": false,
@@ -1517,8 +1505,8 @@
       "source_relative_path": "api/DotEnv.Core.IEnvBinder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvBinder.Bind.html",
-          "hash": "Jk9YCvsiJFWbtiGF1eXoFc1IGFEgZoO/loNEvz46dYs="
+          "relative_path": "api/DotEnv.Core.IEnvBinder.AllowBindNonPublicProperties.html",
+          "hash": "ZTcHmjiEKYKKB5Z2OZPXfYyAjO96zhIkv1A8z7X6tU8="
         }
       },
       "is_incremental": false,
@@ -1526,299 +1514,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "source_relative_path": "api/DotEnv.Core.IEnvBinder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.html",
-          "hash": "9NlRnjzld3xPtxLU6QBxvfjTjOLFiAOjky0936Bd5vk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider.html",
-          "hash": "q1m+eGu3BRo4HCPLUKLyhxmup9xhAHHuBdo5bpFHoAM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.AvoidModifyEnvironment.html",
-          "hash": "1ZnGvRmcpBC6jIlEWMx6VeX2aK96FBP2/bzn100VmNA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.IgnoreParserException.html",
-          "hash": "Paqm3AlVKthwmnfKCmH7mYchA66OhM4a0IMpbXYS4Zo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys.html",
-          "hash": "z896P3BQqgrzljj6qRbjbedQLf09Le5xVdVZXni5y+8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair.html",
-          "hash": "z2/j31g7A8MXXoXVIpkG1RKNk7RT3gnVk6QKLGj5gZg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.SetCommentChar.html",
-          "hash": "4NOsyXKIj7bBJYbxDChsJiTvYz/h9eQ5/wFefzOhSqM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars.html",
-          "hash": "MiEfrDEnaGfTLr82C7vqGroeFL/4X/4LBVyZv1BQfac="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimStartComments.html",
-          "hash": "ESKHNBZsYppgy92eABiz3FNNJA6OoFJ2Mqj8CyU6Y9M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimKeys.html",
-          "hash": "y1Kr97yeo7tSKrrdXKHDZ6wiz4/C+pldNqMQQs/+gDY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimEndKeys.html",
-          "hash": "wBPbsA/pwEtXWyOJuSeNPu9davFdSYzHUhwcbh+3EBw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimStartKeys.html",
-          "hash": "u23HGLBSaV6bkJ7bT9L9JbOWsCVG8+LWA3aqsIDVgHY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimValues.html",
-          "hash": "EFNQZsTSEjVw3Gs15WkU/mv9UIzEIuyzGQYqk6Qghsw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimEndValues.html",
-          "hash": "OJhjao6zYGQohvt15X27CrhvF0MIEnhA3oSosVezPqQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimStartValues.html",
-          "hash": "/VjOmzecDrrkh56gThyMNQWYLJnHDwf2U0yLw030B4E="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.IgnoreParentDirectories.html",
-          "hash": "mJ9kS2k9zzs6g+EqT6iQj3PCJsf292yvYuucCXZAH/M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional.html",
-          "hash": "GL48/JfdZ7JDH511DHnINtNQ67FAEVm5S6V0MPMfOSM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.SetEnvironmentName.html",
-          "hash": "hr2exGjA42AqVZV+5NeED92TYtknlWxvgcYoRqmrVVQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.EnableFileNotFoundException.html",
-          "hash": "p5/AsQ3WMXQ2knnbNHcfNOLoo1KWWWMkoHuUrMdGjN0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.SetEncoding.html",
-          "hash": "Jg+WFVrkBA81L54JNRxgHPyxuKyho9c6DB/Lckf5ZLs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.AddEnvFile.html",
-          "hash": "NI48T/kZc59U0x08U6+K79RO07BpWG3sjsouswUj9Ds="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.AddEnvFiles.html",
-          "hash": "KIxWZFCHHq04lOzJ18OdzMsL2x46kYkOPPT14Bn9lXs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.SetBasePath.html",
-          "hash": "lrPvpSV0/gMvrGsi+d8B4MsCmvPlusu3ol8UTf+YRKo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.SetDefaultEnvFileName.html",
-          "hash": "RgIo6pNP9oD0DnZqXfNssrJnf6BiOfB0tS0JmhqMrao="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvLoader.Load.html",
-          "hash": "I+vMYhEkpn2yknwepkyKQA6Wp7w+cVum+pvOYte2v0k="
+          "relative_path": "api/DotEnv.Core.IEnvBinder.html",
+          "hash": "yjJCvzvvydtJf4m8zGuwSoAouxLvTgOD7zuld0nSIVE="
         }
       },
       "is_incremental": false,
@@ -1830,7 +1530,307 @@
       "output": {
         ".html": {
           "relative_path": "api/DotEnv.Core.IEnvLoader.LoadEnv.html",
-          "hash": "JMqTvOU2UodQe98z+6vZIMIU6j8DSi+NZRHNMurjQJo="
+          "hash": "+azygiQ7kcQXdF8bTko9XqlGdcwx8pb/yIDHw5e/4as="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.Load.html",
+          "hash": "GGNRe/qRMvO/H7hVhylu9Tnorl2LprPqFvIUbWm4zI4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.SetDefaultEnvFileName.html",
+          "hash": "1ScLhKjKchoexWdsO+L9eRdsuCI9BgeBHBpU9VssMZc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.SetBasePath.html",
+          "hash": "EOjG50ohDfoUHlfhU8rH2/Mi6Oify+d+ojnNGAGHgKU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.AddEnvFiles.html",
+          "hash": "nt4j2acOrnwaPEt7sxYJv6kg7N1UqSaafLqcZz0InVI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.AddEnvFile.html",
+          "hash": "ow7nj4b11PlFW6uQCG32ssr7pbeL9leNBVWi3Oa6KNQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.SetEncoding.html",
+          "hash": "QtLidD6CYtwJY9zEdVD4Y//OSj3av36LUxlJ/RVP7Sc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.EnableFileNotFoundException.html",
+          "hash": "+eTwDZLb7RTSkGQKV5DF1vbONKzUHhtu/iSiQMKOBKg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.SetEnvironmentName.html",
+          "hash": "zjFL7H6Ydr0ty7/DtedkY/PnG8m0vaqWC+tFagcJBNU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.AllowAllEnvFilesOptional.html",
+          "hash": "47ns8s/yfIx7CuNR2+ZfupkFmc/PgSft8bN5pEhqYE4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.IgnoreParentDirectories.html",
+          "hash": "LKPkX0LwDxbOx+2IsfbuyZCuC5ggEbDlHNqmDHAoQ3o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimStartValues.html",
+          "hash": "Q/Sd6DVQchNY1Jdd7JjNVdjBk2t2wS0hnUzue+vannI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimEndValues.html",
+          "hash": "2cRmIpCWW2mbZU4H/PLUfahtxlDRIEghsG9vO51AEwE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimValues.html",
+          "hash": "NlKsCDm45X3EqyaEO7lWdZrWyNFzh7sJEZBgx21kYMI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimStartKeys.html",
+          "hash": "IlZRs6aiGyCwuNnidKyffHpf7x8SuptPVqrvwoA1aBk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimEndKeys.html",
+          "hash": "1MEVORjhAJR42qA7I0fMapeCXk0iIf0/y4a7tkRSJwY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimKeys.html",
+          "hash": "s0Dh8+9K0fPnDYdwHiwd2mGSUO5J4U2Wx1FsQPadtrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.DisableTrimStartComments.html",
+          "hash": "ciQaGVo8OSVlDksf5Fo3VH4UlO9p/GGIueMngtXMZ/c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.AllowOverwriteExistingVars.html",
+          "hash": "2LqVpBZXH4BYBQPJbl1rbs819w358G0uMqo5z3ykQmY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.SetCommentChar.html",
+          "hash": "8Q1bFx9weTvOcEtQaEwVakHLvwpCqnmLAs8/AJSCOww="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.SetDelimiterKeyValuePair.html",
+          "hash": "rXmGy0ZzYR+Cl9g7GAgB4qckJfM73Ck6PD84EoPR1LU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.AllowConcatDuplicateKeys.html",
+          "hash": "FWBqf42/s3rs44fSBH1D1wpKcIIdT7FJ6wDH3Ty7RWo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.IgnoreParserException.html",
+          "hash": "XIg68amqm8Z++rvQ48BJ4hILyZwFfXBgYUl6b6sBfdw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.AvoidModifyEnvironment.html",
+          "hash": "jMR4yMIjJXey5DRK+tHPuqZ3oUzmtIRegAXZelFWPSo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.SetEnvironmentVariablesProvider.html",
+          "hash": "FRfEVb0twFQzJqLEVzOEJK1fVPQGDkKGvpDI3/ERdPc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvLoader.html",
+          "hash": "oY9t6MY41WzIiycKMg7aQmwS0zGlhU6AAj/rzDmow+g="
         }
       },
       "is_incremental": false,
@@ -1841,164 +1841,8 @@
       "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.html",
-          "hash": "/82sSYOVmT+nd36d/ugr3UQwjjXlvCkcGIs35pNY/aI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider.html",
-          "hash": "2H1zXfG68EInAHCEE+Gu9B3J1Lvosmq9Vj5Rh4vSKAI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.AvoidModifyEnvironment.html",
-          "hash": "ELVRNW/3zDSHDR72KI6Nmt+7A74VUSfeQxw+MDrXODk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.IgnoreParserException.html",
-          "hash": "L+dGQXfCiF6PmL9en5u3ypHAO/JnEa5fN+TINo3hhvs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys.html",
-          "hash": "dRSMQOIPJ779pB6dq8b+/bAWzZnFmaO42XghvvslhT4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair.html",
-          "hash": "kAsM8oGb0J+iWhVhHffinJZaoN/pGtMaReuREKfe06k="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.SetCommentChar.html",
-          "hash": "WfGpGrWxKA0lItQ3xEFbWZ4Mj0I0CBJfs5B5IUa8doc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.AllowOverwriteExistingVars.html",
-          "hash": "c1FYChJWeaQczFw7zfcjssZb142eprH/nXpA4ovI6SM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimStartComments.html",
-          "hash": "FJQLwmzcVpRK217tbQ1yY8yjQNoI+C9c2yLxftZUBeI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimKeys.html",
-          "hash": "cQ/hIHeELxg98hfLEtLlpUm/SE1LJjRkoXeZQ1/pb/4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimEndKeys.html",
-          "hash": "qc6LIx24mEFW2Ng6oxhOBbIBJS83AT5anHqEuLTjFsA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimStartKeys.html",
-          "hash": "RIevjUZEpEufCzmd0sQfUqz6dLC3TDYhn07bPETgMSU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimValues.html",
-          "hash": "krH6dY4CqW3iz/OJjL0GSY5i5yROYzAZXYN0hk6L3wQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimEndValues.html",
-          "hash": "WDqZ4EspyowPsegl0XBuo8pwVe/j4GVdXvZav7dMGsU="
+          "relative_path": "api/DotEnv.Core.IEnvParser.Parse.html",
+          "hash": "kfejlb9douGWYGIUkwue37h16MsrEEtnpiWyZ5CLuYk="
         }
       },
       "is_incremental": false,
@@ -2021,8 +1865,164 @@
       "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvParser.Parse.html",
-          "hash": "kfejlb9douGWYGIUkwue37h16MsrEEtnpiWyZ5CLuYk="
+          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimEndValues.html",
+          "hash": "WDqZ4EspyowPsegl0XBuo8pwVe/j4GVdXvZav7dMGsU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimValues.html",
+          "hash": "krH6dY4CqW3iz/OJjL0GSY5i5yROYzAZXYN0hk6L3wQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimStartKeys.html",
+          "hash": "RIevjUZEpEufCzmd0sQfUqz6dLC3TDYhn07bPETgMSU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimEndKeys.html",
+          "hash": "qc6LIx24mEFW2Ng6oxhOBbIBJS83AT5anHqEuLTjFsA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimKeys.html",
+          "hash": "cQ/hIHeELxg98hfLEtLlpUm/SE1LJjRkoXeZQ1/pb/4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.DisableTrimStartComments.html",
+          "hash": "FJQLwmzcVpRK217tbQ1yY8yjQNoI+C9c2yLxftZUBeI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.AllowOverwriteExistingVars.html",
+          "hash": "c1FYChJWeaQczFw7zfcjssZb142eprH/nXpA4ovI6SM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.SetCommentChar.html",
+          "hash": "WfGpGrWxKA0lItQ3xEFbWZ4Mj0I0CBJfs5B5IUa8doc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.SetDelimiterKeyValuePair.html",
+          "hash": "kAsM8oGb0J+iWhVhHffinJZaoN/pGtMaReuREKfe06k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.AllowConcatDuplicateKeys.html",
+          "hash": "dRSMQOIPJ779pB6dq8b+/bAWzZnFmaO42XghvvslhT4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.IgnoreParserException.html",
+          "hash": "L+dGQXfCiF6PmL9en5u3ypHAO/JnEa5fN+TINo3hhvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.AvoidModifyEnvironment.html",
+          "hash": "ELVRNW/3zDSHDR72KI6Nmt+7A74VUSfeQxw+MDrXODk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.SetEnvironmentVariablesProvider.html",
+          "hash": "2H1zXfG68EInAHCEE+Gu9B3J1Lvosmq9Vj5Rh4vSKAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvParser.html",
+          "hash": "/82sSYOVmT+nd36d/ugr3UQwjjXlvCkcGIs35pNY/aI="
         }
       },
       "is_incremental": false,
@@ -2033,512 +2033,8 @@
       "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.html",
-          "hash": "S6FbzslKuhoKNwXryMixflxXHzoyfOBEeWzbKKhBPyg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvFloat.html",
-          "hash": "xFWvUPt4kxxLq3K0ivKjaQVn+/07YKnPS/4U5zAiRp0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvDouble.html",
-          "hash": "VJFFLWe/fQh/GJq+FJyRAnpxLv5UQcBmpWmLKN51hrw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvDecimal.html",
-          "hash": "6ikOyc59k7Fx5uRYF8GiQg0GiPq6K9eEgbVZOWYRPOU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvUShort.html",
-          "hash": "fK9MwV4UYvtU6O4jyNWx5EOCusupy2OzN1Mjclh6mwg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvShort.html",
-          "hash": "gLZyFTs3o7KCdsIkm/VeeKqKpbFOFliPKe6zNLngzY4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvULong.html",
-          "hash": "StmQAdCkFattqjpkXGomvgkTo1HDCXALniwi3liktg8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvLong.html",
-          "hash": "iEK+2uAfc/Q8OQhUQipg/GkcqB1VW4fJgLliLxxXnW0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvUInt.html",
-          "hash": "+I4hO8MxRWYAOOZz+w02J79YSMy0g0K4pmpc65Sy89I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvInt.html",
-          "hash": "InnMDL0xnoqRKIAFDpm30DFeh07g69Alq95tKlkhoh4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvChar.html",
-          "hash": "mVr3PzLTKzyyN8eIqIljFhpwpYf5OXw/K9g3ZrcTATk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvSByte.html",
-          "hash": "ORuesCmLKffVjKAGaGVYMXo8onoYM2I0MDGhrWLqnlA="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvByte.html",
-          "hash": "3wchYoCt+tSDMfcIOJUAtdcph8jyu2Ame/KsyKjT8ME="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvBool.html",
-          "hash": "Huj09CMBSsaqJH0CxNw8dHgR6KdR/yBeWaIcuzvsAsk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.EnvString.html",
-          "hash": "FFnPF3Ka4Dqktb/HM2couIGTmvn7clGWGtCOGrrWx3w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetFloatValue.html",
-          "hash": "567XXI7IGoITdQ9RAbqe6jmRQ6l+KaJFZrEuRnVL1Z8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetDoubleValue.html",
-          "hash": "TnADkC9Zikenj96Xeq+ASgw3cAkk9jST2bpA5+Xp76w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetDecimalValue.html",
-          "hash": "KA2iJm3QnCpC/08wpLU6Za39XjDTKGBI9seQa+KRgzM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetUShortValue.html",
-          "hash": "1X/EkpgqIpzfgd44tfqPQ/1fbDzCDolwxA7s+MQ6Xvc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetShortValue.html",
-          "hash": "JjGmHh8EMknbSTvMGdG5EK459HlOLMfXDyOTji/h0TE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetULongValue.html",
-          "hash": "tTOgo+UJ3GEex0HLxPY5t++0rlmctAD66oW2VMHXXR8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetLongValue.html",
-          "hash": "Q8ItNUD/2WsQ+yWQEoWvyQkQU9hahVdKGbO5dr4C8mw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetUIntValue.html",
-          "hash": "lLesHgeU+OCQGcqgQtv2NE6+SMDCJRiSKfChDX9MqnI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetIntValue.html",
-          "hash": "VhDoCoQlM4du4mmgEaEhKqm7W96wgfAxWt6ObdEXKMU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetCharValue.html",
-          "hash": "KgGKLhz2xJnebxNN1Os12BUZaZp10WmL8Qc7KWYS3HM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetSByteValue.html",
-          "hash": "LaW338obtxG74uDKc/p+kfdy1rg0C66mqEnQfyVG1Lg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetByteValue.html",
-          "hash": "BvS8Z7NJbfGehR7bFS4qSirMp4ek9eFWrWoB1FN2GzM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetBoolValue.html",
-          "hash": "BVmpgI0m+2AHahhMCnw6czrC0TNiceVqmOGdQU/kArg="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetStringValue.html",
-          "hash": "GRUT6wqrjGH+c+S6xcaaf5PQtn4yVLxeg82G/PfH+/Q="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetFloatValue.html",
-          "hash": "iXxLCPbHQMImaCkDWxyXR7OCPhYoAWrh7AmFDnLMwdY="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetDoubleValue.html",
-          "hash": "a7TBlR9FqLw/pWnTVBO/vsCzAO3n1NVCuZobGVdSAmE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetDecimalValue.html",
-          "hash": "q2Y8WuPl9TJqH4J99faXJYwMIQsq+5NC1eRn7ttwXkc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetUShortValue.html",
-          "hash": "9SWTPZBz3sDvP4KAepARk9IXRQRB4Vas4EOQZGAeltI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetShortValue.html",
-          "hash": "Z8jkjcf6h2R+l600Np6Jn8AnlcIxybWT4cdhQd/Htz0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetULongValue.html",
-          "hash": "ykgbUoKLSWUX52gVITKYdxh9RmewiIcraRfhevrcfQU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetLongValue.html",
-          "hash": "FJkwH2ajOWcecXqQkGrOomO1EomtVaezVn8IfN07tjE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetUIntValue.html",
-          "hash": "g1JZa2Zu8Ra9/fugcIhiywHEQ16vxsuvHpe9GLnKXX8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetIntValue.html",
-          "hash": "5VhdIENA2CJris3VjBOJwJCVA+19h9rdW738h8foSKs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetCharValue.html",
-          "hash": "g/8YGVBYxjU42V8uGH8hSr8XbG+MHDpic8DgHiaQPQc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetSByteValue.html",
-          "hash": "gOB+Jdyiy+VMhXwMS4okiu/+Ifw4tV2ThhoU1zW0lLQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetByteValue.html",
-          "hash": "IgBNUoXRCQYf4UHVbYx7R/P59ZEZF0+daJZv+TQ87sM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetBoolValue.html",
-          "hash": "MItzBdoIvvxhacIV8/8xxeVDDsUBHjRgKOhfDreR/A4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.GetStringValue.html",
-          "hash": "cttXRhyrHsC68CdYOZ+2wfpXXXlWxJ6/mdbgBHBWRBA="
+          "relative_path": "api/DotEnv.Core.IEnvReader.HasValue.html",
+          "hash": "YyHrW9cgHaT3wXwSpNy96qVFpoUCpkTd6XbanlyknTg="
         }
       },
       "is_incremental": false,
@@ -2561,8 +2057,512 @@
       "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvReader.HasValue.html",
-          "hash": "YyHrW9cgHaT3wXwSpNy96qVFpoUCpkTd6XbanlyknTg="
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetStringValue.html",
+          "hash": "cttXRhyrHsC68CdYOZ+2wfpXXXlWxJ6/mdbgBHBWRBA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetBoolValue.html",
+          "hash": "MItzBdoIvvxhacIV8/8xxeVDDsUBHjRgKOhfDreR/A4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetByteValue.html",
+          "hash": "IgBNUoXRCQYf4UHVbYx7R/P59ZEZF0+daJZv+TQ87sM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetSByteValue.html",
+          "hash": "gOB+Jdyiy+VMhXwMS4okiu/+Ifw4tV2ThhoU1zW0lLQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetCharValue.html",
+          "hash": "g/8YGVBYxjU42V8uGH8hSr8XbG+MHDpic8DgHiaQPQc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetIntValue.html",
+          "hash": "5VhdIENA2CJris3VjBOJwJCVA+19h9rdW738h8foSKs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetUIntValue.html",
+          "hash": "g1JZa2Zu8Ra9/fugcIhiywHEQ16vxsuvHpe9GLnKXX8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetLongValue.html",
+          "hash": "FJkwH2ajOWcecXqQkGrOomO1EomtVaezVn8IfN07tjE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetULongValue.html",
+          "hash": "ykgbUoKLSWUX52gVITKYdxh9RmewiIcraRfhevrcfQU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetShortValue.html",
+          "hash": "Z8jkjcf6h2R+l600Np6Jn8AnlcIxybWT4cdhQd/Htz0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetUShortValue.html",
+          "hash": "9SWTPZBz3sDvP4KAepARk9IXRQRB4Vas4EOQZGAeltI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetDecimalValue.html",
+          "hash": "q2Y8WuPl9TJqH4J99faXJYwMIQsq+5NC1eRn7ttwXkc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetDoubleValue.html",
+          "hash": "a7TBlR9FqLw/pWnTVBO/vsCzAO3n1NVCuZobGVdSAmE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.GetFloatValue.html",
+          "hash": "iXxLCPbHQMImaCkDWxyXR7OCPhYoAWrh7AmFDnLMwdY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetStringValue.html",
+          "hash": "GRUT6wqrjGH+c+S6xcaaf5PQtn4yVLxeg82G/PfH+/Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetBoolValue.html",
+          "hash": "BVmpgI0m+2AHahhMCnw6czrC0TNiceVqmOGdQU/kArg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetByteValue.html",
+          "hash": "BvS8Z7NJbfGehR7bFS4qSirMp4ek9eFWrWoB1FN2GzM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetSByteValue.html",
+          "hash": "LaW338obtxG74uDKc/p+kfdy1rg0C66mqEnQfyVG1Lg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetCharValue.html",
+          "hash": "KgGKLhz2xJnebxNN1Os12BUZaZp10WmL8Qc7KWYS3HM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetIntValue.html",
+          "hash": "VhDoCoQlM4du4mmgEaEhKqm7W96wgfAxWt6ObdEXKMU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetUIntValue.html",
+          "hash": "lLesHgeU+OCQGcqgQtv2NE6+SMDCJRiSKfChDX9MqnI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetLongValue.html",
+          "hash": "Q8ItNUD/2WsQ+yWQEoWvyQkQU9hahVdKGbO5dr4C8mw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetULongValue.html",
+          "hash": "tTOgo+UJ3GEex0HLxPY5t++0rlmctAD66oW2VMHXXR8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetShortValue.html",
+          "hash": "JjGmHh8EMknbSTvMGdG5EK459HlOLMfXDyOTji/h0TE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetUShortValue.html",
+          "hash": "1X/EkpgqIpzfgd44tfqPQ/1fbDzCDolwxA7s+MQ6Xvc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetDecimalValue.html",
+          "hash": "KA2iJm3QnCpC/08wpLU6Za39XjDTKGBI9seQa+KRgzM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetDoubleValue.html",
+          "hash": "TnADkC9Zikenj96Xeq+ASgw3cAkk9jST2bpA5+Xp76w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.TryGetFloatValue.html",
+          "hash": "567XXI7IGoITdQ9RAbqe6jmRQ6l+KaJFZrEuRnVL1Z8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvString.html",
+          "hash": "FFnPF3Ka4Dqktb/HM2couIGTmvn7clGWGtCOGrrWx3w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvBool.html",
+          "hash": "Huj09CMBSsaqJH0CxNw8dHgR6KdR/yBeWaIcuzvsAsk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvByte.html",
+          "hash": "3wchYoCt+tSDMfcIOJUAtdcph8jyu2Ame/KsyKjT8ME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvSByte.html",
+          "hash": "ORuesCmLKffVjKAGaGVYMXo8onoYM2I0MDGhrWLqnlA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvChar.html",
+          "hash": "mVr3PzLTKzyyN8eIqIljFhpwpYf5OXw/K9g3ZrcTATk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvInt.html",
+          "hash": "InnMDL0xnoqRKIAFDpm30DFeh07g69Alq95tKlkhoh4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvUInt.html",
+          "hash": "+I4hO8MxRWYAOOZz+w02J79YSMy0g0K4pmpc65Sy89I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvLong.html",
+          "hash": "iEK+2uAfc/Q8OQhUQipg/GkcqB1VW4fJgLliLxxXnW0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvULong.html",
+          "hash": "StmQAdCkFattqjpkXGomvgkTo1HDCXALniwi3liktg8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvShort.html",
+          "hash": "gLZyFTs3o7KCdsIkm/VeeKqKpbFOFliPKe6zNLngzY4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvUShort.html",
+          "hash": "fK9MwV4UYvtU6O4jyNWx5EOCusupy2OzN1Mjclh6mwg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvDecimal.html",
+          "hash": "6ikOyc59k7Fx5uRYF8GiQg0GiPq6K9eEgbVZOWYRPOU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvDouble.html",
+          "hash": "VJFFLWe/fQh/GJq+FJyRAnpxLv5UQcBmpWmLKN51hrw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.EnvFloat.html",
+          "hash": "xFWvUPt4kxxLq3K0ivKjaQVn+/07YKnPS/4U5zAiRp0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.IEnvReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.IEnvReader.html",
+          "hash": "S6FbzslKuhoKNwXryMixflxXHzoyfOBEeWzbKKhBPyg="
         }
       },
       "is_incremental": false,
@@ -2573,20 +2573,8 @@
       "source_relative_path": "api/DotEnv.Core.IEnvValidator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvValidator.html",
-          "hash": "wnrb/xwdIAAjz0AD61pKDq0CWCs0yztUtjGibV3+nuw="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvValidator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvValidator.IgnoreException.html",
-          "hash": "dtvWRupYxwv4wntZYfOataFebZO8hrtX1TeCaU+26II="
+          "relative_path": "api/DotEnv.Core.IEnvValidator.Validate.html",
+          "hash": "KzVVyKjaJtY1joQfzGG8UWhMfcxS5Jfi/CK6sRdqlTM="
         }
       },
       "is_incremental": false,
@@ -2609,8 +2597,8 @@
       "source_relative_path": "api/DotEnv.Core.IEnvValidator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvValidator.Validate.html",
-          "hash": "KzVVyKjaJtY1joQfzGG8UWhMfcxS5Jfi/CK6sRdqlTM="
+          "relative_path": "api/DotEnv.Core.IEnvValidator.IgnoreException.html",
+          "hash": "dtvWRupYxwv4wntZYfOataFebZO8hrtX1TeCaU+26II="
         }
       },
       "is_incremental": false,
@@ -2618,11 +2606,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.IEnvironmentVariablesProvider.yml",
+      "source_relative_path": "api/DotEnv.Core.IEnvValidator.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.IEnvironmentVariablesProvider.html",
-          "hash": "SblQLGIq5rH5B4gnWkD+SW2FDHjdf1nTF92DKL5mCkY="
+          "relative_path": "api/DotEnv.Core.IEnvValidator.html",
+          "hash": "wnrb/xwdIAAjz0AD61pKDq0CWCs0yztUtjGibV3+nuw="
         }
       },
       "is_incremental": false,
@@ -2642,11 +2630,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.ParserException.yml",
+      "source_relative_path": "api/DotEnv.Core.IEnvironmentVariablesProvider.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.ParserException.html",
-          "hash": "arU/A5oGxM1tbrxG+zBarDBB49us7hJUmJJ9shfCX7M="
+          "relative_path": "api/DotEnv.Core.IEnvironmentVariablesProvider.html",
+          "hash": "SblQLGIq5rH5B4gnWkD+SW2FDHjdf1nTF92DKL5mCkY="
         }
       },
       "is_incremental": false,
@@ -2666,11 +2654,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.RequiredKeysNotPresentException.yml",
+      "source_relative_path": "api/DotEnv.Core.ParserException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.RequiredKeysNotPresentException.html",
-          "hash": "MB6LiFnDFA86rokXJ2BumWQm26iQZaTIRiYsICoyP/w="
+          "relative_path": "api/DotEnv.Core.ParserException.html",
+          "hash": "arU/A5oGxM1tbrxG+zBarDBB49us7hJUmJJ9shfCX7M="
         }
       },
       "is_incremental": false,
@@ -2690,11 +2678,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/DotEnv.Core.VariableNotSetException.yml",
+      "source_relative_path": "api/DotEnv.Core.RequiredKeysNotPresentException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/DotEnv.Core.VariableNotSetException.html",
-          "hash": "+eaGo88FAzaMqCI9KUfuBA9u0PKKPY9viSVa+mbStQI="
+          "relative_path": "api/DotEnv.Core.RequiredKeysNotPresentException.html",
+          "hash": "MB6LiFnDFA86rokXJ2BumWQm26iQZaTIRiYsICoyP/w="
         }
       },
       "is_incremental": false,
@@ -2707,6 +2695,18 @@
         ".html": {
           "relative_path": "api/DotEnv.Core.VariableNotSetException.-ctor.html",
           "hash": "PAPct8P/5mwQFJqblEYjXnlionIBY78travk1lrGoqo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DotEnv.Core.VariableNotSetException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DotEnv.Core.VariableNotSetException.html",
+          "hash": "+eaGo88FAzaMqCI9KUfuBA9u0PKKPY9viSVa+mbStQI="
         }
       },
       "is_incremental": false,
@@ -2850,7 +2850,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/using_binder.html",
-          "hash": "qoLVQGJWjJKnKmlUEq5ik4ekFl8Q9zH73Ci1EnohVpc="
+          "hash": "b/aU9LkMPfnbphbfUCS2RX/s45vN+CwQinqa+UCdwMw="
         }
       },
       "is_incremental": false,
@@ -3020,13 +3020,13 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 14,
-          "skipped_file_count": 6
+          "skipped_file_count": 14
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 21,
-          "skipped_file_count": 21
+          "skipped_file_count": 19
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -185,10 +185,10 @@ services.AddSingleton&lt;AppSettings&gt;(settings);
 </code></pre>
 <p>In <strong>ASP.NET Core 6</strong>, you must register the service in <code>Program.cs</code>:</p>
 <pre><code class="lang-cs">var builder = WebApplication.CreateBuilder(args);
-// You must first load the .env file
+// You must first load the .env file.
 new EnvLoader().Load();
 var settings = new EnvBinder().Bind&lt;AppSettings&gt;();
-// Register the model as a service
+// Register the model as a service.
 builder.Services.AddSingleton&lt;AppSettings&gt;(settings);
 </code></pre>
 </article>
