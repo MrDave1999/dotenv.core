@@ -130,9 +130,9 @@ public void ConfigureServices(IServiceCollection services)
 In **ASP.NET Core 6**, you must register the service in `Program.cs`:
 ```cs
 var builder = WebApplication.CreateBuilder(args);
-// You must first load the .env file
+// You must first load the .env file.
 new EnvLoader().Load();
 var settings = new EnvBinder().Bind<AppSettings>();
-// Register the model as a service
+// Register the model as a service.
 builder.Services.AddSingleton<AppSettings>(settings);
 ```
