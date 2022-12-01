@@ -41,15 +41,15 @@ internal static class StringExtensions
     /// Converts from PascalCase to UpperCaseSnakeCase.
     /// </summary>
     /// <param name="str"></param>
-    /// <param name="sb"></param>
+    /// <param name="newKey">Save a new key with the UpperCaseSnakeCase convention.</param>
     /// <returns></returns>
-    public static string ToUpperCaseSnakeCase(this string str, StringBuilder sb)
+    public static string ToUpperCaseSnakeCase(this string str, StringBuilder newKey)
     {
         int len = str.Length;
-        sb.Append(str[0]);
+        newKey.Append(str[0]);
         for (int i = 1; i < len; i++)
-            sb.Append(char.IsUpper(str[i]) ? $"_{str[i]}" : char.ToUpper(str[i]));
+            newKey.Append(char.IsUpper(str[i]) ? $"_{str[i]}" : char.ToUpper(str[i]));
 
-        return sb.ToString();
+        return newKey.ToString();
     }
 }
