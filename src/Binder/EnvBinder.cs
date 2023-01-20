@@ -7,7 +7,7 @@ using static DotEnv.Core.ExceptionMessages;
 namespace DotEnv.Core;
 
 /// <inheritdoc cref="IEnvBinder" />
-public class EnvBinder : IEnvBinder
+public partial class EnvBinder : IEnvBinder
 {
     /// <summary>
     /// Allows access to the configuration options for the binder.
@@ -104,26 +104,5 @@ public class EnvBinder : IEnvBinder
             throw new BinderException(message: _validationResult.ErrorMessages);
 
         return settings;
-    }
-
-    /// <summary>
-    /// Checks whether the property is read-only or write-only.
-    /// </summary>
-    /// <returns><c>true</c> if the property is read-only or write-only, or <c>false</c> if the property is read-write.</returns>
-    private bool IsReadOnlyOrWriteOnly(PropertyInfo property)
-        => !property.CanRead || !property.CanWrite;
-        
-    /// <inheritdoc />
-    public IEnvBinder IgnoreException()
-    {
-        _configuration.ThrowException = false;
-        return this;
-    }
-
-    /// <inheritdoc />
-    public IEnvBinder AllowBindNonPublicProperties()
-    {
-        _configuration.BindNonPublicProperties = true;
-        return this;
     }
 }
