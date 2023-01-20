@@ -116,7 +116,7 @@ public class EnvBinderTests
         var ex = Assert.ThrowsException<BinderException>(action);
         StringAssert.Contains(ex.Message, string.Format(
             FailedConvertConfigurationValueMessage,
-            "ColorName",
+            "COLOR_NAME",
             nameof(Colors),
             "Yellow",
             nameof(Colors)
