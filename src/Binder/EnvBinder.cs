@@ -58,7 +58,7 @@ public partial class EnvBinder : IEnvBinder
             var envKeyAttribute = (EnvKeyAttribute)Attribute.GetCustomAttribute(property, typeof(EnvKeyAttribute));
             var variableName    = envKeyAttribute is not null ? envKeyAttribute.Name : property.Name;
             var retrievedValue  = envVars[variableName];
-            retrievedValue    ??= envKeyAttribute is not null ? retrievedValue : envVars[variableName.ToUpperCaseSnakeCase(newKey)];
+            retrievedValue    ??= envKeyAttribute is not null ? retrievedValue : envVars[ConvertToUpperCaseSnakeCase(ref variableName, newKey)];
             newKey.Clear();
             if (retrievedValue is null)
             {
