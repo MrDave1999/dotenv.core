@@ -86,7 +86,7 @@ public class EnvBinder : IEnvBinder
 
             try
             {
-                property.SetValue(settings, Convert.ChangeType(retrievedValue, property.PropertyType));
+                property.SetValue(settings, DotEnvHelper.ChangeType(retrievedValue, property.PropertyType));
             }
             catch (FormatException)
             {
