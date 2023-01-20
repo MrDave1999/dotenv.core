@@ -21,6 +21,7 @@ public class EnvBinderTests
         SetEnvironmentVariable("BIND_RACE_TIME",  "23");
         SetEnvironmentVariable("BindSecretKey",   "12example");
         SetEnvironmentVariable("BindJwtSecret",   "secret123");
+        SetEnvironmentVariable("COLOR_NAME",      "RED");
 
         var settings = new EnvBinder().Bind<AppSettings>();
 
@@ -29,6 +30,7 @@ public class EnvBinderTests
         Assert.AreEqual(expected: 23,           actual: settings.RaceTime);
         Assert.AreEqual(expected: "12example",  actual: settings.BindSecretKey);
         Assert.AreEqual(expected: "secret123",  actual: settings.BindJwtSecret);
+        Assert.AreEqual(expected: "Red",        actual: settings.ColorName.ToString());
     }
 
     [TestMethod]
@@ -40,6 +42,7 @@ public class EnvBinderTests
         customProvider["BIND_RACE_TIME"]  = "24";
         customProvider["BindSecretKey"]   = "13example";
         customProvider["BindJwtSecret"]   = "secret124";
+        customProvider["COLOR_NAME"]      = "RED";
 
         var settings = new EnvBinder(customProvider).Bind<AppSettings>();
 
@@ -48,6 +51,7 @@ public class EnvBinderTests
         Assert.AreEqual(expected: 24,           actual: settings.RaceTime);
         Assert.AreEqual(expected: "13example",  actual: settings.BindSecretKey);
         Assert.AreEqual(expected: "secret124",  actual: settings.BindJwtSecret);
+        Assert.AreEqual(expected: "Red",        actual: settings.ColorName.ToString());
     }
 
     [TestMethod]
@@ -86,6 +90,7 @@ public class EnvBinderTests
     {
         var binder = new EnvBinder();
         SetEnvironmentVariable("BIND_WEATHER_ID", "This is not an int");
+        SetEnvironmentVariable("COLOR_NAME",      "Red");
 
         void action() => binder.Bind<SettingsExample3>();
 
@@ -100,17 +105,37 @@ public class EnvBinderTests
     }
 
     [TestMethod]
+    public void Bind_WhenKeyCannotBeConvertedToEnum_ShouldThrowBinderException()
+    {
+        var binder = new EnvBinder();
+        SetEnvironmentVariable("BIND_WEATHER_ID", "1");
+        SetEnvironmentVariable("COLOR_NAME",      "Yellow");
+
+        void action() => binder.Bind<SettingsExample3>();
+
+        var ex = Assert.ThrowsException<BinderException>(action);
+        StringAssert.Contains(ex.Message, string.Format(
+            FailedConvertConfigurationValueMessage,
+            "ColorName",
+            nameof(Colors),
+            "Yellow",
+            nameof(Colors)
+        ));
+    }
+
+    [TestMethod]
     public void Bind_WhenAnErrorIsFound_ShouldStoreErrorMessageInCollection()
     {
         string msg;
         var customProvider = new CustomEnvironmentVariablesProvider();
         var binder = new EnvBinder(customProvider).IgnoreException();
         customProvider["BIND_RACE_TIME"]  = "This is not an int";
-        
+        customProvider["ColorName"]       = "Yellow";
+
         binder.Bind<AppSettings>(out var result);
 
         Assert.AreEqual(expected: true, actual: result.HasError());
-        Assert.AreEqual(expected: 5, actual: result.Count);
+        Assert.AreEqual(expected: 6, actual: result.Count);
 
         msg = result.ErrorMessages;
         StringAssert.Contains(msg, string.Format(
@@ -131,6 +156,13 @@ public class EnvBinderTests
             nameof(Int32),
             "This is not an int", 
             nameof(Int32)
+        ));
+        StringAssert.Contains(msg, string.Format(
+            FailedConvertConfigurationValueMessage, 
+            "ColorName", 
+            nameof(Colors),
+            "Yellow", 
+            nameof(Colors)
         ));
         StringAssert.Contains(msg, string.Format(
             PropertyDoesNotMatchConfigKeyMessage,
