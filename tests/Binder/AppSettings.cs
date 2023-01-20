@@ -1,5 +1,7 @@
 namespace DotEnv.Core.Tests.Binder;
 
+public enum Colors { Red };
+
 public class AppSettings
 {
     [EnvKey("BIND_JWT_SECRET")]
@@ -13,6 +15,7 @@ public class AppSettings
 
     public string BindSecretKey { get; set; }
     public string BindJwtSecret { get; set; }
+    public Colors ColorName { get; set; }
     private string IgnoredProperty { get; set; }
 }
 
@@ -36,6 +39,7 @@ public class SettingsExample3
 {
     [EnvKey("BIND_WEATHER_ID")]
     public int WeatherId { get; set; }
+    public Colors ColorName { get; set; }
 }
 
 public class ReadOnlyProperties
