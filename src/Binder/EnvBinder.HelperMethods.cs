@@ -19,6 +19,10 @@ public partial class EnvBinder
     /// <param name="variableName">The name of the variable to convert.</param>
     /// <param name="newKey">Save a new key with the 'UpperCaseSnakeCase' convention.</param>
     /// <returns>The variable name using the 'UpperCaseSnakeCase' convention.</returns>
+    /// <example>
+    /// This is the 'UpperCaseSnakeCase' convention:
+    /// VARIABLE_NAME
+    /// </example>
     private string ConvertToUpperCaseSnakeCase(ref string variableName, StringBuilder newKey)
     {
         int len = variableName.Length;
