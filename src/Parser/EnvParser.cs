@@ -9,9 +9,11 @@ namespace DotEnv.Core;
 /// <inheritdoc cref="IEnvParser" />
 public partial class EnvParser : IEnvParser
 {
+    private static readonly string[] s_newLines = new[] { "\r\n", "\n", "\r" };
+
     private const string ExportPrefix = "export ";
-    private const char DoubleQuote = '"';
-    private const char SingleQuote = '\'';
+    private const char DoubleQuote    = '"';
+    private const char SingleQuote    = '\'';
 
     /// <summary>
     /// The maximum number of substrings to be returned by the Split method.
@@ -62,8 +64,7 @@ public partial class EnvParser : IEnvParser
             return _configuration.EnvVars;
         }
 
-        var newLines = new[] { "\r\n", "\n", "\r" };
-        var lines = dataSource.Split(newLines, StringSplitOptions.None);
+        var lines = dataSource.Split(s_newLines, StringSplitOptions.None);
         for (int i = 0, len = lines.Length; i < len; ++i)
         {
             var line = lines[i];
