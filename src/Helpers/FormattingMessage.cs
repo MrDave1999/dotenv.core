@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static DotEnv.Core.EnumerableExtensions;
+using static DotEnv.Core.DotEnvHelper;
 using static DotEnv.Core.EnvFileNames;
 
 namespace DotEnv.Core;

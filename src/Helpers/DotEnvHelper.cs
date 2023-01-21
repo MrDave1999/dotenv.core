@@ -26,4 +26,12 @@ internal class DotEnvHelper
         }
         return Convert.ChangeType(value, conversionType);
     }
+
+    /// <summary>
+    /// Checks if the passed elements are not null.
+    /// </summary>
+    /// <param name="elements">The elements to validate.</param>
+    /// <returns>true if all elements are not null, or false.</returns>
+    public static bool AreNotNull(params object[] elements)
+        => !elements.Contains(null);
 }
