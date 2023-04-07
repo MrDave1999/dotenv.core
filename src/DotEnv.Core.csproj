@@ -20,6 +20,7 @@
     <Version>2.3.2</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <NoWarn>1591</NoWarn>
+    <RootNamespace>DotEnv.Core</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
