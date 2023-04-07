@@ -7,7 +7,7 @@ namespace DotEnv.Core;
 /// <summary>
 /// Represents the messages of an exception.
 /// </summary>
-public class ExceptionMessages
+internal class ExceptionMessages
 {
     public const string VariableNotSetMessage                   = "'{0}' is not set.";
     public const string DataSourceIsEmptyOrWhitespaceMessage    = "Data source is empty or consists only in whitespace.";
