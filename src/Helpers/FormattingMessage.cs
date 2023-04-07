@@ -9,7 +9,7 @@ namespace DotEnv.Core;
 /// <summary>
 /// Define methods that format error messages.
 /// </summary>
-public class FormattingMessage
+internal class FormattingMessage
 {
     /// <summary>
     /// Formats an error message in case the local file is not present in any directory.
