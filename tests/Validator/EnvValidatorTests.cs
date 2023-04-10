@@ -6,6 +6,7 @@ public class EnvValidatorTests
     [TestMethod]
     public void Validate_WhenRequiredKeysAreNotPresent_ShouldThrowRequiredKeysNotPresentException()
     {
+        // Arrange
         var validator = new EnvValidator()
                             .SetRequiredKeys(
                                 "SAMC_KEY", 
@@ -15,24 +16,29 @@ public class EnvValidatorTests
                                 "SERVICE_ID"
                             );
 
-        void action() => validator.Validate();
+        // Act
+        Action act = () => validator.Validate();
 
-        Assert.ThrowsException<RequiredKeysNotPresentException>(action);
+        // Assert
+        act.Should().Throw<RequiredKeysNotPresentException>();
     }
 
     [TestMethod]
     public void Validate_WhenRequiredKeysArePresent_ShouldNotThrowRequiredKeysNotPresentException()
     {
+        // Arrange
         SetEnvironmentVariable("JWT_TOKEN", "123");
         SetEnvironmentVariable("API_KEY", "123");
         var validator = new EnvValidator()
                             .SetRequiredKeys("JWT_TOKEN", "API_KEY")
                             .IgnoreException();          
 
+        // Act
         validator.Validate(out var result);
 
-        Assert.AreEqual(expected: false, actual: result.HasError());
-        Assert.AreEqual(expected: 0, actual: result.Count);
+        // Asserts
+        result.HasError().Should().BeFalse();
+        result.Should().HaveCount(0);
         SetEnvironmentVariable("JWT_TOKEN", null);
         SetEnvironmentVariable("API_KEY", null);
     }
@@ -40,7 +46,7 @@ public class EnvValidatorTests
     [TestMethod]
     public void Validate_WhenAnErrorIsFound_ShouldStoreErrorMessageInCollection()
     {
-        string msg;
+        // Arrange
         var validator = new EnvValidator()
                             .SetRequiredKeys(
                                 "SAMC_KEY", 
@@ -50,44 +56,55 @@ public class EnvValidatorTests
                                 "SERVICE_ID"
                               )
                             .IgnoreException();
+        var expectedErrors = new List<string>
+        {
+            string.Format(RequiredKeysNotPresentMessage, "SAMC_KEY"),
+            string.Format(RequiredKeysNotPresentMessage, "API_KEY"),
+            string.Format(RequiredKeysNotPresentMessage, "JWT_TOKEN"),
+            string.Format(RequiredKeysNotPresentMessage, "JWT_TOKEN_ID"),
+            string.Format(RequiredKeysNotPresentMessage, "SERVICE_ID")
+        };
 
+        // Act
         validator.Validate(out var result);
+        var errors = result.ToList();
 
-        Assert.AreEqual(expected: true, actual: result.HasError());
-        Assert.AreEqual(expected: 5, actual: result.Count);
-
-        msg = result.ErrorMessages;
-        StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "SAMC_KEY"));
-        StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "API_KEY"));
-        StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "JWT_TOKEN"));
-        StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "JWT_TOKEN_ID"));
-        StringAssert.Contains(msg, string.Format(RequiredKeysNotPresentMessage, "SERVICE_ID"));
+        // Asserts
+        result.HasError().Should().BeTrue();
+        errors.Should().BeEquivalentTo(expectedErrors);
     }
 
     [TestMethod]
     public void Validate_WhenRequiredKeysAreNotPresentAndAreSpecifiedByMeansOfClass_ShouldThrowRequiredKeysNotPresentException()
     {
+        // Arrange
         var validator = new EnvValidator().SetRequiredKeys<RequiredKeys>();
 
-        void action() => validator.Validate();
+        // Act
+        Action act = () => validator.Validate();
 
-        Assert.ThrowsException<RequiredKeysNotPresentException>(action);
+        // Assert
+        act.Should().Throw<RequiredKeysNotPresentException>();
     }
 
     [TestMethod]
     public void Validate_WhenRequiredKeysAreNotPresentInCustomProvider_ShouldThrowRequiredKeysNotPresentException()
     {
+        // Arrange
         var customProvider = new CustomEnvironmentVariablesProvider();
         var validator = new EnvValidator(customProvider).SetRequiredKeys<RequiredKeys>();
 
-        void action() => validator.Validate();
+        // Act
+        Action act = () => validator.Validate();
 
-        Assert.ThrowsException<RequiredKeysNotPresentException>(action);
+        // Assert
+        act.Should().Throw<RequiredKeysNotPresentException>();
     }
 
     [TestMethod]
     public void Validate_WhenRequiredKeysArePresentInCustomProvider_ShouldNotThrowRequiredKeysNotPresentException()
     {
+        // Arrange
         var customProvider = new CustomEnvironmentVariablesProvider();
         var validator = new EnvValidator(customProvider).SetRequiredKeys<RequiredKeys>();
         customProvider["SAMC_KEY"]     = "";
@@ -96,29 +113,37 @@ public class EnvValidatorTests
         customProvider["JWT_TOKEN_ID"] = "";
         customProvider["SERVICE_ID"]   = "";
 
+        // Act
         validator.Validate(out var result);
 
-        Assert.AreEqual(expected: false, actual: result.HasError());
-        Assert.AreEqual(expected: 0, actual: result.Count);
+        // Asserts
+        result.HasError().Should().BeFalse();
+        result.Should().HaveCount(0);
     }
 
     [TestMethod]
     public void Validate_WhenRequiredKeysAreNotSpecifiedWithSetRequiredKeysMethod_ShouldThrowInvalidOperationException()
     {
+        // Arrange
         var validator = new EnvValidator();
 
-        void action() => validator.Validate();
+        // Act
+        Action act = () => validator.Validate();
 
-        Assert.ThrowsException<InvalidOperationException>(action);
+        // Assert
+        act.Should().Throw<InvalidOperationException>();
     }
 
     [TestMethod]
-    public void AddRequiredKeys_WhenLengthOfTheKeysListIsZero_ShouldThrowArgumentException()
+    public void SetRequiredKeys_WhenLengthOfTheKeysListIsZero_ShouldThrowArgumentException()
     {
+        // Arrange
         var validator = new EnvValidator();
 
-        void action() => validator.SetRequiredKeys();
+        // Act
+        Action act = () => validator.SetRequiredKeys();
 
-        Assert.ThrowsException<ArgumentException>(action);
+        // Assert
+        act.Should().Throw<ArgumentException>();
     }
 }
