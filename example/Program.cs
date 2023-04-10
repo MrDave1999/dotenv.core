@@ -1,4 +1,4 @@
-global using DotEnv.Core;
+using DotEnv.Core;
 
 var envVars = new EnvLoader().Load();
 
