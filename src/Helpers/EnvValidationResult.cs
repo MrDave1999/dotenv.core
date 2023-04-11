@@ -48,18 +48,14 @@ public class EnvValidationResult : IEnumerable<string>
     /// </summary>
     /// <param name="errorMsg">The message that describes the error.</param>
     internal void Add(string errorMsg)
-    {
-        _errors.Add(errorMsg);
-    }
+        => _errors.Add(errorMsg);
 
     /// <summary>
     /// Adds a set of error messages to the collection.
     /// </summary>
     /// <param name="errorMessages">A set of error messages.</param>
     internal void AddRange(IEnumerable<string> errorMessages)
-    {
-        _errors.AddRange(errorMessages);
-    }
+        =>  _errors.AddRange(errorMessages);
 
     /// <summary>
     /// Returns an enumerator that iterates through the errors contained in the container.
