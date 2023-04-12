@@ -4,7 +4,7 @@ namespace DotEnv.Core.Tests.Binder;
 public class EnvBinderTests
 {
     [TestMethod]
-    public void Bind_WhenPropertyNameDoesNotMatchRealKey_ShouldReturnSettingsInstance()
+    public void Bind_WhenPropertyNameDoesNotMatchRealKey_ShouldReturnsSettingsInstance()
     {
         // Arrange
         var binder = new EnvBinder();
@@ -18,7 +18,7 @@ public class EnvBinderTests
     }
 
     [TestMethod]
-    public void Bind_WhenPropertiesAreLinkedToTheDefaultProviderInstance_ShouldReturnSettingsInstance()
+    public void Bind_WhenPropertiesAreLinkedToTheDefaultProviderInstance_ShouldReturnsSettingsInstance()
     {
         // Arrange
         var binder = new EnvBinder();
@@ -42,7 +42,7 @@ public class EnvBinderTests
     }
 
     [TestMethod]
-    public void Bind_WhenPropertiesAreLinkedToTheCustomProviderInstance_ShouldReturnSettingsInstance()
+    public void Bind_WhenPropertiesAreLinkedToTheCustomProviderInstance_ShouldReturnsSettingsInstance()
     {
         // Arrange
         var customProvider = new CustomEnvironmentVariablesProvider();
