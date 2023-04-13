@@ -7,11 +7,11 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_BOOL", "true");
-        Assert.AreEqual(expected: true, actual: reader.GetBoolValue("KEY_BOOL"));
+        reader.GetBoolValue("KEY_BOOL").Should().BeTrue();
         SetEnvironmentVariable("KEY_BOOL", "false");
-        Assert.AreEqual(expected: false, actual: reader.GetBoolValue("KEY_BOOL"));
-        void action() => reader.GetBoolValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetBoolValue("KEY_BOOL").Should().BeFalse();
+        Action act = () => reader.GetBoolValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -19,9 +19,9 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_BYTE", "2");
-        Assert.AreEqual(expected: (byte)2, actual: reader.GetByteValue("KEY_BYTE"));
-        void action() => reader.GetByteValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetByteValue("KEY_BYTE").Should().Be(2);
+        Action act = () => reader.GetByteValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -29,9 +29,9 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_CHAR", "A");
-        Assert.AreEqual(expected: 'A', actual: reader.GetCharValue("KEY_CHAR"));
-        void action() => reader.GetCharValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetCharValue("KEY_CHAR").Should().Be('A');
+        Action act = () => reader.GetCharValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -39,11 +39,11 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_DECIMAL", "12.5");
-        Assert.AreEqual(expected: 12.5M, actual: reader.GetDecimalValue("KEY_DECIMAL"));
+        reader.GetDecimalValue("KEY_DECIMAL").Should().Be(12.5M);
         SetEnvironmentVariable("KEY_DECIMAL", "12,5");
-        Assert.AreEqual(expected: 125M, actual: reader.GetDecimalValue("KEY_DECIMAL"));
-        void action() => reader.GetDecimalValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetDecimalValue("KEY_DECIMAL").Should().Be(125M);
+        Action act = () => reader.GetDecimalValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -51,11 +51,11 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_DOUBLE", "12.5");
-        Assert.AreEqual(expected: 12.5D, actual: reader.GetDoubleValue("KEY_DOUBLE"));
+        reader.GetDoubleValue("KEY_DOUBLE").Should().Be(12.5D);
         SetEnvironmentVariable("KEY_DOUBLE", "12,5");
-        Assert.AreEqual(expected: 125D, actual: reader.GetDoubleValue("KEY_DOUBLE"));
-        void action() => reader.GetDoubleValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetDoubleValue("KEY_DOUBLE").Should().Be(125D);
+        Action act = () => reader.GetDoubleValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -63,11 +63,11 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_FLOAT", "12.5");
-        Assert.AreEqual(expected: 12.5F, actual: reader.GetFloatValue("KEY_FLOAT"));
+        reader.GetFloatValue("KEY_FLOAT").Should().Be(12.5F);
         SetEnvironmentVariable("KEY_FLOAT", "12,5");
-        Assert.AreEqual(expected: 125F, actual: reader.GetFloatValue("KEY_FLOAT"));
-        void action() => reader.GetFloatValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetFloatValue("KEY_FLOAT").Should().Be(125F);
+        Action act = () => reader.GetFloatValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -75,9 +75,9 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_INT", "3");
-        Assert.AreEqual(expected: 3, actual: reader.GetIntValue("KEY_INT"));
-        void action() => reader.GetIntValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetIntValue("KEY_INT").Should().Be(3);
+        Action act = () => reader.GetIntValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -85,9 +85,9 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_LONG", "3");
-        Assert.AreEqual(expected: 3L, actual: reader.GetLongValue("KEY_LONG"));
-        void action() => reader.GetLongValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetLongValue("KEY_LONG").Should().Be(3L);
+        Action act = () => reader.GetLongValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -95,9 +95,9 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_SBYTE", "3");
-        Assert.AreEqual(expected: (sbyte)3, actual: reader.GetSByteValue("KEY_SBYTE"));
-        void action() => reader.GetSByteValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetSByteValue("KEY_SBYTE").Should().Be(3);
+        Action act = () => reader.GetSByteValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -105,9 +105,9 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_SHORT", "3");
-        Assert.AreEqual(expected: (short)3, actual: reader.GetShortValue("KEY_SHORT"));
-        void action() => reader.GetShortValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetShortValue("KEY_SHORT").Should().Be(3);
+        Action act = () => reader.GetShortValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -115,9 +115,9 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_STRING", "This is a string.");
-        Assert.AreEqual(expected: "This is a string.", actual: reader.GetStringValue("KEY_STRING"));
-        void action() => reader.GetStringValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetStringValue("KEY_STRING").Should().Be("This is a string.");
+        Action act = () => reader.GetStringValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -125,9 +125,9 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_UINT", "2");
-        Assert.AreEqual(expected: 2U, actual: reader.GetUIntValue("KEY_UINT"));
-        void action() => reader.GetUIntValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetUIntValue("KEY_UINT").Should().Be(2U);
+        Action act = () => reader.GetUIntValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -135,9 +135,9 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_ULONG", "2");
-        Assert.AreEqual(expected: 2UL, actual: reader.GetULongValue("KEY_ULONG"));
-        void action() => reader.GetULongValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetULongValue("KEY_ULONG").Should().Be(2UL);
+        Action act = () => reader.GetULongValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 
     [TestMethod]
@@ -145,8 +145,8 @@ public partial class EnvReaderTests
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_USHORT", "2");
-        Assert.AreEqual(expected: (ushort)2, actual: reader.GetUShortValue("KEY_USHORT"));
-        void action() => reader.GetUShortValue(VariableNotFound);
-        Assert.ThrowsException<VariableNotSetException>(action);
+        reader.GetUShortValue("KEY_USHORT").Should().Be(2);
+        Action act = () => reader.GetUShortValue(VariableNotFound);
+        act.Should().Throw<VariableNotSetException>();
     }
 }
