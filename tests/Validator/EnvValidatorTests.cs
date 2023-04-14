@@ -38,7 +38,7 @@ public class EnvValidatorTests
 
         // Asserts
         result.HasError().Should().BeFalse();
-        result.Should().HaveCount(0);
+        result.Should().BeEmpty();
         SetEnvironmentVariable("JWT_TOKEN", null);
         SetEnvironmentVariable("API_KEY", null);
     }
@@ -118,7 +118,7 @@ public class EnvValidatorTests
 
         // Asserts
         result.HasError().Should().BeFalse();
-        result.Should().HaveCount(0);
+        result.Should().BeEmpty();
     }
 
     [TestMethod]
