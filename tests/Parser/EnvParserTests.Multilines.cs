@@ -5,32 +5,43 @@ public partial class EnvParserTests
     [TestMethod]
     public void Parse_WhenValuesAreOnMultiLines_ShouldGetValuesSeparatedByNewLine()
     {
+        // Arrage
         var parser = new EnvParser();
+        var source = File.ReadAllText(".env.multi-lines");
 
-        parser.Parse(File.ReadAllText(".env.multi-lines"));
+        // Act
+        parser.Parse(source);
 
-        Assert.AreEqual(
-            expected: "first line #a \nsecond line #b\nthird line #c\nfour line #d", 
-            actual: GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_1")
-        );
-        Assert.AreEqual(
-            expected: "\nfirst line\nsecond line\nthird line\n", 
-            actual: GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_2")
-        );
-        Assert.AreEqual(expected: "first line\n", actual: GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_3"));
-        Assert.AreEqual(expected: "\n", actual: GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_4"));
-        Assert.AreEqual(expected: "  \n", actual: GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_5"));
-        Assert.AreEqual(
-            expected: "first line #a \nsecond line #b\nthird line #c\nfour line #d", 
-            actual: GetEnvironmentVariable("MULTI_SINGLE_QUOTED_1")
-        );
-        Assert.AreEqual(
-            expected: "\nfirst line\nsecond line\nthird line\n", 
-            actual: GetEnvironmentVariable("MULTI_SINGLE_QUOTED_2")
-        );
-        Assert.AreEqual(expected: "first line\n", actual: GetEnvironmentVariable("MULTI_SINGLE_QUOTED_3"));
-        Assert.AreEqual(expected: "\n", actual: GetEnvironmentVariable("MULTI_SINGLE_QUOTED_4"));
-        Assert.AreEqual(expected: "  \n", actual: GetEnvironmentVariable("MULTI_SINGLE_QUOTED_5"));
+        // Asserts
+        GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_1")
+            .Should()
+            .Be("first line #a \nsecond line #b\nthird line #c\nfour line #d");
+
+        GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_2")
+            .Should()
+            .Be("\nfirst line\nsecond line\nthird line\n");
+
+        GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_3")
+            .Should()
+            .Be("first line\n");
+
+        GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_4").Should().Be("\n");
+        GetEnvironmentVariable("MULTI_DOUBLE_QUOTED_5").Should().Be("  \n");
+
+        GetEnvironmentVariable("MULTI_SINGLE_QUOTED_1")
+            .Should()
+            .Be("first line #a \nsecond line #b\nthird line #c\nfour line #d");
+
+        GetEnvironmentVariable("MULTI_SINGLE_QUOTED_2")
+            .Should()
+            .Be("\nfirst line\nsecond line\nthird line\n");
+
+        GetEnvironmentVariable("MULTI_SINGLE_QUOTED_3")
+            .Should()
+            .Be("first line\n");
+
+        GetEnvironmentVariable("MULTI_SINGLE_QUOTED_4").Should().Be("\n");
+        GetEnvironmentVariable("MULTI_SINGLE_QUOTED_5").Should().Be("  \n");
     }
 
     [TestMethod]
@@ -50,15 +61,21 @@ public partial class EnvParserTests
         LINE HAS
         NO END QUOTE""
     ")]
-    public void Parse_WhenLineHasNoEndSingleQuote_ShouldThrowParserException(string input)
+    public void Parse_WhenLineHasNoEndSingleQuote_ShouldThrowParserException(string source)
     {
+        // Arrange
         var parser = new EnvParser();
+        var expectedSubstring = $"*{LineHasNoEndSingleQuoteMessage}*";
 
-        void action() => parser.Parse(input);
+        // Act
+        Action act = () => parser.Parse(source);
 
-        var ex = Assert.ThrowsException<ParserException>(action);
-        StringAssert.Contains(ex.Message, LineHasNoEndSingleQuoteMessage);
-        Assert.IsNull(GetEnvironmentVariable("MULTI_UNENDED"));
+        // Asserts
+        act.Should()
+           .Throw<ParserException>()
+           .WithMessage(expectedSubstring);
+
+        GetEnvironmentVariable("MULTI_UNENDED").Should().BeNull();
     }
 
     [TestMethod]
@@ -78,14 +95,20 @@ public partial class EnvParserTests
         LINE HAS
         NO END QUOTE'
     ")]
-    public void Parse_WhenLineHasNoEndDoubleQuote_ShouldThrowParserException(string input)
+    public void Parse_WhenLineHasNoEndDoubleQuote_ShouldThrowParserException(string source)
     {
+        // Arrange
         var parser = new EnvParser();
+        var expectedSubstring = $"*{LineHasNoEndDoubleQuoteMessage}*";
 
-        void action() => parser.Parse(input);
+        // Act
+        Action act = () => parser.Parse(source);
 
-        var ex = Assert.ThrowsException<ParserException>(action);
-        StringAssert.Contains(ex.Message, LineHasNoEndDoubleQuoteMessage);
-        Assert.IsNull(GetEnvironmentVariable("MULTI_UNENDED"));
+        // Asserts
+        act.Should()
+           .Throw<ParserException>()
+           .WithMessage(expectedSubstring);
+
+        GetEnvironmentVariable("MULTI_UNENDED").Should().BeNull();
     }
 }
