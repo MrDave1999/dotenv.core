@@ -304,8 +304,8 @@ public partial class EnvLoaderTests
     {
         // Arrange
         var loader = new EnvLoader();
+        var basePath = "Loader/env_files/validation/";
         EnvValidationResult result;
-        string basePath = $"Loader/env_files/validation/";
 
         // Act
         loader

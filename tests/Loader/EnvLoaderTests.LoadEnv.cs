@@ -151,8 +151,8 @@ public partial class EnvLoaderTests
     {
         // Arrange
         var loader = new EnvLoader();
+        var basePath = "Loader/env_files/environment/production/";
         EnvValidationResult result;
-        string basePath = $"Loader/env_files/environment/production/";
         Env.CurrentEnvironment = "production";
 
         // Act
