@@ -238,7 +238,7 @@ public partial class EnvLoaderTests
 
         // Asserts
         result.HasError().Should().BeTrue();
-        result.Count.Should().Be(1);
+        result.Should().HaveCount(1);
         Env.CurrentEnvironment.Should().Be("development");
         result.ErrorMessages.Should().Contain(FormatLocalFileNotPresentMessage());
     }
@@ -257,7 +257,7 @@ public partial class EnvLoaderTests
 
         // Asserts
         result.HasError().Should().BeTrue();
-        result.Count.Should().Be(1);
+        result.Should().HaveCount(1);
         result.ErrorMessages
               .Should()
               .Contain(FormatLocalFileNotPresentMessage(environmentName: Env.CurrentEnvironment));
