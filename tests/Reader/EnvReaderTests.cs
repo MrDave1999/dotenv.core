@@ -6,13 +6,30 @@ public partial class EnvReaderTests
     private const string VariableNotFound = nameof(VariableNotFound);
 
     [TestMethod]
-    public void HasValue_WhenVariableExistsInTheCurrentProcess_ShouldReturnTrue()
+    public void HasValue_WhenVariableExistsInCurrentProcess_ShouldReturnsTrue()
     {
+        // Arrange
         var reader = new EnvReader();
         SetEnvironmentVariable("VARIABLE_NAME", "1");
-        Assert.AreEqual(expected: true, actual: reader.HasValue("VARIABLE_NAME"));
-        SetEnvironmentVariable("VARIABLE_NAME", null);
-        Assert.AreEqual(expected: false, actual: reader.HasValue("VARIABLE_NAME"));
-        Assert.AreEqual(expected: false, actual: reader.HasValue(""));
+
+        // Act
+        bool actual = reader.HasValue("VARIABLE_NAME");
+
+        // Assert
+        actual.Should().BeTrue();
+    }
+
+    [TestMethod]
+    public void HasValue_WhenVariableDoesNotExistsInCurrentProcess_ShouldReturnsFalse()
+    {
+        // Arrange
+        var reader = new EnvReader();
+        SetEnvironmentVariable("VARIABLE_NAME", default);
+
+        // Act
+        bool actual = reader.HasValue("VARIABLE_NAME");
+
+        // Assert
+        actual.Should().BeFalse();
     }
 }

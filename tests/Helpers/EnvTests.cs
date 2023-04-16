@@ -4,64 +4,93 @@
 public class EnvTests
 {
     [TestMethod]
-    public void IsDevelopment_WhenCurrentEnvironmentIsDevelopmentOrDev_ShouldReturnTrue()
+    [DataRow("development", true)]
+    [DataRow("DEVELOPMENT", true)]
+    [DataRow("dev",         true)]
+    [DataRow("DEV",         true)]
+    [DataRow(default,       false)]
+    public void IsDevelopment_WhenCurrentEnvironmentIsDevelopmentOrDev_ShouldReturnsTrue(
+        string currentEnvironment, bool expected)
     {
-        Env.CurrentEnvironment = "development";
-        Assert.AreEqual(expected: true, actual: Env.IsDevelopment());
-        Env.CurrentEnvironment = "DEVELOPMENT";
-        Assert.AreEqual(expected: true, actual: Env.IsDevelopment());
-        Env.CurrentEnvironment = "dev";
-        Assert.AreEqual(expected: true, actual: Env.IsDevelopment());
-        Env.CurrentEnvironment = "DEV";
-        Assert.AreEqual(expected: true, actual: Env.IsDevelopment());
-        Env.CurrentEnvironment = null;
-        Assert.AreEqual(expected: false, actual: Env.IsDevelopment());
+        // Arrange
+        Env.CurrentEnvironment = currentEnvironment;
+
+        // Act
+        bool actual = Env.IsDevelopment();
+
+        // Assert
+        actual.Should().Be(expected);
     }
 
     [TestMethod]
-    public void IsTest_WhenCurrentEnvironmentIsTest_ShouldReturnTrue()
+    [DataRow("test",  true)]
+    [DataRow("TEST",  true)]
+    [DataRow(default, false)]
+    public void IsTest_WhenCurrentEnvironmentIsTest_ShouldReturnsTrue(
+        string currentEnvironment, bool expected)
     {
-        Env.CurrentEnvironment = "test";
-        Assert.AreEqual(expected: true, actual: Env.IsTest());
-        Env.CurrentEnvironment = "TEST";
-        Assert.AreEqual(expected: true, actual: Env.IsTest());
-        Env.CurrentEnvironment = null;
-        Assert.AreEqual(expected: false, actual: Env.IsTest());
+        // Arrange
+        Env.CurrentEnvironment = currentEnvironment;
+
+        // Act
+        bool actual = Env.IsTest();
+
+        // Assert
+        actual.Should().Be(expected);
     }
 
     [TestMethod]
-    public void IsStaging_WhenCurrentEnvironmentIsStaging_ShouldReturnTrue()
+    [DataRow("staging", true)]
+    [DataRow("STAGING", true)]
+    [DataRow(default,   false)]
+    public void IsStaging_WhenCurrentEnvironmentIsStaging_ShouldReturnsTrue(
+        string currentEnvironment, bool expected)
     {
-        Env.CurrentEnvironment = "staging";
-        Assert.AreEqual(expected: true, actual: Env.IsStaging());
-        Env.CurrentEnvironment = "STAGING";
-        Assert.AreEqual(expected: true, actual: Env.IsStaging());
-        Env.CurrentEnvironment = null;
-        Assert.AreEqual(expected: false, actual: Env.IsStaging());
+        // Arrange
+        Env.CurrentEnvironment = currentEnvironment;
+
+        // Act
+        bool actual = Env.IsStaging();
+
+        // Assert
+        actual.Should().Be(expected);
     }
 
     [TestMethod]
-    public void IsProduction_WhenCurrentEnvironmentIsProductionOrProd_ShouldReturnTrue()
+    [DataRow("production", true)]
+    [DataRow("PRODUCTION", true)]
+    [DataRow("prod",       true)]
+    [DataRow("PROD",       true)]
+    [DataRow(default,      false)]
+    public void IsProduction_WhenCurrentEnvironmentIsProductionOrProd_ShouldReturnsTrue(
+        string currentEnvironment, bool expected)
     {
-        Env.CurrentEnvironment = "production";
-        Assert.AreEqual(expected: true, actual: Env.IsProduction());
-        Env.CurrentEnvironment = "PRODUCTION";
-        Assert.AreEqual(expected: true, actual: Env.IsProduction());
-        Env.CurrentEnvironment = "prod";
-        Assert.AreEqual(expected: true, actual: Env.IsProduction());
-        Env.CurrentEnvironment = "PROD";
-        Assert.AreEqual(expected: true, actual: Env.IsProduction());
-        Env.CurrentEnvironment = null;
-        Assert.AreEqual(expected: false, actual: Env.IsProduction());
+        // Arrange
+        Env.CurrentEnvironment = currentEnvironment;
+
+        // Act
+        bool actual = Env.IsProduction();
+
+        // Assert
+        actual.Should().Be(expected);
     }
 
     [TestMethod]
-    public void IsEnvironment_WhenCurrentEnvironmentIsProductionAndValueSpecifiedIsProduction_ShouldReturnTrue()
+    [DataRow("production", "Production", true)]
+    [DataRow("production", "PRODUCTION", true)]
+    [DataRow(default,      "production", false)]
+    public void IsEnvironment_WhenCurrentEnvironmentIsProductionAndValueSpecifiedIsProduction_ShouldReturnsTrue(
+        string currentEnvironment,
+        string environmentName,
+        bool expected)
     {
-        Env.CurrentEnvironment = "production";
-        Assert.AreEqual(expected: true, actual: Env.IsEnvironment("production"));
-        Assert.AreEqual(expected: true, actual: Env.IsEnvironment("PRODUCTION"));
-        Env.CurrentEnvironment = null;
-        Assert.AreEqual(expected: false, actual: Env.IsEnvironment("production"));
+        // Arrange
+        Env.CurrentEnvironment = currentEnvironment;
+
+        // Act
+        bool actual = Env.IsEnvironment(environmentName);
+
+        // Assert
+        actual.Should().Be(expected);
     }
 }

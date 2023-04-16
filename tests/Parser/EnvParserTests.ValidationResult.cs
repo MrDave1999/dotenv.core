@@ -5,10 +5,12 @@ public partial class EnvParserTests
     [TestMethod]
     public void Parse_WhenAnErrorIsFound_ShouldStoreErrorMessageInCollection()
     {
+        // Arrange
         var parser = new EnvParser().IgnoreParserException();
-        string env, msg;
+        string env;
         EnvValidationResult result;
 
+        // Act
         env = @"This is an error
                 =VAL1
                 ERRORS_ARE_FOUND_1 = ${VARIABLE_NOT_FOUND} World! ${VARIABLE_NOT_FOUND_2}
@@ -39,100 +41,102 @@ public partial class EnvParserTests
             ";
         parser.Parse(env, out result);
 
-        msg = result.ErrorMessages;
-        Assert.AreEqual(expected: true, actual: result.HasError());
-        Assert.AreEqual(expected: 16, actual: result.Count);
+        // Asserts
+        result.HasError().Should().BeTrue();
+        result.Should().HaveCount(16);
 
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "This is an error", 
             lineNumber: 1, 
             column: 1
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "                =VAL1",
             lineNumber: 2, 
             column: 1
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND", 
             lineNumber: 3, 
             column: 40
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND_2", 
             lineNumber: 3, 
             column: 69
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableIsAnEmptyStringMessage, 
             actualValue: "${}", 
             lineNumber: 5, 
             column: 38
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableIsAnEmptyStringMessage, 
             actualValue: "${   }", 
             lineNumber: 5, 
             column: 55
         ));
 
-        StringAssert.Contains(msg, FormatParserExceptionMessage(DataSourceIsEmptyOrWhitespaceMessage));
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
+            DataSourceIsEmptyOrWhitespaceMessage
+        ));
 
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "This is a line", 
             lineNumber: 1, 
             column: 1
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "                =VAL2", 
             lineNumber: 2, 
             column: 1
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND", 
             lineNumber: 3, 
             column: 40
         ));
 
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "This is a message", 
             lineNumber: 1, 
             column: 1
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "                =VAL3", 
             lineNumber: 2, 
             column: 1
         ));
 
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "                KEY", 
             lineNumber: 3, 
             column: 1
         ));
 
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoEndDoubleQuoteMessage, 
             lineNumber: 2, 
             column: 1
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND", 
             lineNumber: 3, 
             column: 28
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND_2", 
             lineNumber: 4, 

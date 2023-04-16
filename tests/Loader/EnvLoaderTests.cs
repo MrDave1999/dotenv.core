@@ -6,6 +6,7 @@ public partial class EnvLoaderTests
     [TestMethod]
     public void Load_WhenErrorsAreFound_ShouldThrowParserException()
     {
+        // Arrange
         var loader = new EnvLoader()
                          .SetBasePath("Loader/env_files/validation")
                          .AddEnvFile(".env.validation.result1")
@@ -13,28 +14,39 @@ public partial class EnvLoaderTests
                          .AddEnvFile(".env.validation.result3")
                          .AddEnvFile(".env.validation.result4");
 
-        void action() => loader.Load();
+        // Act
+        Action act = () => loader.Load();
 
-        Assert.ThrowsException<ParserException>(action);
+        // Assert
+        act.Should().Throw<ParserException>();
     }
 
     [TestMethod]
     public void Load_WhenEnvFilesAreOptional_ShouldNotGenerateAnErrorIfTheFileDoesNotExist()
     {
-        new EnvLoader()
+        // Arrange
+        var loader = new EnvLoader();
+
+        // Act
+        loader
             .AddEnvFile(".env.example1", Encoding.UTF8, optional: true)
             .AddEnvFile(".env.example2", encodingName: "UTF-8", optional: true)
             .AddEnvFile(".env.example3", optional: true)
             .Load(out var result);
 
-        Assert.AreEqual(expected: false, actual: result.HasError());
-        Assert.AreEqual(expected: 0, actual: result.Count);
+        // Asserts
+        result.HasError().Should().BeFalse();
+        result.Should().BeEmpty();
     }
 
     [TestMethod]
     public void Load_WhenAllEnvFilesAreOptional_ShouldNotGenerateAnErrorIfTheFileDoesNotExist()
     {
-        new EnvLoader()
+        // Arrange
+        var loader = new EnvLoader();
+
+        // Act
+       loader
             .AddEnvFile(".env.example1", Encoding.UTF8)
             .AddEnvFile(".env.example2", encodingName: "UTF-8")
             .AddEnvFile(".env.example3")
@@ -45,52 +57,70 @@ public partial class EnvLoaderTests
             .AllowAllEnvFilesOptional()
             .Load(out var result);
 
-        Assert.AreEqual(expected: false, actual: result.HasError());
-        Assert.AreEqual(expected: 0, actual: result.Count);
+        // Asserts
+        result.HasError().Should().BeFalse();
+        result.Should().BeEmpty();
     }
 
     [TestMethod]
     public void Load_WhenDefaultEnvFileIsOptional_ShouldNotGenerateAnErrorIfTheFileDoesNotExist()
     {
-        new EnvLoader()
+        // Arrange
+        var loader = new EnvLoader();
+
+        // Act
+        loader
             .SetBasePath("dotnet/files")
             .AllowAllEnvFilesOptional()
             // Loads a default file: .env
             .Load(out var result);
 
-        Assert.AreEqual(expected: false, actual: result.HasError());
-        Assert.AreEqual(expected: 0, actual: result.Count);
+        // Asserts
+        result.HasError().Should().BeFalse();
+        result.Should().BeEmpty();
     }
 
     [TestMethod]
     public void Load_WhenIgnoresSearchInParentDirectories_ShouldOnlySearchInTheCurrentDirectory()
     {
-        new EnvLoader()
+        // Arrange
+        var loader = new EnvLoader();
+
+        // Act
+        loader
             .AddEnvFile("Loader/env_files/.env.parent.directories")
             // This file if copied to the current directory.
             .AddEnvFile(".env.only.currentdirectory")
             .IgnoreParentDirectories()
             .Load();
 
-        Assert.IsNull(GetEnvironmentVariable("PARENT_DIRECTORIES"));
-        Assert.IsNotNull(GetEnvironmentVariable("ONLY_CURRENT_DIRECTORY"));
+        // Asserts
+        GetEnvironmentVariable("PARENT_DIRECTORIES").Should().BeNull();
+        GetEnvironmentVariable("ONLY_CURRENT_DIRECTORY").Should().NotBeNull();
     }
 
     [TestMethod]
     public void Load_WhenLoadEnvFileWithDefaultConfig_ShouldSetEnvironmentVariablesFromAnEnvFile()
     {
+        // Arrange
         var loader = new EnvLoader();
 
+        // Act
         loader.Load();
 
-        Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("CONFIG_DEFAULT_1"));
-        Assert.AreEqual(expected: "VAL2", actual: GetEnvironmentVariable("CONFIG_DEFAULT_2"));
+        // Asserts
+        GetEnvironmentVariable("CONFIG_DEFAULT_1").Should().Be("VAL1");
+        GetEnvironmentVariable("CONFIG_DEFAULT_2").Should().Be("VAL2");
     }
 
     [TestMethod]
     public void Load_WhenLoadEnvFileWithCustomConfig_ShouldSetEnvironmentVariablesFromAnEnvFile()
     {
-        new EnvLoader()
+        // Arrange
+        var loader = new EnvLoader();
+
+        // Act
+        loader
             .SetBasePath("Loader/env_files")
             .DisableTrimStartValues()
             .DisableTrimEndValues()
@@ -101,49 +131,65 @@ public partial class EnvLoaderTests
             .AddEnvFile(".env.custom.configuration")
             .Load();
 
-        Assert.AreEqual(expected: " VAL1 ", actual: GetEnvironmentVariable(" CONFIG_CUSTOM_1 "));
-        Assert.AreEqual(expected: " VAL2 ", actual: GetEnvironmentVariable(" CONFIG_CUSTOM_2 "));
+        // Asserts
+        GetEnvironmentVariable(" CONFIG_CUSTOM_1 ").Should().Be(" VAL1 ");
+        GetEnvironmentVariable(" CONFIG_CUSTOM_2 ").Should().Be(" VAL2 ");
     }
 
     [TestMethod]
     public void Load_WhenSetsEncoding_ShouldLoadTheEnvFileCorrectly()
     {
-        new EnvLoader()
+        // Arrange
+        var loader = new EnvLoader();
+
+        // Act
+        loader
             .SetBasePath("Loader/env_files")
             .SetEncoding("UTF-8")
             .AddEnvFile(".env.unicode.chinese")
             .AddEnvFile(".env.unicode.russian")
             .Load();
 
-        Assert.AreEqual(expected: "我们先 坐二号线% 然后 换一号线%", actual: GetEnvironmentVariable("UNICODE_CHINESE"));
-        Assert.AreEqual(expected: "Привет мир! Привет, чем занимаешься", actual: GetEnvironmentVariable("UNICODE_RUSSIAN"));
+        // Asserts
+        GetEnvironmentVariable("UNICODE_CHINESE").Should().Be("我们先 坐二号线% 然后 换一号线%");
+        GetEnvironmentVariable("UNICODE_RUSSIAN").Should().Be("Привет мир! Привет, чем занимаешься");
     }
 
     [TestMethod]
     public void SetEncoding_WhenEncodingNameIsNotSupported_ShouldThrowArgumentException()
     {
+        // Arrange
         var loader = new EnvLoader();
 
-        void action() => loader.SetEncoding("UTF-88");
+        // Act
+        Action act = () => loader.SetEncoding("UTF-88");
 
-        Assert.ThrowsException<ArgumentException>(action);
+        // Assert
+        act.Should().Throw<ArgumentException>();
     }
 
     [TestMethod]
     public void AddEnvFile_WhenEncodingNameIsNotSupported_ShouldThrowArgumentException()
     {
+        // Arrange
         var loader = new EnvLoader();
 
-        void action() => loader.AddEnvFile(".env", "UTF-88");
+        // Act
+        Action act = () => loader.AddEnvFile(".env", "UTF-88");
 
-        Assert.ThrowsException<ArgumentException>(action);
+        // Assert
+        act.Should().Throw<ArgumentException>();
     }
 
     [TestMethod]
     public void Load_WhenLoadMultiEnvFiles_ShouldSetEnvironmentVariablesFromAnEnvFile()
     {
+        // Arrange
+        var loader = new EnvLoader();
         string absolutePath = Directory.GetCurrentDirectory();
-        new EnvLoader()
+
+        // Act
+        loader
             .SetBasePath("Loader/env_files/multi")
             .AddEnvFiles(".env.multi1", "./", ".env.multi2")
             .AddEnvFile(".env.multi3")
@@ -152,70 +198,90 @@ public partial class EnvLoaderTests
             .AddEnvFile($"{absolutePath}/.env.multi6.absolute")
             .Load();
 
-        Assert.IsNotNull(GetEnvironmentVariable("ENV_MULTI"));
-        Assert.IsNotNull(GetEnvironmentVariable("ENV_MULTI_1"));
-        Assert.IsNotNull(GetEnvironmentVariable("ENV_MULTI_2"));
-        Assert.IsNotNull(GetEnvironmentVariable("ENV_MULTI_3"));
-        Assert.IsNotNull(GetEnvironmentVariable("ENV_MULTI_4"));
-        Assert.IsNotNull(GetEnvironmentVariable("ENV_MULTI_5"));
-        Assert.IsNotNull(GetEnvironmentVariable("ENV_MULTI_6"));
+        // Asserts
+        GetEnvironmentVariable("ENV_MULTI").Should().NotBeNull();
+        GetEnvironmentVariable("ENV_MULTI_1").Should().NotBeNull();
+        GetEnvironmentVariable("ENV_MULTI_2").Should().NotBeNull();
+        GetEnvironmentVariable("ENV_MULTI_3").Should().NotBeNull();
+        GetEnvironmentVariable("ENV_MULTI_4").Should().NotBeNull();
+        GetEnvironmentVariable("ENV_MULTI_5").Should().NotBeNull();
+        GetEnvironmentVariable("ENV_MULTI_6").Should().NotBeNull();
     }
 
     [TestMethod]
     public void Load_WhenEnvFileIsAddedAsDirectory_ShouldCombineDirectoryWithDefaultEnvFileName()
     {
-        new EnvLoader()
+        // Arrange
+        var loader = new EnvLoader();
+
+        // Act
+        loader
             .SetBasePath("Loader/env_files")
             .SetDefaultEnvFileName(".env.dev")
             // Equivalent to: ./foo/.env.dev, ./bar/.env.dev
             .AddEnvFiles("./foo", "./bar")
             .Load();
 
-        Assert.IsNotNull(GetEnvironmentVariable("HAS_NOT_EXTENSION_1"));
-        Assert.IsNotNull(GetEnvironmentVariable("HAS_NOT_EXTENSION_2"));
+        // Asserts
+        GetEnvironmentVariable("HAS_NOT_EXTENSION_1").Should().NotBeNull();
+        GetEnvironmentVariable("HAS_NOT_EXTENSION_2").Should().NotBeNull();
     }
 
     [TestMethod]
     public void Load_WhenEnvFileIsInTheCurrentDirectory_ShouldReadContentsOfTheEnvFile()
     {
-        new EnvLoader()
+        // Arrange
+        var loader = new EnvLoader();
+
+        // Act
+        loader
             .SetDefaultEnvFileName(".env.local")
             .Load();
 
-        Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("CURRENT_DIRECTORY"));
+        // Assert
+        GetEnvironmentVariable("CURRENT_DIRECTORY").Should().Be("VAL1");
     }
 
     [TestMethod]
     public void Load_WhenEnvFileIsInAnAbsolutePath_ShouldReadContentsOfTheEnvFile()
     {
+        // Arrange
+        var loader = new EnvLoader();
         string absolutePath = Directory.GetCurrentDirectory();
 
-        new EnvLoader()
+        // Act
+        loader
             .SetBasePath(absolutePath)
             .AddEnvFile(".env.absolute")
             .AddEnvFile(Path.Combine(absolutePath, ".env.absolute2"))
             .Load();
 
-        Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("PATH_ABSOLUTE"));
-        Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("PATH_ABSOLUTE2"));
+        // Asserts
+        GetEnvironmentVariable("PATH_ABSOLUTE").Should().Be("VAL1");
+        GetEnvironmentVariable("PATH_ABSOLUTE2").Should().Be("VAL1");
     }
 
     [TestMethod]
     public void Load_WhenEnvFileIsInAnRelativePath_ShouldReadContentsOfTheEnvFile()
     {
+        // Arrange
+        var loader = new EnvLoader();
         string relativePath = "./dotenv/files";
 
-        new EnvLoader()
+        // Act
+        loader
             .SetBasePath(relativePath)
             .AddEnvFile(".env.relative")
             .Load();
 
-        Assert.AreEqual(expected: "VAL1", actual: GetEnvironmentVariable("PATH_RELATIVE"));
+        // Assert
+        GetEnvironmentVariable("PATH_RELATIVE").Should().Be("VAL1");
     }
 
     [TestMethod]
     public void Load_WhenEnvFileNotFound_ShouldThrowFileNotFoundException()
     {
+        // Arrange
         var loader = new EnvLoader()
                          .AddEnvFiles(
                             ".env.not.found", 
@@ -226,18 +292,23 @@ public partial class EnvLoaderTests
                            )
                          .EnableFileNotFoundException();
 
-        void action() => loader.Load();
+        // Act
+        Action act = () => loader.Load();
 
-        Assert.ThrowsException<FileNotFoundException>(action);
+        // Assert
+        act.Should().Throw<FileNotFoundException>();
     }
 
     [TestMethod]
     public void Load_WhenAnErrorIsFound_ShouldStoreErrorMessageInCollection()
     {
-        string msg;
+        // Arrange
+        var loader = new EnvLoader();
+        var basePath = "Loader/env_files/validation/";
         EnvValidationResult result;
-        string basePath = $"Loader/env_files/validation/";
-        new EnvLoader()
+
+        // Act
+        loader
             .SetBasePath(basePath)
             .IgnoreParserException()
             .AddEnvFile(".env.validation.result1")
@@ -253,47 +324,47 @@ public partial class EnvLoaderTests
               )
             .Load(out result);
 
-        msg = result.ErrorMessages;
-        Assert.AreEqual(expected: true, actual: result.HasError());
-        Assert.AreEqual(expected: 20, actual: result.Count);
+        // Asserts
+        result.HasError().Should().BeTrue();
+        result.Should().HaveCount(20);
 
         var fileName = $"{basePath}.env.validation.result1";
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "This is an error", 
             lineNumber: 1, 
             column: 1, 
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "=VAL1", 
             lineNumber: 2, 
             column: 1, 
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND", 
             lineNumber: 3, 
             column: 26, 
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND_2", 
             lineNumber: 3, 
             column: 55, 
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableIsAnEmptyStringMessage, 
             actualValue: "${}", 
             lineNumber: 5, 
             column: 24, 
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableIsAnEmptyStringMessage, 
             actualValue: "${   }", 
             lineNumber: 5, 
@@ -302,27 +373,27 @@ public partial class EnvLoaderTests
         ));
 
         fileName = $"{basePath}.env.validation.result2";
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             DataSourceIsEmptyOrWhitespaceMessage, 
             envFileName: fileName
         ));
 
         fileName = $"{basePath}.env.validation.result3";
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "This is a line", 
             lineNumber: 1, 
             column: 1, 
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "=VAL2", 
             lineNumber: 2,
             column: 1, 
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND", 
             lineNumber: 3, 
@@ -331,21 +402,21 @@ public partial class EnvLoaderTests
         ));
 
         fileName = $"{basePath}.env.validation.result4";
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "This is a message", 
             lineNumber: 1, 
             column: 1, 
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "=VAL3", 
             lineNumber: 2, 
             column: 1, 
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoKeyValuePairMessage, 
             actualValue: "KEY", 
             lineNumber: 4, 
@@ -354,20 +425,20 @@ public partial class EnvLoaderTests
         ));
 
         fileName = $"{basePath}.env.validation.result5";
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             LineHasNoEndDoubleQuoteMessage, 
             lineNumber: 1, 
             column: 1,
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND", 
             lineNumber: 2, 
             column: 12,
             envFileName: fileName
         ));
-        StringAssert.Contains(msg, FormatParserExceptionMessage(
+        result.ErrorMessages.Should().Contain(FormatParserExceptionMessage(
             VariableNotSetMessage, 
             actualValue: "VARIABLE_NOT_FOUND_2", 
             lineNumber: 3, 
@@ -375,9 +446,17 @@ public partial class EnvLoaderTests
             envFileName: fileName
         ));
 
-        StringAssert.Contains(msg, string.Format(FileNotFoundMessage, $"{basePath}.env.not.found3"));
-        StringAssert.Contains(msg, string.Format(FileNotFoundMessage, $"{basePath}.env.not.found4"));
-        StringAssert.Contains(msg, string.Format(FileNotFoundMessage, $"{basePath}.env.not.found5"));
-        StringAssert.Contains(msg, string.Format(FileNotFoundMessage, $"{basePath}.env.not.found6"));
+        result.ErrorMessages
+              .Should()
+              .Contain(string.Format(FileNotFoundMessage, $"{basePath}.env.not.found3"));
+        result.ErrorMessages
+              .Should()
+              .Contain(string.Format(FileNotFoundMessage, $"{basePath}.env.not.found4"));
+        result.ErrorMessages
+              .Should()
+              .Contain(string.Format(FileNotFoundMessage, $"{basePath}.env.not.found5"));
+        result.ErrorMessages
+              .Should()
+              .Contain(string.Format(FileNotFoundMessage, $"{basePath}.env.not.found6"));
     }
 }

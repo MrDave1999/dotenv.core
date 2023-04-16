@@ -3,154 +3,154 @@
 public partial class EnvReaderTests
 {
     [TestMethod]
-    public void TryGetBoolValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetBoolValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_BOOL", "true");
         reader.TryGetBoolValue("KEY_BOOL", out bool actual);
-        Assert.AreEqual(expected: true, actual);
+        actual.Should().BeTrue();
         SetEnvironmentVariable("KEY_BOOL", "false");
         reader.TryGetBoolValue("KEY_BOOL", out actual);
-        Assert.AreEqual(expected: false, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetBoolValue(VariableNotFound, out _));
+        actual.Should().BeFalse();
+        reader.TryGetBoolValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetByteValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetByteValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_BYTE", "2");
         reader.TryGetByteValue("KEY_BYTE", out byte actual);
-        Assert.AreEqual(expected: (byte)2, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetByteValue(VariableNotFound, out _));
+        actual.Should().Be(2);
+        reader.TryGetByteValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetCharValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetCharValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_CHAR", "A");
         reader.TryGetCharValue("KEY_CHAR", out char actual);
-        Assert.AreEqual(expected: 'A', actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetCharValue(VariableNotFound, out _));
+        actual.Should().Be('A');
+        reader.TryGetCharValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetDecimalValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetDecimalValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_DECIMAL", "12.5");
         reader.TryGetDecimalValue("KEY_DECIMAL", out decimal actual);
-        Assert.AreEqual(expected: 12.5M, actual);
+        actual.Should().Be(12.5M);
         SetEnvironmentVariable("KEY_DECIMAL", "12,5");
         reader.TryGetDecimalValue("KEY_DECIMAL", out actual);
-        Assert.AreEqual(expected: 125M, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetDecimalValue(VariableNotFound, out _));
+        actual.Should().Be(125M);
+        reader.TryGetDecimalValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetDoubleValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetDoubleValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_DOUBLE", "12.5");
         reader.TryGetDoubleValue("KEY_DOUBLE", out double actual);
-        Assert.AreEqual(expected: 12.5D, actual);
+        actual.Should().Be(12.5D);
         SetEnvironmentVariable("KEY_DOUBLE", "12,5");
         reader.TryGetDoubleValue("KEY_DOUBLE", out actual);
-        Assert.AreEqual(expected: 125D, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetDoubleValue(VariableNotFound, out _));
+        actual.Should().Be(125D);
+        reader.TryGetDoubleValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetFloatValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetFloatValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_FLOAT", "12.5");
         reader.TryGetFloatValue("KEY_FLOAT", out float actual);
-        Assert.AreEqual(expected: 12.5F, actual);
+        actual.Should().Be(12.5F);
         SetEnvironmentVariable("KEY_FLOAT", "12,5");
         reader.TryGetFloatValue("KEY_FLOAT", out actual);
-        Assert.AreEqual(expected: 125F, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetFloatValue(VariableNotFound, out _));
+        actual.Should().Be(125F);
+        reader.TryGetFloatValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetIntValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetIntValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_INT", "3");
         reader.TryGetIntValue("KEY_INT", out int actual);
-        Assert.AreEqual(expected: 3, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetIntValue(VariableNotFound, out _));
+        actual.Should().Be(3);
+        reader.TryGetIntValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetLongValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetLongValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_LONG", "3");
         reader.TryGetLongValue("KEY_LONG", out long actual);
-        Assert.AreEqual(expected: 3L, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetLongValue(VariableNotFound, out _));
+        actual.Should().Be(3L);
+        reader.TryGetLongValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetSByteValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetSByteValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_SBYTE", "3");
         reader.TryGetSByteValue("KEY_SBYTE", out sbyte actual);
-        Assert.AreEqual(expected: (sbyte)3, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetSByteValue(VariableNotFound, out _));
+        actual.Should().Be(3);
+        reader.TryGetSByteValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetShortValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetShortValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_SHORT", "3");
         reader.TryGetShortValue("KEY_SHORT", out short actual);
-        Assert.AreEqual(expected: (short)3, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetShortValue(VariableNotFound, out _));
+        actual.Should().Be(3);
+        reader.TryGetShortValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetStringValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetStringValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_STRING", "This is a string.");
         reader.TryGetStringValue("KEY_STRING", out string actual);
-        Assert.AreEqual(expected: "This is a string.", actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetStringValue(VariableNotFound, out _));
+        actual.Should().Be("This is a string.");
+        reader.TryGetStringValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetUIntValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetUIntValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_UINT", "2");
         reader.TryGetUIntValue("KEY_UINT", out uint actual);
-        Assert.AreEqual(expected: 2U, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetUIntValue(VariableNotFound, out _));
+        actual.Should().Be(2U);
+        reader.TryGetUIntValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetULongValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetULongValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_ULONG", "2");
         reader.TryGetULongValue("KEY_ULONG", out ulong actual);
-        Assert.AreEqual(expected: 2UL, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetULongValue(VariableNotFound, out _));
+        actual.Should().Be(2UL);
+        reader.TryGetULongValue(VariableNotFound, out _).Should().BeFalse();
     }
 
     [TestMethod]
-    public void TryGetUShortValue_WhenVariableIsSet_ShouldTryGetValueOfTheVariable()
+    public void TryGetUShortValue_WhenVariableIsSet_ShouldTryGetValue()
     {
         var reader = new EnvReader();
         SetEnvironmentVariable("KEY_USHORT", "2");
         reader.TryGetUShortValue("KEY_USHORT", out ushort actual);
-        Assert.AreEqual(expected: (ushort)2, actual);
-        Assert.AreEqual(expected: false, actual: reader.TryGetUShortValue(VariableNotFound, out _));
+        actual.Should().Be(2);
+        reader.TryGetUShortValue(VariableNotFound, out _).Should().BeFalse();
     }
 }
