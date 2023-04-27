@@ -12,9 +12,13 @@ Console.WriteLine("UserName=" + userName);
 var dbHost = EnvReader.Instance[AppSettings.DbHost];
 Console.WriteLine("Host=" + dbHost);
 
+var dbPassword = AppSettings.DbPassword.GetEnv();
+Console.WriteLine("Password=" + dbPassword);
+
 public class AppSettings
 {
     public const string DbHost           = "DB_HOST";
     public const string DbUserName       = "DB_USERNAME";
+    public const string DbPassword       = "DB_PASSWORD";
     public const string ConnectionString = "DB_CONNECTION_STRING";
 }
