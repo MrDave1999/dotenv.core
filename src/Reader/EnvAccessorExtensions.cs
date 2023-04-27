@@ -24,7 +24,7 @@ public static class EnvAccessorExtensions
     /// </summary>
     /// <typeparam name="TConversionType">The type of object to return.</typeparam>
     /// <param name="variable">The name of the environment variable.</param>
-    /// <returns>An value whose type is <c>conversionType</c>.</returns>
+    /// <returns>An value whose type is <typeparamref name="TConversionType" />.</returns>
     /// <exception cref="ArgumentNullException"><c>variable</c> is <c>null</c>.</exception>
     /// <exception cref="VariableNotSetException"><c>variable</c> is not set in current process.</exception>
     public static TConversionType GetEnv<TConversionType>(this string variable) 
