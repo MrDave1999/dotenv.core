@@ -18,4 +18,13 @@ public static class EnvAccessorExtensions
     /// <exception cref="VariableNotSetException"><c>variable</c> is not set in current process.</exception>
     public static string GetEnv(this string variable)
         => EnvReader.Instance[variable];
+
+    /// <summary>
+    /// Gets the value of an environment variable in a specific format.
+    /// </summary>
+    /// <typeparam name="TConversionType">The type of object to return.</typeparam>
+    /// <param name="variable">The name of the environment variable.</param>
+    /// <returns>An value whose type is <c>conversionType</c>.</returns>
+    public static TConversionType GetEnv<TConversionType>(this string variable) where TConversionType : IConvertible
+        => (TConversionType)Convert.ChangeType(value: EnvReader.Instance[variable], typeof(TConversionType));
 }
