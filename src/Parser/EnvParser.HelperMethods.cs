@@ -43,8 +43,7 @@ public partial class EnvParser
     private string RemoveInlineComment(string line, out string comment)
     {
         _ = line ?? throw new ArgumentNullException(nameof(line));
-        var separator = $" {_configuration.CommentChar}";
-        var substrings = line.Split(new[] { separator }, MaxCount, StringSplitOptions.None);
+        var substrings = line.Split(_commentChars, MaxCount, StringSplitOptions.None);
         comment = substrings.Length == 1 ? null : substrings[1];
         return substrings[0];
     }
