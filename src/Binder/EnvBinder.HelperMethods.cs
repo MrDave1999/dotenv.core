@@ -33,4 +33,28 @@ public partial class EnvBinder
         variableName = newKey.ToString();
         return variableName;
     }
+
+    /// <summary>
+    /// Changes the data type of a value to another type.
+    /// </summary>
+    /// <param name="value">The value to convert.</param>
+    /// <param name="conversionType">The type of object to return.</param>
+    /// <returns>
+    /// A tuple with the converted value and 
+    /// a boolean value indicating whether the operation was successful.
+    /// </returns>
+    private (object Value, bool Success) ChangeType(string value, Type conversionType)
+    {
+        try
+        {
+            var convertedValue = DotEnvHelper.ChangeType(value, conversionType);
+            return (convertedValue, true);
+        }
+        catch (Exception ex) 
+            when (ex is FormatException || 
+                  ex is ArgumentException)
+        {
+            return (default, false);
+        }
+    }
 }

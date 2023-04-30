@@ -132,17 +132,19 @@ public class EnvBinderTests
     }
 
     [TestMethod]
-    public void Bind_WhenKeyCannotBeConvertedToEnum_ShouldThrowBinderException()
+    [DataRow("Yellow")]
+    [DataRow(" ")]
+    public void Bind_WhenKeyCannotBeConvertedToEnum_ShouldThrowBinderException(string value)
     {
         // Arrange
         var binder = new EnvBinder();
         SetEnvironmentVariable("BIND_WEATHER_ID", "1");
-        SetEnvironmentVariable("COLOR_NAME",      "Yellow");
+        SetEnvironmentVariable("COLOR_NAME", value);
         var expectedMessage = string.Format(
             FailedConvertConfigurationValueMessage,
             "COLOR_NAME",
             nameof(Colors),
-            "Yellow",
+            value,
             nameof(Colors)
         );
 
