@@ -31,6 +31,6 @@ public static class EnvAccessorExtensions
         where TConversionType : IConvertible
     {
         var retrievedValue = EnvReader.Instance[variable];
-        return (TConversionType)Convert.ChangeType(retrievedValue, typeof(TConversionType));
+        return (TConversionType)DotEnvHelper.ChangeType(retrievedValue, typeof(TConversionType));
     }
 }
