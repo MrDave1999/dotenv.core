@@ -142,9 +142,12 @@ public partial class EnvParserTests
     public void Parse_WhenSetsCommentChar_ShouldIgnoreComment()
     {
         // Arrange
-        var env = @"
-            ;KEY1 = VAL1
-            ;KEY2 = VAL2
+        var env = $@"
+            {"\t"};COMMENT_CHAR_1 = VAL
+            ;COMMENT_CHAR_2 = VAL
+             COMMENT_CHAR_3 = VAL ;This comment should be ignored.
+             COMMENT_CHAR_4 = VAL{"\t"};This comment should be ignored.
+             COMMENT_CHAR_5 = VAL {"\t\t"};This comment should be ignored.
         ";
         var parser = new EnvParser();
 
@@ -154,9 +157,11 @@ public partial class EnvParserTests
             .Parse(env);
 
         // Asserts
-        GetEnvironmentVariable(";KEY1").Should().BeNull();
-        GetEnvironmentVariable(";KEY2").Should().BeNull();
-
+        GetEnvironmentVariable(";COMMENT_CHAR_1").Should().BeNull();
+        GetEnvironmentVariable(";COMMENT_CHAR_2").Should().BeNull();
+        GetEnvironmentVariable("COMMENT_CHAR_3").Should().Be("VAL");
+        GetEnvironmentVariable("COMMENT_CHAR_4").Should().Be("VAL");
+        GetEnvironmentVariable("COMMENT_CHAR_5").Should().Be("VAL");
     }
 
     [TestMethod]
