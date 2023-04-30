@@ -68,7 +68,8 @@ public partial class EnvParser
     /// <inheritdoc />
     public IEnvParser SetCommentChar(char commentChar)
     {
-        _configuration.CommentChar = commentChar;
+        _configuration.CommentChar  = commentChar;
+        _configuration.CommentChars = new[] { $" {commentChar}", $"\t{commentChar}" };
         return this;
     }
 

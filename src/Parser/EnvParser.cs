@@ -21,12 +21,6 @@ public partial class EnvParser : IEnvParser
     private const int MaxCount = 2;
 
     /// <summary>
-    /// Allows access to the characters representing a comment to be used 
-    /// as delimiter in the <see cref="RemoveInlineComment" /> method.
-    /// </summary>
-    private string[] _commentChars;
-
-    /// <summary>
     /// Allows access to the configuration options for the parser.
     /// </summary>
     private readonly EnvParserOptions _configuration = new();
@@ -47,12 +41,6 @@ public partial class EnvParser : IEnvParser
     /// </summary>
     internal IEnvironmentVariablesProvider EnvVarsProvider 
         => _configuration.EnvVars;
-
-    /// <summary>
-    /// Gets the comment characters used as delimiter in the <see cref="RemoveInlineComment" /> method.
-    /// </summary>
-    private string[] GetCommentChars()
-        => new[] { $" {_configuration.CommentChar}", $"\t{_configuration.CommentChar}" };
 
     /// <inheritdoc />
     public IEnvironmentVariablesProvider Parse(string dataSource)
@@ -75,7 +63,6 @@ public partial class EnvParser : IEnvParser
         }
 
         var lines = dataSource.Split(s_newLines, StringSplitOptions.None);
-        _commentChars = GetCommentChars();
         for (int i = 0, len = lines.Length; i < len; ++i)
         {
             var line = lines[i];
