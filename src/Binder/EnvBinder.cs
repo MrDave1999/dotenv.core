@@ -84,20 +84,20 @@ public partial class EnvBinder : IEnvBinder
                 continue;
             }
 
-            try
+            var conversionResponse = ChangeType(retrievedValue, property.PropertyType);
+            if (conversionResponse.Success)
             {
-                property.SetValue(settings, DotEnvHelper.ChangeType(retrievedValue, property.PropertyType));
+                property.SetValue(settings, conversionResponse.Value);
+                continue;
             }
-            catch (FormatException)
-            {
-                _validationResult.Add(errorMsg: string.Format(
-                    FailedConvertConfigurationValueMessage, 
-                    variableName, 
-                    property.PropertyType.Name, 
-                    retrievedValue, 
-                    property.PropertyType.Name
-                ));
-            }
+            
+            _validationResult.Add(errorMsg: string.Format(
+                FailedConvertConfigurationValueMessage, 
+                variableName, 
+                property.PropertyType.Name, 
+                retrievedValue, 
+                property.PropertyType.Name
+            ));
         }
 
         if(_validationResult.HasError() && _configuration.ThrowException)
