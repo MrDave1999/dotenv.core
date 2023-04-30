@@ -69,6 +69,7 @@ public partial class EnvParser
     public IEnvParser SetCommentChar(char commentChar)
     {
         _configuration.CommentChar = commentChar;
+        _configuration.InlineCommentChars = new[] { $" {commentChar}", $"\t{commentChar}" };
         return this;
     }
 

@@ -39,10 +39,8 @@ public partial class EnvParser : IEnvParser
     /// <summary>
     /// Allows access to the environment variables provider.
     /// </summary>
-    internal IEnvironmentVariablesProvider EnvVarsProvider
-    {
-        get => _configuration.EnvVars;
-    }
+    internal IEnvironmentVariablesProvider EnvVarsProvider 
+        => _configuration.EnvVars;
 
     /// <inheritdoc />
     public IEnvironmentVariablesProvider Parse(string dataSource)

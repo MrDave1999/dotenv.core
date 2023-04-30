@@ -45,6 +45,12 @@ internal class EnvParserOptions
     public char CommentChar { get; set; } = '#';
 
     /// <summary>
+    /// Gets or sets the characters indicating the beginning of a inline comment 
+    /// that will be used as delimiter in the <see cref="EnvParser.RemoveInlineComment" /> method.
+    /// </summary>
+    public string[] InlineCommentChars { get; set; } = new[] { " #", "\t#" };
+
+    /// <summary>
     /// A character that separates a key-value pair. Its default value is <c>=</c>.
     /// </summary>
     public char DelimiterKeyValuePair { get; set; } = '=';

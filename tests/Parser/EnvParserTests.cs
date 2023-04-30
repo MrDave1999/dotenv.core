@@ -83,11 +83,12 @@ public partial class EnvParserTests
     public void Parse_WhenLineIsComment_ShouldIgnoreComment()
     {
         // Arrange
-        var env = @"
+        var env = $@"
             #KEY1=VAL1
                 #KEY2=VAL2
                     #KEY3=VAL3
             #KEY4=VAL4
+            {"\t\t"}#KEY5=VAL5
         ";
         var parser = new EnvParser();
 
@@ -99,6 +100,7 @@ public partial class EnvParserTests
         GetEnvironmentVariable("#KEY2").Should().BeNull();
         GetEnvironmentVariable("#KEY3").Should().BeNull();
         GetEnvironmentVariable("#KEY4").Should().BeNull();
+        GetEnvironmentVariable("#KEY5").Should().BeNull();
     }
 
     [TestMethod]
@@ -113,6 +115,9 @@ public partial class EnvParserTests
             INLINE_COMMENT_5=#This isn't an inline comment.
             INLINE_COMMENT_6= #This is an inline comment.
             INLINE_COMMENT_TOKEN=6U+c'UDH""l`ZFDD5%/|'t{Ojt.5hzu+#wUBH#:9w*l_I2z{^m/7h-U&!qcLlXZ
+        " + $@"
+            INLINE_COMMENT_7=VAL{"\t"}# This is an inline comment with tabs.
+            INLINE_COMMENT_8=VAL {"\t\t"}# This is an inline comment with tabs.
         ";
         var parser = new EnvParser();
 
@@ -132,6 +137,8 @@ public partial class EnvParserTests
             .Be("#This isn't an inline comment.");
 
         GetEnvironmentVariable("INLINE_COMMENT_6").Should().Be(" ");
+        GetEnvironmentVariable("INLINE_COMMENT_7").Should().Be("VAL");
+        GetEnvironmentVariable("INLINE_COMMENT_8").Should().Be("VAL");
         GetEnvironmentVariable("INLINE_COMMENT_TOKEN")
             .Should()
             .Be("6U+c'UDH\"l`ZFDD5%/|'t{Ojt.5hzu+#wUBH#:9w*l_I2z{^m/7h-U&!qcLlXZ");
