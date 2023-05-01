@@ -1,4 +1,6 @@
-﻿namespace DotEnv.Core;
+﻿using System.Globalization;
+
+namespace DotEnv.Core;
 
 /// <summary>
 /// Represents the Main Helper of DotEnv.
@@ -22,7 +24,7 @@ internal class DotEnvHelper
     public static object ChangeType(string value, Type conversionType)
         => conversionType.IsEnum ? 
                 Enum.Parse(conversionType, value, ignoreCase: true) : 
-                Convert.ChangeType(value, conversionType);
+                Convert.ChangeType(value, conversionType, CultureInfo.InvariantCulture);
 
     /// <summary>
     /// Checks if the passed elements are not null.
