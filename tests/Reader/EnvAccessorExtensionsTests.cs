@@ -3,11 +3,10 @@ namespace DotEnv.Core.Tests.Reader;
 [TestClass]
 public class EnvAccessorExtensionsTests
 {
-    private void GetEnvTestHelper()
+    private void GetEnvTestHelper(string expected)
     {
         // Arrange
         var variable = "GET_ENV_TEST_HELPER";
-        var expected = "Test";
         SetEnvironmentVariable(variable, expected);
 
         // Act
@@ -34,7 +33,7 @@ public class EnvAccessorExtensionsTests
     [TestMethod]
     public void GetEnv_WhenVariableExistsInCurrentProcess_ShouldReturnsValue()
     {
-        GetEnvTestHelper();
+        GetEnvTestHelper(expected: "Test");
         GetEnvTestHelper<string>(value:  "Test",  expected: "Test");
         GetEnvTestHelper<bool>(value:    "true",  expected: true);
         GetEnvTestHelper<bool>(value:    "false", expected: false);
