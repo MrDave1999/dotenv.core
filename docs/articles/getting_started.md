@@ -32,22 +32,25 @@ Remember that if no encoding is specified to the `Load` method, the default will
 
 ### Accessing variables
 
-After you have loaded the .env file with the `Load` method, you can access the environment variables using the indexer of the `EnvReader` class:
+After you have loaded the .env file with the `Load` method, you can access the environment variables using the `EnvReader` class:
 ```cs
 var reader = new EnvReader();
-string key1 = reader["KEY1"];
-string key2 = reader["KEY2"];
+string value = reader["CONNECTION_STRING"];
+int dbPort = reader.GetIntValue("DB_PORT");
 ```
 Or you can also access the environment variables using the static property `Instance`:
 ```cs
-string key1 = EnvReader.Instance["KEY1"];
-string key2 = EnvReader.Instance["KEY2"];
+string value = EnvReader.Instance["CONNECTION_STRING"];
+int dbPort = EnvReader.Instance.GetIntValue("DB_PORT");
 ```
-If you don't want to use the `EnvReader` class to access environment variables, you can use the `System.Environment` class:
+If you don't want to use the `EnvReader` class to access environment variables, you can use the `string` class:
 ```cs
-string key1 = System.Environment.GetEnvironmentVariable("KEY1");
-string key2 = System.Environment.GetEnvironmentVariable("KEY2");
+string value = "CONNECTION_STRING".GetEnv();
+int dbPort = "DB_PORT".GetEnv<int>();
 ```
+You can also use the [Environment](https://learn.microsoft.com/en-us/dotnet/api/system.environment.getenvironmentvariable?view=net-7.0) class or the [Configuration API](https://learn.microsoft.com/en-us/dotnet/core/extensions/configuration) to access the environment variables. 
+
+**Suggestion:** It is recommended to use constants to avoid hard-coded keys in the application logic. A complete example can be found [here](https://github.com/MrDave1999/dotenv.core/blob/master/example/Program.cs).
 
 ### Changing default name
 
