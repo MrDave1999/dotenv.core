@@ -127,6 +127,33 @@ references:
   commentId: Overload:DotEnv.Core.Env.IsTest
   fullName: DotEnv.Core.Env.IsTest
   nameWithType: Env.IsTest
+- uid: DotEnv.Core.EnvAccessorExtensions
+  name: EnvAccessorExtensions
+  href: api/DotEnv.Core.EnvAccessorExtensions.html
+  commentId: T:DotEnv.Core.EnvAccessorExtensions
+  fullName: DotEnv.Core.EnvAccessorExtensions
+  nameWithType: EnvAccessorExtensions
+- uid: DotEnv.Core.EnvAccessorExtensions.GetEnv(System.String)
+  name: GetEnv(String)
+  href: api/DotEnv.Core.EnvAccessorExtensions.GetEnv.html#DotEnv_Core_EnvAccessorExtensions_GetEnv_System_String_
+  commentId: M:DotEnv.Core.EnvAccessorExtensions.GetEnv(System.String)
+  fullName: DotEnv.Core.EnvAccessorExtensions.GetEnv(System.String)
+  nameWithType: EnvAccessorExtensions.GetEnv(String)
+- uid: DotEnv.Core.EnvAccessorExtensions.GetEnv*
+  name: GetEnv
+  href: api/DotEnv.Core.EnvAccessorExtensions.GetEnv.html
+  commentId: Overload:DotEnv.Core.EnvAccessorExtensions.GetEnv
+  fullName: DotEnv.Core.EnvAccessorExtensions.GetEnv
+  nameWithType: EnvAccessorExtensions.GetEnv
+- uid: DotEnv.Core.EnvAccessorExtensions.GetEnv``1(System.String)
+  name: GetEnv<TConversionType>(String)
+  href: api/DotEnv.Core.EnvAccessorExtensions.GetEnv.html#DotEnv_Core_EnvAccessorExtensions_GetEnv__1_System_String_
+  commentId: M:DotEnv.Core.EnvAccessorExtensions.GetEnv``1(System.String)
+  name.vb: GetEnv(Of TConversionType)(String)
+  fullName: DotEnv.Core.EnvAccessorExtensions.GetEnv<TConversionType>(System.String)
+  fullName.vb: DotEnv.Core.EnvAccessorExtensions.GetEnv(Of TConversionType)(System.String)
+  nameWithType: EnvAccessorExtensions.GetEnv<TConversionType>(String)
+  nameWithType.vb: EnvAccessorExtensions.GetEnv(Of TConversionType)(String)
 - uid: DotEnv.Core.EnvBinder
   name: EnvBinder
   href: api/DotEnv.Core.EnvBinder.html
