@@ -32,5 +32,10 @@
   <ItemGroup>
     <InternalsVisibleTo Include="DotEnv.Core.Tests" />
   </ItemGroup>
+
+  <ItemGroup>
+    <!-- To include the props in the NuGet package -->
+    <Content Include="build\**" Pack="true" PackagePath="build\" />
+  </ItemGroup>
   
 </Project>

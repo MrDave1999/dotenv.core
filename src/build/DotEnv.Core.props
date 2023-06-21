@@ -1,0 +1,23 @@
+<Project>
+
+  <PropertyGroup>
+    <DefaultItemExcludes>
+      $(DefaultItemExcludes);
+      **\.env.example;
+      **\example.env;
+      **\.env.sample;
+      **\sample.env;
+      **\.env.template;
+      **\template.env
+    </DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content 
+      Include="**\*.env*" 
+      CopyToPublishDirectory="PreserveNewest" 
+      Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" 
+    />
+  </ItemGroup>
+
+</Project>
