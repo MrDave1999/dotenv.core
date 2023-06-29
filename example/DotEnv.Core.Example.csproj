@@ -10,7 +10,5 @@
   <ItemGroup>
     <ProjectReference Include="..\src\DotEnv.Core.csproj" />
   </ItemGroup>
-
-  <Import Project="..\build\DotEnv.Core.props" />
   
 </Project>
