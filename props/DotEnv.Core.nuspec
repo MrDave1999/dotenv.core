@@ -7,6 +7,7 @@
         <owners>David Román Amariles</owners>
         <projectUrl>https://github.com/MrDave1999/dotenv.core</projectUrl>
         <license type="expression">MIT</license>
+        <readme>README.md</readme>
         <icon>dotenv-icon-nuget.png</icon>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
