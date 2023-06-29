@@ -7,4 +7,3 @@ This .props file excludes the following sample .env files:
 - `sample.env`
 - `.env.template`
 - `.template.env`
-
