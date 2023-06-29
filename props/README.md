@@ -7,3 +7,15 @@ This .props file excludes the following sample .env files:
 - `sample.env`
 - `.env.template`
 - `template.env`
+
+## Installation
+
+Run the following command from the terminal:
+```
+dotnet add package DotEnv.Core.Props
+```
+
+## How to use it?
+
+The .props file does not need to be used directly, simply run the `dotnet publish` command and MSBuild will copy the .env files to the publish directory.
+
