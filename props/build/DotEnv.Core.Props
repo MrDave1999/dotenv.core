@@ -24,7 +24,7 @@
     <Content 
       Include="**\*.env*" 
       CopyToPublishDirectory="PreserveNewest" 
-      Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" 
+      Exclude="$(DefaultItemExcludes)" 
     />
   </ItemGroup>
 
