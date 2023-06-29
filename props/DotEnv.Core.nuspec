@@ -18,7 +18,7 @@
     </metadata>
 
     <files>
-        <file src="..\README.md" target="" />
+        <file src="README.md" target="" />
         <file src="..\dotenv-icon-nuget.png" target="" />
         <file src="build\**" target="build" />
     </files>
