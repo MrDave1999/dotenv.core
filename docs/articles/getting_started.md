@@ -200,14 +200,18 @@ else
 
 **Note:** If you don't know what each class does, don't forget to check the [API documentation](xref:DotEnv.Core).
 
-## Copying .env file to the output directory
+## Copying .env file to the publish directory
 
-If you want to copy the .env file to the output directory, you have to add the following to your .csproj file:
+You can copy the .env file to the publish directory using the following package:
+```
+dotnet add package DotEnv.Core.Props
+```
+For more information, see the [README](https://github.com/MrDave1999/dotenv.core/tree/master/props).
+
+If you do not want to use the previous package, add the following to your `.csproj` file:
 ```xml
 <ItemGroup>
-  <Content Include=".env">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-  </Content>
+  <Content Include=".env" CopyToPublishDirectory="PreserveNewest" />
 </ItemGroup>
 ```
-**NOTE:** Your .env file must be in the same directory as the .csproj file.
+**Note:** Your .env file must be in the same directory as the .csproj file.
