@@ -10,5 +10,9 @@
   <ItemGroup>
     <ProjectReference Include="..\src\DotEnv.Core.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotEnv.Core.Props" Version="1.0.1" />
+  </ItemGroup>
   
 </Project>
