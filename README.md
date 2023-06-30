@@ -28,7 +28,7 @@ The advantage of using this library is that you do not need to set the environme
   * [Load .env file based on environment](#load-env-file-based-on-environment)
   * [Parsing .env files](#parsing-env-files)
   * [Using DotEnv in ASP.NET Core](#using-dotenv-in-aspnet-core)
-- [Copying .env file to the output directory](#copying-env-file-to-the-output-directory)
+- [Copying .env file to the publish directory](#copying-env-file-to-the-publish-directory)
 - [Extensions](#extensions)
 - [File Format](#file-format)
   * [Comments](#comments)
