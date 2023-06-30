@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>DotEnv.Core.Props</id>
+        <version>1.0.1</version>
+        <authors>David Román Amariles</authors>
+        <owners>David Román Amariles</owners>
+        <projectUrl>https://github.com/MrDave1999/dotenv.core</projectUrl>
+        <license type="expression">MIT</license>
+        <readme>README.md</readme>
+        <icon>dotenv-icon-nuget.png</icon>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>
+          dotenv.core.props is a file that represents a set of properties that will tell MSBuild to copy the .env files 
+          from the project folder to the publish directory.
+        </description>
+		<releaseNotes>
+          - fix: Added .props extension to the build/DotEnv.Core.Props file.
+		</releaseNotes>
+        <copyright>Copyright ©2023 David Román Amariles</copyright>
+        <tags>properties props dotenv env environment variables</tags>
+    </metadata>
+
+    <files>
+        <file src="README.md" target="" />
+        <file src="..\dotenv-icon-nuget.png" target="" />
+        <file src="build\**" target="build" />
+    </files>
+</package>
