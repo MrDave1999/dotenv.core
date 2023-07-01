@@ -1,3 +1,7 @@
+# Properties
+
+[![dotenv.core.props](https://buildstats.info/nuget/dotenv.core.props)](https://www.nuget.org/packages/dotenv.core.props)
+
 **DotEnv.Core.Props** is a file that represents a set of properties that will tell MSBuild to copy the .env files from the project folder to the publish directory.
 
 This .props file **excludes** the following sample .env files:
