@@ -4,9 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-// Load the .env file.
+// Loads the .env file.
 var envVars = new EnvLoader().Load();
-// Register IEnvReader to access environment variables.
+// Registers IEnvReader to access environment variables.
 builder.Services.AddSingleton<IEnvReader, EnvReader>();
 
 builder.Services.AddControllers();
@@ -15,7 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+// Access the environment variable.
 var baseUrl = envVars["APP_BASE_URL"];
+// Prints the value of the variable.
 app.Logger.LogInformation("APP_BASE_URL: {BaseUrl}", baseUrl);
 
 // Configure the HTTP request pipeline.
