@@ -50,7 +50,7 @@ int dbPort = "DB_PORT".GetEnv<int>();
 ```
 You can also use the [Environment](https://learn.microsoft.com/en-us/dotnet/api/system.environment.getenvironmentvariable?view=net-7.0) class or the [Configuration API](https://learn.microsoft.com/en-us/dotnet/core/extensions/configuration) to access the environment variables. 
 
-**Suggestion:** It is recommended to use constants to avoid hard-coded keys in the application logic. A complete example can be found [here](https://github.com/MrDave1999/dotenv.core/blob/master/example/Program.cs).
+**Suggestion:** It is recommended to use constants to avoid hard-coded keys in the application logic. A complete example can be found [here](https://github.com/MrDave1999/dotenv.core/blob/master/samples/DotEnv.Example/Program.cs).
 
 ### Changing default name
 
