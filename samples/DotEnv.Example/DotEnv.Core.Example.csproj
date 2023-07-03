@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotEnv.Core.Props" Version="1.0.1" />
+    <PackageReference Include="DotEnv.Core.Props" />
   </ItemGroup>
   
 </Project>
