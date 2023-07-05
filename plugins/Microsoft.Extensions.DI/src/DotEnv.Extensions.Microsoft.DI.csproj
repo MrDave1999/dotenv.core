@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <PackageId>Dotenv.Extensions.Microsoft.DependencyInjection</PackageId>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>David Román Amariles</Authors>
+    <Copyright>David Román Amariles</Copyright>
+    <PackageProjectUrl>https://mrdave1999.github.io/dotenv.core</PackageProjectUrl>
+    <PackageIcon>dotenv-icon-nuget.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/MrDave1999/dotenv.core</RepositoryUrl>
+    <PackageTags>dotenv, env, variables, environment, service, collection, envfile</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Description>Adds dotenv.core extensions for Microsoft.Extensions.DependencyInjection</Description>
+    <Version>2.0.0</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotEnv.Core" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\dotenv-icon-nuget.png" Pack="True" PackagePath="" />
+    <None Include="..\README.md" Pack="True" PackagePath="" />
+    <None Include="..\..\..\LICENSE" Pack="True" PackagePath="" />
+  </ItemGroup>
+
+</Project>
