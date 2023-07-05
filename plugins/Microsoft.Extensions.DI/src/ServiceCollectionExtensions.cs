@@ -1,4 +1,7 @@
-﻿namespace Microsoft.Extensions.DependencyInjection;
+﻿using System;
+using DotEnv.Core;
+
+namespace Microsoft.Extensions.DependencyInjection;
 
 public static partial class ServiceCollectionExtensions
 {
