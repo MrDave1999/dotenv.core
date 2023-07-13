@@ -28,6 +28,8 @@
           "diagrams/**/toc.yml",
           "articles/**.md",
           "articles/**/toc.yml",
+          "extensions/**.md",
+          "extensions/**/toc.yml",
           "toc.yml",
           "index.md"
         ]
@@ -55,7 +57,7 @@
       "_appTitle": "DotEnv.Core",
       "_enableNewTab": true,
       "_appFaviconPath": "images/dotenv-icon.ico",
-      "_appFooter": "Copyright 2021-2022 <b>DotEnv.Core</b>",
+      "_appFooter": "Copyright ©2021 <b>DotEnv.Core</b>",
       "_enableSearch": true,
       "_gitContribute": {
         "repo": "https://github.com/MrDave1999/dotenv.core",
