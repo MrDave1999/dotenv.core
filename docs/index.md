@@ -108,7 +108,7 @@ VAR='first line\nsecond line'
 
 ## Extensions
 
-- [Dotenv.Extensions.Microsoft.DependencyInjection](https://github.com/MrDave1999/Dotenv.Extensions.Microsoft.DependencyInjection)
+- [Dotenv.Extensions.Microsoft.DependencyInjection](https://mrdave1999.github.io/dotenv.core/extensions/microsoft_extensions_DI.html)
 
   - This package adds extension methods for [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection), which can be accessed from the `IServiceCollection` interface.
 
