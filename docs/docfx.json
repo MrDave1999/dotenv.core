@@ -5,7 +5,8 @@
         {
           "src": "..",
           "files": [
-            "src/**.csproj"
+            "src/**.csproj",
+            "plugins/Microsoft.Extensions.DI/src/**.csproj"
           ]
         }
       ],
