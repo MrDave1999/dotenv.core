@@ -7,4 +7,4 @@
 - name: GitHub
   href: https://github.com/MrDave1999/dotenv.core
 - name: Extensions
-  href: https://github.com/MrDave1999/Dotenv.Extensions.Microsoft.DependencyInjection
+  href: extensions/

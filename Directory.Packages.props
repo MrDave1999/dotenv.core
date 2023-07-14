@@ -16,5 +16,6 @@
 	
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
   </ItemGroup>
 </Project>
