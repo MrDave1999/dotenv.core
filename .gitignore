@@ -1,5 +1,7 @@
 .vs/
 docs/
-example/
+samples/
+props/
 src/
+plugins/
 tests/
