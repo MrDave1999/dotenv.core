@@ -112,7 +112,7 @@ int dbPort = EnvReader.Instance.GetIntValue(&quot;DB_PORT&quot;);
 int dbPort = &quot;DB_PORT&quot;.GetEnv&lt;int&gt;();
 </code></pre>
 <p>You can also use the <a href="https://learn.microsoft.com/en-us/dotnet/api/system.environment.getenvironmentvariable?view=net-7.0">Environment</a> class or the <a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/configuration">Configuration API</a> to access the environment variables.</p>
-<p><strong>Suggestion:</strong> It is recommended to use constants to avoid hard-coded keys in the application logic. A complete example can be found <a href="https://github.com/MrDave1999/dotenv.core/blob/master/example/Program.cs">here</a>.</p>
+<p><strong>Suggestion:</strong> It is recommended to use constants to avoid hard-coded keys in the application logic. A complete example can be found <a href="https://github.com/MrDave1999/dotenv.core/blob/master/samples/DotEnv.Example/Program.cs">here</a>.</p>
 <h3 id="changing-default-name">Changing default name</h3>
 <p>You can also change the default name of the .env file using the <code>SetDefaultEnvFileName</code> method:</p>
 <pre><code class="lang-cs">new EnvLoader()
@@ -226,15 +226,17 @@ else
 }
 </code></pre>
 <p><strong>Note:</strong> If you don't know what each class does, don't forget to check the <a class="xref" href="../api/DotEnv.Core.html">API documentation</a>.</p>
-<h2 id="copying-env-file-to-the-output-directory">Copying .env file to the output directory</h2>
-<p>If you want to copy the .env file to the output directory, you have to add the following to your .csproj file:</p>
+<h2 id="copying-env-file-to-the-publish-directory">Copying .env file to the publish directory</h2>
+<p>You can copy the .env file to the publish directory using the following package:</p>
+<pre><code>dotnet add package DotEnv.Core.Props
+</code></pre>
+<p>For more information, see the <a href="https://github.com/MrDave1999/dotenv.core/tree/master/props">README</a>.</p>
+<p>If you do not want to use the previous package, add the following to your <code>.csproj</code> file:</p>
 <pre><code class="lang-xml">&lt;ItemGroup&gt;
-  &lt;Content Include=&quot;.env&quot;&gt;
-    &lt;CopyToOutputDirectory&gt;Always&lt;/CopyToOutputDirectory&gt;
-  &lt;/Content&gt;
+  &lt;Content Include=&quot;.env&quot; CopyToPublishDirectory=&quot;PreserveNewest&quot; /&gt;
 &lt;/ItemGroup&gt;
 </code></pre>
-<p><strong>NOTE:</strong> Your .env file must be in the same directory as the .csproj file.</p>
+<p><strong>Note:</strong> Your .env file must be in the same directory as the .csproj file.</p>
 </article>
           </div>
           
@@ -263,7 +265,7 @@ else
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright 2021-2022 <b>DotEnv.Core</b>
+            Copyright ©2021 <b>DotEnv.Core</b>
             
           </div>
         </div>

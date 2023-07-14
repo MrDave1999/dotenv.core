@@ -2983,3 +2983,75 @@ references:
   commentId: Overload:DotEnv.Core.VariableNotSetException.#ctor
   fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException
   nameWithType: VariableNotSetException.VariableNotSetException
+- uid: Microsoft.Extensions.DependencyInjection
+  name: Microsoft.Extensions.DependencyInjection
+  href: api/Microsoft.Extensions.DependencyInjection.html
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html
+  commentId: T:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String)
+  name: AddCustomEnv(IServiceCollection, String, String)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_AddCustomEnv_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_String_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, System.String)
+  nameWithType: ServiceCollectionExtensions.AddCustomEnv(IServiceCollection, String, String)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv*
+  name: AddCustomEnv
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv.html
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv
+  nameWithType: ServiceCollectionExtensions.AddCustomEnv
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String)
+  name: AddCustomEnv<TSettings>(IServiceCollection, String, String)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_AddCustomEnv__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_System_String_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.String)
+  name.vb: AddCustomEnv(Of TSettings)(IServiceCollection, String, String)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv<TSettings>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, System.String)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddCustomEnv(Of TSettings)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String, System.String)
+  nameWithType: ServiceCollectionExtensions.AddCustomEnv<TSettings>(IServiceCollection, String, String)
+  nameWithType.vb: ServiceCollectionExtensions.AddCustomEnv(Of TSettings)(IServiceCollection, String, String)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddDotEnv(IServiceCollection)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_AddDotEnv_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddDotEnv(IServiceCollection)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+  name: AddDotEnv(IServiceCollection, String[])
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_AddDotEnv_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String___
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+  name.vb: AddDotEnv(IServiceCollection, String())
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String[])
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String())
+  nameWithType: ServiceCollectionExtensions.AddDotEnv(IServiceCollection, String[])
+  nameWithType.vb: ServiceCollectionExtensions.AddDotEnv(IServiceCollection, String())
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv*
+  name: AddDotEnv
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv.html
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv
+  nameWithType: ServiceCollectionExtensions.AddDotEnv
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddDotEnv<TSettings>(IServiceCollection)
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_AddDotEnv__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name.vb: AddDotEnv(Of TSettings)(IServiceCollection)
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv<TSettings>(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv(Of TSettings)(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ServiceCollectionExtensions.AddDotEnv<TSettings>(IServiceCollection)
+  nameWithType.vb: ServiceCollectionExtensions.AddDotEnv(Of TSettings)(IServiceCollection)
+- uid: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+  name: AddDotEnv<TSettings>(IServiceCollection, String[])
+  href: api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv.html#Microsoft_Extensions_DependencyInjection_ServiceCollectionExtensions_AddDotEnv__1_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String___
+  commentId: M:Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+  name.vb: AddDotEnv(Of TSettings)(IServiceCollection, String())
+  fullName: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv<TSettings>(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String[])
+  fullName.vb: Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddDotEnv(Of TSettings)(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.String())
+  nameWithType: ServiceCollectionExtensions.AddDotEnv<TSettings>(IServiceCollection, String[])
+  nameWithType.vb: ServiceCollectionExtensions.AddDotEnv(Of TSettings)(IServiceCollection, String())

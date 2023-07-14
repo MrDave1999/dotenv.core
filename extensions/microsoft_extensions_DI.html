@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>dotenv.core extensions for Microsoft.Extensions.DependencyInjection | DotEnv.Core </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="dotenv.core extensions for Microsoft.Extensions.DependencyInjection | DotEnv.Core ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/dotenv-icon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="dotenvcore-extensions-for-microsoftextensionsdependencyinjection">dotenv.core extensions for Microsoft.Extensions.DependencyInjection</h1>
+
+<p><a href="https://github.com/MrDave1999/dotenv.core"><img src="https://img.shields.io/badge/.NET%20Standard-2.0-red" alt="dotenv.core"></a>
+<a href="https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection/"><img src="https://buildstats.info/nuget/Dotenv.Extensions.Microsoft.DependencyInjection" alt="Nuget-Badges"></a></p>
+<p>This library adds extension methods for the <a href="https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection">Microsoft.Extensions.DependencyInjection</a> package, which can be accessed through the <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a> interface. So, this library is just a wrapper and behind the scenes what happens is that it uses the classes and methods from the <a href="https://github.com/MrDave1999/dotenv.core">dotenv.core</a> project.</p>
+<p>This project was created to add support for DI and can be used in ASP.NET Core projects.
+Refer to the <a href="https://mrdave1999.github.io/Dotenv.Extensions.Microsoft.DependencyInjection/api/Microsoft.Extensions.DependencyInjection.html">API documentation</a>.</p>
+<h2 id="advantages">Advantages</h2>
+<p>The advantages of using this wrapper are:</p>
+<ul>
+<li>No need to manually call the <code>EnvLoader.Load</code> method to set the environment variables from the .env file.</li>
+<li>No need to manually call the <code>EnvBinder.Bind</code> method to map the keys of the .env file with the model properties.</li>
+<li>No need to manually register the service as a singleton: <code>IEnvReader</code> or <code>AppSettings</code>.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>If you're want to install the package from Visual Studio, you must open the project/solution in Visual Studio, and open the console using the <strong>Tools</strong> &gt; <strong>NuGet Package Manager</strong> &gt; <strong>Package Manager Console</strong> command and run the install command:</p>
+<pre><code>Install-Package Dotenv.Extensions.Microsoft.DependencyInjection
+</code></pre>
+<p>If you are making use of the dotnet CLI, then run the following in your terminal:</p>
+<pre><code>dotnet add package Dotenv.Extensions.Microsoft.DependencyInjection
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>You only need to invoke the <code>AddDotEnv</code> method to add the environment vars using a service:</p>
+<pre><code class="lang-cs">// Example in ASP.NET Core 6+.
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+IServiceCollection services = builder.Services;
+services.AddDotEnv&lt;AppSettings&gt;();
+
+var app = builder.Build();
+</code></pre>
+<p>The following line of code:</p>
+<pre><code class="lang-cs">services.AddDotEnv&lt;AppSettings&gt;();
+</code></pre>
+<p>It does several things:</p>
+<ul>
+<li>Invokes the <code>Load</code> method of the <code>EnvLoader</code> class to set the environment variables from a file named <code>.env</code>.</li>
+<li>Invokes the <code>Bind</code> method of the <code>EnvBinder</code> class to map the keys of the .env file with the <code>AppSettings</code> properties.</li>
+<li>Registers <code>AppSettings</code> as a singleton for the DI container.</li>
+</ul>
+<p>Subsequently, the configuration class can be used in the controllers and the DI container will take care of injecting the instance when necessary:</p>
+<pre><code class="lang-cs">public class HomeController : ControllerBase
+{
+    private readonly AppSettings _settings;
+
+    public HomeController(AppSettings settings)
+    {
+        _settings = settings;
+    }
+}
+</code></pre>
+<p><strong>Note:</strong> You can also take a look at the <a href="https://github.com/MrDave1999/dotenv.core/tree/master/plugins/Microsoft.Extensions.DI/example">source code</a> of the example project.</p>
+<h3 id="load-env-file-based-on-environment">Load .env file based on environment</h3>
+<p>Use the <code>AddCustomEnv</code> method to adds the environment vars based on the environment (development, test, staging or production):</p>
+<pre><code class="lang-cs">// Example in ASP.NET Core 6+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+IServiceCollection services = builder.Services;
+services.AddCustomEnv&lt;AppSettings&gt;();
+
+var app = builder.Build();
+</code></pre>
+<p>The following line of code:</p>
+<pre><code class="lang-cs">services.AddCustomEnv&lt;AppSettings&gt;();
+</code></pre>
+<p>It does several things:</p>
+<ul>
+<li><p>Invokes the <code>LoadEnv</code> method of the <code>EnvLoader</code> class to set the environment variables from a .env file.</p>
+<p>This method will search for these .env files in the following order:</p>
+<ul>
+<li><code>.env.[environment].local</code> (has the highest priority)</li>
+<li><code>.env.local</code></li>
+<li><code>.env.[environment]</code></li>
+<li><code>.env</code> (has the lowest priority)</li>
+</ul>
+<p>The <code>environment</code> is specified by the actual environment variable <code>DOTNET_ENV</code>.</p>
+<p>It should be noted that the default environment will be <code>development</code> or <code>dev</code> if the environment is never specified with <code>DOTNET_ENV</code>.</p>
+</li>
+<li><p>Invokes the <code>Bind</code> method of the <code>EnvBinder</code> class to map the keys of the .env file with the <code>AppSettings</code> properties.</p>
+</li>
+<li><p>Registers <code>AppSettings</code> as a singleton for the DI container.</p>
+</li>
+</ul>
+<p>Done, use <code>AppSettings</code> on the controllers and let the container perform the dependency injection.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/MrDave1999/dotenv.core/blob/master/docs/extensions/microsoft_extensions_DI.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright ©2021 <b>DotEnv.Core</b>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
