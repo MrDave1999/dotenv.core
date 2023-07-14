@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <None Include="..\..\..\dotenv-icon-nuget.png" Pack="True" PackagePath="" />
-    <None Include="..\README.md" Pack="True" PackagePath="" />
+    <None Include="..\..\..\docs\extensions\microsoft_extensions_DI.md" Pack="True" PackagePath="README.md" />
     <None Include="..\..\..\LICENSE" Pack="True" PackagePath="" />
   </ItemGroup>
 
