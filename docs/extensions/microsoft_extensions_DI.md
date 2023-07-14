@@ -6,7 +6,7 @@
 This library adds extension methods for the [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection) package, which can be accessed through the [IServiceCollection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection) interface. So, this library is just a wrapper and behind the scenes what happens is that it uses the classes and methods from the [dotenv.core](https://github.com/MrDave1999/dotenv.core) project.
 
 This project was created to add support for DI and can be used in ASP.NET Core projects.
-Refer to the [API documentation](https://mrdave1999.github.io/Dotenv.Extensions.Microsoft.DependencyInjection/api/Microsoft.Extensions.DependencyInjection.html).
+Refer to the [API documentation](https://mrdave1999.github.io/dotenv.core/api/Microsoft.Extensions.DependencyInjection.html).
 
 ## Advantages
 
