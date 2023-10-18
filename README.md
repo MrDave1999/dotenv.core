@@ -13,6 +13,7 @@
 
 The advantage of using this library is that you do not need to set the environment variable from the operating system shell (**dotenv** sets environment variables from a .env file).
 
+## Index
 - [Features](#features)
 - [Basic Concepts](#basic-concepts)
   * [What is a .env file?](#what-is-a-env-file)
