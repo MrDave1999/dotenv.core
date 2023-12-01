@@ -1,0 +1,27 @@
+name: dotenv.core
+
+on: 
+  push:
+    branches: 
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        dotnet-version: ['8.x']
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+    - name: Test 
+      run: |
+        dotnet test ./tests/DotEnv.Core.Tests.csproj
+        dotnet test ./plugins/Microsoft.Extensions.DI/tests/DotEnv.Extensions.Microsoft.DI.Tests.csproj
