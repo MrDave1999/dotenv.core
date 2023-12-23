@@ -21,8 +21,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotEnv.Core" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\DotEnv.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
