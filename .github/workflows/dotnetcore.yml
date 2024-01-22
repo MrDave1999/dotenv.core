@@ -23,5 +23,5 @@ jobs:
         dotnet-version: ${{ matrix.dotnet-version }}
     - name: Test 
       run: |
-        dotnet test ./tests/DotEnv.Core.Tests.csproj
-        dotnet test ./plugins/Microsoft.Extensions.DI/tests/DotEnv.Extensions.Microsoft.DI.Tests.csproj
+        dotnet test ./tests/DotEnv.Core.Tests.csproj -c Release
+        dotnet test ./plugins/Microsoft.Extensions.DI/tests/DotEnv.Extensions.Microsoft.DI.Tests.csproj -c Release
