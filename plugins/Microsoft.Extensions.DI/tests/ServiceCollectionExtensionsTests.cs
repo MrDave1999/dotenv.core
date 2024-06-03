@@ -16,7 +16,8 @@ public class ServiceCollectionExtensionsTests
 
         // Act
         services.AddDotEnv();
-        var reader = services.BuildServiceProvider().GetRequiredService<IEnvReader>();
+        using var serviceProvider = services.BuildServiceProvider();
+        var reader = serviceProvider.GetRequiredService<IEnvReader>();
 
         // Assert
         reader[Summaries].Should().Be(Expected);
@@ -31,7 +32,8 @@ public class ServiceCollectionExtensionsTests
 
         // Act
         services.AddDotEnv(ConfigEnvPath);
-        var reader = services.BuildServiceProvider().GetRequiredService<IEnvReader>();
+        using var serviceProvider = services.BuildServiceProvider();
+        var reader = serviceProvider.GetRequiredService<IEnvReader>();
 
         // Assert
         reader[Summaries].Should().Be(Expected);
@@ -46,7 +48,8 @@ public class ServiceCollectionExtensionsTests
 
         // Act
         services.AddDotEnv<AppSettings>();
-        var settings = services.BuildServiceProvider().GetRequiredService<AppSettings>();
+        using var serviceProvider = services.BuildServiceProvider();
+        var settings = serviceProvider.GetRequiredService<AppSettings>();
 
         // Assert
         settings.Summaries.Should().Be(Expected);
@@ -61,7 +64,8 @@ public class ServiceCollectionExtensionsTests
 
         // Act
         services.AddDotEnv<AppSettings>(ConfigEnvPath);
-        var settings = services.BuildServiceProvider().GetRequiredService<AppSettings>();
+        using var serviceProvider = services.BuildServiceProvider();
+        var settings = serviceProvider.GetRequiredService<AppSettings>();
 
         // Assert
         settings.Summaries.Should().Be(Expected);
@@ -79,7 +83,8 @@ public class ServiceCollectionExtensionsTests
             basePath: "env_files/environment/dev", 
             environmentName: "dev"
         );
-        var reader = services.BuildServiceProvider().GetRequiredService<IEnvReader>();
+        using var serviceProvider = services.BuildServiceProvider();
+        var reader = serviceProvider.GetRequiredService<IEnvReader>();
 
         // Asserts
         reader["DEV_ENV"].Should().Be("1");
@@ -100,7 +105,8 @@ public class ServiceCollectionExtensionsTests
             basePath: "env_files/environment/production", 
             environmentName: "production"
         );
-        var settings = services.BuildServiceProvider().GetRequiredService<SettingsProduction>();
+        using var serviceProvider = services.BuildServiceProvider();
+        var settings = serviceProvider.GetRequiredService<SettingsProduction>();
 
         // Asserts
         settings.ProdEnv.Should().Be("1");
