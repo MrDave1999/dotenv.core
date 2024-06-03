@@ -9,7 +9,7 @@ namespace DotEnv.Core;
 /// <inheritdoc cref="IEnvParser" />
 public partial class EnvParser : IEnvParser
 {
-    private static readonly string[] s_newLines = new[] { "\r\n", "\n", "\r" };
+    private static readonly string[] s_newLines = ["\r\n", "\n", "\r"];
 
     private const string ExportPrefix = "export ";
     private const char DoubleQuote    = '"';
