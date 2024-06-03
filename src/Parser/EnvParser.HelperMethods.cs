@@ -214,7 +214,7 @@ public partial class EnvParser
     private string RemoveQuotes(string text)
     {
         _ = text ?? throw new ArgumentNullException(nameof(text));
-        return text.Trim().Trim(new[] { SingleQuote, DoubleQuote });
+        return text.Trim().Trim([SingleQuote, DoubleQuote]);
     }
 
     /// <summary>

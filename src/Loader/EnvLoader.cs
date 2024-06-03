@@ -70,9 +70,9 @@ public partial class EnvLoader : IEnvLoader
         var copyEnvFiles = envFiles.ToArray();
         envFiles.Clear();
 
-        AddOptionalEnvFiles(environment is not null ? new[] { $".env.{environment}.local" } : new[] { EnvDevelopmentLocalName, EnvDevLocalName });
+        AddOptionalEnvFiles(environment is not null ? [$".env.{environment}.local"] : [EnvDevelopmentLocalName, EnvDevLocalName]);
         AddOptionalEnvFiles(EnvLocalName);
-        AddOptionalEnvFiles(environment is not null ? new[] { $".env.{environment}" } : new[] { EnvDevelopmentName, EnvDevName });
+        AddOptionalEnvFiles(environment is not null ? [$".env.{environment}"] : [EnvDevelopmentName, EnvDevName]);
         AddOptionalEnvFiles(EnvName);
 
         // The .env files that were added with the 'AddEnvFile' method are added at the end of the collection.
