@@ -148,6 +148,7 @@ public partial class EnvParserTests
              COMMENT_CHAR_3 = VAL ;This comment should be ignored.
              COMMENT_CHAR_4 = VAL{"\t"};This comment should be ignored.
              COMMENT_CHAR_5 = VAL {"\t\t"};This comment should be ignored.
+             COMMENT_CHAR_6 = VAL;This is not a comment.
         ";
         var parser = new EnvParser();
 
@@ -162,6 +163,7 @@ public partial class EnvParserTests
         GetEnvironmentVariable("COMMENT_CHAR_3").Should().Be("VAL");
         GetEnvironmentVariable("COMMENT_CHAR_4").Should().Be("VAL");
         GetEnvironmentVariable("COMMENT_CHAR_5").Should().Be("VAL");
+        GetEnvironmentVariable("COMMENT_CHAR_6").Should().Be("VAL;This is not a comment.");
     }
 
     [TestMethod]
