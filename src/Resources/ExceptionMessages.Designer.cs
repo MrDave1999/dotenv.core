@@ -70,6 +70,15 @@ namespace DotEnv.Core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred when binding configuration keys to a strongly typed object..
+        /// </summary>
+        internal static string BinderDefaultMessage {
+            get {
+                return ResourceManager.GetString("BinderDefaultMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Data source is empty or consists only in whitespace..
         /// </summary>
         internal static string DataSourceIsEmptyOrWhitespaceMessage {
@@ -160,11 +169,29 @@ namespace DotEnv.Core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while parsing a data source with key-value pairs..
+        /// </summary>
+        internal static string ParserDefaultMessage {
+            get {
+                return ResourceManager.GetString("ParserDefaultMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The &apos;{0}.{1}&apos; property does not match any configuration key..
         /// </summary>
         internal static string PropertyDoesNotMatchConfigKeyMessage {
             get {
                 return ResourceManager.GetString("PropertyDoesNotMatchConfigKeyMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The required keys are not present in the application..
+        /// </summary>
+        internal static string RequiredKeysNotPresentDefaultMessage {
+            get {
+                return ResourceManager.GetString("RequiredKeysNotPresentDefaultMessage", resourceCulture);
             }
         }
         
@@ -192,6 +219,15 @@ namespace DotEnv.Core {
         internal static string VariableIsAnEmptyStringMessage {
             get {
                 return ResourceManager.GetString("VariableIsAnEmptyStringMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Environment variable is not set..
+        /// </summary>
+        internal static string VariableNotSetDefaultMessage {
+            get {
+                return ResourceManager.GetString("VariableNotSetDefaultMessage", resourceCulture);
             }
         }
         

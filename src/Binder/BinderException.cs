@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using static DotEnv.Core.ExceptionMessages;
 
 namespace DotEnv.Core;
 
@@ -9,9 +10,9 @@ namespace DotEnv.Core;
 public class BinderException : Exception
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="BinderException" /> class.
+    /// Initializes a new instance of the <see cref="BinderException" /> class with a default message.
     /// </summary>
-    public BinderException()
+    public BinderException() : base(BinderDefaultMessage)
     {
 
     }
