@@ -11,10 +11,10 @@ namespace DotEnv.Core;
 public partial class EnvParser
 {
     /// <summary>
-    /// Creates and throws an exception of type <see cref="ParserException" />.
+    /// Throws an exception if there are errors.
     /// </summary>
     /// <exception cref="ParserException"></exception>
-    internal void CreateAndThrowParserException()
+    internal void ThrowParserExceptionIfErrorsExist()
     {
         if (ValidationResult.HasError() && _configuration.ThrowException)
             throw new ParserException(message: ValidationResult.ErrorMessages);

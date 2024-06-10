@@ -52,7 +52,7 @@ public partial class EnvParser : IEnvParser
         _ = dataSource ?? throw new ArgumentNullException(nameof(dataSource));
         result = ValidationResult;
         ParseStart(dataSource);
-        CreateAndThrowParserException();
+        ThrowParserExceptionIfErrorsExist();
         return _configuration.EnvVars;
     }
 
