@@ -35,14 +35,14 @@ public partial class EnvLoader
             if (_configuration.ThrowFileNotFoundException)
                 throw new FileNotFoundException(message: _validationResult.ErrorMessages);
 
-            CombineContainers();
+            CombineValidationResults();
         }
     }
 
     /// <summary>
-    /// Combines the container of the loader with the parser.
+    /// Combines the validation result of the loader with the parser.
     /// </summary>
-    private void CombineContainers()
+    private void CombineValidationResults()
     {
         if (_parser.ValidationResult.HasError())
             _parser.ValidationResult.AddRange(errorMessages: _validationResult);
