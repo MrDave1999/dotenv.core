@@ -15,7 +15,7 @@ public partial class EnvLoader
     /// </summary>
     /// <param name="envFile">The instance representing the .env file.</param>
     /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
-    private void CheckEnvFileNotExistsAndNotOptional(EnvFile envFile)
+    private void CheckIfEnvFileNotExistsAndIsNotOptional(EnvFile envFile)
     {
         _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
         if (!envFile.Exists && !envFile.Optional)

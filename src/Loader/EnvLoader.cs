@@ -47,7 +47,7 @@ public partial class EnvLoader : IEnvLoader
         {
             SetConfigurationEnvFile(envFile);
             envFile.Exists = ReadAndParse(envFile);
-            CheckEnvFileNotExistsAndNotOptional(envFile);
+            CheckIfEnvFileNotExistsAndIsNotOptional(envFile);
         }
 
         ThrowExceptionIfErrorsExist();
@@ -80,7 +80,7 @@ public partial class EnvLoader : IEnvLoader
         {
             SetConfigurationEnvFile(envFile);
             envFile.Exists = ReadAndParse(envFile);
-            CheckEnvFileNotExistsAndNotOptional(envFile);
+            CheckIfEnvFileNotExistsAndIsNotOptional(envFile);
         }
 
         if (environment is null)
