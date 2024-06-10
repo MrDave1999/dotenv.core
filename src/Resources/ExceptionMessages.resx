@@ -120,6 +120,9 @@
   <data name="ArgumentIsNullOrWhiteSpaceMessage" xml:space="preserve">
     <value>The argument cannot be an empty string or consists only of white-space characters.</value>
   </data>
+  <data name="BinderDefaultMessage" xml:space="preserve">
+    <value>An error occurred when binding configuration keys to a strongly typed object.</value>
+  </data>
   <data name="DataSourceIsEmptyOrWhitespaceMessage" xml:space="preserve">
     <value>Data source is empty or consists only in whitespace.</value>
   </data>
@@ -150,8 +153,14 @@
   <data name="OptionInvalidMessage" xml:space="preserve">
     <value>The option is invalid.</value>
   </data>
+  <data name="ParserDefaultMessage" xml:space="preserve">
+    <value>An error occurred while parsing a data source with key-value pairs.</value>
+  </data>
   <data name="PropertyDoesNotMatchConfigKeyMessage" xml:space="preserve">
     <value>The '{0}.{1}' property does not match any configuration key.</value>
+  </data>
+  <data name="RequiredKeysNotPresentDefaultMessage" xml:space="preserve">
+    <value>The required keys are not present in the application.</value>
   </data>
   <data name="RequiredKeysNotPresentMessage" xml:space="preserve">
     <value>'{0}' is a key required by the application.</value>
@@ -161,6 +170,9 @@
   </data>
   <data name="VariableIsAnEmptyStringMessage" xml:space="preserve">
     <value>'{0}' is an invalid interpolation expression.</value>
+  </data>
+  <data name="VariableNotSetDefaultMessage" xml:space="preserve">
+    <value>Environment variable is not set.</value>
   </data>
   <data name="VariableNotSetMessage" xml:space="preserve">
     <value>'{0}' is not set.</value>

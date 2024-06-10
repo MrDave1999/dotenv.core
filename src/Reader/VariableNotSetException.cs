@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static DotEnv.Core.ExceptionMessages;
 
 namespace DotEnv.Core;
 
@@ -10,9 +11,9 @@ namespace DotEnv.Core;
 public class VariableNotSetException : ArgumentException
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="VariableNotSetException" /> class.
+    /// Initializes a new instance of the <see cref="VariableNotSetException" /> class with a default message.
     /// </summary>
-    public VariableNotSetException()
+    public VariableNotSetException() : base(VariableNotSetDefaultMessage)
     {
 
     }

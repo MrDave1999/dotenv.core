@@ -120,6 +120,9 @@
   <data name="ArgumentIsNullOrWhiteSpaceMessage" xml:space="preserve">
     <value>El argumento no puede ser una cadena vacía o estar formado sólo por caracteres de espacio en blanco.</value>
   </data>
+  <data name="BinderDefaultMessage" xml:space="preserve">
+    <value>Se ha producido un error al vincular claves de configuración a un objeto fuertemente tipado.</value>
+  </data>
   <data name="DataSourceIsEmptyOrWhitespaceMessage" xml:space="preserve">
     <value>La fuente de datos está vacía o sólo contiene espacios en blanco.</value>
   </data>
@@ -150,8 +153,14 @@
   <data name="OptionInvalidMessage" xml:space="preserve">
     <value>La opción no es válida.</value>
   </data>
+  <data name="ParserDefaultMessage" xml:space="preserve">
+    <value>Se ha producido un error al analizar una fuente de datos con pares clave-valor.</value>
+  </data>
   <data name="PropertyDoesNotMatchConfigKeyMessage" xml:space="preserve">
     <value>La propiedad '{0}.{1}' no coincide con ninguna clave de configuración.</value>
+  </data>
+  <data name="RequiredKeysNotPresentDefaultMessage" xml:space="preserve">
+    <value>Las claves requeridas no están presentes en la aplicación.</value>
   </data>
   <data name="RequiredKeysNotPresentMessage" xml:space="preserve">
     <value>'{0}' es una clave requerida por la aplicación.</value>
@@ -162,7 +171,10 @@
   <data name="VariableIsAnEmptyStringMessage" xml:space="preserve">
     <value>'{0}' es una expresión de interpolación inválida.</value>
   </data>
+  <data name="VariableNotSetDefaultMessage" xml:space="preserve">
+    <value>La variable de entorno no está definida.</value>
+  </data>
   <data name="VariableNotSetMessage" xml:space="preserve">
-    <value>'{0}' no está establecida.</value>
+    <value>'{0}' no está definida.</value>
   </data>
 </root>
