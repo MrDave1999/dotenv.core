@@ -51,7 +51,7 @@ public partial class EnvLoader : IEnvLoader
         }
 
         ThrowExceptionIfErrorsExist();
-        result = GetInstanceForOutParams();
+        result = GetInstanceOfValidationResult();
         return _parser.EnvVarsProvider;
     }
 
@@ -107,7 +107,7 @@ public partial class EnvLoader : IEnvLoader
         }
 
         ThrowExceptionIfErrorsExist();
-        result = GetInstanceForOutParams();
+        result = GetInstanceOfValidationResult();
         return _parser.EnvVarsProvider;
     }
 }

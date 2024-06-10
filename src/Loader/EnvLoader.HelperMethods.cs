@@ -49,6 +49,12 @@ public partial class EnvLoader
     }
 
     /// <summary>
+    /// Gets an instance of validation result.
+    /// </summary>
+    private EnvValidationResult GetInstanceOfValidationResult()
+        => _parser.ValidationResult.HasError() ? _parser.ValidationResult : _validationResult;
+
+    /// <summary>
     /// Reads the contents of a .env file and invokes the parser.
     /// </summary>
     /// <param name="envFile">The instance representing the .env file.</param>
@@ -87,12 +93,6 @@ public partial class EnvLoader
         envFile.Optional = envFile.Optional ? envFile.Optional : _configuration.Optional;
         envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
     }
-
-    /// <summary>
-    /// Gets an instance for an out parameter ('result').
-    /// </summary>
-    private EnvValidationResult GetInstanceForOutParams()
-        => _parser.ValidationResult.HasError() ? _parser.ValidationResult : _validationResult;
 
     /// <summary>
     /// Gets the full path of the .env file.
