@@ -51,15 +51,23 @@ public partial class EnvParser : IEnvParser
     {
         _ = dataSource ?? throw new ArgumentNullException(nameof(dataSource));
         result = ValidationResult;
+        ParseStart(dataSource);
+        CreateAndThrowParserException();
+        return _configuration.EnvVars;
+    }
 
+    /// <summary>
+    /// It contains the main logic of the key-value pair parsing algorithm.
+    /// </summary>
+    internal void ParseStart(string dataSource)
+    {
         if (string.IsNullOrWhiteSpace(dataSource))
         {
             ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
-                DataSourceIsEmptyOrWhitespaceMessage, 
+                DataSourceIsEmptyOrWhitespaceMessage,
                 envFileName: FileName
             ));
-            CreateAndThrowParserException();
-            return _configuration.EnvVars;
+            return;
         }
 
         var lines = dataSource.Split(s_newLines, StringSplitOptions.None);
@@ -78,10 +86,10 @@ public partial class EnvParser : IEnvParser
             if (HasNoKeyValuePair(line))
             {
                 ValidationResult.Add(errorMsg: FormatParserExceptionMessage(
-                    LineHasNoKeyValuePairMessage, 
-                    actualValue: line, 
-                    lineNumber: currentLine, 
-                    column: 1, 
+                    LineHasNoKeyValuePairMessage,
+                    actualValue: line,
+                    lineNumber: currentLine,
+                    column: 1,
                     envFileName: FileName
                 ));
                 continue;
@@ -92,8 +100,8 @@ public partial class EnvParser : IEnvParser
             var key   = ExtractKey(line);
             var value = ExtractValue(line);
 
-            key   = RemovePrefixBeforeKey(key, ExportPrefix);
-            key   = TrimKey(key);
+            key = RemovePrefixBeforeKey(key, ExportPrefix);
+            key = TrimKey(key);
             if (IsQuoted(value))
                 value = RemoveQuotes(value);
             else if (IsMultiline(value))
@@ -114,8 +122,5 @@ public partial class EnvParser : IEnvParser
             else if (_configuration.OverwriteExistingVars)
                 EnvVarsProvider[key] = value;
         }
-
-        CreateAndThrowParserException();
-        return _configuration.EnvVars;
     }
 }
