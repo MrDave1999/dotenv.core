@@ -50,9 +50,7 @@ public partial class EnvLoader : IEnvLoader
             CheckEnvFileNotExistsAndNotOptional(envFile);
         }
 
-        _parser.CreateAndThrowParserException();
-        CreateAndThrowFileNotFoundException();
-
+        ThrowExceptionIfErrorsExist();
         result = GetInstanceForOutParams();
         return _parser.EnvVarsProvider;
     }
@@ -108,9 +106,7 @@ public partial class EnvLoader : IEnvLoader
                 _validationResult.Add(errorMsg: FormatLocalFileNotPresentMessage(environmentName: environment));
         }
 
-        _parser.CreateAndThrowParserException();
-        CreateAndThrowFileNotFoundException();
-
+        ThrowExceptionIfErrorsExist();
         result = GetInstanceForOutParams();
         return _parser.EnvVarsProvider;
     }

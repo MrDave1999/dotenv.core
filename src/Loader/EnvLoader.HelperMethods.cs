@@ -23,11 +23,13 @@ public partial class EnvLoader
     }
 
     /// <summary>
-    /// Creates and throws an exception of type <see cref="FileNotFoundException" />.
+    /// Throws an exception if there are errors.
     /// </summary>
+    /// <exception cref="ParserException"></exception>
     /// <exception cref="FileNotFoundException"></exception>
-    private void CreateAndThrowFileNotFoundException()
+    private void ThrowExceptionIfErrorsExist()
     {
+        _parser.ThrowParserExceptionIfErrorsExist();
         if (_validationResult.HasError())
         {
             if (_configuration.ThrowFileNotFoundException)
