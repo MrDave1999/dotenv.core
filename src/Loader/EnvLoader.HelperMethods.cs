@@ -66,12 +66,7 @@ public partial class EnvLoader
 
         string source = File.ReadAllText(fullPath, envFile.Encoding);
         _parser.FileName = envFile.Path;
-        try
-        {
-            _parser.Parse(source);
-        }
-        catch (ParserException) { }
-
+        _parser.ParseStart(source);
         return true;
     }
 
