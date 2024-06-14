@@ -20,7 +20,9 @@ internal class FormattingMessage
     public static string FormatLocalFileNotPresentMessage(string message = null, string environmentName = null)
     {
         message ??= "error: Any of these .env files must be present in the root directory of your project:";
-        return environmentName is not null ? $"{message} .env.{environmentName}.local or {EnvLocalName}" : $"{message} {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
+        return environmentName is not null ? 
+            $"{message} .env.{environmentName}.local or {EnvLocalName}" : 
+            $"{message} {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
     }
 
     /// <summary>
@@ -32,7 +34,12 @@ internal class FormattingMessage
     /// <param name="column">The column that caused the error.</param>
     /// <param name="envFileName">The name of the .env file that caused the error.</param>
     /// <returns>A formatted error message.</returns>
-    public static string FormatParserExceptionMessage(string message, object actualValue = null, int? lineNumber = null, int? column = null, string envFileName = null)
+    public static string FormatParserExceptionMessage(
+        string message, 
+        object actualValue = null, 
+        int? lineNumber = null, 
+        int? column = null, 
+        string envFileName = null)
     {
         if(AreNotNull(envFileName, lineNumber, column, actualValue))
             return $"{envFileName}:(line {lineNumber}, col {column}): error: {string.Format(message, actualValue)}";
