@@ -160,6 +160,15 @@ namespace DotEnv.Core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to error: Any of these .env files must be present in the root directory of the project:.
+        /// </summary>
+        internal static string LocalEnvFileShouldBePresentMessage {
+            get {
+                return ResourceManager.GetString("LocalEnvFileShouldBePresentMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The option is invalid..
         /// </summary>
         internal static string OptionInvalidMessage {
