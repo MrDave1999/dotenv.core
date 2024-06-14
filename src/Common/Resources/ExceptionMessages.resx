@@ -150,6 +150,9 @@
   <data name="LineHasNoKeyValuePairMessage" xml:space="preserve">
     <value>'{0}' does not have the format of key-value pair.</value>
   </data>
+  <data name="LocalEnvFileShouldBePresentMessage" xml:space="preserve">
+    <value>error: Any of these .env files must be present in the root directory of the project:</value>
+  </data>
   <data name="OptionInvalidMessage" xml:space="preserve">
     <value>The option is invalid.</value>
   </data>

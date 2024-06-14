@@ -150,6 +150,9 @@
   <data name="LineHasNoKeyValuePairMessage" xml:space="preserve">
     <value>'{0}' no tiene el formato de par clave-valor.</value>
   </data>
+  <data name="LocalEnvFileShouldBePresentMessage" xml:space="preserve">
+    <value>error: Cualquiera de estos archivos .env debe estar presente en el directorio raíz del proyecto:</value>
+  </data>
   <data name="OptionInvalidMessage" xml:space="preserve">
     <value>La opción no es válida.</value>
   </data>
