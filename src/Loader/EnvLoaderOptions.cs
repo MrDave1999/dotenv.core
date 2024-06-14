@@ -23,7 +23,7 @@ internal class EnvLoaderOptions
     /// <summary>
     /// Gets or sets the collection of .env files.
     /// </summary>
-    public List<EnvFile> EnvFiles { get; set; } = new List<EnvFile>();
+    public List<EnvFile> EnvFiles { get; set; } = [];
 
     /// <summary>
     /// Gets or sets the encoding for the .env files. Its default value is UTF-8.

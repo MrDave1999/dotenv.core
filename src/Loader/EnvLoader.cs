@@ -23,7 +23,7 @@ public partial class EnvLoader : IEnvLoader
     /// <summary>
     /// Allows access to the errors container of the loader.
     /// </summary>
-    private readonly EnvValidationResult _validationResult = new();
+    private readonly EnvValidationResult _validationResult = [];
 
     /// <inheritdoc />
     public IEnvironmentVariablesProvider Load()
