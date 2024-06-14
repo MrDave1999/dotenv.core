@@ -1,4 +1,4 @@
-﻿namespace DotEnv.Core.Tests.Helpers;
+﻿namespace DotEnv.Core.Tests.Common;
 
 [TestClass]
 public class EnvTests
