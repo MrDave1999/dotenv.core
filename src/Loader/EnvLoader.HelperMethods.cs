@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using static DotEnv.Core.ExceptionMessages;
-using static DotEnv.Core.FormattingMessage;
 
 namespace DotEnv.Core;
 
