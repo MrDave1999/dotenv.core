@@ -230,6 +230,7 @@ public partial class EnvLoaderTests
         // Arrange
         Env.CurrentEnvironment = null;
         var loader = new EnvLoader();
+        var expectedErrorMessages = EnvFileNames.FormatLocalFileNotPresentMessage();
 
         // Act
         loader
@@ -240,7 +241,7 @@ public partial class EnvLoaderTests
         result.HasError().Should().BeTrue();
         result.Should().HaveCount(1);
         Env.CurrentEnvironment.Should().Be("development");
-        result.ErrorMessages.Should().Contain(FormatLocalFileNotPresentMessage());
+        result.ErrorMessages.Should().Contain(expectedErrorMessages);
     }
 
     [TestMethod]
@@ -249,6 +250,7 @@ public partial class EnvLoaderTests
         // Arrange
         var loader = new EnvLoader();
         Env.CurrentEnvironment = "test";
+        var expectedErrorMessages = EnvFileNames.FormatLocalFileNotPresentMessage(environmentName: Env.CurrentEnvironment);
 
         // Act
         loader
@@ -260,6 +262,6 @@ public partial class EnvLoaderTests
         result.Should().HaveCount(1);
         result.ErrorMessages
               .Should()
-              .Contain(FormatLocalFileNotPresentMessage(environmentName: Env.CurrentEnvironment));
+              .Contain(expectedErrorMessages);
     }
 }
