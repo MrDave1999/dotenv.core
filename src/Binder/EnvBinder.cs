@@ -17,7 +17,7 @@ public partial class EnvBinder : IEnvBinder
     /// <summary>
     /// Allows access to the errors container of the binder.
     /// </summary>
-    private readonly EnvValidationResult _validationResult = new();
+    private readonly EnvValidationResult _validationResult = [];
 
     /// <summary>
     /// Initializes a new instance of the <see cref="EnvBinder" /> class.

@@ -18,7 +18,7 @@ public class EnvValidator : IEnvValidator
     /// <summary>
     /// Allows access to the errors container of the validator.
     /// </summary>
-    private readonly EnvValidationResult _validationResult = new();
+    private readonly EnvValidationResult _validationResult = [];
 
     /// <summary>
     /// Initializes a new instance of the <see cref="EnvValidator" /> class.

@@ -28,7 +28,7 @@ public partial class EnvParser : IEnvParser
     /// <summary>
     /// Allows access to the errors container of the parser.
     /// </summary>
-    internal EnvValidationResult ValidationResult { get; } = new EnvValidationResult();
+    internal EnvValidationResult ValidationResult { get; } = [];
 
     /// <summary>
     /// Allows access to the name of the file that caused an error.
