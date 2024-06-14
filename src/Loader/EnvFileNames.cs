@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static DotEnv.Core.ExceptionMessages;
 
 namespace DotEnv.Core;
 
@@ -21,7 +22,7 @@ internal class EnvFileNames
     /// <returns>A formatted error message.</returns>
     public static string FormatLocalFileNotPresentMessage(string message = null, string environmentName = null)
     {
-        message ??= "error: Any of these .env files must be present in the root directory of your project:";
+        message ??= LocalEnvFileShouldBePresentMessage;
         return environmentName is not null ?
             $"{message} .env.{environmentName}.local or {EnvLocalName}" :
             $"{message} {EnvDevelopmentLocalName} or {EnvDevLocalName} or {EnvLocalName}";
