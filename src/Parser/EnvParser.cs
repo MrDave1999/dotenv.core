@@ -103,15 +103,22 @@ public partial class EnvParser : IEnvParser
             key = RemovePrefixBeforeKey(key, ExportPrefix);
             key = TrimKey(key);
             if (IsQuoted(value))
+            {
                 value = RemoveQuotes(value);
+            }
             else if (IsMultiline(value))
             {
-                value = GetValuesMultilines(lines, ref i, ConcatCommentWithValue(value, removedComment));
-                if (value is null)
+                var concatenatedValue = ConcatCommentWithValue(value, removedComment);
+                Result<string> multilineResult = GetValuesMultilines(lines, ref i, concatenatedValue);
+                if (multilineResult.IsFailed)
                     continue;
+
+                value = multilineResult.Value;
             }
             else
+            {
                 value = TrimValue(value);
+            }
             value = ConvertStringEmptyToWhitespace(value);
 
             var retrievedValue = EnvVarsProvider[key];

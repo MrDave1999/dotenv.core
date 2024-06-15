@@ -62,35 +62,22 @@ public partial class EnvLoader
     private bool ReadAndParse(EnvFile envFile)
     {
         _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
-        string fullPath;
+        Result<string> result;
         if (_configuration.SearchParentDirectories)
-            fullPath = GetEnvFilePath(envFile.Path);
+            result = GetEnvFilePath(envFile.Path);
         else
-            fullPath = File.Exists(envFile.Path) ? envFile.Path : null;
+            result = File.Exists(envFile.Path) ? 
+                Result<string>.Success(envFile.Path) : 
+                Result<string>.Failure();
 
-        if (fullPath is null)
+        if (result.IsFailed)
             return false;
 
+        string fullPath = result.Value;
         string source = File.ReadAllText(fullPath, envFile.Encoding);
         _parser.FileName = envFile.Path;
         _parser.ParseStart(source);
         return true;
-    }
-
-    /// <summary>
-    /// Sets the configuration of a .env file.
-    /// </summary>
-    /// <param name="envFile">The instance representing the .env file.</param>
-    /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
-    private void SetConfigurationEnvFile(EnvFile envFile)
-    {
-        _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
-        if (!Path.HasExtension(envFile.Path))
-            envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
-
-        envFile.Encoding ??= _configuration.Encoding;
-        envFile.Optional = envFile.Optional ? envFile.Optional : _configuration.Optional;
-        envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
     }
 
     /// <summary>
@@ -100,10 +87,12 @@ public partial class EnvLoader
     /// The name of the .env file to search for.
     /// The .env file name can include an absolute or relative path.
     /// </param>
-    /// <returns>The path of the .env file, otherwise <c>null</c> if not found.</returns>
+    /// <returns>
+    /// A result with the path to the .env file, otherwise it returns a failure result if the path is not found.
+    /// </returns>
     /// <exception cref="ArgumentNullException"><c>envFileName</c> is <c>null</c>.</exception>
     /// <inheritdoc cref="Load()" path="/remarks" />
-    private string GetEnvFilePath(string envFileName)
+    private Result<string> GetEnvFilePath(string envFileName)
     {
         _ = envFileName ?? throw new ArgumentNullException(nameof(envFileName));
         string path;
@@ -121,9 +110,25 @@ public partial class EnvLoader
         {
             string fullName = Path.Combine(directoryInfo.FullName, envFileName);
             if (File.Exists(fullName))
-                return fullName;
+                return Result<string>.Success(fullName);
         }
-        return null;
+        return Result<string>.Failure();
+    }
+
+    /// <summary>
+    /// Sets the configuration of a .env file.
+    /// </summary>
+    /// <param name="envFile">The instance representing the .env file.</param>
+    /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
+    private void SetConfigurationEnvFile(EnvFile envFile)
+    {
+        _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
+        if (!Path.HasExtension(envFile.Path))
+            envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
+
+        envFile.Encoding ??= _configuration.Encoding;
+        envFile.Optional = envFile.Optional ? envFile.Optional : _configuration.Optional;
+        envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
     }
 
     /// <summary>

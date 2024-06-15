@@ -263,9 +263,10 @@ public partial class EnvParser
     /// <param name="value">The value of a key.</param>
     /// <exception cref="ArgumentNullException">lines or value is <c>null</c>.</exception>
     /// <returns>
-    /// A string with the values separated by a new line, or <c>null</c> if the line has no end quote.
+    /// A result that contains the values separated by a new line, 
+    /// or returns a failure result if the line has no end quote.
     /// </returns>
-    private string GetValuesMultilines(string[] lines, ref int index, string value)
+    private Result<string> GetValuesMultilines(string[] lines, ref int index, string value)
     {
         _ = lines ?? throw new ArgumentNullException(nameof(lines));
         _ = value ?? throw new ArgumentNullException(nameof(value));
@@ -284,7 +285,7 @@ public partial class EnvParser
             {
                 var lineWithoutQuote = line.Substring(0, trimmedLine.Length - 1);
                 value = $"{value}\n{lineWithoutQuote}";
-                return value;
+                return Result<string>.Success(value);
             }
             value = $"{value}\n{line}";
         }
@@ -295,7 +296,7 @@ public partial class EnvParser
             column: 1,
             envFileName: FileName
         ));
-        return null;
+        return Result<string>.Failure();
     }
 
     /// <summary>

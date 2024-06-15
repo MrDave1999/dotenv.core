@@ -84,10 +84,10 @@ public partial class EnvBinder : IEnvBinder
                 continue;
             }
 
-            var conversionResponse = ChangeType(retrievedValue, property.PropertyType);
-            if (conversionResponse.Success)
+            Result<object> conversionResult = ChangeType(retrievedValue, property.PropertyType);
+            if (conversionResult.IsSuccess)
             {
-                property.SetValue(settings, conversionResponse.Value);
+                property.SetValue(settings, conversionResult.Value);
                 continue;
             }
             

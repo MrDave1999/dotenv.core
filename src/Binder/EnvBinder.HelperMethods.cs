@@ -40,21 +40,20 @@ public partial class EnvBinder
     /// <param name="value">The value to convert.</param>
     /// <param name="conversionType">The type of object to return.</param>
     /// <returns>
-    /// A tuple with the converted value and 
-    /// a boolean value indicating whether the operation was successful.
+    /// A result with the converted value, otherwise returns a failure result.
     /// </returns>
-    private (object Value, bool Success) ChangeType(string value, Type conversionType)
+    private Result<object> ChangeType(string value, Type conversionType)
     {
         try
         {
             var convertedValue = DotEnvHelper.ChangeType(value, conversionType);
-            return (convertedValue, true);
+            return Result<object>.Success(convertedValue);
         }
         catch (Exception ex) 
             when (ex is FormatException || 
                   ex is ArgumentException)
         {
-            return (default, false);
+            return Result<object>.Failure();
         }
     }
 }
