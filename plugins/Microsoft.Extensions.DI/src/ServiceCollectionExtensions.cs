@@ -28,7 +28,9 @@ public static partial class ServiceCollectionExtensions
     /// <returns>An instance that allows access to the environment variables.</returns>
     public static IEnvReader AddDotEnv(this IServiceCollection services, params string[] paths)
     {
-        _ = services ?? throw new ArgumentNullException(nameof(services));
+        ThrowHelper.ThrowIfNull(services, nameof(services));
+        ThrowHelper.ThrowIfNull(paths, nameof(paths));
+        ThrowHelper.ThrowIfEmptyCollection(paths, nameof(paths));
         var envVars = Load(paths);
         return services.AddEnvReader(envVars);
     }
@@ -57,7 +59,9 @@ public static partial class ServiceCollectionExtensions
     public static TSettings AddDotEnv<TSettings>(this IServiceCollection services, params string[] paths) 
         where TSettings : class, new()
     {
-        _ = services ?? throw new ArgumentNullException(nameof(services));
+        ThrowHelper.ThrowIfNull(services, nameof(services));
+        ThrowHelper.ThrowIfNull(paths, nameof(paths));
+        ThrowHelper.ThrowIfEmptyCollection(paths, nameof(paths));
         var envVars = Load(paths);
         return services.AddTSettings<TSettings>(envVars);
     }
@@ -73,7 +77,7 @@ public static partial class ServiceCollectionExtensions
     /// <returns>An instance that allows access to the environment variables.</returns>
     public static IEnvReader AddCustomEnv(this IServiceCollection services, string basePath = null, string environmentName = null)
     {
-        _ = services ?? throw new ArgumentNullException(nameof(services));
+        ThrowHelper.ThrowIfNull(services, nameof(services));
         var envVars = LoadEnv(basePath, environmentName);
         return services.AddEnvReader(envVars);
     }
@@ -91,7 +95,7 @@ public static partial class ServiceCollectionExtensions
     public static TSettings AddCustomEnv<TSettings>(this IServiceCollection services, string basePath = null, string environmentName = null) 
         where TSettings : class, new()
     {
-        _ = services ?? throw new ArgumentNullException(nameof(services));
+        ThrowHelper.ThrowIfNull(services, nameof(services));
         var envVars = LoadEnv(basePath, environmentName);
         return services.AddTSettings<TSettings>(envVars);
     }

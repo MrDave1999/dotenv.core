@@ -28,7 +28,7 @@ public partial class EnvParser
     /// <returns><c>true</c> if the line is a comment, otherwise <c>false</c>.</returns>
     private bool IsComment(string line)
     {
-        _ = line ?? throw new ArgumentNullException(nameof(line));
+        ThrowHelper.ThrowIfNull(line, nameof(line));
         line = _configuration.TrimStartComments ? line.TrimStart() : line;
         return line[0] == _configuration.CommentChar;
     }
@@ -42,7 +42,7 @@ public partial class EnvParser
     /// <returns>A string without the inline comment.</returns>
     private string RemoveInlineComment(string line, out string comment)
     {
-        _ = line ?? throw new ArgumentNullException(nameof(line));
+        ThrowHelper.ThrowIfNull(line, nameof(line));
         var substrings = line.Split(_configuration.InlineCommentChars, MaxCount, StringSplitOptions.None);
         comment = substrings.Length == 1 ? null : substrings[1];
         return substrings[0];
@@ -68,7 +68,7 @@ public partial class EnvParser
     /// </returns>
     private string TrimKey(string key)
     {
-        _ = key ?? throw new ArgumentNullException(nameof(key));
+        ThrowHelper.ThrowIfNull(key, nameof(key));
         key = _configuration.TrimStartKeys ? key.TrimStart() : key;
         key = _configuration.TrimEndKeys ? key.TrimEnd() : key;
         return key;
@@ -85,7 +85,7 @@ public partial class EnvParser
     /// </returns>
     private string TrimValue(string value)
     {
-        _ = value ?? throw new ArgumentNullException(nameof(value));
+        ThrowHelper.ThrowIfNull(value, nameof(value));
         value = _configuration.TrimStartValues ? value.TrimStart() : value;
         value = _configuration.TrimEndValues ? value.TrimEnd() : value;
         return value;
@@ -99,7 +99,7 @@ public partial class EnvParser
     /// <returns>The key extracted.</returns>
     private string ExtractKey(string line)
     {
-        _ = line ?? throw new ArgumentNullException(nameof(line));
+        ThrowHelper.ThrowIfNull(line, nameof(line));
         string key = line.Split(_configuration.DelimiterKeyValuePair, MaxCount)[0];
         return key;
     }
@@ -112,7 +112,7 @@ public partial class EnvParser
     /// <returns>The value extracted.</returns>
     private string ExtractValue(string line)
     {
-        _ = line ?? throw new ArgumentNullException(nameof(line));
+        ThrowHelper.ThrowIfNull(line, nameof(line));
         string value = line.Split(_configuration.DelimiterKeyValuePair, MaxCount)[1];
         return value;
     }
@@ -125,7 +125,7 @@ public partial class EnvParser
     /// <returns><c>true</c> if the line has no the key-value pair, otherwise <c>false</c>.</returns>
     private bool HasNoKeyValuePair(string line)
     {
-        _ = line ?? throw new ArgumentNullException(nameof(line));
+        ThrowHelper.ThrowIfNull(line, nameof(line));
         var keyValuePair = line.Split(_configuration.DelimiterKeyValuePair, MaxCount);
         return keyValuePair.Length != 2 || string.IsNullOrWhiteSpace(keyValuePair[0]);
     }
@@ -148,7 +148,7 @@ public partial class EnvParser
     /// <returns>A string with each environment variable replaced by its value.</returns>
     private string ExpandEnvironmentVariables(string name, int currentLine)
     {
-        _ = name ?? throw new ArgumentNullException(nameof(name));
+        ThrowHelper.ThrowIfNull(name, nameof(name));
         var pattern = @"\$\{([^}]*)\}";
         name = Regex.Replace(name, pattern, match =>
         {
@@ -197,7 +197,7 @@ public partial class EnvParser
     /// <returns><c>true</c> if the text is quoted, or <c>false</c>.</returns>
     private bool IsQuoted(string text)
     {
-        _ = text ?? throw new ArgumentNullException(nameof(text));
+        ThrowHelper.ThrowIfNull(text, nameof(text));
         text = text.Trim();
         if(text.Length <= 1)
             return false;
@@ -213,7 +213,7 @@ public partial class EnvParser
     /// <returns>A string without single or double quotes.</returns>
     private string RemoveQuotes(string text)
     {
-        _ = text ?? throw new ArgumentNullException(nameof(text));
+        ThrowHelper.ThrowIfNull(text, nameof(text));
         return text.Trim().Trim([SingleQuote, DoubleQuote]);
     }
 
@@ -226,8 +226,8 @@ public partial class EnvParser
     /// <returns>A key without the prefix.</returns>
     private string RemovePrefixBeforeKey(string key, string prefix)
     {
-        _ = key    ?? throw new ArgumentNullException(nameof(key));
-        _ = prefix ?? throw new ArgumentNullException(nameof(prefix));
+        ThrowHelper.ThrowIfNull(key, nameof(key));
+        ThrowHelper.ThrowIfNull(prefix, nameof(prefix));
         var aux = key;
         key = key.TrimStart();
         return key.IndexOf(prefix) == 0 ? key.Remove(0, prefix.Length) : aux;
@@ -243,7 +243,7 @@ public partial class EnvParser
     /// </returns>
     private bool IsMultiline(string value)
     {
-        _ = value ?? throw new ArgumentNullException(nameof(value));
+        ThrowHelper.ThrowIfNull(value, nameof(value));
         value = value.Trim();
         if(value.Length == 0)
             return false;
@@ -268,8 +268,8 @@ public partial class EnvParser
     /// </returns>
     private Result<string> GetValuesMultilines(string[] lines, ref int index, string value)
     {
-        _ = lines ?? throw new ArgumentNullException(nameof(lines));
-        _ = value ?? throw new ArgumentNullException(nameof(value));
+        ThrowHelper.ThrowIfNull(lines, nameof(lines));
+        ThrowHelper.ThrowIfNull(value, nameof(value));
         value = value.TrimStart();
         // Double or single-quoted.
         char quoteChar = value[0];

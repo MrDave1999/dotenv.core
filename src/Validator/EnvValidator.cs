@@ -62,10 +62,8 @@ public class EnvValidator : IEnvValidator
     /// <inheritdoc />
     public IEnvValidator SetRequiredKeys(params string[] keys)
     {
-        _ = keys ?? throw new ArgumentNullException(nameof(keys));
-        if (keys.IsEmpty())
-            throw new ArgumentException(LengthOfParamsListIsZeroMessage, nameof(keys));
-
+        ThrowHelper.ThrowIfNull(keys, nameof(keys));
+        ThrowHelper.ThrowIfEmptyCollection(keys, nameof(keys));
         _configuration.RequiredKeys = keys;
         return this;
     }
@@ -87,7 +85,7 @@ public class EnvValidator : IEnvValidator
     /// <inheritdoc />
     public IEnvValidator SetRequiredKeys(Type keysType)
     {
-        _ = keysType ?? throw new ArgumentNullException(nameof(keysType));
+        ThrowHelper.ThrowIfNull(keysType, nameof(keysType));
         var readablePropertyNames =
             from propertyInfo in keysType.GetProperties()
             where propertyInfo.CanRead && propertyInfo.PropertyType == typeof(string)

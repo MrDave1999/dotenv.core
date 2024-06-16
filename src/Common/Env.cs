@@ -56,7 +56,7 @@ public static class Env
     /// <exception cref="ArgumentNullException"><c>environmentName</c> is <c>null</c>.</exception>
     public static bool IsEnvironment(string environmentName)
     {
-        _ = environmentName ?? throw new ArgumentNullException(nameof(environmentName));
+        ThrowHelper.ThrowIfNull(environmentName, nameof(environmentName));
         return string.Equals(CurrentEnvironment, environmentName, StringComparison.OrdinalIgnoreCase);
     }
 }

@@ -12,7 +12,7 @@ public partial class EnvLoader
     /// <inheritdoc />
     public IEnvLoader SetDefaultEnvFileName(string envFileName)
     {
-        _ = envFileName ?? throw new ArgumentNullException(nameof(envFileName));
+        ThrowHelper.ThrowIfNull(envFileName, nameof(envFileName));
         _configuration.DefaultEnvFileName = envFileName;
         return this;
     }
@@ -20,7 +20,7 @@ public partial class EnvLoader
     /// <inheritdoc />
     public IEnvLoader SetBasePath(string basePath)
     {
-        _ = basePath ?? throw new ArgumentNullException(nameof(basePath));
+        ThrowHelper.ThrowIfNull(basePath, nameof(basePath));
         _configuration.BasePath = basePath;
         return this;
     }
@@ -28,10 +28,8 @@ public partial class EnvLoader
     /// <inheritdoc />
     public IEnvLoader AddEnvFiles(params string[] paths)
     {
-        _ = paths ?? throw new ArgumentNullException(nameof(paths));
-        if (paths.IsEmpty())
-            throw new ArgumentException(LengthOfParamsListIsZeroMessage, nameof(paths));
-
+        ThrowHelper.ThrowIfNull(paths, nameof(paths));
+        ThrowHelper.ThrowIfEmptyCollection(paths, nameof(paths));
         foreach (string path in paths)
             AddEnvFile(path);
         return this;
@@ -48,7 +46,7 @@ public partial class EnvLoader
     /// <inheritdoc />
     public IEnvLoader AddEnvFile(string path, Encoding encoding, bool optional)
     {
-        _ = path ?? throw new ArgumentNullException(nameof(path));
+        ThrowHelper.ThrowIfNull(path, nameof(path));
         _configuration.EnvFiles.Add(new EnvFile { Path = path, Encoding = encoding, Optional = optional});
         return this;
     }
@@ -60,8 +58,8 @@ public partial class EnvLoader
     /// <inheritdoc />
     public IEnvLoader AddEnvFile(string path, string encodingName, bool optional)
     {
-        _ = path ?? throw new ArgumentNullException(nameof(path));
-        _ = encodingName ?? throw new ArgumentNullException(nameof(encodingName));
+        ThrowHelper.ThrowIfNull(path, nameof(path));
+        ThrowHelper.ThrowIfNull(encodingName, nameof(encodingName));
         try
         {
             AddEnvFile(path, Encoding.GetEncoding(encodingName), optional);
@@ -80,7 +78,7 @@ public partial class EnvLoader
     /// <inheritdoc />
     public IEnvLoader SetEncoding(Encoding encoding)
     {
-        _ = encoding ?? throw new ArgumentNullException(nameof(encoding));
+        ThrowHelper.ThrowIfNull(encoding, nameof(encoding));
         _configuration.Encoding = encoding;
         return this;
     }
@@ -109,10 +107,8 @@ public partial class EnvLoader
     /// <inheritdoc />
     public IEnvLoader SetEnvironmentName(string envName)
     {
-        _ = envName ?? throw new ArgumentNullException(nameof(envName));
-        if (string.IsNullOrWhiteSpace(envName))
-            throw new ArgumentException(ArgumentIsNullOrWhiteSpaceMessage, nameof(envName));
-
+        ThrowHelper.ThrowIfNull(envName, nameof(envName));
+        ThrowHelper.ThrowIfNullOrWhiteSpace(envName, nameof(envName));
         _configuration.EnvironmentName = envName;
         return this;
     }

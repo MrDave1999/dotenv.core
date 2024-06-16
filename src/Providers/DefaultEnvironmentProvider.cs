@@ -16,7 +16,7 @@ internal class DefaultEnvironmentProvider : IEnvironmentVariablesProvider
         get => Environment.GetEnvironmentVariable(variable);
         set
         {
-            _ = variable ?? throw new ArgumentNullException(nameof(variable));
+            ThrowHelper.ThrowIfNull(variable, nameof(variable));
             Environment.SetEnvironmentVariable(variable, value);
         }
     }
