@@ -22,7 +22,7 @@ internal class DictionaryProvider : IEnvironmentVariablesProvider
         }
         set
         {
-            _ = variable ?? throw new ArgumentNullException(nameof(variable));
+            ThrowHelper.ThrowIfNull(variable, nameof(variable));
             _keyValuePairs[variable] = value;
         }
     }

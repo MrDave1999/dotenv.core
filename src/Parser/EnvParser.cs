@@ -49,7 +49,7 @@ public partial class EnvParser : IEnvParser
     /// <inheritdoc />
     public IEnvironmentVariablesProvider Parse(string dataSource, out EnvValidationResult result)
     {
-        _ = dataSource ?? throw new ArgumentNullException(nameof(dataSource));
+        ThrowHelper.ThrowIfNull(dataSource, nameof(dataSource));
         result = ValidationResult;
         ParseStart(dataSource);
         ThrowParserExceptionIfErrorsExist();

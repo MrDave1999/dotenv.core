@@ -12,7 +12,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetStringValue(string variable, out string value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if(retrievedValue is null)
         {
@@ -26,7 +26,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetBoolValue(string variable, out bool value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -40,7 +40,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetByteValue(string variable, out byte value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -54,7 +54,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetSByteValue(string variable, out sbyte value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -68,7 +68,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetCharValue(string variable, out char value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -82,7 +82,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetIntValue(string variable, out int value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -96,7 +96,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetUIntValue(string variable, out uint value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -110,7 +110,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetLongValue(string variable, out long value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -124,7 +124,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetULongValue(string variable, out ulong value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -138,7 +138,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetShortValue(string variable, out short value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -152,7 +152,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetUShortValue(string variable, out ushort value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -166,7 +166,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetDecimalValue(string variable, out decimal value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -180,7 +180,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetDoubleValue(string variable, out double value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {
@@ -194,7 +194,7 @@ public partial class EnvReader
     /// <inheritdoc />
     public virtual bool TryGetFloatValue(string variable, out float value)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         if (retrievedValue is null)
         {

@@ -16,7 +16,7 @@ public partial class EnvLoader
     /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
     private void CheckIfEnvFileNotExistsAndIsNotOptional(EnvFile envFile)
     {
-        _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
+        ThrowHelper.ThrowIfNull(envFile, nameof(envFile));
         if (!envFile.Exists && !envFile.Optional)
             _validationResult.Add(errorMsg: string.Format(FileNotFoundMessage, envFile.Path));
     }
@@ -61,7 +61,7 @@ public partial class EnvLoader
     /// <returns>true if the .env file exists, otherwise false.</returns>
     private bool ReadAndParse(EnvFile envFile)
     {
-        _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
+        ThrowHelper.ThrowIfNull(envFile, nameof(envFile));
         Result<string> result;
         if (_configuration.SearchParentDirectories)
             result = GetEnvFilePath(envFile.Path);
@@ -94,7 +94,7 @@ public partial class EnvLoader
     /// <inheritdoc cref="Load()" path="/remarks" />
     private Result<string> GetEnvFilePath(string envFileName)
     {
-        _ = envFileName ?? throw new ArgumentNullException(nameof(envFileName));
+        ThrowHelper.ThrowIfNull(envFileName, nameof(envFileName));
         string path;
         if (Path.IsPathRooted(envFileName))
         {
@@ -122,7 +122,7 @@ public partial class EnvLoader
     /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
     private void SetConfigurationEnvFile(EnvFile envFile)
     {
-        _ = envFile ?? throw new ArgumentNullException(nameof(envFile));
+        ThrowHelper.ThrowIfNull(envFile, nameof(envFile));
         if (!Path.HasExtension(envFile.Path))
             envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
 
@@ -138,7 +138,7 @@ public partial class EnvLoader
     /// <exception cref="ArgumentNullException"><c>envFilesNames</c> is <c>null</c>.</exception>
     private void AddOptionalEnvFiles(params string[] envFilesNames)
     {
-        _ = envFilesNames ?? throw new ArgumentNullException(nameof(envFilesNames));
+        ThrowHelper.ThrowIfNull(envFilesNames, nameof(envFilesNames));
         foreach (string envFileName in envFilesNames)
             _configuration.EnvFiles.Add(new EnvFile { Path = envFileName, Optional = true });
     }

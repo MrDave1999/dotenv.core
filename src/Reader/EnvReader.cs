@@ -37,7 +37,7 @@ public partial class EnvReader : IEnvReader
     /// <inheritdoc />
     public virtual bool HasValue(string variable)
     {
-        _ = variable ?? throw new ArgumentNullException(nameof(variable));
+        ThrowHelper.ThrowIfNull(variable, nameof(variable));
         var retrievedValue = _envVars[variable];
         return retrievedValue is not null;
     }
