@@ -107,6 +107,7 @@ public partial class EnvParser
     /// <inheritdoc />
     public IEnvParser SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider provider)
     {
+        ThrowHelper.ThrowIfNull(provider, nameof(provider));
         _configuration.EnvVars = provider;
         return this;
     }
