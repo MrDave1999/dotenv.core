@@ -31,8 +31,10 @@ public partial class EnvBinder : IEnvBinder
     /// Initializes a new instance of the <see cref="EnvBinder" /> class with environment variables provider.
     /// </summary>
     /// <param name="provider">The environment variables provider.</param>
+    /// <exception cref="ArgumentNullException"><c>provider</c> is <c>null</c>.</exception>
     public EnvBinder(IEnvironmentVariablesProvider provider)
     {
+        ThrowHelper.ThrowIfNull(provider, nameof(provider));
         _configuration.EnvVars = provider;
     }
 

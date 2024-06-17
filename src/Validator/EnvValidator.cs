@@ -32,8 +32,10 @@ public class EnvValidator : IEnvValidator
     /// Initializes a new instance of the <see cref="EnvValidator" /> class with environment variables provider.
     /// </summary>
     /// <param name="provider">The environment variables provider.</param>
+    /// <exception cref="ArgumentNullException"><c>provider</c> is <c>null</c>.</exception>
     public EnvValidator(IEnvironmentVariablesProvider provider)
     {
+        ThrowHelper.ThrowIfNull(provider, nameof(provider));
         _configuration.EnvVars = provider;
     }
 
