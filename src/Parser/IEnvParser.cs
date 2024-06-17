@@ -120,5 +120,6 @@ public interface IEnvParser
     /// </summary>
     /// <param name="provider">The custom environment variables provider.</param>
     /// <returns>An instance implementing the fluent interface.</returns>
+    /// <exception cref="ArgumentNullException"><c>provider</c> is <c>null</c>.</exception> 
     IEnvParser SetEnvironmentVariablesProvider(IEnvironmentVariablesProvider provider);
 }
