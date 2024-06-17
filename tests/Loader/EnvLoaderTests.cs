@@ -156,13 +156,17 @@ public partial class EnvLoaderTests
     }
 
     [TestMethod]
-    public void SetEncoding_WhenEncodingNameIsNotSupported_ShouldThrowArgumentException()
+    [DataRow("UTF-88")]
+    [DataRow("")]
+    [DataRow("  ")]
+    [DataRow(null)]
+    public void SetEncoding_WhenEncodingNameIsNotSupported_ShouldThrowArgumentException(string encodingName)
     {
         // Arrange
         var loader = new EnvLoader();
 
         // Act
-        Action act = () => loader.SetEncoding("UTF-88");
+        Action act = () => loader.SetEncoding(encodingName);
 
         // Assert
         act.Should().Throw<ArgumentException>();
