@@ -136,7 +136,6 @@ public interface IEnvLoader
     /// Sets the encoding name of the .env files.
     /// </summary>
     /// <param name="encodingName">The name of encoding to set.</param>
-    /// <exception cref="ArgumentNullException"><c>encodingName</c> is <c>null</c>.</exception>
     /// <exception cref="ArgumentException">
     /// <c>encodingName</c> is not a valid code page name or
     /// is not supported by the underlying platform.
