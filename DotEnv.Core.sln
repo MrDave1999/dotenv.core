@@ -9,6 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Core.Example", "samp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Core.Tests", "tests\DotEnv.Core.Tests.csproj", "{1F5B9257-48EF-4B89-B431-2D6389E30A11}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft.Extensions.DI", "Microsoft.Extensions.DI", "{B093601A-E3DB-446A-A650-709F31366AD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Extensions.Microsoft.DI", "plugins\Microsoft.Extensions.DI\src\DotEnv.Extensions.Microsoft.DI.csproj", "{7309366E-C4C5-4367-98E8-4E2410622537}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Extensions.Microsoft.DI.Example", "plugins\Microsoft.Extensions.DI\example\DotEnv.Extensions.Microsoft.DI.Example.csproj", "{F5FECE90-E970-4C80-A876-DE19DBDEFC70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Extensions.Microsoft.DI.Tests", "plugins\Microsoft.Extensions.DI\tests\DotEnv.Extensions.Microsoft.DI.Tests.csproj", "{661B7D3C-977F-432B-911C-A519319A8B97}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Elements", "Solution Elements", "{2D684F32-79A1-4904-A921-204D88EB2F48}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
@@ -33,9 +41,26 @@ Global
 		{1F5B9257-48EF-4B89-B431-2D6389E30A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F5B9257-48EF-4B89-B431-2D6389E30A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F5B9257-48EF-4B89-B431-2D6389E30A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7309366E-C4C5-4367-98E8-4E2410622537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7309366E-C4C5-4367-98E8-4E2410622537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7309366E-C4C5-4367-98E8-4E2410622537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7309366E-C4C5-4367-98E8-4E2410622537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FECE90-E970-4C80-A876-DE19DBDEFC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FECE90-E970-4C80-A876-DE19DBDEFC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FECE90-E970-4C80-A876-DE19DBDEFC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FECE90-E970-4C80-A876-DE19DBDEFC70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{661B7D3C-977F-432B-911C-A519319A8B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661B7D3C-977F-432B-911C-A519319A8B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661B7D3C-977F-432B-911C-A519319A8B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661B7D3C-977F-432B-911C-A519319A8B97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7309366E-C4C5-4367-98E8-4E2410622537} = {B093601A-E3DB-446A-A650-709F31366AD7}
+		{F5FECE90-E970-4C80-A876-DE19DBDEFC70} = {B093601A-E3DB-446A-A650-709F31366AD7}
+		{661B7D3C-977F-432B-911C-A519319A8B97} = {B093601A-E3DB-446A-A650-709F31366AD7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DADE2FE0-EA2C-41E8-B91E-2A5F19EAAD87}
