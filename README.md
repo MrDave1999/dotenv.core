@@ -61,7 +61,7 @@ The advantage of using this library is that you do not need to set the environme
 - Support for the variables interpolation.
 - And much more.
 
-Don't forget to visit the official library [website](https://mrdave1999.github.io/dotenv.core) where you can find [API documentation](https://mrdave1999.github.io/dotenv.core/api/DotEnv.Core.html), [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html) and [diagrams](https://mrdave1999.github.io/dotenv.core/diagrams/class_diagram.html).
+Don't forget to visit the official library [website](https://mrdave1999.github.io/dotenv.core) where you can find [API documentation](https://mrdave1999.github.io/dotenv.core/api/DotEnv.Core.html) and [articles](https://mrdave1999.github.io/dotenv.core/articles/getting_started.html).
 
 ## Basic Concepts
 ### What is a .env file?
