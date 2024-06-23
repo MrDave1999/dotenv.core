@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotEnv.Extensions.Microsoft
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotEnv.Extensions.Microsoft.Config.Example", "plugins\Microsoft.Extensions.Config\example\DotEnv.Extensions.Microsoft.Config.Example.csproj", "{EE641B31-2439-481A-BCC4-4520B75DD57D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotEnv.Extensions.Microsoft.Config.Tests", "plugins\Microsoft.Extensions.Config\tests\DotEnv.Extensions.Microsoft.Config.Tests.csproj", "{91AA172D-AE1E-445E-B3A1-5841C856E659}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Elements", "Solution Elements", "{2D684F32-79A1-4904-A921-204D88EB2F48}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
@@ -67,6 +69,10 @@ Global
 		{EE641B31-2439-481A-BCC4-4520B75DD57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE641B31-2439-481A-BCC4-4520B75DD57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE641B31-2439-481A-BCC4-4520B75DD57D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AA172D-AE1E-445E-B3A1-5841C856E659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AA172D-AE1E-445E-B3A1-5841C856E659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AA172D-AE1E-445E-B3A1-5841C856E659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AA172D-AE1E-445E-B3A1-5841C856E659}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{661B7D3C-977F-432B-911C-A519319A8B97} = {B093601A-E3DB-446A-A650-709F31366AD7}
 		{B50FB187-F524-46E3-8AC8-E31826294F95} = {72F0723F-912D-42F3-AA80-928F7509DD94}
 		{EE641B31-2439-481A-BCC4-4520B75DD57D} = {72F0723F-912D-42F3-AA80-928F7509DD94}
+		{91AA172D-AE1E-445E-B3A1-5841C856E659} = {72F0723F-912D-42F3-AA80-928F7509DD94}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DADE2FE0-EA2C-41E8-B91E-2A5F19EAAD87}
