@@ -7,5 +7,9 @@
   <ItemGroup>
     <ProjectReference Include="..\src\DotEnv.Extensions.Microsoft.Config.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="DotEnv.Core.Props" />
+  </ItemGroup>
 
 </Project>
