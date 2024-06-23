@@ -14,7 +14,7 @@
     <PackageTags>dotenv, env, variables, environment, service, collection, envfile</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
-    <Description>Adds dotenv.core extensions for Microsoft.Extensions.DependencyInjection</Description>
+    <Description>Integrates DotEnv.Core package with Microsoft.Extensions.DependencyInjection</Description>
     <Version>2.0.0</Version>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <NoWarn>1591</NoWarn>
