@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\DotEnv.Extensions.Microsoft.Config.csproj" />
+    <ProjectReference Include="..\src\DotEnv.Extensions.Microsoft.Configuration.csproj" />
   </ItemGroup>
 
 </Project>
