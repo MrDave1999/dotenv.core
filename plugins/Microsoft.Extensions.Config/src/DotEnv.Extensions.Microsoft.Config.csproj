@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Microsoft.Extensions.Configuration</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <PackageId>Dotenv.Extensions.Microsoft.Configuration</PackageId>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>David Román Amariles</Authors>
+    <Copyright>David Román Amariles</Copyright>
+    <PackageProjectUrl>https://mrdave1999.github.io/dotenv.core</PackageProjectUrl>
+    <PackageIcon>dotenv-icon-nuget.png</PackageIcon>
+    <RepositoryUrl>https://github.com/MrDave1999/dotenv.core</RepositoryUrl>
+    <PackageTags>dotenv, env, variables, environment, configuration, envfile</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Description>Integrates DotEnv.Core package with Microsoft.Extensions.Configuration</Description>
+    <Version>1.0.0</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\DotEnv.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\dotenv-icon-nuget.png" Pack="True" PackagePath="" />
+    <None Include="..\..\..\LICENSE" Pack="True" PackagePath="" />
+  </ItemGroup>
+
+</Project>
