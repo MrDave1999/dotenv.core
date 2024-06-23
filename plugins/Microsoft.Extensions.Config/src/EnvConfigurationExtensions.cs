@@ -17,7 +17,10 @@ public static class EnvConfigurationExtensions
     /// <param name="path">The path to the file.</param>
     /// <returns>The <see cref="IConfigurationBuilder"/>.</returns>
     /// <exception cref="ArgumentNullException">
-    /// <paramref name="builder"/>, or <paramref name="path"/> is <c>null</c>.
+    /// <paramref name="builder"/> is <c>null</c>.
+    /// </exception>
+    /// <exception cref="ArgumentException">
+    /// If the <paramref name="path"/> is null, empty or consists only of white-space characters.
     /// </exception>
     public static IConfigurationBuilder AddEnvFile(this IConfigurationBuilder builder, string path)
         => builder.AddEnvFile(path, optional: false);
@@ -30,7 +33,10 @@ public static class EnvConfigurationExtensions
     /// <param name="optional">Whether the file is optional.</param>
     /// <returns>The <see cref="IConfigurationBuilder"/>.</returns>
     /// <exception cref="ArgumentNullException">
-    /// <paramref name="builder"/>, or <paramref name="path"/> is <c>null</c>.
+    /// <paramref name="builder"/> is <c>null</c>.
+    /// </exception>
+    /// <exception cref="ArgumentException">
+    /// If the <paramref name="path"/> is null, empty or consists only of white-space characters.
     /// </exception>
     public static IConfigurationBuilder AddEnvFile(
         this IConfigurationBuilder builder,
