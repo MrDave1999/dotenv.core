@@ -58,8 +58,15 @@ public static class EnvConfigurationExtensions
     /// <param name="builder">The <see cref="IConfigurationBuilder"/> to add to.</param>
     /// <param name="configureSource">Configures the source.</param>
     /// <returns>The <see cref="IConfigurationBuilder"/>.</returns>
+    /// <exception cref="ArgumentNullException">
+    /// <paramref name="builder"/>, or <paramref name="configureSource"/> is <c>null</c>.
+    /// </exception>
     public static IConfigurationBuilder AddEnvFile(
         this IConfigurationBuilder builder,
         Action<EnvConfigurationSource> configureSource)
-        => builder.Add(configureSource);
+    {
+        ThrowHelper.ThrowIfNull(builder, nameof(builder));
+        ThrowHelper.ThrowIfNull(configureSource, nameof(configureSource));
+        return builder.Add(configureSource);
+    }
 }
