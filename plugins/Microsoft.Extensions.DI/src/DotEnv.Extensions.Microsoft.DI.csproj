@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <RootNamespace>Microsoft.Extensions.DependencyInjection</RootNamespace>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <PackageId>Dotenv.Extensions.Microsoft.DependencyInjection</PackageId>
