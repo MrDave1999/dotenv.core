@@ -11,8 +11,11 @@
 [![DotEnv.Core.Props](https://img.shields.io/nuget/vpre/DotEnv.Core.Props?label=DotEnv.Core.Props%20-%20nuget&color=red)](https://www.nuget.org/packages/DotEnv.Core.Props)
 [![downloads](https://img.shields.io/nuget/dt/DotEnv.Core.Props?color=yellow)](https://www.nuget.org/packages/DotEnv.Core.Props)
 
-[![Dotenv.Microsoft.DI](https://img.shields.io/nuget/vpre/Dotenv.Extensions.Microsoft.DependencyInjection?label=Dotenv.Extensions.Microsoft.DependencyInjection%20-%20nuget&color=red)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection)
+[![Dotenv.Microsoft.DI](https://img.shields.io/nuget/vpre/Dotenv.Extensions.Microsoft.DependencyInjection?label=DotEnv.Extensions.Microsoft.DependencyInjection%20-%20nuget&color=red)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection)
 [![downloads](https://img.shields.io/nuget/dt/Dotenv.Extensions.Microsoft.DependencyInjection?color=yellow)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection)
+
+[![Dotenv.Microsoft.Config](https://img.shields.io/nuget/vpre/Dotenv.Extensions.Microsoft.Configuration?label=DotEnv.Extensions.Microsoft.Configuration%20-%20nuget&color=red)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.Configuration)
+[![downloads](https://img.shields.io/nuget/dt/Dotenv.Extensions.Microsoft.Configuration?color=yellow)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.Configuration)
 
 **DotEnv.Core** is a class library for read and parsing .env files in .NET Core and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.
 
@@ -113,12 +116,6 @@ second line'
 KEY="first line\nsecond line"
 VAR='first line\nsecond line'
 ```
-
-## Extensions
-
-- [Dotenv.Extensions.Microsoft.DependencyInjection](https://mrdave1999.github.io/dotenv.core/extensions/microsoft_extensions_DI.html)
-
-  - This package adds extension methods for [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection), which can be accessed from the `IServiceCollection` interface.
 
 ## Frequently Answered Questions
 
