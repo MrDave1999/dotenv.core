@@ -32,6 +32,7 @@
   <ItemGroup>
     <InternalsVisibleTo Include="DotEnv.Core.Tests" />
     <InternalsVisibleTo Include="DotEnv.Extensions.Microsoft.DI" />
+    <InternalsVisibleTo Include="DotEnv.Extensions.Microsoft.Config" />
   </ItemGroup>
 
   <ItemGroup>
