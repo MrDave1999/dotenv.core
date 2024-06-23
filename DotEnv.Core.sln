@@ -17,6 +17,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Extensions.Microsoft
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Extensions.Microsoft.DI.Tests", "plugins\Microsoft.Extensions.DI\tests\DotEnv.Extensions.Microsoft.DI.Tests.csproj", "{661B7D3C-977F-432B-911C-A519319A8B97}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft.Extensions.Config", "Microsoft.Extensions.Config", "{72F0723F-912D-42F3-AA80-928F7509DD94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotEnv.Extensions.Microsoft.Config", "plugins\Microsoft.Extensions.Config\src\DotEnv.Extensions.Microsoft.Config.csproj", "{B50FB187-F524-46E3-8AC8-E31826294F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotEnv.Extensions.Microsoft.Config.Example", "plugins\Microsoft.Extensions.Config\example\DotEnv.Extensions.Microsoft.Config.Example.csproj", "{EE641B31-2439-481A-BCC4-4520B75DD57D}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Elements", "Solution Elements", "{2D684F32-79A1-4904-A921-204D88EB2F48}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
@@ -53,6 +59,14 @@ Global
 		{661B7D3C-977F-432B-911C-A519319A8B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{661B7D3C-977F-432B-911C-A519319A8B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{661B7D3C-977F-432B-911C-A519319A8B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B50FB187-F524-46E3-8AC8-E31826294F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B50FB187-F524-46E3-8AC8-E31826294F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B50FB187-F524-46E3-8AC8-E31826294F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B50FB187-F524-46E3-8AC8-E31826294F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE641B31-2439-481A-BCC4-4520B75DD57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE641B31-2439-481A-BCC4-4520B75DD57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE641B31-2439-481A-BCC4-4520B75DD57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE641B31-2439-481A-BCC4-4520B75DD57D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +75,8 @@ Global
 		{7309366E-C4C5-4367-98E8-4E2410622537} = {B093601A-E3DB-446A-A650-709F31366AD7}
 		{F5FECE90-E970-4C80-A876-DE19DBDEFC70} = {B093601A-E3DB-446A-A650-709F31366AD7}
 		{661B7D3C-977F-432B-911C-A519319A8B97} = {B093601A-E3DB-446A-A650-709F31366AD7}
+		{B50FB187-F524-46E3-8AC8-E31826294F95} = {72F0723F-912D-42F3-AA80-928F7509DD94}
+		{EE641B31-2439-481A-BCC4-4520B75DD57D} = {72F0723F-912D-42F3-AA80-928F7509DD94}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DADE2FE0-EA2C-41E8-B91E-2A5F19EAAD87}
