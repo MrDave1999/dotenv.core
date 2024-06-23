@@ -19,11 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Extensions.Microsoft
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microsoft.Extensions.Config", "Microsoft.Extensions.Config", "{72F0723F-912D-42F3-AA80-928F7509DD94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotEnv.Extensions.Microsoft.Config", "plugins\Microsoft.Extensions.Config\src\DotEnv.Extensions.Microsoft.Config.csproj", "{B50FB187-F524-46E3-8AC8-E31826294F95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Extensions.Microsoft.Configuration", "plugins\Microsoft.Extensions.Config\src\DotEnv.Extensions.Microsoft.Configuration.csproj", "{B50FB187-F524-46E3-8AC8-E31826294F95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotEnv.Extensions.Microsoft.Config.Example", "plugins\Microsoft.Extensions.Config\example\DotEnv.Extensions.Microsoft.Config.Example.csproj", "{EE641B31-2439-481A-BCC4-4520B75DD57D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Extensions.Microsoft.Config.Example", "plugins\Microsoft.Extensions.Config\example\DotEnv.Extensions.Microsoft.Config.Example.csproj", "{EE641B31-2439-481A-BCC4-4520B75DD57D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotEnv.Extensions.Microsoft.Config.Tests", "plugins\Microsoft.Extensions.Config\tests\DotEnv.Extensions.Microsoft.Config.Tests.csproj", "{91AA172D-AE1E-445E-B3A1-5841C856E659}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotEnv.Extensions.Microsoft.Config.Tests", "plugins\Microsoft.Extensions.Config\tests\DotEnv.Extensions.Microsoft.Config.Tests.csproj", "{91AA172D-AE1E-445E-B3A1-5841C856E659}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Elements", "Solution Elements", "{2D684F32-79A1-4904-A921-204D88EB2F48}"
 	ProjectSection(SolutionItems) = preProject
