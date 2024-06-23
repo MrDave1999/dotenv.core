@@ -10,6 +10,7 @@
     <Copyright>David Román Amariles</Copyright>
     <PackageProjectUrl>https://mrdave1999.github.io/dotenv.core</PackageProjectUrl>
     <PackageIcon>dotenv-icon-nuget.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/MrDave1999/dotenv.core</RepositoryUrl>
     <PackageTags>dotenv, env, variables, environment, configuration, envfile</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -30,6 +31,7 @@
 
   <ItemGroup>
     <None Include="..\..\..\dotenv-icon-nuget.png" Pack="True" PackagePath="" />
+    <None Include="..\..\..\docs\extensions\microsoft_extensions_config.md" Pack="True" PackagePath="README.md" />
     <None Include="..\..\..\LICENSE" Pack="True" PackagePath="" />
   </ItemGroup>
 
