@@ -187,6 +187,15 @@ namespace DotEnv.Core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The &apos;path&apos; cannot be null, empty string or consist only of white-space characters..
+        /// </summary>
+        internal static string PathIsInvalid {
+            get {
+                return ResourceManager.GetString("PathIsInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The &apos;{0}.{1}&apos; property does not match any configuration key..
         /// </summary>
         internal static string PropertyDoesNotMatchConfigKeyMessage {

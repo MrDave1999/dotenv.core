@@ -159,6 +159,9 @@
   <data name="ParserDefaultMessage" xml:space="preserve">
     <value>An error occurred while parsing a data source with key-value pairs.</value>
   </data>
+  <data name="PathIsInvalid" xml:space="preserve">
+    <value>The 'path' cannot be null, empty string or consist only of white-space characters.</value>
+  </data>
   <data name="PropertyDoesNotMatchConfigKeyMessage" xml:space="preserve">
     <value>The '{0}.{1}' property does not match any configuration key.</value>
   </data>
