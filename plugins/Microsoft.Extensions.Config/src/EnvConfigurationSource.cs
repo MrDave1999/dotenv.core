@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DotEnv.Core;
 
 namespace Microsoft.Extensions.Configuration;
 
@@ -28,6 +29,14 @@ public class EnvConfigurationSource : IConfigurationSource
     /// </summary>
     /// <param name="builder">The <see cref="IConfigurationBuilder"/>.</param>
     /// <returns>An <see cref="EnvConfigurationProvider"/></returns>
+    /// <exception cref="InvalidOperationException">
+    /// <see cref="Path"/> is null, empty or consists only of white-space characters.
+    /// </exception>
     public IConfigurationProvider Build(IConfigurationBuilder builder)
-        => new EnvConfigurationProvider(this);
+    {
+        if (string.IsNullOrWhiteSpace(Path))
+            throw new InvalidOperationException(ExceptionMessages.PathIsInvalid);
+
+        return new EnvConfigurationProvider(this);
+    }
 }

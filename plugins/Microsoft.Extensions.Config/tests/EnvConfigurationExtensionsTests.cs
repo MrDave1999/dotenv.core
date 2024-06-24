@@ -79,4 +79,21 @@ public class EnvConfigurationExtensionsTests
         section["user"].Should().Be("user123");
         section["password"].Should().Be("1234");
     }
+
+    [TestMethod]
+    [DataRow("")]
+    [DataRow("  ")]
+    [DataRow(null)]
+    public void Build_WhenConfigurationSourceHasInvalidPath_ShouldThrowInvalidOperationException(string path)
+    {
+        // Arrange
+        var builder = new ConfigurationBuilder()
+            .AddEnvFile((EnvConfigurationSource source) => source.Path = path);
+
+        // Act
+        Action act = () => builder.Build();
+
+        // Assert
+        act.Should().Throw<InvalidOperationException>();
+    }
 }
