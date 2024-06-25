@@ -159,6 +159,9 @@
   <data name="ParserDefaultMessage" xml:space="preserve">
     <value>Se ha producido un error al analizar una fuente de datos con pares clave-valor.</value>
   </data>
+  <data name="PathIsInvalid" xml:space="preserve">
+    <value>'Path' no puede ser null, una cadena vacía o estar formada sólo por caracteres de espacio en blanco.</value>
+  </data>
   <data name="PropertyDoesNotMatchConfigKeyMessage" xml:space="preserve">
     <value>La propiedad '{0}.{1}' no coincide con ninguna clave de configuración.</value>
   </data>

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\DotEnv.Extensions.Microsoft.Configuration.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="DotEnv.Core.Props" />
+  </ItemGroup>
+
+</Project>

@@ -1,2 +1,4 @@
 - name: Microsoft.Extensions.DI
   href: microsoft_extensions_DI.md
+- name: Microsoft.Extensions.Configuration
+  href: microsoft_extensions_config.md

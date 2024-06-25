@@ -13,8 +13,11 @@
 [![DotEnv.Core.Props](https://img.shields.io/nuget/vpre/DotEnv.Core.Props?label=DotEnv.Core.Props%20-%20nuget&color=red)](https://www.nuget.org/packages/DotEnv.Core.Props)
 [![downloads](https://img.shields.io/nuget/dt/DotEnv.Core.Props?color=yellow)](https://www.nuget.org/packages/DotEnv.Core.Props)
 
-[![Dotenv.Microsoft.DI](https://img.shields.io/nuget/vpre/Dotenv.Extensions.Microsoft.DependencyInjection?label=Dotenv.Extensions.Microsoft.DependencyInjection%20-%20nuget&color=red)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection)
+[![Dotenv.Microsoft.DI](https://img.shields.io/nuget/vpre/Dotenv.Extensions.Microsoft.DependencyInjection?label=DotEnv.Extensions.Microsoft.DependencyInjection%20-%20nuget&color=red)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection)
 [![downloads](https://img.shields.io/nuget/dt/Dotenv.Extensions.Microsoft.DependencyInjection?color=yellow)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection)
+
+[![Dotenv.Microsoft.Config](https://img.shields.io/nuget/vpre/Dotenv.Extensions.Microsoft.Configuration?label=DotEnv.Extensions.Microsoft.Configuration%20-%20nuget&color=red)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.Configuration)
+[![downloads](https://img.shields.io/nuget/dt/Dotenv.Extensions.Microsoft.Configuration?color=yellow)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.Configuration)
 
 **DotEnv.Core** is a class library for read and parsing .env files in .NET Core and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.
 
@@ -38,6 +41,8 @@ The advantage of using this library is that you do not need to set the environme
   * [Using DotEnv in ASP.NET Core](#using-dotenv-in-aspnet-core)
 - [Copying .env file to the publish directory](#copying-env-file-to-the-publish-directory)
 - [Extensions](#extensions)
+  - [Integration with Microsoft.Extensions.DependencyInjection](#integration-with-microsoftextensionsdependencyinjection)
+  - [Integration with Microsoft.Extensions.Configuration](#integration-with-microsoftextensionsconfiguration)
 - [File Format](#file-format)
   * [Comments](#comments)
   * [Interpolating variables](#interpolating-variables)
@@ -263,9 +268,25 @@ If you do not want to use the previous package, add the following to your `.cspr
 
 ## Extensions
 
-- [Dotenv.Extensions.Microsoft.DependencyInjection](https://mrdave1999.github.io/dotenv.core/extensions/microsoft_extensions_DI.html)
+### Integration with Microsoft.Extensions.DependencyInjection
 
-  - This package adds extension methods for [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection), which can be accessed from the `IServiceCollection` interface.
+Install the package with this command:
+```sh
+dotnet add package Dotenv.Extensions.Microsoft.DependencyInjection
+```
+This package adds extension methods for [Microsoft.Extensions.DependencyInjection](https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection), which can be accessed from the `IServiceCollection` interface.
+
+For more information, see the documentation [here](https://mrdave1999.github.io/dotenv.core/extensions/microsoft_extensions_DI.html).
+
+### Integration with Microsoft.Extensions.Configuration
+
+Install the package with this command:
+```sh
+dotnet add package Dotenv.Extensions.Microsoft.Configuration
+```
+This package adds extension methods for [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration), which can be accessed from the `IConfigurationBuilder` interface.
+
+For more information, see the documentation [here](https://mrdave1999.github.io/dotenv.core/extensions/microsoft_extensions_config.html).
 
 ## File Format
 

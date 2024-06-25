@@ -10,7 +10,13 @@ namespace DotEnv.Core;
 /// </summary>
 internal class DictionaryProvider : IEnvironmentVariablesProvider
 {
-    private readonly IDictionary<string, string> _keyValuePairs = new Dictionary<string, string>();
+    private readonly Dictionary<string, string> _keyValuePairs;
+
+    public DictionaryProvider()
+        => _keyValuePairs = [];
+
+    public DictionaryProvider(StringComparer comparer)
+        => _keyValuePairs = new(comparer);
 
     /// <inheritdoc />
     public string this[string variable] 
