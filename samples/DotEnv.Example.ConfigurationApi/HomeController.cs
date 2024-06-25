@@ -14,8 +14,21 @@ public class HomeController : ControllerBase
     }
 
     [HttpGet]
-    public string Get()
+    public SettingsDto Get()
     {
-        return _configuration["APP_BASE_URL"];
+        var section = _configuration.GetSection("Settings");
+        return new()
+        {
+            AppBaseUrl = section["APP_BASE_URL"],
+            Server     = section["SERVER"],
+            Database   = section["DATABASE"]
+        };
+    }
+
+    public class SettingsDto
+    {
+        public string AppBaseUrl { get; init; }
+        public string Server { get; init; }
+        public string Database { get; init; }
     }
 }

@@ -10,7 +10,7 @@ new EnvLoader().Load();
 // Adds environment variables in the configuration collection.
 builder.Configuration.AddEnvironmentVariables();
 // Registers a configuration instance which AppSettings will bind against.
-builder.Services.Configure<AppSettings>(builder.Configuration);
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("Settings"));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

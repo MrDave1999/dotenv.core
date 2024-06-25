@@ -15,8 +15,8 @@ public class HomeController : ControllerBase
     }
 
     [HttpGet]
-    public string Get()
+    public AppSettings Get()
     {
-        return _appSettings.AppBaseUrl;
+        return _appSettings;
     }
 }
