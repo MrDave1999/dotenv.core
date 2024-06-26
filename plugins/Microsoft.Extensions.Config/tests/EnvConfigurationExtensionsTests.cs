@@ -37,7 +37,7 @@ public class EnvConfigurationExtensionsTests
     [DataRow("")]
     [DataRow("  ")]
     [DataRow(null)]
-    public void AddEnvFile_WhenPathIsNullOrEmptyStringOrWhitespaces_ShouldThrowArgumentException(string path)
+    public void AddEnvFile_WhenPathIsInvalid_ShouldThrowArgumentException(string path)
     {
         // Arrange
         var builder = new ConfigurationBuilder();
