@@ -8,7 +8,7 @@ public class ServiceCollectionExtensionsTests
     private const string ConfigEnvPath   = "env_files/config.env";
 
     [TestMethod]
-    public void AddDotEnvWithDefaultEnvFileName()
+    public void AddDotEnv_WhenDefaultEnvFileNameIsUsed_ShouldReadKeyValuePairs()
     {
         // Arrange
         var services = new ServiceCollection();
@@ -24,7 +24,7 @@ public class ServiceCollectionExtensionsTests
     }
 
     [TestMethod]
-    public void AddDotEnvWithCustomConfiguration()
+    public void AddDotEnv_WhenCustomConfigurationIsUsed_ShouldReadKeyValuePairs()
     {
         // Arrange
         var services = new ServiceCollection();
@@ -40,7 +40,7 @@ public class ServiceCollectionExtensionsTests
     }
 
     [TestMethod]
-    public void AddDotEnvGenericWithDefaultEnvFileName()
+    public void AddDotEnvOfT_WhenDefaultEnvFileNameIsUsed_ShouldReadKeyValuePairs()
     {
         // Arrange
         var services = new ServiceCollection();
@@ -56,7 +56,7 @@ public class ServiceCollectionExtensionsTests
     }
 
     [TestMethod]
-    public void AddDotEnvGenericWithCustomConfiguration()
+    public void AddDotEnvOfT_WhenCustomConfigurationIsUsed_ShouldReadKeyValuePairs()
     {
         // Arrange
         var services = new ServiceCollection();
@@ -72,7 +72,7 @@ public class ServiceCollectionExtensionsTests
     }
 
     [TestMethod]
-    public void AddCustomEnvWithCustomConfiguration()
+    public void AddCustomEnv_WhenCustomConfigurationIsUsed_ShouldReadKeyValuePairs()
     {
         // Arrange
         var services = new ServiceCollection();
@@ -94,7 +94,7 @@ public class ServiceCollectionExtensionsTests
     }
 
     [TestMethod]
-    public void AddCustomEnvGenericWithCustomConfiguration()
+    public void AddCustomEnvOfT_WhenCustomConfigurationIsUsed_ShouldReadKeyValuePairs()
     {
         // Arrange
         var services = new ServiceCollection();
