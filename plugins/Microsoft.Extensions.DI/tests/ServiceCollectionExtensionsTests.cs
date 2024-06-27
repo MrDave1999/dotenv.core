@@ -40,6 +40,22 @@ public class ServiceCollectionExtensionsTests
     }
 
     [TestMethod]
+    public void AddDotEnv_WhenPathCollectionIsEmpty_ShouldThrowArgumentException()
+    {
+        // Arrange
+        var services = new ServiceCollection();
+        string[] paths = [];
+
+        // Act
+        Action act = () => services.AddDotEnv(paths);
+
+        // Assert
+        act.Should()
+           .Throw<ArgumentException>()
+           .WithParameterName(nameof(paths));
+    }
+
+    [TestMethod]
     public void AddDotEnvOfT_WhenDefaultEnvFileNameIsUsed_ShouldReadKeyValuePairs()
     {
         // Arrange
@@ -69,6 +85,22 @@ public class ServiceCollectionExtensionsTests
 
         // Assert
         settings.Summaries.Should().Be(Expected);
+    }
+
+    [TestMethod]
+    public void AddDotEnvOfT_WhenPathCollectionIsEmpty_ShouldThrowArgumentException()
+    {
+        // Arrange
+        var services = new ServiceCollection();
+        string[] paths = [];
+
+        // Act
+        Action act = () => services.AddDotEnv<AppSettings>(paths);
+
+        // Assert
+        act.Should()
+           .Throw<ArgumentException>()
+           .WithParameterName(nameof(paths));
     }
 
     [TestMethod]
