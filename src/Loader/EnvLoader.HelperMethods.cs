@@ -17,7 +17,7 @@ public partial class EnvLoader
         envFile.Encoding ??= _configuration.Encoding;
         envFile.Optional   = envFile.Optional ? envFile.Optional : _configuration.Optional;
         envFile.Path       = Path.Combine(_configuration.BasePath, envFile.Path);
-        envFile.Exists     = ReadAndParse(envFile);
+        envFile.Exists     = ReadFileContents(envFile);
 
         if (!envFile.Exists && !envFile.Optional)
             _validationResult.Add(errorMsg: string.Format(FileNotFoundMessage, envFile.Path));
@@ -29,7 +29,7 @@ public partial class EnvLoader
     /// <param name="envFile">The instance representing the .env file.</param>
     /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
     /// <returns>true if the .env file exists, otherwise false.</returns>
-    private bool ReadAndParse(EnvFile envFile)
+    private bool ReadFileContents(EnvFile envFile)
     {
         ThrowHelper.ThrowIfNull(envFile, nameof(envFile));
         Result<string> result;
