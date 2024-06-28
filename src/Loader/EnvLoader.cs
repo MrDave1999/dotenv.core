@@ -44,11 +44,7 @@ public partial class EnvLoader : IEnvLoader
         }
 
         foreach (EnvFile envFile in _configuration.EnvFiles)
-        {
-            SetConfigurationEnvFile(envFile);
-            envFile.Exists = ReadAndParse(envFile);
-            CheckIfEnvFileNotExistsAndIsNotOptional(envFile);
-        }
+            StartFileLoading(envFile);
 
         ThrowExceptionIfErrorsExist();
         result = GetInstanceOfValidationResult();
@@ -77,11 +73,7 @@ public partial class EnvLoader : IEnvLoader
         envFiles.AddRange(copyEnvFiles);
 
         foreach (EnvFile envFile in _configuration.EnvFiles)
-        {
-            SetConfigurationEnvFile(envFile);
-            envFile.Exists = ReadAndParse(envFile);
-            CheckIfEnvFileNotExistsAndIsNotOptional(envFile);
-        }
+            StartFileLoading(envFile);
 
         if (environment is null)
         {
