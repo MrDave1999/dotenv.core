@@ -19,7 +19,7 @@ public partial class EnvLoader
         envFile.Path       = Path.Combine(_configuration.BasePath, envFile.Path);
         envFile.Exists     = ReadFileContents(envFile);
 
-        if (!envFile.Exists && !envFile.Optional)
+        if (envFile.NotExists && envFile.IsNotOptional)
             _validationResult.Add(errorMsg: string.Format(FileNotFoundMessage, envFile.Path));
     }
 
