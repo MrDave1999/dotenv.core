@@ -88,11 +88,9 @@ public partial class EnvLoader
     /// <summary>
     /// Throws an exception if there are errors.
     /// </summary>
-    /// <exception cref="ParserException"></exception>
     /// <exception cref="FileNotFoundException"></exception>
-    private void ThrowExceptionIfErrorsExist()
+    private void ThrowFileNotFoundIfErrorsExist()
     {
-        _parser.ThrowParserExceptionIfErrorsExist();
         if (_validationResult.HasError())
         {
             if (_configuration.ThrowFileNotFoundException)

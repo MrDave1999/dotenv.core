@@ -46,7 +46,8 @@ public partial class EnvLoader : IEnvLoader
         foreach (EnvFile envFile in _configuration.EnvFiles)
             StartFileLoading(envFile);
 
-        ThrowExceptionIfErrorsExist();
+        _parser.ThrowParserExceptionIfErrorsExist();
+        ThrowFileNotFoundIfErrorsExist();
         result = GetInstanceOfValidationResult();
         return _parser.EnvVarsProvider;
     }
@@ -98,7 +99,8 @@ public partial class EnvLoader : IEnvLoader
                 _validationResult.Add(errorMsg: FormatLocalFileNotPresentMessage(environmentName: environment));
         }
 
-        ThrowExceptionIfErrorsExist();
+        _parser.ThrowParserExceptionIfErrorsExist();
+        ThrowFileNotFoundIfErrorsExist();
         result = GetInstanceOfValidationResult();
         return _parser.EnvVarsProvider;
     }
