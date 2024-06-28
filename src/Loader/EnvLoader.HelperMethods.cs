@@ -9,49 +9,19 @@ namespace DotEnv.Core;
 // This class defines the helper private methods.
 public partial class EnvLoader
 {
-    /// <summary>
-    /// Checks if the .env file does not exist and is not optional.
-    /// </summary>
-    /// <param name="envFile">The instance representing the .env file.</param>
-    /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
-    private void CheckIfEnvFileNotExistsAndIsNotOptional(EnvFile envFile)
+    private void StartFileLoading(EnvFile envFile)
     {
-        ThrowHelper.ThrowIfNull(envFile, nameof(envFile));
+        if (!Path.HasExtension(envFile.Path))
+            envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
+
+        envFile.Encoding ??= _configuration.Encoding;
+        envFile.Optional   = envFile.Optional ? envFile.Optional : _configuration.Optional;
+        envFile.Path       = Path.Combine(_configuration.BasePath, envFile.Path);
+        envFile.Exists     = ReadAndParse(envFile);
+
         if (!envFile.Exists && !envFile.Optional)
             _validationResult.Add(errorMsg: string.Format(FileNotFoundMessage, envFile.Path));
     }
-
-    /// <summary>
-    /// Throws an exception if there are errors.
-    /// </summary>
-    /// <exception cref="ParserException"></exception>
-    /// <exception cref="FileNotFoundException"></exception>
-    private void ThrowExceptionIfErrorsExist()
-    {
-        _parser.ThrowParserExceptionIfErrorsExist();
-        if (_validationResult.HasError())
-        {
-            if (_configuration.ThrowFileNotFoundException)
-                throw new FileNotFoundException(message: _validationResult.ErrorMessages);
-
-            CombineValidationResults();
-        }
-    }
-
-    /// <summary>
-    /// Combines the validation result of the loader with the parser.
-    /// </summary>
-    private void CombineValidationResults()
-    {
-        if (_parser.ValidationResult.HasError())
-            _parser.ValidationResult.AddRange(errorMessages: _validationResult);
-    }
-
-    /// <summary>
-    /// Gets an instance of validation result.
-    /// </summary>
-    private EnvValidationResult GetInstanceOfValidationResult()
-        => _parser.ValidationResult.HasError() ? _parser.ValidationResult : _validationResult;
 
     /// <summary>
     /// Reads the contents of a .env file and invokes the parser.
@@ -116,20 +86,36 @@ public partial class EnvLoader
     }
 
     /// <summary>
-    /// Sets the configuration of a .env file.
+    /// Throws an exception if there are errors.
     /// </summary>
-    /// <param name="envFile">The instance representing the .env file.</param>
-    /// <exception cref="ArgumentNullException"><c>envFile</c> is <c>null</c>.</exception>
-    private void SetConfigurationEnvFile(EnvFile envFile)
+    /// <exception cref="ParserException"></exception>
+    /// <exception cref="FileNotFoundException"></exception>
+    private void ThrowExceptionIfErrorsExist()
     {
-        ThrowHelper.ThrowIfNull(envFile, nameof(envFile));
-        if (!Path.HasExtension(envFile.Path))
-            envFile.Path = Path.Combine(envFile.Path, _configuration.DefaultEnvFileName);
+        _parser.ThrowParserExceptionIfErrorsExist();
+        if (_validationResult.HasError())
+        {
+            if (_configuration.ThrowFileNotFoundException)
+                throw new FileNotFoundException(message: _validationResult.ErrorMessages);
 
-        envFile.Encoding ??= _configuration.Encoding;
-        envFile.Optional = envFile.Optional ? envFile.Optional : _configuration.Optional;
-        envFile.Path = Path.Combine(_configuration.BasePath, envFile.Path);
+            CombineValidationResults();
+        }
     }
+
+    /// <summary>
+    /// Combines the validation result of the loader with the parser.
+    /// </summary>
+    private void CombineValidationResults()
+    {
+        if (_parser.ValidationResult.HasError())
+            _parser.ValidationResult.AddRange(errorMessages: _validationResult);
+    }
+
+    /// <summary>
+    /// Gets an instance of validation result.
+    /// </summary>
+    private EnvValidationResult GetInstanceOfValidationResult()
+        => _parser.ValidationResult.HasError() ? _parser.ValidationResult : _validationResult;
 
     /// <summary>
     /// Adds optional .env files to a collection.
