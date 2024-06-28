@@ -25,7 +25,17 @@ internal class EnvFile
     public bool Exists { get; set; } = true;
 
     /// <summary>
+    /// Checks if the .env file does not exist.
+    /// </summary>
+    public bool NotExists => !Exists;
+
+    /// <summary>
     /// A value indicating whether the existence of the .env file is optional or not.
     /// </summary>
     public bool Optional { get; set; }
+
+    /// <summary>
+    /// Checks if the .env file is not optional.
+    /// </summary>
+    public bool IsNotOptional => !Optional;
 }
