@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <RootNamespace>DotEnv.Core</RootNamespace>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Nullable>disable</Nullable>
@@ -16,11 +17,11 @@
     <PackageTags>dotenv, env, variables, environment, envfile</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
-    <Description>dotenv.core is a class library for read and parsing .env files in .NET Core</Description>
-    <Version>3.0.0</Version>
+    <Description>A library for reading and parsing .env files</Description>
+    <Version>3.1.0</Version>
+    <PackageReleaseNotes>See https://github.com/MrDave1999/dotenv.core/releases</PackageReleaseNotes>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <NoWarn>1591</NoWarn>
-    <RootNamespace>DotEnv.Core</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
