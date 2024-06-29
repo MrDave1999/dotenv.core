@@ -75,9 +75,16 @@
 <p><a href="https://github.com/mrdave1999/dotenv.core"><img src="https://img.shields.io/badge/.NET%20Standard-2.0-red" alt="dotenv.core"></a>
 <a href="https://raw.githubusercontent.com/MrDave1999/dotenv.core/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="dotenv.core"></a>
 <a href="https://github.com/mrdave1999/dotenv.core"><img src="https://img.shields.io/badge/Project-Class%20Library-yellow" alt="dotenv.core"></a>
-<a href="https://www.nuget.org/packages/dotenv.core/"><img src="https://buildstats.info/nuget/dotenv.core" alt="Nuget-Badges"></a>
 <a href="https://www.paypal.com/paypalme/DavidRomanAmariles"><img src="https://img.shields.io/badge/paypal-donate-orange" alt="PayPal-donate-button"></a></p>
-<p><strong>dotenv.core</strong> is a class library for read and parsing .env files in .NET Core and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.</p>
+<p><a href="https://www.nuget.org/packages/DotEnv.Core"><img src="https://img.shields.io/nuget/vpre/DotEnv.Core?label=DotEnv.Core%20-%20nuget&amp;color=red" alt="DotEnv.Core"></a>
+<a href="https://www.nuget.org/packages/DotEnv.Core"><img src="https://img.shields.io/nuget/dt/DotEnv.Core?color=yellow" alt="downloads"></a></p>
+<p><a href="https://www.nuget.org/packages/DotEnv.Core.Props"><img src="https://img.shields.io/nuget/vpre/DotEnv.Core.Props?label=DotEnv.Core.Props%20-%20nuget&amp;color=red" alt="DotEnv.Core.Props"></a>
+<a href="https://www.nuget.org/packages/DotEnv.Core.Props"><img src="https://img.shields.io/nuget/dt/DotEnv.Core.Props?color=yellow" alt="downloads"></a></p>
+<p><a href="https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection"><img src="https://img.shields.io/nuget/vpre/Dotenv.Extensions.Microsoft.DependencyInjection?label=DotEnv.Extensions.Microsoft.DependencyInjection%20-%20nuget&amp;color=red" alt="Dotenv.Microsoft.DI"></a>
+<a href="https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection"><img src="https://img.shields.io/nuget/dt/Dotenv.Extensions.Microsoft.DependencyInjection?color=yellow" alt="downloads"></a></p>
+<p><a href="https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.Configuration"><img src="https://img.shields.io/nuget/vpre/Dotenv.Extensions.Microsoft.Configuration?label=DotEnv.Extensions.Microsoft.Configuration%20-%20nuget&amp;color=red" alt="Dotenv.Microsoft.Config"></a>
+<a href="https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.Configuration"><img src="https://img.shields.io/nuget/dt/Dotenv.Extensions.Microsoft.Configuration?color=yellow" alt="downloads"></a></p>
+<p><strong>DotEnv.Core</strong> is a class library for read and parsing .env files in .NET Core and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.</p>
 <p>The advantage of using this library is that you do not need to set the environment variable from the operating system shell (<strong>dotenv</strong> sets environment variables from a .env file).</p>
 <h2 id="features">Features</h2>
 <ul>
@@ -150,14 +157,6 @@ second line'
 <pre><code class="lang-bash">KEY=&quot;first line\nsecond line&quot;
 VAR='first line\nsecond line'
 </code></pre>
-<h2 id="extensions">Extensions</h2>
-<ul>
-<li><p><a href="https://mrdave1999.github.io/dotenv.core/extensions/microsoft_extensions_DI.html">Dotenv.Extensions.Microsoft.DependencyInjection</a></p>
-<ul>
-<li>This package adds extension methods for <a href="https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection">Microsoft.Extensions.DependencyInjection</a>, which can be accessed from the <code>IServiceCollection</code> interface.</li>
-</ul>
-</li>
-</ul>
 <h2 id="frequently-answered-questions">Frequently Answered Questions</h2>
 <h3 id="can-i-use-an-env-file-in-a-production-environment">Can I use an <code>.env file</code> in a production environment?</h3>
 <p>Generally, you should not add sensitive data (such as passwords) to a .env file, as it would be unencrypted! Instead, you could use a secrets manager such as <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts">Azure Key Vault</a> or <a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html">AWS Secrets Manager</a>.</p>

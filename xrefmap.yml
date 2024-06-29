@@ -2983,6 +2983,117 @@ references:
   commentId: Overload:DotEnv.Core.VariableNotSetException.#ctor
   fullName: DotEnv.Core.VariableNotSetException.VariableNotSetException
   nameWithType: VariableNotSetException.VariableNotSetException
+- uid: Microsoft.Extensions.Configuration
+  name: Microsoft.Extensions.Configuration
+  href: api/Microsoft.Extensions.Configuration.html
+  commentId: N:Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationExtensions
+  name: EnvConfigurationExtensions
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationExtensions.html
+  commentId: T:Microsoft.Extensions.Configuration.EnvConfigurationExtensions
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationExtensions
+  nameWithType: EnvConfigurationExtensions
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.EnvConfigurationSource})
+  name: AddEnvFile(IConfigurationBuilder, Action<EnvConfigurationSource>)
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile.html#Microsoft_Extensions_Configuration_EnvConfigurationExtensions_AddEnvFile_Microsoft_Extensions_Configuration_IConfigurationBuilder_System_Action_Microsoft_Extensions_Configuration_EnvConfigurationSource__
+  commentId: M:Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.Action{Microsoft.Extensions.Configuration.EnvConfigurationSource})
+  name.vb: AddEnvFile(IConfigurationBuilder, Action(Of EnvConfigurationSource))
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder, System.Action<Microsoft.Extensions.Configuration.EnvConfigurationSource>)
+  fullName.vb: Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder, System.Action(Of Microsoft.Extensions.Configuration.EnvConfigurationSource))
+  nameWithType: EnvConfigurationExtensions.AddEnvFile(IConfigurationBuilder, Action<EnvConfigurationSource>)
+  nameWithType.vb: EnvConfigurationExtensions.AddEnvFile(IConfigurationBuilder, Action(Of EnvConfigurationSource))
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String)
+  name: AddEnvFile(IConfigurationBuilder, String)
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile.html#Microsoft_Extensions_Configuration_EnvConfigurationExtensions_AddEnvFile_Microsoft_Extensions_Configuration_IConfigurationBuilder_System_String_
+  commentId: M:Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String)
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder, System.String)
+  nameWithType: EnvConfigurationExtensions.AddEnvFile(IConfigurationBuilder, String)
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String,System.Boolean)
+  name: AddEnvFile(IConfigurationBuilder, String, Boolean)
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile.html#Microsoft_Extensions_Configuration_EnvConfigurationExtensions_AddEnvFile_Microsoft_Extensions_Configuration_IConfigurationBuilder_System_String_System_Boolean_
+  commentId: M:Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder,System.String,System.Boolean)
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile(Microsoft.Extensions.Configuration.IConfigurationBuilder, System.String, System.Boolean)
+  nameWithType: EnvConfigurationExtensions.AddEnvFile(IConfigurationBuilder, String, Boolean)
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile*
+  name: AddEnvFile
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile.html
+  commentId: Overload:Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationExtensions.AddEnvFile
+  nameWithType: EnvConfigurationExtensions.AddEnvFile
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationProvider
+  name: EnvConfigurationProvider
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationProvider.html
+  commentId: T:Microsoft.Extensions.Configuration.EnvConfigurationProvider
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationProvider
+  nameWithType: EnvConfigurationProvider
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.EnvConfigurationSource)
+  name: EnvConfigurationProvider(EnvConfigurationSource)
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationProvider.-ctor.html#Microsoft_Extensions_Configuration_EnvConfigurationProvider__ctor_Microsoft_Extensions_Configuration_EnvConfigurationSource_
+  commentId: M:Microsoft.Extensions.Configuration.EnvConfigurationProvider.#ctor(Microsoft.Extensions.Configuration.EnvConfigurationSource)
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationProvider.EnvConfigurationProvider(Microsoft.Extensions.Configuration.EnvConfigurationSource)
+  nameWithType: EnvConfigurationProvider.EnvConfigurationProvider(EnvConfigurationSource)
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationProvider.#ctor*
+  name: EnvConfigurationProvider
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationProvider.-ctor.html
+  commentId: Overload:Microsoft.Extensions.Configuration.EnvConfigurationProvider.#ctor
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationProvider.EnvConfigurationProvider
+  nameWithType: EnvConfigurationProvider.EnvConfigurationProvider
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationProvider.Load
+  name: Load()
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationProvider.Load.html#Microsoft_Extensions_Configuration_EnvConfigurationProvider_Load
+  commentId: M:Microsoft.Extensions.Configuration.EnvConfigurationProvider.Load
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationProvider.Load()
+  nameWithType: EnvConfigurationProvider.Load()
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationProvider.Load*
+  name: Load
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationProvider.Load.html
+  commentId: Overload:Microsoft.Extensions.Configuration.EnvConfigurationProvider.Load
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationProvider.Load
+  nameWithType: EnvConfigurationProvider.Load
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationSource
+  name: EnvConfigurationSource
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationSource.html
+  commentId: T:Microsoft.Extensions.Configuration.EnvConfigurationSource
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationSource
+  nameWithType: EnvConfigurationSource
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
+  name: Build(IConfigurationBuilder)
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationSource.Build.html#Microsoft_Extensions_Configuration_EnvConfigurationSource_Build_Microsoft_Extensions_Configuration_IConfigurationBuilder_
+  commentId: M:Microsoft.Extensions.Configuration.EnvConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationSource.Build(Microsoft.Extensions.Configuration.IConfigurationBuilder)
+  nameWithType: EnvConfigurationSource.Build(IConfigurationBuilder)
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationSource.Build*
+  name: Build
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationSource.Build.html
+  commentId: Overload:Microsoft.Extensions.Configuration.EnvConfigurationSource.Build
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationSource.Build
+  nameWithType: EnvConfigurationSource.Build
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationSource.Optional
+  name: Optional
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationSource.Optional.html#Microsoft_Extensions_Configuration_EnvConfigurationSource_Optional
+  commentId: P:Microsoft.Extensions.Configuration.EnvConfigurationSource.Optional
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationSource.Optional
+  nameWithType: EnvConfigurationSource.Optional
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationSource.Optional*
+  name: Optional
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationSource.Optional.html
+  commentId: Overload:Microsoft.Extensions.Configuration.EnvConfigurationSource.Optional
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationSource.Optional
+  nameWithType: EnvConfigurationSource.Optional
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationSource.Path
+  name: Path
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationSource.Path.html#Microsoft_Extensions_Configuration_EnvConfigurationSource_Path
+  commentId: P:Microsoft.Extensions.Configuration.EnvConfigurationSource.Path
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationSource.Path
+  nameWithType: EnvConfigurationSource.Path
+- uid: Microsoft.Extensions.Configuration.EnvConfigurationSource.Path*
+  name: Path
+  href: api/Microsoft.Extensions.Configuration.EnvConfigurationSource.Path.html
+  commentId: Overload:Microsoft.Extensions.Configuration.EnvConfigurationSource.Path
+  fullName: Microsoft.Extensions.Configuration.EnvConfigurationSource.Path
+  nameWithType: EnvConfigurationSource.Path
 - uid: Microsoft.Extensions.DependencyInjection
   name: Microsoft.Extensions.DependencyInjection
   href: api/Microsoft.Extensions.DependencyInjection.html
