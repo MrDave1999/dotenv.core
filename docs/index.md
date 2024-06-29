@@ -2,7 +2,6 @@
 
 [![dotenv.core](https://img.shields.io/badge/.NET%20Standard-2.0-red)](https://github.com/mrdave1999/dotenv.core)
 [![dotenv.core](https://img.shields.io/badge/License-MIT-green)](https://raw.githubusercontent.com/MrDave1999/dotenv.core/master/LICENSE)
-[![dotenv.core](https://img.shields.io/badge/Project-Class%20Library-yellow)](https://github.com/mrdave1999/dotenv.core)
 [![PayPal-donate-button](https://img.shields.io/badge/paypal-donate-orange)](https://www.paypal.com/paypalme/DavidRomanAmariles)
 
 [![DotEnv.Core](https://img.shields.io/nuget/vpre/DotEnv.Core?label=DotEnv.Core%20-%20nuget&color=red)](https://www.nuget.org/packages/DotEnv.Core)
@@ -17,9 +16,9 @@
 [![Dotenv.Microsoft.Config](https://img.shields.io/nuget/vpre/Dotenv.Extensions.Microsoft.Configuration?label=DotEnv.Extensions.Microsoft.Configuration%20-%20nuget&color=red)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.Configuration)
 [![downloads](https://img.shields.io/nuget/dt/Dotenv.Extensions.Microsoft.Configuration?color=yellow)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.Configuration)
 
-**DotEnv.Core** is a class library for read and parsing .env files in .NET Core and also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.
+**DotEnv.Core** is a .NET library for reading and parsing .env files. It also provides a mechanism to retrieve the value of an environment variable in a simple and easy way.
 
-The advantage of using this library is that you do not need to set the environment variable from the operating system shell (**dotenv** sets environment variables from a .env file).
+The advantage of using this library is that you do not need to set the environment variable from the operating system shell (**dotenv** sets environment variables from an .env file).
 
 ## Features
 
