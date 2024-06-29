@@ -53,3 +53,7 @@ Settings__Server=example.com
 Settings__Database=Northwind
 ```
 It doesn't matter if your .env file is in the root directory of your project, the configuration provider will start searching from the current directory and go up the parent directories until it finds it.
+
+## Samples
+
+- [DotEnv.Extensions.Microsoft.Configuration](https://github.com/MrDave1999/dotenv.core/tree/master/plugins/Microsoft.Extensions.Config/example)

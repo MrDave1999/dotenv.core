@@ -1,4 +1,4 @@
-# Dotenv.Extensions.Microsoft.DependencyInjection
+# Dotenv.Extensions.Microsoft.DI
 
 [![dotenv.core](https://img.shields.io/badge/.NET%20Standard-2.0-red)](https://github.com/MrDave1999/dotenv.core)
 [![Nuget-Badges](https://buildstats.info/nuget/Dotenv.Extensions.Microsoft.DependencyInjection)](https://www.nuget.org/packages/Dotenv.Extensions.Microsoft.DependencyInjection/)
@@ -96,3 +96,7 @@ It does several things:
 - Registers `AppSettings` as a singleton for the DI container.
 
 Done, use `AppSettings` on the controllers and let the container perform the dependency injection.
+
+## Samples
+
+- [DotEnv.Extensions.Microsoft.DependencyInjection](https://github.com/MrDave1999/dotenv.core/tree/master/plugins/Microsoft.Extensions.DI/example)

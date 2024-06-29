@@ -43,6 +43,7 @@ The advantage of using this library is that you do not need to set the environme
 - [Extensions](#extensions)
   - [Integration with Microsoft.Extensions.DependencyInjection](#integration-with-microsoftextensionsdependencyinjection)
   - [Integration with Microsoft.Extensions.Configuration](#integration-with-microsoftextensionsconfiguration)
+- [Samples](#samples)
 - [File Format](#file-format)
   * [Comments](#comments)
   * [Interpolating variables](#interpolating-variables)
@@ -287,6 +288,22 @@ dotnet add package Dotenv.Extensions.Microsoft.Configuration
 This package adds extension methods for [Microsoft.Extensions.Configuration](https://www.nuget.org/packages/Microsoft.Extensions.Configuration), which can be accessed from the `IConfigurationBuilder` interface.
 
 For more information, see the documentation [here](https://mrdave1999.github.io/dotenv.core/extensions/microsoft_extensions_config.html).
+
+## Samples
+
+You can find a complete and functional example in these projects:
+- [DotEnv.Example](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example)
+- [DotEnv.Example.SharedSettings](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example.SharedSettings)
+- [DotEnv.Example.RequiredKeys](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example.RequiredKeys)
+- [DotEnv.Example.Parsing](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example.Parsing)
+- [DotEnv.Example.Binding](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example.Binding)
+- [DotEnv.Example.OptionsPattern](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example.OptionsPattern)
+- [DotEnv.Example.ConfigurationApi](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example.ConfigurationApi)
+- [DotEnv.Example.NetFramework](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example.NetFramework)
+- [DotEnv.Example.AspNetFramework](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example.AspNetFramework)
+- [DotEnv.Example.AspNetCore](https://github.com/MrDave1999/dotenv.core/tree/master/samples/DotEnv.Example.AspNetCore)
+- [DotEnv.Extensions.Microsoft.DependencyInjection](https://github.com/MrDave1999/dotenv.core/tree/master/plugins/Microsoft.Extensions.DI/example)
+- [DotEnv.Extensions.Microsoft.Configuration](https://github.com/MrDave1999/dotenv.core/tree/master/plugins/Microsoft.Extensions.Config/example)
 
 ## File Format
 
