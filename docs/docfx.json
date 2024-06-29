@@ -87,6 +87,6 @@
     "keepFileLink": false,
     "cleanupCacheHistory": false,
     "disableGitFeatures": false,
-    "xref": [ "xrefmap.zip" ]
+    "xref": [ "xrefmap.json" ]
   }
 }
