@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/samples/DotEnv.Example/bin/Debug/net6.0/DotEnv.Core.Example.dll",
+            "program": "${workspaceFolder}/samples/DotEnv.Example/bin/Debug/net8.0/DotEnv.Core.Example.dll",
             "args": [],
             "cwd": "${workspaceFolder}/samples/DotEnv.Example",
             "console": "internalConsole",
