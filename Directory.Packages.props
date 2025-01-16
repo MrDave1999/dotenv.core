@@ -7,7 +7,7 @@
     <PackageVersion Include="DotEnv.Core" Version="3.1.0" />
     <PackageVersion Include="DotEnv.Core.Props" Version="1.0.1" />
     <PackageVersion Include="coverlet.msbuild" Version="3.1.2" />
-    <PackageVersion Include="FluentAssertions" Version="6.10.0" />
+    <PackageVersion Include="FluentAssertions" Version="[7.0.0,8.0.0)" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
     <PackageVersion Include="MSTest.TestAdapter" Version="3.4.3" />
     <PackageVersion Include="MSTest.TestFramework" Version="3.4.3" />
